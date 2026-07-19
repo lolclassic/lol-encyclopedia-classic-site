@@ -1,9 +1,114 @@
+# LoL Encyclopedia Classic — Unofficial Archive
+
+**Korean product name: 롤 백과사전 클래식 — 비공식 아카이브**
+
+> This project is currently under development and private testing.  
+> The product name, icon, assets, and retro-inspired interface are under review and may be changed before public release to avoid confusion with an official Riot Games product.
+
+LoL Encyclopedia Classic is an independently developed Android information and community application created following the announcement of League of Legends Classic.
+
+The project was inspired by the experience of using early mobile League of Legends encyclopedia applications. Its goal is to help players rediscover information from an earlier League of Legends era in a modern mobile environment.
+
+This product is not an official continuation or restoration of any previous third-party application. It is not affiliated with, endorsed by, sponsored by, or approved by Riot Games or any previous third-party application developer.
+
+## Project Purpose
+
+The project is intended to provide:
+
+- Historical champion, item, rune, mastery, and summoner spell information
+- A mobile-friendly archive of earlier League of Legends information
+- Information related to League of Legends Classic
+- A clear separation between historical archive content and current live-game information
+- A moderated community where users can share memories and general game information
+- Improved accessibility and usability on modern Android devices
+
+## Planned Riot Games API Usage
+
+The product plans to use documented Riot Games APIs to provide optional current live information, including:
+
+- Riot ID account lookup
+- Summoner profile information
+- Ranked information
+- Champion mastery
+- Recent match history
+- League of Legends service status
+
+Planned APIs:
+
+- `account-v1`
+- `summoner-v4`
+- `league-v4`
+- `champion-mastery-v4`
+- `match-v5`
+- `lol-status-v4`
+
+All Riot Games API requests will be processed through a separate HTTPS backend.
+
+Production API keys and other server secrets will not be embedded in the Android application, JavaScript source, APK, AAB, public repository, or any client-accessible configuration file.
+
+The product will not use undocumented Riot Games API endpoints or unofficial methods to collect Riot Games data.
+
+## Community Plan
+
+A moderated community board is planned for:
+
+- League of Legends Classic discussions
+- Memories of earlier League of Legends seasons
+- General champion and item discussions
+- General gameplay information
+- Application feedback, bug reports, and feature suggestions
+
+The community will not provide:
+
+- Player shaming or public player evaluation
+- Player reputation scores
+- Unofficial MMR or ELO calculations
+- Alternative player-reporting channels
+- Public accusations against individual players
+- Features that create an unfair gameplay advantage
+
+Before public release, the community service is planned to include content reporting, user reporting, user blocking, moderation tools, administrator removal tools, account restrictions, terms of use, and user-data deletion procedures.
+
+## Current Development Status
+
+The Android application is currently a development prototype.
+
+The current board is stored only on each user's device and is not yet a shared online community.
+
+The following features have not yet been implemented and will be built and tested before public release:
+
+- Shared online community board
+- User accounts and authentication
+- Reporting and blocking
+- Administrator moderation tools
+- User-data deletion
+- Riot Games API backend
+- Production server environment
+
+## Asset and Branding Policy
+
+The public version will be reviewed to use only assets that are permitted for third-party use or whose usage rights have been confirmed.
+
+Riot Games' official logos will not be used as the application icon, product logo, or promotional identity.
+
+Assets originating from previous third-party applications will be replaced before public release unless their usage rights can be confirmed.
+
+The product name, icon, and retro-inspired interface may be changed based on Riot Games' review to ensure that the product is not confused with an official Riot Games application or the native League of Legends client.
+
+## Unofficial Product Notice
+
+**LoL Encyclopedia Classic is not an official Riot Games product.**
+
+LoL Encyclopedia Classic is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties.
+
+Riot Games, League of Legends, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
+---
+
+<details>
+<summary><strong>한국어 전체 설명 보기</strong></summary>
 
 # 롤 백과사전 클래식 — 비공식 아카이브
-
-**English name: LoL Encyclopedia Classic — Unofficial Archive**
-
-> 이 프로젝트의 제품명, 아이콘 및 복고풍 인터페이스는 현재 검토 중입니다. Riot Games의 공식 제품이나 League of Legends 클라이언트로 오인될 가능성이 있는 요소는 공개 출시 전에 변경할 예정입니다.
 
 롤 백과사전 클래식은 League of Legends Classic 출시를 계기로, 과거 모바일 LoL 정보 앱을 사용하던 경험과 초기 시즌의 자료를 현대 Android 환경에서 다시 살펴볼 수 있도록 개발 중인 비공식 정보·커뮤니티 애플리케이션입니다.
 
@@ -320,3 +425,5 @@ Riot Games, League of Legends, and all associated properties are trademarks or r
 ## 연락처
 
 - GitHub: https://github.com/lolclassic
+
+</details>
