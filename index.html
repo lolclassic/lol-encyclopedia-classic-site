@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LoL Encyclopedia Classic is an unofficial Android reference archive for historical League of Legends information.">
+  <meta name="theme-color" content="#071018">
+  <title>LoL Encyclopedia Classic — Unofficial Android Archive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="LoL Encyclopedia Classic home">
+      <span class="brand-mark" aria-hidden="true">LC</span>
+      <span>LoL Encyclopedia Classic</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#prototype">Prototype</a>
+      <a href="#api">API plan</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Working Android prototype · Closed testing</p>
+        <h1>A modern home for historical League information.</h1>
+        <p class="lede">
+          LoL Encyclopedia Classic is an independently developed, unofficial
+          Android reference application focused on early-season League of
+          Legends information and League of Legends Classic.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#prototype">See the prototype</a>
+          <a class="button secondary" href="#api">Review the API plan</a>
+        </div>
+        <p class="hero-note">
+          Free · No ads · No in-app purchases · No account required in the
+          current prototype
+        </p>
+      </div>
+      <div class="hero-visual" aria-label="Development prototype preview">
+        <div class="phone phone-back">
+          <img src="prototype-runes.png" alt="Classic rune list in the Android development prototype">
+        </div>
+        <div class="phone phone-front">
+          <img src="prototype-home.png" alt="Home screen of the Android development prototype">
+        </div>
+      </div>
+    </section>
+
+    <section class="status-strip" aria-label="Current implementation summary">
+      <div><strong>60</strong><span>Classic launch champions</span></div>
+      <div><strong>190</strong><span>Historical items</span></div>
+      <div><strong>56</strong><span>Masteries</span></div>
+      <div><strong>50 + 98</strong><span>Classic and preserved runes</span></div>
+      <div><strong>16</strong><span>Summoner spells</span></div>
+    </section>
+
+    <section class="section" id="prototype">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Available now in the closed-test build</p>
+          <h2>Reference features that already work</h2>
+        </div>
+        <p>
+          The prototype runs on modern Android devices and separates classic
+          archive material from future live-game data.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Champion archive</h3>
+          <p>60 Classic launch champions by default, with a 115-champion historical archive and detailed reference pages.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Items and builds</h3>
+          <p>190 historical items with categories, recipes, costs, and a two-column layout designed for narrow screens.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Masteries and spells</h3>
+          <p>56 masteries with ranks, prerequisites, and tree positions, plus 16 Classic summoner spells.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">04</span>
+          <h3>Old rune page</h3>
+          <p>Classic marks, seals, glyphs, and quintessences with a 9/9/9/3 parchment-style rune page builder.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Actual application screens</p>
+          <h2 id="gallery-title">Development prototype preview</h2>
+        </div>
+        <p>
+          Captured from an Android debug build. These screens demonstrate the
+          working product flow and are not the final Google Play listing images.
+        </p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="prototype-home.png" alt="Prototype home screen with reference categories" loading="lazy">
+          <figcaption><strong>Home</strong><span>Reference categories and archive navigation</span></figcaption>
+        </figure>
+        <figure>
+          <img src="prototype-items.png" alt="Prototype item archive with categories and item list" loading="lazy">
+          <figcaption><strong>Items</strong><span>Independent category and item browsing</span></figcaption>
+        </figure>
+        <figure>
+          <img src="prototype-spells.png" alt="Prototype summoner spell reference list" loading="lazy">
+          <figcaption><strong>Spells</strong><span>16 Classic summoner spells</span></figcaption>
+        </figure>
+        <figure>
+          <img src="prototype-runes.png" alt="Prototype Classic rune archive" loading="lazy">
+          <figcaption><strong>Runes</strong><span>Classic and preserved rune sets</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section api-section" id="api">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Planned after review and approval</p>
+          <h2>Riot API integration</h2>
+        </div>
+        <p>
+          Live account data is not part of the current prototype. It will only
+          be added after the appropriate Riot Developer Portal review.
+        </p>
+      </div>
+      <div class="architecture" aria-label="Planned secure API architecture">
+        <div class="architecture-node">
+          <span>Client</span>
+          <strong>Android app</strong>
+          <small>No production API key</small>
+        </div>
+        <div class="architecture-arrow" aria-hidden="true">HTTPS →</div>
+        <div class="architecture-node accent">
+          <span>Private infrastructure</span>
+          <strong>LOLFLIX backend</strong>
+          <small>Server-side secret storage</small>
+        </div>
+        <div class="architecture-arrow" aria-hidden="true">HTTPS →</div>
+        <div class="architecture-node">
+          <span>Official service</span>
+          <strong>Riot Games API</strong>
+          <small>Documented endpoints only</small>
+        </div>
+      </div>
+      <div class="api-details">
+        <div>
+          <h3>Planned user features</h3>
+          <ul class="check-list">
+            <li>Riot ID and summoner profile lookup</li>
+            <li>Ranked information and champion mastery</li>
+            <li>Recent match history and service status</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Security and product boundaries</h3>
+          <ul class="check-list">
+            <li>Production key kept out of the APK, JavaScript, and public repositories</li>
+            <li>No undocumented endpoints, unofficial MMR/ELO, or player-shaming features</li>
+            <li>Historical archive data shown separately from current live data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split-section">
+      <div>
+        <p class="eyebrow">Roadmap, not current functionality</p>
+        <h2>Community features remain in development</h2>
+      </div>
+      <div>
+        <p>
+          A shared community board, user accounts, reporting, blocking,
+          moderation, and deletion tools are not currently available. The
+          prototype board stores test content only on the user's device.
+        </p>
+        <p>
+          Shared community functionality will not launch until its backend,
+          safety controls, user-data procedures, and policies are complete and
+          tested.
+        </p>
+      </div>
+    </section>
+
+    <section class="section korean-summary" lang="ko">
+      <p class="eyebrow">한국어 안내</p>
+      <h2>롤 백과사전 클래식은 비공식 Android 정보 앱입니다.</h2>
+      <p>
+        현재 비공개 테스트 중인 작동 가능한 프로토타입으로, 과거 챔피언·아이템·특성·주문·룬 자료를
+        현대 Android 환경에서 살펴볼 수 있습니다. Riot API를 이용한 실시간 계정 정보와 공용
+        커뮤니티 기능은 아직 제공하지 않으며, 관련 심사와 안전 기능 준비가 끝난 뒤에만 추가할
+        예정입니다.
+      </p>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <p class="eyebrow">Product and policy review</p>
+        <h2>Need more information about the project?</h2>
+      </div>
+      <a class="button primary" href="contact.html">Contact the project</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>LoL Encyclopedia Classic</strong>
+      <p>An independently developed, unofficial Android reference project.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/lolclassic" rel="noreferrer">GitHub</a>
+    </div>
+    <p class="disclaimer">
+      LoL Encyclopedia Classic is not endorsed by Riot Games and does not
+      reflect the views or opinions of Riot Games or anyone officially involved
+      in producing or managing Riot Games properties. Riot Games and all
+      associated properties are trademarks or registered trademarks of Riot
+      Games, Inc.
+    </p>
+  </footer>
+</body>
+</html>
