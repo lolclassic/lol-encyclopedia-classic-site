@@ -1,39 +1,45 @@
-# LoL Encyclopedia Classic — public product site
+# 롤 백과사전 클래식 공개 제품 사이트
 
-This repository hosts the public product and policy site for **LoL Encyclopedia
-Classic**, an independently developed, unofficial Android reference
-application.
+이 저장소는 LOLFLIX가 독립 개발 중인 비공식 Android 참고 앱
+**롤 백과사전 클래식**의 공개 제품·정책 사이트를 호스팅합니다.
 
-Live site:
+라이브 사이트:
 [lolclassic.github.io/lol-encyclopedia-classic-site](https://lolclassic.github.io/lol-encyclopedia-classic-site/)
 
-## Repository scope
+## 공개 범위
 
-- `index.html` — product overview, current prototype status, screenshots, and
-  planned Riot API architecture
-- `privacy.html` — privacy policy for the website and current closed-test
-  prototype
-- `terms.html` — website and closed-test terms
-- `contact.html` — public project contact route
-- `styles.css` — shared responsive styles
-- `prototype-*.png` — selected development-prototype screenshots
-- `riot.txt` — Riot Developer Portal site-verification file; do not remove or
-  rename
+- `index.html` — 제품 기능, 내부 QA 요약, 최종 앱 화면, 출시 준비 현황
+- `privacy.html` — 현재 오프라인 Android 앱과 정적 사이트의 개인정보처리방침
+- `terms.html` — 공개 사이트와 Android 릴리스 후보의 이용약관
+- `contact.html` — 제품·정책·권리·보안 문의 경로
+- `styles.css` — 공통 반응형 스타일
+- `assets/phone-*.png` — 동일 릴리스 후보 빌드에서 캡처한 최종 Google Play 화면 8장
+- `assets/app-icon.png` — 공개 앱 아이콘
+- `assets/feature-graphic.png` — 공개 Google Play 피처 그래픽 및 소셜 미리보기
+- `riot.txt` — Riot Developer Portal 사이트 확인 파일
 
-The Android source, signing material, backend code, and secrets are not hosted
-in this public repository. Production API keys must never be added here or
-embedded in the Android application.
+## 현재 제품 경계
 
-## Status
+현재 앱은 계정, 광고, 분석, 결제, 공유 커뮤니티 또는 Riot API 조회를
+제공하지 않는 오프라인 참고 앱입니다. Android 인터넷 권한을 요청하지 않으며,
+사용자가 만든 테스트 데이터와 설정은 기기의 앱 전용 저장소에만 남습니다.
 
-The Android reference/archive features are implemented in a working closed-test
-prototype. Riot API and shared community features are plans, not currently
-available services. The screenshots on this site are development previews and
-are not the final Google Play listing set.
+2026년 7월 28일 기준 내부 Android 런타임 점검은 37/37, 화면 경로 점검은
+18/18을 통과했고, 최종 스크린샷 8장을 동일 빌드에서 캡처했습니다. 이 수치는
+LOLFLIX의 내부 검증 결과이며 Riot Games 또는 Google의 인증을 의미하지 않습니다.
 
-## Disclaimer
+Google Play 조직 확인, 공개 지원 연락처, Play App Signing, 콘솔 선언,
+배포 권리 확인 및 심사 제출은 계정 소유자 또는 외부 권리자의 작업으로 남아 있습니다.
 
-LoL Encyclopedia Classic is not endorsed by Riot Games and does not reflect the
-views or opinions of Riot Games or anyone officially involved in producing or
-managing Riot Games properties. Riot Games and all associated properties are
-trademarks or registered trademarks of Riot Games, Inc.
+## 보안 경계
+
+Android 비공개 소스, 백엔드 코드, 서명 자료, API 키, 기업 식별값과 기타
+비밀은 이 공개 저장소에 포함하지 않습니다. 비밀값을 이 저장소, 공개 이슈,
+클라이언트 앱 또는 브라우저 JavaScript에 추가하지 마세요.
+
+## 비공식 프로젝트 고지
+
+롤 백과사전 클래식은 Riot Games의 보증·승인을 받은 공식 제품이 아니며,
+Riot Games 또는 Riot Games 자산의 제작·관리에 공식적으로 관여한 사람들의
+견해나 의견을 반영하지 않습니다. Riot Games 및 관련 자산은
+Riot Games, Inc.의 상표 또는 등록상표입니다.
