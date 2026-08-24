@@ -697,10 +697,19 @@ nav a:focus-visible {
 }
 
 .disclaimer {
-  grid-column: 1 / -1;
   max-width: 72rem;
   margin-bottom: 0;
   font-size: 0.75rem;
+}
+
+.legal-notices {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.legal-notices .disclaimer {
+  margin: 0;
 }
 
 .policy-main {
@@ -932,7 +941,7 @@ nav a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .disclaimer {
+  .legal-notices {
     grid-column: auto;
   }
 }
