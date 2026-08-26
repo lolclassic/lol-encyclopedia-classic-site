@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-26T10:13:35Z",
+  "source": {
+    "android": {
+      "branch": "codex",
+      "commit": "a912579d568ec6ae5cfd7f27228e6b23fe1b5dcf",
+      "trackedState": "authorized-phase2b3-hotfix",
+      "trackedPaths": [
+        "README.md",
+        "app/src/main/assets/www/app.js",
+        "app/src/main/assets/www/style.css",
+        "play-store/asset-alt-text-ko.md",
+        "play-store/screenshot-plan-ko.md",
+        "play-store/store-listing-ko.md",
+        "tools/android_runtime_qa.py",
+        "tools/capture_play_screenshots.py",
+        "tools/check_mobile_layout_contracts.mjs",
+        "tools/release_lint.py"
+      ],
+      "trackedDiffSha256": "e5c9b86f0762f2fee87e67290c4cab1f7cb4e845759d723d829eeeef9fad36e0"
+    },
+    "applicationId": "com.lolclassic.encyclopedia.qa",
+    "apkSha256": "2cacf37e1a6a0ac1bf960c2c5e253cd5d320867c7561ba5237470fee166e396c"
+  },
+  "deviceGate": {
+    "exactlyOneAuthorizedTarget": true,
+    "physicalDevice": true,
+    "kernelQemu": "0",
+    "model": "SM-S911N",
+    "androidRelease": "16",
+    "apiLevel": "36",
+    "apkPackage": "com.lolclassic.encyclopedia.qa",
+    "apkLaunchableActivity": "com.lolclassic.encyclopedia.MainActivity",
+    "productionPackageRejected": true
+  },
+  "foregroundComponent": "com.lolclassic.encyclopedia.qa/com.lolclassic.encyclopedia.MainActivity",
+  "captureSettings": {
+    "accelerometerRotation": "0",
+    "userRotation": "0",
+    "headsUpNotifications": "0"
+  },
+  "settingsRestoration": {
+    "original": {
+      "accelerometerRotation": "1",
+      "userRotation": "0",
+      "headsUpNotifications": "1"
+    },
+    "restored": {
+      "accelerometerRotation": "1",
+      "userRotation": "0",
+      "headsUpNotifications": "1"
+    },
+    "verified": true
+  },
+  "capturePlan": [
+    {
+      "file": "phone-01-home.png",
+      "purpose": "HOME",
+      "route": "home"
+    },
+    {
+      "file": "phone-02-champions.png",
+      "purpose": "CHAMPION_LIST",
+      "route": "classic"
+    },
+    {
+      "file": "phone-03-champion-detail.png",
+      "purpose": "CHAMPION_DETAIL",
+      "route": "champion/garen/basic"
+    },
+    {
+      "file": "phone-04-items.png",
+      "purpose": "ITEM",
+      "route": "items"
+    },
+    {
+      "file": "phone-05-masteries.png",
+      "purpose": "MASTERY",
+      "route": "mastery"
+    },
+    {
+      "file": "phone-06-spells.png",
+      "purpose": "SPELL",
+      "route": "spells"
+    },
+    {
+      "file": "phone-07-runes.png",
+      "purpose": "RUNE_EDITORIAL_EMPTY_STATE",
+      "route": "runes"
+    },
+    {
+      "file": "phone-08-patch-news.png",
+      "purpose": "PATCH_NEWS",
+      "route": "patchnote/1"
+    },
+    {
+      "file": "phone-09-about-legal.png",
+      "purpose": "ABOUT_LEGAL",
+      "route": "about"
+    },
+    {
+      "file": "phone-10-community.png",
+      "purpose": "COMMUNITY",
+      "route": "board"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "phone-01-home.png",
+      "purpose": "HOME",
+      "route": "home",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 10,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 640321,
+        "sha256": "8d34d3e5fc3b349146ab126168f4f4cf773b7c2392dcbe93359fd1c2e5ea8f6d"
+      }
+    },
+    {
+      "file": "phone-02-champions.png",
+      "purpose": "CHAMPION_LIST",
+      "route": "classic",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 61,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 2,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 1811574,
+        "sha256": "5fd76d64bee48335f87fb392cd9e24c7bcce0aacb47464326ab7a49a0f3ef55f"
+      }
+    },
+    {
+      "file": "phone-03-champion-detail.png",
+      "purpose": "CHAMPION_DETAIL",
+      "route": "champion/garen/basic",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 6,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 338974,
+        "sha256": "caa3f58b8501b35098f2179fb5b97608b9f3521af1ab9d45e0a0e12bcb28c32a"
+      }
+    },
+    {
+      "file": "phone-04-items.png",
+      "purpose": "ITEM",
+      "route": "items",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 0,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 190659,
+        "sha256": "02a91fbbf10be7a69ea249ff79eeb11fb8bd5e2d1eb37b5a46e5f9b1644a6a5f"
+      }
+    },
+    {
+      "file": "phone-05-masteries.png",
+      "purpose": "MASTERY",
+      "route": "mastery",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 0,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 223671,
+        "sha256": "391c3080a31ff13ada7beb202ecfb5fb766b345bdc9baad4d25278a391551fcf"
+      }
+    },
+    {
+      "file": "phone-06-spells.png",
+      "purpose": "SPELL",
+      "route": "spells",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 12,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 532617,
+        "sha256": "ff8599e77f9962f8a38973cae9dd5faf394fa58c46fcbeb4299f1ac7b5dafff3"
+      }
+    },
+    {
+      "file": "phone-07-runes.png",
+      "purpose": "RUNE_EDITORIAL_EMPTY_STATE",
+      "route": "runes",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 0,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": 0,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 157302,
+        "sha256": "bc81d1961df3196618762028d1a78f3d5bc37426f7c4ac38b3a97e60dd100868"
+      }
+    },
+    {
+      "file": "phone-08-patch-news.png",
+      "purpose": "PATCH_NEWS",
+      "route": "patchnote/1",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 0,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 94826,
+        "sha256": "dd9421d1febebfade857d04f0cb17661221e2a7a677226496b1a6079ada0e537"
+      }
+    },
+    {
+      "file": "phone-09-about-legal.png",
+      "purpose": "ABOUT_LEGAL",
+      "route": "about",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 0,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 331745,
+        "sha256": "1d4bc99f232a41e99acbbfd9af3df467e0fab0bbcbbddfd6dab74477bef2fa6f"
+      }
+    },
+    {
+      "file": "phone-10-community.png",
+      "purpose": "COMMUNITY",
+      "route": "board",
+      "viewport": [
+        411,
+        806
+      ],
+      "imageCount": 0,
+      "brokenImages": [],
+      "placeholderCount": 0,
+      "intentionalTextFallbackCount": 0,
+      "runeRecordCount": null,
+      "domTextPatternHits": {},
+      "png": {
+        "width": 1080,
+        "height": 2340,
+        "mode": "RGB",
+        "bytes": 104703,
+        "sha256": "8c2400766929fed65078359fd68ae3ead5ce461294fc62119075b1a26cb37a38"
+      }
+    }
+  ],
+  "appMainScreen": {
+    "file": "app-main-screen.png",
+    "purpose": "HOME_POSTER_ALIAS",
+    "source": "phone-01-home.png",
+    "png": {
+      "width": 1080,
+      "height": 2340,
+      "mode": "RGB",
+      "bytes": 640321,
+      "sha256": "8d34d3e5fc3b349146ab126168f4f4cf773b7c2392dcbe93359fd1c2e5ea8f6d"
+    }
+  },
+  "video": {
+    "file": "app-feature-tour.mp4",
+    "routes": [
+      {
+        "purpose": "HOME",
+        "route": "home"
+      },
+      {
+        "purpose": "CHAMPION_LIST",
+        "route": "classic"
+      },
+      {
+        "purpose": "CHAMPION_DETAIL",
+        "route": "champion/garen/basic"
+      },
+      {
+        "purpose": "ITEM",
+        "route": "items"
+      },
+      {
+        "purpose": "MASTERY",
+        "route": "mastery"
+      },
+      {
+        "purpose": "RUNE",
+        "route": "runes"
+      },
+      {
+        "purpose": "PATCH_NEWS",
+        "route": "patchnote/1"
+      },
+      {
+        "purpose": "COMMUNITY",
+        "route": "board"
+      },
+      {
+        "purpose": "ABOUT_LEGAL",
+        "route": "about"
+      },
+      {
+        "purpose": "HOME_RETURN",
+        "route": "home"
+      }
+    ],
+    "width": 1080,
+    "height": 2340,
+    "codec": "h264",
+    "frameRate": "105000/135439",
+    "duration": 45.146,
+    "bitRate": 209446,
+    "bytes": 1181968,
+    "sha256": "860c86bd0fc44f4e0c51551e4b85f1c89811b65e04347b8b3a368f5f64c0ec91"
+  },
+  "projectOwned": {
+    "appIcon": {
+      "file": "app-icon.png",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "bytes": 5063,
+      "sha256": "1ec67c732becf1f05bf8f2b7a2ac6ced66853da2072653c4867ae8ada7158aeb"
+    },
+    "featureGraphic": {
+      "file": "feature-graphic.png",
+      "width": 1024,
+      "height": 500,
+      "mode": "RGB",
+      "bytes": 145217,
+      "sha256": "888537ed2deca22ac12cd48fc08e70a6e3560a4c457e158e28a170e3a2c89c59"
+    }
+  },
+  "safety": {
+    "productionPackageMutationCount": 0,
+    "productionPackage": "com.lolclassic.encyclopedia",
+    "qaPackageOnly": true,
+    "domTextPatternScanPassed": true,
+    "personalDataReviewedByAutomation": false,
+    "manualVisualReviewRequired": true
+  },
+  "manualVisualReview": {
+    "completed": true,
+    "reviewedAt": "2026-08-26T10:18:00Z",
+    "screenshotsReviewed": 10,
+    "videoRepresentativeFramesReviewed": 6,
+    "personalDataFound": false,
+    "notificationContentFound": false,
+    "literalBrPresentationFound": false,
+    "result": "PASS",
+    "perAssetEvidence": "assets/media-provenance.json"
+  }
+}

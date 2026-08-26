@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "result": "PASS",
+  "checks": {
+    "htmlFiles": 5,
+    "localReferences": 106,
+    "missingLocalReferences": [],
+    "imagesWithoutAlt": [],
+    "staleMediaReferences": [],
+    "missingPolicyPages": [],
+    "staleClaims": [],
+    "secretHits": [],
+    "publishedSupportEmail": true,
+    "unexpectedEmails": [],
+    "windowsPathFiles": [],
+    "localhostFiles": [
+      "capture_public_marketing.py"
+    ],
+    "localhostToolingAllowlist": [
+      "capture_public_marketing.py"
+    ],
+    "duplicateMediaGroups": [
+      [
+        "app-main-screen.png",
+        "phone-01-home.png"
+      ]
+    ],
+    "intentionalPosterAlias": true,
+    "videoMetadata": {
+      "width": 1080,
+      "height": 2340,
+      "codec": "h264",
+      "fps": "105000/135439",
+      "duration": 45.146,
+      "bytes": 1181968,
+      "bitRate": 209446
+    },
+    "mediaRecords": 14,
+    "manifestSummary": {
+      "currentAndMatching": 13,
+      "projectOwnedComposition": 1,
+      "stale": 0,
+      "invalid": 0
+    }
+  },
+  "failures": []
+}
