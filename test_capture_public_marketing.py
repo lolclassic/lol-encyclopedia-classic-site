@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 import capture_public_marketing as capture
+import finalize_media_provenance as finalize
 
 
 class ApkIdentityTests(unittest.TestCase):
@@ -28,6 +29,18 @@ class SafetyConstantTests(unittest.TestCase):
             capture.ACTIVITY,
             "com.lolclassic.encyclopedia.qa/com.lolclassic.encyclopedia.MainActivity",
         )
+
+    def test_runtime_fingerprint_is_exact_and_excludes_post_capture_evidence(self) -> None:
+        expected = (
+            "app/src/main/assets/www/app.js",
+            "app/src/main/assets/www/final-ui-hotfix.js",
+            "app/src/main/assets/www/index.html",
+            "app/src/main/assets/www/sw.js",
+        )
+        self.assertEqual(capture.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
+        self.assertEqual(finalize.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
+        self.assertTrue(set(expected).issubset(capture.EXPECTED_ANDROID_WIP_PATHS))
+        self.assertFalse(any(path.startswith("play-store/") for path in expected))
 
 
 if __name__ == "__main__":

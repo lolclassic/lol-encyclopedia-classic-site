@@ -4,6 +4,8 @@ import argparse
 import hashlib
 import json
 import os
+import shutil
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -13,6 +15,24 @@ ROOT = Path(__file__).resolve().parent
 EVIDENCE = ROOT / "capture-evidence.json"
 OUTPUT = ROOT / "assets/media-provenance.json"
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
+EXPECTED_SCREENSHOTS = (
+    "phone-01-home.png",
+    "phone-02-champions.png",
+    "phone-03-champion-detail.png",
+    "phone-04-items.png",
+    "phone-05-masteries.png",
+    "phone-06-spells.png",
+    "phone-07-runes.png",
+    "phone-08-patch-news.png",
+    "phone-09-about-legal.png",
+    "phone-10-community.png",
+)
+CAPTURE_RUNTIME_SOURCE_PATHS = (
+    "app/src/main/assets/www/app.js",
+    "app/src/main/assets/www/final-ui-hotfix.js",
+    "app/src/main/assets/www/index.html",
+    "app/src/main/assets/www/sw.js",
+)
 
 OFFICIAL_CONTENT_FILES = {
     "phone-01-home.png",
@@ -61,7 +81,9 @@ def common_record(
         "localPath": f"assets/{filename}",
         "sourceType": source_type,
         "sourceAndroidCommit": source["android"]["commit"],
-        "sourceAndroidWipDiffSha256": source["android"]["trackedDiffSha256"],
+        "sourceAndroidRuntimeDiffSha256": source["android"][
+            "runtimeSourceDiffSha256"
+        ],
         "sourceApplicationId": source["applicationId"],
         "sourceApkSha256": source["apkSha256"],
         "captureDate": evidence["capturedAt"],
@@ -75,9 +97,157 @@ def common_record(
     }
 
 
+def reconcile_runtime_source_fingerprint(
+    evidence: dict[str, Any], android_repo: Path
+) -> None:
+    android_repo = android_repo.resolve()
+    source = evidence["source"]
+    android = source["android"]
+    head = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=android_repo,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    ).stdout.strip()
+    if head != android["commit"]:
+        raise RuntimeError("Android HEAD no longer matches the capture source commit")
+
+    changed = subprocess.run(
+        ["git", "diff", "--name-only", "--", *CAPTURE_RUNTIME_SOURCE_PATHS],
+        cwd=android_repo,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    ).stdout.splitlines()
+    if tuple(changed) != CAPTURE_RUNTIME_SOURCE_PATHS:
+        raise RuntimeError("Android runtime source allowlist is incomplete or out of order")
+
+    binary_diff = subprocess.run(
+        [
+            "git",
+            "diff",
+            "--binary",
+            "--no-ext-diff",
+            "--",
+            *CAPTURE_RUNTIME_SOURCE_PATHS,
+        ],
+        cwd=android_repo,
+        check=True,
+        capture_output=True,
+    ).stdout
+    apk = android_repo / "app/build/outputs/apk/debug/app-debug.apk"
+    if not apk.is_file() or sha256(apk) != source["apkSha256"]:
+        raise RuntimeError("current debug APK bytes do not match the capture evidence")
+
+    android.pop("trackedDiffSha256", None)
+    android["runtimeSourcePaths"] = list(CAPTURE_RUNTIME_SOURCE_PATHS)
+    android["runtimeSourceDiffSha256"] = hashlib.sha256(binary_diff).hexdigest()
+    android["runtimeSourceFingerprintAlgorithm"] = (
+        "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
+    )
+
+
+def sync_android_play_screenshots(
+    evidence: dict[str, Any], android_repo: Path
+) -> Path:
+    android_repo = android_repo.resolve()
+    screenshot_dir = android_repo / "play-store/screenshots"
+    evidence_path = android_repo / "play-store/screenshot-evidence.json"
+    if not screenshot_dir.is_dir() or not evidence_path.is_file():
+        raise RuntimeError("Android Play screenshot destinations are missing")
+
+    captures = evidence["screenshots"]
+    if tuple(capture["file"] for capture in captures) != EXPECTED_SCREENSHOTS:
+        raise RuntimeError("capture set does not match the exact Android Play allowlist")
+
+    prepared: list[tuple[Path, Path, dict[str, Any]]] = []
+    for capture in captures:
+        filename = capture["file"]
+        source = ROOT / "assets" / filename
+        destination = screenshot_dir / filename
+        png = capture["png"]
+        if (
+            not source.is_file()
+            or sha256(source) != png["sha256"]
+            or source.stat().st_size != png["bytes"]
+            or png["width"] != 1080
+            or png["height"] != 2340
+            or png["mode"] != "RGB"
+        ):
+            raise RuntimeError(f"reviewed screenshot source is invalid: {filename}")
+        prepared.append((source, destination, capture))
+
+    for source, destination, _ in prepared:
+        shutil.copyfile(source, destination)
+
+    source = evidence["source"]
+    gate = evidence["deviceGate"]
+    screenshot_evidence = {
+        "schemaVersion": 2,
+        "source": {
+            "repository": "lol-encyclopedia-classic-site-repo",
+            "evidencePath": "capture-evidence.json",
+            "capturedAt": evidence["capturedAt"],
+            "androidCommit": source["android"]["commit"],
+            "androidTrackedState": source["android"]["trackedState"],
+            "package": source["applicationId"],
+            "apkSha256": source["apkSha256"],
+            "captureMethod": "audited physical-device QA screencap",
+        },
+        "deviceSafety": {
+            "physicalDevice": gate["physicalDevice"],
+            "kernelQemu": gate["kernelQemu"],
+            "exactlyOneAuthorizedTarget": gate["exactlyOneAuthorizedTarget"],
+            "qaPackageOnly": True,
+            "productionPackageRejected": gate["productionPackageRejected"],
+            "productionPackageMutationCount": 0,
+            "settingsRestored": evidence["settingsRestoration"]["verified"],
+        },
+        "screenshots": [
+            {
+                "file": capture["file"],
+                "purpose": capture["purpose"],
+                "route": capture["route"],
+                "sourceMapping": f"assets/{capture['file']}",
+                "width": capture["png"]["width"],
+                "height": capture["png"]["height"],
+                "mode": capture["png"]["mode"],
+                "bytes": capture["png"]["bytes"],
+                "sha256": capture["png"]["sha256"],
+                "privacyReviewed": True,
+                "classification": "CURRENT_AND_MATCHING",
+            }
+            for _, _, capture in prepared
+        ],
+        "summary": {
+            "authoritativePlayScreenshotSources": 1,
+            "currentAndMatching": len(prepared),
+            "stale": 0,
+            "invalid": 0,
+            "hashMismatches": 0,
+            "manualPrivacyReviewCompleted": True,
+        },
+    }
+    temporary = evidence_path.with_suffix(".json.tmp")
+    temporary.write_text(
+        json.dumps(screenshot_evidence, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    os.replace(temporary, evidence_path)
+    return evidence_path
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Finalize manually reviewed Public media provenance.")
     parser.add_argument("--manual-visual-review-accepted", action="store_true")
+    parser.add_argument(
+        "--android-repo",
+        type=Path,
+        help="Also sync the reviewed ten-file set into the Android Play evidence paths.",
+    )
     args = parser.parse_args()
     if not args.manual_visual_review_accepted:
         raise RuntimeError("manual visual review acceptance is required")
@@ -96,6 +266,18 @@ def main() -> int:
             raise RuntimeError(f"invalid capture evidence: {screenshot['file']}")
         if screenshot["domTextPatternHits"]:
             raise RuntimeError(f"sensitive DOM pattern evidence: {screenshot['file']}")
+
+    if args.android_repo is None:
+        raise RuntimeError(
+            "--android-repo is required to reproduce the runtime source fingerprint"
+        )
+    reconcile_runtime_source_fingerprint(evidence, args.android_repo)
+    evidence_temporary = EVIDENCE.with_suffix(".json.tmp")
+    evidence_temporary.write_text(
+        json.dumps(evidence, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    os.replace(evidence_temporary, EVIDENCE)
 
     records: list[dict[str, Any]] = []
     for screenshot in evidence["screenshots"]:
@@ -220,7 +402,9 @@ def main() -> int:
         "schemaVersion": 1,
         "generatedAt": reviewed_at,
         "sourceAndroidCommit": evidence["source"]["android"]["commit"],
-        "sourceAndroidWipDiffSha256": evidence["source"]["android"]["trackedDiffSha256"],
+        "sourceAndroidRuntimeDiffSha256": evidence["source"]["android"][
+            "runtimeSourceDiffSha256"
+        ],
         "sourceApplicationId": evidence["source"]["applicationId"],
         "sourceApkSha256": evidence["source"]["apkSha256"],
         "captureDevice": {
@@ -261,6 +445,9 @@ def main() -> int:
     temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     os.replace(temporary, OUTPUT)
     print(f"Wrote {len(records)} reviewed media records to {OUTPUT}")
+    if args.android_repo is not None:
+        android_evidence = sync_android_play_screenshots(evidence, args.android_repo)
+        print(f"Synced reviewed Android Play evidence to {android_evidence}")
     return 0
 
 

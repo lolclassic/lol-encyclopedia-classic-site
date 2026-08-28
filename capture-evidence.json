@@ -1,36 +1,19 @@
 {
   "schemaVersion": 1,
-  "capturedAt": "2026-08-28T03:56:05Z",
+  "capturedAt": "2026-08-28T14:20:54Z",
   "source": {
     "android": {
       "branch": "codex",
-      "commit": "c7f21617c450509987920b85d7a2f695b15b5421",
+      "commit": "3dc25e904b0bffdedc2ec409104c038066c028aa",
       "trackedState": "authorized-classic-fantasy-wip",
       "trackedPaths": [
         "app/src/main/assets/www/app.js",
-        "app/src/main/assets/www/data/offline-assets.json",
         "app/src/main/assets/www/final-ui-hotfix.js",
-        "app/src/main/assets/www/images/branding/app-icon-192.png",
-        "app/src/main/assets/www/images/branding/app-icon-512.png",
-        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js",
-        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
-        "play-store/asset-provenance.md",
-        "play-store/assets/app-icon-512.png",
-        "play-store/riot-asset-provenance.json",
+        "play-store/classic-fantasy-design-provenance.json",
         "tools/android_runtime_qa.py",
         "tools/check_classic_ui_overrides.mjs",
-        "tools/check_mobile_layout_contracts.mjs",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
         "tools/test-community-online.mjs"
@@ -41,23 +24,29 @@
         "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011",
         "app/src/main/assets/www/index.html.bak-20260822-162011",
         "play-store/android-runtime-qa-classic-fantasy.json",
+        "play-store/android-runtime-qa-icon-era.json",
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
-        "play-store/classic-fantasy-design-provenance.json",
         "play-store/qa-skin-portraits/akali-7-skins.png",
         "play-store/qa-skin-portraits/fiddlesticks-skins.png",
         "play-store/qa-skin-portraits/garen-skins.png",
         "play-store/qa-skin-portraits/ryze-skins.png",
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
-        "play-store/skin-portrait-qa.json",
-        "tools/generate_classic_fantasy_brand_assets.py"
+        "play-store/skin-portrait-qa.json"
       ],
-      "trackedDiffSha256": "7b4cf9849ba484c055f20be0593623361be46d4b909bb9308c003d62b19ea93c"
+      "runtimeSourcePaths": [
+        "app/src/main/assets/www/app.js",
+        "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/index.html",
+        "app/src/main/assets/www/sw.js"
+      ],
+      "runtimeSourceDiffSha256": "e351bdf96b5715a7a32389c1ef69614c0b39f0488da2560147f82666a0862978",
+      "runtimeSourceFingerprintAlgorithm": "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
     },
     "applicationId": "com.lolclassic.encyclopedia.qa",
-    "apkSha256": "0d1ae5f542a1d6802995eae95d5eccac6ed35aa2f6086987e5067e62c5569aa6"
+    "apkSha256": "c6d28031915714b8c7f959c1d1ca666446762c6c8276468d6429667f418d29f2"
   },
   "deviceGate": {
     "exactlyOneAuthorizedTarget": true,
@@ -78,12 +67,12 @@
   },
   "settingsRestoration": {
     "original": {
-      "accelerometerRotation": "1",
+      "accelerometerRotation": "0",
       "userRotation": "0",
       "headsUpNotifications": "1"
     },
     "restored": {
-      "accelerometerRotation": "1",
+      "accelerometerRotation": "0",
       "userRotation": "0",
       "headsUpNotifications": "1"
     },
@@ -150,7 +139,7 @@
         411,
         806
       ],
-      "imageCount": 10,
+      "imageCount": 5,
       "brokenImages": [],
       "placeholderCount": 0,
       "intentionalTextFallbackCount": 0,
@@ -160,8 +149,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 881409,
-        "sha256": "5e92018df73c6ff42f23f4749d400fb8f3209b4a9a72a3045c962dd328b211c5"
+        "bytes": 638648,
+        "sha256": "bc762952445345a9e69771b73ac6161c2870ba90187552a9c17d90d19eba2eb1"
       }
     },
     {
@@ -182,8 +171,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 1790925,
-        "sha256": "41d941a387c95e7e83c716cab6107fda3ea27381a91958ecf10fe5dcaa9aef2d"
+        "bytes": 1643543,
+        "sha256": "9b2cae46e0bde772d04e4b6f853c3591193fb8cf3656ec2a9ecf47c9b102a2ff"
       }
     },
     {
@@ -204,8 +193,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 480511,
-        "sha256": "5c0819f1debf7fa00c7376989a0dca3bc83da71595f0ff0a7647b04d70b5461e"
+        "bytes": 489647,
+        "sha256": "d0843ceba52671bd5f48cdfa2f9d5a32aab0913809af0e135c76c3c775041413"
       }
     },
     {
@@ -226,8 +215,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 489266,
-        "sha256": "ab310574d31f57e2c472cc2c4a4dbf002dfcf94cc5756f6770e9b3799cb32d0c"
+        "bytes": 536773,
+        "sha256": "1de67ca22ea745bd8fee943ad96f544b2ad67b8b578d25ee231357bba7033cc0"
       }
     },
     {
@@ -248,8 +237,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 420359,
-        "sha256": "c3e0da2975abb94476ae4322b3c71a3b07caf39810d02da759741f7ca3c0d1c2"
+        "bytes": 435633,
+        "sha256": "8dcbb52c346338b88fdc055a26437cd9b17dd0318189b0b66167a1ec861bfdf1"
       }
     },
     {
@@ -270,8 +259,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 626805,
-        "sha256": "81aaf6660448d4801e279c52dbf53abd86f0818224ad68f5527f80972c94122d"
+        "bytes": 638273,
+        "sha256": "daefe889bcd7fb6c631d3dfe8ffeb520ebae856543546a6c4e24cdeb6b0bc50c"
       }
     },
     {
@@ -292,8 +281,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 381270,
-        "sha256": "d5c382e4631339b7fc471c327758304f1a33eb7b308467e40637ab5fa317f7f8"
+        "bytes": 394717,
+        "sha256": "aa0dd9a0570c40a1dfbe684faf465af1a6ad00f973581af7567ae000846089e4"
       }
     },
     {
@@ -314,8 +303,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 398487,
-        "sha256": "68caaa51532e3a0467164fc926228bb715b511857ee8ffb35054fdb8732144cf"
+        "bytes": 404392,
+        "sha256": "f50d9a7bd5812204ec1e8cdd13f45ae577db574e07dce0a4d8dc284f76c68743"
       }
     },
     {
@@ -336,8 +325,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 441334,
-        "sha256": "57535a6bad918c18963f95b6332d46917ce6c36aeff45695f19a022e2f8e5581"
+        "bytes": 450705,
+        "sha256": "f945ebebba1426bd98cd2bf09ce00106b4442efb237b23ad183bee4b1c9dea24"
       }
     },
     {
@@ -358,8 +347,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 193206,
-        "sha256": "d01b10f3b78709cf557fb289bc29d9f7760e318646a88b834e3494b860cddd05"
+        "bytes": 196367,
+        "sha256": "53332036efc17dc034a283642d5d67b151aa5664a187d21f86ac52b6cd03c930"
       }
     }
   ],
@@ -371,8 +360,8 @@
       "width": 1080,
       "height": 2340,
       "mode": "RGB",
-      "bytes": 881409,
-      "sha256": "5e92018df73c6ff42f23f4749d400fb8f3209b4a9a72a3045c962dd328b211c5"
+      "bytes": 638648,
+      "sha256": "bc762952445345a9e69771b73ac6161c2870ba90187552a9c17d90d19eba2eb1"
     }
   },
   "video": {
@@ -422,11 +411,11 @@
     "width": 1080,
     "height": 2340,
     "codec": "h264",
-    "frameRate": "465000/590189",
-    "duration": 39.346,
-    "bitRate": 280189,
-    "bytes": 1378040,
-    "sha256": "8c3c1d8eaf9339724c6e416536314413865b0def4060b1d146edb5ecbcc7ddc6"
+    "frameRate": "382500/459011",
+    "duration": 40.801,
+    "bitRate": 285462,
+    "bytes": 1455892,
+    "sha256": "7e73732bd318c14be20a6e72dc87e57de3359279bc0298184d2f5b1eab4e2573"
   },
   "projectOwned": {
     "appIcon": {
@@ -442,8 +431,8 @@
       "width": 1024,
       "height": 500,
       "mode": "RGB",
-      "bytes": 192451,
-      "sha256": "9000ba83d6c23c0fc8c11ec3045d72a6f5a4f1943ac5f99f717bd00c0bf9905e"
+      "bytes": 183726,
+      "sha256": "04419a50b99b74a2c75f218648884b9e2d340b6514982ba7cad8c284c5100852"
     }
   },
   "safety": {

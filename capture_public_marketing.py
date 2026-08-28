@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 
 
 PUBLIC_ROOT = Path(__file__).resolve().parent
-EXPECTED_ANDROID_HEAD = "c7f21617c450509987920b85d7a2f695b15b5421"
+EXPECTED_ANDROID_HEAD = "3dc25e904b0bffdedc2ec409104c038066c028aa"
 EXPECTED_ANDROID_BRANCH = "codex"
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
 REJECTED_PRODUCTION_PACKAGE = "com.lolclassic.encyclopedia"
@@ -35,33 +35,21 @@ EXPECTED_ACTIVITY_CLASS = "com.lolclassic.encyclopedia.MainActivity"
 ACTIVITY = f"{EXPECTED_PACKAGE}/{EXPECTED_ACTIVITY_CLASS}"
 APP_URL_PREFIX = "https://appassets.androidplatform.net/assets/www/index.html"
 DEVTOOLS_PORT = 9222
+CAPTURE_RUNTIME_SOURCE_PATHS = (
+    "app/src/main/assets/www/app.js",
+    "app/src/main/assets/www/final-ui-hotfix.js",
+    "app/src/main/assets/www/index.html",
+    "app/src/main/assets/www/sw.js",
+)
 EXPECTED_ANDROID_WIP_PATHS = frozenset(
     {
         "app/src/main/assets/www/app.js",
         "app/src/main/assets/www/final-ui-hotfix.js",
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js",
-        "app/src/main/assets/www/images/branding/app-icon-192.png",
-        "app/src/main/assets/www/images/branding/app-icon-512.png",
-        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
-        "app/src/main/assets/www/data/offline-assets.json",
-        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
-        "play-store/assets/app-icon-512.png",
-        "play-store/assets/feature-graphic-1024x500.png",
-        "play-store/asset-provenance.md",
-        "play-store/riot-asset-provenance.json",
+        "play-store/classic-fantasy-design-provenance.json",
         "tools/android_runtime_qa.py",
         "tools/check_classic_ui_overrides.mjs",
-        "tools/check_mobile_layout_contracts.mjs",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
         "tools/test-community-online.mjs",
@@ -74,10 +62,10 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
         "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011",
         "app/src/main/assets/www/index.html.bak-20260822-162011",
         "play-store/android-runtime-qa-classic-fantasy.json",
+        "play-store/android-runtime-qa-icon-era.json",
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
-        "play-store/classic-fantasy-design-provenance.json",
         "play-store/qa-skin-portraits/akali-7-skins.png",
         "play-store/qa-skin-portraits/fiddlesticks-skins.png",
         "play-store/qa-skin-portraits/garen-skins.png",
@@ -85,7 +73,6 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
         "play-store/skin-portrait-qa.json",
-        "tools/generate_classic_fantasy_brand_assets.py",
     }
 )
 
@@ -430,7 +417,14 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
             "Android untracked WIP gate failed; exact preserved classic-fantasy paths required"
         )
     binary_diff = run(
-        ["git", "diff", "--binary", "--no-ext-diff"],
+        [
+            "git",
+            "diff",
+            "--binary",
+            "--no-ext-diff",
+            "--",
+            *CAPTURE_RUNTIME_SOURCE_PATHS,
+        ],
         cwd=android_repo,
         text=False,
     ).stdout
@@ -440,7 +434,11 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
         "trackedState": "authorized-classic-fantasy-wip",
         "trackedPaths": sorted(tracked_paths),
         "preservedUntrackedPaths": sorted(untracked_paths),
-        "trackedDiffSha256": hashlib.sha256(binary_diff).hexdigest(),
+        "runtimeSourcePaths": list(CAPTURE_RUNTIME_SOURCE_PATHS),
+        "runtimeSourceDiffSha256": hashlib.sha256(binary_diff).hexdigest(),
+        "runtimeSourceFingerprintAlgorithm": (
+            "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
+        ),
     }
 
 
