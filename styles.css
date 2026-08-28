@@ -1020,3 +1020,463 @@ nav a:focus-visible {
     max-height: none;
   }
 }
+
+/* ===== CLASSIC-FANTASY PUBLIC ARCHIVE =====
+   Project-owned CSS geometry only: no extracted Riot/client decoration. */
+:root {
+  --bg: #080d12;
+  --bg-soft: #0d141a;
+  --panel: #12191d;
+  --panel-2: #1b211f;
+  --text: #efe4c4;
+  --muted: #b9b09a;
+  --gold: #a9853f;
+  --gold-bright: #d6b867;
+  --teal: #a9853f;
+  --danger: #b47758;
+  --line: rgba(181, 148, 74, 0.52);
+  --max: 1240px;
+  --shadow: 0 18px 44px rgba(0, 0, 0, 0.48);
+}
+
+body {
+  background:
+    linear-gradient(90deg, rgba(194, 158, 76, 0.035) 1px, transparent 1px) 0 0 / 34px 34px,
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.014) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 86% 0, rgba(126, 91, 39, 0.16), transparent 30rem),
+    var(--bg);
+}
+
+h1,
+h2 {
+  color: #f1e6c7;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  max-width: 15ch;
+  font-size: clamp(3rem, 5.7vw, 5.2rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3.8vw, 3.35rem);
+}
+
+.site-header {
+  width: min(calc(100% - 2rem), var(--max));
+  min-height: 4.9rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  background: linear-gradient(180deg, #1b211f, #10171a);
+  border: 1px solid #806a3b;
+  box-shadow: inset 0 0 0 1px #25251d, var(--shadow);
+}
+
+.brand {
+  color: #efe1b7;
+  font-family: Georgia, "Noto Serif KR", serif;
+  letter-spacing: 0.015em;
+}
+
+.brand-icon {
+  width: 3rem;
+  height: 3rem;
+  padding: 2px;
+  background: #070d12;
+  border: 1px solid #8d733d;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px #26251c;
+}
+
+nav {
+  gap: 0;
+}
+
+nav a {
+  min-height: 2.5rem;
+  padding: 0.6rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  color: #c8bea7;
+  border-left: 1px solid rgba(181, 148, 74, 0.25);
+}
+
+.nav-cta,
+.official-banner,
+.button,
+.tag-row span,
+.status-badge {
+  border-radius: 0;
+}
+
+.nav-cta {
+  border: 1px solid #715e35;
+}
+
+.hero {
+  min-height: 42rem;
+  padding: 3.5rem 2rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(24rem, 0.9fr);
+  gap: 3rem;
+  border-right: 1px solid rgba(181, 148, 74, 0.22);
+  border-left: 1px solid rgba(181, 148, 74, 0.22);
+}
+
+.hero-copy {
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(145deg, rgba(22, 29, 31, 0.92), rgba(10, 16, 20, 0.92));
+  border: 3px double #79653a;
+}
+
+.hero-copy::before,
+.hero-copy::after,
+.feature-card::before,
+.feature-card::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-color: #c2a052;
+  pointer-events: none;
+}
+
+.hero-copy::before,
+.feature-card::before {
+  top: 0.45rem;
+  left: 0.45rem;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.hero-copy::after,
+.feature-card::after {
+  right: 0.45rem;
+  bottom: 0.45rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.official-banner {
+  margin-bottom: 1.4rem;
+  color: #dfd1ad;
+  background: #151b1b;
+  border: 1px solid #705d34;
+}
+
+.official-banner:hover {
+  color: #fff1c6;
+  border-color: var(--gold-bright);
+}
+
+.eyebrow {
+  color: var(--gold-bright);
+  font-family: Georgia, "Noto Serif KR", serif;
+  letter-spacing: 0.16em;
+}
+
+.lede,
+.section-heading > p,
+.english-summary > p:not(.eyebrow) {
+  color: #c9c0aa;
+}
+
+.actions {
+  margin-top: 1.5rem;
+}
+
+.button {
+  min-height: 2.75rem;
+  border-color: #765f32;
+}
+
+.button.primary {
+  color: #211909;
+  background: linear-gradient(#dfc474, #a47e32);
+  box-shadow: inset 0 0 0 1px rgba(255,246,205,.32);
+}
+
+.button.secondary,
+.tag-row span {
+  color: #d4cab1;
+  background: #171d1d;
+  border-color: #5e5234;
+}
+
+.hero-visual {
+  height: 35rem;
+  border: 3px double #685a38;
+  background:
+    linear-gradient(135deg, transparent 49.7%, rgba(179,145,67,.16) 49.8% 50.2%, transparent 50.3%),
+    radial-gradient(circle at center, rgba(151, 111, 45, 0.16), transparent 56%),
+    #0b1116;
+}
+
+.phone,
+.phone img {
+  border-radius: 0;
+}
+
+.phone {
+  padding: 0.38rem;
+  border: 3px double #a08443;
+  background: #05090c;
+}
+
+.phone-front {
+  transform: rotate(2deg);
+}
+
+.phone-back {
+  opacity: 0.82;
+  transform: rotate(-4deg) scale(0.92);
+}
+
+.status-strip {
+  background: #101719;
+  border: 3px double #6e5c36;
+}
+
+.status-strip div {
+  min-height: 6.9rem;
+  padding: 1.15rem;
+}
+
+.status-strip strong {
+  color: #d5b75f;
+  font-size: 1.65rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 3px double #655735;
+}
+
+.feature-grid {
+  gap: 0.75rem;
+}
+
+.feature-card {
+  position: relative;
+  min-height: 15rem;
+  background: linear-gradient(150deg, #1c211e, #0f171a);
+  border: 3px double #5e5237;
+}
+
+.quality-section,
+.roadmap-section,
+.cta-section {
+  background: linear-gradient(145deg, #171e1e, #0c1318);
+  border: 3px double #6a5935;
+}
+
+.boundary-grid article,
+.release-grid article,
+.qa-card,
+.architecture-node,
+.source-list a,
+.contact-card,
+.contact-notice,
+.policy-meta {
+  background: linear-gradient(145deg, #171e1e, #10171a);
+  border: 1px solid #574c34;
+  border-radius: 0;
+}
+
+.status-badge.complete,
+.status-badge.guarded,
+.status-badge.pending {
+  color: #2b210f;
+  background: #d6c184;
+  border: 1px solid #917842;
+}
+
+.check-list li::before {
+  color: var(--gold-bright);
+}
+
+.qa-note,
+.release-note {
+  color: #d9cfb6;
+  background: rgba(154, 116, 50, 0.11);
+  border-left-color: #a7843d;
+}
+
+.gallery,
+.media-showcase-grid {
+  gap: 1rem;
+}
+
+.gallery figure,
+.media-showcase figure {
+  padding: 0.55rem;
+  background: #0d1317;
+  border: 1px solid #594c31;
+}
+
+.gallery img,
+.media-showcase img,
+.media-showcase video {
+  border: 3px double #8b713b;
+  border-radius: 0;
+  box-shadow: var(--shadow);
+}
+
+.gallery figcaption,
+.media-showcase figcaption {
+  padding: 0.8rem 0.35rem 0.3rem;
+}
+
+.feature-graphic-preview {
+  grid-column: 1 / -1;
+}
+
+.feature-graphic-preview img {
+  aspect-ratio: 1024 / 500;
+  object-fit: cover;
+}
+
+.cta-section {
+  margin-bottom: 4rem;
+  padding: 2.4rem;
+}
+
+.site-footer {
+  padding-top: 2.4rem;
+  border-top: 3px double #6a5935;
+}
+
+.policy-main {
+  width: min(calc(100% - 2rem), 960px);
+  padding: 4.5rem 0 6rem;
+}
+
+.policy-main h1 {
+  padding-bottom: 1.2rem;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  border-bottom: 3px double #6f5c35;
+}
+
+.policy-main section {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(16, 23, 26, 0.84);
+  border: 1px solid #4f4632;
+}
+
+.policy-main .english-summary {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 3px double #6f5c35;
+}
+
+.policy-main p,
+.policy-main li {
+  color: #cec5b0;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    align-items: center;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    width: calc(100% - 1rem);
+    margin-top: 0.5rem;
+    padding: 0.65rem;
+  }
+
+  .brand-icon {
+    width: 2.65rem;
+    height: 2.65rem;
+  }
+
+  .hero {
+    width: calc(100% - 1rem);
+    padding: 1rem 0;
+    border: 0;
+  }
+
+  .hero-copy {
+    padding: 1.25rem;
+    min-width: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
+  }
+
+  .hero-visual {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 25rem;
+    overflow: hidden;
+  }
+
+  .phone {
+    width: 10.25rem;
+  }
+
+  .phone-front {
+    right: 0.15rem;
+  }
+
+  .phone-back {
+    left: 0.15rem;
+  }
+
+  .official-banner {
+    max-width: 100%;
+  }
+
+  .section {
+    width: calc(100% - 1rem);
+    padding: 3.5rem 0;
+  }
+
+  .quality-section,
+  .roadmap-section {
+    width: calc(100% - 1rem);
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    border: 3px double #6a5935;
+  }
+
+  .status-strip {
+    width: calc(100% - 1rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .status-strip div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .status-strip strong {
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+
+  .policy-main {
+    width: calc(100% - 1rem);
+    padding-top: 3rem;
+  }
+
+  .policy-main section {
+    padding: 1rem;
+  }
+}

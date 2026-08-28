@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 
 
 PUBLIC_ROOT = Path(__file__).resolve().parent
-EXPECTED_ANDROID_HEAD = "a912579d568ec6ae5cfd7f27228e6b23fe1b5dcf"
+EXPECTED_ANDROID_HEAD = "c7f21617c450509987920b85d7a2f695b15b5421"
 EXPECTED_ANDROID_BRANCH = "codex"
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
 REJECTED_PRODUCTION_PACKAGE = "com.lolclassic.encyclopedia"
@@ -37,16 +37,55 @@ APP_URL_PREFIX = "https://appassets.androidplatform.net/assets/www/index.html"
 DEVTOOLS_PORT = 9222
 EXPECTED_ANDROID_WIP_PATHS = frozenset(
     {
-        "README.md",
         "app/src/main/assets/www/app.js",
-        "app/src/main/assets/www/style.css",
-        "play-store/asset-alt-text-ko.md",
-        "play-store/screenshot-plan-ko.md",
-        "play-store/store-listing-ko.md",
+        "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/index.html",
+        "app/src/main/assets/www/sw.js",
+        "app/src/main/assets/www/images/branding/app-icon-192.png",
+        "app/src/main/assets/www/images/branding/app-icon-512.png",
+        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
+        "app/src/main/assets/www/data/offline-assets.json",
+        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+        "play-store/assets/app-icon-512.png",
+        "play-store/assets/feature-graphic-1024x500.png",
+        "play-store/asset-provenance.md",
+        "play-store/riot-asset-provenance.json",
         "tools/android_runtime_qa.py",
-        "tools/capture_play_screenshots.py",
+        "tools/check_classic_ui_overrides.mjs",
         "tools/check_mobile_layout_contracts.mjs",
         "tools/release_lint.py",
+        "tools/test-classic-skills-ui.mjs",
+        "tools/test-community-online.mjs",
+    }
+)
+EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
+    {
+        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160457",
+        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160935",
+        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011",
+        "app/src/main/assets/www/index.html.bak-20260822-162011",
+        "play-store/android-runtime-qa-classic-fantasy.json",
+        "play-store/android-runtime-qa-phase2b3-final.json",
+        "play-store/android-runtime-qa-phase2b3-rerun.json",
+        "play-store/android-runtime-qa-phase2b3.json",
+        "play-store/classic-fantasy-design-provenance.json",
+        "play-store/qa-skin-portraits/akali-7-skins.png",
+        "play-store/qa-skin-portraits/fiddlesticks-skins.png",
+        "play-store/qa-skin-portraits/garen-skins.png",
+        "play-store/qa-skin-portraits/ryze-skins.png",
+        "play-store/qa-skin-portraits/shen-skins.png",
+        "play-store/qa-skin-portraits/warwick-skins.png",
+        "play-store/skin-portrait-qa.json",
+        "tools/generate_classic_fantasy_brand_assets.py",
     }
 )
 
@@ -373,11 +412,22 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
         for line in run(["git", "diff", "--name-only"], cwd=android_repo).stdout.splitlines()
         if line
     )
+    untracked_paths = frozenset(
+        line
+        for line in run(
+            ["git", "ls-files", "--others", "--exclude-standard"], cwd=android_repo
+        ).stdout.splitlines()
+        if line
+    )
     if branch != EXPECTED_ANDROID_BRANCH or head != EXPECTED_ANDROID_HEAD:
         raise RuntimeError("Android canonical branch/HEAD gate failed")
     if tracked_paths != EXPECTED_ANDROID_WIP_PATHS:
         raise RuntimeError(
-            "Android tracked WIP gate failed; exact authorized Phase 2B-3 paths required"
+            "Android tracked WIP gate failed; exact authorized classic-fantasy paths required"
+        )
+    if untracked_paths != EXPECTED_ANDROID_UNTRACKED_PATHS:
+        raise RuntimeError(
+            "Android untracked WIP gate failed; exact preserved classic-fantasy paths required"
         )
     binary_diff = run(
         ["git", "diff", "--binary", "--no-ext-diff"],
@@ -387,8 +437,9 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
     return {
         "branch": branch,
         "commit": head,
-        "trackedState": "authorized-phase2b3-hotfix",
+        "trackedState": "authorized-classic-fantasy-wip",
         "trackedPaths": sorted(tracked_paths),
+        "preservedUntrackedPaths": sorted(untracked_paths),
         "trackedDiffSha256": hashlib.sha256(binary_diff).hexdigest(),
     }
 
@@ -617,45 +668,44 @@ def load_font(size: int, *, bold: bool = False) -> ImageFont.FreeTypeFont | Imag
     return ImageFont.load_default()
 
 
-def generate_project_icon(destination: Path) -> dict[str, Any]:
-    size = 512
-    image = Image.new("RGB", (size, size), "#0b2330")
-    draw = ImageDraw.Draw(image)
-    draw.rounded_rectangle((24, 24, 488, 488), radius=104, fill="#123b49")
-    draw.rounded_rectangle((54, 54, 458, 458), radius=86, outline="#55c5c9", width=14)
-    draw.rounded_rectangle((104, 118, 408, 354), radius=34, fill="#f4f0df")
-    draw.line((256, 132, 256, 338), fill="#123b49", width=12)
-    draw.line((128, 168, 228, 168), fill="#55c5c9", width=12)
-    draw.line((284, 168, 384, 168), fill="#55c5c9", width=12)
-    draw.line((128, 206, 220, 206), fill="#55c5c9", width=12)
-    draw.line((292, 206, 384, 206), fill="#55c5c9", width=12)
-    label_font = load_font(72, bold=True)
-    label = "LC"
-    box = draw.textbbox((0, 0), label, font=label_font)
-    draw.text(((size - (box[2] - box[0])) / 2, 348), label, font=label_font, fill="#f4f0df")
+def generate_project_icon(source: Path, destination: Path) -> dict[str, Any]:
+    if not source.is_file():
+        raise RuntimeError("project-owned Android Play icon is missing")
+    with Image.open(source) as original:
+        if original.size != (512, 512) or original.mode != "RGBA":
+            raise RuntimeError("project-owned Android Play icon is not 512x512 RGBA")
     destination.parent.mkdir(parents=True, exist_ok=True)
-    image.save(destination, "PNG", optimize=True)
+    shutil.copyfile(source, destination)
     return inspect_png(destination)
 
 
 def generate_feature_graphic(
     home_capture: Path, detail_capture: Path, destination: Path
 ) -> dict[str, Any]:
-    canvas = Image.new("RGB", (1024, 500), "#eaf5f3")
+    canvas = Image.new("RGB", (1024, 500), "#0b1117")
     draw = ImageDraw.Draw(canvas)
-    draw.rectangle((0, 0, 1024, 500), fill="#eaf5f3")
-    draw.rounded_rectangle((0, 0, 590, 500), radius=0, fill="#123b49")
-    draw.ellipse((-80, 330, 220, 630), fill="#1b7f89")
-    draw.ellipse((420, -150, 720, 150), fill="#55c5c9")
+    draw.rectangle((0, 0, 1024, 500), fill="#0b1117")
+    for y in range(18, 500, 22):
+        draw.line((0, y, 1024, y), fill="#101a20", width=1)
+    draw.rectangle((14, 14, 1010, 486), outline="#806938", width=3)
+    draw.rectangle((23, 23, 1001, 477), outline="#3f3928", width=1)
+    draw.rectangle((0, 0, 590, 500), fill="#101820")
+    draw.polygon(((0, 0), (590, 0), (548, 42), (42, 42)), fill="#151f25")
+    draw.line((42, 42, 548, 42), fill="#b29149", width=2)
+    draw.line((55, 420, 525, 420), fill="#806938", width=2)
+    draw.polygon(((42, 42), (58, 42), (42, 58)), fill="#b29149")
+    draw.polygon(((548, 42), (532, 42), (548, 58)), fill="#b29149")
+    draw.polygon(((42, 458), (58, 458), (42, 442)), fill="#806938")
+    draw.polygon(((548, 458), (532, 458), (548, 442)), fill="#806938")
     title_font = load_font(54, bold=True)
     body_font = load_font(25)
     badge_font = load_font(18, bold=True)
-    draw.text((56, 72), "LoL Encyclopedia", font=title_font, fill="#f4f0df")
-    draw.text((56, 136), "Classic", font=title_font, fill="#f4f0df")
-    draw.text((58, 230), "Independent historical archive", font=body_font, fill="#b8e5e3")
-    draw.text((58, 268), "Android reference and community", font=body_font, fill="#b8e5e3")
-    draw.rounded_rectangle((56, 340, 292, 392), radius=26, fill="#f4f0df")
-    draw.text((84, 355), "UNOFFICIAL PROJECT", font=badge_font, fill="#123b49")
+    draw.text((56, 78), "LoL Encyclopedia", font=title_font, fill="#efe3bd")
+    draw.text((56, 142), "Classic Archive", font=title_font, fill="#c7a75b")
+    draw.text((58, 238), "Independent historical reference", font=body_font, fill="#d4cbb4")
+    draw.text((58, 276), "Korean-first records & community", font=body_font, fill="#d4cbb4")
+    draw.rectangle((56, 344, 316, 395), fill="#d7c696", outline="#a68743", width=2)
+    draw.text((77, 358), "UNOFFICIAL FAN PROJECT", font=badge_font, fill="#251c0e")
 
     def add_phone(source: Path, box: tuple[int, int, int, int], angle: float) -> None:
         with Image.open(source) as screenshot:
@@ -667,8 +717,10 @@ def generate_feature_graphic(
             left = max(0, (resized.width - target_w) // 2)
             top = max(0, (resized.height - target_h) // 2)
             crop = resized.crop((left, top, left + target_w, top + target_h))
-            frame = Image.new("RGB", (target_w + 20, target_h + 20), "#123b49")
+            frame = Image.new("RGB", (target_w + 20, target_h + 20), "#0a0f14")
             frame.paste(crop, (10, 10))
+            frame_draw = ImageDraw.Draw(frame)
+            frame_draw.rectangle((2, 2, frame.width - 3, frame.height - 3), outline="#b29149", width=4)
             rotated = frame.rotate(angle, expand=True, resample=Image.Resampling.BICUBIC)
             x = box[0] - (rotated.width - frame.width) // 2
             y = box[1] - (rotated.height - frame.height) // 2
@@ -810,7 +862,10 @@ def main() -> int:
         if restoration_errors:
             raise RuntimeError("; ".join(restoration_errors))
 
-    icon = generate_project_icon(output / "app-icon.png")
+    icon = generate_project_icon(
+        android_repo / "play-store/assets/app-icon-512.png",
+        output / "app-icon.png",
+    )
     feature = generate_feature_graphic(
         output / "phone-01-home.png",
         output / "phone-03-champion-detail.png",

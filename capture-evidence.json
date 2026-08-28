@@ -1,27 +1,63 @@
 {
   "schemaVersion": 1,
-  "capturedAt": "2026-08-26T10:13:35Z",
+  "capturedAt": "2026-08-28T03:56:05Z",
   "source": {
     "android": {
       "branch": "codex",
-      "commit": "a912579d568ec6ae5cfd7f27228e6b23fe1b5dcf",
-      "trackedState": "authorized-phase2b3-hotfix",
+      "commit": "c7f21617c450509987920b85d7a2f695b15b5421",
+      "trackedState": "authorized-classic-fantasy-wip",
       "trackedPaths": [
-        "README.md",
         "app/src/main/assets/www/app.js",
-        "app/src/main/assets/www/style.css",
-        "play-store/asset-alt-text-ko.md",
-        "play-store/screenshot-plan-ko.md",
-        "play-store/store-listing-ko.md",
+        "app/src/main/assets/www/data/offline-assets.json",
+        "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/images/branding/app-icon-192.png",
+        "app/src/main/assets/www/images/branding/app-icon-512.png",
+        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
+        "app/src/main/assets/www/index.html",
+        "app/src/main/assets/www/sw.js",
+        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+        "play-store/asset-provenance.md",
+        "play-store/assets/app-icon-512.png",
+        "play-store/riot-asset-provenance.json",
         "tools/android_runtime_qa.py",
-        "tools/capture_play_screenshots.py",
+        "tools/check_classic_ui_overrides.mjs",
         "tools/check_mobile_layout_contracts.mjs",
-        "tools/release_lint.py"
+        "tools/release_lint.py",
+        "tools/test-classic-skills-ui.mjs",
+        "tools/test-community-online.mjs"
       ],
-      "trackedDiffSha256": "e5c9b86f0762f2fee87e67290c4cab1f7cb4e845759d723d829eeeef9fad36e0"
+      "preservedUntrackedPaths": [
+        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160457",
+        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160935",
+        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011",
+        "app/src/main/assets/www/index.html.bak-20260822-162011",
+        "play-store/android-runtime-qa-classic-fantasy.json",
+        "play-store/android-runtime-qa-phase2b3-final.json",
+        "play-store/android-runtime-qa-phase2b3-rerun.json",
+        "play-store/android-runtime-qa-phase2b3.json",
+        "play-store/classic-fantasy-design-provenance.json",
+        "play-store/qa-skin-portraits/akali-7-skins.png",
+        "play-store/qa-skin-portraits/fiddlesticks-skins.png",
+        "play-store/qa-skin-portraits/garen-skins.png",
+        "play-store/qa-skin-portraits/ryze-skins.png",
+        "play-store/qa-skin-portraits/shen-skins.png",
+        "play-store/qa-skin-portraits/warwick-skins.png",
+        "play-store/skin-portrait-qa.json",
+        "tools/generate_classic_fantasy_brand_assets.py"
+      ],
+      "trackedDiffSha256": "7b4cf9849ba484c055f20be0593623361be46d4b909bb9308c003d62b19ea93c"
     },
     "applicationId": "com.lolclassic.encyclopedia.qa",
-    "apkSha256": "2cacf37e1a6a0ac1bf960c2c5e253cd5d320867c7561ba5237470fee166e396c"
+    "apkSha256": "0d1ae5f542a1d6802995eae95d5eccac6ed35aa2f6086987e5067e62c5569aa6"
   },
   "deviceGate": {
     "exactlyOneAuthorizedTarget": true,
@@ -124,8 +160,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 640321,
-        "sha256": "8d34d3e5fc3b349146ab126168f4f4cf773b7c2392dcbe93359fd1c2e5ea8f6d"
+        "bytes": 881409,
+        "sha256": "5e92018df73c6ff42f23f4749d400fb8f3209b4a9a72a3045c962dd328b211c5"
       }
     },
     {
@@ -146,8 +182,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 1811574,
-        "sha256": "5fd76d64bee48335f87fb392cd9e24c7bcce0aacb47464326ab7a49a0f3ef55f"
+        "bytes": 1790925,
+        "sha256": "41d941a387c95e7e83c716cab6107fda3ea27381a91958ecf10fe5dcaa9aef2d"
       }
     },
     {
@@ -168,8 +204,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 338974,
-        "sha256": "caa3f58b8501b35098f2179fb5b97608b9f3521af1ab9d45e0a0e12bcb28c32a"
+        "bytes": 480511,
+        "sha256": "5c0819f1debf7fa00c7376989a0dca3bc83da71595f0ff0a7647b04d70b5461e"
       }
     },
     {
@@ -190,8 +226,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 190659,
-        "sha256": "02a91fbbf10be7a69ea249ff79eeb11fb8bd5e2d1eb37b5a46e5f9b1644a6a5f"
+        "bytes": 489266,
+        "sha256": "ab310574d31f57e2c472cc2c4a4dbf002dfcf94cc5756f6770e9b3799cb32d0c"
       }
     },
     {
@@ -212,8 +248,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 223671,
-        "sha256": "391c3080a31ff13ada7beb202ecfb5fb766b345bdc9baad4d25278a391551fcf"
+        "bytes": 420359,
+        "sha256": "c3e0da2975abb94476ae4322b3c71a3b07caf39810d02da759741f7ca3c0d1c2"
       }
     },
     {
@@ -234,8 +270,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 532617,
-        "sha256": "ff8599e77f9962f8a38973cae9dd5faf394fa58c46fcbeb4299f1ac7b5dafff3"
+        "bytes": 626805,
+        "sha256": "81aaf6660448d4801e279c52dbf53abd86f0818224ad68f5527f80972c94122d"
       }
     },
     {
@@ -256,8 +292,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 157302,
-        "sha256": "bc81d1961df3196618762028d1a78f3d5bc37426f7c4ac38b3a97e60dd100868"
+        "bytes": 381270,
+        "sha256": "d5c382e4631339b7fc471c327758304f1a33eb7b308467e40637ab5fa317f7f8"
       }
     },
     {
@@ -278,8 +314,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 94826,
-        "sha256": "dd9421d1febebfade857d04f0cb17661221e2a7a677226496b1a6079ada0e537"
+        "bytes": 398487,
+        "sha256": "68caaa51532e3a0467164fc926228bb715b511857ee8ffb35054fdb8732144cf"
       }
     },
     {
@@ -300,8 +336,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 331745,
-        "sha256": "1d4bc99f232a41e99acbbfd9af3df467e0fab0bbcbbddfd6dab74477bef2fa6f"
+        "bytes": 441334,
+        "sha256": "57535a6bad918c18963f95b6332d46917ce6c36aeff45695f19a022e2f8e5581"
       }
     },
     {
@@ -322,8 +358,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 104703,
-        "sha256": "8c2400766929fed65078359fd68ae3ead5ce461294fc62119075b1a26cb37a38"
+        "bytes": 193206,
+        "sha256": "d01b10f3b78709cf557fb289bc29d9f7760e318646a88b834e3494b860cddd05"
       }
     }
   ],
@@ -335,8 +371,8 @@
       "width": 1080,
       "height": 2340,
       "mode": "RGB",
-      "bytes": 640321,
-      "sha256": "8d34d3e5fc3b349146ab126168f4f4cf773b7c2392dcbe93359fd1c2e5ea8f6d"
+      "bytes": 881409,
+      "sha256": "5e92018df73c6ff42f23f4749d400fb8f3209b4a9a72a3045c962dd328b211c5"
     }
   },
   "video": {
@@ -386,28 +422,28 @@
     "width": 1080,
     "height": 2340,
     "codec": "h264",
-    "frameRate": "105000/135439",
-    "duration": 45.146,
-    "bitRate": 209446,
-    "bytes": 1181968,
-    "sha256": "860c86bd0fc44f4e0c51551e4b85f1c89811b65e04347b8b3a368f5f64c0ec91"
+    "frameRate": "465000/590189",
+    "duration": 39.346,
+    "bitRate": 280189,
+    "bytes": 1378040,
+    "sha256": "8c3c1d8eaf9339724c6e416536314413865b0def4060b1d146edb5ecbcc7ddc6"
   },
   "projectOwned": {
     "appIcon": {
       "file": "app-icon.png",
       "width": 512,
       "height": 512,
-      "mode": "RGB",
-      "bytes": 5063,
-      "sha256": "1ec67c732becf1f05bf8f2b7a2ac6ced66853da2072653c4867ae8ada7158aeb"
+      "mode": "RGBA",
+      "bytes": 379766,
+      "sha256": "bd738608c1ed224f936609050396b0fc733a04efaf08d45791f4f9952b6eca7d"
     },
     "featureGraphic": {
       "file": "feature-graphic.png",
       "width": 1024,
       "height": 500,
       "mode": "RGB",
-      "bytes": 145217,
-      "sha256": "888537ed2deca22ac12cd48fc08e70a6e3560a4c457e158e28a170e3a2c89c59"
+      "bytes": 192451,
+      "sha256": "9000ba83d6c23c0fc8c11ec3045d72a6f5a4f1943ac5f99f717bd00c0bf9905e"
     }
   },
   "safety": {
@@ -417,16 +453,5 @@
     "domTextPatternScanPassed": true,
     "personalDataReviewedByAutomation": false,
     "manualVisualReviewRequired": true
-  },
-  "manualVisualReview": {
-    "completed": true,
-    "reviewedAt": "2026-08-26T10:18:00Z",
-    "screenshotsReviewed": 10,
-    "videoRepresentativeFramesReviewed": 6,
-    "personalDataFound": false,
-    "notificationContentFound": false,
-    "literalBrPresentationFound": false,
-    "result": "PASS",
-    "perAssetEvidence": "assets/media-provenance.json"
   }
 }
