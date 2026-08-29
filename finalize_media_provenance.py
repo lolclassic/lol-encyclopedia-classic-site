@@ -122,7 +122,11 @@ def reconcile_runtime_source_fingerprint(
         text=True,
         encoding="utf-8",
     ).stdout.splitlines()
-    if tuple(changed) != CAPTURE_RUNTIME_SOURCE_PATHS:
+    captured_tracked_paths = set(android.get("trackedPaths", []))
+    expected_changed = tuple(
+        path for path in CAPTURE_RUNTIME_SOURCE_PATHS if path in captured_tracked_paths
+    )
+    if tuple(changed) != expected_changed:
         raise RuntimeError("Android runtime source allowlist is incomplete or out of order")
 
     binary_diff = subprocess.run(
@@ -138,13 +142,16 @@ def reconcile_runtime_source_fingerprint(
         check=True,
         capture_output=True,
     ).stdout
+    runtime_diff_sha256 = hashlib.sha256(binary_diff).hexdigest()
+    if android.get("runtimeSourceDiffSha256") != runtime_diff_sha256:
+        raise RuntimeError("Android runtime source diff changed after capture")
     apk = android_repo / "app/build/outputs/apk/debug/app-debug.apk"
     if not apk.is_file() or sha256(apk) != source["apkSha256"]:
         raise RuntimeError("current debug APK bytes do not match the capture evidence")
 
     android.pop("trackedDiffSha256", None)
     android["runtimeSourcePaths"] = list(CAPTURE_RUNTIME_SOURCE_PATHS)
-    android["runtimeSourceDiffSha256"] = hashlib.sha256(binary_diff).hexdigest()
+    android["runtimeSourceDiffSha256"] = runtime_diff_sha256
     android["runtimeSourceFingerprintAlgorithm"] = (
         "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
     )
@@ -370,23 +377,65 @@ def main() -> int:
     )
     records.append(record)
 
-    icon = evidence["projectOwned"]["appIcon"]
+    icon = evidence["historicalLauncherException"]
+    icon_provenance_path = (
+        args.android_repo.resolve()
+        / "play-store/historical-launcher-icon-provenance.json"
+    )
+    if not icon_provenance_path.is_file():
+        raise RuntimeError("historical launcher icon provenance is missing")
+    icon_provenance = json.loads(icon_provenance_path.read_text(encoding="utf-8"))
+    icon_derivative = next(
+        (
+            derivative
+            for derivative in icon_provenance.get("derivatives", [])
+            if derivative.get("outputPath") == icon.get("androidDerivativePath")
+        ),
+        None,
+    )
+    if (
+        icon_provenance.get("category") != "USER_SUPPLIED_HISTORICAL_ASSET"
+        or icon.get("category") != icon_provenance.get("category")
+        or icon.get("sourceHistoricalApkSha256")
+        != icon_provenance.get("historicalApk", {}).get("sha256")
+        or icon.get("sourceHistoricalIconSha256")
+        != icon_provenance.get("source", {}).get("sha256")
+        or icon.get("sourceHistoricalIconPath")
+        != icon_provenance.get("manifestResolution", {}).get(
+            "selectedSourceResource"
+        )
+        or icon.get("historicalLauncherSourceImported") != 1
+        or icon.get("otherHistoricalApkBinaryAssetsImportedViaIconException") != 0
+        or not isinstance(icon_derivative, dict)
+        or str(icon_derivative.get("sha256", "")).lower()
+        != str(icon.get("sha256", "")).lower()
+    ):
+        raise RuntimeError("Public icon lineage does not match Android historical provenance")
     record = common_record(
         evidence,
         "app-icon.png",
-        source_type="PROJECT_OWNED_ICON",
+        source_type="USER_SUPPLIED_HISTORICAL_LAUNCHER_DERIVATIVE",
         purpose="PUBLIC_APP_ICON",
     )
     record.update(
         {
             "mediaType": "image/png",
-            "captureMethod": "Byte-identical copy of the deterministic Android project-owned Play icon",
+            "captureMethod": "Byte-identical copy of the Android 512px technical derivative mechanically generated from the manifest-linked historical launcher icon",
             "width": icon["width"],
             "height": icon["height"],
             "bytes": icon["bytes"],
             "outputSha256": icon["sha256"],
-            "classification": "PROJECT_OWNED_COMPOSITION",
-            "notes": "Project-owned open archive-book identity; no Riot or League logo geometry or extracted client decoration is used.",
+            "classification": "USER_AUTHORIZED_HISTORICAL_EXCEPTION",
+            "projectOwnedChrome": False,
+            "sourceHistoricalApkSha256": icon["sourceHistoricalApkSha256"],
+            "sourceHistoricalIconSha256": icon["sourceHistoricalIconSha256"],
+            "sourceHistoricalIconPath": icon["sourceHistoricalIconPath"],
+            "sourceAndroidDerivativePath": icon["androidDerivativePath"],
+            "sourceAndroidDerivativeSha256": icon_derivative["sha256"],
+            "derivativeTransformation": icon["derivativeTransformation"],
+            "historicalLauncherSourceImported": 1,
+            "otherHistoricalApkBinaryAssetsImportedViaIconException": 0,
+            "notes": "User-authorized sole historical binary exception: the verified manifest-linked blue/gold L launcher icon, mechanically resized without redesign for Android and Public presentation.",
         }
     )
     records.append(record)
@@ -436,6 +485,10 @@ def main() -> int:
             "currentButMarketingCrop": 0,
             "projectOwnedComposition": sum(
                 record["classification"] == "PROJECT_OWNED_COMPOSITION" for record in records
+            ),
+            "historicalLauncherException": sum(
+                record["classification"] == "USER_AUTHORIZED_HISTORICAL_EXCEPTION"
+                for record in records
             ),
             "stale": 0,
             "invalid": 0,

@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 
 
 PUBLIC_ROOT = Path(__file__).resolve().parent
-EXPECTED_ANDROID_HEAD = "3dc25e904b0bffdedc2ec409104c038066c028aa"
+EXPECTED_ANDROID_HEAD = "1fa423abb0b7904b60605fb4dd608f0267ecec12"
 EXPECTED_ANDROID_BRANCH = "codex"
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
 REJECTED_PRODUCTION_PACKAGE = "com.lolclassic.encyclopedia"
@@ -43,13 +43,34 @@ CAPTURE_RUNTIME_SOURCE_PATHS = (
 )
 EXPECTED_ANDROID_WIP_PATHS = frozenset(
     {
-        "app/src/main/assets/www/app.js",
+        "app/src/main/assets/www/data/offline-assets.json",
         "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/images/branding/app-icon-192.png",
+        "app/src/main/assets/www/images/branding/app-icon-512.png",
+        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js",
+        "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/values/colors.xml",
+        "play-store/android-runtime-qa.json",
+        "play-store/asset-provenance.md",
+        "play-store/assets/app-icon-512.png",
         "play-store/classic-fantasy-design-provenance.json",
-        "tools/android_runtime_qa.py",
+        "play-store/icon-status.md",
+        "play-store/riot-asset-provenance.json",
         "tools/check_classic_ui_overrides.mjs",
+        "tools/check_mobile_layout_contracts.mjs",
+        "tools/generate_riot_asset_provenance.py",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
         "tools/test-community-online.mjs",
@@ -66,6 +87,10 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
+        "play-store/design-source/historical-launcher-icon-2013.png",
+        "play-store/historical-launcher-icon-provenance.json",
+        "play-store/historical-ui-data-freeze.json",
+        "play-store/historical-ui-reference-comparison.json",
         "play-store/qa-skin-portraits/akali-7-skins.png",
         "play-store/qa-skin-portraits/fiddlesticks-skins.png",
         "play-store/qa-skin-portraits/garen-skins.png",
@@ -73,6 +98,8 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
         "play-store/skin-portrait-qa.json",
+        "tools/generate_historical_launcher_icons.py",
+        "tools/verify_historical_ui_data_freeze.py",
     }
 )
 
@@ -666,12 +693,12 @@ def load_font(size: int, *, bold: bool = False) -> ImageFont.FreeTypeFont | Imag
     return ImageFont.load_default()
 
 
-def generate_project_icon(source: Path, destination: Path) -> dict[str, Any]:
+def copy_historical_launcher_derivative(source: Path, destination: Path) -> dict[str, Any]:
     if not source.is_file():
-        raise RuntimeError("project-owned Android Play icon is missing")
+        raise RuntimeError("historical Android launcher derivative is missing")
     with Image.open(source) as original:
         if original.size != (512, 512) or original.mode != "RGBA":
-            raise RuntimeError("project-owned Android Play icon is not 512x512 RGBA")
+            raise RuntimeError("historical Android launcher derivative is not 512x512 RGBA")
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(source, destination)
     return inspect_png(destination)
@@ -860,10 +887,30 @@ def main() -> int:
         if restoration_errors:
             raise RuntimeError("; ".join(restoration_errors))
 
-    icon = generate_project_icon(
+    icon = copy_historical_launcher_derivative(
         android_repo / "play-store/assets/app-icon-512.png",
         output / "app-icon.png",
     )
+    icon_provenance_path = android_repo / "play-store/historical-launcher-icon-provenance.json"
+    if not icon_provenance_path.is_file():
+        raise RuntimeError("historical launcher icon provenance is missing")
+    icon_provenance = json.loads(icon_provenance_path.read_text(encoding="utf-8"))
+    icon_derivative = next(
+        (
+            derivative
+            for derivative in icon_provenance.get("derivatives", [])
+            if derivative.get("outputPath") == "play-store/assets/app-icon-512.png"
+        ),
+        None,
+    )
+    if (
+        icon_provenance.get("category") != "USER_SUPPLIED_HISTORICAL_ASSET"
+        or icon_provenance.get("source", {}).get("historicalLauncherSourceImported") != 1
+        or icon_provenance.get("otherHistoricalApkBinaryAssetsImportedViaIconException") != 0
+        or not isinstance(icon_derivative, dict)
+        or str(icon_derivative.get("sha256", "")).lower() != icon["sha256"].lower()
+    ):
+        raise RuntimeError("historical launcher icon lineage does not match the Public icon bytes")
     feature = generate_feature_graphic(
         output / "phone-01-home.png",
         output / "phone-03-champion-detail.png",
@@ -895,8 +942,22 @@ def main() -> int:
             "png": main_screen,
         },
         "video": {"file": "app-feature-tour.mp4", **video_evidence},
+        "historicalLauncherException": {
+            "file": "app-icon.png",
+            "category": icon_provenance["category"],
+            "sourceHistoricalApkSha256": icon_provenance["historicalApk"]["sha256"],
+            "sourceHistoricalIconSha256": icon_provenance["source"]["sha256"],
+            "sourceHistoricalIconPath": icon_provenance["manifestResolution"][
+                "selectedSourceResource"
+            ],
+            "androidDerivativePath": icon_derivative["outputPath"],
+            "derivativeTransformation": icon_derivative["transformation"],
+            "historicalLauncherSourceImported": 1,
+            "technicalDerivativeCount": icon_provenance["technicalDerivativeCount"],
+            "otherHistoricalApkBinaryAssetsImportedViaIconException": 0,
+            **icon,
+        },
         "projectOwned": {
-            "appIcon": {"file": "app-icon.png", **icon},
             "featureGraphic": {"file": "feature-graphic.png", **feature},
         },
         "safety": {

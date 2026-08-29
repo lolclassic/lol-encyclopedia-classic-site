@@ -39,7 +39,10 @@ class SafetyConstantTests(unittest.TestCase):
         )
         self.assertEqual(capture.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
         self.assertEqual(finalize.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
-        self.assertTrue(set(expected).issubset(capture.EXPECTED_ANDROID_WIP_PATHS))
+        modified_runtime_sources = set(expected) - {"app/src/main/assets/www/app.js"}
+        self.assertTrue(
+            modified_runtime_sources.issubset(capture.EXPECTED_ANDROID_WIP_PATHS)
+        )
         self.assertFalse(any(path.startswith("play-store/") for path in expected))
 
 

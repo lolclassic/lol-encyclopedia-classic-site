@@ -18,13 +18,20 @@ POLICY_FILES = {"privacy.html", "terms.html", "delete-account.html", "contact.ht
 ALLOWED_SOURCE_TYPES = {
     "PROJECT_OWNED_SCREEN_CAPTURE",
     "PROJECT_OWNED_COMPOSITION",
-    "PROJECT_OWNED_ICON",
+    "USER_SUPPLIED_HISTORICAL_LAUNCHER_DERIVATIVE",
 }
 ALLOWED_CLASSIFICATIONS = {
     "CURRENT_AND_MATCHING",
     "CURRENT_BUT_MARKETING_CROP",
     "PROJECT_OWNED_COMPOSITION",
+    "USER_AUTHORIZED_HISTORICAL_EXCEPTION",
 }
+EXPECTED_HISTORICAL_APK_SHA256 = (
+    "4B33F73F8B3C9A83220061620276874FCB761920BC16AF1E190CBB13E7D5B2B1"
+)
+EXPECTED_HISTORICAL_ICON_SHA256 = (
+    "228F51F62EA2CBD6B4BD59F816765F580D92A3D1ACB3A247F27EBA670B0B255B"
+)
 RETIRED_MEDIA = {"phone-08-rune-page.png", "phone-09-builder.png"}
 SUPPORT_EMAIL = "gktmtmxhs7313@gmail.com"
 
@@ -210,6 +217,25 @@ def main() -> int:
             failures.append(f"provenance-classification:{filename}")
         if record["unresolvedAssetCount"] != 0 or record["personalDataReviewed"] is not True:
             failures.append(f"provenance-review:{filename}")
+        if filename == "app-icon.png":
+            expected_icon_lineage = {
+                "sourceType": "USER_SUPPLIED_HISTORICAL_LAUNCHER_DERIVATIVE",
+                "classification": "USER_AUTHORIZED_HISTORICAL_EXCEPTION",
+                "sourceHistoricalApkSha256": EXPECTED_HISTORICAL_APK_SHA256,
+                "sourceHistoricalIconSha256": EXPECTED_HISTORICAL_ICON_SHA256,
+                "sourceHistoricalIconPath": "res/drawable-hdpi/icon.png",
+                "sourceAndroidDerivativePath": "play-store/assets/app-icon-512.png",
+                "historicalLauncherSourceImported": 1,
+                "otherHistoricalApkBinaryAssetsImportedViaIconException": 0,
+                "projectOwnedChrome": False,
+            }
+            for field, expected in expected_icon_lineage.items():
+                if record.get(field) != expected:
+                    failures.append(f"provenance-icon-lineage:{field}")
+            if str(record.get("sourceAndroidDerivativeSha256", "")).lower() != str(
+                record.get("outputSha256", "")
+            ).lower():
+                failures.append("provenance-icon-lineage:derivative-sha256")
         asset = ROOT / str(record["localPath"])
         if not asset.is_file():
             failures.append(f"provenance-missing:{filename}")
@@ -267,6 +293,8 @@ def main() -> int:
     checks["videoMetadata"] = video_actual
     checks["mediaRecords"] = len(media_records)
     checks["manifestSummary"] = manifest["summary"]
+    if manifest["summary"].get("historicalLauncherException") != 1:
+        failures.append("provenance-icon-lineage:summary-count")
 
     payload = {
         "schemaVersion": 1,

@@ -1,19 +1,40 @@
 {
   "schemaVersion": 1,
-  "capturedAt": "2026-08-28T14:20:54Z",
+  "capturedAt": "2026-08-29T01:49:49Z",
   "source": {
     "android": {
       "branch": "codex",
-      "commit": "3dc25e904b0bffdedc2ec409104c038066c028aa",
+      "commit": "1fa423abb0b7904b60605fb4dd608f0267ecec12",
       "trackedState": "authorized-classic-fantasy-wip",
       "trackedPaths": [
-        "app/src/main/assets/www/app.js",
+        "app/src/main/assets/www/data/offline-assets.json",
         "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/images/branding/app-icon-192.png",
+        "app/src/main/assets/www/images/branding/app-icon-512.png",
+        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js",
+        "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+        "app/src/main/res/values/colors.xml",
+        "play-store/android-runtime-qa.json",
+        "play-store/asset-provenance.md",
+        "play-store/assets/app-icon-512.png",
         "play-store/classic-fantasy-design-provenance.json",
-        "tools/android_runtime_qa.py",
+        "play-store/icon-status.md",
+        "play-store/riot-asset-provenance.json",
         "tools/check_classic_ui_overrides.mjs",
+        "tools/check_mobile_layout_contracts.mjs",
+        "tools/generate_riot_asset_provenance.py",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
         "tools/test-community-online.mjs"
@@ -28,13 +49,19 @@
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
+        "play-store/design-source/historical-launcher-icon-2013.png",
+        "play-store/historical-launcher-icon-provenance.json",
+        "play-store/historical-ui-data-freeze.json",
+        "play-store/historical-ui-reference-comparison.json",
         "play-store/qa-skin-portraits/akali-7-skins.png",
         "play-store/qa-skin-portraits/fiddlesticks-skins.png",
         "play-store/qa-skin-portraits/garen-skins.png",
         "play-store/qa-skin-portraits/ryze-skins.png",
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
-        "play-store/skin-portrait-qa.json"
+        "play-store/skin-portrait-qa.json",
+        "tools/generate_historical_launcher_icons.py",
+        "tools/verify_historical_ui_data_freeze.py"
       ],
       "runtimeSourcePaths": [
         "app/src/main/assets/www/app.js",
@@ -42,11 +69,11 @@
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js"
       ],
-      "runtimeSourceDiffSha256": "e351bdf96b5715a7a32389c1ef69614c0b39f0488da2560147f82666a0862978",
+      "runtimeSourceDiffSha256": "7145369f30778fbd633fd9129fd5e1a19e11250277195bd881b6ecb524b3f3ed",
       "runtimeSourceFingerprintAlgorithm": "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
     },
     "applicationId": "com.lolclassic.encyclopedia.qa",
-    "apkSha256": "c6d28031915714b8c7f959c1d1ca666446762c6c8276468d6429667f418d29f2"
+    "apkSha256": "3afaef532720e68401518d763b2a16efbc19750499fcef956cfe1b8fcaea685f"
   },
   "deviceGate": {
     "exactlyOneAuthorizedTarget": true,
@@ -149,8 +176,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 638648,
-        "sha256": "bc762952445345a9e69771b73ac6161c2870ba90187552a9c17d90d19eba2eb1"
+        "bytes": 374282,
+        "sha256": "5cb0e179d09c17bcd68d4fabc41a0d0fc46ef8b1c8da7f6165aca2c1edf4a0ea"
       }
     },
     {
@@ -171,8 +198,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 1643543,
-        "sha256": "9b2cae46e0bde772d04e4b6f853c3591193fb8cf3656ec2a9ecf47c9b102a2ff"
+        "bytes": 1335513,
+        "sha256": "51987868f6eaa8587d1c2b1d47b2524e5a97e0c5cba36436d1c3773ff4f3fe1f"
       }
     },
     {
@@ -193,8 +220,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 489647,
-        "sha256": "d0843ceba52671bd5f48cdfa2f9d5a32aab0913809af0e135c76c3c775041413"
+        "bytes": 446022,
+        "sha256": "2c8f395a92cf43d48154c9d5dd1ae49ed7c733aabaad6193676f93fe2f184175"
       }
     },
     {
@@ -215,8 +242,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 536773,
-        "sha256": "1de67ca22ea745bd8fee943ad96f544b2ad67b8b578d25ee231357bba7033cc0"
+        "bytes": 382431,
+        "sha256": "a434d854cb4cb1d8c5fb595bc6a722febd2751da53e9c794f708b7f1ca91632a"
       }
     },
     {
@@ -237,8 +264,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 435633,
-        "sha256": "8dcbb52c346338b88fdc055a26437cd9b17dd0318189b0b66167a1ec861bfdf1"
+        "bytes": 403349,
+        "sha256": "b947835a908d10758e6ac9e8a8a0a4a8828b8ef320895f67fa49995fbc421630"
       }
     },
     {
@@ -259,8 +286,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 638273,
-        "sha256": "daefe889bcd7fb6c631d3dfe8ffeb520ebae856543546a6c4e24cdeb6b0bc50c"
+        "bytes": 817761,
+        "sha256": "212da8672a3fee883b6f7633eb3940df9f9bf885fc89064b6313f1edd9fd06d2"
       }
     },
     {
@@ -281,8 +308,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 394717,
-        "sha256": "aa0dd9a0570c40a1dfbe684faf465af1a6ad00f973581af7567ae000846089e4"
+        "bytes": 336562,
+        "sha256": "02635f0620860d7f4000b84fee68f712936bed6847ddeaf12bbc5854231718d4"
       }
     },
     {
@@ -303,8 +330,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 404392,
-        "sha256": "f50d9a7bd5812204ec1e8cdd13f45ae577db574e07dce0a4d8dc284f76c68743"
+        "bytes": 364438,
+        "sha256": "360d2d41699d171efdbbb8ab8a2457b27f6e71e37052053d1fcb4af3a907db53"
       }
     },
     {
@@ -325,8 +352,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 450705,
-        "sha256": "f945ebebba1426bd98cd2bf09ce00106b4442efb237b23ad183bee4b1c9dea24"
+        "bytes": 394872,
+        "sha256": "e63ec525ceba9ebe57ef7129ab623f4433f829e7812ec29754f06693bb69f07a"
       }
     },
     {
@@ -347,8 +374,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 196367,
-        "sha256": "53332036efc17dc034a283642d5d67b151aa5664a187d21f86ac52b6cd03c930"
+        "bytes": 162588,
+        "sha256": "ad971158d5102ccd54c5b778b21cc7ba0e6b15734de7af7bde9c4d2c488db3b6"
       }
     }
   ],
@@ -360,8 +387,8 @@
       "width": 1080,
       "height": 2340,
       "mode": "RGB",
-      "bytes": 638648,
-      "sha256": "bc762952445345a9e69771b73ac6161c2870ba90187552a9c17d90d19eba2eb1"
+      "bytes": 374282,
+      "sha256": "5cb0e179d09c17bcd68d4fabc41a0d0fc46ef8b1c8da7f6165aca2c1edf4a0ea"
     }
   },
   "video": {
@@ -411,28 +438,37 @@
     "width": 1080,
     "height": 2340,
     "codec": "h264",
-    "frameRate": "382500/459011",
-    "duration": 40.801,
-    "bitRate": 285462,
-    "bytes": 1455892,
-    "sha256": "7e73732bd318c14be20a6e72dc87e57de3359279bc0298184d2f5b1eab4e2573"
+    "frameRate": "26572500/944131",
+    "duration": 41.961,
+    "bitRate": 2989505,
+    "bytes": 15680471,
+    "sha256": "bbdeb21ffe8f0b1e3c29201c6871c9392c50cffe714a49d7c6e81b3ad8745519"
+  },
+  "historicalLauncherException": {
+    "file": "app-icon.png",
+    "category": "USER_SUPPLIED_HISTORICAL_ASSET",
+    "sourceHistoricalApkSha256": "4B33F73F8B3C9A83220061620276874FCB761920BC16AF1E190CBB13E7D5B2B1",
+    "sourceHistoricalIconSha256": "228F51F62EA2CBD6B4BD59F816765F580D92A3D1ACB3A247F27EBA670B0B255B",
+    "sourceHistoricalIconPath": "res/drawable-hdpi/icon.png",
+    "androidDerivativePath": "play-store/assets/app-icon-512.png",
+    "derivativeTransformation": "pixel-preserving NEAREST upscale 72x72 to 512x512",
+    "historicalLauncherSourceImported": 1,
+    "technicalDerivativeCount": 14,
+    "otherHistoricalApkBinaryAssetsImportedViaIconException": 0,
+    "width": 512,
+    "height": 512,
+    "mode": "RGBA",
+    "bytes": 19198,
+    "sha256": "d4939752ad6961ae286cf0054f25ceccddc18988492930d05dd122031a162111"
   },
   "projectOwned": {
-    "appIcon": {
-      "file": "app-icon.png",
-      "width": 512,
-      "height": 512,
-      "mode": "RGBA",
-      "bytes": 379766,
-      "sha256": "bd738608c1ed224f936609050396b0fc733a04efaf08d45791f4f9952b6eca7d"
-    },
     "featureGraphic": {
       "file": "feature-graphic.png",
       "width": 1024,
       "height": 500,
       "mode": "RGB",
-      "bytes": 183726,
-      "sha256": "04419a50b99b74a2c75f218648884b9e2d340b6514982ba7cad8c284c5100852"
+      "bytes": 183283,
+      "sha256": "ec548a5a8e4cb33eb895c58f7748409768a9afbd8409c76954cf447c67896e0d"
     }
   },
   "safety": {
