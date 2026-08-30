@@ -29,6 +29,7 @@ EXPECTED_SCREENSHOTS = (
 )
 CAPTURE_RUNTIME_SOURCE_PATHS = (
     "app/src/main/assets/www/app.js",
+    "app/src/main/assets/www/classic-ui-overrides.js",
     "app/src/main/assets/www/final-ui-hotfix.js",
     "app/src/main/assets/www/index.html",
     "app/src/main/assets/www/sw.js",

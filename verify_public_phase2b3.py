@@ -296,6 +296,45 @@ def main() -> int:
     if manifest["summary"].get("historicalLauncherException") != 1:
         failures.append("provenance-icon-lineage:summary-count")
 
+    release_manifest = json.loads((ROOT / "asset-provenance.json").read_text(encoding="utf-8"))
+    release_records = {
+        str(record.get("path")): record for record in release_manifest.get("assets", [])
+    }
+    checks["assetProvenanceRecords"] = len(release_records)
+    if release_manifest.get("authoritativeManifest") != "assets/media-provenance.json":
+        failures.append("asset-provenance:authoritative-manifest")
+    if len(release_records) != len(manifest["assets"]):
+        failures.append("asset-provenance:record-count")
+    for record in manifest["assets"]:
+        local_path = str(record["localPath"])
+        release_record = release_records.get(local_path)
+        if release_record is None:
+            failures.append(f"asset-provenance:missing:{local_path}")
+            continue
+        expected_embedded = bool(record["containsRiotOfficialAssetInsideAppUI"])
+        if record["sourceType"] == "USER_SUPPLIED_HISTORICAL_LAUNCHER_DERIVATIVE":
+            expected_embedded = True
+        expected_fields = {
+            "sha256": record["outputSha256"],
+            "knownSource": record["sourceType"],
+            "acquisitionMethod": record["captureMethod"],
+            "embeddedRiotOrThirdPartyContent": expected_embedded,
+        }
+        for field, expected in expected_fields.items():
+            if release_record.get(field) != expected:
+                failures.append(f"asset-provenance:{local_path}:{field}")
+    icon_release_record = release_records.get("assets/app-icon.png", {})
+    expected_icon_release_fields = {
+        "category": "historical_launcher_exception",
+        "knownSource": "USER_SUPPLIED_HISTORICAL_LAUNCHER_DERIVATIVE",
+        "riotOfficial": False,
+        "thirdParty": True,
+        "embeddedRiotOrThirdPartyContent": True,
+    }
+    for field, expected in expected_icon_release_fields.items():
+        if icon_release_record.get(field) != expected:
+            failures.append(f"asset-provenance:app-icon.png:{field}")
+
     payload = {
         "schemaVersion": 1,
         "result": "PASS" if not failures else "FAIL",

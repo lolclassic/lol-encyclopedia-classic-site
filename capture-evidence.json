@@ -1,40 +1,20 @@
 {
   "schemaVersion": 1,
-  "capturedAt": "2026-08-29T01:49:49Z",
+  "capturedAt": "2026-08-29T11:47:34Z",
   "source": {
     "android": {
       "branch": "codex",
-      "commit": "1fa423abb0b7904b60605fb4dd608f0267ecec12",
+      "commit": "1654efbe34a1a382f6712d29a88c7976bed3bb50",
       "trackedState": "authorized-classic-fantasy-wip",
       "trackedPaths": [
-        "app/src/main/assets/www/data/offline-assets.json",
+        "app/src/main/assets/www/classic-ui-overrides.js",
         "app/src/main/assets/www/final-ui-hotfix.js",
-        "app/src/main/assets/www/images/branding/app-icon-192.png",
-        "app/src/main/assets/www/images/branding/app-icon-512.png",
-        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js",
-        "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
-        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/values/colors.xml",
         "play-store/android-runtime-qa.json",
-        "play-store/asset-provenance.md",
-        "play-store/assets/app-icon-512.png",
-        "play-store/classic-fantasy-design-provenance.json",
-        "play-store/icon-status.md",
-        "play-store/riot-asset-provenance.json",
+        "tools/android_runtime_qa.py",
         "tools/check_classic_ui_overrides.mjs",
         "tools/check_mobile_layout_contracts.mjs",
-        "tools/generate_riot_asset_provenance.py",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
         "tools/test-community-online.mjs"
@@ -49,31 +29,26 @@
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
-        "play-store/design-source/historical-launcher-icon-2013.png",
-        "play-store/historical-launcher-icon-provenance.json",
-        "play-store/historical-ui-data-freeze.json",
-        "play-store/historical-ui-reference-comparison.json",
         "play-store/qa-skin-portraits/akali-7-skins.png",
         "play-store/qa-skin-portraits/fiddlesticks-skins.png",
         "play-store/qa-skin-portraits/garen-skins.png",
         "play-store/qa-skin-portraits/ryze-skins.png",
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
-        "play-store/skin-portrait-qa.json",
-        "tools/generate_historical_launcher_icons.py",
-        "tools/verify_historical_ui_data_freeze.py"
+        "play-store/skin-portrait-qa.json"
       ],
       "runtimeSourcePaths": [
         "app/src/main/assets/www/app.js",
+        "app/src/main/assets/www/classic-ui-overrides.js",
         "app/src/main/assets/www/final-ui-hotfix.js",
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js"
       ],
-      "runtimeSourceDiffSha256": "7145369f30778fbd633fd9129fd5e1a19e11250277195bd881b6ecb524b3f3ed",
+      "runtimeSourceDiffSha256": "e12fc3dac233e0462178399dda437ffa105003a8501441f88314ac0c4b9ee14d",
       "runtimeSourceFingerprintAlgorithm": "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
     },
     "applicationId": "com.lolclassic.encyclopedia.qa",
-    "apkSha256": "3afaef532720e68401518d763b2a16efbc19750499fcef956cfe1b8fcaea685f"
+    "apkSha256": "a410ae82c7e69a46b9075be908879b4fc11e42622d8c877230c4cd5dcaba95b9"
   },
   "deviceGate": {
     "exactlyOneAuthorizedTarget": true,
@@ -94,12 +69,12 @@
   },
   "settingsRestoration": {
     "original": {
-      "accelerometerRotation": "0",
+      "accelerometerRotation": "1",
       "userRotation": "0",
       "headsUpNotifications": "1"
     },
     "restored": {
-      "accelerometerRotation": "0",
+      "accelerometerRotation": "1",
       "userRotation": "0",
       "headsUpNotifications": "1"
     },
@@ -166,7 +141,7 @@
         411,
         806
       ],
-      "imageCount": 5,
+      "imageCount": 10,
       "brokenImages": [],
       "placeholderCount": 0,
       "intentionalTextFallbackCount": 0,
@@ -176,8 +151,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 374282,
-        "sha256": "5cb0e179d09c17bcd68d4fabc41a0d0fc46ef8b1c8da7f6165aca2c1edf4a0ea"
+        "bytes": 603286,
+        "sha256": "e9b57afab53ce7b990b1dfc06f119ffc9149ac1fc369908f32a16111cca0b162"
       }
     },
     {
@@ -198,8 +173,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 1335513,
-        "sha256": "51987868f6eaa8587d1c2b1d47b2524e5a97e0c5cba36436d1c3773ff4f3fe1f"
+        "bytes": 1289565,
+        "sha256": "e5fb8d59fe4798f73169e5b28ad6cba3cb479a1562b6785efce9451f40e617ba"
       }
     },
     {
@@ -220,8 +195,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 446022,
-        "sha256": "2c8f395a92cf43d48154c9d5dd1ae49ed7c733aabaad6193676f93fe2f184175"
+        "bytes": 322052,
+        "sha256": "626851a39dfb2ef5bf88422f045d290dc305359a2cc77f3beb768699ce53b715"
       }
     },
     {
@@ -242,8 +217,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 382431,
-        "sha256": "a434d854cb4cb1d8c5fb595bc6a722febd2751da53e9c794f708b7f1ca91632a"
+        "bytes": 304499,
+        "sha256": "73e74452f43db63373928a085d9d1d4599b5f1812bc31d9df72926d19aa46ece"
       }
     },
     {
@@ -257,15 +232,15 @@
       "imageCount": 0,
       "brokenImages": [],
       "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
+      "intentionalTextFallbackCount": 21,
       "runeRecordCount": null,
       "domTextPatternHits": {},
       "png": {
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 403349,
-        "sha256": "b947835a908d10758e6ac9e8a8a0a4a8828b8ef320895f67fa49995fbc421630"
+        "bytes": 631975,
+        "sha256": "3bc79fafa3e9440fe3b8a7b24c01bd694d4c90e5f82b55ad230843146f2019a7"
       }
     },
     {
@@ -286,8 +261,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 817761,
-        "sha256": "212da8672a3fee883b6f7633eb3940df9f9bf885fc89064b6313f1edd9fd06d2"
+        "bytes": 607637,
+        "sha256": "114da8ac334a0ed15581e8aaf1b845940e875b1c60ca6018c9ae4843bedb43ab"
       }
     },
     {
@@ -308,8 +283,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 336562,
-        "sha256": "02635f0620860d7f4000b84fee68f712936bed6847ddeaf12bbc5854231718d4"
+        "bytes": 341263,
+        "sha256": "cad3cc7ce4fe21d2ebecdd73c8dd4a44bc6e42ff2686d3f2e4b5fb616f06c195"
       }
     },
     {
@@ -330,8 +305,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 364438,
-        "sha256": "360d2d41699d171efdbbb8ab8a2457b27f6e71e37052053d1fcb4af3a907db53"
+        "bytes": 367642,
+        "sha256": "53838df34a76b9498d22a30b7d325171101204f440a894da6e839ab3427f3067"
       }
     },
     {
@@ -352,8 +327,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 394872,
-        "sha256": "e63ec525ceba9ebe57ef7129ab623f4433f829e7812ec29754f06693bb69f07a"
+        "bytes": 377247,
+        "sha256": "dc5166db6460a4ad5221dd4c917d855d871cff7b4debad5409e5d727f4c86ca6"
       }
     },
     {
@@ -374,8 +349,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 162588,
-        "sha256": "ad971158d5102ccd54c5b778b21cc7ba0e6b15734de7af7bde9c4d2c488db3b6"
+        "bytes": 139413,
+        "sha256": "ef5b38c4e46b55c64bc52c51cceeae0b8c2baae43af688143da1a1fb394b1c16"
       }
     }
   ],
@@ -387,8 +362,8 @@
       "width": 1080,
       "height": 2340,
       "mode": "RGB",
-      "bytes": 374282,
-      "sha256": "5cb0e179d09c17bcd68d4fabc41a0d0fc46ef8b1c8da7f6165aca2c1edf4a0ea"
+      "bytes": 603286,
+      "sha256": "e9b57afab53ce7b990b1dfc06f119ffc9149ac1fc369908f32a16111cca0b162"
     }
   },
   "video": {
@@ -438,11 +413,11 @@
     "width": 1080,
     "height": 2340,
     "codec": "h264",
-    "frameRate": "26572500/944131",
-    "duration": 41.961,
-    "bitRate": 2989505,
-    "bytes": 15680471,
-    "sha256": "bbdeb21ffe8f0b1e3c29201c6871c9392c50cffe714a49d7c6e81b3ad8745519"
+    "frameRate": "6918000/251557",
+    "duration": 41.926,
+    "bitRate": 1545770,
+    "bytes": 8101029,
+    "sha256": "12dc0637b56f5f0039e9457e2a004818f7ff37df719e6c7aa259cd3cef8d91f7"
   },
   "historicalLauncherException": {
     "file": "app-icon.png",
@@ -467,8 +442,8 @@
       "width": 1024,
       "height": 500,
       "mode": "RGB",
-      "bytes": 183283,
-      "sha256": "ec548a5a8e4cb33eb895c58f7748409768a9afbd8409c76954cf447c67896e0d"
+      "bytes": 187886,
+      "sha256": "86296c8f49b1e0b753bef56258ba36324fd0ee090e377b1bc4a478a5febe0515"
     }
   },
   "safety": {

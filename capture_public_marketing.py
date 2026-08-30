@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 
 
 PUBLIC_ROOT = Path(__file__).resolve().parent
-EXPECTED_ANDROID_HEAD = "1fa423abb0b7904b60605fb4dd608f0267ecec12"
+EXPECTED_ANDROID_HEAD = "1654efbe34a1a382f6712d29a88c7976bed3bb50"
 EXPECTED_ANDROID_BRANCH = "codex"
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
 REJECTED_PRODUCTION_PACKAGE = "com.lolclassic.encyclopedia"
@@ -37,40 +37,21 @@ APP_URL_PREFIX = "https://appassets.androidplatform.net/assets/www/index.html"
 DEVTOOLS_PORT = 9222
 CAPTURE_RUNTIME_SOURCE_PATHS = (
     "app/src/main/assets/www/app.js",
+    "app/src/main/assets/www/classic-ui-overrides.js",
     "app/src/main/assets/www/final-ui-hotfix.js",
     "app/src/main/assets/www/index.html",
     "app/src/main/assets/www/sw.js",
 )
 EXPECTED_ANDROID_WIP_PATHS = frozenset(
     {
-        "app/src/main/assets/www/data/offline-assets.json",
+        "app/src/main/assets/www/classic-ui-overrides.js",
         "app/src/main/assets/www/final-ui-hotfix.js",
-        "app/src/main/assets/www/images/branding/app-icon-192.png",
-        "app/src/main/assets/www/images/branding/app-icon-512.png",
-        "app/src/main/assets/www/images/branding/app-icon-maskable-512.png",
         "app/src/main/assets/www/index.html",
         "app/src/main/assets/www/sw.js",
-        "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
-        "app/src/main/res/mipmap-hdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-        "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
-        "app/src/main/res/values/colors.xml",
         "play-store/android-runtime-qa.json",
-        "play-store/asset-provenance.md",
-        "play-store/assets/app-icon-512.png",
-        "play-store/classic-fantasy-design-provenance.json",
-        "play-store/icon-status.md",
-        "play-store/riot-asset-provenance.json",
+        "tools/android_runtime_qa.py",
         "tools/check_classic_ui_overrides.mjs",
         "tools/check_mobile_layout_contracts.mjs",
-        "tools/generate_riot_asset_provenance.py",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
         "tools/test-community-online.mjs",
@@ -87,10 +68,6 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
-        "play-store/design-source/historical-launcher-icon-2013.png",
-        "play-store/historical-launcher-icon-provenance.json",
-        "play-store/historical-ui-data-freeze.json",
-        "play-store/historical-ui-reference-comparison.json",
         "play-store/qa-skin-portraits/akali-7-skins.png",
         "play-store/qa-skin-portraits/fiddlesticks-skins.png",
         "play-store/qa-skin-portraits/garen-skins.png",
@@ -98,8 +75,6 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
         "play-store/skin-portrait-qa.json",
-        "tools/generate_historical_launcher_icons.py",
-        "tools/verify_historical_ui_data_freeze.py",
     }
 )
 
