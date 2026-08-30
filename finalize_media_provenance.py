@@ -28,10 +28,10 @@ EXPECTED_SCREENSHOTS = (
     "phone-10-community.png",
 )
 CAPTURE_RUNTIME_SOURCE_PATHS = (
-    "app/src/main/assets/www/app.js",
-    "app/src/main/assets/www/classic-ui-overrides.js",
-    "app/src/main/assets/www/final-ui-hotfix.js",
+    "app/src/main/assets/www/data/offline-assets.json",
     "app/src/main/assets/www/index.html",
+    "app/src/main/assets/www/nostalgia-218-fidelity.js",
+    "app/src/main/assets/www/portrait-fix.js",
     "app/src/main/assets/www/sw.js",
 )
 
@@ -39,6 +39,7 @@ OFFICIAL_CONTENT_FILES = {
     "phone-01-home.png",
     "phone-02-champions.png",
     "phone-03-champion-detail.png",
+    "phone-04-items.png",
     "phone-06-spells.png",
     "app-main-screen.png",
     "app-feature-tour.mp4",
@@ -46,14 +47,14 @@ OFFICIAL_CONTENT_FILES = {
 }
 
 NOTES = {
-    "phone-01-home.png": "Current-build home capture; the reviewed news row and all archive controls are readable.",
-    "phone-02-champions.png": "Current-build Classic champion list; two documented text-only portrait fallbacks remain intentional.",
-    "phone-03-champion-detail.png": "Current-build champion detail with project-owned rectangular price markers.",
-    "phone-04-items.png": "Current-build text-first item index; unresolved item artwork remains excluded.",
-    "phone-05-masteries.png": "Current-build mastery index; heading and intended line breaks render normally with no literal br markup.",
+    "phone-01-home.png": "Current-build 218-style home capture; the two-row rotation, news tabs, and archive controls are readable.",
+    "phone-02-champions.png": "Current-build 218-style Classic champion list; all 63 portraits load, including the two official supplements.",
+    "phone-03-champion-detail.png": "Current-build champion detail using the restored compact historical interface.",
+    "phone-04-items.png": "Current-build 218-style item index; all 149 version-pinned official item icons load.",
+    "phone-05-masteries.png": "Current-build compact mastery tree; the selected description remains visible on the same screen.",
     "phone-06-spells.png": "Current-build spell index; heading, icons, and card text are readable.",
-    "phone-07-runes.png": "Current-build rune capture showing Classic excluded and the honest editorial omission state.",
-    "phone-08-patch-news.png": "Current-build archived patch-news capture with project-owned rectangular close control.",
+    "phone-07-runes.png": "Current-build 218-style four-tab rune archive with source-truthful historical text and selection state.",
+    "phone-08-patch-news.png": "Current-build archived patch-news capture with parchment document presentation.",
     "phone-09-about-legal.png": "Current-build about and legal capture; only project and Riot legal notice text is visible.",
     "phone-10-community.png": "Current-build community capture; no real account identifier or personal data is visible.",
 }
@@ -115,35 +116,16 @@ def reconcile_runtime_source_fingerprint(
     if head != android["commit"]:
         raise RuntimeError("Android HEAD no longer matches the capture source commit")
 
-    changed = subprocess.run(
-        ["git", "diff", "--name-only", "--", *CAPTURE_RUNTIME_SOURCE_PATHS],
-        cwd=android_repo,
-        check=True,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-    ).stdout.splitlines()
-    captured_tracked_paths = set(android.get("trackedPaths", []))
-    expected_changed = tuple(
-        path for path in CAPTURE_RUNTIME_SOURCE_PATHS if path in captured_tracked_paths
-    )
-    if tuple(changed) != expected_changed:
-        raise RuntimeError("Android runtime source allowlist is incomplete or out of order")
-
-    binary_diff = subprocess.run(
-        [
-            "git",
-            "diff",
-            "--binary",
-            "--no-ext-diff",
-            "--",
-            *CAPTURE_RUNTIME_SOURCE_PATHS,
-        ],
-        cwd=android_repo,
-        check=True,
-        capture_output=True,
-    ).stdout
-    runtime_diff_sha256 = hashlib.sha256(binary_diff).hexdigest()
+    runtime_digest = hashlib.sha256()
+    for relative in CAPTURE_RUNTIME_SOURCE_PATHS:
+        source_path = android_repo / relative
+        if not source_path.is_file():
+            raise RuntimeError(f"Android runtime source is missing: {relative}")
+        runtime_digest.update(relative.encode("utf-8"))
+        runtime_digest.update(b"\0")
+        runtime_digest.update(source_path.read_bytes())
+        runtime_digest.update(b"\0")
+    runtime_diff_sha256 = runtime_digest.hexdigest()
     if android.get("runtimeSourceDiffSha256") != runtime_diff_sha256:
         raise RuntimeError("Android runtime source diff changed after capture")
     apk = android_repo / "app/build/outputs/apk/debug/app-debug.apk"
@@ -154,7 +136,7 @@ def reconcile_runtime_source_fingerprint(
     android["runtimeSourcePaths"] = list(CAPTURE_RUNTIME_SOURCE_PATHS)
     android["runtimeSourceDiffSha256"] = runtime_diff_sha256
     android["runtimeSourceFingerprintAlgorithm"] = (
-        "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
+        "sha256(ordered UTF-8 path NUL file bytes NUL for runtimeSourcePaths)"
     )
 
 

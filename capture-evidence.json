@@ -1,54 +1,243 @@
 {
   "schemaVersion": 1,
-  "capturedAt": "2026-08-29T11:47:34Z",
+  "capturedAt": "2026-08-30T19:08:27Z",
   "source": {
     "android": {
       "branch": "codex",
-      "commit": "1654efbe34a1a382f6712d29a88c7976bed3bb50",
-      "trackedState": "authorized-classic-fantasy-wip",
+      "commit": "98e17ac59b84ad8ef9c62071ca7ea8f3effaadd2",
+      "trackedState": "authorized-version-218-fidelity-wip",
       "trackedPaths": [
-        "app/src/main/assets/www/classic-ui-overrides.js",
-        "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/community-online.js",
+        "app/src/main/assets/www/data/offline-assets.json",
         "app/src/main/assets/www/index.html",
+        "app/src/main/assets/www/portrait-fix.js",
         "app/src/main/assets/www/sw.js",
+        "app/src/main/java/com/lolclassic/encyclopedia/MainActivity.java",
         "play-store/android-runtime-qa.json",
+        "play-store/quality-report.json",
+        "play-store/riot-asset-provenance.json",
+        "play-store/screenshot-evidence.json",
+        "play-store/screenshots/phone-01-home.png",
+        "play-store/screenshots/phone-02-champions.png",
+        "play-store/screenshots/phone-03-champion-detail.png",
+        "play-store/screenshots/phone-04-items.png",
+        "play-store/screenshots/phone-05-masteries.png",
+        "play-store/screenshots/phone-06-spells.png",
+        "play-store/screenshots/phone-07-runes.png",
+        "play-store/screenshots/phone-08-patch-news.png",
+        "play-store/screenshots/phone-09-about-legal.png",
+        "play-store/screenshots/phone-10-community.png",
         "tools/android_runtime_qa.py",
+        "tools/check_classic_roster.mjs",
         "tools/check_classic_ui_overrides.mjs",
         "tools/check_mobile_layout_contracts.mjs",
+        "tools/generate_riot_asset_provenance.py",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
-        "tools/test-community-online.mjs"
+        "tools/test-community-online.mjs",
+        "tools/verify_historical_ui_data_freeze.py"
       ],
       "preservedUntrackedPaths": [
         "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160457",
         "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160935",
         "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011",
+        "app/src/main/assets/www/images/official_champion/kennen.png",
+        "app/src/main/assets/www/images/official_champion/shen.png",
+        "app/src/main/assets/www/images/official_item/1001.png",
+        "app/src/main/assets/www/images/official_item/1004.png",
+        "app/src/main/assets/www/images/official_item/1006.png",
+        "app/src/main/assets/www/images/official_item/1011.png",
+        "app/src/main/assets/www/images/official_item/1018.png",
+        "app/src/main/assets/www/images/official_item/1026.png",
+        "app/src/main/assets/www/images/official_item/1027.png",
+        "app/src/main/assets/www/images/official_item/1028.png",
+        "app/src/main/assets/www/images/official_item/1029.png",
+        "app/src/main/assets/www/images/official_item/1031.png",
+        "app/src/main/assets/www/images/official_item/1033.png",
+        "app/src/main/assets/www/images/official_item/1036.png",
+        "app/src/main/assets/www/images/official_item/1037.png",
+        "app/src/main/assets/www/images/official_item/1038.png",
+        "app/src/main/assets/www/images/official_item/1039.png",
+        "app/src/main/assets/www/images/official_item/1042.png",
+        "app/src/main/assets/www/images/official_item/1043.png",
+        "app/src/main/assets/www/images/official_item/1051.png",
+        "app/src/main/assets/www/images/official_item/1052.png",
+        "app/src/main/assets/www/images/official_item/1053.png",
+        "app/src/main/assets/www/images/official_item/1054.png",
+        "app/src/main/assets/www/images/official_item/1055.png",
+        "app/src/main/assets/www/images/official_item/1056.png",
+        "app/src/main/assets/www/images/official_item/1057.png",
+        "app/src/main/assets/www/images/official_item/1058.png",
+        "app/src/main/assets/www/images/official_item/1062.png",
+        "app/src/main/assets/www/images/official_item/1063.png",
+        "app/src/main/assets/www/images/official_item/1080.png",
+        "app/src/main/assets/www/images/official_item/2003.png",
+        "app/src/main/assets/www/images/official_item/2004.png",
+        "app/src/main/assets/www/images/official_item/2037.png",
+        "app/src/main/assets/www/images/official_item/2039.png",
+        "app/src/main/assets/www/images/official_item/2040.png",
+        "app/src/main/assets/www/images/official_item/2041.png",
+        "app/src/main/assets/www/images/official_item/2043.png",
+        "app/src/main/assets/www/images/official_item/2045.png",
+        "app/src/main/assets/www/images/official_item/2047.png",
+        "app/src/main/assets/www/images/official_item/2048.png",
+        "app/src/main/assets/www/images/official_item/2049.png",
+        "app/src/main/assets/www/images/official_item/2051.png",
+        "app/src/main/assets/www/images/official_item/3001.png",
+        "app/src/main/assets/www/images/official_item/3003.png",
+        "app/src/main/assets/www/images/official_item/3004.png",
+        "app/src/main/assets/www/images/official_item/3005.png",
+        "app/src/main/assets/www/images/official_item/3006.png",
+        "app/src/main/assets/www/images/official_item/3009.png",
+        "app/src/main/assets/www/images/official_item/3010.png",
+        "app/src/main/assets/www/images/official_item/3020.png",
+        "app/src/main/assets/www/images/official_item/3022.png",
+        "app/src/main/assets/www/images/official_item/3024.png",
+        "app/src/main/assets/www/images/official_item/3025.png",
+        "app/src/main/assets/www/images/official_item/3026.png",
+        "app/src/main/assets/www/images/official_item/3027.png",
+        "app/src/main/assets/www/images/official_item/3028.png",
+        "app/src/main/assets/www/images/official_item/3031.png",
+        "app/src/main/assets/www/images/official_item/3035.png",
+        "app/src/main/assets/www/images/official_item/3041.png",
+        "app/src/main/assets/www/images/official_item/3044.png",
+        "app/src/main/assets/www/images/official_item/3046.png",
+        "app/src/main/assets/www/images/official_item/3047.png",
+        "app/src/main/assets/www/images/official_item/3050.png",
+        "app/src/main/assets/www/images/official_item/3056.png",
+        "app/src/main/assets/www/images/official_item/3057.png",
+        "app/src/main/assets/www/images/official_item/3060.png",
+        "app/src/main/assets/www/images/official_item/3065.png",
+        "app/src/main/assets/www/images/official_item/3067.png",
+        "app/src/main/assets/www/images/official_item/3068.png",
+        "app/src/main/assets/www/images/official_item/3070.png",
+        "app/src/main/assets/www/images/official_item/3071.png",
+        "app/src/main/assets/www/images/official_item/3072.png",
+        "app/src/main/assets/www/images/official_item/3075.png",
+        "app/src/main/assets/www/images/official_item/3078.png",
+        "app/src/main/assets/www/images/official_item/3082.png",
+        "app/src/main/assets/www/images/official_item/3083.png",
+        "app/src/main/assets/www/images/official_item/3084.png",
+        "app/src/main/assets/www/images/official_item/3086.png",
+        "app/src/main/assets/www/images/official_item/3087.png",
+        "app/src/main/assets/www/images/official_item/3089.png",
+        "app/src/main/assets/www/images/official_item/3090.png",
+        "app/src/main/assets/www/images/official_item/3091.png",
+        "app/src/main/assets/www/images/official_item/3093.png",
+        "app/src/main/assets/www/images/official_item/3100.png",
+        "app/src/main/assets/www/images/official_item/3101.png",
+        "app/src/main/assets/www/images/official_item/3102.png",
+        "app/src/main/assets/www/images/official_item/3105.png",
+        "app/src/main/assets/www/images/official_item/3106.png",
+        "app/src/main/assets/www/images/official_item/3108.png",
+        "app/src/main/assets/www/images/official_item/3110.png",
+        "app/src/main/assets/www/images/official_item/3111.png",
+        "app/src/main/assets/www/images/official_item/3112.png",
+        "app/src/main/assets/www/images/official_item/3115.png",
+        "app/src/main/assets/www/images/official_item/3116.png",
+        "app/src/main/assets/www/images/official_item/3117.png",
+        "app/src/main/assets/www/images/official_item/3123.png",
+        "app/src/main/assets/www/images/official_item/3124.png",
+        "app/src/main/assets/www/images/official_item/3128.png",
+        "app/src/main/assets/www/images/official_item/3131.png",
+        "app/src/main/assets/www/images/official_item/3134.png",
+        "app/src/main/assets/www/images/official_item/3135.png",
+        "app/src/main/assets/www/images/official_item/3136.png",
+        "app/src/main/assets/www/images/official_item/3139.png",
+        "app/src/main/assets/www/images/official_item/3140.png",
+        "app/src/main/assets/www/images/official_item/3141.png",
+        "app/src/main/assets/www/images/official_item/3142.png",
+        "app/src/main/assets/www/images/official_item/3143.png",
+        "app/src/main/assets/www/images/official_item/3144.png",
+        "app/src/main/assets/www/images/official_item/3145.png",
+        "app/src/main/assets/www/images/official_item/3146.png",
+        "app/src/main/assets/www/images/official_item/3151.png",
+        "app/src/main/assets/www/images/official_item/3152.png",
+        "app/src/main/assets/www/images/official_item/3153.png",
+        "app/src/main/assets/www/images/official_item/3154.png",
+        "app/src/main/assets/www/images/official_item/3155.png",
+        "app/src/main/assets/www/images/official_item/3156.png",
+        "app/src/main/assets/www/images/official_item/3157.png",
+        "app/src/main/assets/www/images/official_item/3158.png",
+        "app/src/main/assets/www/images/official_item/3165.png",
+        "app/src/main/assets/www/images/official_item/3170.png",
+        "app/src/main/assets/www/images/official_item/3172.png",
+        "app/src/main/assets/www/images/official_item/3174.png",
+        "app/src/main/assets/www/images/official_item/3180.png",
+        "app/src/main/assets/www/images/official_item/3181.png",
+        "app/src/main/assets/www/images/official_item/3184.png",
+        "app/src/main/assets/www/images/official_item/3185.png",
+        "app/src/main/assets/www/images/official_item/3186.png",
+        "app/src/main/assets/www/images/official_item/3187.png",
+        "app/src/main/assets/www/images/official_item/3188.png",
+        "app/src/main/assets/www/images/official_item/3190.png",
+        "app/src/main/assets/www/images/official_item/3191.png",
+        "app/src/main/assets/www/images/official_item/3196.png",
+        "app/src/main/assets/www/images/official_item/3198.png",
+        "app/src/main/assets/www/images/official_item/3200.png",
+        "app/src/main/assets/www/images/official_item/3206.png",
+        "app/src/main/assets/www/images/official_item/3207.png",
+        "app/src/main/assets/www/images/official_item/3209.png",
+        "app/src/main/assets/www/images/official_item/3211.png",
+        "app/src/main/assets/www/images/official_item/3222.png",
+        "app/src/main/assets/www/images/official_item/772042.png",
+        "app/src/main/assets/www/images/official_item/772044.png",
+        "app/src/main/assets/www/images/official_item/773023.png",
+        "app/src/main/assets/www/images/official_item/773037.png",
+        "app/src/main/assets/www/images/official_item/773052.png",
+        "app/src/main/assets/www/images/official_item/773069.png",
+        "app/src/main/assets/www/images/official_item/773074.png",
+        "app/src/main/assets/www/images/official_item/773077.png",
+        "app/src/main/assets/www/images/official_item/773085.png",
+        "app/src/main/assets/www/images/official_item/773092.png",
+        "app/src/main/assets/www/images/official_item/773096.png",
+        "app/src/main/assets/www/images/official_item/773173.png",
         "app/src/main/assets/www/index.html.bak-20260822-162011",
+        "app/src/main/assets/www/nostalgia-218-fidelity.js",
+        "play-store/android-post-image-qa-version218.json",
         "play-store/android-runtime-qa-classic-fantasy.json",
         "play-store/android-runtime-qa-icon-era.json",
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
+        "play-store/android-runtime-qa-version218-fidelity.json",
         "play-store/qa-skin-portraits/akali-7-skins.png",
         "play-store/qa-skin-portraits/fiddlesticks-skins.png",
         "play-store/qa-skin-portraits/garen-skins.png",
         "play-store/qa-skin-portraits/ryze-skins.png",
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
-        "play-store/skin-portrait-qa.json"
+        "play-store/skin-portrait-qa.json",
+        "play-store/version-218-attachment-manifest.json",
+        "play-store/version-218-fidelity-official-assets.json",
+        "play-store/version218-dialog-evidence.json",
+        "play-store/version218-reference-comparison/final-board-type-dialog.png",
+        "play-store/version218-reference-comparison/final-nickname-dialog.png",
+        "play-store/version218-reference-comparison/final-write-post-dialog.png",
+        "tools/acquire_version218_fidelity_assets.py",
+        "tools/android_post_image_qa.py",
+        "tools/capture_version218_dialog_evidence.py",
+        "tools/capture_version218_local_layouts.mjs",
+        "tools/check_version218_nostalgia_contracts.mjs"
       ],
       "runtimeSourcePaths": [
-        "app/src/main/assets/www/app.js",
-        "app/src/main/assets/www/classic-ui-overrides.js",
-        "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/data/offline-assets.json",
         "app/src/main/assets/www/index.html",
+        "app/src/main/assets/www/nostalgia-218-fidelity.js",
+        "app/src/main/assets/www/portrait-fix.js",
         "app/src/main/assets/www/sw.js"
       ],
-      "runtimeSourceDiffSha256": "e12fc3dac233e0462178399dda437ffa105003a8501441f88314ac0c4b9ee14d",
-      "runtimeSourceFingerprintAlgorithm": "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
+      "runtimeSourceDiffSha256": "cf24184970a3c3164e43004fe2ed21edfcee3edeaf6797084de991fb00b1e632",
+      "runtimeSourceFingerprintAlgorithm": "sha256(ordered UTF-8 path NUL file bytes NUL for runtimeSourcePaths)",
+      "officialAssetManifest": {
+        "path": "play-store/version-218-fidelity-official-assets.json",
+        "count": 151,
+        "sha256": "c45836310898d6788da476aafc0e8beb761ca2e4fd294c9e021e09c2b71757cf",
+        "historicalApkGameOrContentAssetsImported": 0
+      }
     },
     "applicationId": "com.lolclassic.encyclopedia.qa",
-    "apkSha256": "a410ae82c7e69a46b9075be908879b4fc11e42622d8c877230c4cd5dcaba95b9"
+    "apkSha256": "4094daedbbd94a1c8678d8ee5080c68699e4d380e799f4b018e655892d5855de"
   },
   "deviceGate": {
     "exactlyOneAuthorizedTarget": true,
@@ -69,12 +258,12 @@
   },
   "settingsRestoration": {
     "original": {
-      "accelerometerRotation": "1",
+      "accelerometerRotation": "0",
       "userRotation": "0",
       "headsUpNotifications": "1"
     },
     "restored": {
-      "accelerometerRotation": "1",
+      "accelerometerRotation": "0",
       "userRotation": "0",
       "headsUpNotifications": "1"
     },
@@ -113,7 +302,7 @@
     },
     {
       "file": "phone-07-runes.png",
-      "purpose": "RUNE_EDITORIAL_EMPTY_STATE",
+      "purpose": "RUNE_218_ARCHIVE",
       "route": "runes"
     },
     {
@@ -151,8 +340,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 603286,
-        "sha256": "e9b57afab53ce7b990b1dfc06f119ffc9149ac1fc369908f32a16111cca0b162"
+        "bytes": 621447,
+        "sha256": "fa6994313d02c69b3b25b932fb6e1b1d596398af8aa726a460e60d4dfd3f325f"
       }
     },
     {
@@ -163,18 +352,18 @@
         411,
         806
       ],
-      "imageCount": 61,
+      "imageCount": 63,
       "brokenImages": [],
       "placeholderCount": 0,
-      "intentionalTextFallbackCount": 2,
+      "intentionalTextFallbackCount": 0,
       "runeRecordCount": null,
       "domTextPatternHits": {},
       "png": {
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 1289565,
-        "sha256": "e5fb8d59fe4798f73169e5b28ad6cba3cb479a1562b6785efce9451f40e617ba"
+        "bytes": 1395326,
+        "sha256": "0581cd2438d1ac5e7bf3783dc6666d3a39c0517580a15198fc5c6b5a34e4f8b5"
       }
     },
     {
@@ -195,8 +384,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 322052,
-        "sha256": "626851a39dfb2ef5bf88422f045d290dc305359a2cc77f3beb768699ce53b715"
+        "bytes": 307703,
+        "sha256": "0d5357169c7f64a63303f4fc33129bae2f159a0402f98624ac015b7aa762ab1a"
       }
     },
     {
@@ -207,7 +396,7 @@
         411,
         806
       ],
-      "imageCount": 0,
+      "imageCount": 149,
       "brokenImages": [],
       "placeholderCount": 0,
       "intentionalTextFallbackCount": 0,
@@ -217,8 +406,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 304499,
-        "sha256": "73e74452f43db63373928a085d9d1d4599b5f1812bc31d9df72926d19aa46ece"
+        "bytes": 538144,
+        "sha256": "7bfabd5dad762fe1a114605eefabb370fb867c2189b36d8f6d66f95331bfa369"
       }
     },
     {
@@ -239,8 +428,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 631975,
-        "sha256": "3bc79fafa3e9440fe3b8a7b24c01bd694d4c90e5f82b55ad230843146f2019a7"
+        "bytes": 631845,
+        "sha256": "bc8efb5488f4e2148809a0c84a334f5990477c33466390cc39935aacfbb7c527"
       }
     },
     {
@@ -261,13 +450,13 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 607637,
-        "sha256": "114da8ac334a0ed15581e8aaf1b845940e875b1c60ca6018c9ae4843bedb43ab"
+        "bytes": 586353,
+        "sha256": "48d688bbd1ce19f9751f2aa2eab9318a2df1b16c486f058aa5a70e64938ea816"
       }
     },
     {
       "file": "phone-07-runes.png",
-      "purpose": "RUNE_EDITORIAL_EMPTY_STATE",
+      "purpose": "RUNE_218_ARCHIVE",
       "route": "runes",
       "viewport": [
         411,
@@ -283,8 +472,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 341263,
-        "sha256": "cad3cc7ce4fe21d2ebecdd73c8dd4a44bc6e42ff2686d3f2e4b5fb616f06c195"
+        "bytes": 181672,
+        "sha256": "423fa21bc8ba1e8f6a4fe84556bbc91878566899e6bb5c9002893edbfc8fb5d9"
       }
     },
     {
@@ -305,8 +494,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 367642,
-        "sha256": "53838df34a76b9498d22a30b7d325171101204f440a894da6e839ab3427f3067"
+        "bytes": 681884,
+        "sha256": "2268a42ab835241ee9691d1fca4eaf79dab8eafe2bffbabd85e13b922c6fbc5f"
       }
     },
     {
@@ -327,8 +516,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 377247,
-        "sha256": "dc5166db6460a4ad5221dd4c917d855d871cff7b4debad5409e5d727f4c86ca6"
+        "bytes": 356678,
+        "sha256": "5872220715cb6f969e35c8b7e329ee2b6ab8c58b5a3414ff0153a9787d721c9f"
       }
     },
     {
@@ -349,8 +538,8 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 139413,
-        "sha256": "ef5b38c4e46b55c64bc52c51cceeae0b8c2baae43af688143da1a1fb394b1c16"
+        "bytes": 110834,
+        "sha256": "dd0da45437c049f3efdf049901eeeacd48034bdcc68c145a4ee4c1991b47b9e8"
       }
     }
   ],
@@ -362,8 +551,8 @@
       "width": 1080,
       "height": 2340,
       "mode": "RGB",
-      "bytes": 603286,
-      "sha256": "e9b57afab53ce7b990b1dfc06f119ffc9149ac1fc369908f32a16111cca0b162"
+      "bytes": 621447,
+      "sha256": "fa6994313d02c69b3b25b932fb6e1b1d596398af8aa726a460e60d4dfd3f325f"
     }
   },
   "video": {
@@ -413,11 +602,11 @@
     "width": 1080,
     "height": 2340,
     "codec": "h264",
-    "frameRate": "6918000/251557",
-    "duration": 41.926,
-    "bitRate": 1545770,
-    "bytes": 8101029,
-    "sha256": "12dc0637b56f5f0039e9457e2a004818f7ff37df719e6c7aa259cd3cef8d91f7"
+    "frameRate": "105660000/3774737",
+    "duration": 41.942,
+    "bitRate": 1867401,
+    "bytes": 9790207,
+    "sha256": "782cea1b4b3c569bfec00d2c20d419ec9d2861d80182f8a7a2a13b6b5b57edc9"
   },
   "historicalLauncherException": {
     "file": "app-icon.png",
@@ -442,8 +631,8 @@
       "width": 1024,
       "height": 500,
       "mode": "RGB",
-      "bytes": 187886,
-      "sha256": "86296c8f49b1e0b753bef56258ba36324fd0ee090e377b1bc4a478a5febe0515"
+      "bytes": 187153,
+      "sha256": "0e59e2f747a22722cef27f39d0383d212c2577b6e106dab1fd159b0c3eddf686"
     }
   },
   "safety": {

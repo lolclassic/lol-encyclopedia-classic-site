@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 
 
 PUBLIC_ROOT = Path(__file__).resolve().parent
-EXPECTED_ANDROID_HEAD = "1654efbe34a1a382f6712d29a88c7976bed3bb50"
+EXPECTED_ANDROID_HEAD = "98e17ac59b84ad8ef9c62071ca7ea8f3effaadd2"
 EXPECTED_ANDROID_BRANCH = "codex"
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
 REJECTED_PRODUCTION_PACKAGE = "com.lolclassic.encyclopedia"
@@ -36,28 +36,46 @@ ACTIVITY = f"{EXPECTED_PACKAGE}/{EXPECTED_ACTIVITY_CLASS}"
 APP_URL_PREFIX = "https://appassets.androidplatform.net/assets/www/index.html"
 DEVTOOLS_PORT = 9222
 CAPTURE_RUNTIME_SOURCE_PATHS = (
-    "app/src/main/assets/www/app.js",
-    "app/src/main/assets/www/classic-ui-overrides.js",
-    "app/src/main/assets/www/final-ui-hotfix.js",
+    "app/src/main/assets/www/data/offline-assets.json",
     "app/src/main/assets/www/index.html",
+    "app/src/main/assets/www/nostalgia-218-fidelity.js",
+    "app/src/main/assets/www/portrait-fix.js",
     "app/src/main/assets/www/sw.js",
 )
 EXPECTED_ANDROID_WIP_PATHS = frozenset(
     {
-        "app/src/main/assets/www/classic-ui-overrides.js",
-        "app/src/main/assets/www/final-ui-hotfix.js",
+        "app/src/main/assets/www/community-online.js",
+        "app/src/main/assets/www/data/offline-assets.json",
         "app/src/main/assets/www/index.html",
+        "app/src/main/assets/www/portrait-fix.js",
         "app/src/main/assets/www/sw.js",
+        "app/src/main/java/com/lolclassic/encyclopedia/MainActivity.java",
         "play-store/android-runtime-qa.json",
+        "play-store/quality-report.json",
+        "play-store/riot-asset-provenance.json",
+        "play-store/screenshot-evidence.json",
+        "play-store/screenshots/phone-01-home.png",
+        "play-store/screenshots/phone-02-champions.png",
+        "play-store/screenshots/phone-03-champion-detail.png",
+        "play-store/screenshots/phone-04-items.png",
+        "play-store/screenshots/phone-05-masteries.png",
+        "play-store/screenshots/phone-06-spells.png",
+        "play-store/screenshots/phone-07-runes.png",
+        "play-store/screenshots/phone-08-patch-news.png",
+        "play-store/screenshots/phone-09-about-legal.png",
+        "play-store/screenshots/phone-10-community.png",
         "tools/android_runtime_qa.py",
+        "tools/check_classic_roster.mjs",
         "tools/check_classic_ui_overrides.mjs",
         "tools/check_mobile_layout_contracts.mjs",
+        "tools/generate_riot_asset_provenance.py",
         "tools/release_lint.py",
         "tools/test-classic-skills-ui.mjs",
         "tools/test-community-online.mjs",
+        "tools/verify_historical_ui_data_freeze.py",
     }
 )
-EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
+EXPECTED_ANDROID_PRESERVED_UNTRACKED_PATHS = frozenset(
     {
         "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160457",
         "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160935",
@@ -75,6 +93,24 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
         "play-store/qa-skin-portraits/shen-skins.png",
         "play-store/qa-skin-portraits/warwick-skins.png",
         "play-store/skin-portrait-qa.json",
+    }
+)
+EXPECTED_ANDROID_VERSION218_UNTRACKED_PATHS = frozenset(
+    {
+        "app/src/main/assets/www/nostalgia-218-fidelity.js",
+        "play-store/android-post-image-qa-version218.json",
+        "play-store/android-runtime-qa-version218-fidelity.json",
+        "play-store/version-218-attachment-manifest.json",
+        "play-store/version-218-fidelity-official-assets.json",
+        "play-store/version218-dialog-evidence.json",
+        "play-store/version218-reference-comparison/final-board-type-dialog.png",
+        "play-store/version218-reference-comparison/final-nickname-dialog.png",
+        "play-store/version218-reference-comparison/final-write-post-dialog.png",
+        "tools/acquire_version218_fidelity_assets.py",
+        "tools/android_post_image_qa.py",
+        "tools/capture_version218_dialog_evidence.py",
+        "tools/capture_version218_local_layouts.mjs",
+        "tools/check_version218_nostalgia_contracts.mjs",
     }
 )
 
@@ -107,7 +143,7 @@ CAPTURES: tuple[tuple[str, str, str, str], ...] = (
         "phone-05-masteries.png",
         "MASTERY",
         "mastery",
-        "S.mbranch = 'o'; S.masteryInfo = 'o_08'; go('mastery');",
+        "store.set('res3mastery3', {}); S.mbranch = 'o'; S.masteryInfo = 'o_08'; go('mastery');",
     ),
     (
         "phone-06-spells.png",
@@ -117,9 +153,9 @@ CAPTURES: tuple[tuple[str, str, str, str], ...] = (
     ),
     (
         "phone-07-runes.png",
-        "RUNE_EDITORIAL_EMPTY_STATE",
+        "RUNE_218_ARCHIVE",
         "runes",
-        "S.runeSet = 'classic'; S.runeView = 'list'; S.rslot = 'mark'; S.rq = ''; go('runes');",
+        "saveRunePage({}, 'archive', 1); S.runeSet = 'archive'; S.runeView = 'list'; S.rslot = 'mark'; S.rq = ''; go('runes');",
     ),
     (
         "phone-08-patch-news.png",
@@ -146,8 +182,8 @@ TOUR: tuple[tuple[str, str], ...] = (
     ("CHAMPION_LIST", "S.onlyClassic = true; S.q = ''; go('classic');"),
     ("CHAMPION_DETAIL", "S.showTip = null; go('champion/garen/basic');"),
     ("ITEM", "S.cat = null; S.iq = ''; go('items');"),
-    ("MASTERY", "S.mbranch = 'o'; S.masteryInfo = 'o_08'; go('mastery');"),
-    ("RUNE", "S.runeSet = 'classic'; S.runeView = 'list'; S.rslot = 'mark'; S.rq = ''; go('runes');"),
+    ("MASTERY", "store.set('res3mastery3', {}); S.mbranch = 'o'; S.masteryInfo = 'o_08'; go('mastery');"),
+    ("RUNE", "saveRunePage({}, 'archive', 1); S.runeSet = 'archive'; S.runeView = 'list'; S.rslot = 'mark'; S.rq = ''; go('runes');"),
     ("PATCH_NEWS", "go('patchnote/1');"),
     ("COMMUNITY", "go('board');"),
     ("ABOUT_LEGAL", "go('about');"),
@@ -412,35 +448,76 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
         raise RuntimeError("Android canonical branch/HEAD gate failed")
     if tracked_paths != EXPECTED_ANDROID_WIP_PATHS:
         raise RuntimeError(
-            "Android tracked WIP gate failed; exact authorized classic-fantasy paths required"
+            "Android tracked WIP gate failed; exact authorized version-218 paths required"
         )
-    if untracked_paths != EXPECTED_ANDROID_UNTRACKED_PATHS:
+
+    manifest_path = android_repo / "play-store/version-218-fidelity-official-assets.json"
+    if not manifest_path.is_file():
+        raise RuntimeError("Android version-218 official asset manifest is missing")
+    asset_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    asset_paths = frozenset(str(record.get("path", "")) for record in asset_manifest.get("assets", []))
+    champion_assets = {
+        "app/src/main/assets/www/images/official_champion/kennen.png",
+        "app/src/main/assets/www/images/official_champion/shen.png",
+    }
+    item_assets = {
+        path
+        for path in asset_paths
+        if re.fullmatch(r"app/src/main/assets/www/images/official_item/\d+\.png", path)
+    }
+    if (
+        asset_manifest.get("count") != 151
+        or asset_manifest.get("historicalApkGameOrContentAssetsImported") != 0
+        or len(asset_paths) != 151
+        or len(item_assets) != 149
+        or asset_paths != frozenset(champion_assets | item_assets)
+    ):
+        raise RuntimeError("Android version-218 official asset manifest failed closed")
+    for record in asset_manifest["assets"]:
+        path = str(record["path"])
+        source = android_repo / path
+        if (
+            not source.is_file()
+            or sha256_file(source).upper() != str(record.get("sha256", "")).upper()
+            or source.stat().st_size != int(record.get("size", -1))
+        ):
+            raise RuntimeError(f"Android official asset bytes do not match manifest: {path}")
+
+    expected_untracked = (
+        EXPECTED_ANDROID_PRESERVED_UNTRACKED_PATHS
+        | EXPECTED_ANDROID_VERSION218_UNTRACKED_PATHS
+        | asset_paths
+    )
+    if untracked_paths != expected_untracked:
         raise RuntimeError(
-            "Android untracked WIP gate failed; exact preserved classic-fantasy paths required"
+            "Android untracked WIP gate failed; exact preserved and version-218 paths required"
         )
-    binary_diff = run(
-        [
-            "git",
-            "diff",
-            "--binary",
-            "--no-ext-diff",
-            "--",
-            *CAPTURE_RUNTIME_SOURCE_PATHS,
-        ],
-        cwd=android_repo,
-        text=False,
-    ).stdout
+    runtime_digest = hashlib.sha256()
+    for relative in CAPTURE_RUNTIME_SOURCE_PATHS:
+        source = android_repo / relative
+        if not source.is_file():
+            raise RuntimeError(f"Android runtime source is missing: {relative}")
+        runtime_digest.update(relative.encode("utf-8"))
+        runtime_digest.update(b"\0")
+        runtime_digest.update(source.read_bytes())
+        runtime_digest.update(b"\0")
     return {
         "branch": branch,
         "commit": head,
-        "trackedState": "authorized-classic-fantasy-wip",
+        "trackedState": "authorized-version-218-fidelity-wip",
         "trackedPaths": sorted(tracked_paths),
         "preservedUntrackedPaths": sorted(untracked_paths),
         "runtimeSourcePaths": list(CAPTURE_RUNTIME_SOURCE_PATHS),
-        "runtimeSourceDiffSha256": hashlib.sha256(binary_diff).hexdigest(),
+        "runtimeSourceDiffSha256": runtime_digest.hexdigest(),
         "runtimeSourceFingerprintAlgorithm": (
-            "sha256(git diff --binary --no-ext-diff -- ordered runtimeSourcePaths)"
+            "sha256(ordered UTF-8 path NUL file bytes NUL for runtimeSourcePaths)"
         ),
+        "officialAssetManifest": {
+            "path": "play-store/version-218-fidelity-official-assets.json",
+            "count": len(asset_paths),
+            "sha256": sha256_file(manifest_path),
+            "historicalApkGameOrContentAssetsImported": 0,
+        },
     }
 
 

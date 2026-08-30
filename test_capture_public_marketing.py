@@ -33,19 +33,25 @@ class SafetyConstantTests(unittest.TestCase):
 
     def test_runtime_fingerprint_is_exact_and_excludes_post_capture_evidence(self) -> None:
         expected = (
-            "app/src/main/assets/www/app.js",
-            "app/src/main/assets/www/classic-ui-overrides.js",
-            "app/src/main/assets/www/final-ui-hotfix.js",
+            "app/src/main/assets/www/data/offline-assets.json",
             "app/src/main/assets/www/index.html",
+            "app/src/main/assets/www/nostalgia-218-fidelity.js",
+            "app/src/main/assets/www/portrait-fix.js",
             "app/src/main/assets/www/sw.js",
         )
         self.assertEqual(capture.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
         self.assertEqual(finalize.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
-        modified_runtime_sources = set(expected) - {"app/src/main/assets/www/app.js"}
+        modified_runtime_sources = set(expected) - {
+            "app/src/main/assets/www/nostalgia-218-fidelity.js"
+        }
         self.assertTrue(
             modified_runtime_sources.issubset(capture.EXPECTED_ANDROID_WIP_PATHS)
         )
         self.assertFalse(any(path.startswith("play-store/") for path in expected))
+        self.assertIn(
+            "app/src/main/assets/www/nostalgia-218-fidelity.js",
+            capture.EXPECTED_ANDROID_VERSION218_UNTRACKED_PATHS,
+        )
 
 
 class AssetProvenanceTests(unittest.TestCase):
