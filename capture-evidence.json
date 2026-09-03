@@ -111,7 +111,9 @@
         "count": 151,
         "sha256": "c45836310898d6788da476aafc0e8beb761ca2e4fd294c9e021e09c2b71757cf",
         "historicalApkGameOrContentAssetsImported": 0
-      }
+      },
+      "currentHeadAtFinalization": "1c0e3162510e21fe29b534e7664dc4ad57b95058",
+      "captureCommitAncestorOfCurrentHead": true
     },
     "applicationId": "com.lolclassic.encyclopedia.qa",
     "apkSha256": "41913a538dd0d01a16adb3353b9967e76bc9ac4dd8dede971056c70e1e369890"
@@ -217,8 +219,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 516165,
-        "sha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a"
+        "bytes": 516550,
+        "sha256": "51599ea789e0b893e9d98d260fbdbd8208cb226f82fbcb807a001ffc52f98e4a",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -239,8 +242,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 1495536,
-        "sha256": "43a146eabb228cd619346138303128514c9069d10229f542edaac78935e6aba6"
+        "bytes": 1495921,
+        "sha256": "5fdb13f951e802a67505c711e461b052a8d1d2e8e3cbfa0cf1ce24dd12b4c9b9",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -261,8 +265,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 338214,
-        "sha256": "00b3156d4e0f7a70393457abe3b9a43177516a5f63428143f41f3ca68a7c3855"
+        "bytes": 338599,
+        "sha256": "ae30db028ed949a8bb421e595e3ce755f3f270199638ad8fd3ae7b11da7f4477",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -283,8 +288,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 518338,
-        "sha256": "be439f2dd82115efb6d8dc3a1ce9500335ddb2b16ed3d4ccbfdad8a042c36ffb"
+        "bytes": 518723,
+        "sha256": "dd9eb624d3a723b0359b111c98405ca83f4d0d5c87af7c53ef39ebbf7b448cc8",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -305,8 +311,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 598610,
-        "sha256": "db877568c478fe17ab49ccf505fbcea551900d2ff79ddea04706aca50f50f9a2"
+        "bytes": 598995,
+        "sha256": "553f18a909aabba4d417c646458cec853619e38a89d1277ecc3d9211020d3d43",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -327,8 +334,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 606085,
-        "sha256": "ce50d057fd76953f4c11e71293c19195c190a625cddb5d256a0b85c6c6f0a056"
+        "bytes": 606470,
+        "sha256": "3430fc2009721b72fa3ba54304bcc5bcf57cec4f75a04557092c35061416b6fc",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -349,8 +357,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 498632,
-        "sha256": "4c310fd3a3c838c3f23ef03b524041eb4ad3b9fca5bd8d1ecaf1bd7bc935e7bb"
+        "bytes": 499017,
+        "sha256": "849e4fc4b63cf9935d074531407ff6fda44a8b2165c28d21403bdd82b6999611",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -371,8 +380,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 1449450,
-        "sha256": "04e8613d28c0f665eafa1b58877960df8f170e5f06bb20e03ce7660a0d19daff"
+        "bytes": 1449835,
+        "sha256": "d6a4ae377ddf4c8b725519d81d6a2a7448c24757719fe486dcc3e1c3e6ceb252",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -393,8 +403,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 310918,
-        "sha256": "5434576c7883f192394dd464b2865bbe91eb9c5c58d73499b8dc5ec227f095a4"
+        "bytes": 311303,
+        "sha256": "4d449f42f88d487de4abca30ffa57bd83d82e219da75042bf8546f91ddae8de5",
+        "iccProfile": "sRGB"
       }
     },
     {
@@ -415,8 +426,9 @@
         "width": 1080,
         "height": 2340,
         "mode": "RGB",
-        "bytes": 125276,
-        "sha256": "8837280efb7cc663e209b1f0afa8315d90f4c4567e535bd490dbd5765869ead0"
+        "bytes": 125661,
+        "sha256": "4d106fd15fcc20de3fe9055fa8a3005dfc77446326f21822ddb8c19f5bc0b0f3",
+        "iccProfile": "sRGB"
       }
     }
   ],
@@ -428,8 +440,9 @@
       "width": 1080,
       "height": 2340,
       "mode": "RGB",
-      "bytes": 516165,
-      "sha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a"
+      "bytes": 516550,
+      "sha256": "51599ea789e0b893e9d98d260fbdbd8208cb226f82fbcb807a001ffc52f98e4a",
+      "iccProfile": "sRGB"
     }
   },
   "video": {
@@ -632,5 +645,85 @@
     "domTextPatternScanPassed": true,
     "personalDataReviewedByAutomation": false,
     "manualVisualReviewRequired": true
+  },
+  "colorProfileNormalization": {
+    "appliedAt": "2026-09-03T00:53:04.009790Z",
+    "method": "Pillow ImageCms standard sRGB ICC profile embedding",
+    "scope": "PNG container/profile normalization of the ten reviewed captures and home poster alias",
+    "decodedPixelsChanged": false,
+    "dimensionsChanged": false,
+    "manualVisualReviewCarriedForwardBecauseDecodedPixelsAreByteIdentical": true,
+    "records": {
+      "phone-01-home.png": {
+        "preNormalizationSha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a",
+        "normalizedSha256": "51599ea789e0b893e9d98d260fbdbd8208cb226f82fbcb807a001ffc52f98e4a",
+        "decodedRgbPixelSha256": "e70aad584d97bd0036d1973e4ab299964a7b3a97f43a8c5efeee5f442e28733f",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-02-champions.png": {
+        "preNormalizationSha256": "43a146eabb228cd619346138303128514c9069d10229f542edaac78935e6aba6",
+        "normalizedSha256": "5fdb13f951e802a67505c711e461b052a8d1d2e8e3cbfa0cf1ce24dd12b4c9b9",
+        "decodedRgbPixelSha256": "59ab0cf3aea155ba6fdb1b32530525813c5f571bdf0456b70f9c2d1826fe072a",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-03-champion-detail.png": {
+        "preNormalizationSha256": "00b3156d4e0f7a70393457abe3b9a43177516a5f63428143f41f3ca68a7c3855",
+        "normalizedSha256": "ae30db028ed949a8bb421e595e3ce755f3f270199638ad8fd3ae7b11da7f4477",
+        "decodedRgbPixelSha256": "bed994d148d187d11ae832d0ff4daf6a21ac84c9377069b39d51be0487321747",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-04-items.png": {
+        "preNormalizationSha256": "be439f2dd82115efb6d8dc3a1ce9500335ddb2b16ed3d4ccbfdad8a042c36ffb",
+        "normalizedSha256": "dd9eb624d3a723b0359b111c98405ca83f4d0d5c87af7c53ef39ebbf7b448cc8",
+        "decodedRgbPixelSha256": "5fe55164bf53b94fe6ad9117e25231231f6881872005b5d0b279bf7a351bcad0",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-05-masteries.png": {
+        "preNormalizationSha256": "db877568c478fe17ab49ccf505fbcea551900d2ff79ddea04706aca50f50f9a2",
+        "normalizedSha256": "553f18a909aabba4d417c646458cec853619e38a89d1277ecc3d9211020d3d43",
+        "decodedRgbPixelSha256": "20d5f80c6cc96403fd8a441121092805faf0c5ff7277147956766b0a4245d2a7",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-06-spells.png": {
+        "preNormalizationSha256": "ce50d057fd76953f4c11e71293c19195c190a625cddb5d256a0b85c6c6f0a056",
+        "normalizedSha256": "3430fc2009721b72fa3ba54304bcc5bcf57cec4f75a04557092c35061416b6fc",
+        "decodedRgbPixelSha256": "00fc62879326d292253d8e8cbc82d7ed1988441ba51f47dce5ff2d87781ff79f",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-07-runes.png": {
+        "preNormalizationSha256": "4c310fd3a3c838c3f23ef03b524041eb4ad3b9fca5bd8d1ecaf1bd7bc935e7bb",
+        "normalizedSha256": "849e4fc4b63cf9935d074531407ff6fda44a8b2165c28d21403bdd82b6999611",
+        "decodedRgbPixelSha256": "71e02b7c6840a040f507c81ac73a578c306f2a0a6cb99e7cb57de619b9b7f04f",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-08-patch-news.png": {
+        "preNormalizationSha256": "04e8613d28c0f665eafa1b58877960df8f170e5f06bb20e03ce7660a0d19daff",
+        "normalizedSha256": "d6a4ae377ddf4c8b725519d81d6a2a7448c24757719fe486dcc3e1c3e6ceb252",
+        "decodedRgbPixelSha256": "62019db673d1a07a4fa6e9fd2b0034a2228eeac7b591083817523c6cd8c771f5",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-09-about-legal.png": {
+        "preNormalizationSha256": "5434576c7883f192394dd464b2865bbe91eb9c5c58d73499b8dc5ec227f095a4",
+        "normalizedSha256": "4d449f42f88d487de4abca30ffa57bd83d82e219da75042bf8546f91ddae8de5",
+        "decodedRgbPixelSha256": "553f394461f45923560a85f129767729fa030cf0abc246f164a41354ac3ad549",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      },
+      "phone-10-community.png": {
+        "preNormalizationSha256": "8837280efb7cc663e209b1f0afa8315d90f4c4567e535bd490dbd5765869ead0",
+        "normalizedSha256": "4d106fd15fcc20de3fe9055fa8a3005dfc77446326f21822ddb8c19f5bc0b0f3",
+        "decodedRgbPixelSha256": "9d7327e8eff87c543b67529ebf7c4e35cbc26f7e46233cd4e164c3be2215ae74",
+        "decodedPixelsChanged": false,
+        "dimensionsChanged": false
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 import capture_public_marketing as capture
 import finalize_media_provenance as finalize
@@ -25,6 +26,33 @@ class ApkIdentityTests(unittest.TestCase):
 
 
 class SafetyConstantTests(unittest.TestCase):
+    def test_capture_commit_may_be_an_ancestor_of_current_android_head(self) -> None:
+        android_repo = Path("android")
+        with patch.object(finalize.subprocess, "run") as run:
+            run.return_value.returncode = 0
+            self.assertTrue(
+                finalize.capture_commit_reaches_head(
+                    android_repo, "1" * 40, "2" * 40
+                )
+            )
+            run.assert_called_once_with(
+                ["git", "merge-base", "--is-ancestor", "1" * 40, "2" * 40],
+                cwd=android_repo,
+                check=False,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+
+    def test_unrelated_capture_commit_is_rejected(self) -> None:
+        with patch.object(finalize.subprocess, "run") as run:
+            run.return_value.returncode = 1
+            self.assertFalse(
+                finalize.capture_commit_reaches_head(
+                    Path("android"), "1" * 40, "2" * 40
+                )
+            )
+
     def test_production_package_is_never_the_capture_target(self) -> None:
         self.assertNotEqual(capture.EXPECTED_PACKAGE, capture.REJECTED_PRODUCTION_PACKAGE)
         self.assertEqual(

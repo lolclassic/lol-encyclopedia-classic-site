@@ -100,6 +100,22 @@ def common_record(
     }
 
 
+def capture_commit_reaches_head(
+    android_repo: Path, capture_commit: str, head: str
+) -> bool:
+    if head == capture_commit:
+        return True
+    ancestry = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", capture_commit, head],
+        cwd=android_repo,
+        check=False,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    return ancestry.returncode == 0
+
+
 def reconcile_runtime_source_fingerprint(
     evidence: dict[str, Any], android_repo: Path
 ) -> None:
@@ -114,8 +130,13 @@ def reconcile_runtime_source_fingerprint(
         text=True,
         encoding="utf-8",
     ).stdout.strip()
-    if head != android["commit"]:
-        raise RuntimeError("Android HEAD no longer matches the capture source commit")
+    capture_commit = android["commit"]
+    if not capture_commit_reaches_head(android_repo, capture_commit, head):
+        raise RuntimeError(
+            "Android capture source commit is not an ancestor of current HEAD"
+        )
+    android["currentHeadAtFinalization"] = head
+    android["captureCommitAncestorOfCurrentHead"] = True
 
     runtime_digest = hashlib.sha256()
     for relative in CAPTURE_RUNTIME_SOURCE_PATHS:
