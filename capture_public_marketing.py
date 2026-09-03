@@ -25,7 +25,7 @@ except ModuleNotFoundError:
 
 
 PUBLIC_ROOT = Path(__file__).resolve().parent
-EXPECTED_ANDROID_HEAD = "98e17ac59b84ad8ef9c62071ca7ea8f3effaadd2"
+EXPECTED_ANDROID_HEAD = "c0fffa988a1ed032d42d82f44adc1b0fdc7a900f"
 EXPECTED_ANDROID_BRANCH = "codex"
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
 REJECTED_PRODUCTION_PACKAGE = "com.lolclassic.encyclopedia"
@@ -42,77 +42,78 @@ CAPTURE_RUNTIME_SOURCE_PATHS = (
     "app/src/main/assets/www/portrait-fix.js",
     "app/src/main/assets/www/sw.js",
 )
-EXPECTED_ANDROID_WIP_PATHS = frozenset(
+EXPECTED_ANDROID_TRACKED_DIFF_PATHS = frozenset()
+EXPECTED_ANDROID_PROTECTED_UNTRACKED_SHA256 = {
+    "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160457": (
+        "90a9ce4ae4980114b8ada6e68d1ddff6a93579ab9b4bd956681fa978ae423262"
+    ),
+    "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160935": (
+        "bfe0e5c196b203096f0da0b60de8871fa8f037cd1c6949a89419ecccb54fe128"
+    ),
+    "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011": (
+        "d304632fa1b2e59401ac2ec422c8f01fcd67895ac930f3e5dc2a862c86af6885"
+    ),
+    "app/src/main/assets/www/index.html.bak-20260822-162011": (
+        "27a034e9e1244e958fb1047e6e4c578d92e947828d79067f29dba6eb73a075ff"
+    ),
+}
+EXPECTED_ANDROID_LOCAL_EVIDENCE_FILES = frozenset(
     {
-        "app/src/main/assets/www/community-online.js",
-        "app/src/main/assets/www/data/offline-assets.json",
-        "app/src/main/assets/www/index.html",
-        "app/src/main/assets/www/portrait-fix.js",
-        "app/src/main/assets/www/sw.js",
-        "app/src/main/java/com/lolclassic/encyclopedia/MainActivity.java",
-        "play-store/android-runtime-qa.json",
-        "play-store/quality-report.json",
-        "play-store/riot-asset-provenance.json",
-        "play-store/screenshot-evidence.json",
-        "play-store/screenshots/phone-01-home.png",
-        "play-store/screenshots/phone-02-champions.png",
-        "play-store/screenshots/phone-03-champion-detail.png",
-        "play-store/screenshots/phone-04-items.png",
-        "play-store/screenshots/phone-05-masteries.png",
-        "play-store/screenshots/phone-06-spells.png",
-        "play-store/screenshots/phone-07-runes.png",
-        "play-store/screenshots/phone-08-patch-news.png",
-        "play-store/screenshots/phone-09-about-legal.png",
-        "play-store/screenshots/phone-10-community.png",
-        "tools/android_runtime_qa.py",
-        "tools/check_classic_roster.mjs",
-        "tools/check_classic_ui_overrides.mjs",
-        "tools/check_mobile_layout_contracts.mjs",
-        "tools/generate_riot_asset_provenance.py",
-        "tools/release_lint.py",
-        "tools/test-classic-skills-ui.mjs",
-        "tools/test-community-online.mjs",
-        "tools/verify_historical_ui_data_freeze.py",
-    }
-)
-EXPECTED_ANDROID_PRESERVED_UNTRACKED_PATHS = frozenset(
-    {
-        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160457",
-        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160935",
-        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011",
-        "app/src/main/assets/www/index.html.bak-20260822-162011",
+        "play-store/android-post-image-qa-version218.json",
         "play-store/android-runtime-qa-classic-fantasy.json",
+        "play-store/android-runtime-qa-home-grid-white-feed-thumbnail-drawer-pass.json",
         "play-store/android-runtime-qa-icon-era.json",
         "play-store/android-runtime-qa-phase2b3-final.json",
         "play-store/android-runtime-qa-phase2b3-rerun.json",
         "play-store/android-runtime-qa-phase2b3.json",
-        "play-store/qa-skin-portraits/akali-7-skins.png",
-        "play-store/qa-skin-portraits/fiddlesticks-skins.png",
-        "play-store/qa-skin-portraits/garen-skins.png",
-        "play-store/qa-skin-portraits/ryze-skins.png",
-        "play-store/qa-skin-portraits/shen-skins.png",
-        "play-store/qa-skin-portraits/warwick-skins.png",
-        "play-store/skin-portrait-qa.json",
-    }
-)
-EXPECTED_ANDROID_VERSION218_UNTRACKED_PATHS = frozenset(
-    {
-        "app/src/main/assets/www/nostalgia-218-fidelity.js",
-        "play-store/android-post-image-qa-version218.json",
+        "play-store/android-runtime-qa-rune-patch-final.json",
+        "play-store/android-runtime-qa-rune-patch-pass.json",
+        "play-store/android-runtime-qa-rune-patch-rerun.json",
+        "play-store/android-runtime-qa-rune-patch-upgrade-theme-final.json",
+        "play-store/android-runtime-qa-rune-patch-upgrade-theme-pass.json",
         "play-store/android-runtime-qa-version218-fidelity.json",
-        "play-store/version-218-attachment-manifest.json",
-        "play-store/version-218-fidelity-official-assets.json",
+        "play-store/local-version218-home-grid-qa/report.json",
+        "play-store/screenshots/video-feed-proof.png",
+        "play-store/skin-portrait-qa.json",
         "play-store/version218-dialog-evidence.json",
-        "play-store/version218-reference-comparison/final-board-type-dialog.png",
-        "play-store/version218-reference-comparison/final-nickname-dialog.png",
-        "play-store/version218-reference-comparison/final-write-post-dialog.png",
-        "tools/acquire_version218_fidelity_assets.py",
-        "tools/android_post_image_qa.py",
-        "tools/capture_version218_dialog_evidence.py",
         "tools/capture_version218_local_layouts.mjs",
-        "tools/check_version218_nostalgia_contracts.mjs",
+    }
+    | {
+        f"play-store/local-version218-home-grid-qa/{width}/{filename}"
+        for width in ("320", "360", "375", "412")
+        for filename in (
+            "00-startup.png",
+            "01-home.png",
+            "01a-home-video-original-thumbnail.png",
+            "01b-home-community.png",
+            "01c-drawer-white.png",
+            "02-champions.png",
+            "03-items.png",
+            "04-item-detail.png",
+            "05-runes.png",
+            "06-patch-index.png",
+            "07-patch-detail.png",
+            "08-mastery.png",
+            "09-board-type.png",
+            "10-write.png",
+            "11-nickname.png",
+        )
+    }
+    | {
+        f"play-store/qa-skin-portraits/{filename}"
+        for filename in (
+            "akali-7-skins.png",
+            "fiddlesticks-skins.png",
+            "garen-skins.png",
+            "ryze-skins.png",
+            "shen-skins.png",
+            "warwick-skins.png",
+        )
     }
 )
+EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
+    EXPECTED_ANDROID_PROTECTED_UNTRACKED_SHA256
+) | EXPECTED_ANDROID_LOCAL_EVIDENCE_FILES
 
 CAPTURES: tuple[tuple[str, str, str, str], ...] = (
     (
@@ -177,17 +178,17 @@ CAPTURES: tuple[tuple[str, str, str, str], ...] = (
     ),
 )
 
-TOUR: tuple[tuple[str, str], ...] = (
-    ("HOME", "S.tab = '새소식'; S.q = ''; go('home');"),
-    ("CHAMPION_LIST", "S.onlyClassic = true; S.q = ''; go('classic');"),
-    ("CHAMPION_DETAIL", "S.showTip = null; go('champion/garen/basic');"),
-    ("ITEM", "S.cat = null; S.iq = ''; go('items');"),
-    ("MASTERY", "store.set('res3mastery3', {}); S.mbranch = 'o'; S.masteryInfo = 'o_08'; go('mastery');"),
-    ("RUNE", "saveRunePage({}, 'archive', 1); S.runeSet = 'archive'; S.runeView = 'list'; S.rslot = 'mark'; S.rq = ''; go('runes');"),
-    ("PATCH_NEWS", "go('patchnote/1');"),
-    ("COMMUNITY", "go('board');"),
-    ("ABOUT_LEGAL", "go('about');"),
-    ("HOME_RETURN", "S.tab = '새소식'; S.q = ''; go('home');"),
+TOUR: tuple[tuple[str, str, str], ...] = (
+    ("HOME", "home", "phone-01-home.png"),
+    ("CHAMPION_LIST", "classic", "phone-02-champions.png"),
+    ("CHAMPION_DETAIL", "champion/garen/basic", "phone-03-champion-detail.png"),
+    ("ITEM", "items", "phone-04-items.png"),
+    ("MASTERY", "mastery", "phone-05-masteries.png"),
+    ("RUNE", "runes", "phone-07-runes.png"),
+    ("PATCH_NEWS", "patchnote/1", "phone-08-patch-news.png"),
+    ("COMMUNITY", "board", "phone-10-community.png"),
+    ("ABOUT_LEGAL", "about", "phone-09-about-legal.png"),
+    ("HOME_RETURN", "home", "phone-01-home.png"),
 )
 
 SENSITIVE_PATTERNS = {
@@ -446,9 +447,9 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
     )
     if branch != EXPECTED_ANDROID_BRANCH or head != EXPECTED_ANDROID_HEAD:
         raise RuntimeError("Android canonical branch/HEAD gate failed")
-    if tracked_paths != EXPECTED_ANDROID_WIP_PATHS:
+    if tracked_paths != EXPECTED_ANDROID_TRACKED_DIFF_PATHS:
         raise RuntimeError(
-            "Android tracked WIP gate failed; exact authorized version-218 paths required"
+            "Android tracked-state gate failed; exact final clean checkpoint required"
         )
 
     manifest_path = android_repo / "play-store/version-218-fidelity-official-assets.json"
@@ -483,14 +484,14 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
         ):
             raise RuntimeError(f"Android official asset bytes do not match manifest: {path}")
 
-    expected_untracked = (
-        EXPECTED_ANDROID_PRESERVED_UNTRACKED_PATHS
-        | EXPECTED_ANDROID_VERSION218_UNTRACKED_PATHS
-        | asset_paths
-    )
-    if untracked_paths != expected_untracked:
+    for relative, expected_hash in EXPECTED_ANDROID_PROTECTED_UNTRACKED_SHA256.items():
+        protected = android_repo / relative
+        if not protected.is_file() or sha256_file(protected) != expected_hash:
+            raise RuntimeError(f"Android protected untracked file integrity failed: {relative}")
+
+    if untracked_paths != EXPECTED_ANDROID_UNTRACKED_PATHS:
         raise RuntimeError(
-            "Android untracked WIP gate failed; exact preserved and version-218 paths required"
+            "Android untracked-state gate failed; exact preserved evidence paths required"
         )
     runtime_digest = hashlib.sha256()
     for relative in CAPTURE_RUNTIME_SOURCE_PATHS:
@@ -504,7 +505,7 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
     return {
         "branch": branch,
         "commit": head,
-        "trackedState": "authorized-version-218-fidelity-wip",
+        "trackedState": "authorized-version-218-fidelity-final-commit",
         "trackedPaths": sorted(tracked_paths),
         "preservedUntrackedPaths": sorted(untracked_paths),
         "runtimeSourcePaths": list(CAPTURE_RUNTIME_SOURCE_PATHS),
@@ -536,6 +537,15 @@ def route_and_audit(
     expected_route: str,
     route_script: str,
 ) -> dict[str, Any]:
+    community_settle = ""
+    if purpose == "COMMUNITY":
+        community_settle = """
+      for (let attempt = 0; attempt < 300; attempt += 1) {
+        const bodyText = document.body.innerText || '';
+        if (!bodyText.includes('온라인 게시판을 불러오는 중입니다.')) break;
+        await new Promise(resolve => setTimeout(resolve, 50));
+      }
+        """
     expression = f"""
     (async () => {{
       for (let attempt = 0; attempt < 120 && !booted; attempt += 1) {{
@@ -547,6 +557,7 @@ def route_and_audit(
       {route_script}
       await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       await new Promise(resolve => setTimeout(resolve, 900));
+      {community_settle}
       window.scrollTo(0, 0);
       document.querySelectorAll('.tree2, .ilist, .rlist').forEach(element => element.scrollTop = 0);
       const images = [...document.images];
@@ -597,6 +608,16 @@ def route_and_audit(
         raise RuntimeError(f"visual preflight failed for {purpose}")
     if result.get("scrollX") != 0 or result.get("scrollY") != 0:
         raise RuntimeError(f"capture scroll was not reset for {purpose}")
+    if purpose == "COMMUNITY":
+        community_failure_markers = (
+            "온라인 게시판을 불러오는 중입니다.",
+            "네트워크 연결을 확인한 뒤 다시 시도해 주세요.",
+            "서버 요청 실패",
+        )
+        visible_text = str(result.get("text", ""))
+        failures = [marker for marker in community_failure_markers if marker in visible_text]
+        if failures:
+            raise RuntimeError(f"community capture did not settle: {failures}")
     return result
 
 
@@ -620,90 +641,162 @@ def inspect_png(path: Path) -> dict[str, Any]:
         }
 
 
-def record_tour(
-    device: SafeDevice,
-    android_tools: Path,
-    websocket_url: str,
-    destination: Path,
-) -> dict[str, Any]:
-    remote = "/sdcard/phase2b3-public-tour.mp4"
-    route_and_audit(android_tools, websocket_url, "HOME", "home", TOUR[0][1])
-    process: subprocess.Popen[str] | None = None
-    route_evidence: list[dict[str, Any]] = []
-    try:
-        process = subprocess.Popen(
-            [
-                str(device.adb_path),
-                "-s",
-                device.expected_serial,
-                "shell",
-                "screenrecord",
-                "--bit-rate",
-                "6000000",
-                "--time-limit",
-                "42",
-                remote,
-            ],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding="utf-8",
-        )
-        time.sleep(1.0)
-        for purpose, script in TOUR:
-            expected = {
-                "HOME": "home",
-                "CHAMPION_LIST": "classic",
-                "CHAMPION_DETAIL": "champion/garen/basic",
-                "ITEM": "items",
-                "MASTERY": "mastery",
-                "RUNE": "runes",
-                "PATCH_NEWS": "patchnote/1",
-                "COMMUNITY": "board",
-                "ABOUT_LEGAL": "about",
-                "HOME_RETURN": "home",
-            }[purpose]
-            state = route_and_audit(android_tools, websocket_url, purpose, expected, script)
-            route_evidence.append({"purpose": purpose, "route": state["view"]})
-            time.sleep(3.0)
-        try:
-            _, stderr = process.communicate(timeout=20)
-        except subprocess.TimeoutExpired:
-            device.adb("shell", "pkill", "-INT", "screenrecord", check=False)
-            process.kill()
-            _, stderr = process.communicate()
-            raise RuntimeError("screenrecord did not finish within its fixed time limit")
-        if process.returncode != 0:
-            raise RuntimeError(f"screenrecord failed: {stderr.strip()}")
+def build_tour_segment_command(source: Path, destination: Path) -> list[str]:
+    return [
+        "ffmpeg",
+        "-y",
+        "-loop",
+        "1",
+        "-framerate",
+        "30",
+        "-i",
+        str(source),
+        "-map",
+        "0:v:0",
+        "-frames:v",
+        "90",
+        "-vf",
+        "setsar=1,format=yuv420p",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        str(destination),
+    ]
 
-        with tempfile.TemporaryDirectory(prefix="phase2b3-video-") as temporary:
-            raw = Path(temporary) / "tour-raw.mp4"
-            device.adb("pull", remote, str(raw))
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            run(
-                [
-                    "ffmpeg",
-                    "-y",
-                    "-i",
-                    str(raw),
-                    "-map",
-                    "0:v:0",
-                    "-c",
-                    "copy",
-                    "-movflags",
-                    "+faststart",
-                    str(destination),
-                ]
+
+def build_tour_concat_command(
+    segments: list[Path], destination: Path
+) -> list[str]:
+    if not segments:
+        raise RuntimeError("feature-tour concat requires at least one segment")
+
+    command = ["ffmpeg", "-y"]
+    for segment in segments:
+        command.extend(["-i", str(segment)])
+
+    normalized_inputs: list[str] = []
+    concat_labels: list[str] = []
+    for index in range(len(segments)):
+        label = f"v{index}"
+        normalized_inputs.append(
+            f"[{index}:v:0]settb=AVTB,setpts=PTS-STARTPTS,"
+            f"setsar=1,format=yuv420p[{label}]"
+        )
+        concat_labels.append(f"[{label}]")
+
+    normalized_inputs.append(
+        f"{''.join(concat_labels)}concat=n={len(segments)}:v=1:a=0[outv]"
+    )
+    command.extend(
+        [
+            "-filter_complex",
+            ";".join(normalized_inputs),
+            "-map",
+            "[outv]",
+            "-c:v",
+            "libx264",
+            "-preset",
+            "medium",
+            "-crf",
+            "18",
+            "-pix_fmt",
+            "yuv420p",
+            "-movflags",
+            "+faststart",
+            str(destination),
+        ]
+    )
+    return command
+
+
+def inspect_tour_segment(path: Path, purpose: str) -> dict[str, Any]:
+    probe = json.loads(
+        run(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-select_streams",
+                "v:0",
+                "-show_entries",
+                "format=duration,size:stream=codec_name,width,height,avg_frame_rate,nb_frames,duration",
+                "-of",
+                "json",
+                str(path),
+            ]
+        ).stdout
+    )
+    streams = probe.get("streams", [])
+    if len(streams) != 1:
+        raise RuntimeError(f"feature-tour segment has no video stream for {purpose}")
+    stream = streams[0]
+    fmt = probe.get("format", {})
+    duration = float(fmt.get("duration", 0))
+    frames = int(stream.get("nb_frames", 0))
+    frame_rate = stream.get("avg_frame_rate")
+    if (
+        stream.get("codec_name") != "h264"
+        or int(stream.get("width", 0)) != 1080
+        or int(stream.get("height", 0)) != 2340
+        or frame_rate != "30/1"
+        or not 2.99 <= duration <= 3.01
+        or frames != 90
+    ):
+        raise RuntimeError(
+            f"invalid feature-tour segment for {purpose}: "
+            f"codec={stream.get('codec_name')!r}, "
+            f"size={stream.get('width')}x{stream.get('height')}, "
+            f"duration={duration:.3f}, frames={frames}, frameRate={frame_rate!r}"
+        )
+    return {
+        "purpose": purpose,
+        "duration": round(duration, 3),
+        "frames": frames,
+        "frameRate": frame_rate,
+        "bytes": int(fmt.get("size", path.stat().st_size)),
+        "sha256": sha256_file(path),
+    }
+
+
+def record_tour(screenshots: Path, destination: Path) -> dict[str, Any]:
+    route_evidence: list[dict[str, Any]] = []
+    segment_evidence: list[dict[str, Any]] = []
+    with tempfile.TemporaryDirectory(prefix="phase2b3-video-") as temporary:
+        temporary_path = Path(temporary)
+        local_segments: list[Path] = []
+        for index, (purpose, route, filename) in enumerate(TOUR, start=1):
+            source = screenshots / filename
+            source_png = inspect_png(source)
+            if (
+                source_png["width"] != 1080
+                or source_png["height"] != 2340
+                or source_png["mode"] != "RGB"
+            ):
+                raise RuntimeError(
+                    f"invalid physical-device screenshot for video {purpose}: {source_png}"
+                )
+
+            local = temporary_path / f"tour-{index:02d}.mp4"
+            run(build_tour_segment_command(source, local))
+            segment = inspect_tour_segment(local, purpose)
+            segment.update(
+                {
+                    "route": route,
+                    "sourceScreenshot": filename,
+                    "sourceScreenshotSha256": source_png["sha256"],
+                }
             )
-    finally:
-        if process is not None and process.poll() is None:
-            device.adb("shell", "pkill", "-INT", "screenrecord", check=False)
-            try:
-                process.communicate(timeout=5)
-            except subprocess.TimeoutExpired:
-                process.kill()
-                process.communicate()
-        device.adb("shell", "rm", "-f", remote, check=False)
+            segment_evidence.append(segment)
+            local_segments.append(local)
+            route_evidence.append({"purpose": purpose, "route": route})
+
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        run(build_tour_concat_command(local_segments, destination))
 
     probe = json.loads(
         run(
@@ -712,7 +805,7 @@ def record_tour(
                 "-v",
                 "error",
                 "-show_entries",
-                "format=duration,bit_rate,size:stream=codec_name,width,height,avg_frame_rate",
+                "format=duration,bit_rate,size:stream=codec_name,width,height,avg_frame_rate,nb_frames",
                 "-of",
                 "json",
                 str(destination),
@@ -721,13 +814,31 @@ def record_tour(
     )
     stream = probe["streams"][0]
     fmt = probe["format"]
+    duration = float(fmt["duration"])
+    frames = int(stream.get("nb_frames", 0))
+    expected_duration = len(TOUR) * 3
+    expected_frames = len(TOUR) * 90
+    if (
+        stream.get("codec_name") != "h264"
+        or stream.get("avg_frame_rate") != "30/1"
+        or not expected_duration - 0.01 <= duration <= expected_duration + 0.01
+        or frames != expected_frames
+    ):
+        raise RuntimeError(
+            "feature-tour did not preserve every verified screenshot segment: "
+            f"codec={stream.get('codec_name')!r}, "
+            f"frameRate={stream.get('avg_frame_rate')!r}, "
+            f"duration={duration:.3f}, frames={frames}"
+        )
     return {
         "routes": route_evidence,
+        "segments": segment_evidence,
         "width": int(stream["width"]),
         "height": int(stream["height"]),
         "codec": stream["codec_name"],
         "frameRate": stream.get("avg_frame_rate"),
-        "duration": round(float(fmt["duration"]), 3),
+        "frames": frames,
+        "duration": round(duration, 3),
         "bitRate": int(fmt.get("bit_rate", 0)),
         "bytes": destination.stat().st_size,
         "sha256": sha256_file(destination),
@@ -901,9 +1012,7 @@ def main() -> int:
 
         # app-main-screen is a deliberate poster alias of the freshly captured HOME state.
         shutil.copyfile(output / "phone-01-home.png", output / "app-main-screen.png")
-        video_evidence = record_tour(
-            device, android_repo / "tools", websocket_url, output / "app-feature-tour.mp4"
-        )
+        video_evidence = record_tour(output, output / "app-feature-tour.mp4")
     finally:
         restoration_errors: list[str] = []
         restored_values: dict[str, str] = {}

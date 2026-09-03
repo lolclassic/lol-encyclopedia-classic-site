@@ -10,7 +10,7 @@
     {
       "path": "assets/phone-01-home.png",
       "category": "marketing_screenshot",
-      "sha256": "e9b57afab53ce7b990b1dfc06f119ffc9149ac1fc369908f32a16111cca0b162",
+      "sha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -24,7 +24,7 @@
     {
       "path": "assets/phone-02-champions.png",
       "category": "marketing_screenshot",
-      "sha256": "e5fb8d59fe4798f73169e5b28ad6cba3cb479a1562b6785efce9451f40e617ba",
+      "sha256": "43a146eabb228cd619346138303128514c9069d10229f542edaac78935e6aba6",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -38,7 +38,7 @@
     {
       "path": "assets/phone-03-champion-detail.png",
       "category": "marketing_screenshot",
-      "sha256": "626851a39dfb2ef5bf88422f045d290dc305359a2cc77f3beb768699ce53b715",
+      "sha256": "00b3156d4e0f7a70393457abe3b9a43177516a5f63428143f41f3ca68a7c3855",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -52,7 +52,7 @@
     {
       "path": "assets/phone-04-items.png",
       "category": "marketing_screenshot",
-      "sha256": "73e74452f43db63373928a085d9d1d4599b5f1812bc31d9df72926d19aa46ece",
+      "sha256": "be439f2dd82115efb6d8dc3a1ce9500335ddb2b16ed3d4ccbfdad8a042c36ffb",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -61,12 +61,12 @@
       "redistributionEvidence": "technical provenance recorded; rights and distribution authorization remain separate gates",
       "officialReplacementCandidate": null,
       "releaseStatus": "CURRENT_PROVENANCE_RECORDED",
-      "embeddedRiotOrThirdPartyContent": false
+      "embeddedRiotOrThirdPartyContent": true
     },
     {
       "path": "assets/phone-05-masteries.png",
       "category": "marketing_screenshot",
-      "sha256": "3bc79fafa3e9440fe3b8a7b24c01bd694d4c90e5f82b55ad230843146f2019a7",
+      "sha256": "db877568c478fe17ab49ccf505fbcea551900d2ff79ddea04706aca50f50f9a2",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -80,7 +80,7 @@
     {
       "path": "assets/phone-06-spells.png",
       "category": "marketing_screenshot",
-      "sha256": "114da8ac334a0ed15581e8aaf1b845940e875b1c60ca6018c9ae4843bedb43ab",
+      "sha256": "ce50d057fd76953f4c11e71293c19195c190a625cddb5d256a0b85c6c6f0a056",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -94,7 +94,7 @@
     {
       "path": "assets/phone-07-runes.png",
       "category": "marketing_screenshot",
-      "sha256": "cad3cc7ce4fe21d2ebecdd73c8dd4a44bc6e42ff2686d3f2e4b5fb616f06c195",
+      "sha256": "4c310fd3a3c838c3f23ef03b524041eb4ad3b9fca5bd8d1ecaf1bd7bc935e7bb",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -108,7 +108,7 @@
     {
       "path": "assets/phone-08-patch-news.png",
       "category": "marketing_screenshot",
-      "sha256": "53838df34a76b9498d22a30b7d325171101204f440a894da6e839ab3427f3067",
+      "sha256": "04e8613d28c0f665eafa1b58877960df8f170e5f06bb20e03ce7660a0d19daff",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -122,7 +122,7 @@
     {
       "path": "assets/phone-09-about-legal.png",
       "category": "marketing_screenshot",
-      "sha256": "dc5166db6460a4ad5221dd4c917d855d871cff7b4debad5409e5d727f4c86ca6",
+      "sha256": "5434576c7883f192394dd464b2865bbe91eb9c5c58d73499b8dc5ec227f095a4",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -136,7 +136,7 @@
     {
       "path": "assets/phone-10-community.png",
       "category": "marketing_screenshot",
-      "sha256": "ef5b38c4e46b55c64bc52c51cceeae0b8c2baae43af688143da1a1fb394b1c16",
+      "sha256": "8837280efb7cc663e209b1f0afa8315d90f4c4567e535bd490dbd5765869ead0",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "adb screencap -p on the authorized physical device after exact QA foreground verification",
@@ -150,7 +150,7 @@
     {
       "path": "assets/app-main-screen.png",
       "category": "marketing_screenshot",
-      "sha256": "e9b57afab53ce7b990b1dfc06f119ffc9149ac1fc369908f32a16111cca0b162",
+      "sha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "Byte-identical copy of the manually reviewed phone-01-home.png capture",
@@ -164,10 +164,10 @@
     {
       "path": "assets/app-feature-tour.mp4",
       "category": "marketing_video",
-      "sha256": "12dc0637b56f5f0039e9457e2a004818f7ff37df719e6c7aa259cd3cef8d91f7",
+      "sha256": "8d1a629be5490727ce9dc23efe3eb3300542ade2f3ca384f0d60b062be0359d0",
       "knownSource": "PROJECT_OWNED_SCREEN_CAPTURE",
       "sourceUrlOrVersion": "assets/media-provenance.json",
-      "acquisitionMethod": "adb screenrecord on the authorized physical device, stream-copied with faststart metadata",
+      "acquisitionMethod": "Ten post-render screenshots captured from the authorized physical device; each screenshot was held for exactly 3 seconds at 30 fps, concatenated, and normalized to H.264 with faststart metadata",
       "riotOfficial": false,
       "thirdParty": false,
       "redistributionEvidence": "technical provenance recorded; rights and distribution authorization remain separate gates",
@@ -178,7 +178,7 @@
     {
       "path": "assets/feature-graphic.png",
       "category": "marketing_brand_asset",
-      "sha256": "86296c8f49b1e0b753bef56258ba36324fd0ee090e377b1bc4a478a5febe0515",
+      "sha256": "a7840331afcb20d067244969efd0a7b9896f15c3f9b28ddffa8c34f84b4af9a6",
       "knownSource": "PROJECT_OWNED_COMPOSITION",
       "sourceUrlOrVersion": "assets/media-provenance.json",
       "acquisitionMethod": "Deterministic project-owned archive composition using the current reviewed HOME and CHAMPION_DETAIL captures",

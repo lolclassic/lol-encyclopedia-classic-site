@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 import unittest
 
 import capture_public_marketing as capture
@@ -41,17 +42,112 @@ class SafetyConstantTests(unittest.TestCase):
         )
         self.assertEqual(capture.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
         self.assertEqual(finalize.CAPTURE_RUNTIME_SOURCE_PATHS, expected)
-        modified_runtime_sources = set(expected) - {
-            "app/src/main/assets/www/nostalgia-218-fidelity.js"
-        }
-        self.assertTrue(
-            modified_runtime_sources.issubset(capture.EXPECTED_ANDROID_WIP_PATHS)
-        )
+        self.assertEqual(capture.EXPECTED_ANDROID_TRACKED_DIFF_PATHS, frozenset())
         self.assertFalse(any(path.startswith("play-store/") for path in expected))
-        self.assertIn(
+        self.assertNotIn(
             "app/src/main/assets/www/nostalgia-218-fidelity.js",
-            capture.EXPECTED_ANDROID_VERSION218_UNTRACKED_PATHS,
+            capture.EXPECTED_ANDROID_UNTRACKED_PATHS,
         )
+        self.assertEqual(len(capture.EXPECTED_ANDROID_UNTRACKED_PATHS), 88)
+        self.assertEqual(len(capture.EXPECTED_ANDROID_PROTECTED_UNTRACKED_SHA256), 4)
+
+    def test_android_evidence_merge_preserves_same_apk_runtime_and_safety(self) -> None:
+        existing = {
+            "schemaVersion": 2,
+            "source": {
+                "repository": "LolClassicBeta_codex_recovered",
+                "evidencePath": "play-store/screenshot-evidence.json",
+                "capturedAt": "old-time",
+                "androidCommit": "1" * 40,
+                "androidTrackedState": "authorized-home-interface-wip",
+                "package": capture.EXPECTED_PACKAGE,
+                "apkSha256": "a" * 64,
+            },
+            "deviceSafety": {
+                "productionHashesBefore": {"base.apk": "safe"},
+                "productionHashesAfter": {"base.apk": "safe"},
+            },
+            "videoAudit": {"runtime": {"contained": True}, "physicalProof": {}},
+            "screenshots": [
+                {"file": name, "runtime": {"route": f"old-{index}"}}
+                for index, name in enumerate(finalize.EXPECTED_SCREENSHOTS)
+            ],
+            "summary": {},
+        }
+        evidence = {
+            "capturedAt": "new-time",
+            "source": {
+                "android": {
+                    "commit": "2" * 40,
+                    "trackedState": "authorized-version-218-fidelity-final-commit",
+                },
+                "applicationId": capture.EXPECTED_PACKAGE,
+                "apkSha256": "a" * 64,
+            },
+            "deviceGate": {
+                "physicalDevice": True,
+                "kernelQemu": "0",
+                "exactlyOneAuthorizedTarget": True,
+                "productionPackageRejected": True,
+            },
+            "settingsRestoration": {"verified": True},
+        }
+        captures = [
+            {
+                "file": name,
+                "purpose": f"PURPOSE-{index}",
+                "route": f"route-{index}",
+                "png": {
+                    "width": 1080,
+                    "height": 2340,
+                    "mode": "RGB",
+                    "bytes": index + 1,
+                    "sha256": f"{index:064x}",
+                },
+            }
+            for index, name in enumerate(finalize.EXPECTED_SCREENSHOTS)
+        ]
+
+        merged = finalize.merge_android_play_evidence(existing, evidence, captures)
+
+        self.assertEqual(merged["source"]["repository"], "LolClassicBeta_codex_recovered")
+        self.assertEqual(
+            merged["source"]["evidencePath"], "play-store/screenshot-evidence.json"
+        )
+        self.assertEqual(merged["source"]["androidCommit"], "2" * 40)
+        self.assertEqual(
+            merged["source"]["androidTrackedState"],
+            "authorized-version-218-fidelity-final-commit",
+        )
+        self.assertEqual(
+            merged["deviceSafety"]["productionHashesBefore"], {"base.apk": "safe"}
+        )
+        self.assertEqual(
+            merged["deviceSafety"]["productionHashesAfter"], {"base.apk": "safe"}
+        )
+        self.assertEqual(merged["videoAudit"], existing["videoAudit"])
+        self.assertEqual(merged["screenshots"][0]["runtime"], {"route": "old-0"})
+        self.assertEqual(merged["screenshots"][0]["route"], "route-0")
+        self.assertEqual(merged["screenshots"][0]["bytes"], 1)
+
+    def test_tour_concat_resets_every_segment_timestamp(self) -> None:
+        command = capture.build_tour_concat_command(
+            [Path("one.mp4"), Path("two.mp4")], Path("tour.mp4")
+        )
+        filter_complex = command[command.index("-filter_complex") + 1]
+        self.assertEqual(command.count("-i"), 2)
+        self.assertIn("[0:v:0]settb=AVTB,setpts=PTS-STARTPTS", filter_complex)
+        self.assertIn("[1:v:0]settb=AVTB,setpts=PTS-STARTPTS", filter_complex)
+        self.assertIn("[v0][v1]concat=n=2:v=1:a=0[outv]", filter_complex)
+
+    def test_tour_segment_holds_each_device_screenshot_for_three_seconds(self) -> None:
+        command = capture.build_tour_segment_command(
+            Path("phone.png"), Path("segment.mp4")
+        )
+        self.assertEqual(command[command.index("-loop") + 1], "1")
+        self.assertEqual(command[command.index("-framerate") + 1], "30")
+        self.assertEqual(command[command.index("-frames:v") + 1], "90")
+        self.assertEqual(len(capture.TOUR), 10)
 
 
 class AssetProvenanceTests(unittest.TestCase):

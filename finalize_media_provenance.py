@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -153,6 +154,61 @@ def sync_android_play_screenshots(
     if tuple(capture["file"] for capture in captures) != EXPECTED_SCREENSHOTS:
         raise RuntimeError("capture set does not match the exact Android Play allowlist")
 
+    try:
+        existing_evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError("existing Android screenshot evidence is unreadable") from exc
+
+    if not android_evidence_has_preserved_details(existing_evidence):
+        current_source = existing_evidence.get("source", {})
+        current_captures = existing_evidence.get("screenshots", [])
+        capture_hashes = {
+            capture["file"]: capture["png"]["sha256"] for capture in captures
+        }
+        if (
+            current_source.get("repository") != "lol-encyclopedia-classic-site-repo"
+            or current_source.get("evidencePath") != "capture-evidence.json"
+            or current_source.get("apkSha256") != evidence["source"]["apkSha256"]
+            or not isinstance(current_captures, list)
+            or {
+                capture.get("file"): capture.get("sha256")
+                for capture in current_captures
+                if isinstance(capture, dict)
+            }
+            != capture_hashes
+        ):
+            raise RuntimeError(
+                "Android screenshot evidence lacks preserved details and is not "
+                "the verified generated migration payload"
+            )
+        git = shutil.which("git")
+        if git is None:
+            raise RuntimeError("git is required to recover preserved Android evidence")
+        baseline_result = subprocess.run(
+            [git, "show", "HEAD:play-store/screenshot-evidence.json"],
+            cwd=android_repo,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
+        )
+        if baseline_result.returncode != 0:
+            raise RuntimeError("could not read preserved Android evidence from HEAD")
+        try:
+            baseline = json.loads(baseline_result.stdout)
+        except json.JSONDecodeError as exc:
+            raise RuntimeError("preserved Android evidence in HEAD is invalid") from exc
+        if (
+            not android_evidence_has_preserved_details(baseline)
+            or baseline.get("source", {}).get("apkSha256")
+            != evidence["source"]["apkSha256"]
+        ):
+            raise RuntimeError(
+                "preserved Android evidence does not describe the captured APK"
+            )
+        existing_evidence = baseline
+
     prepared: list[tuple[Path, Path, dict[str, Any]]] = []
     for capture in captures:
         filename = capture["file"]
@@ -173,21 +229,110 @@ def sync_android_play_screenshots(
     for source, destination, _ in prepared:
         shutil.copyfile(source, destination)
 
+    screenshot_evidence = merge_android_play_evidence(
+        existing_evidence,
+        evidence,
+        [capture for _, _, capture in prepared],
+    )
+    temporary = evidence_path.with_suffix(".json.tmp")
+    temporary.write_text(
+        json.dumps(screenshot_evidence, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    os.replace(temporary, evidence_path)
+    return evidence_path
+
+
+def android_evidence_has_preserved_details(evidence: dict[str, Any]) -> bool:
+    device_safety = evidence.get("deviceSafety")
+    video_audit = evidence.get("videoAudit")
+    captures = evidence.get("screenshots")
+    if not isinstance(device_safety, dict):
+        return False
+    before = device_safety.get("productionHashesBefore")
+    after = device_safety.get("productionHashesAfter")
+    return bool(
+        isinstance(before, dict)
+        and before
+        and before == after
+        and isinstance(video_audit, dict)
+        and isinstance(video_audit.get("runtime"), dict)
+        and isinstance(video_audit.get("physicalProof"), dict)
+        and isinstance(captures, list)
+        and len(captures) == len(EXPECTED_SCREENSHOTS)
+        and all(
+            isinstance(capture, dict) and isinstance(capture.get("runtime"), dict)
+            for capture in captures
+        )
+    )
+
+
+def merge_android_play_evidence(
+    existing: dict[str, Any],
+    evidence: dict[str, Any],
+    captures: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Refresh screenshot bytes while retaining same-APK physical QA evidence."""
+    if existing.get("schemaVersion") != 2:
+        raise RuntimeError("existing Android screenshot evidence schema is invalid")
+    old_source = existing.get("source")
+    old_device_safety = existing.get("deviceSafety")
+    old_video_audit = existing.get("videoAudit")
+    old_captures = existing.get("screenshots")
+    if not isinstance(old_source, dict):
+        raise RuntimeError("existing Android screenshot source is invalid")
+    if not isinstance(old_device_safety, dict):
+        raise RuntimeError("existing Android device safety evidence is invalid")
+    before = old_device_safety.get("productionHashesBefore")
+    after = old_device_safety.get("productionHashesAfter")
+    if not isinstance(before, dict) or not before or before != after:
+        raise RuntimeError("existing Android production-package hashes are invalid")
+    if not isinstance(old_video_audit, dict) or not all(
+        isinstance(old_video_audit.get(key), dict)
+        for key in ("runtime", "physicalProof")
+    ):
+        raise RuntimeError("existing Android video audit is invalid")
+    if not isinstance(old_captures, list):
+        raise RuntimeError("existing Android screenshot records are invalid")
+    old_capture_by_file = {
+        capture.get("file"): capture
+        for capture in old_captures
+        if isinstance(capture, dict) and isinstance(capture.get("file"), str)
+    }
+    if tuple(old_capture_by_file) != EXPECTED_SCREENSHOTS or any(
+        not isinstance(old_capture_by_file[name].get("runtime"), dict)
+        for name in EXPECTED_SCREENSHOTS
+    ):
+        raise RuntimeError("existing Android screenshot runtime evidence is incomplete")
+
     source = evidence["source"]
     gate = evidence["deviceGate"]
-    screenshot_evidence = {
-        "schemaVersion": 2,
-        "source": {
+    merged = copy.deepcopy(existing)
+    merged["source"] = {
+        **copy.deepcopy(old_source),
+        "repository": "LolClassicBeta_codex_recovered",
+        "evidencePath": "play-store/screenshot-evidence.json",
+        "capturedAt": evidence["capturedAt"],
+        "androidCommit": source["android"]["commit"],
+        "androidTrackedState": source["android"]["trackedState"],
+        "package": source["applicationId"],
+        "apkSha256": source["apkSha256"],
+        "captureMethod": (
+            "audited physical-device QA screencap; same-APK detailed runtime "
+            "evidence retained from the preceding verified capture"
+        ),
+        "publicCaptureEvidence": {
             "repository": "lol-encyclopedia-classic-site-repo",
-            "evidencePath": "capture-evidence.json",
-            "capturedAt": evidence["capturedAt"],
-            "androidCommit": source["android"]["commit"],
-            "androidTrackedState": source["android"]["trackedState"],
-            "package": source["applicationId"],
-            "apkSha256": source["apkSha256"],
-            "captureMethod": "audited physical-device QA screencap",
+            "path": "capture-evidence.json",
         },
-        "deviceSafety": {
+        "retainedRuntimeEvidence": {
+            "capturedAt": old_source.get("capturedAt"),
+            "androidCommit": old_source.get("androidCommit"),
+            "apkSha256": old_source.get("apkSha256"),
+        },
+    }
+    merged["deviceSafety"].update(
+        {
             "physicalDevice": gate["physicalDevice"],
             "kernelQemu": gate["kernelQemu"],
             "exactlyOneAuthorizedTarget": gate["exactlyOneAuthorizedTarget"],
@@ -195,8 +340,12 @@ def sync_android_play_screenshots(
             "productionPackageRejected": gate["productionPackageRejected"],
             "productionPackageMutationCount": 0,
             "settingsRestored": evidence["settingsRestoration"]["verified"],
-        },
-        "screenshots": [
+        }
+    )
+    merged["screenshots"] = []
+    for capture in captures:
+        old_capture = old_capture_by_file[capture["file"]]
+        merged["screenshots"].append(
             {
                 "file": capture["file"],
                 "purpose": capture["purpose"],
@@ -209,25 +358,18 @@ def sync_android_play_screenshots(
                 "sha256": capture["png"]["sha256"],
                 "privacyReviewed": True,
                 "classification": "CURRENT_AND_MATCHING",
+                "runtime": copy.deepcopy(old_capture["runtime"]),
             }
-            for _, _, capture in prepared
-        ],
-        "summary": {
-            "authoritativePlayScreenshotSources": 1,
-            "currentAndMatching": len(prepared),
-            "stale": 0,
-            "invalid": 0,
-            "hashMismatches": 0,
-            "manualPrivacyReviewCompleted": True,
-        },
+        )
+    merged["summary"] = {
+        "authoritativePlayScreenshotSources": 1,
+        "currentAndMatching": len(captures),
+        "stale": 0,
+        "invalid": 0,
+        "hashMismatches": 0,
+        "manualPrivacyReviewCompleted": True,
     }
-    temporary = evidence_path.with_suffix(".json.tmp")
-    temporary.write_text(
-        json.dumps(screenshot_evidence, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    os.replace(temporary, evidence_path)
-    return evidence_path
+    return merged
 
 
 def main() -> int:
@@ -324,7 +466,7 @@ def main() -> int:
     record.update(
         {
             "mediaType": "video/mp4",
-            "captureMethod": "adb screenrecord on the authorized physical device, stream-copied with faststart metadata",
+            "captureMethod": "Ten post-render screenshots captured from the authorized physical device; each screenshot was held for exactly 3 seconds at 30 fps, concatenated, and normalized to H.264 with faststart metadata",
             "width": video["width"],
             "height": video["height"],
             "duration": video["duration"],
@@ -449,7 +591,7 @@ def main() -> int:
         "manualReview": {
             "completed": True,
             "reviewedAt": reviewed_at,
-            "method": "All ten final screenshots plus five representative feature-tour frames reviewed at source capture dimensions",
+            "method": "All ten final screenshots plus the midpoint frame of every one of the ten feature-tour segments reviewed at source capture dimensions",
             "personalDataFound": False,
             "notificationContentFound": False,
             "literalBrPresentationFound": False,
