@@ -1358,8 +1358,8 @@ nav a {
 .media-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .main-screen-preview img,
 .video-preview video { width: min(100%, 22rem); max-height: none; margin-inline: auto; }
-.video-preview video { aspect-ratio: 1080 / 2340; object-fit: contain; }
-.gallery img { aspect-ratio: 1080 / 2340; object-fit: contain; }
+.video-preview video { aspect-ratio: 1080 / 1920; object-fit: contain; }
+.gallery img { aspect-ratio: 1080 / 1920; object-fit: contain; }
 .button:hover { transform: none; }
 
 .gallery figure,
