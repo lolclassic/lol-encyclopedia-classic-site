@@ -1024,6 +1024,7 @@ nav a:focus-visible {
 /* ===== CLASSIC-FANTASY PUBLIC ARCHIVE =====
    Project-owned CSS geometry only: no extracted Riot/client decoration. */
 :root {
+  color-scheme: dark;
   --bg: #080d12;
   --bg-soft: #0d141a;
   --panel: #12191d;
@@ -1040,6 +1041,8 @@ nav a:focus-visible {
 }
 
 body {
+  font-family: "Segoe UI", "Noto Sans KR", Arial, sans-serif;
+  font-size: 16px;
   background:
     linear-gradient(90deg, rgba(194, 158, 76, 0.035) 1px, transparent 1px) 0 0 / 34px 34px,
     repeating-linear-gradient(0deg, rgba(255,255,255,0.014) 0 1px, transparent 1px 5px),
@@ -1050,16 +1053,17 @@ body {
 h1,
 h2 {
   color: #f1e6c7;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
 }
 
 h1 {
-  max-width: 15ch;
-  font-size: clamp(3rem, 5.7vw, 5.2rem);
+  max-width: 20ch;
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
 }
 
 h2 {
-  font-size: clamp(2rem, 3.8vw, 3.35rem);
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
 }
 
 .site-header {
@@ -1074,8 +1078,10 @@ h2 {
 
 .brand {
   color: #efe1b7;
-  font-family: Georgia, "Noto Serif KR", serif;
+  font-family: inherit;
   letter-spacing: 0.015em;
+  min-width: 0;
+  line-height: 1.4;
 }
 
 .brand-icon {
@@ -1093,7 +1099,7 @@ nav {
 }
 
 nav a {
-  min-height: 2.5rem;
+  min-height: 2.75rem;
   padding: 0.6rem 0.85rem;
   display: inline-flex;
   align-items: center;
@@ -1114,10 +1120,11 @@ nav a {
 }
 
 .hero {
-  min-height: 42rem;
-  padding: 3.5rem 2rem;
-  grid-template-columns: minmax(0, 1.1fr) minmax(24rem, 0.9fr);
-  gap: 3rem;
+  min-height: 0;
+  padding: 1.5rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1.5rem;
   border-right: 1px solid rgba(181, 148, 74, 0.22);
   border-left: 1px solid rgba(181, 148, 74, 0.22);
 }
@@ -1125,9 +1132,34 @@ nav a {
 .hero-copy {
   position: relative;
   padding: 2rem;
-  background: linear-gradient(145deg, rgba(22, 29, 31, 0.92), rgba(10, 16, 20, 0.92));
+  color: #302b1e;
+  background: radial-gradient(ellipse at 50% 20%, #f3e7c6, #d6c28b);
   border: 3px double #79653a;
 }
+
+.archive-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: -2rem -2rem 1.5rem;
+  padding: 0.8rem 1rem;
+  color: #e9d9ad;
+  background: linear-gradient(#29302c, #141a18);
+  border-bottom: 2px solid #8d733d;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+}
+
+.archive-heading span { color: #c1baa5; font-weight: 400; letter-spacing: 0; }
+.hero-copy h1, .hero-copy .lede strong { color: #29271d; }
+.hero-copy .lede { color: #453e2b; font-size: 1rem; }
+.hero-copy .eyebrow { color: #67501f; font-family: inherit; letter-spacing: 0.05em; }
+.hero-copy .tag-row span { color: #4b422c; background: #e6d7ad; border-color: #a18c59; }
+.hero-copy .official-banner { font-size: 0.875rem; }
+.hero-copy .actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hero-copy .button { text-align: center; padding-inline: 0.65rem; }
 
 .hero-copy::before,
 .hero-copy::after,
@@ -1204,7 +1236,13 @@ nav a {
 }
 
 .hero-visual {
-  height: 35rem;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
   border: 3px double #685a38;
   background:
     linear-gradient(135deg, transparent 49.7%, rgba(179,145,67,.16) 49.8% 50.2%, transparent 50.3%),
@@ -1218,18 +1256,21 @@ nav a {
 }
 
 .phone {
+  position: static;
+  width: 100%;
+  min-width: 0;
   padding: 0.38rem;
   border: 3px double #a08443;
   background: #05090c;
 }
 
 .phone-front {
-  transform: rotate(2deg);
+  transform: none;
 }
 
 .phone-back {
-  opacity: 0.82;
-  transform: rotate(-4deg) scale(0.92);
+  opacity: 1;
+  transform: none;
 }
 
 .status-strip {
@@ -1238,13 +1279,15 @@ nav a {
 }
 
 .status-strip div {
+  min-width: 0;
   min-height: 6.9rem;
   padding: 1.15rem;
 }
 
 .status-strip strong {
   color: #d5b75f;
-  font-size: 1.65rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.65rem);
+  overflow-wrap: anywhere;
 }
 
 .section {
@@ -1311,6 +1354,13 @@ nav a {
 .media-showcase-grid {
   gap: 1rem;
 }
+
+.media-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.main-screen-preview img,
+.video-preview video { width: min(100%, 22rem); max-height: none; margin-inline: auto; }
+.video-preview video { aspect-ratio: 1080 / 2340; object-fit: contain; }
+.gallery img { aspect-ratio: 1080 / 2340; object-fit: contain; }
+.button:hover { transform: none; }
 
 .gallery figure,
 .media-showcase figure {
@@ -1383,7 +1433,13 @@ nav a {
 @media (max-width: 900px) {
   .site-header {
     align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
   }
+
+  .site-header nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; gap: 0.35rem; }
+  .site-header nav a, .site-header nav a:not(.nav-cta) { display: inline-flex; justify-content: center; padding: 0.55rem; border: 1px solid #715e35; background: #1d2523; }
 
   .hero {
     padding: 2rem 1rem;
@@ -1415,21 +1471,26 @@ nav a {
     min-width: 0;
   }
 
+  .archive-heading { margin: -1.25rem -1.25rem 1.25rem; }
+
   h1 {
-    font-size: clamp(2.25rem, 11vw, 3.25rem);
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
   }
 
   .hero-visual {
     min-width: 0;
     width: 100%;
     max-width: 100%;
-    height: 25rem;
-    overflow: hidden;
+    height: auto;
+    padding: 0.65rem;
+    gap: 0.5rem;
   }
 
   .phone {
-    width: 10.25rem;
+    width: 100%;
   }
+
+  .media-showcase-grid { grid-template-columns: minmax(0, 1fr); }
 
   .phone-front {
     right: 0.15rem;
