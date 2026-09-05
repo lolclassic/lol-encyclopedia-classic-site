@@ -84,9 +84,21 @@ def validate(evidence: dict, manifest: dict, root: Path = ROOT) -> list[str]:
             "video-evidence-binding")
     require(video.get("captureMethod") == "Android screenrecord", "native-video")
     require(video.get("visualStreamUnchanged") is True, "unchanged-video-stream")
+    require(video.get("audio") is False, "silent-video-evidence")
     published_video = root / "assets" / "app-feature-tour.mp4"
     if published_video.is_file():
+        require(hashlib.sha256(published_video.read_bytes()).hexdigest() == video.get("outputSha256"),
+                "published-video-file-hash")
         try:
+            probe = subprocess.run(
+                ["ffprobe", "-v", "error", "-show_entries",
+                 "stream=codec_type,codec_name,width,height", "-of", "json", str(published_video)],
+                capture_output=True, text=True, check=True, timeout=30,
+            )
+            streams = json.loads(probe.stdout).get("streams", [])
+            require(len(streams) == 1 and streams[0] == {
+                "codec_type": "video", "codec_name": "h264", "width": 1080, "height": 1920,
+            }, "published-video-stream-set")
             result = subprocess.run(
                 ["ffmpeg", "-v", "error", "-i", str(published_video), "-map", "0:v:0",
                  "-c:v", "copy", "-f", "hash", "-hash", "sha256", "-"],
@@ -94,7 +106,7 @@ def validate(evidence: dict, manifest: dict, root: Path = ROOT) -> list[str]:
             )
             actual = result.stdout.strip().removeprefix("SHA256=")
             require(actual == video.get("videoStreamSha256"), "recorded-video-stream-hash")
-        except (OSError, subprocess.SubprocessError):
+        except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
             failures.append("recorded-video-stream-unreadable")
     else:
         failures.append("missing-video")

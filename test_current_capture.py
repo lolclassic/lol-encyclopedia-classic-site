@@ -1,6 +1,8 @@
 import copy
 import json
 import unittest
+import subprocess
+from unittest.mock import patch
 
 from verify_current_capture import ROOT, validate
 
@@ -49,6 +51,26 @@ class CurrentCaptureTests(unittest.TestCase):
         self.assertIn("privacy-review:personalDataFound", failures)
         self.assertIn("privacy-review:notificationIconsFound", failures)
         self.assertIn("recorded-video-stream-hash", failures)
+
+    def test_matching_but_false_container_hash_cannot_replace_actual_video_identity(self):
+        self.evidence["video"]["outputSha256"] = "0" * 64
+        self.evidence["manualReview"]["reviewedVideoSha256"] = "0" * 64
+        for row in self.manifest["assets"]:
+            if row["filename"] == "app-feature-tour.mp4":
+                row["outputSha256"] = "0" * 64
+        self.assertIn("published-video-file-hash", validate(self.evidence, self.manifest))
+
+    def test_extra_audio_track_is_rejected_even_with_unchanged_video_stream(self):
+        run = subprocess.run
+        def with_audio(args, **kwargs):
+            if args[0] == "ffprobe":
+                return subprocess.CompletedProcess(args, 0, json.dumps({"streams": [
+                    {"codec_type": "video", "codec_name": "h264", "width": 1080, "height": 1920},
+                    {"codec_type": "audio", "codec_name": "aac"},
+                ]}), "")
+            return run(args, **kwargs)
+        with patch("verify_current_capture.subprocess.run", side_effect=with_audio):
+            self.assertIn("published-video-stream-set", validate(self.evidence, self.manifest))
 
 
 if __name__ == "__main__":
