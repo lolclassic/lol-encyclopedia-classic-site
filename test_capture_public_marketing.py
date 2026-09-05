@@ -519,6 +519,194 @@ class ExactSonaRuntimeTests(unittest.TestCase):
             capture.route_and_audit(Path("tools"), "ws://test", "HOME", "home", "go('home');")
 
 
+class MarketingRunePatchTests(unittest.TestCase):
+    def rune_state(self):
+        state = ExactSonaRuntimeTests().state()
+        state.update(view="runes", hash="#runes", scrollY=587, runeCapture={
+            "mode": "archive", "view": "paper", "page": 1, "recordCount": 60,
+            "selection": {key: count for key, _, _, count in capture.RUNE_CAPTURE_SELECTION},
+            "names": [[key, name, f"×{count}"] for key, _, name, count in capture.RUNE_CAPTURE_SELECTION],
+            "namesReadable": True, "boardVisible": True, "namesOnPaper": True, "filledSocketCount": 9,
+        })
+        return state
+
+    def expression(self, state, purpose, route, script):
+        with patch.object(capture, "evaluate", return_value=state) as evaluate:
+            capture.route_and_audit(Path("tools"), "ws://test", purpose, route, script)
+        return evaluate.call_args.args[2]
+
+    def test_ten_capture_files_and_tour_use_the_new_rune_and_patch_routes(self) -> None:
+        self.assertEqual(len(capture.CAPTURES), 10)
+        plan = {name: (purpose, route, script) for name, purpose, route, script in capture.CAPTURES}
+        self.assertEqual(len(plan), 10)
+        self.assertEqual(plan["phone-07-runes.png"], ("RUNE_218_ARCHIVE", "runes", capture.RUNE_CAPTURE_SCRIPT))
+        self.assertEqual(plan["phone-08-patch-news.png"], ("PATCH_NEWS", "patch", "go('patch');"))
+        for _, route, filename in capture.TOUR:
+            self.assertEqual(route, plan[filename][1])
+
+    def test_rune_selection_is_memory_only_and_rejects_missing_source_before_mutation(self) -> None:
+        program = r"""
+        const selected = SELECTION;
+        const validSource = selected.map(([i, slot, ko]) => ({i: Number(i), slot, ko}));
+        while (validSource.length < 60) validSource.push({i: 100 + validSource.length, slot: 'mark', ko: 'unused'});
+        for (const mode of ['valid', 'missing-memory', 'missing-prepared', 'missing-rune', 'wrong-count']) {
+          let mutations = 0; let saved = null;
+          const window = {__qaMemoryStorageActive: mode !== 'missing-memory', __qaMarketingFixturePrepared: mode !== 'missing-prepared'};
+          const S = new Proxy({}, {set(target, key, value) { mutations++; target[key] = value; return true; }});
+          const runeData = set => {
+            if (set !== 'archive') throw new Error('wrong source');
+            return mode === 'missing-rune' ? validSource.map(r => ({...r, ko: 'wrong name'}))
+              : mode === 'wrong-count' ? validSource.slice(1) : validSource;
+          };
+          const saveRunePage = (...args) => { mutations++; saved = args; };
+          const go = route => { mutations++; S.view = route; };
+          try {
+            eval(SCRIPT);
+            if (mode !== 'valid' || !mutations || S.runeView !== 'paper' || S.runePage !== 1 || S.view !== 'runes')
+              throw new Error('invalid fixture outcome');
+            const expected = Object.fromEntries(selected.map(([id, , , count]) => [id, count]));
+            if (JSON.stringify(saved) !== JSON.stringify([expected, 'archive', 1])) throw new Error('wrong saved page');
+          } catch (error) {
+            if (mode === 'valid' || mutations !== 0) throw error;
+          }
+        }
+        """.replace("SELECTION", json.dumps(capture.RUNE_CAPTURE_SELECTION)).replace("SCRIPT", json.dumps(capture.RUNE_CAPTURE_SCRIPT))
+        subprocess.run(["node", "-"], input=program, check=True, capture_output=True, text=True, encoding="utf-8")
+
+    def test_rune_framing_executes_with_real_scroll_and_readability_checks(self) -> None:
+        expression = self.expression(self.rune_state(), "RUNE_218_ARCHIVE", "runes", capture.RUNE_CAPTURE_SCRIPT)
+        program = r"""
+        const window = globalThis;
+        Object.assign(window, {__qaMemoryStorageActive: true, __qaMarketingFixturePrepared: true,
+          innerWidth: 411, innerHeight: 850, scrollX: 0, scrollY: 0});
+        window.scrollTo = (x, y) => { scrollX = x; scrollY = y; };
+        const requestAnimationFrame = callback => callback(); const setTimeout = callback => callback();
+        const selected = SELECTION;
+        const source = selected.map(([i, slot, ko]) => ({i: Number(i), slot, ko}));
+        while (source.length < 60) source.push({i: 100 + source.length, slot: 'mark', ko: 'unused'});
+        const S = {}; let saved = {}; const booted = true; const classicRunes = [];
+        const store = {get() {return null;}};
+        const runeData = () => source; const runeMode = () => S.runeSet; const runePageNumber = () => S.runePage;
+        const runePageState = () => saved; const saveRunePage = value => { saved = value; };
+        const location = {hash: '', href: APP_URL};
+        const go = route => {S.view = route; location.hash = '#' + route; location.href = APP_URL + '#' + route;};
+        Object.defineProperty(globalThis, 'navigator', {value: {}, configurable: true});
+        function node(x, y, width, height, fontSize = 14, fixed = false) {
+          return {children: [], clientWidth: width, scrollWidth: width, clientHeight: height, scrollHeight: height,
+            style: Object.freeze({}), fontSize, textContent: '',
+            getBoundingClientRect() { const top = y - (fixed ? 0 : scrollY); return {left:x, right:x+width, top, bottom:top+height, width, height}; },
+            contains(other) { return this === other || this.children.some(child => child.contains(other)); }};
+        }
+        const header = node(0, 0, 411, 45, 16, true); const dock = node(0, 802, 411, 48, 14, true);
+        const pane = node(12, 640, 387, 704); const heading = node(32, 672, 347, 34, 16);
+        const board = node(32, 710, 347, 440); const names = node(32, 1166, 347, 148);
+        const rows = selected.map(([id, , name, count], index) => {
+          const b = node(32, 1190 + index * 44, 280, 21); b.textContent = name;
+          const span = node(335, 1190 + index * 44, 35, 21); span.textContent = '×' + count;
+          const row = node(32, 1180 + index * 44, 347, 44); row.children = [b, span];
+          row.querySelector = selector => selector === 'b' ? b : span; row.getAttribute = () => id;
+          return row;
+        });
+        names.children = rows; pane.children = [heading, board, names];
+        pane.querySelector = selector => ({h3:heading, '.runePaperNames':names, '.runeBoard':board}[selector] || null);
+        pane.querySelectorAll = () => Array(9).fill({});
+        const selectable = [...rows.flatMap(row => row.children), header, dock, heading, board, names, pane];
+        const document = {images: [], body:{innerText: ''}, getElementById() {return null;},
+          querySelector(selector) {return ({'.app > header':header, '#persistentArchiveDock':dock, '.runeBoardPane':pane, '.runePaperNames':names}[selector] || null);},
+          querySelectorAll(selector) {return selector === '.runePaperNames [data-rune-remove]' ? rows : [];},
+          elementFromPoint(x, y) {return selectable.find(item => { const r = item.getBoundingClientRect(); return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom; }) || null;}};
+        const getComputedStyle = item => ({visibility: 'visible', opacity: '1', fontSize: item.fontSize + 'px'});
+        const expression = EXPRESSION;
+        (async () => {
+          const visible = await eval(expression);
+          rows[0].children[0].fontSize = 6;
+          const tinyName = await eval(expression);
+          rows[0].children[0].fontSize = 14;
+          document.elementFromPoint = () => dock;
+          const covered = await eval(expression);
+          process.stdout.write(JSON.stringify({visible, tinyName, covered}));
+        })();
+        """.replace("SELECTION", json.dumps(capture.RUNE_CAPTURE_SELECTION)).replace("APP_URL", json.dumps(capture.APP_URL_PREFIX)).replace("EXPRESSION", json.dumps(expression))
+        completed = subprocess.run(["node", "-"], input=program, check=True, capture_output=True, text=True, encoding="utf-8")
+        results = json.loads(completed.stdout)
+        state = results["visible"]
+        capture.validate_rune_capture(state)
+        self.assertGreater(state["scrollY"], 0)
+        self.assertEqual(state["runeRecordCount"], 60)
+        for result in (results["tinyName"], results["covered"]):
+            self.assertFalse(result["runeCapture"]["namesReadable"])
+            with self.assertRaisesRegex(RuntimeError, "readable names on paper"):
+                capture.validate_rune_capture(result)
+
+    def test_wrong_or_unreadable_rune_names_are_rejected(self) -> None:
+        for field, value in (("names", []), ("selection", {"0": 9}), ("filledSocketCount", 3),
+                             ("namesReadable", False), ("boardVisible", False), ("namesOnPaper", False)):
+            state = self.rune_state()
+            state["runeCapture"][field] = value
+            with self.subTest(field=field), patch.object(capture, "evaluate", return_value=state), self.assertRaisesRegex(RuntimeError, "readable names on paper"):
+                capture.route_and_audit(Path("tools"), "ws://test", "RUNE_218_ARCHIVE", "runes", capture.RUNE_CAPTURE_SCRIPT)
+
+    def test_patch_list_requires_both_visible_titles(self) -> None:
+        state = ExactSonaRuntimeTests().state()
+        state.update(view="patch", hash="#patch", patchCapture={"rows": [list(row) for row in capture.PATCH_CAPTURE_ROWS], "rowsReadable": True})
+        expression = self.expression(state, "PATCH_NEWS", "patch", "go('patch');")
+        subprocess.run(["node", "--check", "-"], input=expression, check=True, capture_output=True, text=True, encoding="utf-8")
+        for invalid in ({"rows": state["patchCapture"]["rows"][:1], "rowsReadable": True},
+                        {"rows": state["patchCapture"]["rows"], "rowsReadable": False}):
+            state["patchCapture"] = invalid
+            with patch.object(capture, "evaluate", return_value=state), self.assertRaisesRegex(RuntimeError, "both readable"):
+                capture.route_and_audit(Path("tools"), "ws://test", "PATCH_NEWS", "patch", "go('patch');")
+
+    def test_patch_titles_at_device_font_scale_remain_readable_and_diagnosed(self) -> None:
+        state = ExactSonaRuntimeTests().state()
+        state.update(view="patch", hash="#patch", patchCapture={"rows": [list(row) for row in capture.PATCH_CAPTURE_ROWS], "rowsReadable": True})
+        expression = self.expression(state, "PATCH_NEWS", "patch", "go('patch');")
+        helpers = expression[expression.index("const captureBounds ="):expression.index('if ("PATCH_NEWS".startsWith')]
+        audit_start = expression.index("let patchCapture = null;")
+        audit = expression[audit_start:expression.index("return {\n        purpose:", audit_start)]
+        program = r"""
+        const outputs = [];
+        for (const mode of ['device-scale', 'too-small', 'clipped']) {
+          const innerWidth = 411, innerHeight = 850;
+          const rows = ROWS.map(([route, title], index) => ({
+            clientWidth: 250, scrollWidth: mode === 'clipped' ? 260 : 250, clientHeight: 70, scrollHeight: 70,
+            firstChild: {textContent: title}, getAttribute() {return route;}, contains(other) {return other === this;},
+            getBoundingClientRect() {return {left: 32, right: 282, top: 120 + index * 90, bottom: 190 + index * 90, width: 250, height: 70};}
+          }));
+          const document = {querySelector() {return null;}, querySelectorAll() {return rows;},
+            elementFromPoint(x, y) {return rows.find(row => {const rect = row.getBoundingClientRect(); return y >= rect.top && y <= rect.bottom;});}};
+          const getComputedStyle = () => ({fontSize: mode === 'too-small' ? '13.9px' : '14.4px', visibility: 'visible', opacity: '1'});
+          HELPERS
+          AUDIT
+          outputs.push(patchCapture);
+        }
+        process.stdout.write(JSON.stringify(outputs));
+        """.replace("ROWS", json.dumps(capture.PATCH_CAPTURE_ROWS)).replace("HELPERS", helpers).replace("AUDIT", audit)
+        completed = subprocess.run(["node", "-"], input=program, check=True, capture_output=True, text=True, encoding="utf-8")
+        visible, too_small, clipped = json.loads(completed.stdout)
+        self.assertTrue(visible["rowsReadable"])
+        self.assertEqual([row["fontSize"] for row in visible["titleMetrics"]], [14.4, 14.4])
+        with patch("builtins.print") as printed:
+            capture.validate_patch_capture({"patchCapture": visible})
+        diagnostic = json.loads(printed.call_args.args[0])
+        self.assertEqual(diagnostic["minimumFontSize"], 14)
+        self.assertEqual(diagnostic["titleMetrics"][0]["top"], 120)
+        for result in (too_small, clipped):
+            self.assertFalse(result["rowsReadable"])
+            with patch("builtins.print"), self.assertRaisesRegex(RuntimeError, "both readable"):
+                capture.validate_patch_capture({"patchCapture": result})
+
+    def test_patch_diagnostics_exclude_text_and_unexpected_fields(self) -> None:
+        data = {"rows": [list(row) for row in capture.PATCH_CAPTURE_ROWS], "rowsReadable": True,
+                "titleMetrics": [{"fontSize": 14.4, "top": 40, "readable": True,
+                                  "title": "PRIVATE_VALUE", "left": "PRIVATE_VALUE", "unknown": 123}]}
+        with patch("builtins.print") as printed:
+            capture.validate_patch_capture({"patchCapture": data})
+        serialized = printed.call_args.args[0]
+        self.assertNotIn("PRIVATE_VALUE", serialized)
+        self.assertEqual(json.loads(serialized)["titleMetrics"], [{"fontSize": 14.4, "top": 40, "readable": True}])
+
+
 class MarketingIsolationTests(unittest.TestCase):
     def test_missing_memory_marker_cannot_capture_any_pixels(self) -> None:
         device = MagicMock()

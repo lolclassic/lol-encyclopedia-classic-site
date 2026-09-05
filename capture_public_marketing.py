@@ -139,6 +139,30 @@ EXPECTED_ANDROID_UNTRACKED_PATHS = frozenset(
     EXPECTED_ANDROID_PROTECTED_UNTRACKED_SHA256
 ) | EXPECTED_ANDROID_LOCAL_EVIDENCE_FILES
 
+RUNE_CAPTURE_SELECTION = (
+    ("0", "mark", "상급 공격력 표식", 3),
+    ("21", "glyph", "상급 치명타 피해 문양", 3),
+    ("41", "seal", "상급 성장 마나 재생 인장", 3),
+)
+PATCH_CAPTURE_ROWS = (
+    ("patchnote/1", "롤 백과사전 클래식 패치노트 · 2.0.4"),
+    ("patchnote/2", "롤 클래식 패치노트 · 26.17"),
+)
+RUNE_CAPTURE_SCRIPT = """
+(() => {
+  if (window.__qaMemoryStorageActive !== true || window.__qaMarketingFixturePrepared !== true)
+    throw new Error('isolated marketing fixture required before rune selection');
+  const selected = RUNE_SELECTION;
+  const source = runeData('archive');
+  if (source.length !== 60 || selected.some(([id, slot, name]) =>
+    !source.some(rune => String(rune.i) === id && rune.slot === slot && rune.ko === name)))
+    throw new Error('reviewed archive rune selection is unavailable');
+  S.runeSet = 'archive'; S.runeView = 'paper'; S.runePage = 1; S.rslot = 'mark'; S.rq = '';
+  saveRunePage(Object.fromEntries(selected.map(([id, , , count]) => [id, count])), 'archive', 1);
+  go('runes');
+})();
+""".replace("RUNE_SELECTION", json.dumps(RUNE_CAPTURE_SELECTION, ensure_ascii=False))
+
 CAPTURES: tuple[tuple[str, str, str, str], ...] = (
     (
         "phone-01-home.png",
@@ -180,13 +204,13 @@ CAPTURES: tuple[tuple[str, str, str, str], ...] = (
         "phone-07-runes.png",
         "RUNE_218_ARCHIVE",
         "runes",
-        "saveRunePage({}, 'archive', 1); S.runeSet = 'archive'; S.runeView = 'list'; S.rslot = 'mark'; S.rq = ''; go('runes');",
+        RUNE_CAPTURE_SCRIPT,
     ),
     (
         "phone-08-patch-news.png",
         "PATCH_NEWS",
-        "patchnote/1",
-        "go('patchnote/1');",
+        "patch",
+        "go('patch');",
     ),
     (
         "phone-09-about-legal.png",
@@ -209,7 +233,7 @@ TOUR: tuple[tuple[str, str, str], ...] = (
     ("ITEM", "items", "phone-04-items.png"),
     ("MASTERY", "mastery", "phone-05-masteries.png"),
     ("RUNE", "runes", "phone-07-runes.png"),
-    ("PATCH_NEWS", "patchnote/1", "phone-08-patch-news.png"),
+    ("PATCH_NEWS", "patch", "phone-08-patch-news.png"),
     ("COMMUNITY", "board", "phone-10-community.png"),
     ("ABOUT_LEGAL", "about", "phone-09-about-legal.png"),
     ("HOME_RETURN", "home", "phone-01-home.png"),
@@ -825,6 +849,38 @@ def validate_community_rows(state: dict[str, Any]) -> None:
         raise RuntimeError("community capture contains unexpected rows or an authenticated session")
 
 
+def validate_rune_capture(state: dict[str, Any]) -> None:
+    rune = state.get("runeCapture") or {}
+    expected_names = [[key, name, f"×{count}"] for key, _, name, count in RUNE_CAPTURE_SELECTION]
+    if (
+        rune.get("mode") != "archive" or rune.get("view") != "paper" or rune.get("page") != 1
+        or rune.get("recordCount") != 60
+        or rune.get("selection") != {key: count for key, _, _, count in RUNE_CAPTURE_SELECTION}
+        or rune.get("names") != expected_names or rune.get("filledSocketCount") != 9
+        or rune.get("namesReadable") is not True or rune.get("boardVisible") is not True
+        or rune.get("namesOnPaper") is not True
+    ):
+        raise RuntimeError("rune capture does not show the reviewed selection and readable names on paper")
+
+
+def validate_patch_capture(state: dict[str, Any]) -> None:
+    patch = state.get("patchCapture") or {}
+    # Numeric layout diagnostics only: never print title text, account data, or DOM errors.
+    metrics = []
+    for row in patch.get("titleMetrics", []):
+        if not isinstance(row, dict):
+            continue
+        metric = {key: value for key, value in row.items()
+                  if key in ("fontSize", "left", "top", "right", "bottom", "width", "height", "clientWidth",
+                             "scrollWidth", "clientHeight", "scrollHeight", "readable")
+                  and type(value) in (int, float, bool)}
+        metrics.append(metric)
+    if metrics:
+        print(json.dumps({"captureDiagnostic": "patch-title-readability", "minimumFontSize": 14, "titleMetrics": metrics}))
+    if patch.get("rows") != [list(row) for row in PATCH_CAPTURE_ROWS] or patch.get("rowsReadable") is not True:
+        raise RuntimeError("patch capture must show both readable app and official game notes")
+
+
 def capture_isolated_png(
     device: SafeDevice, android_tools: Path, websocket_url: str, destination: Path, index: int
 ) -> dict[str, Any]:
@@ -882,6 +938,36 @@ def route_and_audit(
         }}
       }}
       window.scrollTo(0, 0);
+      const captureBounds = () => ({{
+        top: Math.max(0, document.querySelector('.app > header')?.getBoundingClientRect().bottom || 0),
+        bottom: Math.min(innerHeight, document.querySelector('#persistentArchiveDock')?.getBoundingClientRect().top ?? innerHeight),
+      }});
+      const readableNode = (node, minimumFont = 0) => {{
+        if (!node) return false;
+        const rect = node.getBoundingClientRect();
+        const bounds = captureBounds();
+        const style = getComputedStyle(node);
+        const hit = document.elementFromPoint((rect.left + rect.right) / 2, (rect.top + rect.bottom) / 2);
+        return rect.width > 0 && rect.height > 0 && rect.left >= 0 && rect.right <= innerWidth
+          && rect.top >= bounds.top && rect.bottom <= bounds.bottom
+          && style.visibility === 'visible' && Number(style.opacity) > 0
+          && parseFloat(style.fontSize) >= minimumFont && (hit === node || node.contains(hit))
+          && (minimumFont === 0 || (node.scrollWidth <= node.clientWidth + 1 && node.scrollHeight <= node.clientHeight + 1));
+      }};
+      if ({json.dumps(purpose)}.startsWith('RUNE')) {{
+        const pane = document.querySelector('.runeBoardPane');
+        const heading = pane?.querySelector('h3');
+        const names = pane?.querySelector('.runePaperNames');
+        if (!heading || !names) throw new Error('rune paper with equipped names is missing');
+        const bounds = captureBounds();
+        const bottom = names.getBoundingClientRect().bottom;
+        const available = bounds.bottom - bounds.top - 16;
+        if (bottom - heading.getBoundingClientRect().top > available)
+          throw new Error('rune board and equipped names do not fit the capture viewport');
+        // Scroll the real page only; keep its normal typography, layout, and paper decoration.
+        const top = Math.max(pane.getBoundingClientRect().top, bottom - available);
+        window.scrollTo(0, Math.max(0, scrollY + top - bounds.top - 8));
+      }}
       await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       await new Promise(resolve => setTimeout(resolve, 500));
       const broken = images
@@ -906,6 +992,37 @@ def route_and_audit(
         homeFeature = {{url, sha256: hash, width: image.naturalWidth, height: image.naturalHeight,
           backgroundSize: style.backgroundSize, backgroundPosition: style.backgroundPosition}};
       }}
+      let runeCapture = null;
+      if ({json.dumps(purpose)}.startsWith('RUNE')) {{
+        const pane = document.querySelector('.runeBoardPane');
+        const rows = [...document.querySelectorAll('.runePaperNames [data-rune-remove]')];
+        runeCapture = {{
+          mode: runeMode(), view: S.runeView, page: runePageNumber(), recordCount: runeData('archive').length,
+          selection: runePageState('archive', 1),
+          names: rows.map(row => [row.getAttribute('data-rune-remove'),
+            row.querySelector('b')?.textContent.trim(), row.querySelector('span')?.textContent.trim()]),
+          namesReadable: rows.length === 3 && rows.every(row =>
+            readableNode(row.querySelector('b'), 14) && readableNode(row.querySelector('span'), 14)),
+          boardVisible: readableNode(pane?.querySelector('h3'), 16) && readableNode(pane?.querySelector('.runeBoard')),
+          namesOnPaper: Boolean(pane?.contains(document.querySelector('.runePaperNames'))),
+          filledSocketCount: pane?.querySelectorAll('.runeSocket.filled').length || 0,
+        }};
+      }}
+      let patchCapture = null;
+      if ({json.dumps(purpose)} === 'PATCH_NEWS') {{
+        const rows = [...document.querySelectorAll('.patchNotesPage .posts button[data-go]')];
+        patchCapture = {{
+          rows: rows.map(row => [row.getAttribute('data-go'), row.firstChild?.textContent.trim()]),
+          rowsReadable: rows.length === 2 && rows.every(row => readableNode(row, 14)),
+          titleMetrics: rows.map(row => {{
+            const rect = row.getBoundingClientRect();
+            return {{fontSize: parseFloat(getComputedStyle(row).fontSize), left: rect.left, top: rect.top,
+              right: rect.right, bottom: rect.bottom, width: rect.width, height: rect.height,
+              clientWidth: row.clientWidth, scrollWidth: row.scrollWidth,
+              clientHeight: row.clientHeight, scrollHeight: row.scrollHeight, readable: readableNode(row, 14)}};
+          }}),
+        }};
+      }}
       return {{
         purpose: {json.dumps(purpose)},
         view: S.view,
@@ -921,6 +1038,8 @@ def route_and_audit(
           row.querySelector('.bn')?.textContent.trim()]),
         serviceWorkerControlled: Boolean(navigator.serviceWorker?.controller),
         homeFeature,
+        runeCapture,
+        patchCapture,
         viewport: [innerWidth, innerHeight],
         imageCount: images.length,
         broken,
@@ -930,7 +1049,7 @@ def route_and_audit(
         scrollX,
         scrollY,
         text,
-        runeRecordCount: Array.isArray(classicRunes) ? classicRunes.length : null,
+        runeRecordCount: runeCapture?.recordCount ?? (Array.isArray(classicRunes) ? classicRunes.length : null),
       }};
     }})()
     """
@@ -955,8 +1074,12 @@ def route_and_audit(
             raise RuntimeError("physical home does not render the exact user-selected old Sona bytes")
     if result.get("broken") or result.get("placeholders") or result.get("modalOpen"):
         raise RuntimeError(f"visual preflight failed for {purpose}")
-    if result.get("scrollX") != 0 or result.get("scrollY") != 0:
+    if result.get("scrollX") != 0 or (not purpose.startswith("RUNE") and result.get("scrollY") != 0):
         raise RuntimeError(f"capture scroll was not reset for {purpose}")
+    if purpose.startswith("RUNE"):
+        validate_rune_capture(result)
+    if purpose == "PATCH_NEWS":
+        validate_patch_capture(result)
     if purpose == "COMMUNITY":
         validate_community_rows(result)
         community_failure_markers = (
@@ -1569,6 +1692,9 @@ def main() -> int:
                     "runtime": {
                         "href": state["href"], "serviceWorkerControlled": state["serviceWorkerControlled"],
                         "homeFeature": state["homeFeature"],
+                        "runeCapture": state["runeCapture"],
+                        "patchCapture": state["patchCapture"],
+                        "scroll": [state["scrollX"], state["scrollY"]],
                         "memoryFixtureActive": state["memoryFixtureActive"],
                         "marketingFixturePrepared": state["marketingFixturePrepared"],
                         "communityOnline": state["communityOnline"],
