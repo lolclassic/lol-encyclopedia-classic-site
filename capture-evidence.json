@@ -1,729 +1,563 @@
 {
-  "schemaVersion": 1,
-  "capturedAt": "2026-09-03T00:18:44Z",
+  "schemaVersion": 2,
+  "capturedAt": "2026-09-05T10:51:09.381690+00:00",
+  "wholeApkReleaseAuthorizationAsserted": false,
   "source": {
-    "android": {
-      "branch": "codex",
-      "commit": "c0fffa988a1ed032d42d82f44adc1b0fdc7a900f",
-      "trackedState": "authorized-version-218-fidelity-final-commit",
-      "trackedPaths": [],
-      "preservedUntrackedPaths": [
-        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160457",
-        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-160935",
-        "app/src/main/assets/www/home-layout-video-player-fix.js.bak-20260822-162011",
-        "app/src/main/assets/www/index.html.bak-20260822-162011",
-        "play-store/android-post-image-qa-version218.json",
-        "play-store/android-runtime-qa-classic-fantasy.json",
-        "play-store/android-runtime-qa-home-grid-white-feed-thumbnail-drawer-pass.json",
-        "play-store/android-runtime-qa-icon-era.json",
-        "play-store/android-runtime-qa-phase2b3-final.json",
-        "play-store/android-runtime-qa-phase2b3-rerun.json",
-        "play-store/android-runtime-qa-phase2b3.json",
-        "play-store/android-runtime-qa-rune-patch-final.json",
-        "play-store/android-runtime-qa-rune-patch-pass.json",
-        "play-store/android-runtime-qa-rune-patch-rerun.json",
-        "play-store/android-runtime-qa-rune-patch-upgrade-theme-final.json",
-        "play-store/android-runtime-qa-rune-patch-upgrade-theme-pass.json",
-        "play-store/android-runtime-qa-version218-fidelity.json",
-        "play-store/local-version218-home-grid-qa/320/00-startup.png",
-        "play-store/local-version218-home-grid-qa/320/01-home.png",
-        "play-store/local-version218-home-grid-qa/320/01a-home-video-original-thumbnail.png",
-        "play-store/local-version218-home-grid-qa/320/01b-home-community.png",
-        "play-store/local-version218-home-grid-qa/320/01c-drawer-white.png",
-        "play-store/local-version218-home-grid-qa/320/02-champions.png",
-        "play-store/local-version218-home-grid-qa/320/03-items.png",
-        "play-store/local-version218-home-grid-qa/320/04-item-detail.png",
-        "play-store/local-version218-home-grid-qa/320/05-runes.png",
-        "play-store/local-version218-home-grid-qa/320/06-patch-index.png",
-        "play-store/local-version218-home-grid-qa/320/07-patch-detail.png",
-        "play-store/local-version218-home-grid-qa/320/08-mastery.png",
-        "play-store/local-version218-home-grid-qa/320/09-board-type.png",
-        "play-store/local-version218-home-grid-qa/320/10-write.png",
-        "play-store/local-version218-home-grid-qa/320/11-nickname.png",
-        "play-store/local-version218-home-grid-qa/360/00-startup.png",
-        "play-store/local-version218-home-grid-qa/360/01-home.png",
-        "play-store/local-version218-home-grid-qa/360/01a-home-video-original-thumbnail.png",
-        "play-store/local-version218-home-grid-qa/360/01b-home-community.png",
-        "play-store/local-version218-home-grid-qa/360/01c-drawer-white.png",
-        "play-store/local-version218-home-grid-qa/360/02-champions.png",
-        "play-store/local-version218-home-grid-qa/360/03-items.png",
-        "play-store/local-version218-home-grid-qa/360/04-item-detail.png",
-        "play-store/local-version218-home-grid-qa/360/05-runes.png",
-        "play-store/local-version218-home-grid-qa/360/06-patch-index.png",
-        "play-store/local-version218-home-grid-qa/360/07-patch-detail.png",
-        "play-store/local-version218-home-grid-qa/360/08-mastery.png",
-        "play-store/local-version218-home-grid-qa/360/09-board-type.png",
-        "play-store/local-version218-home-grid-qa/360/10-write.png",
-        "play-store/local-version218-home-grid-qa/360/11-nickname.png",
-        "play-store/local-version218-home-grid-qa/375/00-startup.png",
-        "play-store/local-version218-home-grid-qa/375/01-home.png",
-        "play-store/local-version218-home-grid-qa/375/01a-home-video-original-thumbnail.png",
-        "play-store/local-version218-home-grid-qa/375/01b-home-community.png",
-        "play-store/local-version218-home-grid-qa/375/01c-drawer-white.png",
-        "play-store/local-version218-home-grid-qa/375/02-champions.png",
-        "play-store/local-version218-home-grid-qa/375/03-items.png",
-        "play-store/local-version218-home-grid-qa/375/04-item-detail.png",
-        "play-store/local-version218-home-grid-qa/375/05-runes.png",
-        "play-store/local-version218-home-grid-qa/375/06-patch-index.png",
-        "play-store/local-version218-home-grid-qa/375/07-patch-detail.png",
-        "play-store/local-version218-home-grid-qa/375/08-mastery.png",
-        "play-store/local-version218-home-grid-qa/375/09-board-type.png",
-        "play-store/local-version218-home-grid-qa/375/10-write.png",
-        "play-store/local-version218-home-grid-qa/375/11-nickname.png",
-        "play-store/local-version218-home-grid-qa/412/00-startup.png",
-        "play-store/local-version218-home-grid-qa/412/01-home.png",
-        "play-store/local-version218-home-grid-qa/412/01a-home-video-original-thumbnail.png",
-        "play-store/local-version218-home-grid-qa/412/01b-home-community.png",
-        "play-store/local-version218-home-grid-qa/412/01c-drawer-white.png",
-        "play-store/local-version218-home-grid-qa/412/02-champions.png",
-        "play-store/local-version218-home-grid-qa/412/03-items.png",
-        "play-store/local-version218-home-grid-qa/412/04-item-detail.png",
-        "play-store/local-version218-home-grid-qa/412/05-runes.png",
-        "play-store/local-version218-home-grid-qa/412/06-patch-index.png",
-        "play-store/local-version218-home-grid-qa/412/07-patch-detail.png",
-        "play-store/local-version218-home-grid-qa/412/08-mastery.png",
-        "play-store/local-version218-home-grid-qa/412/09-board-type.png",
-        "play-store/local-version218-home-grid-qa/412/10-write.png",
-        "play-store/local-version218-home-grid-qa/412/11-nickname.png",
-        "play-store/local-version218-home-grid-qa/report.json",
-        "play-store/qa-skin-portraits/akali-7-skins.png",
-        "play-store/qa-skin-portraits/fiddlesticks-skins.png",
-        "play-store/qa-skin-portraits/garen-skins.png",
-        "play-store/qa-skin-portraits/ryze-skins.png",
-        "play-store/qa-skin-portraits/shen-skins.png",
-        "play-store/qa-skin-portraits/warwick-skins.png",
-        "play-store/screenshots/video-feed-proof.png",
-        "play-store/skin-portrait-qa.json",
-        "play-store/version218-dialog-evidence.json",
-        "tools/capture_version218_local_layouts.mjs"
-      ],
-      "runtimeSourcePaths": [
-        "app/src/main/assets/www/data/offline-assets.json",
-        "app/src/main/assets/www/index.html",
-        "app/src/main/assets/www/nostalgia-218-fidelity.js",
-        "app/src/main/assets/www/portrait-fix.js",
-        "app/src/main/assets/www/sw.js"
-      ],
-      "runtimeSourceDiffSha256": "722f6e3d56f24ffc7185a3ff901fe75098c5474d62243ffe40016956a66bfb31",
-      "runtimeSourceFingerprintAlgorithm": "sha256(ordered UTF-8 path NUL file bytes NUL for runtimeSourcePaths)",
-      "officialAssetManifest": {
-        "path": "play-store/version-218-fidelity-official-assets.json",
-        "count": 151,
-        "sha256": "c45836310898d6788da476aafc0e8beb761ca2e4fd294c9e021e09c2b71757cf",
-        "historicalApkGameOrContentAssetsImported": 0
-      },
-      "currentHeadAtFinalization": "1c0e3162510e21fe29b534e7664dc4ad57b95058",
-      "captureCommitAncestorOfCurrentHead": true
-    },
     "applicationId": "com.lolclassic.encyclopedia.qa",
-    "apkSha256": "41913a538dd0d01a16adb3353b9967e76bc9ac4dd8dede971056c70e1e369890"
+    "androidCommit": "9046bcf06adbd0a0d5b425114eceec2b9fbbdd3d",
+    "runtimeDiffSha256": "47780e465a2b9b33301bac3acd34cdde1b12e8f9d2361a5451c4dbfd1aac0f87",
+    "runtimeDiffAlgorithm": "sha256(git diff --binary HEAD -- app/src/main/assets/www)",
+    "apkSha256": "321e894ceed0763ff2b7ff4868f682cc49edd31d18a92adf5b4362c5ade4688f",
+    "apkBytes": 96092460,
+    "versionName": "2.0.4",
+    "versionCode": 19,
+    "webAssetCount": 1523,
+    "webInventorySha256": "9a360fb52fd9ba40022809639505201226271dca95787b32eadec153873e8e21",
+    "allBundledWebBytesMatchSource": true
   },
-  "deviceGate": {
-    "exactlyOneAuthorizedTarget": true,
-    "physicalDevice": true,
-    "kernelQemu": "0",
+  "device": {
     "model": "SM-S911N",
     "androidRelease": "16",
     "apiLevel": "36",
-    "apkPackage": "com.lolclassic.encyclopedia.qa",
-    "apkLaunchableActivity": "com.lolclassic.encyclopedia.MainActivity",
-    "productionPackageRejected": true
+    "serialPublished": false
   },
-  "foregroundComponent": "com.lolclassic.encyclopedia.qa/com.lolclassic.encyclopedia.MainActivity",
-  "captureSettings": {
-    "accelerometerRotation": "0",
-    "userRotation": "0",
-    "headsUpNotifications": "0"
+  "validation": {
+    "physicalDeviceVerified": true,
+    "storagePreserved": true,
+    "productionPackageUnchanged": true,
+    "notificationsRestored": true,
+    "systemUiDemoRestored": true,
+    "externalWrites": 0,
+    "runtimeErrors": 0,
+    "inquirySent": false
   },
-  "settingsRestoration": {
-    "original": {
-      "accelerometerRotation": "0",
-      "userRotation": "0",
-      "headsUpNotifications": "1"
-    },
-    "restored": {
-      "accelerometerRotation": "0",
-      "userRotation": "0",
-      "headsUpNotifications": "1"
-    },
-    "verified": true
+  "systemUiCapture": {
+    "notificationIconsHidden": true,
+    "settingsRestored": true,
+    "normalClockBatteryAndConnectivityVisible": true,
+    "method": "Android SystemUI demo notifications visible=false; no notification deletion or image masking",
+    "reference": "https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/packages/SystemUI/docs/demo_mode.md"
   },
-  "capturePlan": [
-    {
-      "file": "phone-01-home.png",
-      "purpose": "HOME",
-      "route": "home"
-    },
-    {
-      "file": "phone-02-champions.png",
-      "purpose": "CHAMPION_LIST",
-      "route": "classic"
-    },
-    {
-      "file": "phone-03-champion-detail.png",
-      "purpose": "CHAMPION_DETAIL",
-      "route": "champion/garen/basic"
-    },
-    {
-      "file": "phone-04-items.png",
-      "purpose": "ITEM",
-      "route": "items"
-    },
-    {
-      "file": "phone-05-masteries.png",
-      "purpose": "MASTERY",
-      "route": "mastery"
-    },
-    {
-      "file": "phone-06-spells.png",
-      "purpose": "SPELL",
-      "route": "spells"
-    },
-    {
-      "file": "phone-07-runes.png",
-      "purpose": "RUNE_218_ARCHIVE",
-      "route": "runes"
-    },
-    {
-      "file": "phone-08-patch-news.png",
-      "purpose": "PATCH_NEWS",
-      "route": "patchnote/1"
-    },
-    {
-      "file": "phone-09-about-legal.png",
-      "purpose": "ABOUT_LEGAL",
-      "route": "about"
-    },
-    {
-      "file": "phone-10-community.png",
-      "purpose": "COMMUNITY",
-      "route": "board"
-    }
-  ],
   "screenshots": [
     {
-      "file": "phone-01-home.png",
-      "purpose": "HOME",
-      "route": "home",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 10,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 516550,
-        "sha256": "51599ea789e0b893e9d98d260fbdbd8208cb226f82fbcb807a001ffc52f98e4a",
-        "iccProfile": "sRGB"
-      }
+      "file": "phone-01-rune-page.png",
+      "route": "runes",
+      "sha256": "991c692a0b489da0761196e411a7f1a71d61216c53282b8af430d96c98d2fc17",
+      "bytes": 2642233,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/branding/classic-rune-paper-texture.png",
+          "sha256": "d64d35b329798ccdb372c7b059fd296620f42f092688329bfe73b5f9e58e9b6c"
+        },
+        {
+          "path": "images/branding/classic-rune-parchment.png",
+          "sha256": "888b4420efa290dd3f15b10f1a45749a69543c8eab0156e964a54e60a25e2a13"
+        },
+        {
+          "path": "images/classic_rune/b_1_3.project_jade.png",
+          "sha256": "a54b5fe323abcac0116829194858c240c0bb1c71ba1061c0da5bc2e750c6b577"
+        },
+        {
+          "path": "images/classic_rune/bl_2_3.project_jade.png",
+          "sha256": "9e5722cac53ffdc7f1ccdefc18f90824888f84d3b0ceddb27629a0a3c4758f01"
+        },
+        {
+          "path": "images/classic_rune/r_1_2.project_jade.png",
+          "sha256": "c48815405ef4a9fa22cda137ca6b4e77f176587c0458e907814fb5268954eb96"
+        },
+        {
+          "path": "images/classic_rune/r_1_3.project_jade.png",
+          "sha256": "e568fe49948f1cceb2bdd28a1455792cbcb05d3c9ffca7828017eba4a0a1b89a"
+        },
+        {
+          "path": "images/classic_rune/r_2_3.project_jade.png",
+          "sha256": "f0c2cc3872b25bfc0f843d320ddd64fc83ea25e2614b9292289e088af8b05894"
+        },
+        {
+          "path": "images/classic_rune/r_3_2.project_jade.png",
+          "sha256": "89762e451f5cb9e68d99bf60fde810518a7f7e53282a22378d85fd500e423ff6"
+        },
+        {
+          "path": "images/classic_rune/r_3_3.project_jade.png",
+          "sha256": "1c78f27cbd4a033f9f5173497309378350c472b82c67ecee2eba9d4648f0f61a"
+        },
+        {
+          "path": "images/classic_rune/y_3_3.project_jade.png",
+          "sha256": "77486caa9bde6de3af74cb27d2fd13044a8b3498886c3400f617651f8c1e0453"
+        }
+      ]
     },
     {
       "file": "phone-02-champions.png",
-      "purpose": "CHAMPION_LIST",
       "route": "classic",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 63,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 1495921,
-        "sha256": "5fdb13f951e802a67505c711e461b052a8d1d2e8e3cbfa0cf1ce24dd12b4c9b9",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "94e61a105f75758684138c885f29b078a3fcd3ed0bdbecaa91faecb9a5e2fe1d",
+      "bytes": 1755968,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/classic_champ_img/blitzcrank.png",
+          "sha256": "c73d9a662f19cf221047810485243cf2b42444f7a99c66695c08fc0875c32198"
+        },
+        {
+          "path": "images/classic_champ_img/brand.png",
+          "sha256": "1d18aa822e29d4e23e839b779ece55f12f0a3934beed047308e265263e5e903c"
+        },
+        {
+          "path": "images/classic_champ_img/drmundo.png",
+          "sha256": "9f29edce6feb52b340afbb30a28accab7bd0498ab986bb426f12e2a8c5373292"
+        },
+        {
+          "path": "images/classic_champ_img/gangplank.png",
+          "sha256": "02b03c6075a25d0cfe305a46a83ba523d45f2d0c28ab95d36dfbcc8ba4085206"
+        },
+        {
+          "path": "images/classic_champ_img/garen.png",
+          "sha256": "ab0a5dda23786c6851e5f77fadb7b07c16682e141020e960b1252a8981d27234"
+        },
+        {
+          "path": "images/classic_champ_img/gragas.png",
+          "sha256": "d77d619d1df312e463e64d41980df44e25094bc229c9128c79b348d602e149b4"
+        },
+        {
+          "path": "images/classic_champ_img/leesin.png",
+          "sha256": "f942f523aecf0b58c4623f074dcb430fa23e01a93420fa49ff3bc27ca2341e1f"
+        },
+        {
+          "path": "images/classic_champ_img/leona.png",
+          "sha256": "d7e170e1d5c37b243663e03d480a4befe727d86d0733e3e411b90297cb192461"
+        },
+        {
+          "path": "images/classic_champ_img/lulu.png",
+          "sha256": "ca22c4a042d66085ef7794c8b351b57880739be454aa4128fbdd7506c02d1a50"
+        },
+        {
+          "path": "images/classic_champ_img/lux.png",
+          "sha256": "b8dd7b505ce00a7273182526ef85ce38fab0f75f5ad6592512ae0f66b4052271"
+        },
+        {
+          "path": "images/classic_champ_img/malphite.png",
+          "sha256": "3dad077218d49c380199c48c20de938f7d592bbcc9e90912f1915bb20a909ad9"
+        },
+        {
+          "path": "images/classic_champ_img/malzahar.png",
+          "sha256": "0286b50200eb8ea0951ed4fc09e219ed724efb40b412e9e10c6edc2355e953eb"
+        },
+        {
+          "path": "images/classic_champ_img/masteryi.png",
+          "sha256": "70ff9d05e0d556aef38a6a9053580c250c389f93721dc08379ef9df84d7de9d4"
+        },
+        {
+          "path": "images/classic_champ_img/missfortune.png",
+          "sha256": "9f28afe54a456ce83f142ecb4d9946f204aac378865f0426263def5ec968a471"
+        },
+        {
+          "path": "images/classic_champ_img/morgana.png",
+          "sha256": "9a0bcdc6c610746cedf6783e022b036b0dbb31aeada0dc562b4e405db9d31eb2"
+        },
+        {
+          "path": "images/classic_champ_img/nasus.png",
+          "sha256": "6e7d7ce13ca55c9a3d421bcfc3f6784506d39ebdf22f71ad1a982b239a293564"
+        },
+        {
+          "path": "images/classic_champ_img/nidalee.png",
+          "sha256": "816e2b4a3a98bef2a8bc0b4df690e16db914a9192943c690657d2724526fbdd1"
+        },
+        {
+          "path": "images/classic_champ_img/nunu.png",
+          "sha256": "d43e3a1bfa0e356c3aa9114c34877555f2762ce45cdd573acd896131f711a86c"
+        },
+        {
+          "path": "images/classic_champ_img/rammus.png",
+          "sha256": "78bbe236ef1e5d331117a286cb993566bdf0b3703158a178a9648c2b5e061774"
+        },
+        {
+          "path": "images/classic_champ_img/ryze.png",
+          "sha256": "af4ff39db59b9c73f405316024df2b84fdbe6ebdd8e4e77d0bc731bb56073f0d"
+        },
+        {
+          "path": "images/classic_champ_img/shaco.png",
+          "sha256": "464fc41f020e3fcd3cd147204df1387d41158c509a00996c5aca1a951ee534f6"
+        },
+        {
+          "path": "images/classic_champ_img/sion.png",
+          "sha256": "4828e106aa0132c25698804031eb2a504e3e237b2729f3dd6809161c35179776"
+        },
+        {
+          "path": "images/classic_champ_img/vayne.png",
+          "sha256": "5a8aae048c77fa27023b57a33e153d321a4748c9236c53ae390f82cf6984e13e"
+        },
+        {
+          "path": "images/classic_champ_img/veigar.png",
+          "sha256": "b6ed8b3610446cc1aedaa37cf60031276eff0e07b9ac433645c52abd2e138d9d"
+        }
+      ]
     },
     {
       "file": "phone-03-champion-detail.png",
-      "purpose": "CHAMPION_DETAIL",
       "route": "champion/garen/basic",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 6,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 338599,
-        "sha256": "ae30db028ed949a8bb421e595e3ce755f3f270199638ad8fd3ae7b11da7f4477",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "94ac2f25233c728d1770002c490cb08e1fb7b734627b47e9cb2a8623b9ad0e14",
+      "bytes": 478759,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/classic_champ_img/garen.png",
+          "sha256": "ab0a5dda23786c6851e5f77fadb7b07c16682e141020e960b1252a8981d27234"
+        },
+        {
+          "path": "images/skill_img/Garen_0.jpg",
+          "sha256": "b158a174ec0390ef0c29bd4823ea63f809b9042f1c8253aed6fdb3df4a3a28df"
+        }
+      ]
     },
     {
       "file": "phone-04-items.png",
-      "purpose": "ITEM",
       "route": "items",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 149,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 518723,
-        "sha256": "dd9eb624d3a723b0359b111c98405ca83f4d0d5c87af7c53ef39ebbf7b448cc8",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "1a5bbcc660f37430646c9d79627e9b44c731febd1bdde18f70ade94ed673e876",
+      "bytes": 599481,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/official_item/1004.png",
+          "sha256": "a8d1111d8a6357ffe8946244601c7902a53d16f6b5a8b3e5f71a39c26b98b2ce"
+        },
+        {
+          "path": "images/official_item/1006.png",
+          "sha256": "c02ac0f76646542227acc6d83fa33b7f207189f99336635c5b0908d7a375bee1"
+        },
+        {
+          "path": "images/official_item/2003.png",
+          "sha256": "b3612267c10db1041fdf49ad9597ad175e31c2acad0f7e25a204338c6a7faeb6"
+        },
+        {
+          "path": "images/official_item/2004.png",
+          "sha256": "0e0097a2195e25445204eeb4de5e56c9eae1224eb1a62b9c067d308fc1aff641"
+        },
+        {
+          "path": "images/official_item/2039.png",
+          "sha256": "d5da488fd242b20114b50956982bde979ed86d1ad83e23856bde723c40049421"
+        },
+        {
+          "path": "images/official_item/2043.png",
+          "sha256": "ebf5bd30c3ecc0a9924fa55997b3134cd1703d14dd6a0e909576d71598f48489"
+        },
+        {
+          "path": "images/official_item/2047.png",
+          "sha256": "8039f8a89f719dcd5090d47600d2b636eea05fa47c61fa711387dcf6a4fc95e1"
+        },
+        {
+          "path": "images/official_item/772044.png",
+          "sha256": "b8dc7e88f5fb3d3033b28218d914de8cece3ab510655b0978d66aa82d1d189a6"
+        }
+      ]
     },
     {
       "file": "phone-05-masteries.png",
-      "purpose": "MASTERY",
       "route": "mastery",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 0,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 21,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 598995,
-        "sha256": "553f18a909aabba4d417c646458cec853619e38a89d1277ecc3d9211020d3d43",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "f3dec1503970ec8b21f475d1b6d2cf3e5120a6a5331c6b493b3dbea39706bc7b",
+      "bytes": 985208,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/official_mastery/4111.png",
+          "sha256": "8b0053106361e55d7f93a9122d7dabd67b3782a53ae6329b077c6a4199543bd9"
+        },
+        {
+          "path": "images/official_mastery/4112.png",
+          "sha256": "1f66b5403d5bf453fda66c59f730578cb2e177dc69ee09adc7bdd81d66cb1aee"
+        },
+        {
+          "path": "images/official_mastery/4113.png",
+          "sha256": "5fe7965a2a1eeee84754b8c85bb57bbe7c5a60a2cc4436f527a2a51cfd690d8d"
+        },
+        {
+          "path": "images/official_mastery/4114.png",
+          "sha256": "0be6bfd44b392183443f9764f003b5545a9ab2331c6a9e59028b77468c064d34"
+        },
+        {
+          "path": "images/official_mastery/4121.png",
+          "sha256": "f854cf1a9373e4c49001187dced0032faf8d82a51b03fb47bbee1d4dacb8e879"
+        },
+        {
+          "path": "images/official_mastery/4122.png",
+          "sha256": "0706ec12cd138dd4173aea2852ea1d8f2bf28dbfb3db3396098b3587776b586e"
+        },
+        {
+          "path": "images/official_mastery/4123.png",
+          "sha256": "0eb41c67ced3b83a4787a1fc394adf2ea105a573c72ba9b2ddd81496fbbf6fbd"
+        },
+        {
+          "path": "images/official_mastery/4124.png",
+          "sha256": "562d8ce9d4355e531e5c0ddb10ce0fb19c6710a019fe81e1a5de94d23d91f633"
+        },
+        {
+          "path": "images/official_mastery/4131.png",
+          "sha256": "fc26a4ca1d55cbbb8cbd7a5ec72aaa8210e02d34b27fbe061345463215eb5913"
+        },
+        {
+          "path": "images/official_mastery/4132.png",
+          "sha256": "4aad8f2928dbb33f0af60b25a639568987021b6b9cc12e399c6ce1eed49bcd74"
+        },
+        {
+          "path": "images/official_mastery/4133.png",
+          "sha256": "27860311f7d2f754fb50995278134a7e0997e55af5b91a024db154b102313542"
+        },
+        {
+          "path": "images/official_mastery/4134.png",
+          "sha256": "ed4437d18109847a54c1e476aa72d898a2bf38acba9ca6d94f0ca22f8482fe79"
+        },
+        {
+          "path": "images/official_mastery/4141.png",
+          "sha256": "86a5cb3a7fd947f488cc7ecb35f31826ba5660f12f1dfcc3993956460945ebfd"
+        },
+        {
+          "path": "images/official_mastery/4142.png",
+          "sha256": "0641436844ea4606377d08729109f85a25d071d5963a6ec7b23f8becc0d6fdee"
+        },
+        {
+          "path": "images/official_mastery/4143.png",
+          "sha256": "58857c7143f3fdbd7d78a1d39499d071cde5f74bd4fe05bbf438a1b376da1e84"
+        },
+        {
+          "path": "images/official_mastery/4144.png",
+          "sha256": "f29a642805b32d1a36186d8ea9ad1aec68fc91648a6794ca55f161278b44e4bd"
+        },
+        {
+          "path": "images/official_mastery/4151.png",
+          "sha256": "a71f1a65d23377dde8c9d2913e5f88520b88700b813f4cbb7fc0992512e8d84b"
+        },
+        {
+          "path": "images/official_mastery/4152.png",
+          "sha256": "b99551723f0580982b463badac4d40f2f3db33715244c996f46d663c571feb46"
+        },
+        {
+          "path": "images/official_mastery/4154.png",
+          "sha256": "a70b7b98f857474a0b578c83a259e8a1009fa07203bc86169c33695bd5cc6c20"
+        },
+        {
+          "path": "images/official_mastery/4162.png",
+          "sha256": "e86630033714da974f199ed927146ff9f75e995879ef4339c995f5708dfbd073"
+        }
+      ]
     },
     {
       "file": "phone-06-spells.png",
-      "purpose": "SPELL",
       "route": "spells",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 12,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 606470,
-        "sha256": "3430fc2009721b72fa3ba54304bcc5bcf57cec4f75a04557092c35061416b6fc",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "7d06d1287e989b85da41eabfc92e5c498e10278e9c30dcd2016c9f2a5e658c24",
+      "bytes": 632891,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/classic_summoner/SummonerBarrier_Jade.png",
+          "sha256": "101a139c02ef315810d02cd7a65fe821b64c9286ffc49722017504c359191340"
+        },
+        {
+          "path": "images/classic_summoner/SummonerBattleCry_Jade.png",
+          "sha256": "8512df69cdb8235c34ab2b005b71fece9da33980343436408def4b22ebe26aec"
+        },
+        {
+          "path": "images/classic_summoner/SummonerBoost_Jade.png",
+          "sha256": "5fc08d5c7fc2de0663930874b871ed799a4a05f53c90e0becc4422113b5915aa"
+        },
+        {
+          "path": "images/classic_summoner/SummonerClairvoyance_Jade.png",
+          "sha256": "b2ebafba22cda61af37869865cb8beee7a494cecaeb7abce13a23de8fc305a86"
+        },
+        {
+          "path": "images/classic_summoner/SummonerDot_Jade.png",
+          "sha256": "a5d4baeb9f89b63cbddcc84a5c047e1b62b1fe585c0681e3b162e4a59fd105ea"
+        },
+        {
+          "path": "images/classic_summoner/SummonerExhaust_Jade.png",
+          "sha256": "494e5e2112f642eb7e956697ad84a2c1c57c37d96afd84b698b1a36a2629ff24"
+        },
+        {
+          "path": "images/classic_summoner/SummonerFlash_Jade.png",
+          "sha256": "b2a7fdffb318a84fedd29105ac8f78c42caaf32b2261f88b245125c1c2b8e196"
+        },
+        {
+          "path": "images/classic_summoner/SummonerFortify_Jade.png",
+          "sha256": "2724dd46de676a2ca70cf33fe5969997f9e88c85814bd6902b8131a8563d9895"
+        },
+        {
+          "path": "images/classic_summoner/SummonerHaste_Jade.png",
+          "sha256": "9b1ddd3722834c7a3aa1f22512990e072070f372972907da5b13f6aa26d2101f"
+        },
+        {
+          "path": "images/classic_summoner/SummonerHeal_Jade.png",
+          "sha256": "9d8fbcd354640d5413ec8efd52b4f55896209c612cea95c78438d6e3a845ac48"
+        },
+        {
+          "path": "images/classic_summoner/SummonerMana_Jade.png",
+          "sha256": "593cf6dc469b99c3792d124a8775256d1dea4eea1753799c2c22dbff8663d6ac"
+        },
+        {
+          "path": "images/classic_summoner/SummonerRally_Jade.png",
+          "sha256": "9cb152c9dc0a3dd17c670f2026bef5f45c18a0ffd2ca10fdd1f72b62a163c0ab"
+        },
+        {
+          "path": "images/classic_summoner/SummonerRevive_Jade.png",
+          "sha256": "5f0cddbea542f688181fdb4824bb7d63af42ada39c527aa8caa0b0ead96a9678"
+        },
+        {
+          "path": "images/classic_summoner/SummonerSmite_Jade.png",
+          "sha256": "237db3702c9134c8ffbf5aa6340203191072b240f90f9d49d4d48dad0b994043"
+        },
+        {
+          "path": "images/classic_summoner/SummonerSpell_Promote_Jade.png",
+          "sha256": "f1151941cfa3ad952561ace1de3aa0e92048112d4064f3a63b1df29f9ac5f10f"
+        },
+        {
+          "path": "images/classic_summoner/SummonerTeleport_Jade.png",
+          "sha256": "8aee1fbbc99905318028d01d9fd6b3458450ad7ff035958dea3376b0e255530b"
+        }
+      ]
     },
     {
       "file": "phone-07-runes.png",
-      "purpose": "RUNE_218_ARCHIVE",
       "route": "runes",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 0,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 17,
-      "runeRecordCount": 0,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 499017,
-        "sha256": "849e4fc4b63cf9935d074531407ff6fda44a8b2165c28d21403bdd82b6999611",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "3a3a9172da6fab3ad0b2c418434b498c9d70abb5113bef55906f4b956d41c1d4",
+      "bytes": 1468412,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/branding/classic-rune-paper-texture.png",
+          "sha256": "d64d35b329798ccdb372c7b059fd296620f42f092688329bfe73b5f9e58e9b6c"
+        },
+        {
+          "path": "images/branding/classic-rune-parchment.png",
+          "sha256": "888b4420efa290dd3f15b10f1a45749a69543c8eab0156e964a54e60a25e2a13"
+        },
+        {
+          "path": "images/classic_rune/b_1_3.project_jade.png",
+          "sha256": "a54b5fe323abcac0116829194858c240c0bb1c71ba1061c0da5bc2e750c6b577"
+        },
+        {
+          "path": "images/classic_rune/bl_1_3.project_jade.png",
+          "sha256": "8cb1f1971afd3af5bb0c20c1112d15056267a4900e99e5057d0ed9124eeff1fa"
+        },
+        {
+          "path": "images/classic_rune/bl_2_3.project_jade.png",
+          "sha256": "9e5722cac53ffdc7f1ccdefc18f90824888f84d3b0ceddb27629a0a3c4758f01"
+        },
+        {
+          "path": "images/classic_rune/bl_3_3.project_jade.png",
+          "sha256": "42eab9ee0e33298907f96db1ab7dae539dd2f1e6045ddba0eaf25e36daeb8880"
+        },
+        {
+          "path": "images/classic_rune/bl_4_3.project_jade.png",
+          "sha256": "712cbcdb6f231ddb87db000d67820764cbf8c722cb71b0f62970592af647a2f0"
+        },
+        {
+          "path": "images/classic_rune/r_3_3.project_jade.png",
+          "sha256": "1c78f27cbd4a033f9f5173497309378350c472b82c67ecee2eba9d4648f0f61a"
+        },
+        {
+          "path": "images/classic_rune/y_3_3.project_jade.png",
+          "sha256": "77486caa9bde6de3af74cb27d2fd13044a8b3498886c3400f617651f8c1e0453"
+        }
+      ]
     },
     {
       "file": "phone-08-patch-news.png",
-      "purpose": "PATCH_NEWS",
       "route": "patchnote/1",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 0,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 1449835,
-        "sha256": "d6a4ae377ddf4c8b725519d81d6a2a7448c24757719fe486dcc3e1c3e6ceb252",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "42bba6e9ad5061a225c3a5dd764a9b6bd6d3af34fcc13b18d6c0128245af56bb",
+      "bytes": 2895263,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/branding/classic-rune-paper-texture.png",
+          "sha256": "d64d35b329798ccdb372c7b059fd296620f42f092688329bfe73b5f9e58e9b6c"
+        }
+      ]
     },
     {
       "file": "phone-09-about-legal.png",
-      "purpose": "ABOUT_LEGAL",
       "route": "about",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 0,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 311303,
-        "sha256": "4d449f42f88d487de4abca30ffa57bd83d82e219da75042bf8546f91ddae8de5",
-        "iccProfile": "sRGB"
-      }
+      "sha256": "c49be4957addd2816bfa34ecf18832cad1b6457e4da67e8b70a699b5ded5c589",
+      "bytes": 377645,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": []
     },
     {
-      "file": "phone-10-community.png",
-      "purpose": "COMMUNITY",
-      "route": "board",
-      "viewport": [
-        411,
-        806
-      ],
-      "imageCount": 0,
-      "brokenImages": [],
-      "placeholderCount": 0,
-      "intentionalTextFallbackCount": 0,
-      "runeRecordCount": null,
-      "domTextPatternHits": {},
-      "png": {
-        "width": 1080,
-        "height": 2340,
-        "mode": "RGB",
-        "bytes": 125661,
-        "sha256": "4d106fd15fcc20de3fe9055fa8a3005dfc77446326f21822ddb8c19f5bc0b0f3",
-        "iccProfile": "sRGB"
-      }
+      "file": "phone-10-contact.png",
+      "route": "document/contact",
+      "sha256": "f9ca2fa8d3e9a8d10e97d810e4583c102af477b3863f10b2071b3a6c585d522f",
+      "bytes": 1787846,
+      "width": 1080,
+      "height": 2340,
+      "unresolvedVisibleCount": 0,
+      "visibleAssets": [
+        {
+          "path": "images/branding/classic-rune-paper-texture.png",
+          "sha256": "d64d35b329798ccdb372c7b059fd296620f42f092688329bfe73b5f9e58e9b6c"
+        }
+      ]
     }
   ],
   "appMainScreen": {
-    "file": "app-main-screen.png",
-    "purpose": "HOME_POSTER_ALIAS",
-    "source": "phone-01-home.png",
-    "png": {
-      "width": 1080,
-      "height": 2340,
-      "mode": "RGB",
-      "bytes": 516550,
-      "sha256": "51599ea789e0b893e9d98d260fbdbd8208cb226f82fbcb807a001ffc52f98e4a",
-      "iccProfile": "sRGB"
-    }
+    "source": "phone-01-rune-page.png",
+    "sha256": "991c692a0b489da0761196e411a7f1a71d61216c53282b8af430d96c98d2fc17"
   },
   "video": {
     "file": "app-feature-tour.mp4",
-    "routes": [
-      {
-        "purpose": "HOME",
-        "route": "home"
-      },
-      {
-        "purpose": "CHAMPION_LIST",
-        "route": "classic"
-      },
-      {
-        "purpose": "CHAMPION_DETAIL",
-        "route": "champion/garen/basic"
-      },
-      {
-        "purpose": "ITEM",
-        "route": "items"
-      },
-      {
-        "purpose": "MASTERY",
-        "route": "mastery"
-      },
-      {
-        "purpose": "RUNE",
-        "route": "runes"
-      },
-      {
-        "purpose": "PATCH_NEWS",
-        "route": "patchnote/1"
-      },
-      {
-        "purpose": "COMMUNITY",
-        "route": "board"
-      },
-      {
-        "purpose": "ABOUT_LEGAL",
-        "route": "about"
-      },
-      {
-        "purpose": "HOME_RETURN",
-        "route": "home"
-      }
-    ],
-    "segments": [
-      {
-        "purpose": "HOME",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 160793,
-        "sha256": "9144900051714d684e5b01c82ab780d1cfc83ba9581f39c3512ea7b10b56efe1",
-        "route": "home",
-        "sourceScreenshot": "phone-01-home.png",
-        "sourceScreenshotSha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a"
-      },
-      {
-        "purpose": "CHAMPION_LIST",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 293683,
-        "sha256": "7adb7b1a02a0cec71374756580fb4b3267904ba52ff731c8605c7a81251f57d6",
-        "route": "classic",
-        "sourceScreenshot": "phone-02-champions.png",
-        "sourceScreenshotSha256": "43a146eabb228cd619346138303128514c9069d10229f542edaac78935e6aba6"
-      },
-      {
-        "purpose": "CHAMPION_DETAIL",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 126390,
-        "sha256": "5439855d5f2c6c903fa0898a024fb8b093de8f4c8c28ac302f616338f7def2be",
-        "route": "champion/garen/basic",
-        "sourceScreenshot": "phone-03-champion-detail.png",
-        "sourceScreenshotSha256": "00b3156d4e0f7a70393457abe3b9a43177516a5f63428143f41f3ca68a7c3855"
-      },
-      {
-        "purpose": "ITEM",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 170877,
-        "sha256": "f777bab5e5ac8e200322baefc83cbf811ea99c8ccb144a54dadc7f4117bcae2d",
-        "route": "items",
-        "sourceScreenshot": "phone-04-items.png",
-        "sourceScreenshotSha256": "be439f2dd82115efb6d8dc3a1ce9500335ddb2b16ed3d4ccbfdad8a042c36ffb"
-      },
-      {
-        "purpose": "MASTERY",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 153412,
-        "sha256": "f88e3de621019cf818b4c15a362ab51b75b7c35876eaf831208e1835f46406c6",
-        "route": "mastery",
-        "sourceScreenshot": "phone-05-masteries.png",
-        "sourceScreenshotSha256": "db877568c478fe17ab49ccf505fbcea551900d2ff79ddea04706aca50f50f9a2"
-      },
-      {
-        "purpose": "RUNE",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 169218,
-        "sha256": "bad9ff191efd1f653930b838e9417fddbd87e741d926b322f365948e4b9fd648",
-        "route": "runes",
-        "sourceScreenshot": "phone-07-runes.png",
-        "sourceScreenshotSha256": "4c310fd3a3c838c3f23ef03b524041eb4ad3b9fca5bd8d1ecaf1bd7bc935e7bb"
-      },
-      {
-        "purpose": "PATCH_NEWS",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 290167,
-        "sha256": "458558751dfa9df43a178b3331f808b31db2b6a1af3b08305c0bd577db203473",
-        "route": "patchnote/1",
-        "sourceScreenshot": "phone-08-patch-news.png",
-        "sourceScreenshotSha256": "04e8613d28c0f665eafa1b58877960df8f170e5f06bb20e03ce7660a0d19daff"
-      },
-      {
-        "purpose": "COMMUNITY",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 73183,
-        "sha256": "47799fe0c6e2b5b8bd03b641b9c014901965e2fcaa73ce144a1fb81a77a1d7cb",
-        "route": "board",
-        "sourceScreenshot": "phone-10-community.png",
-        "sourceScreenshotSha256": "8837280efb7cc663e209b1f0afa8315d90f4c4567e535bd490dbd5765869ead0"
-      },
-      {
-        "purpose": "ABOUT_LEGAL",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 138664,
-        "sha256": "006dc0501097d2b2e93a4f0c8fcc37f956bb16488f7f73b8ff3f7931bf044b8c",
-        "route": "about",
-        "sourceScreenshot": "phone-09-about-legal.png",
-        "sourceScreenshotSha256": "5434576c7883f192394dd464b2865bbe91eb9c5c58d73499b8dc5ec227f095a4"
-      },
-      {
-        "purpose": "HOME_RETURN",
-        "duration": 3.0,
-        "frames": 90,
-        "frameRate": "30/1",
-        "bytes": 160793,
-        "sha256": "9144900051714d684e5b01c82ab780d1cfc83ba9581f39c3512ea7b10b56efe1",
-        "route": "home",
-        "sourceScreenshot": "phone-01-home.png",
-        "sourceScreenshotSha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a"
-      }
-    ],
-    "width": 1080,
-    "height": 2340,
-    "codec": "h264",
-    "frameRate": "30/1",
-    "frames": 900,
-    "duration": 30.0,
-    "bitRate": 471716,
-    "bytes": 1768935,
-    "sha256": "8d1a629be5490727ce9dc23efe3eb3300542ade2f3ca384f0d60b062be0359d0"
+    "captureMethod": "Android screenrecord",
+    "rawSha256": "2660fba60151a03e0419c32d89299ad574a6a2f05ce1b077166783e37a9c06fc",
+    "outputSha256": "87805adb7481e282179f6886ef8889198b57eb00592799ad4af156bb607ff069",
+    "visualStreamUnchanged": true,
+    "videoStreamSha256": "90f608165040c2510bdac4a5d9b35b6615d05cf420b48f20d02ee61c706e6f6c",
+    "processing": "Lossless video-only MP4 remux; no picture edits; remove Android data tracks; faststart",
+    "durationSeconds": 46.578,
+    "audio": false,
+    "visibleRoutes": [
+      "runes",
+      "classic",
+      "champion/garen/basic",
+      "items",
+      "spells",
+      "patchnote/1"
+    ]
   },
-  "historicalLauncherException": {
-    "file": "app-icon.png",
-    "category": "USER_SUPPLIED_HISTORICAL_ASSET",
-    "sourceHistoricalApkSha256": "4B33F73F8B3C9A83220061620276874FCB761920BC16AF1E190CBB13E7D5B2B1",
-    "sourceHistoricalIconSha256": "228F51F62EA2CBD6B4BD59F816765F580D92A3D1ACB3A247F27EBA670B0B255B",
-    "sourceHistoricalIconPath": "res/drawable-hdpi/icon.png",
-    "androidDerivativePath": "play-store/assets/app-icon-512.png",
-    "derivativeTransformation": "pixel-preserving NEAREST upscale 72x72 to 512x512",
-    "historicalLauncherSourceImported": 1,
-    "technicalDerivativeCount": 14,
-    "otherHistoricalApkBinaryAssetsImportedViaIconException": 0,
-    "width": 512,
-    "height": 512,
-    "mode": "RGBA",
-    "bytes": 19198,
-    "sha256": "d4939752ad6961ae286cf0054f25ceccddc18988492930d05dd122031a162111"
+  "manualReview": {
+    "completed": true,
+    "reviewedAt": "2026-09-05T10:53:37.927616Z",
+    "method": "All ten original PNGs viewed individually; native video sampled in all six route segments, transition frames and final held frame. Video decoding and elementary-stream hashes also verified.",
+    "reviewedScreenshots": {
+      "phone-01-rune-page.png": "991c692a0b489da0761196e411a7f1a71d61216c53282b8af430d96c98d2fc17",
+      "phone-02-champions.png": "94e61a105f75758684138c885f29b078a3fcd3ed0bdbecaa91faecb9a5e2fe1d",
+      "phone-03-champion-detail.png": "94ac2f25233c728d1770002c490cb08e1fb7b734627b47e9cb2a8623b9ad0e14",
+      "phone-04-items.png": "1a5bbcc660f37430646c9d79627e9b44c731febd1bdde18f70ade94ed673e876",
+      "phone-05-masteries.png": "f3dec1503970ec8b21f475d1b6d2cf3e5120a6a5331c6b493b3dbea39706bc7b",
+      "phone-06-spells.png": "7d06d1287e989b85da41eabfc92e5c498e10278e9c30dcd2016c9f2a5e658c24",
+      "phone-07-runes.png": "3a3a9172da6fab3ad0b2c418434b498c9d70abb5113bef55906f4b956d41c1d4",
+      "phone-08-patch-news.png": "42bba6e9ad5061a225c3a5dd764a9b6bd6d3af34fcc13b18d6c0128245af56bb",
+      "phone-09-about-legal.png": "c49be4957addd2816bfa34ecf18832cad1b6457e4da67e8b70a699b5ded5c589",
+      "phone-10-contact.png": "f9ca2fa8d3e9a8d10e97d810e4583c102af477b3863f10b2071b3a6c585d522f"
+    },
+    "reviewedVideoSha256": "87805adb7481e282179f6886ef8889198b57eb00592799ad4af156bb607ff069",
+    "personalDataFound": false,
+    "notificationContentFound": false,
+    "notificationIconsFound": false,
+    "ordinarySystemIndicatorsVisible": true,
+    "notes": "Existing published support email appears on the empty contact form. Notification app icons are hidden with Android SystemUI demo mode; normal clock, battery and connectivity indicators remain visible. Brief image loading during real navigation is retained in the native video."
   },
-  "projectOwned": {
-    "featureGraphic": {
-      "file": "feature-graphic.png",
-      "width": 1024,
-      "height": 500,
-      "mode": "RGB",
-      "bytes": 186481,
-      "sha256": "a7840331afcb20d067244969efd0a7b9896f15c3f9b28ddffa8c34f84b4af9a6"
-    }
-  },
-  "safety": {
-    "productionPackageMutationCount": 0,
-    "productionPackage": "com.lolclassic.encyclopedia",
-    "qaPackageOnly": true,
-    "domTextPatternScanPassed": true,
-    "personalDataReviewedByAutomation": false,
-    "manualVisualReviewRequired": true
-  },
-  "colorProfileNormalization": {
-    "appliedAt": "2026-09-03T00:53:04.009790Z",
-    "method": "Pillow ImageCms standard sRGB ICC profile embedding",
-    "scope": "PNG container/profile normalization of the ten reviewed captures and home poster alias",
-    "decodedPixelsChanged": false,
-    "dimensionsChanged": false,
-    "manualVisualReviewCarriedForwardBecauseDecodedPixelsAreByteIdentical": true,
-    "records": {
-      "phone-01-home.png": {
-        "preNormalizationSha256": "09124f50c51d8eab25f15ad6cc2d6882131c80d2a4581a2cd8c15951baa0315a",
-        "normalizedSha256": "51599ea789e0b893e9d98d260fbdbd8208cb226f82fbcb807a001ffc52f98e4a",
-        "decodedRgbPixelSha256": "e70aad584d97bd0036d1973e4ab299964a7b3a97f43a8c5efeee5f442e28733f",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-02-champions.png": {
-        "preNormalizationSha256": "43a146eabb228cd619346138303128514c9069d10229f542edaac78935e6aba6",
-        "normalizedSha256": "5fdb13f951e802a67505c711e461b052a8d1d2e8e3cbfa0cf1ce24dd12b4c9b9",
-        "decodedRgbPixelSha256": "59ab0cf3aea155ba6fdb1b32530525813c5f571bdf0456b70f9c2d1826fe072a",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-03-champion-detail.png": {
-        "preNormalizationSha256": "00b3156d4e0f7a70393457abe3b9a43177516a5f63428143f41f3ca68a7c3855",
-        "normalizedSha256": "ae30db028ed949a8bb421e595e3ce755f3f270199638ad8fd3ae7b11da7f4477",
-        "decodedRgbPixelSha256": "bed994d148d187d11ae832d0ff4daf6a21ac84c9377069b39d51be0487321747",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-04-items.png": {
-        "preNormalizationSha256": "be439f2dd82115efb6d8dc3a1ce9500335ddb2b16ed3d4ccbfdad8a042c36ffb",
-        "normalizedSha256": "dd9eb624d3a723b0359b111c98405ca83f4d0d5c87af7c53ef39ebbf7b448cc8",
-        "decodedRgbPixelSha256": "5fe55164bf53b94fe6ad9117e25231231f6881872005b5d0b279bf7a351bcad0",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-05-masteries.png": {
-        "preNormalizationSha256": "db877568c478fe17ab49ccf505fbcea551900d2ff79ddea04706aca50f50f9a2",
-        "normalizedSha256": "553f18a909aabba4d417c646458cec853619e38a89d1277ecc3d9211020d3d43",
-        "decodedRgbPixelSha256": "20d5f80c6cc96403fd8a441121092805faf0c5ff7277147956766b0a4245d2a7",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-06-spells.png": {
-        "preNormalizationSha256": "ce50d057fd76953f4c11e71293c19195c190a625cddb5d256a0b85c6c6f0a056",
-        "normalizedSha256": "3430fc2009721b72fa3ba54304bcc5bcf57cec4f75a04557092c35061416b6fc",
-        "decodedRgbPixelSha256": "00fc62879326d292253d8e8cbc82d7ed1988441ba51f47dce5ff2d87781ff79f",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-07-runes.png": {
-        "preNormalizationSha256": "4c310fd3a3c838c3f23ef03b524041eb4ad3b9fca5bd8d1ecaf1bd7bc935e7bb",
-        "normalizedSha256": "849e4fc4b63cf9935d074531407ff6fda44a8b2165c28d21403bdd82b6999611",
-        "decodedRgbPixelSha256": "71e02b7c6840a040f507c81ac73a578c306f2a0a6cb99e7cb57de619b9b7f04f",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-08-patch-news.png": {
-        "preNormalizationSha256": "04e8613d28c0f665eafa1b58877960df8f170e5f06bb20e03ce7660a0d19daff",
-        "normalizedSha256": "d6a4ae377ddf4c8b725519d81d6a2a7448c24757719fe486dcc3e1c3e6ceb252",
-        "decodedRgbPixelSha256": "62019db673d1a07a4fa6e9fd2b0034a2228eeac7b591083817523c6cd8c771f5",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-09-about-legal.png": {
-        "preNormalizationSha256": "5434576c7883f192394dd464b2865bbe91eb9c5c58d73499b8dc5ec227f095a4",
-        "normalizedSha256": "4d449f42f88d487de4abca30ffa57bd83d82e219da75042bf8546f91ddae8de5",
-        "decodedRgbPixelSha256": "553f394461f45923560a85f129767729fa030cf0abc246f164a41354ac3ad549",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      },
-      "phone-10-community.png": {
-        "preNormalizationSha256": "8837280efb7cc663e209b1f0afa8315d90f4c4567e535bd490dbd5765869ead0",
-        "normalizedSha256": "4d106fd15fcc20de3fe9055fa8a3005dfc77446326f21822ddb8c19f5bc0b0f3",
-        "decodedRgbPixelSha256": "9d7327e8eff87c543b67529ebf7c4e35cbc26f7e46233cd4e164c3be2215ae74",
-        "decodedPixelsChanged": false,
-        "dimensionsChanged": false
-      }
-    }
-  }
+  "notes": "Technical provenance for selected public screenshots and video. The home screen and historical gallery are outside this capture plan. The unchanged website icon retains its existing separate lineage. No claim about whole-APK licensing or Play authorization."
 }

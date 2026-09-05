@@ -11,6 +11,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+from verify_current_capture import validate as validate_current_capture
+
 
 ROOT = Path(__file__).resolve().parent
 HTML_FILES = tuple(sorted(ROOT.glob("*.html")))
@@ -184,6 +186,10 @@ def main() -> int:
 
     manifest_path = ROOT / "assets" / "media-provenance.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    capture_evidence = json.loads((ROOT / "capture-evidence.json").read_text(encoding="utf-8"))
+    capture_failures = validate_current_capture(capture_evidence, manifest, ROOT)
+    checks["currentCaptureEvidence"] = "FAIL" if capture_failures else "PASS"
+    failures.extend(f"current-capture:{item}" for item in capture_failures)
     required = {
         "localPath",
         "mediaType",
@@ -251,7 +257,7 @@ def main() -> int:
         media_records.append({"filename": filename, "sha256": actual_hash})
 
     duplicate_groups = [sorted(group) for group in hash_groups.values() if len(group) > 1]
-    allowed_duplicate = sorted(["app-main-screen.png", "phone-01-home.png"])
+    allowed_duplicate = sorted(["app-main-screen.png", "phone-01-rune-page.png"])
     unexpected_duplicates = [group for group in duplicate_groups if group != allowed_duplicate]
     checks["duplicateMediaGroups"] = duplicate_groups
     checks["intentionalPosterAlias"] = allowed_duplicate in duplicate_groups
