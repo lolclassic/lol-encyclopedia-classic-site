@@ -1245,7 +1245,7 @@ def generate_feature_graphic(
     draw.text((56, 142), "Classic Archive", font=title_font, fill="#c7a75b")
     draw.text((58, 238), "Independent historical reference", font=body_font, fill="#d4cbb4")
     draw.text((58, 276), "Korean-first records & community", font=body_font, fill="#d4cbb4")
-    draw.rectangle((56, 344, 316, 395), fill="#d7c696", outline="#a68743", width=2)
+    draw.rectangle((56, 344, 340, 395), fill="#d7c696", outline="#a68743", width=2)
     draw.text((77, 358), "UNOFFICIAL FAN PROJECT", font=badge_font, fill="#251c0e")
 
     def add_phone(source: Path, box: tuple[int, int, int, int], angle: float) -> None:
