@@ -5,13 +5,16 @@ import base64
 import hashlib
 import json
 import os
+import queue
 import re
 import shutil
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 import urllib.request
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -25,8 +28,29 @@ except ModuleNotFoundError:
 
 
 PUBLIC_ROOT = Path(__file__).resolve().parent
-EXPECTED_ANDROID_HEAD = "c0fffa988a1ed032d42d82f44adc1b0fdc7a900f"
+CANONICAL_ANDROID_ROOT = Path.home() / (
+    "Documents/Codex/2026-07-24/"
+    "files-mentioned-by-the-user-codex/work/LolClassicBeta_codex_recovered"
+)
 EXPECTED_ANDROID_BRANCH = "codex"
+SONA_PATH = "app/src/main/assets/www/images/historical_gallery/sona-user-reference.png"
+SONA_SHA256 = "07f68e640983dd888bc6cb4d93b8561ce5098c61053923d17e7a8be7c40d7384"
+DEFAULT_COMMUNITY_ROWS = (
+    ("1", "[공지] 자유게시판 이용 안내", "운영자"),
+    ("5", "시즌 3 추억 공유", "복귀유저"),
+    ("4", "룬 조합 공유", "미드라이너"),
+    ("3", "가장 좋아했던 챔피언", "탑라이너"),
+    ("2", "기억나는 시즌 3 아이템", "소환사"),
+)
+OFFICIAL_ONLINE_COMMUNITY_ROWS = (
+    ("official-welcome-20260729", "[공지] 온라인 자유게시판 이용 안내", "운영자"),
+)
+EXPECTED_OFFICIAL_ASSET_COUNTS = {
+    "official_champion": 3,
+    "official_item": 149,
+    "official_mastery": 57,
+    "official_rune": 12,
+}
 EXPECTED_PACKAGE = "com.lolclassic.encyclopedia.qa"
 REJECTED_PRODUCTION_PACKAGE = "com.lolclassic.encyclopedia"
 EXPECTED_ACTIVITY_CLASS = "com.lolclassic.encyclopedia.MainActivity"
@@ -174,7 +198,7 @@ CAPTURES: tuple[tuple[str, str, str, str], ...] = (
         "phone-10-community.png",
         "COMMUNITY",
         "board",
-        "go('board');",
+        "S.bfilter = window.__LOLCLASSIC_COMMUNITY_ONLINE__ ? 'best' : 'all'; S.page = 1; go('board');",
     ),
 )
 
@@ -255,6 +279,7 @@ class SafeDevice:
     def __init__(self, adb_path: Path, expected_serial: str) -> None:
         self.adb_path = adb_path
         self.expected_serial = expected_serial
+        self.forward_created = False
 
     def adb(self, *arguments: str, check: bool = True) -> subprocess.CompletedProcess[str]:
         if not self.expected_serial:
@@ -299,6 +324,33 @@ class SafeDevice:
             "apkLaunchableActivity": identity["activity"],
             "productionPackageRejected": True,
         }
+
+    def installed_package_hashes(self, package: str) -> dict[str, str]:
+        if package not in {EXPECTED_PACKAGE, REJECTED_PRODUCTION_PACKAGE}:
+            raise RuntimeError("package hash request is outside the two-package allowlist")
+        listing = self.adb("shell", "pm", "path", package)
+        hashes: dict[str, str] = {}
+        for line in listing.stdout.splitlines():
+            if not line.strip():
+                continue
+            if not line.startswith("package:"):
+                raise RuntimeError("installed APK path response was not recognized")
+            path = line.removeprefix("package:").strip()
+            if not re.fullmatch(r"/data/app/[A-Za-z0-9_./=+~-]+\.apk", path):
+                raise RuntimeError("installed APK path did not pass the read-only allowlist")
+            result = self.adb("shell", "sha256sum", path).stdout.strip()
+            match = re.fullmatch(r"([0-9a-fA-F]{64})\s+(.+)", result)
+            if not match or match.group(2) != path or path in hashes:
+                raise RuntimeError("installed APK hash result is invalid")
+            hashes[path] = match.group(1).lower()
+        if not hashes:
+            raise RuntimeError(f"required pre-existing package is not installed: {package}")
+        return hashes
+
+    def verify_forward_available(self) -> None:
+        forwards = run([str(self.adb_path), "forward", "--list"]).stdout.splitlines()
+        if any(f"tcp:{DEVTOOLS_PORT}" in line.split() for line in forwards):
+            raise RuntimeError("capture DevTools port is already forwarded by another session")
 
     def foreground_component(self) -> str:
         activities = self.adb(
@@ -368,6 +420,7 @@ class SafeDevice:
             f"tcp:{DEVTOOLS_PORT}",
             f"localabstract:webview_devtools_remote_{pid}",
         )
+        self.forward_created = True
         endpoint = f"http://127.0.0.1:{DEVTOOLS_PORT}/json/list"
         stable: tuple[str, str] | None = None
         observations = 0
@@ -430,12 +483,170 @@ def locate_aapt(adb_path: Path) -> Path:
     return candidates[0]
 
 
-def verify_android_repo(android_repo: Path) -> dict[str, Any]:
+def contained_path(root: Path, relative: str) -> Path:
+    if not relative or "\\" in relative:
+        raise RuntimeError("manifest path is not a repository-relative POSIX path")
+    path = (root / relative).resolve()
+    if Path(relative).is_absolute() or not path.is_relative_to(root.resolve()):
+        raise RuntimeError("manifest path escapes the verified Android repository")
+    return path
+
+
+def verify_asset_manifests(android_repo: Path) -> dict[str, Any]:
+    manifest_path = android_repo / "play-store/version-218-fidelity-official-assets.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    records = manifest.get("assets", [])
+    paths = [str(record.get("path", "")) for record in records]
+    counts: dict[str, int] = {}
+    for record, relative in zip(records, paths):
+        source = contained_path(android_repo, relative)
+        match = re.fullmatch(
+            r"app/src/main/assets/www/images/(official_[a-z]+)/[^/]+\.(?:png|jpg)",
+            relative,
+        )
+        if not match:
+            raise RuntimeError("unexpected path in the official asset manifest")
+        counts[match.group(1)] = counts.get(match.group(1), 0) + 1
+        if (
+            not str(record.get("sourceUrl", "")).startswith(
+                "https://ddragon.leagueoflegends.com/"
+            )
+            or not source.is_file()
+            or sha256_file(source) != str(record.get("sha256", "")).lower()
+            or source.stat().st_size != record.get("size")
+        ):
+            raise RuntimeError(f"official asset source/hash/size gate failed: {relative}")
+    if (
+        manifest.get("historicalApkGameOrContentAssetsImported") != 0
+        or manifest.get("count") != len(paths)
+        or len(set(paths)) != len(paths)
+        or counts != EXPECTED_OFFICIAL_ASSET_COUNTS
+    ):
+        raise RuntimeError("current official asset manifest count/category gate failed")
+
+    history_path = android_repo / "play-store/version-218-historical-gallery-assets.json"
+    history = json.loads(history_path.read_text(encoding="utf-8"))
+    historical = history.get("assets", [])
+    if history.get("count") != 1 or len(historical) != 1:
+        raise RuntimeError("exactly the verified user-selected historical Sona is required")
+    sona = historical[0]
+    source = contained_path(android_repo, str(sona.get("path", "")))
+    if (
+        sona.get("path") != SONA_PATH
+        or sona.get("releaseStatus") != "BLOCKED_FOR_PUBLIC_RELEASE"
+        or sona.get("localUseStatus") != "USER_REQUESTED_LOCAL_QA_ONLY"
+        or str(sona.get("sha256", "")).lower() != SONA_SHA256
+        or str(sona.get("sourceAttachmentSha256", "")).lower() != SONA_SHA256
+        or not source.is_file()
+        or sha256_file(source) != SONA_SHA256
+        or source.stat().st_size != sona.get("size")
+    ):
+        raise RuntimeError("exact old Sona bytes or unresolved local-only status changed")
+
+    provenance_path = android_repo / "play-store/riot-asset-provenance.json"
+    provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+    blocked: list[str] = []
+    for record in provenance.get("assets", []):
+        if record.get("releaseStatus") not in {
+            "BLOCKED_FOR_PUBLIC_RELEASE", "NEEDS_REPLACEMENT", "NEEDS_RIOT_CONFIRMATION",
+            "UNRESOLVED_NOT_SHIPPED",
+        }:
+            continue
+        relative = str(record.get("path", ""))
+        candidate = contained_path(android_repo, relative)
+        if not candidate.is_file():
+            continue
+        if (
+            record.get("releaseTreePresent") is not True
+            or sha256_file(candidate) != str(record.get("sha256", "")).lower()
+        ):
+            raise RuntimeError("included unresolved asset contradicts its provenance")
+        blocked.append(relative)
+    if blocked != [SONA_PATH]:
+        raise RuntimeError("local capture requires exactly one identified unresolved Sona asset")
+    return {
+        "officialAssetManifest": {
+            "path": manifest_path.relative_to(android_repo).as_posix(),
+            "count": len(paths),
+            "countsByDirectory": counts,
+            "sha256": sha256_file(manifest_path),
+            "historicalApkGameOrContentAssetsImported": 0,
+        },
+        "releaseReadiness": {
+            "status": "BLOCKED_FOR_PUBLIC_RELEASE",
+            "localUseStatus": "USER_REQUESTED_LOCAL_QA_ONLY",
+            "unresolvedAssetCount": len(blocked),
+            "unresolvedAssets": [{"path": SONA_PATH, "sha256": SONA_SHA256}],
+            "historicalManifestSha256": sha256_file(history_path),
+            "riotProvenanceSha256": sha256_file(provenance_path),
+            "rightsStatement": (
+                "Current source identity and physical capture do not establish public "
+                "or Store redistribution authorization. These are local candidates only."
+            ),
+        },
+    }
+
+
+def verify_apk_www(android_repo: Path, apk: Path, expected_sha256: str) -> dict[str, Any]:
+    if not re.fullmatch(r"[0-9a-fA-F]{64}", expected_sha256):
+        raise RuntimeError("an explicit 64-character expected APK SHA-256 is required")
+    if not apk.is_file() or sha256_file(apk) != expected_sha256.lower():
+        raise RuntimeError("QA APK does not match the explicitly expected SHA-256")
+    www = android_repo / "app/src/main/assets/www"
+    excluded = {
+        Path(relative).relative_to("app/src/main/assets/www").as_posix()
+        for relative in EXPECTED_ANDROID_PROTECTED_UNTRACKED_SHA256
+    }
+    sources = {
+        source.relative_to(www).as_posix(): source
+        for source in www.rglob("*")
+        if source.is_file() and source.relative_to(www).as_posix() not in excluded
+    }
+    digest = hashlib.sha256()
+    with zipfile.ZipFile(apk) as archive:
+        entries = [
+            name.removeprefix("assets/www/")
+            for name in archive.namelist()
+            if name.startswith("assets/www/") and not name.endswith("/")
+        ]
+        if len(set(entries)) != len(entries) or set(entries) != set(sources):
+            raise RuntimeError("APK www path set does not match the current source tree")
+        for relative, source in sorted(sources.items()):
+            if not source.resolve().is_relative_to(www.resolve()):
+                raise RuntimeError("Android www source escapes the canonical tree")
+            payload = source.read_bytes()
+            if archive.read("assets/www/" + relative) != payload:
+                raise RuntimeError(f"APK www bytes differ from current source: {relative}")
+            digest.update(relative.encode("utf-8") + b"\0" + payload + b"\0")
+    offline = json.loads((www / "data/offline-assets.json").read_text(encoding="utf-8"))
+    image_paths = [relative for relative in sources if relative.startswith("images/")]
+    if (
+        offline.get("count") != len(image_paths)
+        or sorted(offline.get("assets", [])) != sorted(image_paths)
+        or offline.get("totalBytes") != sum(sources[path].stat().st_size for path in image_paths)
+    ):
+        raise RuntimeError("current offline asset manifest does not match the bundled image set")
+    return {
+        "apkSha256": expected_sha256.lower(),
+        "wwwFileCount": len(sources),
+        "wwwContentSha256": digest.hexdigest(),
+        "fingerprintAlgorithm": "sha256(sorted UTF-8 www-relative path NUL file bytes NUL)",
+        "everyPackagedWwwFileMatchesCurrentSource": True,
+        "offlineManifestVerified": True,
+    }
+
+
+def verify_android_repo(android_repo: Path, expected_head: str) -> dict[str, Any]:
+    android_repo = android_repo.resolve()
+    if android_repo != CANONICAL_ANDROID_ROOT.resolve():
+        raise RuntimeError("only the canonical recovered Android repository is allowed")
+    if not re.fullmatch(r"[0-9a-fA-F]{40}", expected_head):
+        raise RuntimeError("an explicit full expected Android commit is required")
     branch = run(["git", "branch", "--show-current"], cwd=android_repo).stdout.strip()
     head = run(["git", "rev-parse", "HEAD"], cwd=android_repo).stdout.strip()
     tracked_paths = frozenset(
         line
-        for line in run(["git", "diff", "--name-only"], cwd=android_repo).stdout.splitlines()
+        for line in run(["git", "diff", "HEAD", "--name-only"], cwd=android_repo).stdout.splitlines()
         if line
     )
     untracked_paths = frozenset(
@@ -445,51 +656,23 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
         ).stdout.splitlines()
         if line
     )
-    if branch != EXPECTED_ANDROID_BRANCH or head != EXPECTED_ANDROID_HEAD:
+    if branch != EXPECTED_ANDROID_BRANCH or head != expected_head.lower():
         raise RuntimeError("Android canonical branch/HEAD gate failed")
     if tracked_paths != EXPECTED_ANDROID_TRACKED_DIFF_PATHS:
         raise RuntimeError(
             "Android tracked-state gate failed; exact final clean checkpoint required"
         )
 
-    manifest_path = android_repo / "play-store/version-218-fidelity-official-assets.json"
-    if not manifest_path.is_file():
-        raise RuntimeError("Android version-218 official asset manifest is missing")
-    asset_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    asset_paths = frozenset(str(record.get("path", "")) for record in asset_manifest.get("assets", []))
-    champion_assets = {
-        "app/src/main/assets/www/images/official_champion/kennen.png",
-        "app/src/main/assets/www/images/official_champion/shen.png",
-    }
-    item_assets = {
-        path
-        for path in asset_paths
-        if re.fullmatch(r"app/src/main/assets/www/images/official_item/\d+\.png", path)
-    }
-    if (
-        asset_manifest.get("count") != 151
-        or asset_manifest.get("historicalApkGameOrContentAssetsImported") != 0
-        or len(asset_paths) != 151
-        or len(item_assets) != 149
-        or asset_paths != frozenset(champion_assets | item_assets)
-    ):
-        raise RuntimeError("Android version-218 official asset manifest failed closed")
-    for record in asset_manifest["assets"]:
-        path = str(record["path"])
-        source = android_repo / path
-        if (
-            not source.is_file()
-            or sha256_file(source).upper() != str(record.get("sha256", "")).upper()
-            or source.stat().st_size != int(record.get("size", -1))
-        ):
-            raise RuntimeError(f"Android official asset bytes do not match manifest: {path}")
+    manifests = verify_asset_manifests(android_repo)
 
     for relative, expected_hash in EXPECTED_ANDROID_PROTECTED_UNTRACKED_SHA256.items():
         protected = android_repo / relative
         if not protected.is_file() or sha256_file(protected) != expected_hash:
             raise RuntimeError(f"Android protected untracked file integrity failed: {relative}")
 
-    if untracked_paths != EXPECTED_ANDROID_UNTRACKED_PATHS:
+    tracked_known = set(run(["git", "ls-files"], cwd=android_repo).stdout.splitlines())
+    expected_untracked = EXPECTED_ANDROID_UNTRACKED_PATHS - tracked_known
+    if untracked_paths != expected_untracked:
         raise RuntimeError(
             "Android untracked-state gate failed; exact preserved evidence paths required"
         )
@@ -505,7 +688,7 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
     return {
         "branch": branch,
         "commit": head,
-        "trackedState": "authorized-version-218-fidelity-final-commit",
+        "trackedState": "verified-clean-user-selected-sona-source-commit",
         "trackedPaths": sorted(tracked_paths),
         "preservedUntrackedPaths": sorted(untracked_paths),
         "runtimeSourcePaths": list(CAPTURE_RUNTIME_SOURCE_PATHS),
@@ -513,12 +696,7 @@ def verify_android_repo(android_repo: Path) -> dict[str, Any]:
         "runtimeSourceFingerprintAlgorithm": (
             "sha256(ordered UTF-8 path NUL file bytes NUL for runtimeSourcePaths)"
         ),
-        "officialAssetManifest": {
-            "path": "play-store/version-218-fidelity-official-assets.json",
-            "count": len(asset_paths),
-            "sha256": sha256_file(manifest_path),
-            "historicalApkGameOrContentAssetsImported": 0,
-        },
+        **manifests,
     }
 
 
@@ -528,6 +706,135 @@ def evaluate(android_tools: Path, websocket_url: str, expression: str) -> Any:
         ["node", str(android_tools / "webview_eval.mjs"), websocket_url, encoded]
     )
     return json.loads(result.stdout)
+
+
+def evaluate_private(android_tools: Path, websocket_url: str, expression: str) -> Any:
+    """Keep recoverable storage values out of argv and error output."""
+    try:
+        completed = subprocess.run(
+            ["node", str(android_tools / "webview_eval.mjs"), websocket_url, "-"],
+            input=expression,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            timeout=70,
+            check=False,
+        )
+        if completed.returncode != 0:
+            raise RuntimeError("private evaluation failed")
+        return json.loads(completed.stdout)
+    except Exception:
+        raise RuntimeError("private storage operation failed; values withheld") from None
+
+
+def native_storage_fingerprint(values: dict[str, str]) -> dict[str, Any]:
+    # Match the shared helper's JSON.stringify(sorted [key,value] entries),
+    # including JS UTF-16 key ordering and well-formed lone-surrogate escaping.
+    keys = sorted(values, key=lambda key: key.encode("utf-16-be", errors="surrogatepass"))
+    payload = json.dumps([[key, values[key]] for key in keys], ensure_ascii=False, separators=(",", ":"))
+    payload = re.sub(r"[\ud800-\udfff]", lambda match: "\\u%04x" % ord(match.group()), payload)
+    return {"keyCount": len(keys), "sha256": hashlib.sha256(payload.encode("utf-8")).hexdigest()}
+
+
+def start_memory_storage_session(
+    android_tools: Path, websocket_url: str
+) -> tuple[subprocess.Popen[str], dict[str, Any]]:
+    process = subprocess.Popen(
+        ["node", str(android_tools / "qa_storage_session.mjs"), websocket_url],
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+        text=True, encoding="utf-8", bufsize=1,
+        creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+    )
+    ready_line: queue.Queue[str] = queue.Queue()
+    def receive_ready() -> None:
+        try:
+            ready_line.put(process.stdout.readline() if process.stdout else "")
+        except Exception:
+            ready_line.put("")
+    threading.Thread(target=receive_ready, daemon=True).start()
+    try:
+        ready = json.loads(ready_line.get(timeout=45))
+        if ready.get("mode") != "fresh-in-memory-fixture" or not isinstance(ready.get("nativeStorage"), dict):
+            raise RuntimeError("memory storage session readiness is invalid")
+        return process, ready
+    except Exception:
+        if process.poll() is None:
+            process.kill()
+        process.communicate(timeout=10)
+        raise RuntimeError("memory storage setup failed; native QA restart is required") from None
+
+
+def finish_memory_storage_session(process: subprocess.Popen[str]) -> dict[str, Any]:
+    try:
+        stdout, _ = process.communicate(input="\n", timeout=20)
+        lines = [line for line in stdout.splitlines() if line.strip()]
+        result = json.loads(lines[-1]) if lines else None
+        if process.returncode != 0 or result != {"preloadRemoved": True}:
+            raise RuntimeError("memory storage preload removal was not acknowledged")
+        return result
+    except Exception:
+        if process.poll() is None:
+            process.kill()
+        process.communicate(timeout=10)
+        raise RuntimeError("memory storage cleanup failed; native QA restart is required") from None
+
+
+def prepare_memory_capture_state(android_tools: Path, websocket_url: str) -> dict[str, Any]:
+    result = evaluate(android_tools, websocket_url, """
+    (async () => {
+      if (window.__qaMemoryStorageActive !== true) throw new Error('fresh memory fixture required');
+      for (let attempt = 0; attempt < 120 && (typeof booted === 'undefined' || !booted); attempt++)
+        await new Promise(resolve => setTimeout(resolve, 50));
+      if (window.__qaMemoryStorageActive !== true || typeof booted === 'undefined' || !booted)
+        throw new Error('fresh memory fixture did not boot');
+      if (store.get('lolcCommunitySessionV1', null) !== null) throw new Error('unexpected authenticated session');
+      store.set('res3nick', '소환사');
+      store.set('res3posts', JSON.parse(JSON.stringify(SEED_POSTS)));
+      const posts = loadPosts();
+      window.__qaMarketingFixturePrepared = true;
+      return {memoryFixtureActive: true, fixturePrepared: true, nicknameIsDefault: nick() === '소환사',
+        seededPostIds: posts.map(post => String(post.id)).sort(),
+        localOwnerCount: posts.filter(post => post.localOwner).length,
+        commentCount: posts.reduce((sum, post) => sum + post.comments.length, 0),
+        authenticatedSessionPresent: store.get('lolcCommunitySessionV1', null) !== null};
+    })()
+    """)
+    expected = {
+        "memoryFixtureActive": True, "fixturePrepared": True, "nicknameIsDefault": True,
+        "seededPostIds": ["1", "2", "3", "4", "5"], "localOwnerCount": 0,
+        "commentCount": 0, "authenticatedSessionPresent": False,
+    }
+    if result != expected:
+        raise RuntimeError("marketing memory fixture does not match deterministic default data")
+    return result
+
+
+def require_memory_capture_state(android_tools: Path, websocket_url: str) -> None:
+    verified = evaluate(android_tools, websocket_url, """
+    window.__qaMemoryStorageActive === true && window.__qaMarketingFixturePrepared === true
+      && store.get('lolcCommunitySessionV1', null) === null && nick() === '소환사'
+    """)
+    if verified is not True:
+        raise RuntimeError("capture refused because isolated default memory fixture is missing")
+
+
+def validate_community_rows(state: dict[str, Any]) -> None:
+    expected = OFFICIAL_ONLINE_COMMUNITY_ROWS if state.get("communityOnline") else DEFAULT_COMMUNITY_ROWS
+    rows = tuple(tuple(row) for row in state.get("communityRows", []))
+    if rows != expected or state.get("authenticatedSessionPresent") is not False:
+        raise RuntimeError("community capture contains unexpected rows or an authenticated session")
+
+
+def capture_isolated_png(
+    device: SafeDevice, android_tools: Path, websocket_url: str, destination: Path, index: int
+) -> dict[str, Any]:
+    require_memory_capture_state(android_tools, websocket_url)
+    device.wait_for_exact_foreground()
+    device.capture_png(destination, index)
+    png = inspect_png(destination)
+    if (png["width"], png["height"], png["mode"]) != (1080, 2340, "RGB"):
+        raise RuntimeError("physical capture dimensions or RGB encoding changed")
+    return png
 
 
 def route_and_audit(
@@ -546,8 +853,10 @@ def route_and_audit(
         await new Promise(resolve => setTimeout(resolve, 50));
       }
         """
-    expression = f"""
+    expression = rf"""
     (async () => {{
+      if (window.__qaMemoryStorageActive !== true || window.__qaMarketingFixturePrepared !== true)
+        throw new Error('isolated marketing fixture required before routing');
       for (let attempt = 0; attempt < 120 && !booted; attempt += 1) {{
         await new Promise(resolve => setTimeout(resolve, 50));
       }}
@@ -583,10 +892,35 @@ def route_and_audit(
       const placeholders = [...document.querySelectorAll('.spellIcon.missing')]
         .map(element => element.textContent.trim()).filter(Boolean);
       const text = document.body.innerText || '';
+      let homeFeature = null;
+      if ({json.dumps(purpose)} === 'HOME') {{
+        const poster = document.querySelector('.hmPoster');
+        if (!poster) throw new Error('home feature missing');
+        const style = getComputedStyle(poster);
+        const url = style.backgroundImage.match(/url\(["']?([^"')]+)["']?\)/)?.[1];
+        if (!url) throw new Error('home feature image URL missing');
+        const image = new Image(); image.src = url; await image.decode();
+        const bytes = await (await fetch(url)).arrayBuffer();
+        const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))]
+          .map(byte => byte.toString(16).padStart(2, '0')).join('');
+        homeFeature = {{url, sha256: hash, width: image.naturalWidth, height: image.naturalHeight,
+          backgroundSize: style.backgroundSize, backgroundPosition: style.backgroundPosition}};
+      }}
       return {{
         purpose: {json.dumps(purpose)},
         view: S.view,
         hash: location.hash,
+        href: location.href,
+        memoryFixtureActive: window.__qaMemoryStorageActive === true,
+        marketingFixturePrepared: window.__qaMarketingFixturePrepared === true,
+        authenticatedSessionPresent: store.get('lolcCommunitySessionV1', null) !== null,
+        communityOnline: window.__LOLCLASSIC_COMMUNITY_ONLINE__ === true,
+        communityFilter: S.bfilter || 'all',
+        communityRows: [...document.querySelectorAll('.brows .brow')].map(row => [
+          row.getAttribute('data-post'), row.querySelector('.bt')?.textContent.trim(),
+          row.querySelector('.bn')?.textContent.trim()]),
+        serviceWorkerControlled: Boolean(navigator.serviceWorker?.controller),
+        homeFeature,
         viewport: [innerWidth, innerHeight],
         imageCount: images.length,
         broken,
@@ -601,14 +935,30 @@ def route_and_audit(
     }})()
     """
     result = evaluate(android_tools, websocket_url, expression)
+    if result.get("memoryFixtureActive") is not True or result.get("marketingFixturePrepared") is not True:
+        raise RuntimeError("route audit lost the isolated marketing memory fixture")
     expected_hash = f"#{expected_route}"
     if result.get("view") != expected_route or result.get("hash") != expected_hash:
         raise RuntimeError(f"route mismatch for {purpose}: {result.get('view')!r}")
+    if (
+        not str(result.get("href", "")).startswith(APP_URL_PREFIX)
+        or result.get("serviceWorkerControlled") is not False
+    ):
+        raise RuntimeError("capture runtime is not the current un-cached Android appassets page")
+    if purpose == "HOME":
+        feature = result.get("homeFeature") or {}
+        if (
+            not str(feature.get("url", "")).endswith("/images/historical_gallery/sona-user-reference.png")
+            or feature.get("sha256") != SONA_SHA256
+            or (feature.get("width"), feature.get("height")) != (307, 557)
+        ):
+            raise RuntimeError("physical home does not render the exact user-selected old Sona bytes")
     if result.get("broken") or result.get("placeholders") or result.get("modalOpen"):
         raise RuntimeError(f"visual preflight failed for {purpose}")
     if result.get("scrollX") != 0 or result.get("scrollY") != 0:
         raise RuntimeError(f"capture scroll was not reset for {purpose}")
     if purpose == "COMMUNITY":
+        validate_community_rows(result)
         community_failure_markers = (
             "온라인 게시판을 불러오는 중입니다.",
             "네트워크 연결을 확인한 뒤 다시 시도해 주세요.",
@@ -831,6 +1181,9 @@ def record_tour(screenshots: Path, destination: Path) -> dict[str, Any]:
             f"duration={duration:.3f}, frames={frames}"
         )
     return {
+        "classification": "PHYSICAL_SCREENSHOT_DERIVED_TOUR",
+        "liveScreenRecording": False,
+        "captureMethod": "Ten physical screenshots held for 3 seconds each; no live screen recording",
         "routes": route_evidence,
         "segments": segment_evidence,
         "width": int(stream["width"]),
@@ -928,46 +1281,233 @@ def write_json(path: Path, payload: Any) -> None:
     os.replace(temporary, path)
 
 
+def verify_staging_directory(staging: Path, android_repo: Path) -> Path:
+    staging = staging.resolve()
+    for repository in (PUBLIC_ROOT.resolve(), android_repo.resolve()):
+        if staging.is_relative_to(repository) or repository.is_relative_to(staging):
+            raise RuntimeError("local marketing staging must be outside both repositories")
+    if any((ancestor / ".git").exists() for ancestor in (staging, *staging.parents)):
+        raise RuntimeError("local marketing staging must not be inside a Git repository")
+    if staging.exists():
+        raise RuntimeError("a new, non-existing local staging directory is required")
+    return staging
+
+
+def local_storage_snapshot(android_tools: Path, websocket_url: str) -> dict[str, str]:
+    result = evaluate_private(android_tools, websocket_url, """
+    (() => {
+      if (typeof booted === 'undefined' || !booted)
+        throw new Error('existing app must already be booted before storage snapshot');
+      if (window.__qaMemoryStorageActive)
+        throw new Error('full QA memory fixtures must be removed before marketing capture');
+      return Object.fromEntries(Object.keys(localStorage).map(key => [key, localStorage.getItem(key)]));
+    })()
+    """)
+    if not isinstance(result, dict) or any(
+        not isinstance(key, str) or not isinstance(value, str)
+        for key, value in result.items()
+    ):
+        raise RuntimeError("QA LocalStorage snapshot was invalid")
+    return result
+
+
+def snapshot_existing_qa_storage(
+    device: SafeDevice, android_tools: Path
+) -> tuple[str, dict[str, str]]:
+    """Attach to an existing target without launching or restarting the QA app."""
+    pid = device.adb("shell", "pidof", EXPECTED_PACKAGE, check=False).stdout.strip()
+    if not re.fullmatch(r"[1-9][0-9]*", pid):
+        raise RuntimeError("an already-running QA WebView is required for the prelaunch snapshot")
+    websocket_url = device.wait_for_webview(android_tools)
+    # The synchronous result is also the sole input to storage_fingerprint; a
+    # second observation cannot silently become the baseline for the saved values.
+    original = local_storage_snapshot(android_tools, websocket_url)
+    return websocket_url, original
+
+
+def storage_fingerprint(values: dict[str, str]) -> dict[str, Any]:
+    payload = json.dumps(values, sort_keys=True, ensure_ascii=True).encode("utf-8")
+    return {"entries": len(values), "sha256": hashlib.sha256(payload).hexdigest()}
+
+
+def restore_local_storage(
+    android_tools: Path, websocket_url: str, original: dict[str, str]
+) -> dict[str, Any]:
+    encoded = json.dumps(json.dumps(original, ensure_ascii=True), ensure_ascii=True)
+    # Values remain in process memory and are never written to capture evidence.
+    evaluate_private(android_tools, websocket_url, """
+    (async () => {
+      if (globalThis.__qaMemoryStorageActive) throw new Error('native storage restore requires fixture removal');
+      for (let attempt = 0; attempt < 120 && (typeof booted === 'undefined' || !booted); attempt++)
+        await new Promise(resolve => setTimeout(resolve, 50));
+      if (globalThis.__qaMemoryStorageActive || typeof booted === 'undefined' || !booted)
+        throw new Error('native QA runtime did not finish booting before storage restore');
+      const original = JSON.parse(""" + encoded + """);
+      for (const key of Object.keys(localStorage)) {
+        if (!Object.hasOwn(original, key)) localStorage.removeItem(key);
+      }
+      for (const [key, value] of Object.entries(original)) localStorage.setItem(key, value);
+      return true;
+    })()
+    """)
+    observed = local_storage_snapshot(android_tools, websocket_url)
+    if observed != original:
+        raise RuntimeError("QA LocalStorage restoration did not reproduce the original values")
+    return {"original": storage_fingerprint(original), "restored": storage_fingerprint(observed), "verified": True}
+
+
+def restore_capture_state(
+    device: SafeDevice,
+    android_tools: Path,
+    websocket_url: str | None,
+    original_storage: dict[str, str] | None,
+    original_settings: dict[str, str],
+    production_before: dict[str, str],
+    *,
+    memory_session: subprocess.Popen[str] | None = None,
+    memory_session_attempted: bool = False,
+) -> dict[str, Any]:
+    result: dict[str, Any] = {"errors": [], "storage": {"verified": False}, "settings": {}}
+    if memory_session is not None:
+        try:
+            result["memorySession"] = finish_memory_storage_session(memory_session)
+        except Exception as error:
+            result["errors"].append("memorySession: " + type(error).__name__)
+    if memory_session_attempted:
+        # Removing the preload does not replace Storage in the current document.
+        # A new native QA process is mandatory before touching original values.
+        try:
+            device.adb("shell", "am", "force-stop", EXPECTED_PACKAGE)
+            device.adb("shell", "am", "start", "-W", "-n", ACTIVITY)
+            device.wait_for_exact_foreground()
+            websocket_url = device.wait_for_webview(android_tools)
+            result["nativeQaRestartedAfterFixture"] = True
+        except Exception as error:
+            websocket_url = None
+            result["errors"].append("nativeQaRestart: " + type(error).__name__)
+    if original_storage is None:
+        result["storage"] = {"verified": True, "captureStorageMutationsStarted": False}
+    else:
+        try:
+            try:
+                if websocket_url is None:
+                    raise RuntimeError("original capture WebView session was lost")
+                result["storage"] = restore_local_storage(android_tools, websocket_url, original_storage)
+            except Exception:
+                # An install/restart may invalidate the earlier target. Reconnect only
+                # to the known QA activity so the original snapshot is still restored.
+                device.adb("shell", "am", "start", "-W", "-n", ACTIVITY)
+                device.wait_for_exact_foreground()
+                reconnected = device.wait_for_webview(android_tools)
+                result["storage"] = restore_local_storage(android_tools, reconnected, original_storage)
+                result["storage"]["reconnectedForRestoration"] = True
+            # Stop capture-only in-memory timers after the durable values are restored.
+            device.adb("shell", "am", "force-stop", EXPECTED_PACKAGE)
+        except Exception as error:
+            result["errors"].append("localStorage: " + type(error).__name__)
+    restored: dict[str, str] = {}
+    settings_errors: list[str] = []
+    for label, namespace, key in (
+        ("accelerometerRotation", "system", "accelerometer_rotation"),
+        ("userRotation", "system", "user_rotation"),
+        ("headsUpNotifications", "global", "heads_up_notifications_enabled"),
+    ):
+        try:
+            restored[label] = device.restore_setting(namespace, key, original_settings[label])
+        except Exception as error:
+            settings_errors.append(label + ": " + type(error).__name__)
+    result["settings"] = {"original": original_settings, "restored": restored, "verified": not settings_errors}
+    result["errors"].extend(settings_errors)
+    try:
+        after = device.installed_package_hashes(REJECTED_PRODUCTION_PACKAGE)
+        result["productionPackage"] = {
+            "before": production_before, "after": after, "verified": production_before == after,
+        }
+        if not production_before or production_before != after:
+            raise RuntimeError("production package hashes changed")
+    except Exception as error:
+        result["errors"].append("productionPackage: " + type(error).__name__)
+    try:
+        if device.forward_created:
+            removed = device.adb("forward", "--remove", f"tcp:{DEVTOOLS_PORT}")
+            device.forward_created = False
+            result["devtoolsForwardRemoved"] = removed.returncode == 0
+        else:
+            result["devtoolsForwardRemoved"] = True
+    except Exception as error:
+        result["errors"].append("devtoolsForward: " + type(error).__name__)
+    result["verified"] = not result["errors"]
+    return result
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Safely capture current QA Android marketing media for the local Public site."
+        description="Stage data-preserving physical QA marketing candidates outside both repositories."
     )
     parser.add_argument("--expected-serial", required=True)
     parser.add_argument("--android-repo", type=Path, required=True)
+    parser.add_argument("--expected-head", required=True)
     parser.add_argument("--apk", type=Path, required=True)
-    parser.add_argument("--output", type=Path, default=PUBLIC_ROOT / "assets")
-    parser.add_argument("--evidence", type=Path, default=PUBLIC_ROOT / "capture-evidence.json")
+    parser.add_argument("--expected-apk-sha256", required=True)
+    parser.add_argument("--staging-dir", type=Path, required=True)
+    parser.add_argument("--preflight-only", action="store_true", help="Verify files and hashes without contacting or mutating any device.")
     args = parser.parse_args()
 
     android_repo = args.android_repo.resolve()
     apk = args.apk.resolve()
-    output = args.output.resolve()
-    evidence_path = args.evidence.resolve()
-    if not apk.is_file():
-        raise RuntimeError("QA APK is missing")
+    staging = verify_staging_directory(args.staging_dir, android_repo)
+    output = staging / "assets"
+    evidence_path = staging / "capture-evidence.json"
     require_pillow()
 
-    git = verify_android_repo(android_repo)
+    git = verify_android_repo(android_repo, args.expected_head)
+    bundled = verify_apk_www(android_repo, apk, args.expected_apk_sha256)
+    if args.preflight_only:
+        print(json.dumps({"source": git, "bundledWww": bundled, "deviceContacted": False}, ensure_ascii=False, indent=2))
+        return 0
+    if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
+        raise RuntimeError("ffmpeg and ffprobe are required before capture starts")
     adb_path = locate_adb()
     aapt = locate_aapt(adb_path)
     device = SafeDevice(adb_path, args.expected_serial)
     gate = device.verify_gate(apk, aapt)
+    device.verify_forward_available()
+    production_before = device.installed_package_hashes(REJECTED_PRODUCTION_PACKAGE)
+    device.installed_package_hashes(EXPECTED_PACKAGE)
 
-    previous_rotation = {
-        "accelerometer": device.read_setting("system", "accelerometer_rotation"),
-        "user": device.read_setting("system", "user_rotation"),
+    original_settings = {
+        "accelerometerRotation": device.read_setting("system", "accelerometer_rotation"),
+        "userRotation": device.read_setting("system", "user_rotation"),
+        "headsUpNotifications": device.read_setting("global", "heads_up_notifications_enabled", allow_null=True),
     }
-    previous_heads_up = device.read_setting(
-        "global", "heads_up_notifications_enabled", allow_null=True
-    )
+    staging.mkdir(parents=True, exist_ok=False)
     captured_at = utc_now()
     screenshot_evidence: list[dict[str, Any]] = []
-    video_evidence: dict[str, Any]
+    video_evidence: dict[str, Any] = {}
     foreground = ""
     capture_settings: dict[str, str] = {}
-    settings_restoration: dict[str, Any] = {}
+    websocket_url: str | None = None
+    original_storage: dict[str, str] | None = None
+    upgrade_storage: dict[str, Any] = {}
+    memory_session: subprocess.Popen[str] | None = None
+    memory_session_attempted = False
+    memory_ready: dict[str, Any] = {}
+    memory_prepared: dict[str, Any] = {}
+    failure: str | None = None
+    source_failure: str | None = None
+    phase = "snapshot-already-running-qa-before-launch"
     try:
-        device.adb("install", "-r", str(apk))
+        websocket_url, original_storage = snapshot_existing_qa_storage(device, android_repo / "tools")
+        # Recheck identity and bytes immediately before the only package installation.
+        device.verify_gate(apk, aapt)
+        verify_apk_www(android_repo, apk, args.expected_apk_sha256)
+        phase = "upgrade-qa"
+        installed = device.adb("install", "-r", str(apk))
+        if "Success" not in installed.stdout:
+            raise RuntimeError("QA-only install -r did not report success")
+        if list(device.installed_package_hashes(EXPECTED_PACKAGE).values()) != [bundled["apkSha256"]]:
+            raise RuntimeError("installed QA APK does not match the verified input APK")
+        phase = "configure-capture-settings"
         device.adb("shell", "settings", "put", "system", "accelerometer_rotation", "0")
         device.adb("shell", "settings", "put", "system", "user_rotation", "0")
         device.adb("shell", "settings", "put", "global", "heads_up_notifications_enabled", "0")
@@ -985,15 +1525,32 @@ def main() -> int:
         device.adb("shell", "am", "start", "-W", "-n", ACTIVITY)
         foreground = device.wait_for_exact_foreground()
         websocket_url = device.wait_for_webview(android_repo / "tools")
+        phase = "verify-upgrade-storage"
+        after_upgrade = local_storage_snapshot(android_repo / "tools", websocket_url)
+        upgrade_storage = {
+            "original": storage_fingerprint(original_storage),
+            "afterUpgrade": storage_fingerprint(after_upgrade),
+            "verified": after_upgrade == original_storage,
+        }
+        if after_upgrade != original_storage:
+            raise RuntimeError("QA upgrade changed existing LocalStorage before capture")
+
+        phase = "start-fresh-memory-marketing-fixture"
+        memory_session_attempted = True
+        memory_session, memory_ready = start_memory_storage_session(android_repo / "tools", websocket_url)
+        if memory_ready["nativeStorage"] != native_storage_fingerprint(original_storage):
+            raise RuntimeError("native LocalStorage changed while the memory preload was installed")
+        memory_prepared = prepare_memory_capture_state(android_repo / "tools", websocket_url)
 
         for index, (filename, purpose, route, script) in enumerate(CAPTURES, start=1):
+            phase = "capture-" + purpose
+            require_memory_capture_state(android_repo / "tools", websocket_url)
             state = route_and_audit(android_repo / "tools", websocket_url, purpose, route, script)
             hits = sensitive_hits(state["text"])
             if hits:
                 raise RuntimeError(f"sensitive DOM pattern found in {purpose}: {sorted(hits)}")
             destination = output / filename
-            device.capture_png(destination, index)
-            png = inspect_png(destination)
+            png = capture_isolated_png(device, android_repo / "tools", websocket_url, destination, index)
             screenshot_evidence.append(
                 {
                     "file": filename,
@@ -1006,47 +1563,54 @@ def main() -> int:
                     "intentionalTextFallbackCount": len(state["textFallbacks"]),
                     "runeRecordCount": state["runeRecordCount"] if purpose.startswith("RUNE") else None,
                     "domTextPatternHits": hits,
+                    "classification": "LOCAL_PHYSICAL_CAPTURE_PENDING_REVIEW",
+                    "captureDataMode": "fresh-in-memory-fixture with deterministic default data; existing personal storage excluded",
+                    "syntheticContent": False,
+                    "runtime": {
+                        "href": state["href"], "serviceWorkerControlled": state["serviceWorkerControlled"],
+                        "homeFeature": state["homeFeature"],
+                        "memoryFixtureActive": state["memoryFixtureActive"],
+                        "marketingFixturePrepared": state["marketingFixturePrepared"],
+                        "communityOnline": state["communityOnline"],
+                        "communityFilter": state["communityFilter"] if purpose == "COMMUNITY" else None,
+                        "communityRows": state["communityRows"] if purpose == "COMMUNITY" else [],
+                        "authenticatedSessionPresent": state["authenticatedSessionPresent"],
+                    },
                     "png": png,
                 }
             )
 
         # app-main-screen is a deliberate poster alias of the freshly captured HOME state.
         shutil.copyfile(output / "phone-01-home.png", output / "app-main-screen.png")
-        video_evidence = record_tour(output, output / "app-feature-tour.mp4")
+    except (Exception, KeyboardInterrupt) as error:
+        # Do not copy device/DOM errors that could include private storage values.
+        failure = type(error).__name__
     finally:
-        restoration_errors: list[str] = []
-        restored_values: dict[str, str] = {}
-        for label, namespace, key, original in (
-            (
-                "accelerometerRotation",
-                "system",
-                "accelerometer_rotation",
-                previous_rotation["accelerometer"],
-            ),
-            ("userRotation", "system", "user_rotation", previous_rotation["user"]),
-            (
-                "headsUpNotifications",
-                "global",
-                "heads_up_notifications_enabled",
-                previous_heads_up,
-            ),
-        ):
-            try:
-                restored_values[label] = device.restore_setting(namespace, key, original)
-            except Exception as error:
-                restoration_errors.append(f"{label}: {error}")
-        device.adb("forward", "--remove", f"tcp:{DEVTOOLS_PORT}", check=False)
-        settings_restoration = {
-            "original": {
-                "accelerometerRotation": previous_rotation["accelerometer"],
-                "userRotation": previous_rotation["user"],
-                "headsUpNotifications": previous_heads_up,
-            },
-            "restored": restored_values,
-            "verified": not restoration_errors,
-        }
-        if restoration_errors:
-            raise RuntimeError("; ".join(restoration_errors))
+        cleanup = restore_capture_state(
+            device, android_repo / "tools", websocket_url, original_storage,
+            original_settings, production_before,
+            memory_session=memory_session, memory_session_attempted=memory_session_attempted,
+        )
+        write_json(staging / "capture-safety.json", {
+            "capturedAt": captured_at, "failureType": failure,
+            "failurePhase": phase if failure else None,
+            "upgradeStorage": upgrade_storage, "restoration": cleanup,
+            "releaseStatus": "BLOCKED_FOR_PUBLIC_RELEASE", "unresolvedAssetCount": 1,
+            "storageValuesPersistedToDisk": False, "pmClearCalled": False,
+            "storageSnapshotBoundary": "existing running WebView before capture launches, restarts, or installs the QA app",
+            "storageSnapshotTaken": original_storage is not None,
+            "memoryStorageIsolation": {"attempted": memory_session_attempted, "ready": memory_ready, "prepared": memory_prepared},
+        })
+    if failure or not cleanup["verified"]:
+        raise RuntimeError("capture or state restoration failed; inspect local capture-safety.json")
+    # Release the device before the deterministic video/composition workload.
+    if verify_android_repo(android_repo, args.expected_head) != git:
+        source_failure = "Android source changed during capture"
+    if verify_apk_www(android_repo, apk, args.expected_apk_sha256) != bundled:
+        source_failure = "Android APK changed during capture"
+    if source_failure:
+        raise RuntimeError(source_failure)
+    video_evidence = record_tour(output, output / "app-feature-tour.mp4")
 
     icon = copy_historical_launcher_derivative(
         android_repo / "play-store/assets/app-icon-512.png",
@@ -1081,16 +1645,34 @@ def main() -> int:
 
     evidence = {
         "schemaVersion": 1,
+        "classification": "LOCAL_CANDIDATE_NOT_PUBLISHED",
+        "releaseStatus": "BLOCKED_FOR_PUBLIC_RELEASE",
+        "unresolvedAssetCount": 1,
+        "releaseReadiness": git["releaseReadiness"],
         "capturedAt": captured_at,
         "source": {
             "android": git,
             "applicationId": EXPECTED_PACKAGE,
             "apkSha256": sha256_file(apk),
+            "bundledWww": bundled,
         },
         "deviceGate": gate,
         "foregroundComponent": foreground,
         "captureSettings": capture_settings,
-        "settingsRestoration": settings_restoration,
+        "settingsRestoration": cleanup["settings"],
+        "localStoragePreservation": {
+            "upgrade": upgrade_storage, "restoration": cleanup["storage"], "valuesPersistedToDisk": False,
+            "snapshotBoundary": "existing running WebView before capture launches, restarts, or installs the QA app",
+            "privateEvaluationTransport": "stdin; saved values are not command arguments",
+        },
+        "captureDataIsolation": {
+            "mode": "fresh-in-memory-fixture", "ready": memory_ready, "prepared": memory_prepared,
+            "preloadRemoval": cleanup.get("memorySession"),
+            "nativeQaRestartedAfterFixture": cleanup.get("nativeQaRestartedAfterFixture", False),
+            "communityRule": "bundled default seed rows in offline mode; sole official notice in online mode",
+            "persistentUserPostsOrNicknameUsed": False,
+        },
+        "productionPackagePreservation": cleanup["productionPackage"],
         "capturePlan": [
             {"file": filename, "purpose": purpose, "route": route}
             for filename, purpose, route, _ in CAPTURES
@@ -1119,7 +1701,10 @@ def main() -> int:
             **icon,
         },
         "projectOwned": {
-            "featureGraphic": {"file": "feature-graphic.png", **feature},
+            "featureGraphic": {
+                "file": "feature-graphic.png", "classification": "SCREENSHOT_DERIVED_MARKETING_COMPOSITION",
+                "syntheticPhysicalCapture": False, **feature,
+            },
         },
         "safety": {
             "productionPackageMutationCount": 0,
@@ -1128,6 +1713,9 @@ def main() -> int:
             "domTextPatternScanPassed": True,
             "personalDataReviewedByAutomation": False,
             "manualVisualReviewRequired": True,
+            "publicReleaseAuthorized": False,
+            "pmClearCalled": False,
+            "devtoolsForwardRemoved": cleanup["devtoolsForwardRemoved"],
         },
     }
     write_json(evidence_path, evidence)

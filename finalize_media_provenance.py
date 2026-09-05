@@ -76,6 +76,7 @@ def sha256(path: Path) -> str:
 def common_record(
     evidence: dict[str, Any], filename: str, *, source_type: str, purpose: str
 ) -> dict[str, Any]:
+    reject_local_or_unresolved_capture(evidence)
     source = evidence["source"]
     gate = evidence["deviceGate"]
     official = filename in OFFICIAL_CONTENT_FILES
@@ -98,6 +99,21 @@ def common_record(
         "unresolvedAssetCount": 0,
         "personalDataReviewed": True,
     }
+
+
+def reject_local_or_unresolved_capture(evidence: dict[str, Any]) -> None:
+    readiness = evidence.get("releaseReadiness", {})
+    if (
+        evidence.get("classification") == "LOCAL_CANDIDATE_NOT_PUBLISHED"
+        or evidence.get("releaseStatus") == "BLOCKED_FOR_PUBLIC_RELEASE"
+        or evidence.get("unresolvedAssetCount", 0) != 0
+        or readiness.get("status") == "BLOCKED_FOR_PUBLIC_RELEASE"
+        or readiness.get("unresolvedAssetCount", 0) != 0
+    ):
+        raise RuntimeError(
+            "local-only or unresolved captures cannot become public or Play provenance; "
+            "source identity and manual visual review do not establish release rights"
+        )
 
 
 def capture_commit_reaches_head(
@@ -165,6 +181,7 @@ def reconcile_runtime_source_fingerprint(
 def sync_android_play_screenshots(
     evidence: dict[str, Any], android_repo: Path
 ) -> Path:
+    reject_local_or_unresolved_capture(evidence)
     android_repo = android_repo.resolve()
     screenshot_dir = android_repo / "play-store/screenshots"
     evidence_path = android_repo / "play-store/screenshot-evidence.json"
@@ -247,14 +264,13 @@ def sync_android_play_screenshots(
             raise RuntimeError(f"reviewed screenshot source is invalid: {filename}")
         prepared.append((source, destination, capture))
 
-    for source, destination, _ in prepared:
-        shutil.copyfile(source, destination)
-
     screenshot_evidence = merge_android_play_evidence(
         existing_evidence,
         evidence,
         [capture for _, _, capture in prepared],
     )
+    for source, destination, _ in prepared:
+        shutil.copyfile(source, destination)
     temporary = evidence_path.with_suffix(".json.tmp")
     temporary.write_text(
         json.dumps(screenshot_evidence, ensure_ascii=False, indent=2) + "\n",
@@ -294,6 +310,7 @@ def merge_android_play_evidence(
     captures: list[dict[str, Any]],
 ) -> dict[str, Any]:
     """Refresh screenshot bytes while retaining same-APK physical QA evidence."""
+    reject_local_or_unresolved_capture(evidence)
     if existing.get("schemaVersion") != 2:
         raise RuntimeError("existing Android screenshot evidence schema is invalid")
     old_source = existing.get("source")
@@ -327,6 +344,8 @@ def merge_android_play_evidence(
         raise RuntimeError("existing Android screenshot runtime evidence is incomplete")
 
     source = evidence["source"]
+    if old_source.get("apkSha256") != source.get("apkSha256"):
+        raise RuntimeError("prior detailed runtime evidence belongs to a different APK")
     gate = evidence["deviceGate"]
     merged = copy.deepcopy(existing)
     merged["source"] = {
@@ -406,6 +425,7 @@ def main() -> int:
         raise RuntimeError("manual visual review acceptance is required")
 
     evidence = json.loads(EVIDENCE.read_text(encoding="utf-8"))
+    reject_local_or_unresolved_capture(evidence)
     if evidence["source"]["applicationId"] != EXPECTED_PACKAGE:
         raise RuntimeError("capture evidence is not QA-package scoped")
     if evidence["safety"]["productionPackageMutationCount"] != 0:
