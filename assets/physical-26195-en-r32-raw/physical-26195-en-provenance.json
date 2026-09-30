@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "classification": "ENGLISH_PHYSICAL_ANDROID_DEVELOPMENT_NOT_PLAY_RELEASE",
+  "appVersion": "26.19.5",
+  "build": {
+    "packageName": "com.lolclassic.encyclopedia.overlaytest.dev",
+    "versionCode": 24,
+    "localAndInstalledApkSha256": "6ba4fad5ece9104b7a70f31b8779b6bf1d797601a0df511ce681d4326cd9e560"
+  },
+  "device": {
+    "model": "SM-S911N",
+    "physical": true,
+    "androidUser": 0,
+    "exactSerialVerifiedLocally": true
+  },
+  "capture": {
+    "locale": "en_US",
+    "offlineRoutes": [
+      "champions",
+      "champion/garen/basic",
+      "items",
+      "spells"
+    ],
+    "screenshotMethod": "adb exec-out screencap -p",
+    "videoMethod": "adb shell screenrecord",
+    "routeControl": "WebView DevTools Runtime.evaluate for still routes; native Android input swipe for screenrecord",
+    "audioTrack": false
+  },
+  "stateRestoration": {
+    "originalLocaleAndRoute": true,
+    "originalForeground": true,
+    "developmentAndProductionApkHashesUnchanged": true,
+    "productionApkSha256": {
+      "base.apk": "beb2cc94a5a43a8a831b8deb12e3b6f6af56b78dab5a97d8ca0f36837b796bd8",
+      "split_config.xxhdpi.apk": "6b98765b55c96de8ece531546a38a897674778598e11cad198cf97f2ed708aaf"
+    }
+  },
+  "privacyReview": {
+    "status": "CODEX_VISUALLY_REVIEWED_USER_PUBLICATION_APPROVED",
+    "screensReviewed": 4,
+    "videoFramesReviewed": 309,
+    "privateContentObserved": false,
+    "androidStatusAndNavigationBarsVisible": true,
+    "deviceStatusIconsVisible": true,
+    "humanReviewed": false,
+    "publicationReady": true,
+    "method": "Full raw screenshots and all 309 decoded video frames inspected in 18 contact sheets; video frames downsampled to 360x780 from 1080x2340",
+    "userPublicationApproved": true,
+    "publicationScope": "USER_APPROVED_SITE_MEDIA_PREVIEW_NOT_PLAY_RELEASE_OR_RIGHTS_CLEARANCE"
+  },
+  "files": {
+    "physical-26195-en-champions.png": {
+      "sha256": "efb1e85be5167d9cf816160fa87fc5db2cc67595fba432fb52d5c6f7bb5e490a",
+      "bytes": 2154953,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-garen.png": {
+      "sha256": "621733b6e8333937e00151164e86a450a64c1ab9741d2637805ae196e31c1c31",
+      "bytes": 587805,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-items.png": {
+      "sha256": "0c11f5a744338d6f30c21282a0de67c29201600dc7705157843ce5d53d0976f7",
+      "bytes": 709929,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-spells.png": {
+      "sha256": "89ed9f907f9df849a770e61d4415bbd2c91917b6cf9a682915abdd5df67f700b",
+      "bytes": 629311,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-tour.mp4": {
+      "sha256": "04ded3e0d963e82e0c977ccff17e75f362d76200f9196cfd59b42794d4f2581a",
+      "bytes": 2516667,
+      "durationSeconds": 9.26,
+      "frameCount": 309,
+      "audioTrack": false,
+      "pixels": [
+        1080,
+        2340
+      ],
+      "codec": "h264"
+    }
+  }
+}

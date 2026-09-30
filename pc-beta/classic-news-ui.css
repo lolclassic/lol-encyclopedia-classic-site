@@ -1,0 +1,33 @@
+.newsArticle { color: #392b19; padding: 6px 2px 14px; }
+.newsArticle h2, .councilPage h2 { margin: 0 0 12px; font-size: 20px; line-height: 1.4; }
+.newsArticleMeta { color: #745d3d; font-size: 12px; margin: 0 0 18px; }
+.newsArticleBody { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.75; }
+.newsPatch2619 .newsArticleLead { margin: 0 0 18px; }
+.newsPatch2619 .newsChampionGroupTitle,
+.newsPatch2619 .newsPatchSection h3 { margin: 20px 0 10px; font-size: 16px; }
+.newsPatch2619 .newsChampion { padding: 12px 0; border-top: 1px solid #d9cba9; }
+.newsPatch2619 .newsChampion h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: 15px; }
+.newsPatch2619 .newsChampion h3 img { flex: 0 0 30px; width: 30px; height: 30px; object-fit: cover; border: 1px solid #a58b60; border-radius: 4px; }
+.newsPatch2619 .newsChampion p,
+.newsPatch2619 .newsPatchSection p { margin: 0; }
+.newsPatch2619 .newsPatchSection { margin: 18px 0 0; padding-top: 8px; border-top: 1px solid #d9cba9; }
+.newsArticleSource { color: #745d3d; font-size: 12px; margin-top: 20px; }
+.councilPage { background: #fffdf7; color: #302b22; margin: 8px; padding: 18px 14px; border: 1px solid #c7b68b; }
+.councilPage h3 { font-size: 15px; line-height: 1.6; }
+.councilCurrentVote { margin-bottom: 20px; padding: 14px; border: 1px solid #b99c60; background: #f3e7c5; line-height: 1.65; }
+.councilCurrentVote p { margin: 8px 0; overflow-wrap: anywhere; }
+.councilCurrentVote .newsArticleMeta { margin-bottom: 10px; }
+.councilDecisions { background: #f1ead8; padding: 8px 14px; border-left: 3px solid #a68a4d; }
+.councilDecisions ul { padding-left: 20px; line-height: 1.8; }
+.councilQuestion { padding: 12px 0; border-bottom: 1px solid #e2d9c4; }
+.councilQuestion ol { padding: 0; margin: 0; list-style: none; }
+.councilQuestion li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 10px; margin: 14px 0; font-size: 13px; line-height: 1.6; }
+.councilQuestion li > b { font-variant-numeric: tabular-nums; }
+.councilPercentTrack { grid-column: 1 / -1; height: 7px; background: #e8e4d8; border-radius: 4px; overflow: hidden; }
+.councilPercentTrack i { display: block; height: 100%; background: #617d83; }
+.classicCorrectionLabel { color: #cfb67c; font-size: 11px; margin: 4px 0; }
+
+/* The Council joins the existing feed tabs without creating a second row. */
+#view.homeView > .hm > .hmTabs {
+  grid-template-columns: repeat(var(--home-tab-count, 4), minmax(0, 1fr)) !important;
+}

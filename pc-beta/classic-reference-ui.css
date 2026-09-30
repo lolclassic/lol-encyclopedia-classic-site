@@ -1,0 +1,27 @@
+.classicGlossary .classicGlossaryHeading { display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+.classicGlossary .classicGlossaryHeading b { min-width:0; overflow-wrap:anywhere; }
+.classicGlossary .classicGlossaryEnglish { margin-left:auto; text-align:right; font-size:.88em; color:inherit; opacity:.85; max-width:55%; overflow-wrap:anywhere; }
+.classicGlossary li p { margin-top:7px; }
+.itemDetail .itemRelationExplanation { margin:4px 0 10px; line-height:1.5; }
+.itemDetail .itemRelationHeading[data-relation="components"]::before { content:'↓ '; }
+.itemDetail .itemRelationHeading[data-relation="upgrades"]::before { content:'↑ '; }
+.localeSourceDetails { margin:10px 0; padding:8px 10px; border:1px solid currentColor; border-radius:5px; opacity:.88; }
+.localeSourceDetails summary { cursor:pointer; font-size:.9em; font-weight:700; }
+.localeSourceDetails[open] { opacity:1; }
+.localeSourceDetails p { margin:8px 0 0; line-height:1.6; }
+
+/* Each matching champion occupies one row: Korean name, English name and title. */
+body #view#view .championSearchResults { display:flex!important; flex-direction:column!important; gap:0!important; overflow-x:auto!important; padding:4px!important; background:#101918!important; border:1px solid #8c794c!important; }
+body #view#view .championSearchResults .championSearchResult { display:flex!important; flex:0 0 auto!important; align-items:center!important; gap:8px!important; width:100%!important; min-width:0!important; height:auto!important; min-height:48px!important; margin:0!important; padding:6px!important; background:#172522!important; color:#f2e7c8!important; border:0!important; border-bottom:1px solid #455047!important; border-radius:0!important; text-align:left!important; font-family:inherit!important; font-size:16px!important; font-weight:700!important; line-height:1.4!important; white-space:nowrap!important; }
+body #view#view .championSearchResult .pic { position:static!important; flex:0 0 30px; width:30px!important; height:30px!important; border:0!important; }
+body #view#view .championSearchResult img { width:100%; height:100%; object-fit:cover; }
+body #view#view .championSearchResult .searchChampionInfo { display:flex; flex:1 1 auto; align-items:center; gap:6px; min-width:0; overflow:hidden; }
+body #view#view .championSearchResult b { flex-shrink:0; color:inherit!important; font:inherit!important; }
+body #view#view .championSearchResult .searchChampionEnglish { flex-shrink:0; font-size:14px; font-weight:400; color:#ded8c4!important; }
+body #view#view .championSearchResult .searchChampionTitle { min-width:0; overflow:hidden; text-overflow:ellipsis; font-size:14px; font-weight:400; color:#bcb69f!important; }
+body #view#view .championSearchResult .searchChampionTraits { flex:0 0 132px; text-align:left; font-size:13px; font-weight:400; color:#d8c989!important; }
+body #view#view .championSearchResult:focus-visible { outline:2px solid #ebcd70; outline-offset:-2px; }
+body #view#view .championSearchResults .hint2 { margin:0!important; color:#d6ceb8!important; }
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view#view.homeView>.hm>.hmSearch { position:relative!important; overflow:visible!important; z-index:5; }
+body #view#view .homeSearchResults { position:absolute; top:100%; left:0; right:0; z-index:6; max-height:min(320px,45dvh); overflow-y:auto; overscroll-behavior-y:contain; box-shadow:0 5px 10px #0008; }
+body #view#view .homeSearchResults[hidden] { display:none!important; }

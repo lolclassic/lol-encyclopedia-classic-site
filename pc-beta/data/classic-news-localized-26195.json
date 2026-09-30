@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "sourceArticleId": "league-classic-26-18",
+  "sourcePatch": "26.18",
+  "locales": {
+    "en_US": {
+      "article": {
+        "title": "League Classic 26.18 · Summary",
+        "author": "App editorial team",
+        "source": "Riot Games · Classic",
+        "sourceUrl": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-18-notes/",
+        "body": "Editorial summary of Riot Games' 26.18 League Classic notes. Five returning champions join Classic: Fiora, Galio, Poppy, Shyvana and Xin Zhao. The patch also adjusts Anivia, Gangplank, Heimerdinger, Kayle, Malzahar, Nasus and Warwick.\n\nThe first Council vote supports restoring all three proposed items, adding modern jungle timers, and placing a turtle in the upper river and a duck in the lower river. These decisions are planned for a future patch.\n\nClassic chromas are being combined with their associated base skins. Players who bought only a Classic chroma will receive its base skin. Baron Rammus is planned to leave the store in 26.20. The patch also fixes ability issues affecting Teemo, Akali, Skarner and Nidalee.\n\nThis is a summary. Open the official Riot Games notes for the complete changes, exact values and ability details."
+      },
+      "council": {
+        "title": "Council · First vote results",
+        "effectiveStatus": "Planned for a future patch",
+        "decisions": [
+          "Restore Zz'Rot Portal, Cloak and Dagger, and Moonflair Spellblade",
+          "Add modern jungle timers visible on the minimap",
+          "Add a turtle to the upper river and a duck to the lower river"
+        ],
+        "questions": [
+          {"question":"How does the length of a game feel?","options":["Far too short","Too short","About right","Too long","Far too long"]},
+          {"question":"At what length does a game feel too long?","options":["30 minutes","40 minutes","50 minutes","60 minutes","No preferred maximum"]},
+          {"question":"Which items should return in Classic? An item must pass 50% of the vote, including votes for all three.","options":["Zz'Rot Portal","Cloak and Dagger","Moonflair Spellblade","All three","None"]},
+          {"question":"Should Classic add jungle timers? If the first two options together pass 50%, the more popular one wins.","options":["Yes, always show modern timers on the minimap","Yes, but only while the scoreboard is open","No, keep the current minimap"]},
+          {"question":"Should base gates remain in the game? They were added in Season 5 to help defending teams protect their base.","options":["Keep them","Remove them"]},
+          {"question":"How much do current games snowball?","options":["Far too much","A little too much","About right","A little too little","Far too little"]},
+          {"question":"Do ward trinkets improve Classic gameplay?","options":["Yes, I like them","No, I do not like them"]},
+          {"question":"Which two river critters should be added? The first is for the upper river, the second for the lower river.","options":["Turtle, turtle","Turtle, duck","Duck, turtle","Duck, duck"]}
+        ]
+      }
+    },
+    "ja_JP": {
+      "article": {
+        "title": "リーグ クラシック 26.18 · 要約",
+        "author": "アプリ編集部",
+        "source": "Riot Games · クラシック",
+        "sourceUrl": "https://www.leagueoflegends.com/ja-jp/news/game-updates/league-of-legends-patch-26-18-notes/",
+        "body": "Riot Gamesのパッチ26.18に含まれるリーグ クラシックの要約です。フィオラ、ガリオ、ポッピー、シヴァーナ、シン・ジャオの5人がクラシックに登場します。アニビア、ガングプランク、ハイマーディンガー、ケイル、マルザハール、ナサス、ワーウィックにもバランス調整があります。\n\n第1回カウンシル投票では、提案された3つのアイテムすべての復活、最新のジャングルタイマーの追加、上側の川にカメ・下側の川にアヒルを追加する案が支持されました。これらの変更は今後のパッチで実装予定です。\n\nクラシックスキンのクロマは対応するベーススキンに統合されます。クロマだけを購入したプレイヤーにはベーススキンが配布されます。バロン ラムスは26.20で販売終了予定です。ティーモ、アカリ、スカーナー、ニダリーのスキルに関する不具合も修正されます。\n\nこれは要約です。正確な数値とスキルの詳細を含む変更内容は、Riot Gamesの公式パッチノートをご覧ください。"
+      },
+      "council": {
+        "title": "カウンシル · 第1回投票結果",
+        "effectiveStatus": "今後のパッチで実装予定",
+        "decisions": [
+          "ジ＝ロット ポータル、クローク アンド ダガー、ムーンフレア スペルブレードを復活",
+          "ミニマップに常時表示される最新のジャングルタイマーを追加",
+          "上側の川にカメ、下側の川にアヒルを追加"
+        ],
+        "questions": [
+          {"question":"ゲームの長さをどう感じますか？","options":["非常に短い","短い","ちょうどいい","長い","非常に長い"]},
+          {"question":"何分から試合が長すぎると感じますか？","options":["30分","40分","50分","60分","希望する上限なし"]},
+          {"question":"クラシックで復活してほしいアイテムは？「3つすべて」も含め、得票率50%超のアイテムが追加されます。","options":["ジ＝ロット ポータル","クローク アンド ダガー","ムーンフレア スペルブレード","3つすべて","なし"]},
+          {"question":"クラシックにジャングルタイマーを追加すべきですか？選択肢1と2の合計が50%を超えた場合、得票率の高い方が選ばれます。","options":["はい。ミニマップに常時表示","はい。スコアボードを開いた時だけ表示","いいえ。現在のミニマップを維持"]},
+          {"question":"シーズン5に防衛側のために追加された本拠地のゲートを残すべきですか？","options":["残す","削除する"]},
+          {"question":"現在の試合はどのくらいスノーボールしやすいと感じますか？","options":["著しくスノーボールしやすい","ややスノーボールしやすい","ちょうどいい","ややスノーボールしにくい","著しくスノーボールしにくい"]},
+          {"question":"ワード トリンケットはクラシックのゲームプレイを改善しますか？","options":["はい、気に入っている","いいえ、気に入らない"]},
+          {"question":"川に追加する2体の生き物はどの組み合わせがいいですか？最初が上側、次が下側です。","options":["カメ、カメ","カメ、アヒル","アヒル、カメ","アヒル、アヒル"]}
+        ]
+      }
+    }
+  }
+}

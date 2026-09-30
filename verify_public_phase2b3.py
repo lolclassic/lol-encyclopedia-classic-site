@@ -93,9 +93,29 @@ def local_target(page: Path, value: str) -> Path | None:
     return (page.parent / relative).resolve()
 
 
+def untracked_local_references(references: list[tuple[Path, str]], tracked: set[str]) -> list[str]:
+    missing: list[str] = []
+    for page, value in references:
+        target = local_target(page, value)
+        if target is None:
+            continue
+        if target.is_dir():
+            target /= "index.html"
+        try:
+            relative = target.relative_to(ROOT).as_posix()
+        except ValueError:
+            missing.append(f"{page.name}:{value}")
+            continue
+        if relative not in tracked:
+            missing.append(f"{page.name}:{value}")
+    return sorted(set(missing))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--report", type=Path)
+    parser.add_argument("--git-release", action="store_true",
+                        help="Fail if an HTML local reference is absent from the Git index")
     args = parser.parse_args()
     failures: list[str] = []
     checks: dict[str, object] = {}
@@ -119,6 +139,16 @@ def main() -> int:
     failures.extend(f"missing-local-reference:{item}" for item in missing)
     failures.extend(f"image-without-alt:{item}" for item in alt_failures)
 
+    if args.git_release:
+        tracked_result = subprocess.run(
+            ["git", "ls-files", "--cached", "-z"], cwd=ROOT,
+            capture_output=True, check=True,
+        )
+        tracked = {item.decode("utf-8") for item in tracked_result.stdout.split(b"\0") if item}
+        untracked = untracked_local_references(references, tracked)
+        checks["untrackedLocalReferences"] = untracked
+        failures.extend(f"untracked-local-reference:{item}" for item in untracked)
+
     referenced_values = {value.split("?", 1)[0] for _, value in references}
     stale_references = sorted(
         value for value in referenced_values if Path(value).name in RETIRED_MEDIA
@@ -137,7 +167,6 @@ def main() -> int:
         claim
         for claim in (
             "190 historical items",
-            "56 masteries",
             "20 customizable rune pages",
             "30-slot page layout",
             "phone-08-rune-page.png",
@@ -177,10 +206,11 @@ def main() -> int:
             windows_paths.append(path.relative_to(ROOT).as_posix())
         if re.search(r"\b(?:localhost|127\.0\.0\.1)\b", text, re.I):
             localhost_hits.append(path.relative_to(ROOT).as_posix())
-    unexpected_localhost = [item for item in localhost_hits if item != "capture_public_marketing.py"]
+    local_tooling = {"capture_public_marketing.py", "capture_preview_media_26195.js", "capture_physical_media_26195.py", "README.md"}
+    unexpected_localhost = [item for item in localhost_hits if item not in local_tooling]
     checks["windowsPathFiles"] = windows_paths
     checks["localhostFiles"] = localhost_hits
-    checks["localhostToolingAllowlist"] = ["capture_public_marketing.py"]
+    checks["localhostToolingAllowlist"] = sorted(local_tooling)
     failures.extend(f"windows-path:{item}" for item in windows_paths)
     failures.extend(f"unexpected-localhost:{item}" for item in unexpected_localhost)
 

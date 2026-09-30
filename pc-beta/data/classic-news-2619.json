@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "sourceScope": "classic-only",
+  "article": {
+    "id": "league-classic-26-19",
+    "patch": "26.19",
+    "title": "롤 클래식 패치노트 · 26.19",
+    "author": "운영자",
+    "date": "2026.09.23",
+    "source": "Riot Games · 클래식",
+    "sourceUrl": "https://www.leagueoflegends.com/ko-kr/news/game-updates/league-of-legends-patch-26-19-notes/",
+    "body": "클래식에 피즈, 그레이브즈, 나미, 노틸러스가 합류했습니다. 기존 챔피언 11명의 성능과 역사적 동작도 조정됐습니다. 제1회 의회 투표 결과로 선택된 아이템 세 종류가 돌아오고, 제2회 의회 투표와 여러 클라이언트 개선이 시작됩니다. 아래는 공식 패치노트의 클래식 항목을 요약한 내용입니다.",
+    "champions": [
+      {
+        "id": "Jade_Fizz",
+        "name": "피즈",
+        "icon": "images/mode_classic/champion/Jade_Fizz.png",
+        "kind": "new",
+        "body": "2016년 개편 이전 피즈가 추가됐습니다. W의 기본 지속 효과는 대상이 잃은 체력에 비례한 지속 피해를 입히며, 사용하면 기본 공격을 강화하고 치유 감소를 적용합니다. E는 두 번째 사용 시 더 멀리 이동하는 대신 범위와 둔화 효과가 줄어듭니다."
+      },
+      {
+        "id": "Jade_Graves",
+        "name": "그레이브즈",
+        "icon": "images/mode_classic/champion/Jade_Graves.png",
+        "kind": "new",
+        "body": "2011~2015년의 원거리 딜러 그레이브즈가 합류했습니다. 전투 중 방어 능력을 중첩하고, Q의 세 탄환으로 전방에 피해를 입힙니다. 연막탄은 시야를 제한하며, E를 사용하면 돌진과 공격 속도 증가를 얻습니다."
+      },
+      {
+        "id": "Jade_Nami",
+        "name": "나미",
+        "icon": "images/mode_classic/champion/Jade_Nami.png",
+        "kind": "new",
+        "body": "나미가 클래식에 합류했습니다. 물의 감옥과 해일로 적을 제어하고, 밀물 썰물로 아군을 회복하거나 적에게 피해를 입힙니다. E의 강화 효과는 다음 기본 공격 3회에만 적용되며 스킬 공격에는 적용되지 않습니다."
+      },
+      {
+        "id": "Jade_Nautilus",
+        "name": "노틸러스",
+        "icon": "images/mode_classic/champion/Jade_Nautilus.png",
+        "kind": "new",
+        "body": "노틸러스가 클래식에 합류했습니다. 기본 공격 속박과 닻줄 견인, 보호막, 충격파를 사용합니다. 폭뢰는 경로상의 적을 띄우고 최종 대상 주변에서 더 강한 군중 제어 효과를 냅니다."
+      },
+      {
+        "id": "Jade_Akali",
+        "name": "아칼리",
+        "icon": "images/mode_classic/champion/Jade_Akali.png",
+        "kind": "balance",
+        "body": "E - 초승달 베기의 기력 소모량이 전 구간 60에서 60/55/50/45/40으로 줄고, 재사용 대기시간은 7/6/5/4/3초에서 5/4/3/2/1초로 단축됩니다. 주문력 계수는 30%에서 40%로 증가합니다."
+      },
+      {
+        "id": "Jade_Fiora",
+        "name": "피오라",
+        "icon": "images/mode_classic/champion/Jade_Fiora.png",
+        "kind": "balance",
+        "body": "R - 검의 왈츠의 기본 피해량과 추가 공격력 계수가 160/330/500(+115%)에서 125/255/385(+85%)로 감소하고, 재사용 대기시간은 150/130/110초로 늘어납니다. 단일 대상 최대 피해량은 비슷하게 유지되지만 광역 교전 위력은 낮아집니다. 타격 우선순위와 이동 불능 버그도 수정됩니다."
+      },
+      {
+        "id": "Jade_Galio",
+        "name": "갈리오",
+        "icon": "images/mode_classic/champion/Jade_Galio.png",
+        "kind": "balance",
+        "body": "E - 정의의 돌풍의 사용 시간은 0.4초에서 0.25초로, 투사체 속도는 1,200에서 1,300으로 바뀝니다. 너비는 60에서 160, 사거리는 1,100에서 1,175로 늘어납니다. W의 첫 회복량 감소 버그와 E의 과도한 피해·시각 효과 오류도 수정됩니다."
+      },
+      {
+        "id": "Jade_Kassadin",
+        "name": "카사딘",
+        "icon": "images/mode_classic/champion/Jade_Kassadin.png",
+        "kind": "balance",
+        "body": "R - 균열 이동의 사거리가 600에서 700으로 늘어납니다. Q의 주문력 계수는 60%에서 70%로 증가합니다. E의 피해량은 80/130/180/230/280(+주문력 70%)로, 둔화율은 30/35/40/45/50%로 변경됩니다."
+      },
+      {
+        "id": "Jade_Malphite",
+        "name": "말파이트",
+        "icon": "images/mode_classic/champion/Jade_Malphite.png",
+        "kind": "balance",
+        "body": "W - 난폭한 일격의 광역 피해에도 기본 공격의 치명타가 반영되며, 사용 시 진행 중인 기본 공격을 취소하지 않습니다. E가 에픽 몬스터의 공격 속도를 낮추던 오류와 R 이후 점멸을 장시간 사용하지 못하던 오류를 수정합니다."
+      },
+      {
+        "id": "Jade_Morgana",
+        "name": "모르가나",
+        "icon": "images/mode_classic/champion/Jade_Morgana.png",
+        "kind": "balance",
+        "body": "W의 마나 소모량이 80/100/120/140/160으로 늘고 재사용 대기시간도 10초에서 12초로 증가합니다. E 보호막은 100/150/200/250/300, R 재사용 대기시간은 전 구간 120초로 조정됩니다."
+      },
+      {
+        "id": "Jade_Nidalee",
+        "name": "니달리",
+        "icon": "images/mode_classic/champion/Jade_Nidalee.png",
+        "kind": "balance",
+        "body": "W - 매복 덫이 사용 시 0.5초 동안 250유닛의 시야를 제공하며, 총피해량은 유지한 채 지속시간은 4초에서 2.5초로 줄어듭니다. R - 쿠거의 상 사용 시 기본 공격 모션을 취소할 수 있습니다."
+      },
+      {
+        "id": "Jade_Poppy",
+        "name": "뽀삐",
+        "icon": "images/mode_classic/champion/Jade_Poppy.png",
+        "kind": "balance",
+        "body": "Q - 파괴의 일격이 치명타일 때 총공격력 계수에도 치명타가 반영됩니다. 주문 검으로 입히는 피해는 모두 마법 피해로 전환됩니다. 관련 피해 한도와 상호작용을 툴팁에서 더 명확히 보여줍니다."
+      },
+      {
+        "id": "Jade_Shyvana",
+        "name": "쉬바나",
+        "icon": "images/mode_classic/champion/Jade_Shyvana.png",
+        "kind": "balance",
+        "body": "W - 연소의 최대 연장 시간이 4초에서 6초로 증가합니다. R - 용의 강림의 추가 방어력과 마법 저항력은 10/15/20에서 15/20/25로 늘어나며 용 형상에서 두 배가 되는 규칙은 유지됩니다."
+      },
+      {
+        "id": "Jade_TwistedFate",
+        "name": "트위스티드 페이트",
+        "icon": "images/mode_classic/champion/Jade_TwistedFate.png",
+        "kind": "balance",
+        "body": "E - 관문의 재사용 대기시간이 135/120/105/90/75초, R - 운명은 180/150/120초로 늘어납니다. R 마나 소모량은 150/125/100으로 바뀝니다. 사망 중에는 기본 지속 효과로 아군에게 추가 골드를 주지 않습니다."
+      },
+      {
+        "id": "Jade_Zilean",
+        "name": "질리언",
+        "icon": "images/mode_classic/champion/Jade_Zilean.png",
+        "kind": "balance",
+        "body": "사망 중에는 기본 지속 효과의 추가 경험치가 제공되지 않습니다. 전장의 안개 속에서 Q를 사용하면 위치가 드러납니다. E - 시간 왜곡의 사거리 판정은 중심에서 중심까지 700유닛으로 변경됩니다."
+      }
+    ],
+    "sections": [
+      {
+        "title": "복귀 아이템 · 망토와 단검",
+        "body": "민첩성의 망토와 단검으로 조합하며 총가격은 1,130골드입니다. 공격 속도 20%, 치명타 확률 20%, 고유 강인함 35%를 제공합니다. 강인함 효과는 헤르메스의 발걸음·서풍·달빛 마법검과 공유됩니다."
+      },
+      {
+        "title": "복귀 아이템 · 달빛 마법검",
+        "body": "추적자의 팔목 보호대와 음전자 망토로 조합하며 총가격은 2,300골드입니다. 주문력·방어력·마법 저항력이 각각 50이고, 다른 강인함 아이템과 공유하는 고유 강인함 35%를 제공합니다."
+      },
+      {
+        "title": "복귀 아이템 · 즈롯 차원문",
+        "body": "쇠사슬 조끼·음전자 망토·원기 회복의 구슬로 조합하며 총가격은 2,700골드입니다. 방어력과 마법 저항력이 각각 50, 5초당 체력 재생이 5입니다. 사용하면 150초간 공허의 문을 열어 공격로로 전진하는 공허충을 생성하며, 재사용 대기시간은 150초입니다."
+      },
+      {
+        "title": "의회와 게임 체계",
+        "body": "제1회 의회 투표에서 선택된 복귀 아이템 3종이 이번 패치에 적용됩니다. 제2회 투표는 복원할 챔피언 스킬 구성 등을 포함한 6개 분야에서 7일 동안 진행되며, 결과는 다음 패치노트에서 공개될 예정입니다. 비매너 행위 감지, 고전적인 신호와 로딩 화면, 더 명확한 챔피언 선택·의회 화면, 룬 상점의 추천 정렬과 룬 장착 효과가 추가·개선됩니다."
+      },
+      {
+        "title": "버그 수정",
+        "body": "잔나의 순풍이 사망 뒤에도 남던 현상, 클래식 챔피언 프로필 탭 클릭 오류, 근위대 피오라 크로마 미지급, 룬과 컬렉션 초상화 정렬 오류를 수정합니다. 다른 모드 로그인 시 클래식 이미지가 보이던 문제와 신 짜오 크로마 이름 누락도 수정합니다. 루난의 허리케인이 미니언 도움 요청을 유발하던 현상, 소나 E 툴팁 오류, 귀환 연타로 구인수의 격노검 중첩이 쌓이던 현상, 시비르 주문 방어막과 미스 포츈 Q의 상호작용, 트리스타나 E 폭발 오류도 수정합니다."
+      }
+    ]
+  },
+  "locales": {
+    "ja_JP": {
+      "title": "リーグ クラシック パッチノート · 26.19",
+      "author": "運営者",
+      "source": "Riot Games · クラシック",
+      "sourceUrl": "https://www.leagueoflegends.com/ja-jp/news/game-updates/league-of-legends-patch-26-19-notes/",
+      "body": "フィズ、グレイブス、ナミ、ノーチラスがクラシックに加わりました。既存のチャンピオン11体にもバランス調整と歴史的な挙動の修正が入ります。第1回カウンシル投票で選ばれたアイテム3種が復活し、第2回投票とクライアントの改善も始まります。以下は公式パッチノートのクラシック部分の要約です。",
+      "champions": [
+        {"name": "フィズ", "body": "リワーク前のフィズが登場します。Wの自動効果は対象の減少体力に応じた継続ダメージを与え、発動効果は通常攻撃を強化して重傷を付与します。Eを再使用すると移動距離が延びますが、攻撃範囲は狭くなりスロウ効果も失います。"},
+        {"name": "グレイブス", "body": "2011～2015年版のADCグレイブスが登場します。戦闘中に防御力を重ね、Qの3発の弾丸で前方を攻撃します。Wは敵の視界を狭め、Eはダッシュと攻撃速度上昇を与えます。"},
+        {"name": "ナミ", "body": "ナミがクラシックに登場します。水の牢獄と海神の舞で敵を妨害し、潮の流れで味方を回復または敵を攻撃します。Eの強化は次の通常攻撃3回にのみ適用され、スキルには適用されません。"},
+        {"name": "ノーチラス", "body": "ノーチラスがクラシックに登場します。通常攻撃のスネア、錨投げ、シールド、連続する衝撃波を使います。爆雷発射は進路上の敵をノックアップし、最終対象の周囲ではより強い行動妨害を与えます。"},
+        {"name": "アカリ", "body": "E - 三日月斬の気コストは全ランク60から60/55/50/45/40に、クールダウンは7/6/5/4/3秒から5/4/3/2/1秒に短縮されます。魔力反映率は30%から40%に上がります。"},
+        {"name": "フィオラ", "body": "R - ブレードワルツのダメージと増加攻撃力反映率は160/330/500（+115%）から125/255/385（+85%）に下がり、クールダウンは150/130/110秒になります。単体への最大ダメージはほぼ維持されますが、集団戦での範囲ダメージは低下します。対象選択と行動不能の不具合も修正されます。"},
+        {"name": "ガリオ", "body": "E - 正義の追い風の詠唱時間は0.4秒から0.25秒に、弾速は1200から1300になります。幅は60から160、射程は1100から1175に拡大します。Wの初回回復量とEの過剰なダメージ・視覚効果の不具合も修正されます。"},
+        {"name": "カサディン", "body": "R - リフトウォークの射程が600から700になります。Qの魔力反映率は60%から70%に上昇します。Eのダメージは80/130/180/230/280（+魔力の70%）、スロウは30/35/40/45/50%に変わります。"},
+        {"name": "マルファイト", "body": "W - ブルータルストライクの範囲ダメージにも通常攻撃のクリティカルが適用され、発動時に通常攻撃が中断されなくなります。Eによるエピックモンスターの攻撃速度低下と、R後にフラッシュを長時間使えない不具合も修正されます。"},
+        {"name": "モルガナ", "body": "Wのマナコストは80/100/120/140/160、クールダウンは12秒に増加します。Eのシールド量は100/150/200/250/300に、Rのクールダウンは全ランク120秒になります。"},
+        {"name": "ニダリー", "body": "W - 虎挟みは設置時に0.5秒間、250ユニットの視界を得ます。総ダメージは変わらず、効果時間は4秒から2.5秒になります。R - クーガーの心は通常攻撃のタイマーをリセットします。"},
+        {"name": "ポッピー", "body": "Q - 渾身の一撃がクリティカルになったとき、合計攻撃力反映率にもクリティカルが適用されます。「追撃」のダメージはすべて魔法ダメージに変わり、ツールチップも明確になります。"},
+        {"name": "シヴァーナ", "body": "W - バーンアウトの最大延長時間は4秒から6秒になります。R - 龍の降臨の増加物理防御・魔法防御は10/15/20から15/20/25に上がり、ドラゴン形態で2倍になる仕様は維持されます。"},
+        {"name": "ツイステッド・フェイト", "body": "E - ゲートのクールダウンは135/120/105/90/75秒、R - デスティニーは180/150/120秒に増えます。Rのマナコストは150/125/100になります。デス中は固有スキルによる味方の追加ゴールドが発生しません。"},
+        {"name": "ジリアン", "body": "デス中は固有スキルの追加経験値が発生しません。戦場の霧からQ - タイムボムを使うと位置が明らかになります。E - タイムワープの射程判定は中心から中心まで700ユニットになります。"}
+      ],
+      "sections": [
+        {"title": "復活アイテム · クローク アンド ダガー", "body": "アジリティクロークとダガーから作成し、合計1130ゴールドです。攻撃速度20%、クリティカル率20%、固有の行動妨害耐性35%を付与します。この耐性効果はマーキュリー ブーツ、ゼファー、ムーンフレア スペルブレードと共有します。"},
+        {"title": "復活アイテム · ムーンフレア スペルブレード", "body": "シーカー アームガードとネガトロン クロークから作成し、合計2300ゴールドです。魔力、物理防御、魔法防御がそれぞれ50で、ほかの耐性アイテムと共有する固有の行動妨害耐性35%を付与します。"},
+        {"title": "復活アイテム · ジ＝ロット ポータル", "body": "チェイン ベスト、ネガトロン クローク、再生の珠から作成し、合計2700ゴールドです。物理防御と魔法防御がそれぞれ50、5秒ごとの体力自動回復が5です。発動すると150秒間ヴォイドゲートを設置してレーンを進むヴォイドリングを生み出します。クールダウンは150秒です。"},
+        {"title": "カウンシルとシステム", "body": "第1回カウンシル投票で選ばれた復活アイテム3種が今パッチに反映されます。第2回投票は復活させるチャンピオンのスキルセットなど6分野について7日間行われ、結果は次のパッチノートで発表予定です。迷惑行為の検出、レトロなピンとロード画面、チャンピオン選択と投票画面の改善、ルーンストアの「おすすめ」並べ替えとルーン装備エフェクトも追加・改善されます。"},
+        {"title": "バグ修正", "body": "ジャンナのデス後に残るテイルウィンド、クラシックのプロフィールタブ操作、ロイヤルガード フィオラのクロマ付与、ルーンとコレクションの並べ替えを修正します。他モードでのクラシック画像表示とシン・ジャオのクロマ名漏れも修正します。ルナーン ハリケーンのミニオン反応、ソナEの説明、リコール連打によるグインソー レイジブレードのスタック、シヴィアのスペルシールドとミス・フォーチュンQの相互作用、トリスターナEの爆発も修正します。"}
+      ]
+    },
+    "en_US": {
+      "title": "League Classic Patch Notes · 26.19",
+      "author": "Operator",
+      "source": "Riot Games · Classic",
+      "sourceUrl": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-19-notes/",
+      "body": "Fizz, Graves, Nami, and Nautilus join Classic. Eleven existing champions receive balance changes or corrections to their historical behavior. Three items chosen in the first Council vote return, while a second vote and several client improvements begin. This is a summary of the Classic section of the official patch notes.",
+      "champions": [
+        {"name": "Fizz", "body": "Pre-rework Fizz arrives. Seastone Trident's passive deals damage over time based on the target's missing health, while its active empowers attacks and applies Grievous Wounds. Recasting Playful/Trickster increases travel distance but reduces the damage area and removes the slow."},
+        {"name": "Graves", "body": "The 2011–2015 marksman version of Graves arrives. He stacks defenses in combat and fires three projectiles with Buckshot. Smoke Screen limits enemy vision, and Quickdraw grants a dash and attack speed."},
+        {"name": "Nami", "body": "Nami joins Classic with Aqua Prison and Tidal Wave for crowd control and Ebb and Flow for damage or healing. Tidecaller's Blessing empowers only the next three basic attacks, not spells."},
+        {"name": "Nautilus", "body": "Nautilus joins Classic with an attack root, Dredge Line, a shield, and successive shockwaves. Depth Charge knocks up enemies along its path and applies stronger crowd control around its final target."},
+        {"name": "Akali", "body": "Crescent Slash's energy cost changes from 60 at every rank to 60/55/50/45/40, and its cooldown drops from 7/6/5/4/3 to 5/4/3/2/1 seconds. Its AP ratio rises from 30% to 40%."},
+        {"name": "Fiora", "body": "Blade Waltz's base damage and bonus AD ratio fall from 160/330/500 (+115%) to 125/255/385 (+85%), and its cooldown becomes 150/130/110 seconds. Maximum damage to one target stays close to its old value, while area damage in teamfights falls. Target priority and a movement lock bug are also fixed."},
+        {"name": "Galio", "body": "Righteous Gust's cast time drops from 0.4 to 0.25 seconds and projectile speed rises from 1,200 to 1,300. Its width increases from 60 to 160 and range from 1,100 to 1,175. Bugs affecting Bulwark's first heal and the Gust's excessive damage and visual effect are fixed."},
+        {"name": "Kassadin", "body": "Riftwalk range rises from 600 to 700. Null Sphere's AP ratio rises from 60% to 70%. Force Pulse changes to 80/130/180/230/280 damage (+70% AP) and a 30/35/40/45/50% slow."},
+        {"name": "Malphite", "body": "Brutal Strikes' area damage now crits when the basic attack crits, and activating it no longer interrupts an attack. Ground Slam no longer slows epic monsters' attack speed, and a bug that prevented Flash for too long after Unstoppable Force is fixed."},
+        {"name": "Morgana", "body": "Tormented Soil's mana cost rises to 80/100/120/140/160 and its cooldown to 12 seconds. Black Shield becomes 100/150/200/250/300, and Soul Shackles has a 120-second cooldown at every rank."},
+        {"name": "Nidalee", "body": "Bushwhack grants 250 units of vision for 0.5 seconds when cast. It deals the same total damage over 2.5 rather than 4 seconds. Aspect of the Cougar now resets the basic attack timer."},
+        {"name": "Poppy", "body": "Devastating Blow's total AD ratio now crits when the attack crits. All Spellblade damage dealt through it becomes magic damage, and its tooltip clarifies the damage cap and interactions."},
+        {"name": "Shyvana", "body": "Burnout's maximum extended duration rises from 4 to 6 seconds. Dragon's Descent grants 15/20/25 bonus armor and magic resistance instead of 10/15/20, still doubled in dragon form."},
+        {"name": "Twisted Fate", "body": "Gate's cooldown rises to 135/120/105/90/75 seconds and Destiny's to 180/150/120 seconds. Destiny's mana cost becomes 150/125/100. Loaded Dice no longer grants allies bonus gold while Twisted Fate is dead."},
+        {"name": "Zilean", "body": "Heightened Learning no longer grants bonus experience while Zilean is dead. Casting Time Bomb from fog reveals his position. Time Warp range is now measured as 700 units from center to center."}
+      ],
+      "sections": [
+        {"title": "Returning item · Cloak and Dagger", "body": "Builds from Cloak of Agility and Dagger for 1,130 gold. It grants 20% attack speed, 20% critical strike chance, and a unique 35% Tenacity effect shared with Mercury's Treads, Zephyr, and Moonflair Spellblade."},
+        {"title": "Returning item · Moonflair Spellblade", "body": "Builds from Seeker's Armguard and Negatron Cloak for 2,300 gold. It grants 50 ability power, 50 armor, 50 magic resistance, and a unique 35% Tenacity effect shared with the other Tenacity items."},
+        {"title": "Returning item · Zz'Rot Portal", "body": "Builds from Chain Vest, Negatron Cloak, and Rejuvenation Bead for 2,700 gold. It grants 50 armor, 50 magic resistance, and 5 health regeneration per 5 seconds. Its active places a Void Gate for 150 seconds, spawning Voidlings that advance down a lane; the cooldown is 150 seconds."},
+        {"title": "Council and systems", "body": "The three returning items chosen in the first Council vote arrive in this patch. A second seven-day vote covers six topics, including which champion kit to restore next; results are due in the next patch notes. Improvements include disruptive-behavior detection, classic-style pings and loading screens, clearer champion-select and Council visuals, Recommended rune sorting, and new rune socketing effects."},
+        {"title": "Bug fixes", "body": "Fixes cover Janna's lingering Tailwind after death, inaccessible Classic champion profile tabs, a missing Royal Guard Fiora chroma, and rune and collection portrait sorting. They also address Classic imagery appearing on another mode's login, a missing Xin Zhao chroma name, Runaan's Hurricane triggering minion assistance, Sona E's tooltip, Recall spam stacking Guinsoo's Rageblade, Sivir's Spell Shield versus Miss Fortune Q, and Tristana E's explosion."}
+      ]
+    }
+  }
+}

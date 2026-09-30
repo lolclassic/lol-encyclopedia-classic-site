@@ -1,0 +1,2628 @@
+{
+  "schemaVersion": 1,
+  "classification": "EDITORIAL_HISTORICAL_RELEASE_DATES",
+  "classicVersion": "16.19.1",
+  "dateBasis": "ORIGINAL_GLOBAL_INTRODUCTION_INCLUDING_ALPHA",
+  "note": "최초 글로벌 등장일(알파 포함)입니다. 한국 서버 서비스 개시일, 리워크일, Classic 모드 추가일이 아닙니다. 원본 챔피언 데이터나 현재 능력치를 보충하지 않는 정렬 전용 연혁입니다.",
+  "sourceIndexUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/data/ko_KR/mode/classic/champion.json",
+  "sourceIndexSha256": "e8569ec720eba25cb02ec3e4386fc04b5f30bb4da558933a231fe716f002a6be",
+  "englishSourceIndexUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/data/en_US/mode/classic/champion.json",
+  "englishSourceIndexSha256": "01525860a83d1827204478e212785baaa07973a8969fdcbcdb5f7f0d98394fd2",
+  "champions": {
+    "Jade_Ahri": {
+      "appId": "ahri",
+      "nameKo": "아리",
+      "nameEn": "Ahri",
+      "releaseDate": "2011-12-14",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Akali": {
+      "appId": "akali",
+      "nameKo": "아칼리",
+      "nameEn": "Akali",
+      "releaseDate": "2010-05-11",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Alistar": {
+      "appId": "alistar",
+      "nameKo": "알리스타",
+      "nameEn": "Alistar",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Amumu": {
+      "appId": "amumu",
+      "nameKo": "아무무",
+      "nameEn": "Amumu",
+      "releaseDate": "2009-06-26",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-20090626"
+      ]
+    },
+    "Jade_Anivia": {
+      "appId": "anivia",
+      "nameKo": "애니비아",
+      "nameEn": "Anivia",
+      "releaseDate": "2009-07-10",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-20090710"
+      ]
+    },
+    "Jade_Annie": {
+      "appId": "annie",
+      "nameKo": "애니",
+      "nameEn": "Annie",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Ashe": {
+      "appId": "ashe",
+      "nameKo": "애쉬",
+      "nameEn": "Ashe",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Blitzcrank": {
+      "appId": "blitzcrank",
+      "nameKo": "블리츠크랭크",
+      "nameEn": "Blitzcrank",
+      "releaseDate": "2009-09-02",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-closed-beta"
+      ]
+    },
+    "Jade_Brand": {
+      "appId": "brand",
+      "nameKo": "브랜드",
+      "nameEn": "Brand",
+      "releaseDate": "2011-04-12",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Chogath": {
+      "appId": "chogath",
+      "nameKo": "초가스",
+      "nameEn": "Cho'Gath",
+      "releaseDate": "2009-06-26",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-20090626"
+      ]
+    },
+    "Jade_Corki": {
+      "appId": "corki",
+      "nameKo": "코르키",
+      "nameEn": "Corki",
+      "releaseDate": "2009-09-19",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_DrMundo": {
+      "appId": "drmundo",
+      "nameKo": "문도 박사",
+      "nameEn": "Dr. Mundo",
+      "releaseDate": "2009-09-02",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-closed-beta"
+      ]
+    },
+    "Jade_Evelynn": {
+      "appId": "evelynn",
+      "nameKo": "이블린",
+      "nameEn": "Evelynn",
+      "releaseDate": "2009-05-01",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_Ezreal": {
+      "appId": "ezreal",
+      "nameKo": "이즈리얼",
+      "nameEn": "Ezreal",
+      "releaseDate": "2010-03-16",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Fiddlesticks": {
+      "appId": "fiddlesticks",
+      "nameKo": "피들스틱",
+      "nameEn": "Fiddlesticks",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Gangplank": {
+      "appId": "gangplank",
+      "nameKo": "갱플랭크",
+      "nameEn": "Gangplank",
+      "releaseDate": "2009-08-19",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-092215"
+      ]
+    },
+    "Jade_Garen": {
+      "appId": "garen",
+      "nameKo": "가렌",
+      "nameEn": "Garen",
+      "releaseDate": "2010-04-27",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Gragas": {
+      "appId": "gragas",
+      "nameKo": "그라가스",
+      "nameEn": "Gragas",
+      "releaseDate": "2010-02-02",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Heimerdinger": {
+      "appId": "heimerdinger",
+      "nameKo": "하이머딩거",
+      "nameEn": "Heimerdinger",
+      "releaseDate": "2009-10-10",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_Janna": {
+      "appId": "janna",
+      "nameKo": "잔나",
+      "nameEn": "Janna",
+      "releaseDate": "2009-09-02",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-closed-beta"
+      ]
+    },
+    "Jade_JarvanIV": {
+      "appId": "jarvaniv",
+      "nameKo": "자르반 4세",
+      "nameEn": "Jarvan IV",
+      "releaseDate": "2011-03-01",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Jax": {
+      "appId": "jax",
+      "nameKo": "잭스",
+      "nameEn": "Jax",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Karthus": {
+      "appId": "karthus",
+      "nameKo": "카서스",
+      "nameEn": "Karthus",
+      "releaseDate": "2009-06-12",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-20090612"
+      ]
+    },
+    "Jade_Kassadin": {
+      "appId": "kassadin",
+      "nameKo": "카사딘",
+      "nameEn": "Kassadin",
+      "releaseDate": "2009-08-07",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-closed-beta"
+      ]
+    },
+    "Jade_Katarina": {
+      "appId": "katarina",
+      "nameKo": "카타리나",
+      "nameEn": "Katarina",
+      "releaseDate": "2009-09-19",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_Kayle": {
+      "appId": "kayle",
+      "nameKo": "케일",
+      "nameEn": "Kayle",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Kennen": {
+      "appId": "kennen",
+      "nameKo": "케넨",
+      "nameEn": "Kennen",
+      "releaseDate": "2010-04-08",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_KogMaw": {
+      "appId": "kogmaw",
+      "nameKo": "코그모",
+      "nameEn": "Kog'Maw",
+      "releaseDate": "2010-06-24",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_LeeSin": {
+      "appId": "leesin",
+      "nameKo": "리 신",
+      "nameEn": "Lee Sin",
+      "releaseDate": "2011-04-01",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Leona": {
+      "appId": "leona",
+      "nameKo": "레오나",
+      "nameEn": "Leona",
+      "releaseDate": "2011-07-13",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Lulu": {
+      "appId": "lulu",
+      "nameKo": "룰루",
+      "nameEn": "Lulu",
+      "releaseDate": "2012-03-20",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Lux": {
+      "appId": "lux",
+      "nameKo": "럭스",
+      "nameEn": "Lux",
+      "releaseDate": "2010-10-19",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Malphite": {
+      "appId": "malphite",
+      "nameKo": "말파이트",
+      "nameEn": "Malphite",
+      "releaseDate": "2009-09-02",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-closed-beta"
+      ]
+    },
+    "Jade_Malzahar": {
+      "appId": "malzahar",
+      "nameKo": "말자하",
+      "nameEn": "Malzahar",
+      "releaseDate": "2010-06-01",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_MasterYi": {
+      "appId": "masteryi",
+      "nameKo": "마스터 이",
+      "nameEn": "Master Yi",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_MissFortune": {
+      "appId": "missfortune",
+      "nameKo": "미스 포츈",
+      "nameEn": "Miss Fortune",
+      "releaseDate": "2010-09-08",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Morgana": {
+      "appId": "morgana",
+      "nameKo": "모르가나",
+      "nameEn": "Morgana",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Nasus": {
+      "appId": "nasus",
+      "nameKo": "나서스",
+      "nameEn": "Nasus",
+      "releaseDate": "2009-10-01",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_Nidalee": {
+      "appId": "nidalee",
+      "nameKo": "니달리",
+      "nameEn": "Nidalee",
+      "releaseDate": "2009-12-17",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Nunu": {
+      "appId": "nunu",
+      "nameKo": "누누와 윌럼프",
+      "nameEn": "Nunu & Willump",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Olaf": {
+      "appId": "olaf",
+      "nameKo": "올라프",
+      "nameEn": "Olaf",
+      "releaseDate": "2010-06-09",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "liquipedia-olaf"
+      ]
+    },
+    "Jade_Pantheon": {
+      "appId": "pantheon",
+      "nameKo": "판테온",
+      "nameEn": "Pantheon",
+      "releaseDate": "2010-02-02",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Rammus": {
+      "appId": "rammus",
+      "nameKo": "람머스",
+      "nameEn": "Rammus",
+      "releaseDate": "2009-07-10",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-20090710"
+      ]
+    },
+    "Jade_Ryze": {
+      "appId": "ryze",
+      "nameKo": "라이즈",
+      "nameEn": "Ryze",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Shaco": {
+      "appId": "shaco",
+      "nameKo": "샤코",
+      "nameEn": "Shaco",
+      "releaseDate": "2009-10-10",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_Shen": {
+      "appId": "shen",
+      "nameKo": "쉔",
+      "nameEn": "Shen",
+      "releaseDate": "2010-03-24",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Singed": {
+      "appId": "singed",
+      "nameKo": "신지드",
+      "nameEn": "Singed",
+      "releaseDate": "2009-04-18",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-20090418"
+      ]
+    },
+    "Jade_Sion": {
+      "appId": "sion",
+      "nameKo": "사이온",
+      "nameEn": "Sion",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Sivir": {
+      "appId": "sivir",
+      "nameKo": "시비르",
+      "nameEn": "Sivir",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Skarner": {
+      "appId": "skarner",
+      "nameKo": "스카너",
+      "nameEn": "Skarner",
+      "releaseDate": "2011-08-09",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Sona": {
+      "appId": "sona",
+      "nameKo": "소나",
+      "nameEn": "Sona",
+      "releaseDate": "2010-09-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Soraka": {
+      "appId": "soraka",
+      "nameKo": "소라카",
+      "nameEn": "Soraka",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Taric": {
+      "appId": "taric",
+      "nameKo": "타릭",
+      "nameEn": "Taric",
+      "releaseDate": "2009-08-19",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-092215"
+      ]
+    },
+    "Jade_Teemo": {
+      "appId": "teemo",
+      "nameKo": "티모",
+      "nameEn": "Teemo",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Tristana": {
+      "appId": "tristana",
+      "nameKo": "트리스타나",
+      "nameEn": "Tristana",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Tryndamere": {
+      "appId": "tryndamere",
+      "nameKo": "트린다미어",
+      "nameEn": "Tryndamere",
+      "releaseDate": "2009-05-01",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_TwistedFate": {
+      "appId": "twistedfate",
+      "nameKo": "트위스티드 페이트",
+      "nameEn": "Twisted Fate",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Twitch": {
+      "appId": "twitch",
+      "nameKo": "트위치",
+      "nameEn": "Twitch",
+      "releaseDate": "2009-05-01",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009"
+      ]
+    },
+    "Jade_Vayne": {
+      "appId": "vayne",
+      "nameKo": "베인",
+      "nameEn": "Vayne",
+      "releaseDate": "2011-05-10",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Veigar": {
+      "appId": "veigar",
+      "nameKo": "베이가",
+      "nameEn": "Veigar",
+      "releaseDate": "2009-07-24",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-closed-beta"
+      ]
+    },
+    "Jade_Warwick": {
+      "appId": "warwick",
+      "nameKo": "워윅",
+      "nameEn": "Warwick",
+      "releaseDate": "2009-02-21",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Wukong": {
+      "appId": "wukong",
+      "nameKo": "오공",
+      "nameEn": "Wukong",
+      "releaseDate": "2011-07-26",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "lolvvv-dates"
+      ]
+    },
+    "Jade_Zilean": {
+      "appId": "zilean",
+      "nameKo": "질리언",
+      "nameEn": "Zilean",
+      "releaseDate": "2009-04-18",
+      "sourceRefs": [
+        "loltheory-dates",
+        "dotesports-dates",
+        "riftcrown-2009",
+        "historical-patch-20090418"
+      ]
+    },
+    "Jade_Fiora": {
+      "appId": "fiora",
+      "nameKo": "피오라",
+      "nameEn": "Fiora",
+      "releaseDate": "2012-02-29",
+      "sourceRefs": [
+        "loltheory-2618-additions",
+        "dotesports-2618-additions"
+      ]
+    },
+    "Jade_Galio": {
+      "appId": "galio",
+      "nameKo": "갈리오",
+      "nameEn": "Galio",
+      "releaseDate": "2010-08-10",
+      "sourceRefs": [
+        "loltheory-2618-additions",
+        "dotesports-2618-additions"
+      ]
+    },
+    "Jade_Poppy": {
+      "appId": "poppy",
+      "nameKo": "뽀삐",
+      "nameEn": "Poppy",
+      "releaseDate": "2010-01-13",
+      "sourceRefs": [
+        "loltheory-2618-additions",
+        "dotesports-2618-additions"
+      ]
+    },
+    "Jade_Shyvana": {
+      "appId": "shyvana",
+      "nameKo": "쉬바나",
+      "nameEn": "Shyvana",
+      "releaseDate": "2011-11-01",
+      "sourceRefs": [
+        "loltheory-2618-additions",
+        "dotesports-2618-additions"
+      ]
+    },
+    "Jade_XinZhao": {
+      "appId": "xinzhao",
+      "nameKo": "신 짜오",
+      "nameEn": "Xin Zhao",
+      "releaseDate": "2010-07-13",
+      "sourceRefs": [
+        "loltheory-2618-additions",
+        "dotesports-2618-additions"
+      ]
+    },
+    "Jade_Fizz": {
+      "appId": "fizz",
+      "nameKo": "피즈",
+      "nameEn": "Fizz",
+      "releaseDate": "2011-11-15",
+      "sourceRefs": [
+        "loltheory-2619-additions",
+        "dotesports-2619-additions"
+      ]
+    },
+    "Jade_Graves": {
+      "appId": "graves",
+      "nameKo": "그레이브즈",
+      "nameEn": "Graves",
+      "releaseDate": "2011-10-19",
+      "sourceRefs": [
+        "loltheory-2619-additions",
+        "dotesports-2619-additions"
+      ]
+    },
+    "Jade_Nami": {
+      "appId": "nami",
+      "nameKo": "나미",
+      "nameEn": "Nami",
+      "releaseDate": "2012-12-07",
+      "sourceRefs": [
+        "loltheory-2619-additions",
+        "dotesports-2619-additions"
+      ]
+    },
+    "Jade_Nautilus": {
+      "appId": "nautilus",
+      "nameKo": "노틸러스",
+      "nameEn": "Nautilus",
+      "releaseDate": "2012-02-14",
+      "sourceRefs": [
+        "loltheory-2619-additions",
+        "dotesports-2619-additions"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "loltheory-dates",
+      "url": "https://blog.loltheory.gg/league-of-legends-champions-by-release-date/",
+      "sha256": "6194610cc4dcc61ce09992c692ca939ea17d47bf77574520753c538035e61db1",
+      "retrievedAt": "2026-09-08T06:25:44.622953+00:00",
+      "title": "League of Legends Champions by Release Date",
+      "scope": "Classic 목록의 63명에 해당하는 최초 출시 날짜만 행별 대조했습니다."
+    },
+    {
+      "id": "lolvvv-dates",
+      "url": "https://www.lolvvv.com/blog/lol-champion-release-dates",
+      "sha256": "ade250cd287bd53264f635428cd556e07aa537495aa8caee8d398b6fc2fafc36",
+      "retrievedAt": "2026-09-08T06:21:24.155205+00:00",
+      "title": "LoL Champion Release Dates",
+      "scope": "Classic 목록의 63명에 해당하는 최초 출시 날짜만 행별 대조했습니다."
+    },
+    {
+      "id": "riftcrown-2009",
+      "url": "https://theriftcrown.com/league-2009-which-champions-release/",
+      "sha256": "60bfe8ed58af69b67ebda72025720b275e9092b259573164c120ae37b7b20503",
+      "retrievedAt": "2026-09-08T06:31:12.076361+00:00",
+      "title": "League of 2009: Which Champions Saw Their Release in 2009?",
+      "scope": "Classic 목록의 63명에 해당하는 최초 출시 날짜만 행별 대조했습니다."
+    },
+    {
+      "id": "dotesports-dates",
+      "url": "https://dotesports.com/league-of-legends/news/all-league-of-legends-champion-release-dates",
+      "title": "All League of Legends champion release dates",
+      "verification": "2026-09-08 웹 도구로 공개 표를 읽고 해당 63행만 별도 전사하여 대조했습니다. 직접 HTTP 저장은 451 응답이어서 성공한 파일 해시를 주장하지 않습니다.",
+      "scope": "최초 출시 날짜의 교차 대조만 사용합니다."
+    },
+    {
+      "id": "historical-patch-20090418",
+      "url": "https://wiki.leagueoflegends.com/en-us/April_18%2C_2009_Patch",
+      "title": "초기 패치 출시 기록",
+      "verification": "검색 색인에 노출된 출시 날짜 및 신규 챔피언 기록을 보조 대조했습니다. 원문 HTTP 접근은 제한되어 전체 문서 검증으로 보고하지 않습니다.",
+      "scope": "이미 두 연혁표 이상이 일치하는 날짜의 추가 교차 확인입니다."
+    },
+    {
+      "id": "historical-patch-20090612",
+      "url": "https://leagueoflegends.fandom.com/wiki/June_12%2C_2009_Patch",
+      "title": "초기 패치 출시 기록",
+      "verification": "검색 색인에 노출된 출시 날짜 및 신규 챔피언 기록을 보조 대조했습니다. 원문 HTTP 접근은 제한되어 전체 문서 검증으로 보고하지 않습니다.",
+      "scope": "이미 두 연혁표 이상이 일치하는 날짜의 추가 교차 확인입니다."
+    },
+    {
+      "id": "historical-patch-20090626",
+      "url": "https://leagueoflegends.fandom.com/wiki/June_26%2C_2009_Patch",
+      "title": "초기 패치 출시 기록",
+      "verification": "검색 색인에 노출된 출시 날짜 및 신규 챔피언 기록을 보조 대조했습니다. 원문 HTTP 접근은 제한되어 전체 문서 검증으로 보고하지 않습니다.",
+      "scope": "이미 두 연혁표 이상이 일치하는 날짜의 추가 교차 확인입니다."
+    },
+    {
+      "id": "historical-patch-20090710",
+      "url": "https://leagueoflegends.fandom.com/wiki/July_10%2C_2009_Patch",
+      "title": "초기 패치 출시 기록",
+      "verification": "검색 색인에 노출된 출시 날짜 및 신규 챔피언 기록을 보조 대조했습니다. 원문 HTTP 접근은 제한되어 전체 문서 검증으로 보고하지 않습니다.",
+      "scope": "이미 두 연혁표 이상이 일치하는 날짜의 추가 교차 확인입니다."
+    },
+    {
+      "id": "historical-closed-beta",
+      "url": "https://leagueoflegends.fandom.com/wiki/Patch_%28League_of_Legends%29/Closed_Beta",
+      "title": "초기 패치 출시 기록",
+      "verification": "검색 색인에 노출된 출시 날짜 및 신규 챔피언 기록을 보조 대조했습니다. 원문 HTTP 접근은 제한되어 전체 문서 검증으로 보고하지 않습니다.",
+      "scope": "이미 두 연혁표 이상이 일치하는 날짜의 추가 교차 확인입니다."
+    },
+    {
+      "id": "historical-patch-092215",
+      "url": "https://leagueoflegends.fandom.com/wiki/V0.9.22.15",
+      "title": "초기 패치 출시 기록",
+      "verification": "검색 색인에 노출된 출시 날짜 및 신규 챔피언 기록을 보조 대조했습니다. 원문 HTTP 접근은 제한되어 전체 문서 검증으로 보고하지 않습니다.",
+      "scope": "이미 두 연혁표 이상이 일치하는 날짜의 추가 교차 확인입니다."
+    },
+    {
+      "id": "liquipedia-olaf",
+      "url": "https://liquipedia.net/leagueoflegends/Olaf",
+      "title": "Liquipedia Olaf 출시 정보",
+      "verification": "검색 색인에 노출된 출시 날짜 및 신규 챔피언 기록을 보조 대조했습니다. 원문 HTTP 접근은 제한되어 전체 문서 검증으로 보고하지 않습니다.",
+      "scope": "이미 두 연혁표 이상이 일치하는 날짜의 추가 교차 확인입니다."
+    },
+    {
+      "id": "loltheory-2618-additions",
+      "url": "https://blog.loltheory.gg/league-of-legends-champions-by-release-date/",
+      "sha256": "6194610cc4dcc61ce09992c692ca939ea17d47bf77574520753c538035e61db1",
+      "scope": "26.18 클래식 신규 5명의 최초 글로벌 출시일만 대조. 능력치·게임 데이터는 사용하지 않음.",
+      "verification": "2026-09-12 원본 HTML 보존 및 행별 날짜 대조."
+    },
+    {
+      "id": "dotesports-2618-additions",
+      "url": "https://dotesports.com/league-of-legends/news/all-league-of-legends-champion-release-dates",
+      "verification": "2026-09-12 웹 문서의 최초 출시일 표에서 신규 5명의 날짜를 직접 대조. 원본 응답 바이트는 보존하지 않아 SHA를 기재하지 않음.",
+      "scope": "최초 글로벌 출시일 대조 전용. 현재 게임 데이터는 사용하지 않음."
+    },
+    {
+      "id": "loltheory-2619-additions",
+      "url": "https://blog.loltheory.gg/league-of-legends-champions-by-release-date/",
+      "sha256": "6194610cc4dcc61ce09992c692ca939ea17d47bf77574520753c538035e61db1",
+      "verification": "2026-09-27 저장된 원본 HTML에서 신규 4명의 날짜를 행별 확인했습니다.",
+      "scope": "26.19 클래식 신규 4명의 최초 글로벌 출시일 정렬에만 사용합니다."
+    },
+    {
+      "id": "dotesports-2619-additions",
+      "url": "https://dotesports.com/league-of-legends/news/all-league-of-legends-champion-release-dates",
+      "verification": "2026-09-27 공개 표에서 신규 4명의 날짜를 행별 대조했습니다. 응답 바이트는 보존하지 않았습니다.",
+      "scope": "26.19 클래식 신규 4명의 최초 글로벌 출시일 정렬에만 사용합니다."
+    }
+  ],
+  "comparisons": [
+    {
+      "classicId": "Jade_Ahri",
+      "nameEn": "Ahri",
+      "acceptedDate": "2011-12-14",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-12-14"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-12-14"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-12-14"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Akali",
+      "nameEn": "Akali",
+      "acceptedDate": "2010-05-11",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-05-11"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-05-11"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-05-11"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Alistar",
+      "nameEn": "Alistar",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Amumu",
+      "nameEn": "Amumu",
+      "acceptedDate": "2009-06-26",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-06-26"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-06-26"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-06-26"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-06-25"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Anivia",
+      "nameEn": "Anivia",
+      "acceptedDate": "2009-07-10",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-07-10"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-07-10"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-07-10"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-07-09"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Annie",
+      "nameEn": "Annie",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Ashe",
+      "nameEn": "Ashe",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Blitzcrank",
+      "nameEn": "Blitzcrank",
+      "acceptedDate": "2009-09-02",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-09-01"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Brand",
+      "nameEn": "Brand",
+      "acceptedDate": "2011-04-12",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-04-12"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-04-12"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-04-12"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Chogath",
+      "nameEn": "Cho'Gath",
+      "acceptedDate": "2009-06-26",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-06-26"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-06-26"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-06-26"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-06-25"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Corki",
+      "nameEn": "Corki",
+      "acceptedDate": "2009-09-19",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-09-19"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-09-19"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-09-19"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-09-18"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_DrMundo",
+      "nameEn": "Dr. Mundo",
+      "acceptedDate": "2009-09-02",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-09-01"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Evelynn",
+      "nameEn": "Evelynn",
+      "acceptedDate": "2009-05-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-04-30"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Ezreal",
+      "nameEn": "Ezreal",
+      "acceptedDate": "2010-03-16",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-03-16"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-03-16"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-03-16"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Fiddlesticks",
+      "nameEn": "Fiddlesticks",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Gangplank",
+      "nameEn": "Gangplank",
+      "acceptedDate": "2009-08-19",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-08-19"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-08-19"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-08-19"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-08-18"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Garen",
+      "nameEn": "Garen",
+      "acceptedDate": "2010-04-27",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-04-27"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-04-27"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-04-27"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Gragas",
+      "nameEn": "Gragas",
+      "acceptedDate": "2010-02-02",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-02-02"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-02-02"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-02-02"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Heimerdinger",
+      "nameEn": "Heimerdinger",
+      "acceptedDate": "2009-10-10",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-10-10"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-10-10"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-10-10"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-10-09"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Janna",
+      "nameEn": "Janna",
+      "acceptedDate": "2009-09-02",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-09-01"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_JarvanIV",
+      "nameEn": "Jarvan IV",
+      "acceptedDate": "2011-03-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-03-01"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-03-01"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-03-01"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Jax",
+      "nameEn": "Jax",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Karthus",
+      "nameEn": "Karthus",
+      "acceptedDate": "2009-06-12",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-06-12"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-06-12"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-06-12"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-06-11"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Kassadin",
+      "nameEn": "Kassadin",
+      "acceptedDate": "2009-08-07",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-08-07"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-08-07"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-08-07"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-08-06"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Katarina",
+      "nameEn": "Katarina",
+      "acceptedDate": "2009-09-19",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-09-19"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-09-19"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-09-19"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-09-18"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Kayle",
+      "nameEn": "Kayle",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Kennen",
+      "nameEn": "Kennen",
+      "acceptedDate": "2010-04-08",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-04-08"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-04-08"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-04-08"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_KogMaw",
+      "nameEn": "Kog'Maw",
+      "acceptedDate": "2010-06-24",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-06-24"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-06-24"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-06-24"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_LeeSin",
+      "nameEn": "Lee Sin",
+      "acceptedDate": "2011-04-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-04-01"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-04-01"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-04-01"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Leona",
+      "nameEn": "Leona",
+      "acceptedDate": "2011-07-13",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-07-13"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-07-13"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-07-13"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Lulu",
+      "nameEn": "Lulu",
+      "acceptedDate": "2012-03-20",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2012-03-20"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2012-03-20"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2012-03-20"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Lux",
+      "nameEn": "Lux",
+      "acceptedDate": "2010-10-19",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-10-19"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-10-19"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-10-19"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Malphite",
+      "nameEn": "Malphite",
+      "acceptedDate": "2009-09-02",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-09-02"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-09-01"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Malzahar",
+      "nameEn": "Malzahar",
+      "acceptedDate": "2010-06-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-06-01"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-06-01"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-06-01"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_MasterYi",
+      "nameEn": "Master Yi",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_MissFortune",
+      "nameEn": "Miss Fortune",
+      "acceptedDate": "2010-09-08",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-09-08"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-09-08"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-09-08"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Morgana",
+      "nameEn": "Morgana",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Nasus",
+      "nameEn": "Nasus",
+      "acceptedDate": "2009-10-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-10-01"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-10-01"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-10-01"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-09-30"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Nidalee",
+      "nameEn": "Nidalee",
+      "acceptedDate": "2009-12-17",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-12-17"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-12-17"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-12-17"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-12-17"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Nunu",
+      "nameEn": "Nunu & Willump",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Olaf",
+      "nameEn": "Olaf",
+      "acceptedDate": "2010-06-09",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-06-09"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-06-09"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-06-08"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Pantheon",
+      "nameEn": "Pantheon",
+      "acceptedDate": "2010-02-02",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-02-02"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-02-02"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-02-02"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Rammus",
+      "nameEn": "Rammus",
+      "acceptedDate": "2009-07-10",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-07-10"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-07-10"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-07-10"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-07-09"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Ryze",
+      "nameEn": "Ryze",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Shaco",
+      "nameEn": "Shaco",
+      "acceptedDate": "2009-10-10",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-10-10"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-10-10"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-10-10"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-10-09"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Shen",
+      "nameEn": "Shen",
+      "acceptedDate": "2010-03-24",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-03-24"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-03-24"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-03-24"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Singed",
+      "nameEn": "Singed",
+      "acceptedDate": "2009-04-18",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-04-18"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-04-18"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-04-18"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-04-17"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Sion",
+      "nameEn": "Sion",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Sivir",
+      "nameEn": "Sivir",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Skarner",
+      "nameEn": "Skarner",
+      "acceptedDate": "2011-08-09",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-08-09"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-08-09"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-08-09"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Sona",
+      "nameEn": "Sona",
+      "acceptedDate": "2010-09-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2010-09-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2010-09-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2010-09-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Soraka",
+      "nameEn": "Soraka",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Taric",
+      "nameEn": "Taric",
+      "acceptedDate": "2009-08-19",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-08-19"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-08-19"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-08-19"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-08-18"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Teemo",
+      "nameEn": "Teemo",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Tristana",
+      "nameEn": "Tristana",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Tryndamere",
+      "nameEn": "Tryndamere",
+      "acceptedDate": "2009-05-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-04-30"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_TwistedFate",
+      "nameEn": "Twisted Fate",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Twitch",
+      "nameEn": "Twitch",
+      "acceptedDate": "2009-05-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-05-01"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-04-30"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Vayne",
+      "nameEn": "Vayne",
+      "acceptedDate": "2011-05-10",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-05-10"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-05-10"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-05-10"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Veigar",
+      "nameEn": "Veigar",
+      "acceptedDate": "2009-07-24",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-07-24"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-07-24"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-07-24"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-07-23"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Warwick",
+      "nameEn": "Warwick",
+      "acceptedDate": "2009-02-21",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-02-21"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-02-21"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Wukong",
+      "nameEn": "Wukong",
+      "acceptedDate": "2011-07-26",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2011-07-26"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2011-07-26"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2011-07-26"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "대조한 출처의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Zilean",
+      "nameEn": "Zilean",
+      "acceptedDate": "2009-04-18",
+      "observations": [
+        {
+          "sourceRef": "loltheory-dates",
+          "date": "2009-04-18"
+        },
+        {
+          "sourceRef": "dotesports-dates",
+          "date": "2009-04-18"
+        },
+        {
+          "sourceRef": "riftcrown-2009",
+          "date": "2009-04-18"
+        },
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2009-04-17"
+        }
+      ],
+      "conflictingSources": [
+        "lolvvv-dates"
+      ],
+      "resolution": "서로 일치하는 연혁 표와 해당되는 초기 패치 기록의 출시 날짜를 채택했습니다. 다른 표의 하루 이른 날짜는 자동 보정하지 않고 행별 대조 결과로 제외했습니다."
+    },
+    {
+      "classicId": "Jade_Fiora",
+      "nameEn": "Fiora",
+      "acceptedDate": "2012-02-29",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2618-additions",
+          "date": "2012-02-29"
+        },
+        {
+          "sourceRef": "dotesports-2618-additions",
+          "date": "2012-02-29"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "서로 다른 두 출시일 표에서 최초 글로벌 출시일이 일치합니다."
+    },
+    {
+      "classicId": "Jade_Galio",
+      "nameEn": "Galio",
+      "acceptedDate": "2010-08-10",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2618-additions",
+          "date": "2010-08-10"
+        },
+        {
+          "sourceRef": "dotesports-2618-additions",
+          "date": "2010-08-10"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "서로 다른 두 출시일 표에서 최초 글로벌 출시일이 일치합니다."
+    },
+    {
+      "classicId": "Jade_Poppy",
+      "nameEn": "Poppy",
+      "acceptedDate": "2010-01-13",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2618-additions",
+          "date": "2010-01-13"
+        },
+        {
+          "sourceRef": "dotesports-2618-additions",
+          "date": "2010-01-13"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "서로 다른 두 출시일 표에서 최초 글로벌 출시일이 일치합니다."
+    },
+    {
+      "classicId": "Jade_Shyvana",
+      "nameEn": "Shyvana",
+      "acceptedDate": "2011-11-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2618-additions",
+          "date": "2011-11-01"
+        },
+        {
+          "sourceRef": "dotesports-2618-additions",
+          "date": "2011-11-01"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "서로 다른 두 출시일 표에서 최초 글로벌 출시일이 일치합니다."
+    },
+    {
+      "classicId": "Jade_XinZhao",
+      "nameEn": "Xin Zhao",
+      "acceptedDate": "2010-07-13",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2618-additions",
+          "date": "2010-07-13"
+        },
+        {
+          "sourceRef": "dotesports-2618-additions",
+          "date": "2010-07-13"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "서로 다른 두 출시일 표에서 최초 글로벌 출시일이 일치합니다."
+    },
+    {
+      "classicId": "Jade_Fizz",
+      "nameEn": "Fizz",
+      "acceptedDate": "2011-11-15",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2619-additions",
+          "date": "2011-11-15"
+        },
+        {
+          "sourceRef": "dotesports-2619-additions",
+          "date": "2011-11-15"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "두 출시일 표의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Graves",
+      "nameEn": "Graves",
+      "acceptedDate": "2011-10-19",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2619-additions",
+          "date": "2011-10-19"
+        },
+        {
+          "sourceRef": "dotesports-2619-additions",
+          "date": "2011-10-19"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "두 출시일 표의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Nami",
+      "nameEn": "Nami",
+      "acceptedDate": "2012-12-07",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2619-additions",
+          "date": "2012-12-07"
+        },
+        {
+          "sourceRef": "dotesports-2619-additions",
+          "date": "2012-12-07"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "두 출시일 표의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Nautilus",
+      "nameEn": "Nautilus",
+      "acceptedDate": "2012-02-14",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2619-additions",
+          "date": "2012-02-14"
+        },
+        {
+          "sourceRef": "dotesports-2619-additions",
+          "date": "2012-02-14"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "두 출시일 표의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    }
+  ],
+  "sourceCombinedSha256": "db989805fe7c5a0dd4eaef4b89f092a4523c72abebcec41a0b09b6e6c946ded8"
+}

@@ -1,0 +1,45 @@
+body.nostalgia218Fidelity #view .classicSkill h4{display:flex!important;align-items:baseline;flex-wrap:wrap;gap:4px!important}
+body.nostalgia218Fidelity #view .classicSkill .classicSkillEnglish{margin-left:auto!important;text-align:right;font-size:11px!important;font-weight:400;color:#cfc9ad!important;overflow-wrap:anywhere}
+body.nostalgia218Fidelity #view .classicSkill .classicSkillRange{margin:8px 0 0!important;padding-top:5px;border-top:1px solid #766b4038;font-size:11px;color:#ddd2ae}
+body.nostalgia218Fidelity #view .cvLinks button::before,body.nostalgia218Fidelity #view .cvLinks button::after{display:none!important}
+body.nostalgia218Fidelity #view .cvLinks button{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important}
+body.nostalgia218Fidelity #view .cvLinks .classicActionIcon{display:grid!important;place-items:center!important;flex:0 0 30px;width:30px;height:30px;border:1px solid #d2bc6b;border-radius:50%;background:#26342d;color:#fff4c9}
+.classicActionIcon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+body.nostalgia218Fidelity #view :is(.hmPatchRow,.hmCommunityRow) small{display:flex!important;align-items:center;justify-content:flex-end;gap:4px!important;white-space:nowrap!important}
+body.nostalgia218Fidelity #view :is(.hmPatchRow,.hmCommunityRow) small time{order:2!important;margin:0!important}
+body.nostalgia218Fidelity #view :is(.hmPatchRow,.hmCommunityRow) .hmFeedAuthor{order:0!important}
+body.nostalgia218Fidelity #view :is(.hmPatchRow,.hmCommunityRow) .hmFeedSeparator{order:1!important}
+/* The fixed dock already reserves body padding; do not count it twice. */
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive.nostalgia218HasArchiveDock:not(.finalHomeNoScroll):not(.device218ChampionList)>.app{min-height:calc(100dvh - var(--nostalgia-archive-dock-height,48px))!important}
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.cv,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.legacy,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.clsPage,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.bd,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.noticePage,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.patchNotesPage,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.patchNotesPage>.box,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.patchNoteDocument,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive:not(.finalHomeNoScroll) #view>.spellArchive{min-height:0!important}
+body.classicRuneRefresh #modal .classicVoiceDocument{width:100%!important;margin:0!important}
+body.classicRuneRefresh #modal .classicVoiceList{list-style:none;padding:0;margin:12px 0 0}
+body.classicRuneRefresh #modal .classicVoiceCategory{margin-top:10px;border:1px solid #a17c3e;border-radius:4px;background:#fff8e8}
+body.classicRuneRefresh #modal .classicVoiceCategory summary,body.classicRuneRefresh #modal .classicVoiceCategory h3{box-sizing:border-box;display:flex;align-items:center;gap:8px;min-height:44px;margin:0;padding:8px 10px;color:#38260f;font-size:15px;font-weight:700}
+body.classicRuneRefresh #modal .classicVoiceCategory summary{cursor:pointer;list-style:none}
+body.classicRuneRefresh #modal .classicVoiceCategory summary::-webkit-details-marker{display:none}
+body.classicRuneRefresh #modal .classicVoiceCategory summary::before{content:'▸';font-size:15px}
+body.classicRuneRefresh #modal .classicVoiceCategory[open] summary::before{content:'▾'}
+body.classicRuneRefresh #modal .classicVoiceCategory summary small{margin-left:auto;font-size:12px;font-weight:400}
+body.classicRuneRefresh #modal .classicVoiceCategory .classicVoiceList{margin:0;padding:0 10px 4px}
+body.classicRuneRefresh #modal .classicVoiceCategoryHint{margin:0;padding:0 10px 6px;color:#58421f;font-size:12px;line-height:1.5}
+body.classicRuneRefresh #modal .classicVoiceList button{box-sizing:border-box;display:flex;align-items:center;gap:10px;width:100%;min-height:46px;padding:8px 3px;border:0;border-bottom:1px solid #a17c3e;background:transparent;color:#38260f;text-align:left;font-size:14px}
+body.classicRuneRefresh #modal .classicVoiceList button[aria-pressed=true]{background:#ad7c2833}
+.classicVoicePlay{display:grid;place-items:center;flex:0 0 28px;height:28px;border:1px solid currentColor;border-radius:50%;font-size:12px}
+body.classicRuneRefresh #modal select[data-classic-voice-group]{box-sizing:border-box;display:block;width:100%;min-height:44px;margin:8px 0;padding:8px;border:1px solid #9b783e;border-radius:3px;background:#fff6dc;color:#38260f;font:inherit}
+body.classicRuneRefresh #modal .classicVoiceSharedSkins,body.classicRuneRefresh #modal .classicVoiceAvailability{font-size:12px;line-height:1.6;overflow-wrap:anywhere;color:#58421f}
+.classicVoiceListen{margin-left:auto;font-size:12px;white-space:nowrap;flex:none}.classicVoiceHint{font-size:12px}
+body.classicRuneRefresh #modal .classicVoiceLanguage{margin-left:auto;padding:2px 5px;border:1px solid #9b783e;border-radius:3px;color:#58421f;font-size:11px;white-space:nowrap;flex:none}
+body.classicRuneRefresh #modal .classicVoiceLanguage+.classicVoiceListen{margin-left:0}
+body.classicRuneRefresh #modal:has(.classicVoiceDocument,.classicChampionLore)>#close{position:sticky!important;top:0!important;z-index:10!important;float:right!important;width:40px!important;height:40px!important;min-height:40px!important;pointer-events:auto!important}
+body.classicRuneRefresh #modal .classicChampionLore{width:100%!important;margin:0!important}
+body.classicRuneRefresh #modal :is(.classicVoiceDocument,.classicChampionLore) h2{padding-right:28px!important}
+body.nostalgia218Fidelity #view .classicSkill .classicSkillRange{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:8px}

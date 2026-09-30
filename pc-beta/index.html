@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c131c">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Unofficial LoL Encyclopedia Classic PC Beta: explore historical champions, items, masteries, spells, runes, and news in your browser.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="images/branding/app-icon-192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="images/branding/app-icon-192.png">
+<link rel="stylesheet" href="style.css?v=26.18.1">
+<link rel="stylesheet" href="classic-rune-ui.css?v=2.0.5.9">
+<title>LoL Encyclopedia Classic (Beta)</title>
+<link rel="stylesheet" href="classic-detail-extras.css?v=26.19.5.1">
+<link rel="stylesheet" href="classic-reference-ui.css?v=26.19.5">
+<link rel="stylesheet" href="classic-preferences.css?v=26.18.2">
+<link rel="stylesheet" href="classic-news-ui.css?v=26.19.5.2">
+<link rel="stylesheet" href="classic-skill-effects-26195.css?v=26.19.5.1">
+<link rel="stylesheet" href="classic-recommendations-ui.css?v=26.19.5.1">
+<link rel="stylesheet" href="classic-surface-theme.css?v=26.18.4">
+<link rel="stylesheet" href="community-translation.css?v=26.19.5.10">
+<link rel="stylesheet" href="pc-beta.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <button id="menu" aria-label="메뉴 열기">☰ 메뉴</button>
+    <b id="home" role="button" tabindex="0">LoL백과사전(베타)</b>
+    <button id="settings" aria-label="설정">설정</button>
+  </header>
+  <aside id="drawer" aria-label="주 메뉴"></aside>
+  <button id="shade" hidden aria-label="메뉴 닫기"></button>
+  <main id="view"></main>
+</div>
+<dialog id="modal" aria-label="상세 정보">
+  <button id="close" aria-label="닫기">×</button>
+  <div id="modalBody"></div>
+</dialog>
+<script src="runtime-config.js?v=2.0.0.12"></script>
+<script src="classic-preference-store.js?v=26.18.4"></script>
+<script src="classic-champion-media.js?v=1.0.2"></script>
+<script src="mode-classic-champions.js?v=2.0.5.8"></script>
+<script src="classic-skin-viewer.js?v=26.19.5"></script>
+<script src="classic-documents.js?v=26.19.5"></script>
+<script src="classic-spell-details.js?v=26.19.5.1"></script>
+<script src="classic-damage-view.js?v=26.18.5"></script>
+<script src="classic-voice-library.js?v=26.19.5.19"></script>
+<script src="classic-pick-voice.js?v=26.19.5.10"></script>
+<script src="classic-champion-backgrounds.js?v=26.19.5.2"></script>
+<script src="classic-detail-extras.js?v=2.0.5.9"></script>
+<script src="classic-reference-ui.js?v=26.19.5.4"></script>
+<script src="classic-skill-effects-26195.js?v=26.19.5.5"></script>
+<script src="classic-recommendations-ui.js?v=26.19.5.1"></script>
+<script src="classic-news-ui.js?v=26.19.5.3"></script>
+<script src="classic-corrections.js?v=26.18.1"></script>
+<script src="classic-patch-updates.js?v=26.18.5"></script>
+<script src="classic-patch-2619.js?v=26.19.1"></script>
+<script src="classic-skill-completion-26192.js?v=26.19.2"></script>
+<script src="classic-locale-26195.js?v=26.19.5.13"></script>
+<script src="classic-skill-locale-26195.js?v=26.19.5.2"></script>
+<script src="classic-skill-display-locale-26195.js?v=26.19.5.1"></script>
+<script src="app.js?v=26.19.5.21"></script>
+<script src="champion-routing-fix.js?v=2.0.5.3"></script>
+<script src="portrait-fix.js?v=2.0.4.1"></script>
+<script src="classic-ui-overrides.js?v=26.19.5"></script>
+<script src="release-readability-controls.js?v=26.19.5.7"></script>
+<script src="final-ui-hotfix.js?v=26.19.5.1"></script>
+<script src="nostalgia-218-fidelity.js?v=26.19.5.7"></script>
+<script src="classic-rune-ui.js?v=26.19.5"></script>
+<script src="pc-beta-runtime.js"></script>
+</body>
+</html>

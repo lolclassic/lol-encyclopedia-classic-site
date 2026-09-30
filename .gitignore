@@ -1,0 +1,5 @@
+# Preserved historical review assets are local only.
+/assets/physical-26195-en-*
+!/assets/physical-26195-en-r32-raw/
+/assets/preview-26195-en-*
+/__pycache__/

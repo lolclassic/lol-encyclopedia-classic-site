@@ -1,0 +1,3 @@
+# Preserve reviewed export and capture byte identity.
+pc-beta/** -text
+assets/physical-26195-en-r32-raw/** -text

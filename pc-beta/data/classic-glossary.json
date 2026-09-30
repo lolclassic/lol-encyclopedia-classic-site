@@ -1,0 +1,2813 @@
+{
+  "schemaVersion": 1,
+  "classification": "EDITORIAL_GENERAL_LOL_GLOSSARY",
+  "note": "한국 이용자가 실제 게임에서 사용하는 표현을 중심으로 정리한 일반 용어 풀이입니다. 특정 시즌이나 챔피언의 수치·효과를 보충하지 않습니다.",
+  "reviewedBaselineCount": 171,
+  "references": [
+    {
+      "url": "https://www.leagueoflegends.com/ko-kr/how-to-play/",
+      "scope": "기본 전장·구조물·성장 개념 참고. 모든 용어의 공식 번역 또는 공식 정의를 뜻하지 않습니다."
+    },
+    {
+      "id": "inven-2011-items",
+      "url": "https://www.inven.co.kr/board/lol/2766/434",
+      "sha256": "8bba6a2167c4894374888e1e80ae1849ff1a52e92ea1e2cffdfd3c996deb6721",
+      "retrievedAt": "2026-09-12T13:37:21.487555+00:00",
+      "title": "아이템 영어명/한국어명과 약어 정리 (2011)",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2013-terms",
+      "url": "https://www.inven.co.kr/board/lol/2766/17288",
+      "sha256": "942d9a3596c7977c07024872bd7a044afc92b39db3c23ac57d93ea2e2a9a4698",
+      "retrievedAt": "2026-09-12T13:37:21.488554+00:00",
+      "title": "북미식 아이템 이름과 한국어 용어 정리 (2013)",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2016-terms",
+      "url": "https://www.inven.co.kr/board/lol/2766/41577",
+      "sha256": "53917d7eff826aa40d9af2185e634358c11a431c1c851895508a3e7ce375fd31",
+      "retrievedAt": "2026-09-12T13:37:22.686100+00:00",
+      "title": "브론즈를 위한 용어 및 라인관리",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2016-magic",
+      "url": "https://www.inven.co.kr/board/lol/2766/42544",
+      "sha256": "1fc9db5635adc3a5ed7b64cb6999eacb73e45f3537759cbf11564c6a1a51518e",
+      "retrievedAt": "2026-09-12T13:37:22.712188+00:00",
+      "title": "초반 마관 세팅이 좋은 이유",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2016-riven",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=127715&vtype=pc",
+      "sha256": "25da27e51701e09d1bac1a4ef50f04016a421b3517846bd346f6a428951a3eb9",
+      "retrievedAt": "2026-09-12T13:37:22.259248+00:00",
+      "title": "극딜 리븐의 모든 것: 이용자 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2017-janna",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=135727",
+      "sha256": "60aabbf64563c8aa355333107974f20ca7acf252238222f6ccad9d4bfbeb47aa",
+      "retrievedAt": "2026-09-12T13:37:22.361927+00:00",
+      "title": "잔나 - 템효율 & 템선택 가이드: 이용자 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2014-macro",
+      "url": "https://www.inven.co.kr/board/lol/2766/32324",
+      "sha256": "aa6ca05f9e59d3ec2bca48730b1944cdcc8692194012f23fdab3eb01ef319314",
+      "retrievedAt": "2026-09-12T13:37:22.729886+00:00",
+      "title": "플레 이상 가기 위해 갖춰야 할 최소한의 기본 게임지능",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2013-ahri",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=41200&vtype=pc",
+      "sha256": "1a0d929427db66f7b0e5ccb923ba70fb3579b3fd0371fb281e6a7138943a7b2f",
+      "retrievedAt": "2026-09-12T13:37:22.959092+00:00",
+      "title": "선도란검 팔방미인 아리: 이용자 전투 용어 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "user-request-26-36",
+      "scope": "사용자가 지정한 대표 표기 변경, 올인·강가 삭제 및 전체 용어 검토 요구입니다."
+    },
+    {
+      "id": "inven-2013-kda",
+      "url": "https://www.inven.co.kr/board/lol/2971/3154?p=172",
+      "sha256": "dad946ec50d70e6e06c0a5c65a3b5771af5b08325b89dc8da24f3e9a80f352ff",
+      "retrievedAt": "2026-09-12T14:38:55.644294+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다.",
+      "title": "KDA가 실력을 대변한다? Ver.1.0. (2013)"
+    },
+    {
+      "id": "inven-2013-rengar",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=38445",
+      "sha256": "4979081150191f498165841fa99d3d6995b19bbd6669ba15dbb438e3ccad307c",
+      "retrievedAt": "2026-09-12T13:37:21.488554+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2013-ryze",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=38513&vtype=pc",
+      "sha256": "736b203281d1337a88c4ab1fe1f6999296c4ca4139b9b080be4308a2a6a69dbf",
+      "retrievedAt": "2026-09-12T14:58:33.805957+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다.",
+      "title": "[작별] The Ryze -Mid-: 대상 지정 스킬의 한국어 용례 (2013)"
+    },
+    {
+      "id": "inven-2014-cc-terms",
+      "url": "https://www.inven.co.kr/board/lol/3369/347871",
+      "sha256": "94befde6a7138fe5b61374d2c20008630ad8f56b9de01ce40f0d185c33bf5f78",
+      "retrievedAt": "2026-09-12T14:58:31.728786+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다.",
+      "title": "엔하위키 롤항목에 군중제어기소항목추가함. (2014)"
+    },
+    {
+      "id": "inven-2014-team-composition",
+      "url": "https://www.inven.co.kr/board/lol/3369/218883",
+      "sha256": "0ff911748c19e3c5cbfa3981d9dc076f068b2f7429ea22f050f6162b095424c5",
+      "retrievedAt": "2026-09-12T13:45:05.436951+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2014-teemo",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=109651",
+      "sha256": "1ef3ee67c55d0cdeda1242542f83a9a5e32a5f19aeec76e71710fce420a453b0",
+      "retrievedAt": "2026-09-12T13:37:21.944080+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2014-wave-reset",
+      "url": "https://www.inven.co.kr/board/lol/3866/1676543",
+      "sha256": "14b3c7eb577cbbb8e831caed5c004f407e6c6ad86f6158969fd82ef957e6bda4",
+      "retrievedAt": "2026-09-12T13:45:05.995621+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2015-masteryi",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=119012&vtype=pc",
+      "sha256": "d9b69fdeadf80d47c54773cd21c4fe0c8e9918c6a3bcb631ca38ac77a68841eb",
+      "retrievedAt": "2026-09-12T13:45:05.807205+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2016-lissandra",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=133058&vtype=pc",
+      "sha256": "06d6501bba482bb44c7cdc52333a21a45f891a84592b2b9876ea8ffc0d3ca61c",
+      "retrievedAt": "2026-09-12T13:45:05.436951+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2017-alistar",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=137605&vtype=pc",
+      "sha256": "dca5b53612dbdffda822624006f7dad9b59d9cfc72510f9c0e11d4bd7c727c96",
+      "retrievedAt": "2026-09-12T13:37:22.345916+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2018-untargetable",
+      "url": "https://www.inven.co.kr/board/lol/3371/409040",
+      "sha256": "1f473cd2028f94553699c2884e6c6501d372354cad56bf112b0f6f6e267af07d",
+      "retrievedAt": "2026-09-12T13:46:11.260785+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2021-wave-guide",
+      "url": "https://www.inven.co.kr/board/lol/2766/49238",
+      "sha256": "1159d998c493481526956c7b5dcc81390a9698247cb9ee523285226baaa76a92",
+      "retrievedAt": "2026-09-12T13:45:05.436951+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2022-tower-defense",
+      "url": "https://www.inven.co.kr/board/lol/4625/3441370?p=2",
+      "sha256": "af11ee21705375be448f6fd9d77438000f640ef1ee8013d3764ef5a4dda73015",
+      "retrievedAt": "2026-09-12T14:38:56.106532+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다.",
+      "title": "DK vs KT 1세트 리뷰의 타워 수성 용례 (2022)"
+    },
+    {
+      "id": "inven-2024-kill-participation",
+      "url": "https://www.inven.co.kr/board/lol/3369/2503433",
+      "sha256": "53b2ae99780ef9ae1efcea8a4ea7759d4be4edd819baa072fd9f01b503f23f0b",
+      "retrievedAt": "2026-09-12T13:45:05.438005+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "riot-how-to-play",
+      "url": "https://www.leagueoflegends.com/ko-kr/how-to-play/",
+      "sha256": "bb66b3695d186f9a3f1b652dce2f0a4c5d83f751c5e6b9520dbc095dfc14d866",
+      "retrievedAt": "2026-09-12T13:37:22.576043+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "riot-patch-10-3-vocabulary",
+      "url": "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-10-3-notes/",
+      "sha256": "c228bc598f0f6244e410a407e7df26423bbf3a9ba888edab92fbc34c125126e1",
+      "retrievedAt": "2026-09-12T13:45:05.775594+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "riot-patch-11-20-vocabulary",
+      "url": "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-11-20-notes/",
+      "sha256": "bb76442819f0599d6f91a51d173f481b97614a5a1e7b98c01a6887dfbd3c18b9",
+      "retrievedAt": "2026-09-12T13:45:05.768696+00:00",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    }
+  ],
+  "entries": [
+    {
+      "termKo": "정글링",
+      "termEn": "Jungling",
+      "description": "정글 몬스터를 사냥하며 골드와 경험치를 얻는 행동입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-cd12419a721e",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "하드 CC",
+      "termEn": "Hard Crowd Control",
+      "description": "기절이나 공중에 띄우기처럼 대상의 주요 행동을 제한하는 군중 제어를 뜻하는 표현입니다.",
+      "sourceRefs": [
+        "inven-2014-cc-terms",
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-536dffc59eae",
+          "sourceRef": "inven-2014-cc-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "타워",
+      "termEn": "Turret",
+      "description": "주변 적을 공격하며 공격로와 기지를 지키는 방어 구조물입니다.",
+      "aliases": [
+        "포탑"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-5e8985651b58",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "우물",
+      "termEn": "Fountain",
+      "description": "기지에서 챔피언이 회복하고 아이템을 구매하는 구역입니다.",
+      "sourceRefs": [
+        "inven-2016-lissandra",
+        "riot-how-to-play"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-0bdb1a1b7587",
+          "sourceRef": "inven-2016-lissandra"
+        }
+      ]
+    },
+    {
+      "termKo": "라인",
+      "termEn": "Lane",
+      "description": "탑·미드·바텀처럼 미니언을 상대하며 성장하는 공격로입니다. 문맥에 따라 그곳의 미니언 흐름을 뜻하기도 합니다.",
+      "aliases": [
+        "공격로"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-f3cd692f5481",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "탑",
+      "termEn": "Top Lane",
+      "description": "지도 상단에 있는 공격로와 그 공격로를 담당하는 역할을 뜻합니다.",
+      "sourceRefs": [
+        "inven-2013-rengar",
+        "riot-how-to-play"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-b085b3dff6de",
+          "sourceRef": "inven-2013-rengar"
+        }
+      ]
+    },
+    {
+      "termKo": "미드",
+      "termEn": "Mid Lane",
+      "description": "지도 중앙에 있는 공격로와 그 공격로를 담당하는 역할을 뜻합니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-b7d29476d1d2",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "바텀",
+      "termEn": "Bottom Lane",
+      "description": "지도 하단에 있는 공격로를 뜻합니다.",
+      "sourceRefs": [
+        "inven-2014-macro"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-0184ade4fe02",
+          "sourceRef": "inven-2014-macro"
+        }
+      ]
+    },
+    {
+      "termKo": "정글",
+      "termEn": "Jungle",
+      "description": "공격로 사이에 몬스터가 있는 지역입니다.",
+      "sourceRefs": [
+        "riot-how-to-play"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-793e9fcb1e32",
+          "sourceRef": "riot-how-to-play"
+        }
+      ]
+    },
+    {
+      "termKo": "정글러",
+      "termEn": "Jungler",
+      "description": "주로 정글 몬스터를 사냥하며 공격로를 지원하는 역할입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-704a72bcfbe1",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "서폿",
+      "termEn": "Support",
+      "description": "아군 보호, 시야 확보, 교전 보조 등을 담당하는 역할입니다.",
+      "aliases": [
+        "서포터"
+      ],
+      "sourceRefs": [
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-49aa2ceb4c4a",
+          "sourceRef": "inven-2017-janna"
+        }
+      ]
+    },
+    {
+      "termKo": "원딜",
+      "termEn": "ADC / Ranged Carry",
+      "description": "주로 원거리 기본 공격으로 지속적인 피해를 담당하는 역할입니다. 보통 바텀에서 성장하는 딜러를 가리킵니다.",
+      "aliases": [
+        "원거리 딜러"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-668481cc3a99",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "탱커",
+      "termEn": "Tank",
+      "description": "적의 공격을 받아내고 아군이 싸울 공간을 만드는 역할입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-5751e3f459ff",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "암살자",
+      "termEn": "Assassin",
+      "description": "접근해 핵심 대상을 빠르게 처치하는 데 특화된 역할군입니다.",
+      "sourceRefs": [
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-c354fa8ed9ea",
+          "sourceRef": "inven-2017-janna"
+        }
+      ]
+    },
+    {
+      "termKo": "미니언",
+      "termEn": "Minion",
+      "description": "공격로를 따라 이동하며 적을 공격하는 아군 또는 적 유닛입니다.",
+      "sourceRefs": [
+        "riot-how-to-play"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-0d48bba3d33d",
+          "sourceRef": "riot-how-to-play"
+        }
+      ]
+    },
+    {
+      "termKo": "대포 미니언",
+      "termEn": "Siege Minion",
+      "description": "공격로 미니언 무리에 포함되는 튼튼한 공성 유닛입니다.",
+      "aliases": [
+        "공성 미니언"
+      ],
+      "sourceRefs": [
+        "riot-patch-11-20-vocabulary"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-13281d3a0f1a",
+          "sourceRef": "riot-patch-11-20-vocabulary"
+        }
+      ]
+    },
+    {
+      "termKo": "슈퍼 미니언",
+      "termEn": "Super Minion",
+      "description": "상대 억제기가 파괴된 공격로에 등장하는 강력한 미니언입니다.",
+      "sourceRefs": [
+        "riot-how-to-play"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-884f681d7e77",
+          "sourceRef": "riot-how-to-play"
+        }
+      ]
+    },
+    {
+      "termKo": "캠프",
+      "termEn": "Camp",
+      "description": "정글 몬스터가 모여 있는 장소나 그 몬스터 무리를 뜻합니다.",
+      "sourceRefs": [
+        "riot-patch-10-3-vocabulary"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-c58ca8216c17",
+          "sourceRef": "riot-patch-10-3-vocabulary"
+        }
+      ]
+    },
+    {
+      "termKo": "용",
+      "termEn": "Dragon",
+      "description": "강가의 둥지에 등장하는 중립 목표물입니다. 보상은 모드 규칙에 따릅니다.",
+      "aliases": [
+        "드래곤"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-6e8725cfddfb",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "바론(내셔 남작)",
+      "termEn": "Baron Nashor",
+      "description": "처치하면 팀이 강력한 강화 효과를 얻는 주요 중립 몬스터입니다. 바론을 둘러싼 시야와 진입 경로가 한타의 중요한 쟁점이 됩니다.",
+      "aliases": [
+        "바론",
+        "내셔 남작"
+      ],
+      "sourceRefs": [
+        "user-request-26-36",
+        "inven-2011-items",
+        "riot-how-to-play"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-178fbc8f2c2e",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "부쉬",
+      "termEn": "Brush",
+      "description": "바깥에서 내부의 적을 바로 볼 수 없는 지형입니다. 시야 확보 여부에 따라 보이는 대상이 달라집니다.",
+      "aliases": [
+        "수풀"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-420725fdd443",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "시야",
+      "termEn": "Vision",
+      "description": "지도에서 적이나 지형의 현재 상태를 확인할 수 있는 범위입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-c30f56ae00dc",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "와드",
+      "termEn": "Ward",
+      "description": "일정 구역의 시야를 확보하기 위해 설치하는 도구입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-6cda48e13228",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "와딩",
+      "termEn": "Warding",
+      "description": "필요한 위치에 와드를 설치해 시야를 확보하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-e5baa5cf542c",
+          "sourceRef": "inven-2013-ahri"
+        }
+      ]
+    },
+    {
+      "termKo": "시야 장악",
+      "termEn": "Vision Control",
+      "description": "와드 설치와 적 시야 제거를 통해 특정 지역의 정보를 확보하는 운영입니다.",
+      "sourceRefs": [
+        "inven-2021-wave-guide"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-298b6665e14d",
+          "sourceRef": "inven-2021-wave-guide"
+        }
+      ]
+    },
+    {
+      "termKo": "핑",
+      "termEn": "Ping",
+      "description": "지도나 대상에 신호를 보내 아군에게 정보를 전달하는 기능입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-a1287ded4209",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "미아핑",
+      "termEn": "Missing Ping",
+      "description": "보이던 적이 사라졌거나 다른 곳으로 이동할 가능성이 있음을 아군에게 알리는 신호입니다.",
+      "aliases": [
+        "실종 신호"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-a3b81ceb42ea",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "파밍",
+      "termEn": "Farming",
+      "description": "미니언과 몬스터 등을 처치하며 골드와 경험치를 확보하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-921e2830d7c9",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "막타",
+      "termEn": "Last Hit",
+      "description": "미니언이나 몬스터를 처치하는 마지막 타격입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-ffa69d70dbc8",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "CS",
+      "termEn": "Creep Score",
+      "description": "미니언·몬스터 처치로 쌓인 수치입니다. 상대와 얼마나 잘 성장했는지 비교할 때 자주 사용합니다.",
+      "aliases": [
+        "미니언 처치 수"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-3a22ef4d2495",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "라인전",
+      "termEn": "Laning Phase",
+      "description": "공격로에서 성장하며 상대와 견제하고 교전하는 구간입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-63ccc8947b7b",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "웨이브",
+      "termEn": "Minion Wave",
+      "description": "공격로를 따라 함께 이동하는 미니언 무리입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-0362ad03bc8c",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "푸시",
+      "termEn": "Push",
+      "description": "상대 미니언을 정리해 아군 미니언이 앞으로 나아가게 하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2021-wave-guide"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-24dedf77838c",
+          "sourceRef": "inven-2021-wave-guide"
+        }
+      ]
+    },
+    {
+      "termKo": "슬로우 푸시",
+      "termEn": "Slow Push",
+      "description": "미니언 무리가 서서히 커지도록 조절하며 공격로를 미는 운영입니다.",
+      "sourceRefs": [
+        "inven-2021-wave-guide"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-4dfd71e95aab",
+          "sourceRef": "inven-2021-wave-guide"
+        }
+      ]
+    },
+    {
+      "termKo": "패스트 푸시",
+      "termEn": "Fast Push",
+      "description": "미니언을 빠르게 정리해 공격로를 신속히 미는 운영입니다.",
+      "sourceRefs": [
+        "inven-2021-wave-guide"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-e8bdf99c10e1",
+          "sourceRef": "inven-2021-wave-guide"
+        }
+      ]
+    },
+    {
+      "termKo": "프리징",
+      "termEn": "Freeze",
+      "description": "미니언 균형을 조절해 원하는 위치에 전선을 유지하는 운영입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-23aee9dbb5ed",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "라인 관리",
+      "termEn": "Wave Management",
+      "description": "미니언 처치 속도와 위치를 조절해 전선을 유리하게 만드는 운영입니다.",
+      "aliases": [
+        "웨이브 관리"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-027767593f09",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "디나이",
+      "termEn": "Deny",
+      "description": "상대가 미니언 골드나 경험치 등을 얻기 어렵게 만드는 행동입니다.",
+      "sourceRefs": [
+        "inven-2014-macro"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-8ac0df90015f",
+          "sourceRef": "inven-2014-macro"
+        }
+      ]
+    },
+    {
+      "termKo": "견제",
+      "termEn": "Harass",
+      "description": "상대에게 공격을 가해 체력이나 자원을 소모시키는 행동입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-1dac12a9038f",
+          "sourceRef": "inven-2013-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "딜교",
+      "termEn": "Trade",
+      "description": "상대와 공격을 주고받는 짧은 싸움입니다. 서로 잃은 체력과 사용한 스킬·소모 자원을 비교해 이득을 판단합니다.",
+      "aliases": [
+        "딜 교환"
+      ],
+      "sourceRefs": [
+        "user-request-26-36",
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-00d490d2fe7a",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "킬각",
+      "termEn": "Kill Opportunity",
+      "description": "상대를 처치할 가능성이 높은 상황이나 타이밍을 뜻합니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-2741a2f50ffd",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "갱",
+      "termEn": "Gank",
+      "description": "다른 지역에서 공격로로 접근해 상대를 기습하는 행동입니다.",
+      "aliases": [
+        "갱킹"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-469b9125d14b",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "역갱",
+      "termEn": "Counter Gank",
+      "description": "상대의 갱킹에 맞춰 합류해 교전을 받아치는 행동입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-5ad6a728c786",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "다이브",
+      "termEn": "Tower Dive",
+      "description": "적 포탑의 공격 범위 안으로 들어가 상대를 공격하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-1e538b1bc686",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "로밍",
+      "termEn": "Roaming",
+      "description": "자신이 담당하던 지역을 떠나 다른 지역을 지원하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-947730ac6035",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "합류",
+      "termEn": "Rotation",
+      "description": "다른 지역의 교전이나 목표물에 참여하기 위해 이동하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2014-wave-reset"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-d46013873f97",
+          "sourceRef": "inven-2014-wave-reset"
+        }
+      ]
+    },
+    {
+      "termKo": "카정",
+      "termEn": "Counter Jungling",
+      "description": "상대 정글에 들어가 몬스터를 빼앗거나 상대 정글러의 사냥을 방해하는 플레이입니다.",
+      "aliases": [
+        "카운터 정글"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-67c694951d90",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "인베",
+      "termEn": "Invade",
+      "description": "상대 정글로 들어가는 플레이입니다. 특히 게임 초반 여러 명이 함께 상대 정글을 침입할 때 자주 씁니다.",
+      "aliases": [
+        "인베이드"
+      ],
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-9358260a7d2f",
+          "sourceRef": "inven-2013-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "리시",
+      "termEn": "Leash",
+      "description": "아군 정글러가 몬스터를 사냥하기 쉽도록 초반 공격을 도와주는 행동입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-2541247ce5b8",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "동선",
+      "termEn": "Jungle Pathing",
+      "description": "몬스터 사냥과 갱킹을 위해 이동하는 경로와 순서입니다.",
+      "aliases": [
+        "정글 동선"
+      ],
+      "sourceRefs": [
+        "inven-2017-alistar"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-eb2889ae5a17",
+          "sourceRef": "inven-2017-alistar"
+        }
+      ]
+    },
+    {
+      "termKo": "귀환",
+      "termEn": "Recall",
+      "description": "시전 후 기지로 돌아가는 행동입니다. 방해를 받으면 중단될 수 있습니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-2bd91d7aa724",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "리셋",
+      "termEn": "Reset",
+      "description": "상태나 진행을 처음 기준으로 되돌리거나 다시 정비한다는 뜻입니다. 문맥에 따라 스킬 재사용 대기시간 초기화나 미니언 흐름을 새로 맞추는 일을 가리킵니다.",
+      "sourceRefs": [
+        "inven-2014-wave-reset",
+        "inven-2015-masteryi"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-4463acd4bae1",
+          "sourceRef": "inven-2014-wave-reset"
+        }
+      ]
+    },
+    {
+      "termKo": "스노우볼",
+      "termEn": "Snowball",
+      "description": "작은 이득을 다음 이득으로 연결해 격차를 키우는 운영입니다.",
+      "sourceRefs": [
+        "inven-2013-rengar"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-40e71b23b737",
+          "sourceRef": "inven-2013-rengar"
+        }
+      ]
+    },
+    {
+      "termKo": "운영",
+      "termEn": "Macro",
+      "description": "전장 전체의 이동, 성장, 시야, 목표물 등을 관리하는 판단입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-0928a1b8512f",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "스플릿",
+      "termEn": "Split Push",
+      "description": "아군과 다른 공격로를 밀어 상대의 대응을 분산시키는 운영입니다.",
+      "aliases": [
+        "스플릿 푸시"
+      ],
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-1d55537ceb5a",
+          "sourceRef": "inven-2013-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "백도어",
+      "termEn": "Backdoor",
+      "description": "상대의 대응이 어려운 틈을 타 기지 구조물을 기습하는 전략입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-8c9c8713aa3f",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "공성",
+      "termEn": "Siege",
+      "description": "포탑 등 구조물 주변에서 상대를 압박하며 파괴를 노리는 행동입니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-705341bbe49c",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "수성",
+      "termEn": "Base Defense",
+      "description": "기지나 구조물을 공격하는 상대를 막아내는 행동입니다.",
+      "sourceRefs": [
+        "inven-2022-tower-defense"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-2316b21d3ab1",
+          "sourceRef": "inven-2022-tower-defense"
+        }
+      ]
+    },
+    {
+      "termKo": "한타",
+      "termEn": "Teamfight",
+      "description": "여러 챔피언이 함께 참여하는 팀 단위 교전입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-960992415477",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "교전",
+      "termEn": "Combat / Skirmish",
+      "description": "챔피언들이 서로 공격하고 싸우는 상황입니다. 문맥에 따라 소규모 싸움이나 여러 명이 참여한 전투를 가리킵니다.",
+      "aliases": [
+        "소규모 교전"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-6671689921a2",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "이니시",
+      "termEn": "Engage / Initiation",
+      "description": "먼저 진입하거나 핵심 대상을 묶어 아군이 함께 싸움을 시작할 기회를 만드는 플레이입니다.",
+      "aliases": [
+        "이니시에이팅"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-969ff60bbccd",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "역이니시",
+      "termEn": "Counter Engage",
+      "description": "상대가 교전을 시작한 뒤 진입한 적을 받아치는 행동입니다.",
+      "sourceRefs": [
+        "inven-2014-team-composition"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-1ba32810ff8a",
+          "sourceRef": "inven-2014-team-composition"
+        }
+      ]
+    },
+    {
+      "termKo": "포킹",
+      "termEn": "Poke",
+      "description": "본격적으로 싸우기 전에 원거리 공격으로 상대 체력을 깎는 행동입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-8c75f04988ad",
+          "sourceRef": "inven-2013-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "카이팅",
+      "termEn": "Kiting",
+      "description": "적과 거리를 조절하며 이동과 공격을 반복하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-cb9d5eb243e2",
+          "sourceRef": "inven-2013-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "오브젝트",
+      "termEn": "Objective",
+      "description": "포탑과 주요 중립 몬스터처럼 팀이 확보하려는 전장 목표물을 뜻합니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-68a196803527",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "스틸",
+      "termEn": "Steal",
+      "description": "상대가 공격하던 몬스터 등의 마지막 타격을 가져와 보상을 빼앗는 행동입니다.",
+      "sourceRefs": [
+        "inven-2014-macro"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-76d45c1471b5",
+          "sourceRef": "inven-2014-macro"
+        }
+      ]
+    },
+    {
+      "termKo": "포커싱",
+      "termEn": "Focus Fire",
+      "description": "여러 아군이 특정 대상에게 공격을 집중하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-9db4725c046e",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "포지션",
+      "termEn": "Positioning",
+      "description": "공격하기 좋고 위험을 피할 수 있도록 자신의 위치를 잡는 행동입니다.",
+      "aliases": [
+        "포지셔닝"
+      ],
+      "sourceRefs": [
+        "inven-2013-ryze"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-cb34c0f6915e",
+          "sourceRef": "inven-2013-ryze"
+        }
+      ]
+    },
+    {
+      "termKo": "어그로",
+      "termEn": "Aggro",
+      "description": "적 유닛의 공격 대상이 되는 상태나 상대의 주의를 끄는 행동을 뜻합니다.",
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-fdc41daa25ad",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "평타",
+      "termEn": "Basic Attack",
+      "description": "챔피언이 사용하는 일반 공격입니다.",
+      "aliases": [
+        "기본 공격"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-f6d0f22f5ea0",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "AD(공격력)",
+      "termEn": "Attack Damage (AD)",
+      "description": "기본 공격과 공격력 계수를 가진 스킬에 영향을 주는 능력치입니다.",
+      "aliases": [
+        "AD",
+        "공격력"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-8de8952a5624",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "AP(주문력)",
+      "termEn": "Ability Power (AP)",
+      "description": "주문력 계수를 가진 스킬의 효과에 영향을 주는 능력치입니다.",
+      "aliases": [
+        "AP",
+        "주문력"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-30271ae473ef",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "공속",
+      "termEn": "Attack Speed",
+      "description": "기본 공격을 수행하는 빠르기를 나타내는 능력치입니다.",
+      "aliases": [
+        "공격 속도"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-b4114dd0824a",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "이속",
+      "termEn": "Movement Speed",
+      "description": "챔피언이 이동하는 빠르기를 나타내는 능력치입니다.",
+      "aliases": [
+        "이동 속도"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-4a0c8bcf242c",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "사거리",
+      "termEn": "Range",
+      "description": "공격이나 스킬을 사용할 수 있는 거리입니다. 시전 거리와 효과 범위는 다를 수 있습니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-9c9e79138d8d",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "쿨타임",
+      "termEn": "Cooldown",
+      "description": "스킬이나 효과를 다시 사용하기까지 기다려야 하는 시간입니다.",
+      "aliases": [
+        "재사용 대기시간"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-25550507762f",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "쿨감",
+      "termEn": "Cooldown Reduction",
+      "description": "스킬 등의 재사용 대기시간을 줄이는 효과입니다.",
+      "aliases": [
+        "재사용 대기시간 감소"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-22c1b67bf07c",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "계수",
+      "termEn": "Scaling Ratio",
+      "description": "공격력이나 주문력 등 특정 수치가 스킬 효과에 반영되는 비율입니다.",
+      "sourceRefs": [
+        "inven-2016-magic"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-5cefce2682ec",
+          "sourceRef": "inven-2016-magic"
+        }
+      ]
+    },
+    {
+      "termKo": "물리 피해",
+      "termEn": "Physical Damage",
+      "description": "방어력과 관련된 피해 유형입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-40972447a9e0",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "마법 피해",
+      "termEn": "Magic Damage",
+      "description": "마법 저항력과 관련된 피해 유형입니다.",
+      "sourceRefs": [
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-5c922e3987b9",
+          "sourceRef": "inven-2017-janna"
+        }
+      ]
+    },
+    {
+      "termKo": "고정 피해",
+      "termEn": "True Damage",
+      "description": "일반적인 방어력과 마법 저항력으로 감소하지 않는 피해 유형입니다.",
+      "sourceRefs": [
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-78c7a52ff4f0",
+          "sourceRef": "inven-2013-ahri"
+        }
+      ]
+    },
+    {
+      "termKo": "방어력",
+      "termEn": "Armor",
+      "description": "받는 물리 피해에 영향을 주는 방어 능력치입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-0824b6364afa",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "마저(마법 저항력)",
+      "termEn": "Magic Resistance",
+      "description": "받는 마법 피해를 줄이는 방어 능력치입니다.",
+      "aliases": [
+        "마저",
+        "마방",
+        "마법 저항력"
+      ],
+      "sourceRefs": [
+        "user-request-26-36",
+        "inven-2016-magic"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-461accd9e00d",
+          "sourceRef": "inven-2016-magic"
+        }
+      ]
+    },
+    {
+      "termKo": "방관(방어구 관통력)",
+      "termEn": "Armor Penetration",
+      "description": "물리 피해를 계산할 때 상대 방어력의 일부를 무시하는 능력치입니다. 방어력 자체를 낮추는 효과와는 구분합니다.",
+      "aliases": [
+        "방관",
+        "방어구 관통력",
+        "방어력 관통"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-3d6827a17b53",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "마관(마법 관통력)",
+      "termEn": "Magic Penetration",
+      "description": "마법 피해를 계산할 때 상대 마법 저항력의 일부를 무시하는 능력치입니다.",
+      "aliases": [
+        "마관",
+        "마법 관통력"
+      ],
+      "sourceRefs": [
+        "user-request-26-36",
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-26fc17082f5e",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "치명타",
+      "termEn": "Critical Strike",
+      "description": "치명타 판정에 따라 기본 공격 등의 피해가 증폭되는 효과입니다.",
+      "sourceRefs": [
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-55fff9cae856",
+          "sourceRef": "inven-2017-janna"
+        }
+      ]
+    },
+    {
+      "termKo": "피흡",
+      "termEn": "Life Steal / Health Drain",
+      "description": "공격이나 스킬·아이템 효과로 체력을 흡수하거나 회복하는 것을 이르는 말입니다. 생명력 흡수뿐 아니라 다른 흡혈·회복 효과를 가리킬 때도 쓰므로 문맥을 함께 봅니다.",
+      "aliases": [
+        "생명력 흡수"
+      ],
+      "sourceRefs": [
+        "inven-2016-riven",
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-e60788863761",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "주문 흡혈",
+      "termEn": "Spell Vamp",
+      "description": "적용 대상 스킬로 준 피해의 일부를 체력으로 회복하는 효과입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-6de51a626022",
+          "sourceRef": "inven-2013-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "보호막",
+      "termEn": "Shield",
+      "description": "일정량의 피해를 체력 대신 받아내는 효과입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-c1b68d64fb60",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "도트딜",
+      "termEn": "Damage over Time",
+      "description": "한 번에 모두 들어가지 않고 일정 시간에 걸쳐 나누어 들어가는 피해입니다.",
+      "aliases": [
+        "지속 피해"
+      ],
+      "sourceRefs": [
+        "inven-2016-lissandra"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-57d7d23b46cf",
+          "sourceRef": "inven-2016-lissandra"
+        }
+      ]
+    },
+    {
+      "termKo": "폭딜",
+      "termEn": "Burst Damage",
+      "description": "짧은 시간에 집중해서 넣는 큰 피해입니다.",
+      "aliases": [
+        "순간 피해"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-a97495e961f9",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "DPS(초당 피해량)",
+      "termEn": "Damage per Second",
+      "description": "일정 시간 동안 준 피해를 초당 평균으로 나타낸 값입니다. 지속적으로 공격할 때의 화력을 비교하는 표현으로도 씁니다.",
+      "aliases": [
+        "DPS",
+        "초당 피해량"
+      ],
+      "sourceRefs": [
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-e1ec1e7cbe67",
+          "sourceRef": "inven-2013-ahri"
+        }
+      ]
+    },
+    {
+      "termKo": "광역기",
+      "termEn": "Area-of-effect Ability",
+      "description": "일정 범위 안에 있는 여러 대상에게 피해나 효과를 주는 스킬입니다.",
+      "aliases": [
+        "광역 효과",
+        "AOE"
+      ],
+      "sourceRefs": [
+        "inven-2014-macro"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-93146f32f708",
+          "sourceRef": "inven-2014-macro"
+        }
+      ]
+    },
+    {
+      "termKo": "논타겟",
+      "termEn": "Non-targeted Skill",
+      "description": "특정 대상을 직접 지정하지 않고 방향이나 지점을 정해 사용하는 스킬입니다. 조준과 상대의 회피에 따라 적중 여부가 달라집니다.",
+      "aliases": [
+        "스킬샷",
+        "논타겟팅",
+        "비대상 지정"
+      ],
+      "sourceRefs": [
+        "user-request-26-36",
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-f9ea72809151",
+          "sourceRef": "inven-2017-janna"
+        }
+      ]
+    },
+    {
+      "termKo": "타겟팅",
+      "termEn": "Targeted Skill",
+      "description": "사용할 대상을 직접 선택하는 방식입니다. 방향이나 지점을 겨냥하는 논타겟 스킬과 구분합니다.",
+      "aliases": [
+        "대상 지정",
+        "타게팅"
+      ],
+      "sourceRefs": [
+        "user-request-26-36",
+        "inven-2013-ryze"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-eecf60788772",
+          "sourceRef": "inven-2013-ryze"
+        }
+      ]
+    },
+    {
+      "termKo": "투사체",
+      "termEn": "Projectile",
+      "description": "시전 후 공간을 이동하며 효과를 전달하는 공격체입니다.",
+      "sourceRefs": [
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-ff9b080058eb",
+          "sourceRef": "inven-2013-ahri"
+        }
+      ]
+    },
+    {
+      "termKo": "채널링",
+      "termEn": "Channeling",
+      "description": "효과를 내기 위해 일정 시간 시전을 유지하는 방식입니다.",
+      "aliases": [
+        "정신 집중"
+      ],
+      "sourceRefs": [
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-d5b6b8399261",
+          "sourceRef": "inven-2013-ahri"
+        }
+      ]
+    },
+    {
+      "termKo": "패시브",
+      "termEn": "Passive",
+      "description": "별도의 사용 조작 없이 적용되거나 조건을 만족하면 발동하는 효과입니다. 챔피언 고유 능력뿐 아니라 스킬의 지속 효과도 가리킵니다.",
+      "aliases": [
+        "기본 지속 효과"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-ff58ab0c6c1c",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "액티브",
+      "termEn": "Active",
+      "description": "스킬이나 아이템 버튼을 직접 눌러 사용하는 효과입니다.",
+      "aliases": [
+        "사용 효과"
+      ],
+      "sourceRefs": [
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-566573499887",
+          "sourceRef": "inven-2017-janna"
+        }
+      ]
+    },
+    {
+      "termKo": "궁",
+      "termEn": "Ultimate",
+      "description": "챔피언의 핵심 스킬을 뜻하며 보통 R에 배정됩니다.",
+      "aliases": [
+        "궁극기"
+      ],
+      "sourceRefs": [
+        "inven-2013-rengar"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-a7de95e89408",
+          "sourceRef": "inven-2013-rengar"
+        }
+      ]
+    },
+    {
+      "termKo": "CC기(군중 제어)",
+      "termEn": "Crowd Control",
+      "description": "스턴·속박·슬로우처럼 상대의 이동이나 행동을 제한하는 효과를 통틀어 부르는 말입니다.",
+      "aliases": [
+        "CC",
+        "씨씨",
+        "군중 제어"
+      ],
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-c1a14fd4ccc0",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "스턴",
+      "termEn": "Stun",
+      "description": "일정 시간 이동과 일반적인 행동을 하지 못하게 하는 제어 효과입니다.",
+      "aliases": [
+        "기절"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-3537ed6d391e",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "속박",
+      "termEn": "Root",
+      "description": "대상의 이동을 제한하는 제어 효과입니다. 기절처럼 모든 행동을 막는 것은 아닙니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-add384b2a3be",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "슬로우",
+      "termEn": "Slow",
+      "description": "대상의 이동 속도를 낮추는 효과입니다.",
+      "aliases": [
+        "둔화"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-10cdab8419b1",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "침묵",
+      "termEn": "Silence",
+      "description": "일정 시간 스킬 사용을 제한하는 효과입니다.",
+      "sourceRefs": [
+        "inven-2014-cc-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-9fe381405b46",
+          "sourceRef": "inven-2014-cc-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "에어본",
+      "termEn": "Knock-up",
+      "description": "대상을 공중에 띄워 잠시 행동을 막는 효과입니다. 뒤로 밀어내는 넉백과 구분해 부릅니다.",
+      "aliases": [
+        "공중에 띄우기"
+      ],
+      "sourceRefs": [
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-f54c0129151d",
+          "sourceRef": "inven-2013-ahri"
+        }
+      ]
+    },
+    {
+      "termKo": "넉백",
+      "termEn": "Knockback",
+      "description": "대상을 현재 위치에서 일정 방향으로 밀어내는 효과입니다.",
+      "aliases": [
+        "밀치기"
+      ],
+      "sourceRefs": [
+        "inven-2014-team-composition"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-205087008a16",
+          "sourceRef": "inven-2014-team-composition"
+        }
+      ]
+    },
+    {
+      "termKo": "그랩",
+      "termEn": "Grab / Pull",
+      "description": "적을 붙잡아 자신 쪽이나 정해진 위치로 끌어오는 스킬을 가리킵니다.",
+      "aliases": [
+        "끌어당기기"
+      ],
+      "sourceRefs": [
+        "inven-2014-macro"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-0cd4f8f91e1e",
+          "sourceRef": "inven-2014-macro"
+        }
+      ]
+    },
+    {
+      "termKo": "공포",
+      "termEn": "Fear",
+      "description": "대상이 두려움에 도망가도록 만드는 제어 효과입니다.",
+      "sourceRefs": [
+        "inven-2014-cc-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-6c82c24828d2",
+          "sourceRef": "inven-2014-cc-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "도발",
+      "termEn": "Taunt",
+      "description": "대상이 도발한 유닛을 공격하도록 유도하는 제어 효과입니다.",
+      "sourceRefs": [
+        "inven-2014-cc-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-73bf6c1628dc",
+          "sourceRef": "inven-2014-cc-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "매혹",
+      "termEn": "Charm",
+      "description": "대상이 시전자 쪽으로 다가오도록 만드는 제어 효과입니다.",
+      "sourceRefs": [
+        "inven-2013-ahri"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-097f1aa8be5b",
+          "sourceRef": "inven-2013-ahri"
+        }
+      ]
+    },
+    {
+      "termKo": "제압",
+      "termEn": "Suppression",
+      "description": "대상의 이동과 행동을 강하게 제한하는 제어 효과입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-80032b543c1e",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "실명",
+      "termEn": "Blind",
+      "description": "적용 대상의 기본 공격이 빗나가게 하는 효과입니다.",
+      "sourceRefs": [
+        "inven-2013-rengar"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-244daea647c1",
+          "sourceRef": "inven-2013-rengar"
+        }
+      ]
+    },
+    {
+      "termKo": "강인함",
+      "termEn": "Tenacity",
+      "description": "적용 대상인 군중 제어 효과의 지속시간을 줄이는 능력치입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-20a3bbde7bab",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "은신",
+      "termEn": "Stealth",
+      "description": "특정 조건에서 적에게 보이지 않도록 하는 효과입니다. 탐지 여부는 효과 규칙에 따릅니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-2c22d629656b",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "무적",
+      "termEn": "Invulnerability",
+      "description": "지속 중 피해를 받지 않는 상태입니다. 대상 지정 불가와는 다릅니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-f88b2bdaef31",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "타겟팅 불가",
+      "termEn": "Untargetability",
+      "description": "적이 해당 대상을 공격이나 스킬의 대상으로 지정할 수 없는 상태입니다.",
+      "aliases": [
+        "대상 지정 불가"
+      ],
+      "sourceRefs": [
+        "inven-2018-untargetable"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-7bc945468c8e",
+          "sourceRef": "inven-2018-untargetable"
+        }
+      ]
+    },
+    {
+      "termKo": "돌진",
+      "termEn": "Dash",
+      "description": "일정한 경로를 따라 빠르게 이동하는 효과입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-89de63b723a6",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "하위템",
+      "termEn": "Component Item",
+      "description": "다른 아이템을 완성할 때 재료로 사용되는 아이템입니다.",
+      "aliases": [
+        "하위 아이템"
+      ],
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-948301afe4c6",
+          "sourceRef": "inven-2016-riven"
+        }
+      ]
+    },
+    {
+      "termKo": "상위템",
+      "termEn": "Item Upgrade",
+      "description": "현재 아이템을 조합 재료로 사용해 만들 수 있는 아이템입니다.",
+      "aliases": [
+        "상위 아이템"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-a3a4b5460173",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "템트리",
+      "termEn": "Item Build",
+      "description": "상황에 맞춰 아이템을 구매하는 구성과 순서입니다.",
+      "aliases": [
+        "아이템 빌드"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-d4e791d58ae3",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "코어템",
+      "termEn": "Core Item",
+      "description": "특정 챔피언이나 전략의 중심이 되는 주요 아이템을 뜻합니다.",
+      "aliases": [
+        "코어 아이템"
+      ],
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-e843e8f96761",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "스택",
+      "termEn": "Stack",
+      "description": "조건 충족에 따라 누적되는 효과나 그 중첩 수를 뜻합니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-c92d1074c636",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "버프",
+      "termEn": "Buff",
+      "description": "챔피언에게 유리한 효과를 뜻하며, 패치에서는 성능 상향을 뜻하기도 합니다.",
+      "sourceRefs": [
+        "inven-2013-kda",
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-7fc055e2f609",
+          "sourceRef": "inven-2013-kda"
+        }
+      ]
+    },
+    {
+      "termKo": "디버프",
+      "termEn": "Debuff",
+      "description": "챔피언에게 불리하게 적용되는 효과입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-4aa9ce43f13a",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "너프",
+      "termEn": "Nerf",
+      "description": "패치에서 성능이나 효과를 낮추는 조정을 뜻합니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-a3bf6271d26a",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "콤보",
+      "termEn": "Combo",
+      "description": "공격과 스킬을 특정 순서로 이어 사용하는 방식입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-afd2253706cc",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "연계",
+      "termEn": "Combo / Follow-up",
+      "description": "자신 또는 아군의 공격·스킬을 순서나 타이밍에 맞춰 이어 사용하는 행동입니다.",
+      "sourceRefs": [
+        "inven-2014-teemo"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-b37ff377b518",
+          "sourceRef": "inven-2014-teemo"
+        }
+      ]
+    },
+    {
+      "termKo": "킬",
+      "termEn": "Kill",
+      "description": "적 챔피언의 체력을 소진시켜 쓰러뜨리는 행동입니다.",
+      "aliases": [
+        "처치"
+      ],
+      "sourceRefs": [
+        "inven-2016-terms"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-75da8cdf656e",
+          "sourceRef": "inven-2016-terms"
+        }
+      ]
+    },
+    {
+      "termKo": "어시",
+      "termEn": "Assist",
+      "description": "적 챔피언 처치에 기여했지만 마지막 처치를 직접 기록하지 않은 경우 얻는 도움 기록입니다.",
+      "aliases": [
+        "어시스트"
+      ],
+      "sourceRefs": [
+        "user-request-26-36",
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-61f7ba3ed92f",
+          "sourceRef": "inven-2011-items"
+        }
+      ]
+    },
+    {
+      "termKo": "데스",
+      "termEn": "Death",
+      "description": "자신의 챔피언이 처치된 횟수나 상황을 뜻합니다.",
+      "sourceRefs": [
+        "inven-2013-kda"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-9a658efaf029",
+          "sourceRef": "inven-2013-kda"
+        }
+      ]
+    },
+    {
+      "termKo": "킬 관여",
+      "termEn": "Kill Participation",
+      "description": "팀의 전체 처치 중 본인이 킬이나 어시로 함께한 비율을 뜻합니다.",
+      "aliases": [
+        "킬 관여율"
+      ],
+      "sourceRefs": [
+        "inven-2024-kill-participation"
+      ],
+      "evidence": [
+        {
+          "bindingId": "glossary-6219262d3921",
+          "sourceRef": "inven-2024-kill-participation"
+        }
+      ]
+    }
+  ],
+  "migrations": [
+    {
+      "from": "챔피언",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "소환사의 협곡",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "넥서스",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "포탑",
+      "to": "타워",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "억제기",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "상점",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "공격로",
+      "to": "라인",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "서포터",
+      "to": "서폿",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "원거리 딜러",
+      "to": "원딜",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "전사",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "마법사",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "근접 미니언",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "원거리 미니언",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "공성 미니언",
+      "to": "대포 미니언",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "몬스터",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "드래곤",
+      "to": "용",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "내셔 남작",
+      "to": "바론(내셔 남작)",
+      "action": "rename",
+      "reason": "사용자가 지정한 한국어 실사용 표기를 적용했습니다."
+    },
+    {
+      "from": "강가",
+      "to": null,
+      "action": "delete",
+      "reason": "사용자 요구 35: 지나치게 기초적인 위치 명칭을 삭제합니다."
+    },
+    {
+      "from": "수풀",
+      "to": "부쉬",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "전장의 안개",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "실종 신호",
+      "to": "미아핑",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "미니맵",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "골드",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "경험치",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "레벨",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "스킬 레벨",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "미니언 처치 수",
+      "to": "CS",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "웨이브 관리",
+      "to": "라인 관리",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "딜 교환",
+      "to": "딜교",
+      "action": "rename",
+      "reason": "사용자가 지정한 한국어 실사용 표기를 적용했습니다."
+    },
+    {
+      "from": "올인",
+      "to": null,
+      "action": "delete",
+      "reason": "사용자 요구 34: 독립 항목에서 삭제합니다."
+    },
+    {
+      "from": "갱킹",
+      "to": "갱",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "카운터 정글",
+      "to": "카정",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "인베이드",
+      "to": "인베",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "정글 동선",
+      "to": "동선",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "타이밍",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "파워 스파이크",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "마이크로",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "스플릿 푸시",
+      "to": "스플릿",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "소규모 교전",
+      "to": "교전",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "이니시에이팅",
+      "to": "이니시",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "디스인게이지",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "피일",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "포지셔닝",
+      "to": "포지션",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "플랭킹",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "존 컨트롤",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "기본 공격",
+      "to": "평타",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "공격력",
+      "to": "AD(공격력)",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "추가 공격력",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "주문력",
+      "to": "AP(주문력)",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "공격 속도",
+      "to": "공속",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "이동 속도",
+      "to": "이속",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "체력",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "최대 체력",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "추가 체력",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "잃은 체력",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "체력 재생",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "마나",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "기력",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "소모량",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "재사용 대기시간",
+      "to": "쿨타임",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "재사용 대기시간 감소",
+      "to": "쿨감",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "마법 저항력",
+      "to": "마저(마법 저항력)",
+      "action": "rename",
+      "reason": "사용자가 지정한 한국어 실사용 표기를 적용했습니다."
+    },
+    {
+      "from": "방어구 관통력",
+      "to": "방관(방어구 관통력)",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "마법 관통력",
+      "to": "마관(마법 관통력)",
+      "action": "rename",
+      "reason": "사용자가 지정한 한국어 실사용 표기를 적용했습니다."
+    },
+    {
+      "from": "치명타 확률",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "생명력 흡수",
+      "to": "피흡",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "회복",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "지속 피해",
+      "to": "도트딜",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "순간 피해",
+      "to": "폭딜",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "초당 피해량",
+      "to": "DPS(초당 피해량)",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "광역 효과",
+      "to": "광역기",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "스킬샷",
+      "to": "논타겟",
+      "action": "rename",
+      "reason": "사용자가 지정한 한국어 실사용 표기를 적용했습니다."
+    },
+    {
+      "from": "대상 지정",
+      "to": "타겟팅",
+      "action": "rename",
+      "reason": "사용자가 지정한 한국어 실사용 표기를 적용했습니다."
+    },
+    {
+      "from": "정신 집중",
+      "to": "채널링",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "기본 지속 효과",
+      "to": "패시브",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "사용 효과",
+      "to": "액티브",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "궁극기",
+      "to": "궁",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "군중 제어",
+      "to": "CC기(군중 제어)",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "기절",
+      "to": "스턴",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "둔화",
+      "to": "슬로우",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "공중에 띄우기",
+      "to": "에어본",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "밀치기",
+      "to": "넉백",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "끌어당기기",
+      "to": "그랩",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "대상 지정 불가",
+      "to": "타겟팅 불가",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "순간이동",
+      "to": null,
+      "action": "delete",
+      "reason": "일반적인 분류·번역 설명이거나 한국어 실전 표현으로 독립 정리할 필요가 낮아 제외했습니다. 유사하지만 다른 뜻의 속어로 억지 치환하지 않습니다."
+    },
+    {
+      "from": "하위 아이템",
+      "to": "하위템",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "상위 아이템",
+      "to": "상위템",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "조합 비용",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    },
+    {
+      "from": "아이템 빌드",
+      "to": "템트리",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "코어 아이템",
+      "to": "코어템",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "처치",
+      "to": "킬",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "어시스트",
+      "to": "어시",
+      "action": "rename",
+      "reason": "사용자가 지정한 한국어 실사용 표기를 적용했습니다."
+    },
+    {
+      "from": "킬 관여율",
+      "to": "킬 관여",
+      "action": "rename",
+      "reason": "한국 이용자 공략·용어 안내에서 쓰이는 간결한 실전 표기로 정리했습니다."
+    },
+    {
+      "from": "부활",
+      "to": null,
+      "action": "delete",
+      "reason": "기초 명칭 또는 일반 능력치 정의에 머무르므로 독립 항목을 줄였습니다. 관련 전투 용어는 유지합니다."
+    }
+  ]
+}

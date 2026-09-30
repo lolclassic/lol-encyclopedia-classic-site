@@ -1,0 +1,6704 @@
+{
+  "schemaVersion": 1,
+  "patch": "26.19",
+  "classification": "EDITORIAL_CLASSIC_BUILD_ESTIMATE",
+  "source": {
+    "name": "Riftback",
+    "indexUrl": "https://riftback.gg/champions",
+    "retrievedAtKst": "2026-09-28",
+    "selection": "First-listed Classic Summoners Rift build for each of the 72 champions",
+    "confidence": "partially-sourced",
+    "caveat": "Editorial recommendation, not a measured most-picked or highest-win-rate build. Data values are adapted as identifiers only; source prose is not copied."
+  },
+  "itemCatalog": "classic-items-26.19.json / 147 shop-facing purchasable items",
+  "normalization": {
+    "seraphs-embrace": "Archangels Staff is the purchasable precursor; the transformed Seraphs Embrace cannot be bought. The replacement is identified per entry."
+  },
+  "entries": {
+    "garen": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/garen",
+      "items": {
+        "start": [
+          "771029",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771031",
+          "771011"
+        ],
+        "core": [
+          "773068",
+          "773047",
+          "773005"
+        ],
+        "late": [
+          "773071",
+          "773078",
+          "773083"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 6
+          },
+          {
+            "id": 775289,
+            "count": 3
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_523": 4,
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_622": 1,
+        "jade_513": 1,
+        "jade_511": 1,
+        "jade_552": 1,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "gangplank": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/gangplank",
+      "items": {
+        "start": [
+          "771054",
+          "772003"
+        ],
+        "early": [
+          "773057",
+          "773044"
+        ],
+        "core": [
+          "773078",
+          "773047",
+          "773031"
+        ],
+        "late": [
+          "773074",
+          "773071",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775249,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775403,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775296,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775339,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_641": 1,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_643": 3,
+        "jade_612": 3,
+        "jade_513": 1,
+        "jade_511": 1,
+        "jade_642": 3,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "gragas": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/gragas",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773108",
+          "773028"
+        ],
+        "core": [
+          "773174",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773128",
+          "773157",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "nasus": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/nasus",
+      "items": {
+        "start": [
+          "771029",
+          "772044",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773111",
+          "773211",
+          "773067"
+        ],
+        "core": [
+          "773111",
+          "773065",
+          "773110"
+        ],
+        "late": [
+          "773078",
+          "773083",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775253,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775296,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775412,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_512": 4,
+        "jade_513": 4,
+        "jade_522": 1,
+        "jade_612": 3,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_622": 3,
+        "jade_631": 2,
+        "jade_632": 2,
+        "jade_633": 1,
+        "jade_641": 1,
+        "jade_642": 2
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "E",
+        "E",
+        "W",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "nunu": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/nunu-and-willump",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771080",
+          "773067"
+        ],
+        "core": [
+          "773207",
+          "773047",
+          "773068"
+        ],
+        "late": [
+          "773069",
+          "773190",
+          "773110"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_624": 1,
+        "jade_641": 1,
+        "jade_514": 2,
+        "jade_523": 4,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_512": 2,
+        "jade_621": 2,
+        "jade_662": 1,
+        "jade_643": 2,
+        "jade_654": 1,
+        "jade_622": 2,
+        "jade_611": 1,
+        "jade_614": 2,
+        "jade_631": 2,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "W",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "W",
+        "E",
+        "W",
+        "R",
+        "W",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "nidalee": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/nidalee",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773144"
+        ],
+        "core": [
+          "773153",
+          "773047",
+          "773078"
+        ],
+        "late": [
+          "773022",
+          "773065",
+          "773110"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775297,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_641": 1,
+        "jade_522": 4,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_512": 3,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_643": 3,
+        "jade_612": 2,
+        "jade_511": 1,
+        "jade_642": 3,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "ryze": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/ryze",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773010",
+          "773070"
+        ],
+        "core": [
+          "773027",
+          "773020",
+          "773110"
+        ],
+        "late": [
+          "773003",
+          "773065",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775297,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775365,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_523": 4,
+        "jade_641": 1,
+        "jade_514": 2,
+        "jade_613": 4,
+        "jade_621": 1,
+        "jade_662": 1,
+        "jade_652": 3,
+        "jade_612": 2,
+        "jade_622": 3,
+        "jade_513": 1,
+        "jade_511": 1,
+        "jade_642": 3,
+        "jade_631": 2,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ],
+      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff"
+    },
+    "rammus": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/rammus",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771080",
+          "773067"
+        ],
+        "core": [
+          "773207",
+          "773117",
+          "773068"
+        ],
+        "late": [
+          "773075",
+          "773143",
+          "773110"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775247,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_624": 1,
+        "jade_641": 1,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_714": 1,
+        "jade_643": 3,
+        "jade_722": 3,
+        "jade_732": 1,
+        "jade_634": 1,
+        "jade_711": 1,
+        "jade_611": 1,
+        "jade_614": 2,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_712": 3
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 21,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "E",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "E",
+        "W",
+        "E",
+        "R",
+        "E",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "lux": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/lux",
+      "items": {
+        "start": [
+          "771004",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773108",
+          "773028"
+        ],
+        "core": [
+          "773174",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773135",
+          "773157",
+          "773151"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775331,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775365,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1,
+        "jade_712": 3
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "leona": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/leona",
+      "items": {
+        "start": [
+          "771006",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773117",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773105",
+          "773050"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_724": 1,
+        "jade_734": 1,
+        "jade_641": 1,
+        "jade_613": 4,
+        "jade_744": 1,
+        "jade_731": 4,
+        "jade_621": 3,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_622": 1,
+        "jade_634": 1,
+        "jade_711": 1,
+        "jade_511": 1,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_741": 2
+      },
+      "masterySplit": {
+        "o": 1,
+        "d": 13,
+        "u": 16
+      },
+      "skillOrder": [
+        "W",
+        "E",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "E",
+        "W",
+        "E",
+        "R",
+        "E",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "lulu": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/lulu",
+      "items": {
+        "start": [
+          "771004",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773158",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773222",
+          "773092"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_734": 1,
+        "jade_613": 4,
+        "jade_723": 2,
+        "jade_744": 1,
+        "jade_731": 4,
+        "jade_621": 1,
+        "jade_752": 3,
+        "jade_713": 3,
+        "jade_762": 1,
+        "jade_612": 3,
+        "jade_751": 1,
+        "jade_633": 1,
+        "jade_712": 3,
+        "jade_741": 2
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 9,
+        "u": 21
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "leesin": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/lee-sin",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771080",
+          "771036"
+        ],
+        "core": [
+          "773209",
+          "773047",
+          "773074"
+        ],
+        "late": [
+          "772045",
+          "773143",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_624": 1,
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_524": 1,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_513": 4,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_614": 2,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "masteryi": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/master-yi",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773106",
+          "771053"
+        ],
+        "core": [
+          "773154",
+          "773006",
+          "773087"
+        ],
+        "late": [
+          "773031",
+          "773153",
+          "773072"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775247,
+            "count": 5
+          },
+          {
+            "id": 775245,
+            "count": 4
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 5
+          },
+          {
+            "id": 775296,
+            "count": 4
+          }
+        ],
+        "quint": [
+          {
+            "id": 775337,
+            "count": 2
+          },
+          {
+            "id": 775412,
+            "count": 1
+          }
+        ]
+      },
+      "masteries": {
+        "jade_624": 1,
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_511": 1,
+        "jade_552": 3,
+        "jade_614": 2,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "malzahar": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/malzahar",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773010"
+        ],
+        "core": [
+          "773027",
+          "773020",
+          "773151"
+        ],
+        "late": [
+          "773089",
+          "773116",
+          "773157"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_514": 1,
+        "jade_524": 1,
+        "jade_562": 1,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 4,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "malphite": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/malphite",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771031",
+          "771011"
+        ],
+        "core": [
+          "773068",
+          "773047",
+          "773110"
+        ],
+        "late": [
+          "773143",
+          "773025",
+          "773075"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775316,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_523": 4,
+        "jade_641": 1,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_653": 1,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_643": 1,
+        "jade_654": 1,
+        "jade_622": 1,
+        "jade_634": 1,
+        "jade_513": 3,
+        "jade_511": 1,
+        "jade_642": 3,
+        "jade_631": 2,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "morgana": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/morgana",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773010"
+        ],
+        "core": [
+          "773027",
+          "773020",
+          "773157"
+        ],
+        "late": [
+          "773089",
+          "773151",
+          "773165"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "drmundo": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/dr-mundo",
+      "items": {
+        "start": [
+          "771054",
+          "772003"
+        ],
+        "early": [
+          "771011",
+          "773132"
+        ],
+        "core": [
+          "773083",
+          "773047",
+          "773207"
+        ],
+        "late": [
+          "773068",
+          "773065",
+          "773143"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775316,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_624": 1,
+        "jade_522": 4,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_512": 3,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_643": 3,
+        "jade_652": 1,
+        "jade_611": 1,
+        "jade_511": 1,
+        "jade_642": 3,
+        "jade_614": 2,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "missfortune": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/miss-fortune",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "771038",
+          "771053"
+        ],
+        "core": [
+          "773072",
+          "773006",
+          "773046"
+        ],
+        "late": [
+          "773031",
+          "773153",
+          "773035"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_622": 2,
+        "jade_552": 3,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "veigar": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/veigar",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771058",
+          "771026"
+        ],
+        "core": [
+          "773089",
+          "773020",
+          "773128"
+        ],
+        "late": [
+          "773135",
+          "773157",
+          "773165"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_514": 2,
+        "jade_524": 1,
+        "jade_562": 1,
+        "jade_723": 3,
+        "jade_714": 1,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 4,
+        "jade_544": 1,
+        "jade_711": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "vayne": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/vayne",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "773144"
+        ],
+        "core": [
+          "773153",
+          "773006",
+          "773046"
+        ],
+        "late": [
+          "773035",
+          "773031",
+          "773072"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "brand": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/brand",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773136",
+          "771052"
+        ],
+        "core": [
+          "773151",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773116",
+          "773157",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_514": 2,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 1,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1,
+        "jade_712": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "blitzcrank": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/blitzcrank",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773117",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773105",
+          "773050"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775367,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_734": 1,
+        "jade_641": 1,
+        "jade_613": 4,
+        "jade_744": 1,
+        "jade_731": 4,
+        "jade_621": 3,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_622": 2,
+        "jade_511": 1,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_712": 2,
+        "jade_741": 2
+      },
+      "masterySplit": {
+        "o": 1,
+        "d": 13,
+        "u": 16
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "W",
+        "E",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "sion": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/sion",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [],
+        "core": [
+          "773128",
+          "773089"
+        ],
+        "late": [
+          "773100",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775315,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775296,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_543": 3,
+        "jade_722": 3,
+        "jade_724": 1,
+        "jade_513": 4,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_712": 3
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "W",
+        "E",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "shaco": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/shaco",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773106",
+          "771053"
+        ],
+        "core": [
+          "773154",
+          "773006",
+          "773087"
+        ],
+        "late": [
+          "773074",
+          "773153",
+          "773031"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 1,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 2,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_513": 1,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_614": 2,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 24,
+        "d": 6,
+        "u": 0
+      },
+      "skillOrder": [
+        "W",
+        "E",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "W",
+        "E",
+        "W",
+        "R",
+        "W",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "sona": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/sona",
+      "items": {
+        "start": [
+          "771004",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773158",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773222",
+          "773092"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775297,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_734": 1,
+        "jade_641": 1,
+        "jade_613": 4,
+        "jade_723": 1,
+        "jade_744": 1,
+        "jade_731": 4,
+        "jade_621": 3,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_622": 2,
+        "jade_711": 1,
+        "jade_511": 1,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_741": 2
+      },
+      "masterySplit": {
+        "o": 1,
+        "d": 13,
+        "u": 16
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "soraka": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/soraka",
+      "items": {
+        "start": [
+          "771004",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773158",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773222",
+          "773092"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_742": 4,
+        "jade_613": 4,
+        "jade_723": 1,
+        "jade_731": 4,
+        "jade_621": 3,
+        "jade_752": 3,
+        "jade_722": 2,
+        "jade_713": 3,
+        "jade_622": 1,
+        "jade_721": 1,
+        "jade_711": 1,
+        "jade_633": 1,
+        "jade_741": 2
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 9,
+        "u": 21
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "skarner": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/skarner",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771080",
+          "773067"
+        ],
+        "core": [
+          "773207",
+          "773117",
+          "773068"
+        ],
+        "late": [
+          "773025",
+          "773190",
+          "772045"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_624": 1,
+        "jade_641": 1,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_714": 1,
+        "jade_643": 3,
+        "jade_722": 3,
+        "jade_732": 1,
+        "jade_634": 1,
+        "jade_711": 1,
+        "jade_611": 1,
+        "jade_614": 2,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_712": 3
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 21,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "sivir": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/sivir",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "771038",
+          "771037"
+        ],
+        "core": [
+          "773031",
+          "773006",
+          "773035"
+        ],
+        "late": [
+          "773072",
+          "773153",
+          "773046"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775247,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "singed": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/singed",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773010",
+          "773070"
+        ],
+        "core": [
+          "773027",
+          "773009",
+          "773116"
+        ],
+        "late": [
+          "773003",
+          "773151",
+          "773143"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775365,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_523": 4,
+        "jade_641": 1,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_653": 1,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_643": 1,
+        "jade_654": 1,
+        "jade_622": 1,
+        "jade_634": 1,
+        "jade_513": 3,
+        "jade_511": 1,
+        "jade_642": 3,
+        "jade_631": 2,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "ahri": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/ahri",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771058",
+          "773108"
+        ],
+        "core": [
+          "773128",
+          "773020",
+          "773001"
+        ],
+        "late": [
+          "773089",
+          "773157",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 2,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 4,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "amumu": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/amumu",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771080",
+          "773145"
+        ],
+        "core": [
+          "773206",
+          "773047",
+          "773068"
+        ],
+        "late": [
+          "773116",
+          "773001",
+          "773083"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775316,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_624": 1,
+        "jade_523": 4,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_643": 3,
+        "jade_652": 3,
+        "jade_513": 4,
+        "jade_611": 1,
+        "jade_642": 1,
+        "jade_614": 2,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "alistar": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/alistar",
+      "items": {
+        "start": [
+          "771004",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773117",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773105",
+          "773050"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775295,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_734": 1,
+        "jade_641": 1,
+        "jade_613": 4,
+        "jade_744": 1,
+        "jade_731": 4,
+        "jade_621": 3,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_622": 2,
+        "jade_511": 1,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_712": 2,
+        "jade_741": 2
+      },
+      "masterySplit": {
+        "o": 1,
+        "d": 13,
+        "u": 16
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "annie": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/annie",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771058",
+          "773108"
+        ],
+        "core": [
+          "773128",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773157",
+          "773135",
+          "773151"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775331,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "anivia": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/anivia",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773010",
+          "773070"
+        ],
+        "core": [
+          "773027",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773174",
+          "773135",
+          "773003"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "ashe": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/ashe",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "771038",
+          "771037"
+        ],
+        "core": [
+          "773031",
+          "773006",
+          "773153"
+        ],
+        "late": [
+          "773046",
+          "773035",
+          "773072"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775412,
+            "count": 2
+          },
+          {
+            "id": 775335,
+            "count": 1
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "W",
+        "E",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "E",
+        "R",
+        "Q",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "Q",
+        "E"
+      ]
+    },
+    "wukong": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/wukong",
+      "items": {
+        "start": [
+          "771006",
+          "772044",
+          "772043",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773077",
+          "771053"
+        ],
+        "core": [
+          "773074",
+          "773047",
+          "773071"
+        ],
+        "late": [
+          "773068",
+          "773078",
+          "773022"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_622": 1,
+        "jade_511": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "olaf": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/olaf",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773077",
+          "771053"
+        ],
+        "core": [
+          "773074",
+          "773047",
+          "773068"
+        ],
+        "late": [
+          "773065",
+          "773143",
+          "773083"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775296,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_641": 1,
+        "jade_522": 4,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_653": 1,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_612": 3,
+        "jade_654": 1,
+        "jade_513": 3,
+        "jade_511": 1,
+        "jade_642": 3,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "warwick": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/warwick",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773144"
+        ],
+        "core": [
+          "773153",
+          "773047",
+          "773207"
+        ],
+        "late": [
+          "773091",
+          "773068",
+          "773065"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775412,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_523": 4,
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_732": 1,
+        "jade_513": 1,
+        "jade_511": 1,
+        "jade_552": 1,
+        "jade_712": 2,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "evelynn": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/evelynn",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771080",
+          "773067"
+        ],
+        "core": [
+          "773207",
+          "773020",
+          "773151"
+        ],
+        "late": [
+          "773128",
+          "773116",
+          "773157"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_624": 1,
+        "jade_523": 4,
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 1,
+        "jade_562": 1,
+        "jade_621": 3,
+        "jade_543": 3,
+        "jade_634": 1,
+        "jade_513": 1,
+        "jade_544": 1,
+        "jade_611": 1,
+        "jade_511": 1,
+        "jade_614": 2,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "ezreal": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/ezreal",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "773057",
+          "773044"
+        ],
+        "core": [
+          "773078",
+          "773158",
+          "773153"
+        ],
+        "late": [
+          "773035",
+          "773031",
+          "773072"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775331,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775296,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "jarvaniv": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/jarvan-iv",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773052",
+          "773132"
+        ],
+        "core": [
+          "773190",
+          "773047",
+          "773209"
+        ],
+        "late": [
+          "773068",
+          "773143",
+          "773083"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_624": 1,
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_512": 2,
+        "jade_531": 3,
+        "jade_513": 3,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_614": 2,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "janna": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/janna",
+      "items": {
+        "start": [
+          "771004",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773158",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773222",
+          "773092"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_724": 2,
+        "jade_613": 4,
+        "jade_723": 3,
+        "jade_731": 3,
+        "jade_621": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_762": 1,
+        "jade_622": 2,
+        "jade_721": 1,
+        "jade_711": 1,
+        "jade_712": 3
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 9,
+        "u": 21
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "jax": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/jax",
+      "items": {
+        "start": [
+          "771054",
+          "772003"
+        ],
+        "early": [
+          "773057",
+          "773044"
+        ],
+        "core": [
+          "773078",
+          "773047",
+          "773153"
+        ],
+        "late": [
+          "773124",
+          "773026",
+          "773143"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775316,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_523": 4,
+        "jade_542": 2,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_622": 1,
+        "jade_513": 1,
+        "jade_511": 1,
+        "jade_552": 1,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "E",
+        "W",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "zilean": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/zilean",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773010"
+        ],
+        "core": [
+          "773174",
+          "773020",
+          "773027"
+        ],
+        "late": [
+          "773089",
+          "773157",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775297,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_514": 2,
+        "jade_562": 1,
+        "jade_714": 1,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 4,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1,
+        "jade_712": 3
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "chogath": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/chogath",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773010"
+        ],
+        "core": [
+          "773027",
+          "773047",
+          "773207"
+        ],
+        "late": [
+          "773110",
+          "773065",
+          "773143"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_624": 1,
+        "jade_641": 1,
+        "jade_651": 1,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_662": 1,
+        "jade_714": 1,
+        "jade_643": 3,
+        "jade_722": 3,
+        "jade_732": 1,
+        "jade_634": 1,
+        "jade_711": 1,
+        "jade_611": 1,
+        "jade_614": 2,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_712": 3
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 21,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "kassadin": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/kassadin",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772004"
+        ],
+        "early": [
+          "773010",
+          "773070"
+        ],
+        "core": [
+          "773027",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773003",
+          "773157",
+          "773100"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_723": 3,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ],
+      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff"
+    },
+    "karthus": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/karthus",
+      "items": {
+        "start": [
+          "771027",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773010",
+          "773070"
+        ],
+        "core": [
+          "773027",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773003",
+          "773157",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775316,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775296,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ],
+      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff"
+    },
+    "katarina": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/katarina",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771058",
+          "773108"
+        ],
+        "core": [
+          "773128",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773157",
+          "773151",
+          "773001"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_621": 1,
+        "jade_531": 3,
+        "jade_543": 3,
+        "jade_622": 3,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_511": 1,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "kayle": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/kayle",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773101",
+          "773108"
+        ],
+        "core": [
+          "773115",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773100",
+          "773124",
+          "773157"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775337,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_512": 4,
+        "jade_621": 1,
+        "jade_622": 3,
+        "jade_544": 1,
+        "jade_511": 1,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "kogmaw": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/kogmaw",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "773144"
+        ],
+        "core": [
+          "773153",
+          "773006",
+          "773031"
+        ],
+        "late": [
+          "773046",
+          "773035",
+          "773072"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775337,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "W",
+        "E",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "E",
+        "W",
+        "E",
+        "R",
+        "E",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "corki": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/corki",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "773057",
+          "773044"
+        ],
+        "core": [
+          "773078",
+          "773006",
+          "773072"
+        ],
+        "late": [
+          "773035",
+          "773046",
+          "773031"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "taric": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/taric",
+      "items": {
+        "start": [
+          "771004",
+          "772044",
+          "772043",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "772049",
+          "773132"
+        ],
+        "core": [
+          "772045",
+          "773117",
+          "773190"
+        ],
+        "late": [
+          "773069",
+          "773105",
+          "773050"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775295,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_734": 1,
+        "jade_613": 4,
+        "jade_723": 2,
+        "jade_744": 1,
+        "jade_731": 4,
+        "jade_621": 1,
+        "jade_752": 3,
+        "jade_713": 3,
+        "jade_762": 1,
+        "jade_612": 3,
+        "jade_751": 1,
+        "jade_633": 1,
+        "jade_712": 3,
+        "jade_741": 2
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 9,
+        "u": 21
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "tristana": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/tristana",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "771038",
+          "771037"
+        ],
+        "core": [
+          "773031",
+          "773006",
+          "773046"
+        ],
+        "late": [
+          "773035",
+          "773153",
+          "773072"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "tryndamere": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/tryndamere",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "773086",
+          "773093"
+        ],
+        "core": [
+          "773087",
+          "773006",
+          "773153"
+        ],
+        "late": [
+          "773031",
+          "773035",
+          "773074"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775249,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775296,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775339,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 3,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_622": 1,
+        "jade_511": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "twistedfate": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/twisted-fate",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773057"
+        ],
+        "core": [
+          "773100",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773157",
+          "773135",
+          "773165"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "twitch": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/twitch",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [
+          "771038",
+          "771037"
+        ],
+        "core": [
+          "773031",
+          "773006",
+          "773153"
+        ],
+        "late": [
+          "773046",
+          "773035",
+          "773072"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_551": 1,
+        "jade_512": 4,
+        "jade_621": 3,
+        "jade_531": 3,
+        "jade_541": 2,
+        "jade_611": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "teemo": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/teemo",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773136",
+          "771052"
+        ],
+        "core": [
+          "773151",
+          "773020",
+          "773115"
+        ],
+        "late": [
+          "773089",
+          "773085",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775247,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775297,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_523": 4,
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_613": 4,
+        "jade_562": 1,
+        "jade_512": 3,
+        "jade_621": 1,
+        "jade_612": 3,
+        "jade_544": 1,
+        "jade_511": 1,
+        "jade_552": 3,
+        "jade_633": 1,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "pantheon": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/pantheon",
+      "items": {
+        "start": [
+          "771029",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773134",
+          "771028"
+        ],
+        "core": [
+          "773071",
+          "773047",
+          "773035"
+        ],
+        "late": [
+          "773072",
+          "773074",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775295,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_542": 2,
+        "jade_522": 4,
+        "jade_562": 1,
+        "jade_512": 3,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_732": 1,
+        "jade_513": 3,
+        "jade_711": 1,
+        "jade_511": 1,
+        "jade_552": 3,
+        "jade_532": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "fiddlesticks": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/fiddlesticks",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "771080",
+          "773145"
+        ],
+        "core": [
+          "773206",
+          "773020",
+          "773157"
+        ],
+        "late": [
+          "773089",
+          "773001",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_562": 1,
+        "jade_531": 3,
+        "jade_714": 1,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 4,
+        "jade_544": 1,
+        "jade_711": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "heimerdinger": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/heimerdinger",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773108",
+          "773028"
+        ],
+        "core": [
+          "773174",
+          "773020",
+          "773157"
+        ],
+        "late": [
+          "773089",
+          "773165",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_533": 1,
+        "jade_553": 4,
+        "jade_523": 4,
+        "jade_514": 2,
+        "jade_524": 1,
+        "jade_562": 1,
+        "jade_723": 1,
+        "jade_531": 2,
+        "jade_722": 3,
+        "jade_713": 3,
+        "jade_543": 3,
+        "jade_732": 1,
+        "jade_513": 1,
+        "jade_544": 1,
+        "jade_711": 1,
+        "jade_511": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "E",
+        "Q",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "akali": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/akali",
+      "items": {
+        "start": [
+          "771001",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [],
+        "core": [
+          "773146",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773157",
+          "773116",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775297,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 2
+          },
+          {
+            "id": 775335,
+            "count": 1
+          }
+        ]
+      },
+      "masteries": {
+        "jade_511": 1,
+        "jade_513": 3,
+        "jade_523": 4,
+        "jade_531": 3,
+        "jade_533": 1,
+        "jade_543": 3,
+        "jade_544": 1,
+        "jade_553": 4,
+        "jade_562": 1,
+        "jade_613": 4,
+        "jade_621": 1,
+        "jade_622": 3,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "kennen": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/kennen",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [],
+        "core": [
+          "773020",
+          "773157",
+          "773116"
+        ],
+        "late": [
+          "773089",
+          "773135",
+          "773001"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_511": 1,
+        "jade_513": 3,
+        "jade_523": 4,
+        "jade_531": 3,
+        "jade_533": 1,
+        "jade_543": 3,
+        "jade_544": 1,
+        "jade_553": 4,
+        "jade_562": 1,
+        "jade_613": 4,
+        "jade_621": 1,
+        "jade_622": 3,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "shen": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/shen",
+      "items": {
+        "start": [
+          "771054",
+          "772003"
+        ],
+        "early": [],
+        "core": [
+          "773068",
+          "773111",
+          "773065"
+        ],
+        "late": [
+          "773143",
+          "773075",
+          "773064"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775345,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_511": 1,
+        "jade_513": 3,
+        "jade_523": 4,
+        "jade_533": 1,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_622": 1,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_634": 1,
+        "jade_641": 1,
+        "jade_642": 3,
+        "jade_643": 1,
+        "jade_651": 1,
+        "jade_653": 1,
+        "jade_654": 1,
+        "jade_662": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "E",
+        "E",
+        "Q",
+        "W",
+        "R",
+        "E",
+        "Q",
+        "E",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "fiora": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/fiora",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [],
+        "core": [
+          "773074",
+          "773047",
+          "773078"
+        ],
+        "late": [
+          "773071",
+          "773072",
+          "773035"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_511": 1,
+        "jade_513": 1,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_523": 4,
+        "jade_531": 3,
+        "jade_532": 1,
+        "jade_533": 1,
+        "jade_542": 2,
+        "jade_552": 1,
+        "jade_562": 1,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_622": 1,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "E",
+        "W",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "W",
+        "E",
+        "W",
+        "R",
+        "W",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "galio": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/galio",
+      "items": {
+        "start": [
+          "771056",
+          "772003",
+          "772003"
+        ],
+        "early": [
+          "773028"
+        ],
+        "core": [
+          "773174",
+          "773020",
+          "773001"
+        ],
+        "late": [
+          "773157",
+          "773089",
+          "773135"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_511": 1,
+        "jade_513": 4,
+        "jade_523": 4,
+        "jade_531": 3,
+        "jade_533": 1,
+        "jade_543": 3,
+        "jade_553": 4,
+        "jade_562": 1,
+        "jade_711": 1,
+        "jade_712": 1,
+        "jade_713": 3,
+        "jade_722": 3,
+        "jade_732": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "W",
+        "E",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "poppy": {
+      "role": "top",
+      "sourceUrl": "https://riftback.gg/champions/poppy",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [],
+        "core": [
+          "773078",
+          "773047",
+          "773153"
+        ],
+        "late": [
+          "773068",
+          "773143",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775245,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_512": 2,
+        "jade_513": 3,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_531": 3,
+        "jade_532": 1,
+        "jade_542": 2,
+        "jade_552": 3,
+        "jade_562": 1,
+        "jade_611": 1,
+        "jade_613": 4,
+        "jade_614": 2,
+        "jade_624": 1,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "W",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "W",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "shyvana": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/shyvana",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [],
+        "core": [
+          "773154",
+          "773047",
+          "773022"
+        ],
+        "late": [
+          "773091",
+          "773143",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775247,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_512": 4,
+        "jade_522": 4,
+        "jade_532": 1,
+        "jade_611": 1,
+        "jade_613": 4,
+        "jade_614": 2,
+        "jade_621": 2,
+        "jade_624": 1,
+        "jade_631": 2,
+        "jade_641": 1,
+        "jade_642": 3,
+        "jade_651": 1,
+        "jade_652": 3,
+        "jade_662": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 21,
+        "u": 0
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "E",
+        "W",
+        "W",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "Q",
+        "R",
+        "W",
+        "Q",
+        "E",
+        "E",
+        "R",
+        "E",
+        "E"
+      ]
+    },
+    "xinzhao": {
+      "role": "jungle",
+      "sourceUrl": "https://riftback.gg/champions/xin-zhao",
+      "items": {
+        "start": [
+          "771039",
+          "772003",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [],
+        "core": [
+          "773078",
+          "773047",
+          "773209"
+        ],
+        "late": [
+          "773072",
+          "773035",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775247,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775289,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_512": 2,
+        "jade_513": 3,
+        "jade_514": 2,
+        "jade_522": 4,
+        "jade_531": 3,
+        "jade_532": 1,
+        "jade_542": 2,
+        "jade_552": 3,
+        "jade_562": 1,
+        "jade_611": 1,
+        "jade_613": 4,
+        "jade_614": 2,
+        "jade_624": 1,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "W",
+        "E",
+        "E",
+        "E",
+        "R",
+        "W",
+        "E",
+        "W",
+        "E",
+        "R",
+        "W",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    },
+    "fizz": {
+      "role": "mid",
+      "sourceUrl": "https://riftback.gg/champions/fizz",
+      "items": {
+        "start": [
+          "771001",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [],
+        "core": [
+          "773100",
+          "773020",
+          "773089"
+        ],
+        "late": [
+          "773157",
+          "773026",
+          "773001"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775298,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_513": 4,
+        "jade_523": 4,
+        "jade_531": 3,
+        "jade_533": 1,
+        "jade_543": 3,
+        "jade_544": 1,
+        "jade_553": 4,
+        "jade_562": 1,
+        "jade_711": 1,
+        "jade_713": 3,
+        "jade_722": 1,
+        "jade_723": 3,
+        "jade_732": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 0,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "Q",
+        "E",
+        "E",
+        "E",
+        "R",
+        "Q",
+        "E",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "Q",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "graves": {
+      "role": "adc",
+      "sourceUrl": "https://riftback.gg/champions/graves",
+      "items": {
+        "start": [
+          "771055"
+        ],
+        "early": [],
+        "core": [
+          "773006",
+          "773031",
+          "773046"
+        ],
+        "late": [
+          "773072",
+          "773022",
+          "773026"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775253,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775335,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_512": 4,
+        "jade_522": 4,
+        "jade_531": 3,
+        "jade_532": 1,
+        "jade_541": 2,
+        "jade_542": 2,
+        "jade_551": 1,
+        "jade_552": 3,
+        "jade_562": 1,
+        "jade_613": 4,
+        "jade_621": 3,
+        "jade_622": 1,
+        "jade_633": 1
+      },
+      "masterySplit": {
+        "o": 21,
+        "d": 9,
+        "u": 0
+      },
+      "skillOrder": [
+        "Q",
+        "E",
+        "W",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "E",
+        "Q",
+        "E",
+        "R",
+        "E",
+        "E",
+        "W",
+        "W",
+        "R",
+        "W",
+        "W"
+      ]
+    },
+    "nami": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/nami",
+      "items": {
+        "start": [
+          "771004",
+          "772003",
+          "772003",
+          "772044",
+          "772044",
+          "772044"
+        ],
+        "early": [
+          "772049",
+          "773096"
+        ],
+        "core": [
+          "773158",
+          "773069",
+          "773190"
+        ],
+        "late": [
+          "773222",
+          "773060"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775331,
+            "count": 6
+          },
+          {
+            "id": 775317,
+            "count": 3
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775299,
+            "count": 6
+          },
+          {
+            "id": 775298,
+            "count": 3
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 1
+          },
+          {
+            "id": 775365,
+            "count": 2
+          }
+        ]
+      },
+      "masteries": {
+        "jade_511": 1,
+        "jade_512": 1,
+        "jade_513": 2,
+        "jade_514": 2,
+        "jade_523": 3,
+        "jade_711": 1,
+        "jade_712": 1,
+        "jade_713": 3,
+        "jade_714": 1,
+        "jade_722": 1,
+        "jade_723": 1,
+        "jade_724": 1,
+        "jade_732": 1,
+        "jade_733": 3,
+        "jade_742": 2,
+        "jade_743": 2,
+        "jade_751": 1,
+        "jade_752": 2,
+        "jade_762": 1
+      },
+      "masterySplit": {
+        "o": 9,
+        "d": 0,
+        "u": 21
+      },
+      "skillOrder": [
+        "W",
+        "E",
+        "W",
+        "Q",
+        "E",
+        "R",
+        "W",
+        "W",
+        "Q",
+        "E",
+        "R",
+        "W",
+        "Q",
+        "E",
+        "Q",
+        "R",
+        "Q",
+        "E"
+      ]
+    },
+    "nautilus": {
+      "role": "support",
+      "sourceUrl": "https://riftback.gg/champions/nautilus",
+      "items": {
+        "start": [
+          "771001",
+          "772003",
+          "772003",
+          "772003",
+          "772003"
+        ],
+        "early": [],
+        "core": [
+          "773117",
+          "773001",
+          "773110"
+        ],
+        "late": [
+          "773069",
+          "773190",
+          "773165"
+        ]
+      },
+      "runes": {
+        "mark": [
+          {
+            "id": 775273,
+            "count": 9
+          }
+        ],
+        "seal": [
+          {
+            "id": 775317,
+            "count": 9
+          }
+        ],
+        "glyph": [
+          {
+            "id": 775290,
+            "count": 9
+          }
+        ],
+        "quint": [
+          {
+            "id": 775357,
+            "count": 3
+          }
+        ]
+      },
+      "masteries": {
+        "jade_611": 1,
+        "jade_613": 4,
+        "jade_614": 2,
+        "jade_621": 3,
+        "jade_622": 2,
+        "jade_624": 1,
+        "jade_631": 2,
+        "jade_633": 1,
+        "jade_641": 1,
+        "jade_643": 3,
+        "jade_662": 1,
+        "jade_711": 1,
+        "jade_713": 3,
+        "jade_721": 1,
+        "jade_723": 3,
+        "jade_732": 1
+      },
+      "masterySplit": {
+        "o": 0,
+        "d": 21,
+        "u": 9
+      },
+      "skillOrder": [
+        "W",
+        "E",
+        "W",
+        "Q",
+        "W",
+        "R",
+        "W",
+        "E",
+        "W",
+        "E",
+        "R",
+        "E",
+        "E",
+        "Q",
+        "Q",
+        "R",
+        "Q",
+        "Q"
+      ]
+    }
+  }
+}

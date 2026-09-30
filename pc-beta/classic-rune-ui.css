@@ -1,0 +1,112 @@
+/* The material is shared by readable documents and the interactive rune board. */
+body.classicRuneRefresh{--classic-paper:url('images/branding/classic-rune-parchment.png');--classic-paper-texture:url('images/branding/classic-rune-paper-texture.png');--paper-ink:#38260f;--paper-muted:#6a4b23;--paper-rule:#a27636}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive :is(.runeBoardPane,.patchNotesPage,.patchNoteDocument,#modal[data-startup-notice="true"] #modalBody,.classicDocument){box-sizing:border-box!important;background:var(--classic-paper-texture) center top/420px 420px repeat!important;border:16px solid transparent!important;border-image:var(--classic-paper) 72/16px/0 round!important;border-radius:0!important;box-shadow:none!important;color:var(--paper-ink)!important;padding:18px 12px!important;filter:drop-shadow(0 4px 5px #0005)!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive :is(.runeBoardPane,.patchNotesPage,.patchNoteDocument,#modal[data-startup-notice="true"] #modalBody)::before,
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive :is(.runeBoardPane,.patchNotesPage,.patchNoteDocument,#modal[data-startup-notice="true"] #modalBody)::after{content:none!important;display:none!important}
+body.classicRuneRefresh .classicDocument{box-sizing:border-box;width:calc(100% - 12px);max-width:860px;min-height:calc(100dvh - 180px);margin:6px auto 16px;overflow-wrap:anywhere;font-family:system-ui,-apple-system,'Malgun Gothic',sans-serif}
+body.classicRuneRefresh .documentContent{font-size:15px;line-height:1.85;white-space:normal}
+body.classicRuneRefresh .documentContent h1{margin:10px 0 22px;color:var(--paper-ink);font-size:25px;line-height:1.45;letter-spacing:-.04em;font-family:Georgia,'Batang',serif;border-bottom:2px double var(--paper-rule);padding-bottom:16px}
+body.classicRuneRefresh .documentContent h2{margin:28px 0 9px;color:var(--paper-ink);font-size:18px;line-height:1.5}
+body.classicRuneRefresh .documentContent h3{margin:16px 0 7px;font-size:16px;color:var(--paper-ink)}
+body.classicRuneRefresh .documentContent p{margin:9px 0;color:var(--paper-ink)}
+body.classicRuneRefresh .documentContent ul,body.classicRuneRefresh .documentContent ol{padding-left:22px;margin:8px 0 14px}
+body.classicRuneRefresh .documentContent li{margin:6px 0}
+body.classicRuneRefresh .documentSeal{color:#795324;border-bottom:1px solid #ae8b4d80;padding:2px 0 10px;font-size:10px;font-weight:800;letter-spacing:.15em}
+body.classicRuneRefresh .documentActions{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 4px;padding-top:14px;border-top:1px solid #a2763655}
+body.classicRuneRefresh .documentActions button{min-height:44px;padding:8px 12px;background:linear-gradient(#f7e5ad,#d8b467);border:1px solid #947031;color:#39260e;border-radius:2px;font:700 13px/1.45 inherit;box-shadow:inset 0 1px #fff6d9}
+body.classicRuneRefresh .documentInlineLink{display:inline;padding:0;background:transparent;border:0;color:#174a6c;font:inherit;text-decoration:underline;text-underline-offset:3px}
+body.classicRuneRefresh .runeContactForm{display:grid;gap:8px;margin-top:24px}
+body.classicRuneRefresh .runeContactForm label{font-size:14px;font-weight:750;margin-top:9px;color:#493217}
+body.classicRuneRefresh .runeContactForm :is(input,textarea,select){box-sizing:border-box;width:100%;min-width:0;min-height:46px;border:1px solid #a47e40;border-radius:2px;background:#fff9e1bd;color:#302311;padding:10px;font:15px/1.6 inherit;box-shadow:inset 0 1px 4px #65421520}
+body.classicRuneRefresh .runeContactForm textarea{resize:vertical;min-height:210px}
+body.classicRuneRefresh .runeContactForm :is(input,textarea)::placeholder{color:#8c7556}
+body.classicRuneRefresh .runeContactForm :is(input,textarea,select):focus-visible{outline:2px solid #275779;outline-offset:2px}
+body.classicRuneRefresh .contactHint,body.classicRuneRefresh .contactStatus{font-size:13px;line-height:1.65;color:#61421d}
+body.classicRuneRefresh .contactRecipient{font-size:13px;overflow-wrap:anywhere}
+body.classicRuneRefresh .classicSummonerDetail{color:#eadfbf;padding:6px;min-width:0}
+body.classicRuneRefresh .classicSummonerDetail header{position:static!important;display:flex!important;align-items:center;gap:14px;height:auto!important;padding:8px 34px 14px 0!important;background:none!important;border:0!important;min-width:0}
+body.classicRuneRefresh .classicSummonerDetail header .spellIcon{flex:0 0 64px;width:64px;height:64px}
+body.classicRuneRefresh .classicSummonerDetail header .spellIcon img{width:100%;height:100%;object-fit:contain}
+body.classicRuneRefresh .classicSummonerDetail header h2{margin:3px 0;color:#f6dfa0;font-size:24px}
+body.classicRuneRefresh .classicSummonerDetail header :is(small,p){margin:4px 0;font-size:12px;line-height:1.5}
+body.classicRuneRefresh .summonerDescription{font-size:14px;line-height:1.75}
+body.classicRuneRefresh .summonerNumbers{margin:16px 0;border-block:1px solid #79643c}
+body.classicRuneRefresh .summonerNumbers>div{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #70604455}
+body.classicRuneRefresh .summonerNumbers dt{font-size:13px;line-height:1.6}
+body.classicRuneRefresh .summonerNumbers dd{margin:0;text-align:right;color:#ffe09c;font-size:16px;font-weight:750}
+body.classicRuneRefresh .summonerLevels label{display:flex;align-items:center;justify-content:space-between;font-size:15px;margin:18px 0 5px}
+body.classicRuneRefresh .summonerLevels output{font-size:21px;color:#ffdd82;font-weight:750}
+body.classicRuneRefresh .summonerLevels input{width:100%;min-height:44px;accent-color:#d1a647;padding:0}
+body.classicRuneRefresh .summonerLevelEnds{display:flex;justify-content:space-between;font-size:11px;color:#c2baa6}
+body.classicRuneRefresh .summonerLevelTable summary{cursor:pointer;min-height:44px;padding:12px 0;font-size:14px}
+body.classicRuneRefresh .summonerTableScroll{overflow:auto;max-width:100%}
+body.classicRuneRefresh .summonerLevelTable table{width:100%;border-collapse:collapse;font-size:13px}
+body.classicRuneRefresh .summonerLevelTable :is(td,th){padding:9px 6px;border-bottom:1px solid #70604455;text-align:right;white-space:nowrap}
+body.classicRuneRefresh .summonerValueNote{font-size:12px;line-height:1.6;color:#cfc6af}
+body.classicRuneRefresh.light .classicSummonerDetail,body.classicRuneRefresh.light .classicSummonerDetail :is(h2,p,dd,output){color:#eadfbf!important}
+
+/* One aligned search row. All 63 champions remain in the existing two-row rail. */
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmSearch{box-sizing:border-box!important;grid-template-columns:minmax(0,1fr) 60px!important;grid-template-rows:minmax(0,1fr)!important;align-items:stretch!important;height:100%!important;min-height:0!important;gap:4px!important;padding:5px!important;border:1px solid #8c794c!important;background:#252d2d!important;overflow:hidden!important}
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmSearch::before{display:none!important;content:none!important}
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmSearch :is(input,button){box-sizing:border-box!important;grid-row:1!important;height:100%!important;min-height:0!important;max-height:none!important;margin:0!important;padding:0 10px!important;font-size:14px!important;line-height:normal!important;align-self:stretch!important}
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmSearch input{grid-column:1!important;box-shadow:inset 0 1px 3px #0002!important}
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmSearch button{grid-column:2!important}
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmRot{display:grid!important;grid-auto-flow:column!important;grid-template-columns:none!important;grid-template-rows:repeat(2,minmax(0,1fr))!important;grid-auto-columns:calc((100% - 12px)/5)!important;gap:3px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x proximity!important;overscroll-behavior-x:contain!important;touch-action:pan-x!important;scrollbar-width:thin!important;scrollbar-color:#b0914b #192227!important;cursor:grab!important}
+body.classicRuneRefresh .hmRot:active{cursor:grabbing!important}
+body.classicRuneRefresh .hmRot>.rotC{scroll-snap-align:start;user-select:none}
+body.classicRuneRefresh .hmRot img{-webkit-user-drag:none;user-select:none}
+body.classicRuneRefresh .itemRelations{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;padding:8px 0!important}
+body.classicRuneRefresh.nostalgia218Fidelity #modal .itemRelations>.itemRelation{box-sizing:border-box;display:flex!important;flex-direction:column;align-items:center;justify-content:flex-start;gap:7px;width:100%;min-width:0;min-height:92px;padding:10px 5px;color:#f1e6c6;background:#162129;border:1px solid #65705d;border-radius:3px;font-size:12px;line-height:1.45;text-align:center}
+body.classicRuneRefresh .itemRelation span{white-space:normal;word-break:keep-all;overflow-wrap:anywhere}
+body.classicRuneRefresh .itemRelationIcon{display:block;width:44px;height:44px;object-fit:contain;border:1px solid #b2914a}
+body.classicRuneRefresh.light #modal .itemRelation{color:#30271a!important;background:#f3ecd5!important}
+
+/* The board follows the supplied landscape layout; controls stay readable below it on phones. */
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned{padding:6px!important;background:transparent!important;container-type:inline-size;container-name:classic-rune}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeClientLayout{grid-template-columns:minmax(0,1fr)!important;grid-template-areas:'inventory' 'board' 'stats'!important;padding:0!important;border:0!important;background:transparent!important;gap:10px!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeBoardPane{padding:4px!important;border-width:12px!important;border-image-width:12px!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeBoard{aspect-ratio:660/438!important;width:100%!important;height:auto!important;min-height:0!important;border:1px solid #aa793baa!important;background:var(--classic-paper) center/100% 100% no-repeat!important;box-shadow:inset 0 0 16px #95602b44!important;overflow:visible!important;margin-bottom:54px!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeBoard::before,
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeBoard::after,
+body.classicRuneRefresh .runeBoardOrnament{display:none!important;content:none!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeSocket{width:clamp(23px,6.5vw,40px)!important;height:clamp(23px,6.5vw,40px)!important;clip-path:polygon(50% 0,94% 25%,94% 75%,50% 100%,6% 75%,6% 25%)!important;background:linear-gradient(140deg,#ad8a51,#44381e)!important;border:0!important;padding:3px!important;filter:drop-shadow(0 1px 2px #442b14aa)!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeSocket.empty::after{content:'';display:block;width:35%;height:42%;border:2px solid #ffffff38;border-radius:3px;background:#0003;box-shadow:0 -4px 0 -1px #ffffff26}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeSocket.empty{opacity:1!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeSocket.mark{background:linear-gradient(140deg,#a75d42,#592a21 60%,#a0603f)!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeSocket.seal{background:linear-gradient(140deg,#ad9b4b,#5c5828 60%,#9c8538)!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeSocket.glyph{background:linear-gradient(140deg,#69869b,#2d4153 60%,#607b8e)!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeSocket.quint{width:clamp(38px,10vw,65px)!important;height:clamp(38px,10vw,65px)!important;border-radius:50%!important;clip-path:polygon(50% 0,60% 13%,76% 7%,78% 24%,95% 25%,87% 42%,100% 50%,86% 60%,94% 76%,76% 78%,75% 96%,58% 88%,50% 100%,40% 86%,24% 94%,22% 77%,5% 75%,13% 59%,0 50%,14% 41%,6% 24%,23% 22%,25% 5%,41% 13%)!important;background:radial-gradient(circle,#252619 35%,#b29a55 38%,#453c22 55%,#debc71)!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeBoardActions{position:absolute!important;bottom:-47px!important;left:0!important;right:0!important;width:100%!important;display:flex!important;justify-content:flex-end;gap:8px!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeBoardActions button{min-width:76px;height:36px!important;background:linear-gradient(#416e9a,#12365b)!important;border:1px solid #e5c880!important;color:#fff7d5!important;font-size:13px!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned :is(.runeInventory,.runeClientStats){background:#f1e3b0!important;border:1px solid #b58a43!important;color:#34270e!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned :is(.runeInventory h4,.runeClientStats h4){background:linear-gradient(#f6eac6,#d9bd76)!important;color:#39280f!important;border-color:#b48a42!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeInventoryList{background:#f1e3b0!important;max-height:220px!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeInventoryList button{background:#f7ecc6!important;color:#392911!important;border-bottom:1px solid #cfb577!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeInventoryList button.selected{background:#e3c778!important;border-left-color:#315d86!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeInventoryList :is(b,small,em){color:#493317!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClientStats :is(p,dl div,dt,dd,.runeTotal){background:transparent!important;color:#493317!important;border-color:#c6a063!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeInventoryList .empty{padding:18px 12px!important;color:#71502a!important;font-size:14px;line-height:1.65}
+
+/* Explicit SVG arrows replace overlapping pseudo-elements. */
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .pg:is(.prev,.next,.first,.last){display:inline-flex!important;align-items:center!important;justify-content:center!important;position:relative!important;width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important;padding:9px!important;color:#30485c!important;background:transparent!important;border:0!important;box-shadow:none!important}
+body.classicRuneRefresh .pg[data-rune-nav-icon]::before,body.classicRuneRefresh .pg[data-rune-nav-icon]::after,body.classicRuneRefresh .bdMove::before,body.classicRuneRefresh .bdMove::after{display:none!important;content:none!important}
+body.classicRuneRefresh .bdMove .mv:first-child{flex-direction:row-reverse!important}
+body.classicRuneRefresh .bdMove .mv:last-child{flex-direction:row!important}
+body.classicRuneRefresh .pg[data-rune-nav-icon] svg{display:block!important;transform:none!important}
+body.classicRuneRefresh .device218PatchNotice::before,body.classicRuneRefresh .device218PatchNotice::after{display:none!important;content:none!important}
+body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .pg:disabled{opacity:.3!important}
+
+/* Use the source 16:9 thumbnail without stretching it to fill a tall feed. */
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmNews:is(.finalVideoMode,.lolVideoMode){display:flex!important;align-items:center!important;justify-content:center!important;background:#070c10!important;padding:4px!important;overflow:hidden!important}
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive #view.homeView>.hm>.hmNews .finalVideoPreview{flex:none!important;max-width:100%!important;max-height:100%!important;aspect-ratio:16/9!important;margin:auto!important;overflow:hidden!important;background:#000!important;min-height:0!important}
+body.classicRuneRefresh.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive .finalYoutubeThumbnail{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+@container classic-rune (min-width:900px){
+ body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .runeClient.classicSkinned .runeClientLayout{grid-template-columns:minmax(220px,1fr) minmax(0,2.7fr) minmax(140px,.8fr)!important;grid-template-areas:'inventory board stats'!important}
+}
+@media(max-width:360px){
+ body.classicRuneRefresh.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive .classicDocument{padding:14px 8px!important}
+ body.classicRuneRefresh .documentContent{font-size:14px}
+ body.classicRuneRefresh .documentContent h1{font-size:23px}
+ body.classicRuneRefresh .itemRelations{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+body.classicRuneRefresh .documentAddress{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;user-select:text;font:12px/1.6 monospace;padding:8px;background:#d4aa5424;border:1px solid #98713355}

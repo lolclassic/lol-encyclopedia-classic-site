@@ -1,0 +1,129 @@
+.onlineTranslateHint {
+  margin: .25rem 0 .7rem;
+  color: #bcc8c4;
+  font-size: .8rem;
+  line-height: 1.45;
+}
+.onlineTranslateAction {
+  display: inline-block;
+  margin: .45rem 0;
+  padding: .3rem .55rem;
+  border: 1px solid #b59c6e;
+  border-radius: .35rem;
+  background: #173239;
+  color: #f0e1bc;
+  font-size: .78rem;
+  line-height: 1.35;
+}
+.onlineTranslateAction:disabled { opacity: .55; }
+.onlineTranslation {
+  margin: .35rem 0 .7rem;
+  padding: .6rem .7rem;
+  border-left: 3px solid #bda572;
+  background: rgba(38, 53, 52, .72);
+  color: #f4f4ed;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.onlineTranslation[role="alert"] { border-left-color: #de8975; }
+.onlineTranslationDisclaimer {
+  display: block;
+  margin-top: .3rem;
+  color: #b9c5c0;
+  font-size: .74rem;
+}
+.onlineTranslationGameTerms {
+  margin: .35rem 0 .8rem;
+  padding: .55rem .7rem;
+  border: 1px solid rgba(189, 165, 114, .38);
+  border-radius: .35rem;
+  background: rgba(25, 43, 46, .92);
+  color: #f2e3bf;
+  overflow-wrap: anywhere;
+}
+.onlineTranslationGameTerms b {
+  display: block;
+  margin-bottom: .25rem;
+}
+.onlineTranslationGameTerms span { color: #fff7dc; font-weight: 700; }
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .bd .onlineTranslation {
+  background: #17292f !important;
+  color: #f4f4ed !important;
+}
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .bd .onlineTranslation .onlineTranslationDisclaimer {
+  color: #b9c5c0 !important;
+}
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .onlineBoard .authorActions .reportBtn:is([data-act^="onlineReport:"], [data-act^="onlineBlock:"]) {
+  flex: 0 0 auto !important;
+  width: max-content !important;
+  min-width: 0 !important;
+  min-height: 26px !important;
+  height: 26px !important;
+  padding: 2px 5px !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .onlineBoard .commentBlock {
+  flex: 0 0 auto !important;
+  width: max-content !important;
+  min-width: 0 !important;
+  min-height: 26px !important;
+  height: 26px !important;
+  padding: 2px 5px !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .onlineBoard .genRec {
+  width: max-content !important;
+  max-width: calc(100% - 16px);
+  padding: 4px 8px !important;
+  white-space: nowrap !important;
+}
+.onlinePostImages .onlinePostImagePlaceholder {
+  display: grid;
+  min-height: 96px;
+  place-items: center;
+  padding: 8px;
+  border: 1px solid #777;
+  background: #17292f;
+  color: #f4f4ed;
+  font-size: 12px;
+  text-align: center;
+}
+.legacyBoardPreview {
+  margin: 12px 8px 18px;
+  padding: 14px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+}
+.legacyBoardPreview h2 { margin: 0 0 7px; font-size: 16px; }
+.legacyBoardPreview p { margin: 5px 0 10px; line-height: 1.5; overflow-wrap: anywhere; }
+.legacyBoardPreview .brow { padding: 0; }
+.legacyBoardPreview .brow button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 38px;
+  padding: 5px 2px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+.legacyBoardPreview .brow small { flex: 0 0 auto; color: #666; font-size: 10px; }
+.legacyBoardPreview > button, .legacyBoardPages button { padding: 5px 8px; }
+.legacyBoardPages { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+.legacyBoardPreview > small { margin-left: 8px; }
+.legacyBoardDetail { overflow-wrap: anywhere; }
+.legacyBoardDetail > div { white-space: pre-wrap; line-height: 1.55; }
+.onlineBoardTitle {
+  margin: 0;
+  padding: 10px 12px 6px;
+  color: #f0e1bc;
+  font-size: 14px;
+  line-height: 1.4;
+}

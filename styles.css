@@ -1541,3 +1541,141 @@ nav a {
     padding: 1rem;
   }
 }
+
+/* Keep archive panels and text comfortably inside the viewport. */
+:root {
+  --page-gutter: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.site-header,
+.hero,
+.status-strip,
+.section,
+.cta-section,
+.site-footer,
+.data-status {
+  width: min(calc(100% - var(--page-gutter) - var(--page-gutter)), var(--max));
+}
+
+.policy-main {
+  width: min(calc(100% - var(--page-gutter) - var(--page-gutter)), 960px);
+}
+
+.data-status {
+  margin: 0 auto 0.7rem;
+  padding-left: 0.25rem;
+  color: var(--gold-bright);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading > p {
+  max-width: 58ch;
+}
+
+.patch-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--line);
+  background: linear-gradient(125deg, rgba(224, 174, 60, 0.1), rgba(63, 182, 166, 0.05));
+}
+
+.patch-callout > div {
+  max-width: 62ch;
+}
+
+.patch-callout h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.patch-callout p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.patch-callout .button {
+  flex: none;
+}
+
+.pc-beta-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--line);
+  background: linear-gradient(120deg, rgba(63, 182, 166, 0.13), rgba(224, 174, 60, 0.08));
+}
+
+.pc-beta-section > div {
+  max-width: 64ch;
+}
+
+.pc-beta-section h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.pc-beta-section p:last-child {
+  margin-bottom: 0;
+}
+
+.pc-beta-section .pc-beta-limit {
+  color: var(--muted);
+}
+
+.pc-beta-section > .status-badge {
+  flex: none;
+  max-width: 16rem;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .quality-section,
+  .roadmap-section {
+    padding-right: clamp(1.25rem, 3vw, 2rem);
+    padding-left: clamp(1.25rem, 3vw, 2rem);
+  }
+}
+
+@media (max-width: 620px) {
+  .pc-beta-section {
+    display: block;
+  }
+
+  .pc-beta-section > .status-badge {
+    margin-top: 1.25rem;
+  }
+
+  .patch-callout {
+    display: block;
+  }
+
+  .patch-callout .button {
+    display: inline-flex;
+    margin-top: 1.25rem;
+  }
+
+  .cta-section {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .release-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .release-grid code {
+    overflow-wrap: anywhere;
+  }
+
+  .status-strip strong {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    white-space: normal;
+  }
+}

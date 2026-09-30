@@ -1,0 +1,22 @@
+.pcBetaBanner{position:relative;z-index:30;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;padding:.55rem clamp(1rem,3vw,2rem);
+  color:#f3e6c5;background:#17242a;border-bottom:2px solid #b5914f;
+  font:600 13px/1.45 system-ui,sans-serif}
+.pcBetaBanner a{color:#ffe29a;text-decoration:underline;white-space:nowrap}
+.pcBetaUnavailable{margin:1rem;padding:clamp(1.25rem,3vw,2rem);
+  color:#f3e6c5;background:#132027;border:1px solid #a98b50;line-height:1.6}
+.pcBetaUnavailable h2{margin:0 0 .8rem;font-size:clamp(1.3rem,3vw,2rem)}
+.pcBetaUnavailable p{margin:0 0 1.2rem}
+.pcBetaUnavailable button{padding:.6rem 1rem;border:1px solid #d7b367;
+  color:#162027;background:#f4d787;cursor:pointer}
+body.pcBetaWeb.nostalgia218Fidelity.nostalgia218HasArchiveDock .itemPage{
+  height:calc(100dvh - 109px - var(--nostalgia-archive-dock-height,48px) - var(--pc-beta-banner-height,0px))!important}
+body.pcBetaWeb.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive{
+  grid-template-rows:auto minmax(0,1fr) auto!important}
+body.pcBetaWeb.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive>.pcBetaBanner{
+  grid-row:1!important;align-self:start!important}
+body.pcBetaWeb.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive>.app{
+  grid-row:2!important}
+body.pcBetaWeb.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive>#floatingLegalFooter{
+  grid-row:3!important}
+@media(max-width:420px){.pcBetaBanner{align-items:flex-start;flex-direction:column;gap:.25rem}}

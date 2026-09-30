@@ -1,0 +1,2952 @@
+{
+  "schemaVersion": 1,
+  "classification": "EDITORIAL_KOREAN_ITEM_ALIASES",
+  "classicVersion": "16.17.1",
+  "sourceItemsSha256": "93d917035994774687bfab35ec497b15d2f4b5dea71cd02d9c1576d3b23179a8",
+  "reviewedItemCount": 149,
+  "policy": "한국 이용자의 실제 표현을 덧붙이는 보조 데이터입니다. 이름·수치·조합·효과 등 클래식 아이템 원문은 변경하지 않습니다. aliases가 빈 항목은 화면에 약칭을 표시하지 않습니다.",
+  "items": [
+    {
+      "riotId": "2003",
+      "itemIndex": 0,
+      "nameKo": "체력 물약",
+      "nameEn": "Health Potion",
+      "aliases": [
+        "빨포"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "빨포",
+          "sourceRef": "inven-2011-items",
+          "locator": "빨포",
+          "bindingId": "alias-2003-089dfc8071"
+        }
+      ]
+    },
+    {
+      "riotId": "2004",
+      "itemIndex": 1,
+      "nameKo": "마나 물약",
+      "nameEn": "Mana Potion",
+      "aliases": [
+        "파포"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "파포",
+          "sourceRef": "inven-2011-items",
+          "locator": "파포",
+          "bindingId": "alias-2004-43b4a266b5"
+        }
+      ]
+    },
+    {
+      "riotId": "772044",
+      "itemIndex": 2,
+      "nameKo": "시야 와드",
+      "nameEn": "Sight Ward",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "2043",
+      "itemIndex": 3,
+      "nameKo": "투명 감지 와드",
+      "nameEn": "Vision Ward",
+      "aliases": [
+        "핑와"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "핑와",
+          "sourceRef": "inven-2013-terms",
+          "locator": "핑와",
+          "bindingId": "alias-2043-797522c17e"
+        }
+      ]
+    },
+    {
+      "riotId": "1006",
+      "itemIndex": 4,
+      "nameKo": "원기 회복의 구슬",
+      "nameEn": "Rejuvenation Bead",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1004",
+      "itemIndex": 5,
+      "nameKo": "요정의 부적",
+      "nameEn": "Faerie Charm",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "2039",
+      "itemIndex": 6,
+      "nameKo": "지능의 영약",
+      "nameEn": "Elixir of Brilliance",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "2047",
+      "itemIndex": 7,
+      "nameKo": "예언자의 추출액",
+      "nameEn": "Oracle's Extract",
+      "aliases": [
+        "오라클"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "오라클",
+          "sourceRef": "inven-2013-terms",
+          "locator": "오라클",
+          "bindingId": "alias-2047-d877aeaa34"
+        }
+      ]
+    },
+    {
+      "riotId": "1039",
+      "itemIndex": 8,
+      "nameKo": "사냥꾼의 마체테",
+      "nameEn": "Hunter's Machete",
+      "aliases": [
+        "마체테"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-mundo"
+      ],
+      "evidence": [
+        {
+          "alias": "마체테",
+          "sourceRef": "inven-2014-mundo",
+          "locator": "마체테",
+          "bindingId": "alias-1039-bd1aa64ff7"
+        }
+      ]
+    },
+    {
+      "riotId": "1029",
+      "itemIndex": 9,
+      "nameKo": "천 갑옷",
+      "nameEn": "Cloth Armor",
+      "aliases": [
+        "천갑"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "천갑",
+          "sourceRef": "inven-2013-terms",
+          "locator": "천갑",
+          "bindingId": "alias-1029-6223f91a21"
+        }
+      ]
+    },
+    {
+      "riotId": "773037",
+      "itemIndex": 10,
+      "nameKo": "마나의 보주",
+      "nameEn": "Mana Manipulator",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1001",
+      "itemIndex": 11,
+      "nameKo": "속도의 장화",
+      "nameEn": "Boots of Speed",
+      "aliases": [
+        "똥신"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "똥신",
+          "sourceRef": "inven-2013-terms",
+          "locator": "똥신",
+          "bindingId": "alias-1001-a522b00be3"
+        }
+      ]
+    },
+    {
+      "riotId": "2041",
+      "itemIndex": 12,
+      "nameKo": "수정 플라스크",
+      "nameEn": "Crystalline Flask",
+      "aliases": [
+        "플라스크"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-teemo"
+      ],
+      "evidence": [
+        {
+          "alias": "플라스크",
+          "sourceRef": "inven-2014-teemo",
+          "locator": "플라스크",
+          "bindingId": "alias-2041-e77c00bd56"
+        }
+      ]
+    },
+    {
+      "riotId": "2037",
+      "itemIndex": 13,
+      "nameKo": "불굴의 영약",
+      "nameEn": "Elixir of Fortitude",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1042",
+      "itemIndex": 14,
+      "nameKo": "단검",
+      "nameEn": "Dagger",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1051",
+      "itemIndex": 15,
+      "nameKo": "싸움꾼의 장갑",
+      "nameEn": "Brawler's Gloves",
+      "aliases": [
+        "크리장갑"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "크리장갑",
+          "sourceRef": "inven-2011-items",
+          "locator": "크리장갑",
+          "bindingId": "alias-1051-dbe855caa8"
+        }
+      ]
+    },
+    {
+      "riotId": "1027",
+      "itemIndex": 16,
+      "nameKo": "사파이어 수정",
+      "nameEn": "Sapphire Crystal",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1033",
+      "itemIndex": 17,
+      "nameKo": "마법무효화의 망토",
+      "nameEn": "Null-Magic Mantle",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "772042",
+      "itemIndex": 18,
+      "nameKo": "예언자의 영약",
+      "nameEn": "Oracle's Elixir",
+      "aliases": [
+        "오라클"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "오라클",
+          "sourceRef": "inven-2013-terms",
+          "locator": "오라클",
+          "bindingId": "alias-772042-d877aeaa34"
+        }
+      ]
+    },
+    {
+      "riotId": "1036",
+      "itemIndex": 19,
+      "nameKo": "롱소드",
+      "nameEn": "Long Sword",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1056",
+      "itemIndex": 20,
+      "nameKo": "도란의 반지",
+      "nameEn": "Doran's Ring",
+      "aliases": [
+        "도란링"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2012-doran"
+      ],
+      "evidence": [
+        {
+          "alias": "도란링",
+          "sourceRef": "inven-2012-doran",
+          "locator": "도란링",
+          "bindingId": "alias-1056-d8e13328f0"
+        }
+      ]
+    },
+    {
+      "riotId": "1052",
+      "itemIndex": 21,
+      "nameKo": "증폭의 고서",
+      "nameEn": "Amplifying Tome",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1055",
+      "itemIndex": 22,
+      "nameKo": "도란의 검",
+      "nameEn": "Doran's Blade",
+      "aliases": [
+        "도란검"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2012-doran"
+      ],
+      "evidence": [
+        {
+          "alias": "도란검",
+          "sourceRef": "inven-2012-doran",
+          "locator": "도란검",
+          "bindingId": "alias-1055-025d113e2f"
+        }
+      ]
+    },
+    {
+      "riotId": "1028",
+      "itemIndex": 23,
+      "nameKo": "루비 수정",
+      "nameEn": "Ruby Crystal",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1054",
+      "itemIndex": 24,
+      "nameKo": "도란의 방패",
+      "nameEn": "Doran's Shield",
+      "aliases": [
+        "도란방패"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2012-doran"
+      ],
+      "evidence": [
+        {
+          "alias": "도란방패",
+          "sourceRef": "inven-2012-doran",
+          "locator": "도란방패",
+          "bindingId": "alias-1054-c519d3e008"
+        }
+      ]
+    },
+    {
+      "riotId": "2048",
+      "itemIndex": 25,
+      "nameKo": "광명의 영액",
+      "nameEn": "Ichor of Illumination",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "2040",
+      "itemIndex": 26,
+      "nameKo": "분노의 영액",
+      "nameEn": "Ichor of Rage",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "773052",
+      "itemIndex": 27,
+      "nameKo": "용맹의 징표",
+      "nameEn": "Emblem of Valor",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3070",
+      "itemIndex": 28,
+      "nameKo": "여신의 눈물",
+      "nameEn": "Tear of the Goddess",
+      "aliases": [
+        "여눈"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "여눈",
+          "sourceRef": "inven-2013-terms",
+          "locator": "여눈",
+          "bindingId": "alias-3070-7fa78532f3"
+        }
+      ]
+    },
+    {
+      "riotId": "3106",
+      "itemIndex": 29,
+      "nameKo": "마드레드의 갈퀴손",
+      "nameEn": "Madred's Razors",
+      "aliases": [
+        "빨장"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "빨장",
+          "sourceRef": "inven-2013-terms",
+          "locator": "빨장",
+          "bindingId": "alias-3106-8765568ca3"
+        }
+      ]
+    },
+    {
+      "riotId": "2049",
+      "itemIndex": 30,
+      "nameKo": "시야석",
+      "nameEn": "Sightstone",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "773096",
+      "itemIndex": 31,
+      "nameKo": "현자의 돌",
+      "nameEn": "Philosopher's Stone",
+      "aliases": [
+        "현돌"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "현돌",
+          "sourceRef": "inven-2013-terms",
+          "locator": "현돌",
+          "bindingId": "alias-773096-1030a0a878"
+        }
+      ]
+    },
+    {
+      "riotId": "1031",
+      "itemIndex": 32,
+      "nameKo": "쇠사슬 조끼",
+      "nameEn": "Chain Vest",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1018",
+      "itemIndex": 33,
+      "nameKo": "민첩성의 망토",
+      "nameEn": "Cloak of Agility",
+      "aliases": [
+        "크리망토"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "크리망토",
+          "sourceRef": "inven-2011-items",
+          "locator": "크리망토",
+          "bindingId": "alias-1018-00b80728bd"
+        }
+      ]
+    },
+    {
+      "riotId": "1053",
+      "itemIndex": 36,
+      "nameKo": "흡혈의 낫",
+      "nameEn": "Vampiric Scepter",
+      "aliases": [
+        "흡낫"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "흡낫",
+          "sourceRef": "inven-2013-terms",
+          "locator": "흡낫",
+          "bindingId": "alias-1053-aa3f9c0d34"
+        }
+      ]
+    },
+    {
+      "riotId": "1080",
+      "itemIndex": 37,
+      "nameKo": "정령석",
+      "nameEn": "Spirit Stone",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3093",
+      "itemIndex": 38,
+      "nameKo": "탐욕의 검",
+      "nameEn": "Avarice Blade",
+      "aliases": [
+        "골칼"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "골칼",
+          "sourceRef": "inven-2013-terms",
+          "locator": "골칼",
+          "bindingId": "alias-3093-c5e351869b"
+        }
+      ]
+    },
+    {
+      "riotId": "1057",
+      "itemIndex": 39,
+      "nameKo": "음전자 망토",
+      "nameEn": "Negatron Cloak",
+      "aliases": [
+        "조개"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "조개",
+          "sourceRef": "inven-2013-terms",
+          "locator": "조개",
+          "bindingId": "alias-1057-95690e3b8b"
+        }
+      ]
+    },
+    {
+      "riotId": "3067",
+      "itemIndex": 40,
+      "nameKo": "점화석",
+      "nameEn": "Kindlegem",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1026",
+      "itemIndex": 41,
+      "nameKo": "방출의 마법봉",
+      "nameEn": "Blasting Wand",
+      "aliases": [
+        "방출봉"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "방출봉",
+          "sourceRef": "inven-2013-terms",
+          "locator": "방출봉",
+          "bindingId": "alias-1026-b260164cd4"
+        }
+      ]
+    },
+    {
+      "riotId": "1037",
+      "itemIndex": 42,
+      "nameKo": "곡괭이",
+      "nameEn": "Pickaxe",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3028",
+      "itemIndex": 43,
+      "nameKo": "조화의 성배",
+      "nameEn": "Chalice of Harmony",
+      "aliases": [
+        "성배"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "성배",
+          "sourceRef": "inven-2011-items",
+          "locator": "성배",
+          "bindingId": "alias-3028-98de7f5f9b"
+        }
+      ]
+    },
+    {
+      "riotId": "3006",
+      "itemIndex": 44,
+      "nameKo": "광전사의 군화",
+      "nameEn": "Berserker's Greaves",
+      "aliases": [
+        "버서커"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "버서커",
+          "sourceRef": "inven-2013-terms",
+          "locator": "버서커",
+          "bindingId": "alias-3006-845da0ebd1"
+        }
+      ]
+    },
+    {
+      "riotId": "1062",
+      "itemIndex": 45,
+      "nameKo": "채굴꾼의 검",
+      "nameEn": "Prospector's Blade",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1063",
+      "itemIndex": 46,
+      "nameKo": "채굴꾼의 반지",
+      "nameEn": "Prospector's Ring",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1043",
+      "itemIndex": 47,
+      "nameKo": "곡궁",
+      "nameEn": "Recurve Bow",
+      "aliases": [
+        "공속활"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "공속활",
+          "sourceRef": "inven-2011-items",
+          "locator": "공속활",
+          "bindingId": "alias-1043-b987e212f4"
+        }
+      ]
+    },
+    {
+      "riotId": "1011",
+      "itemIndex": 48,
+      "nameKo": "거인의 허리띠",
+      "nameEn": "Giant's Belt",
+      "aliases": [
+        "자벨"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "자벨",
+          "sourceRef": "inven-2013-terms",
+          "locator": "자벨",
+          "bindingId": "alias-1011-0bf2facb14"
+        }
+      ]
+    },
+    {
+      "riotId": "3047",
+      "itemIndex": 49,
+      "nameKo": "닌자의 신발",
+      "nameEn": "Ninja Tabi",
+      "aliases": [
+        "닌탑",
+        "닌자타비"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "user-request-7",
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "닌탑",
+          "sourceRef": "user-request-7",
+          "locator": "닌탑",
+          "bindingId": "alias-3047-613451962e"
+        },
+        {
+          "alias": "닌자타비",
+          "sourceRef": "inven-2013-terms",
+          "locator": "닌자타비",
+          "bindingId": "alias-3047-d0f065b25f"
+        }
+      ]
+    },
+    {
+      "riotId": "3196",
+      "itemIndex": 50,
+      "nameKo": "증강: 힘",
+      "nameEn": "Augment: Power",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3198",
+      "itemIndex": 52,
+      "nameKo": "증강: 죽음",
+      "nameEn": "Augment: Death",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3117",
+      "itemIndex": 53,
+      "nameKo": "기동력의 장화",
+      "nameEn": "Boots of Mobility",
+      "aliases": [
+        "모빌"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "모빌",
+          "sourceRef": "inven-2013-terms",
+          "locator": "모빌",
+          "bindingId": "alias-3117-d2345b2ee8"
+        }
+      ]
+    },
+    {
+      "riotId": "3009",
+      "itemIndex": 54,
+      "nameKo": "신속의 장화",
+      "nameEn": "Boots of Swiftness",
+      "aliases": [
+        "신속신"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "신속신",
+          "sourceRef": "inven-2013-terms",
+          "locator": "신속신",
+          "bindingId": "alias-3009-b158e9690d"
+        }
+      ]
+    },
+    {
+      "riotId": "3108",
+      "itemIndex": 55,
+      "nameKo": "악마의 마법서",
+      "nameEn": "Fiendish Codex",
+      "aliases": [
+        "코덱스"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "코덱스",
+          "sourceRef": "inven-2013-terms",
+          "locator": "코덱스",
+          "bindingId": "alias-3108-7ef01ed0f5"
+        }
+      ]
+    },
+    {
+      "riotId": "3158",
+      "itemIndex": 56,
+      "nameKo": "명석함의 아이오니아 장화",
+      "nameEn": "Ionian Boots of Lucidity",
+      "aliases": [
+        "쿨감신"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "쿨감신",
+          "sourceRef": "inven-2013-terms",
+          "locator": "쿨감신",
+          "bindingId": "alias-3158-225064b78e"
+        }
+      ]
+    },
+    {
+      "riotId": "3082",
+      "itemIndex": 57,
+      "nameKo": "파수꾼의 갑옷",
+      "nameEn": "Warden's Mail",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "2051",
+      "itemIndex": 58,
+      "nameKo": "수호자의 뿔피리",
+      "nameEn": "Guardian's Horn",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3020",
+      "itemIndex": 59,
+      "nameKo": "마법사의 신발",
+      "nameEn": "Sorcerer's Shoes",
+      "aliases": [
+        "마관신"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "마관신",
+          "sourceRef": "inven-2013-terms",
+          "locator": "마관신",
+          "bindingId": "alias-3020-51126a8516"
+        }
+      ]
+    },
+    {
+      "riotId": "773173",
+      "itemIndex": 60,
+      "nameKo": "일라이자의 기적",
+      "nameEn": "Eleisa's Miracle",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3191",
+      "itemIndex": 61,
+      "nameKo": "추적자의 팔목 보호대",
+      "nameEn": "Seeker's Armguard",
+      "aliases": [
+        "팔목보호대"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-teemo"
+      ],
+      "evidence": [
+        {
+          "alias": "팔목보호대",
+          "sourceRef": "inven-2014-teemo",
+          "locator": "팔목보호대",
+          "bindingId": "alias-3191-ec19b6b375"
+        }
+      ]
+    },
+    {
+      "riotId": "3086",
+      "itemIndex": 62,
+      "nameKo": "열정의 검",
+      "nameEn": "Zeal",
+      "aliases": [
+        "질"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "질",
+          "sourceRef": "inven-2013-terms",
+          "locator": "질",
+          "bindingId": "alias-3086-f8e3ebf962"
+        }
+      ]
+    },
+    {
+      "riotId": "3141",
+      "itemIndex": 63,
+      "nameKo": "비술의 검",
+      "nameEn": "Sword of the Occult",
+      "aliases": [
+        "오컬트"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "오컬트",
+          "sourceRef": "inven-2013-terms",
+          "locator": "오컬트",
+          "bindingId": "alias-3141-4f5dff7837"
+        }
+      ]
+    },
+    {
+      "riotId": "3145",
+      "itemIndex": 64,
+      "nameKo": "마법공학 리볼버",
+      "nameEn": "Hextech Revolver",
+      "aliases": [
+        "흡총"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "흡총",
+          "sourceRef": "inven-2013-terms",
+          "locator": "흡총",
+          "bindingId": "alias-3145-56c9af4d7b"
+        }
+      ]
+    },
+    {
+      "riotId": "3111",
+      "itemIndex": 65,
+      "nameKo": "헤르메스의 발걸음",
+      "nameEn": "Mercury's Treads",
+      "aliases": [
+        "헤르메스",
+        "머큐리"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "헤르메스",
+          "sourceRef": "inven-2013-terms",
+          "locator": "헤르메스",
+          "bindingId": "alias-3111-b963d9ffcf"
+        },
+        {
+          "alias": "머큐리",
+          "sourceRef": "inven-2013-terms",
+          "locator": "머큐리",
+          "bindingId": "alias-3111-fd17ffa198"
+        }
+      ]
+    },
+    {
+      "riotId": "3010",
+      "itemIndex": 66,
+      "nameKo": "수호자 카탈리스트",
+      "nameEn": "Catalyst the Protector",
+      "aliases": [
+        "카탈"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "카탈",
+          "sourceRef": "inven-2011-items",
+          "locator": "카탈",
+          "bindingId": "alias-3010-9c20a3b18c"
+        }
+      ]
+    },
+    {
+      "riotId": "3041",
+      "itemIndex": 67,
+      "nameKo": "메자이의 영혼약탈자",
+      "nameEn": "Mejai's Soulstealer",
+      "aliases": [
+        "메자이"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "메자이",
+          "sourceRef": "inven-2011-items",
+          "locator": "메자이",
+          "bindingId": "alias-3041-3700ec5d3e"
+        }
+      ]
+    },
+    {
+      "riotId": "3101",
+      "itemIndex": 68,
+      "nameKo": "쐐기검",
+      "nameEn": "Stinger",
+      "aliases": [
+        "스팅어"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "스팅어",
+          "sourceRef": "inven-2013-terms",
+          "locator": "스팅어",
+          "bindingId": "alias-3101-f269823525"
+        }
+      ]
+    },
+    {
+      "riotId": "3057",
+      "itemIndex": 70,
+      "nameKo": "광휘의 검",
+      "nameEn": "Sheen",
+      "aliases": [
+        "쉰"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "user-request-7"
+      ],
+      "evidence": [
+        {
+          "alias": "쉰",
+          "sourceRef": "user-request-7",
+          "locator": "쉰",
+          "bindingId": "alias-3057-9d0fb633d6"
+        }
+      ]
+    },
+    {
+      "riotId": "2045",
+      "itemIndex": 71,
+      "nameKo": "루비 시야석",
+      "nameEn": "Ruby Sightstone",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3134",
+      "itemIndex": 72,
+      "nameKo": "야만의 몽둥이",
+      "nameEn": "The Brutalizer",
+      "aliases": [
+        "브루탈"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "브루탈",
+          "sourceRef": "inven-2013-terms",
+          "locator": "브루탈",
+          "bindingId": "alias-3134-8002a8a43b"
+        }
+      ]
+    },
+    {
+      "riotId": "3155",
+      "itemIndex": 73,
+      "nameKo": "주문포식자",
+      "nameEn": "Hexdrinker",
+      "aliases": [
+        "주포",
+        "헥드"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2016-riven",
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "주포",
+          "sourceRef": "inven-2016-riven",
+          "locator": "주포",
+          "bindingId": "alias-3155-d2a929b43c"
+        },
+        {
+          "alias": "헥드",
+          "sourceRef": "inven-2013-terms",
+          "locator": "헥드",
+          "bindingId": "alias-3155-d919d304b1"
+        }
+      ]
+    },
+    {
+      "riotId": "3044",
+      "itemIndex": 74,
+      "nameKo": "탐식의 망치",
+      "nameEn": "Phage",
+      "aliases": [
+        "페이지"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "페이지",
+          "sourceRef": "inven-2013-terms",
+          "locator": "페이지",
+          "bindingId": "alias-3044-6c84a1b3b0"
+        }
+      ]
+    },
+    {
+      "riotId": "3136",
+      "itemIndex": 75,
+      "nameKo": "기괴한 가면",
+      "nameEn": "Haunting Guise",
+      "aliases": [
+        "하운팅"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "하운팅",
+          "sourceRef": "inven-2013-terms",
+          "locator": "하운팅",
+          "bindingId": "alias-3136-e6f1aeb00c"
+        }
+      ]
+    },
+    {
+      "riotId": "3024",
+      "itemIndex": 76,
+      "nameKo": "빙하의 장막",
+      "nameEn": "Glacial Shroud",
+      "aliases": [
+        "글래셜"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "글래셜",
+          "sourceRef": "inven-2013-terms",
+          "locator": "글래셜",
+          "bindingId": "alias-3024-7475466932"
+        }
+      ]
+    },
+    {
+      "riotId": "1038",
+      "itemIndex": 77,
+      "nameKo": "B.F. 대검",
+      "nameEn": "B. F. Sword",
+      "aliases": [
+        "BF"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "BF",
+          "sourceRef": "inven-2011-items",
+          "locator": "BF",
+          "bindingId": "alias-1038-567d6942cf"
+        }
+      ]
+    },
+    {
+      "riotId": "3185",
+      "itemIndex": 78,
+      "nameKo": "빛의 인도자",
+      "nameEn": "The Lightbringer",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "1058",
+      "itemIndex": 79,
+      "nameKo": "쓸데없이 큰 지팡이",
+      "nameEn": "Needlessly Large Rod",
+      "aliases": [
+        "니들리스"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "니들리스",
+          "sourceRef": "inven-2013-terms",
+          "locator": "니들리스",
+          "bindingId": "alias-1058-9042010497"
+        }
+      ]
+    },
+    {
+      "riotId": "3154",
+      "itemIndex": 80,
+      "nameKo": "리글의 랜턴",
+      "nameEn": "Wriggle's Lantern",
+      "aliases": [
+        "랜턴"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "랜턴",
+          "sourceRef": "inven-2011-items",
+          "locator": "랜턴",
+          "bindingId": "alias-3154-5538c0af91"
+        }
+      ]
+    },
+    {
+      "riotId": "3140",
+      "itemIndex": 81,
+      "nameKo": "수은 장식띠",
+      "nameEn": "Quicksilver Sash",
+      "aliases": [
+        "수은",
+        "퀵실"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2016-riven",
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "수은",
+          "sourceRef": "inven-2016-riven",
+          "locator": "수은",
+          "bindingId": "alias-3140-86dd167b52"
+        },
+        {
+          "alias": "퀵실",
+          "sourceRef": "inven-2013-terms",
+          "locator": "퀵실",
+          "bindingId": "alias-3140-1f7a3b1227"
+        }
+      ]
+    },
+    {
+      "riotId": "773092",
+      "itemIndex": 82,
+      "nameKo": "얼음 정수의 파편",
+      "nameEn": "Shard of True Ice",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3123",
+      "itemIndex": 83,
+      "nameKo": "처형인의 대검",
+      "nameEn": "Executioner's Calling",
+      "aliases": [
+        "처형인"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2017-alistar"
+      ],
+      "evidence": [
+        {
+          "alias": "처형인",
+          "sourceRef": "inven-2017-alistar",
+          "locator": "처형인",
+          "bindingId": "alias-3123-cb7b2bf7b0"
+        }
+      ]
+    },
+    {
+      "riotId": "773023",
+      "itemIndex": 84,
+      "nameKo": "쌍둥이 그림자",
+      "nameEn": "Twin Shadows",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3187",
+      "itemIndex": 85,
+      "nameKo": "마법공학 탐지기",
+      "nameEn": "Hextech Sweeper",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3144",
+      "itemIndex": 86,
+      "nameKo": "빌지워터 해적검",
+      "nameEn": "Bilgewater Cutlass",
+      "aliases": [
+        "커틀러스"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "커틀러스",
+          "sourceRef": "inven-2013-terms",
+          "locator": "커틀러스",
+          "bindingId": "alias-3144-a6396e4520"
+        }
+      ]
+    },
+    {
+      "riotId": "3211",
+      "itemIndex": 87,
+      "nameKo": "망령의 두건",
+      "nameEn": "Spectre's Cowl",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3190",
+      "itemIndex": 88,
+      "nameKo": "강철의 솔라리 펜던트",
+      "nameEn": "Locket of the Iron Solari",
+      "aliases": [
+        "솔라리"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-xinzhao"
+      ],
+      "evidence": [
+        {
+          "alias": "솔라리",
+          "sourceRef": "inven-2014-xinzhao",
+          "locator": "솔라리",
+          "bindingId": "alias-3190-6e1febae32"
+        }
+      ]
+    },
+    {
+      "riotId": "773077",
+      "itemIndex": 89,
+      "nameKo": "티아맷",
+      "nameEn": "Tiamat",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3112",
+      "itemIndex": 90,
+      "nameKo": "겨울의 보주",
+      "nameEn": "Orb of Winter",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "773069",
+      "itemIndex": 91,
+      "nameKo": "슈렐리아의 몽상",
+      "nameEn": "Shurelya's Reverie",
+      "aliases": [
+        "슈렐리아"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "슈렐리아",
+          "sourceRef": "inven-2011-items",
+          "locator": "슈렐리아",
+          "bindingId": "alias-773069-5f5e678497"
+        }
+      ]
+    },
+    {
+      "riotId": "3004",
+      "itemIndex": 92,
+      "nameKo": "마나무네",
+      "nameEn": "Manamune",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3035",
+      "itemIndex": 94,
+      "nameKo": "최후의 속삭임",
+      "nameEn": "Last Whisper",
+      "aliases": [
+        "라위"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "라위",
+          "sourceRef": "inven-2013-terms",
+          "locator": "라위",
+          "bindingId": "alias-3035-9d7a91d55d"
+        }
+      ]
+    },
+    {
+      "riotId": "3105",
+      "itemIndex": 95,
+      "nameKo": "군단의 방패",
+      "nameEn": "Aegis of the Legion",
+      "aliases": [
+        "군방",
+        "이지스"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "군방",
+          "sourceRef": "inven-2013-terms",
+          "locator": "군방",
+          "bindingId": "alias-3105-fe286efded"
+        },
+        {
+          "alias": "이지스",
+          "sourceRef": "inven-2013-terms",
+          "locator": "이지스",
+          "bindingId": "alias-3105-f1b7971276"
+        }
+      ]
+    },
+    {
+      "riotId": "3165",
+      "itemIndex": 96,
+      "nameKo": "모렐로노미콘",
+      "nameEn": "Morellonomicon",
+      "aliases": [
+        "모렐로"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2018-xerath"
+      ],
+      "evidence": [
+        {
+          "alias": "모렐로",
+          "sourceRef": "inven-2018-xerath",
+          "locator": "모렐로",
+          "bindingId": "alias-3165-fff1f08303"
+        }
+      ]
+    },
+    {
+      "riotId": "3065",
+      "itemIndex": 97,
+      "nameKo": "정령의 형상",
+      "nameEn": "Spirit Visage",
+      "aliases": [
+        "정령",
+        "비사지"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-mundo",
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "정령",
+          "sourceRef": "inven-2014-mundo",
+          "locator": "정령",
+          "bindingId": "alias-3065-e2585c426e"
+        },
+        {
+          "alias": "비사지",
+          "sourceRef": "inven-2013-terms",
+          "locator": "비사지",
+          "bindingId": "alias-3065-9845ab9075"
+        }
+      ]
+    },
+    {
+      "riotId": "3091",
+      "itemIndex": 98,
+      "nameKo": "마법사의 최후",
+      "nameEn": "Wit's End",
+      "aliases": [
+        "윗엔"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "윗엔",
+          "sourceRef": "inven-2013-terms",
+          "locator": "윗엔",
+          "bindingId": "alias-3091-204c43a371"
+        }
+      ]
+    },
+    {
+      "riotId": "3075",
+      "itemIndex": 99,
+      "nameKo": "가시 갑옷",
+      "nameEn": "Thornmail",
+      "aliases": [
+        "가갑",
+        "쏜메일"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-mundo",
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "가갑",
+          "sourceRef": "inven-2014-mundo",
+          "locator": "가갑",
+          "bindingId": "alias-3075-c5c265f7bc"
+        },
+        {
+          "alias": "쏜메일",
+          "sourceRef": "inven-2013-terms",
+          "locator": "쏜메일",
+          "bindingId": "alias-3075-3db43d0d47"
+        }
+      ]
+    },
+    {
+      "riotId": "3131",
+      "itemIndex": 100,
+      "nameKo": "신성의 검",
+      "nameEn": "Sword of the Divine",
+      "aliases": [
+        "소오디"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "소오디",
+          "sourceRef": "inven-2013-terms",
+          "locator": "소오디",
+          "bindingId": "alias-3131-739c06c158"
+        }
+      ]
+    },
+    {
+      "riotId": "3222",
+      "itemIndex": 101,
+      "nameKo": "미카엘의 도가니",
+      "nameEn": "Mikael's Crucible",
+      "aliases": [
+        "미카엘"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "alias": "미카엘",
+          "sourceRef": "inven-2017-janna",
+          "locator": "미카엘",
+          "bindingId": "alias-3222-0d6a635fba"
+        }
+      ]
+    },
+    {
+      "riotId": "3135",
+      "itemIndex": 102,
+      "nameKo": "공허의 지팡이",
+      "nameEn": "Void Staff",
+      "aliases": [
+        "보이드"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "보이드",
+          "sourceRef": "inven-2013-terms",
+          "locator": "보이드",
+          "bindingId": "alias-3135-f6072fb867"
+        }
+      ]
+    },
+    {
+      "riotId": "3005",
+      "itemIndex": 103,
+      "nameKo": "아트마의 창",
+      "nameEn": "Atma's Impaler",
+      "aliases": [
+        "아트마"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "아트마",
+          "sourceRef": "inven-2011-items",
+          "locator": "아트마",
+          "bindingId": "alias-3005-0bbf4c6c67"
+        }
+      ]
+    },
+    {
+      "riotId": "3207",
+      "itemIndex": 104,
+      "nameKo": "고대 골렘의 영혼",
+      "nameEn": "Spirit of the Ancient Golem",
+      "aliases": [
+        "고대골렘"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-rengar"
+      ],
+      "evidence": [
+        {
+          "alias": "고대골렘",
+          "sourceRef": "inven-2013-rengar",
+          "locator": "고대골렘",
+          "bindingId": "alias-3207-ac4d56e11d"
+        }
+      ]
+    },
+    {
+      "riotId": "3206",
+      "itemIndex": 105,
+      "nameKo": "망령의 영혼",
+      "nameEn": "Spirit of the Spectral Wraith",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3209",
+      "itemIndex": 106,
+      "nameKo": "도마뱀 장로의 영혼",
+      "nameEn": "Spirit of the Elder Lizard",
+      "aliases": [
+        "도마뱀"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-rengar"
+      ],
+      "evidence": [
+        {
+          "alias": "도마뱀",
+          "sourceRef": "inven-2013-rengar",
+          "locator": "도마뱀",
+          "bindingId": "alias-3209-1a856432c7"
+        }
+      ]
+    },
+    {
+      "riotId": "3170",
+      "itemIndex": 107,
+      "nameKo": "달빛 마법검",
+      "nameEn": "Moonflair Spellblade",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3060",
+      "itemIndex": 108,
+      "nameKo": "지휘관의 깃발",
+      "nameEn": "Banner of Command",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3050",
+      "itemIndex": 109,
+      "nameKo": "지크의 전령",
+      "nameEn": "Zeke's Herald",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3084",
+      "itemIndex": 110,
+      "nameKo": "지배자의 피갑옷",
+      "nameEn": "Overlord's Bloodmail",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3152",
+      "itemIndex": 111,
+      "nameKo": "고대인의 의지",
+      "nameEn": "Will of the Ancients",
+      "aliases": [
+        "흡책"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "흡책",
+          "sourceRef": "inven-2013-terms",
+          "locator": "흡책",
+          "bindingId": "alias-3152-38d16e2697"
+        }
+      ]
+    },
+    {
+      "riotId": "3068",
+      "itemIndex": 112,
+      "nameKo": "태양불꽃 망토",
+      "nameEn": "Sunfire Cape",
+      "aliases": [
+        "썬파",
+        "선파"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-mundo",
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "썬파",
+          "sourceRef": "inven-2014-mundo",
+          "locator": "썬파",
+          "bindingId": "alias-3068-085ef3072d"
+        },
+        {
+          "alias": "선파",
+          "sourceRef": "inven-2013-terms",
+          "locator": "선파",
+          "bindingId": "alias-3068-e2bb361e3b"
+        }
+      ]
+    },
+    {
+      "riotId": "3102",
+      "itemIndex": 113,
+      "nameKo": "밴시의 장막",
+      "nameEn": "Banshee's Veil",
+      "aliases": [
+        "밴시"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "밴시",
+          "sourceRef": "inven-2011-items",
+          "locator": "밴시",
+          "bindingId": "alias-3102-420a99e926"
+        }
+      ]
+    },
+    {
+      "riotId": "3087",
+      "itemIndex": 114,
+      "nameKo": "스태틱의 단검",
+      "nameEn": "Statikk Shiv",
+      "aliases": [
+        "스태틱"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2015-yasuo"
+      ],
+      "evidence": [
+        {
+          "alias": "스태틱",
+          "sourceRef": "inven-2015-yasuo",
+          "locator": "스태틱",
+          "bindingId": "alias-3087-a55e21a2c5"
+        }
+      ]
+    },
+    {
+      "riotId": "3115",
+      "itemIndex": 115,
+      "nameKo": "내셔의 이빨",
+      "nameEn": "Nashor's Tooth",
+      "aliases": [
+        "내셔"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "내셔",
+          "sourceRef": "inven-2013-terms",
+          "locator": "내셔",
+          "bindingId": "alias-3115-cae0168f87"
+        }
+      ]
+    },
+    {
+      "riotId": "3186",
+      "itemIndex": 116,
+      "nameKo": "키타에의 피갈퀴손",
+      "nameEn": "Kitae's Bloodrazor",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3026",
+      "itemIndex": 117,
+      "nameKo": "수호 천사",
+      "nameEn": "Guardian Angel",
+      "aliases": [
+        "가엔"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "가엔",
+          "sourceRef": "inven-2013-terms",
+          "locator": "가엔",
+          "bindingId": "alias-3026-e4948838ca"
+        }
+      ]
+    },
+    {
+      "riotId": "3124",
+      "itemIndex": 118,
+      "nameKo": "구인수의 격노검",
+      "nameEn": "Guinsoo's Rageblade",
+      "aliases": [
+        "구인수"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "구인수",
+          "sourceRef": "inven-2011-items",
+          "locator": "구인수",
+          "bindingId": "alias-3124-0e363ba807"
+        }
+      ]
+    },
+    {
+      "riotId": "3180",
+      "itemIndex": 119,
+      "nameKo": "오딘의 장막",
+      "nameEn": "Odyn's Veil",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3083",
+      "itemIndex": 120,
+      "nameKo": "워모그의 갑옷",
+      "nameEn": "Warmog's Armor",
+      "aliases": [
+        "워모그"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "워모그",
+          "sourceRef": "inven-2011-items",
+          "locator": "워모그",
+          "bindingId": "alias-3083-23dff6174f"
+        }
+      ]
+    },
+    {
+      "riotId": "3001",
+      "itemIndex": 121,
+      "nameKo": "심연의 홀",
+      "nameEn": "Abyssal Scepter",
+      "aliases": [
+        "어비셜"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "어비셜",
+          "sourceRef": "inven-2013-terms",
+          "locator": "어비셜",
+          "bindingId": "alias-3001-3274684ccc"
+        }
+      ]
+    },
+    {
+      "riotId": "3142",
+      "itemIndex": 122,
+      "nameKo": "요우무의 유령검",
+      "nameEn": "Youmuu's Ghostblade",
+      "aliases": [
+        "요우무"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "요우무",
+          "sourceRef": "inven-2011-items",
+          "locator": "요우무",
+          "bindingId": "alias-3142-8da1fe20b7"
+        }
+      ]
+    },
+    {
+      "riotId": "3003",
+      "itemIndex": 123,
+      "nameKo": "대천사의 지팡이",
+      "nameEn": "Archangel's Staff",
+      "aliases": [
+        "대천사"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2018-xerath"
+      ],
+      "evidence": [
+        {
+          "alias": "대천사",
+          "sourceRef": "inven-2018-xerath",
+          "locator": "대천사",
+          "bindingId": "alias-3003-94c9736860"
+        }
+      ]
+    },
+    {
+      "riotId": "773085",
+      "itemIndex": 125,
+      "nameKo": "루난의 허리케인",
+      "nameEn": "Runaan's Hurricane",
+      "aliases": [
+        "루난"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2017-janna"
+      ],
+      "evidence": [
+        {
+          "alias": "루난",
+          "sourceRef": "inven-2017-janna",
+          "locator": "루난",
+          "bindingId": "alias-773085-abefa8aa43"
+        }
+      ]
+    },
+    {
+      "riotId": "3046",
+      "itemIndex": 126,
+      "nameKo": "유령 무희",
+      "nameEn": "Phantom Dancer",
+      "aliases": [
+        "팬댄"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "팬댄",
+          "sourceRef": "inven-2013-terms",
+          "locator": "팬댄",
+          "bindingId": "alias-3046-660ff00b1d"
+        }
+      ]
+    },
+    {
+      "riotId": "3174",
+      "itemIndex": 127,
+      "nameKo": "아테나의 부정한 성배",
+      "nameEn": "Athene's Unholy Grail",
+      "aliases": [
+        "성배"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2014-teemo"
+      ],
+      "evidence": [
+        {
+          "alias": "성배",
+          "sourceRef": "inven-2014-teemo",
+          "locator": "성배",
+          "bindingId": "alias-3174-98de7f5f9b"
+        }
+      ]
+    },
+    {
+      "riotId": "3027",
+      "itemIndex": 128,
+      "nameKo": "영겁의 지팡이",
+      "nameEn": "Rod of Ages",
+      "aliases": [
+        "로아",
+        "영겁"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "로아",
+          "sourceRef": "inven-2013-terms",
+          "locator": "로아",
+          "bindingId": "alias-3027-ff97d0f171"
+        },
+        {
+          "alias": "영겁",
+          "sourceRef": "inven-2013-terms",
+          "locator": "영겁",
+          "bindingId": "alias-3027-62200f0a4b"
+        }
+      ]
+    },
+    {
+      "riotId": "3172",
+      "itemIndex": 129,
+      "nameKo": "서풍",
+      "nameEn": "Zephyr",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3056",
+      "itemIndex": 130,
+      "nameKo": "저항 공성기",
+      "nameEn": "Ohmwrecker",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3153",
+      "itemIndex": 131,
+      "nameKo": "몰락한 왕의 검",
+      "nameEn": "Blade of the Ruined King",
+      "aliases": [
+        "몰왕검",
+        "몰왕"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms",
+        "inven-2014-xinzhao"
+      ],
+      "evidence": [
+        {
+          "alias": "몰왕검",
+          "sourceRef": "inven-2013-terms",
+          "locator": "몰왕검",
+          "bindingId": "alias-3153-106ae9ae7e"
+        },
+        {
+          "alias": "몰왕",
+          "sourceRef": "inven-2014-xinzhao",
+          "locator": "몰왕",
+          "bindingId": "alias-3153-1c6589451f"
+        }
+      ]
+    },
+    {
+      "riotId": "3151",
+      "itemIndex": 132,
+      "nameKo": "리안드리의 고통",
+      "nameEn": "Liandry's Torment",
+      "aliases": [
+        "리안드리"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2018-xerath"
+      ],
+      "evidence": [
+        {
+          "alias": "리안드리",
+          "sourceRef": "inven-2018-xerath",
+          "locator": "리안드리",
+          "bindingId": "alias-3151-e3f8f62549"
+        }
+      ]
+    },
+    {
+      "riotId": "3116",
+      "itemIndex": 133,
+      "nameKo": "라일라이의 수정홀",
+      "nameEn": "Rylai's Crystal Scepter",
+      "aliases": [
+        "라일라이"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "라일라이",
+          "sourceRef": "inven-2011-items",
+          "locator": "라일라이",
+          "bindingId": "alias-3116-9c89ad84f7"
+        }
+      ]
+    },
+    {
+      "riotId": "3188",
+      "itemIndex": 134,
+      "nameKo": "어둠불꽃 횃불",
+      "nameEn": "Blackfire Torch",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3071",
+      "itemIndex": 135,
+      "nameKo": "칠흑의 양날 도끼",
+      "nameEn": "The Black Cleaver",
+      "aliases": [
+        "블클"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "블클",
+          "sourceRef": "inven-2013-terms",
+          "locator": "블클",
+          "bindingId": "alias-3071-3e63248b40"
+        }
+      ]
+    },
+    {
+      "riotId": "3100",
+      "itemIndex": 136,
+      "nameKo": "리치베인",
+      "nameEn": "Lich Bane",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3072",
+      "itemIndex": 137,
+      "nameKo": "피바라기",
+      "nameEn": "The Bloodthirster",
+      "aliases": [
+        "피바",
+        "블써"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "피바",
+          "sourceRef": "inven-2013-terms",
+          "locator": "피바",
+          "bindingId": "alias-3072-71eea52238"
+        },
+        {
+          "alias": "블써",
+          "sourceRef": "inven-2013-terms",
+          "locator": "블써",
+          "bindingId": "alias-3072-217839dd5b"
+        }
+      ]
+    },
+    {
+      "riotId": "3128",
+      "itemIndex": 138,
+      "nameKo": "죽음불꽃 손아귀",
+      "nameEn": "Deathfire Grasp",
+      "aliases": [
+        "데파"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "데파",
+          "sourceRef": "inven-2013-terms",
+          "locator": "데파",
+          "bindingId": "alias-3128-752cb47329"
+        }
+      ]
+    },
+    {
+      "riotId": "3143",
+      "itemIndex": 139,
+      "nameKo": "란두인의 예언",
+      "nameEn": "Randuin's Omen",
+      "aliases": [
+        "란두인"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "란두인",
+          "sourceRef": "inven-2011-items",
+          "locator": "란두인",
+          "bindingId": "alias-3143-0aaa028fe3"
+        }
+      ]
+    },
+    {
+      "riotId": "3110",
+      "itemIndex": 140,
+      "nameKo": "얼어붙은 심장",
+      "nameEn": "Frozen Heart",
+      "aliases": [
+        "프하",
+        "얼심"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "user-request-7",
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "프하",
+          "sourceRef": "user-request-7",
+          "locator": "프하",
+          "bindingId": "alias-3110-cb64f563bc"
+        },
+        {
+          "alias": "얼심",
+          "sourceRef": "inven-2013-terms",
+          "locator": "얼심",
+          "bindingId": "alias-3110-3082f95c1a"
+        }
+      ]
+    },
+    {
+      "riotId": "3157",
+      "itemIndex": 141,
+      "nameKo": "존야의 모래시계",
+      "nameEn": "Zhonya's Hourglass",
+      "aliases": [
+        "존야"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "존야",
+          "sourceRef": "inven-2011-items",
+          "locator": "존야",
+          "bindingId": "alias-3157-9cd2a06107"
+        }
+      ]
+    },
+    {
+      "riotId": "3181",
+      "itemIndex": 142,
+      "nameKo": "핏빛 칼날",
+      "nameEn": "Sanguine Blade",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3089",
+      "itemIndex": 143,
+      "nameKo": "라바돈의 죽음모자",
+      "nameEn": "Rabadon's Deathcap",
+      "aliases": [
+        "라바돈",
+        "데캡"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "user-request-7",
+        "inven-2011-items"
+      ],
+      "evidence": [
+        {
+          "alias": "라바돈",
+          "sourceRef": "user-request-7",
+          "locator": "라바돈",
+          "bindingId": "alias-3089-d1daf25fd0"
+        },
+        {
+          "alias": "데캡",
+          "sourceRef": "inven-2011-items",
+          "locator": "데캡",
+          "bindingId": "alias-3089-6486130014"
+        }
+      ]
+    },
+    {
+      "riotId": "3156",
+      "itemIndex": 144,
+      "nameKo": "맬모셔스의 아귀",
+      "nameEn": "Maw of Malmortius",
+      "aliases": [
+        "맬모"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "alias": "맬모",
+          "sourceRef": "inven-2016-riven",
+          "locator": "맬모",
+          "bindingId": "alias-3156-76c1c5d758"
+        }
+      ]
+    },
+    {
+      "riotId": "3022",
+      "itemIndex": 145,
+      "nameKo": "얼어붙은 망치",
+      "nameEn": "Frozen Mallet",
+      "aliases": [
+        "얼망",
+        "말렛"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "얼망",
+          "sourceRef": "inven-2013-terms",
+          "locator": "얼망",
+          "bindingId": "alias-3022-8d4dd5bb67"
+        },
+        {
+          "alias": "말렛",
+          "sourceRef": "inven-2013-terms",
+          "locator": "말렛",
+          "bindingId": "alias-3022-6544c7bb12"
+        }
+      ]
+    },
+    {
+      "riotId": "3025",
+      "itemIndex": 146,
+      "nameKo": "얼어붙은 건틀릿",
+      "nameEn": "Iceborn Gauntlet",
+      "aliases": [
+        "얼건"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "얼건",
+          "sourceRef": "inven-2013-terms",
+          "locator": "얼건",
+          "bindingId": "alias-3025-6722cc796d"
+        }
+      ]
+    },
+    {
+      "riotId": "3146",
+      "itemIndex": 147,
+      "nameKo": "마법공학 총검",
+      "nameEn": "Hextech Gunblade",
+      "aliases": [
+        "건블"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "건블",
+          "sourceRef": "inven-2013-terms",
+          "locator": "건블",
+          "bindingId": "alias-3146-6cc60846e1"
+        }
+      ]
+    },
+    {
+      "riotId": "773074",
+      "itemIndex": 148,
+      "nameKo": "굶주린 히드라",
+      "nameEn": "Ravenous Hydra",
+      "aliases": [
+        "굶드라"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2015-fiora"
+      ],
+      "evidence": [
+        {
+          "alias": "굶드라",
+          "sourceRef": "inven-2015-fiora",
+          "locator": "굶드라",
+          "bindingId": "alias-773074-33436c8b65"
+        }
+      ]
+    },
+    {
+      "riotId": "3090",
+      "itemIndex": 149,
+      "nameKo": "우글렛의 마녀 모자",
+      "nameEn": "Wooglet's Witchcap",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3184",
+      "itemIndex": 150,
+      "nameKo": "엔트로피",
+      "nameEn": "Entropy",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    },
+    {
+      "riotId": "3031",
+      "itemIndex": 151,
+      "nameKo": "무한의 대검",
+      "nameEn": "Infinity Edge",
+      "aliases": [
+        "인피",
+        "무대"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "인피",
+          "sourceRef": "inven-2013-terms",
+          "locator": "인피",
+          "bindingId": "alias-3031-1bb69d8b51"
+        },
+        {
+          "alias": "무대",
+          "sourceRef": "inven-2013-terms",
+          "locator": "무대",
+          "bindingId": "alias-3031-64389d2db1"
+        }
+      ]
+    },
+    {
+      "riotId": "3139",
+      "itemIndex": 152,
+      "nameKo": "헤르메스의 시미터",
+      "nameEn": "Mercurial Scimitar",
+      "aliases": [
+        "시미터"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2016-riven"
+      ],
+      "evidence": [
+        {
+          "alias": "시미터",
+          "sourceRef": "inven-2016-riven",
+          "locator": "시미터",
+          "bindingId": "alias-3139-0e40ad1e0e"
+        }
+      ]
+    },
+    {
+      "riotId": "3078",
+      "itemIndex": 153,
+      "nameKo": "삼위일체",
+      "nameEn": "Trinity Force",
+      "aliases": [
+        "트포"
+      ],
+      "reviewStatus": "VERIFIED_KOREAN_USAGE",
+      "reviewReason": "명시 요청 또는 한국 이용자의 아이템 용례에서 식별한 대표 약칭입니다.",
+      "sourceRefs": [
+        "inven-2013-terms"
+      ],
+      "evidence": [
+        {
+          "alias": "트포",
+          "sourceRef": "inven-2013-terms",
+          "locator": "트포",
+          "bindingId": "alias-3078-281797cb15"
+        }
+      ]
+    },
+    {
+      "riotId": "3200",
+      "itemIndex": 154,
+      "nameKo": "마공학 핵",
+      "nameEn": "The Hex Core",
+      "aliases": [],
+      "reviewStatus": "NO_VERIFIED_COMMON_ALIAS",
+      "reviewReason": "전체 목록 대조에서 독립적으로 표시할 만한 통용 약칭을 확인하지 못해 비워 둡니다. 원래 이름이 짧은 경우도 임의로 줄이지 않습니다.",
+      "sourceRefs": [],
+      "evidence": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "user-request-7",
+      "title": "사용자가 명시한 대표 약칭 네 가지",
+      "scope": "요구사항 7: 프하, 닌탑, 라바돈, 쉰. 추가 약칭을 추정하는 근거로 사용하지 않습니다."
+    },
+    {
+      "id": "inven-2011-items",
+      "url": "https://www.inven.co.kr/board/lol/2766/434",
+      "sha256": "8bba6a2167c4894374888e1e80ae1849ff1a52e92ea1e2cffdfd3c996deb6721",
+      "retrievedAt": "2026-09-12T13:37:21.487555+00:00",
+      "title": "아이템 영어명/한국어명과 약어 정리 (2011)",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2012-doran",
+      "url": "https://www.inven.co.kr/board/lol/2772/73137",
+      "sha256": "81780ba95c96c6fde15dc7dca5c638e6d37a5475fa6c5d448e3a733a1415bff9",
+      "retrievedAt": "2026-09-12T13:37:21.487555+00:00",
+      "title": "도란검 도란링 도란방패에 관한 이용자 게시글",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2013-rengar",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=38445",
+      "sha256": "4979081150191f498165841fa99d3d6995b19bbd6669ba15dbb438e3ccad307c",
+      "retrievedAt": "2026-09-12T13:37:21.488554+00:00",
+      "title": "렝가 이용자 공략의 고대골렘·도마뱀 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2013-terms",
+      "url": "https://www.inven.co.kr/board/lol/2766/17288",
+      "sha256": "942d9a3596c7977c07024872bd7a044afc92b39db3c23ac57d93ea2e2a9a4698",
+      "retrievedAt": "2026-09-12T13:37:21.488554+00:00",
+      "title": "북미식 아이템 이름과 한국어 용어 정리 (2013)",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2014-mundo",
+      "url": "https://www.inven.co.kr/board/lol/2973/12272",
+      "sha256": "2b7a18de4dc21af4bd4256092daabaec819367b8208bc603ec9444626bd9010c",
+      "retrievedAt": "2026-09-12T13:37:21.894152+00:00",
+      "title": "문도 박사 이용자 공략의 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2014-teemo",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=109651",
+      "sha256": "1ef3ee67c55d0cdeda1242542f83a9a5e32a5f19aeec76e71710fce420a453b0",
+      "retrievedAt": "2026-09-12T13:37:21.944080+00:00",
+      "title": "군밤왕 티모 공략의 플라스크·팔목보호대·성배 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2014-xinzhao",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=109493",
+      "sha256": "a138f6d1f49b18802598603254722fb53a35858bc6e724b5aeab4dcfa0ff215f",
+      "retrievedAt": "2026-09-12T13:37:21.951158+00:00",
+      "title": "신 짜오 이용자 공략의 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2015-fiora",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=120098&vtype=pc",
+      "sha256": "7931a044fedd10b282350d511480df1a7ad4bc031c7397fda588321fcb0ea0d5",
+      "retrievedAt": "2026-09-12T13:37:21.997248+00:00",
+      "title": "피오라 이용자 공략의 굶주린 히드라 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2015-yasuo",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=124309&vtype=pc",
+      "sha256": "9c3c301a6a0f7aeceba7202c91a3b1dac9ad7350e035d7840128811f9660f348",
+      "retrievedAt": "2026-09-12T13:37:22.198723+00:00",
+      "title": "야스오 이용자 공략의 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2016-riven",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=127715&vtype=pc",
+      "sha256": "25da27e51701e09d1bac1a4ef50f04016a421b3517846bd346f6a428951a3eb9",
+      "retrievedAt": "2026-09-12T13:37:22.259248+00:00",
+      "title": "극딜 리븐의 모든 것: 이용자 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2017-alistar",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=137605&vtype=pc",
+      "sha256": "dca5b53612dbdffda822624006f7dad9b59d9cfc72510f9c0e11d4bd7c727c96",
+      "retrievedAt": "2026-09-12T13:37:22.345916+00:00",
+      "title": "알리스타 이용자 공략의 처형인 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2017-janna",
+      "url": "https://lol.inven.co.kr/dataninfo/champion/manualToolView.php?idx=135727",
+      "sha256": "60aabbf64563c8aa355333107974f20ca7acf252238222f6ccad9d4bfbeb47aa",
+      "retrievedAt": "2026-09-12T13:37:22.361927+00:00",
+      "title": "잔나 - 템효율 & 템선택 가이드: 이용자 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    },
+    {
+      "id": "inven-2018-xerath",
+      "url": "https://m.inven.co.kr/site/lol/manualtool.php?champnum=84&idx=139003&nav=lolchamp&p=2",
+      "sha256": "96a0f669a7efd4fac70889a917d5ac0236834759184246aa250311f35e1625c8",
+      "retrievedAt": "2026-09-12T13:37:22.490790+00:00",
+      "title": "Xerath - 1코어 루덴빌드: 이용자 아이템 표기",
+      "scope": "한국어 용례와 일반적인 뜻을 검토한 원문입니다. 챔피언·아이템 수치와 시즌별 규칙은 가져오지 않습니다."
+    }
+  ]
+}

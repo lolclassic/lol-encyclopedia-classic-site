@@ -1,0 +1,1783 @@
+[
+  {
+    "riotId": "SummonerSmite_Jade",
+    "name": "강타",
+    "nameEn": "Smite",
+    "cooldown": 70,
+    "desc": "대상 적 미니언 또는 소환수에게 490~1000의 고정 피해를 입힙니다.\n\n소환사의 결의: 강타를 사용할 때마다 10골드를 얻습니다.",
+    "img": "images/classic_summoner/SummonerSmite_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [
+      {
+        "label": "고정 피해",
+        "unit": "",
+        "values": [
+          490.0,
+          520.0,
+          550.0,
+          580.0,
+          610.0,
+          640.0,
+          670.0,
+          700.0,
+          730.0,
+          760.0,
+          790.0,
+          820.0,
+          850.0,
+          880.0,
+          910.0,
+          940.0,
+          970.0,
+          1000.0
+        ]
+      }
+    ],
+    "fixedEffects": [
+      {
+        "label": "시전 사거리",
+        "value": "760"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "대상 적 미니언 또는 소환수에게 @SmiteDamage@의 고정 피해를 입힙니다.\n\n소환사의 결의: 강타를 사용할 때마다 10골드를 얻습니다.",
+    "valueTokens": {
+      "SmiteDamage": {
+        "label": "고정 피해",
+        "unit": "",
+        "values": [
+          490.0,
+          520.0,
+          550.0,
+          580.0,
+          610.0,
+          640.0,
+          670.0,
+          700.0,
+          730.0,
+          760.0,
+          790.0,
+          820.0,
+          850.0,
+          880.0,
+          910.0,
+          940.0,
+          970.0,
+          1000.0
+        ],
+        "suffix": "",
+        "sourceToken": "SmiteDamage"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerSmite_Jade",
+      "sourceSha256": "513b3dc5988e27100be69905e1a643c095d8008932a085a9f1a328a508959387",
+      "tooltipKey": "Spell_SummonerSmite_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerRally_Jade",
+    "name": "결집",
+    "nameEn": "Rally",
+    "cooldown": 270,
+    "desc": "15초 동안 225~650의 체력을 지닌 깃발을 소환합니다. 깃발은 오라를 생성해 아군의 공격력을 10~35만큼 증가시킵니다.\n\n소환사의 진노: 결집이 20~70의 주문력을 추가로 부여합니다.",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [
+      {
+        "label": "깃발 체력",
+        "unit": "",
+        "values": [
+          225.0,
+          250.0,
+          275.0,
+          300.0,
+          325.0,
+          350.0,
+          375.0,
+          400.0,
+          425.0,
+          450.0,
+          475.0,
+          500.0,
+          525.0,
+          550.0,
+          575.0,
+          600.0,
+          625.0,
+          650.0
+        ]
+      },
+      {
+        "label": "오라의 공격력 증가",
+        "unit": "",
+        "values": [
+          10.0,
+          11.47059,
+          12.94118,
+          14.41176,
+          15.88235,
+          17.35294,
+          18.82353,
+          20.29412,
+          21.76471,
+          23.23529,
+          24.70588,
+          26.17647,
+          27.64706,
+          29.11765,
+          30.58824,
+          32.05882,
+          33.52941,
+          35.0
+        ]
+      },
+      {
+        "label": "특성 적용 시 오라의 주문력 증가",
+        "unit": "",
+        "values": [
+          20.0,
+          22.94118,
+          25.88235,
+          28.82353,
+          31.76471,
+          34.70588,
+          37.64706,
+          40.58824,
+          43.52941,
+          46.47059,
+          49.41176,
+          52.35294,
+          55.29412,
+          58.23529,
+          61.17647,
+          64.11765,
+          67.05882,
+          70.0
+        ]
+      }
+    ],
+    "fixedEffects": [
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "img": "images/classic_summoner/SummonerRally_Jade.png",
+    "detailTemplate": "15초 동안 @HPCalc@의 체력을 지닌 깃발을 소환합니다. 깃발은 오라를 생성해 아군의 공격력을 @ADCalc@만큼 증가시킵니다.\n\n소환사의 진노: 결집이 @APCalc@의 주문력을 추가로 부여합니다.",
+    "valueTokens": {
+      "HPCalc": {
+        "label": "깃발 체력",
+        "unit": "",
+        "values": [
+          225.0,
+          250.0,
+          275.0,
+          300.0,
+          325.0,
+          350.0,
+          375.0,
+          400.0,
+          425.0,
+          450.0,
+          475.0,
+          500.0,
+          525.0,
+          550.0,
+          575.0,
+          600.0,
+          625.0,
+          650.0
+        ],
+        "suffix": "",
+        "sourceToken": "HPCalc"
+      },
+      "ADCalc": {
+        "label": "오라의 공격력 증가",
+        "unit": "",
+        "values": [
+          10.0,
+          11.47059,
+          12.94118,
+          14.41176,
+          15.88235,
+          17.35294,
+          18.82353,
+          20.29412,
+          21.76471,
+          23.23529,
+          24.70588,
+          26.17647,
+          27.64706,
+          29.11765,
+          30.58824,
+          32.05882,
+          33.52941,
+          35.0
+        ],
+        "suffix": "",
+        "sourceToken": "ADCalc"
+      },
+      "APCalc": {
+        "label": "특성 적용 시 오라의 주문력 증가",
+        "unit": "",
+        "values": [
+          20.0,
+          22.94118,
+          25.88235,
+          28.82353,
+          31.76471,
+          34.70588,
+          37.64706,
+          40.58824,
+          43.52941,
+          46.47059,
+          49.41176,
+          52.35294,
+          55.29412,
+          58.23529,
+          61.17647,
+          64.11765,
+          67.05882,
+          70.0
+        ],
+        "suffix": "",
+        "sourceToken": "APCalc"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerRally_Jade",
+      "sourceSha256": "db7c6d8720036e52cbd8c43a6c76570d323d72d318b692239036d8b868df6037",
+      "tooltipKey": "Spell_Summoner_Rally_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerBattleCry_Jade",
+    "name": "고양",
+    "nameEn": "Surge",
+    "cooldown": 180,
+    "desc": "챔피언을 강화하여, 12초 동안 35%의 공격 속도와 10~78의 주문력을 부여합니다.\n\n소환사의 진노: 추가 공격 속도가 5%, 추가 주문력이 10% 증가합니다.",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [
+      {
+        "label": "주문력 증가",
+        "unit": "",
+        "values": [
+          10.0,
+          14.0,
+          18.0,
+          22.0,
+          26.0,
+          30.0,
+          34.0,
+          38.0,
+          42.0,
+          46.0,
+          50.0,
+          54.0,
+          58.0,
+          62.0,
+          66.0,
+          70.0,
+          74.0,
+          78.0
+        ]
+      },
+      {
+        "label": "특성 적용 시 주문력 증가",
+        "unit": "",
+        "values": [
+          11.0,
+          15.4,
+          19.8,
+          24.2,
+          28.6,
+          33.0,
+          37.4,
+          41.8,
+          46.2,
+          50.6,
+          55.0,
+          59.4,
+          63.8,
+          68.2,
+          72.6,
+          77.0,
+          81.4,
+          85.8
+        ]
+      }
+    ],
+    "fixedEffects": [
+      {
+        "label": "공격 속도 증가",
+        "value": "35%"
+      },
+      {
+        "label": "특성 적용 시 공격 속도 증가",
+        "value": "40%"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "img": "images/classic_summoner/SummonerBattleCry_Jade.png",
+    "detailTemplate": "챔피언을 강화하여, 12초 동안 @TotalASActual@의 공격 속도와 @TotalAPActual@의 주문력을 부여합니다.\n\n소환사의 진노: 추가 공격 속도가 5%, 추가 주문력이 10% 증가합니다.",
+    "valueTokens": {
+      "TotalASActual": {
+        "label": "공격 속도 증가",
+        "unit": "%",
+        "values": [
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0
+        ],
+        "suffix": "%",
+        "sourceToken": "TotalASActual",
+        "masteryValues": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0
+        ]
+      },
+      "TotalAPActual": {
+        "label": "주문력 증가",
+        "unit": "",
+        "values": [
+          10.0,
+          14.0,
+          18.0,
+          22.0,
+          26.0,
+          30.0,
+          34.0,
+          38.0,
+          42.0,
+          46.0,
+          50.0,
+          54.0,
+          58.0,
+          62.0,
+          66.0,
+          70.0,
+          74.0,
+          78.0
+        ],
+        "suffix": "",
+        "sourceToken": "TotalAPActual",
+        "masteryValues": [
+          11.0,
+          15.4,
+          19.8,
+          24.2,
+          28.6,
+          33.0,
+          37.4,
+          41.8,
+          46.2,
+          50.6,
+          55.0,
+          59.4,
+          63.8,
+          68.2,
+          72.6,
+          77.0,
+          81.4,
+          85.8
+        ]
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerBattleCry_Jade",
+      "sourceSha256": "6aa0677ee3ae4bc591acba110626ee0a33ef8427c37d37f43da496851a6844eb",
+      "tooltipKey": "Spell_Summoner_Surge_Jade_Description"
+    }
+  },
+  {
+    "riotId": "SummonerFortify_Jade",
+    "name": "구축",
+    "nameEn": "Fortify",
+    "cooldown": 180,
+    "desc": "기본 지속 효과: 구축이 재사용 대기 상태가 아닐 때, 미니언에게 9의 피해를 추가로 입힙니다.\n\n사용 시: 모든 아군 포탑이 7초 동안 무적 상태가 되고 공격 속도가 100% 증가합니다.\n\n소환사의 결의: 포탑이 대상 주변의 적에게 50%의 광역 피해를 입힙니다.",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "사용 가능할 때 미니언에게 주는 추가 피해",
+        "value": "9"
+      },
+      {
+        "label": "지속시간",
+        "value": "7초"
+      },
+      {
+        "label": "포탑 공격 속도 증가",
+        "value": "100%"
+      },
+      {
+        "label": "특성 적용 시 포탑 광역 피해 비율",
+        "value": "50%"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "img": "images/classic_summoner/SummonerFortify_Jade.png",
+    "detailTemplate": "기본 지속 효과: 구축이 재사용 대기 상태가 아닐 때, 미니언에게 @BonusMinionDamage@의 피해를 추가로 입힙니다.\n\n사용 시: 모든 아군 포탑이 @Duration@초 동안 무적 상태가 되고 공격 속도가 @AttackSpeed*100@% 증가합니다.\n\n소환사의 결의: 포탑이 대상 주변의 적에게 @SplashDamage*100@%의 광역 피해를 입힙니다.",
+    "valueTokens": {
+      "BonusMinionDamage": {
+        "label": "사용 가능할 때 미니언에게 주는 추가 피해",
+        "unit": "",
+        "values": [
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "suffix": "",
+        "sourceToken": "BonusMinionDamage"
+      },
+      "Duration": {
+        "label": "지속시간",
+        "unit": "초",
+        "values": [
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0,
+          7.0
+        ],
+        "suffix": "",
+        "sourceToken": "Duration"
+      },
+      "AttackSpeed*100": {
+        "label": "포탑 공격 속도 증가",
+        "unit": "%",
+        "values": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "suffix": "",
+        "sourceToken": "AttackSpeed*100"
+      },
+      "SplashDamage*100": {
+        "label": "특성 적용 시 포탑 광역 피해 비율",
+        "unit": "%",
+        "values": [
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ],
+        "suffix": "",
+        "sourceToken": "SplashDamage*100"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerFortify_Jade",
+      "sourceSha256": "412c4c971a1cf3415fde34c48387d004e90742e7c9a0fbeb940b5cee1c0bee87",
+      "tooltipKey": "Spell_SummonerFortify_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerBarrier_Jade",
+    "name": "방어막",
+    "nameEn": "Barrier",
+    "cooldown": 210,
+    "desc": "2초 동안 115~455의 피해를 흡수하는 보호막을 얻습니다.\n\n소환사의 결의: 방어막의 피해 흡수량이 20만큼 증가합니다.",
+    "img": "images/classic_summoner/SummonerBarrier_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [
+      {
+        "label": "보호막 피해 흡수량",
+        "unit": "",
+        "values": [
+          115.0,
+          135.0,
+          155.0,
+          175.0,
+          195.0,
+          215.0,
+          235.0,
+          255.0,
+          275.0,
+          295.0,
+          315.0,
+          335.0,
+          355.0,
+          375.0,
+          395.0,
+          415.0,
+          435.0,
+          455.0
+        ]
+      },
+      {
+        "label": "특성 적용 시 보호막 피해 흡수량",
+        "unit": "",
+        "values": [
+          135.0,
+          155.0,
+          175.0,
+          195.0,
+          215.0,
+          235.0,
+          255.0,
+          275.0,
+          295.0,
+          315.0,
+          335.0,
+          355.0,
+          375.0,
+          395.0,
+          415.0,
+          435.0,
+          455.0,
+          475.0
+        ]
+      }
+    ],
+    "fixedEffects": [
+      {
+        "label": "보호막 지속시간",
+        "value": "2초"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "@ShieldDuration@초 동안 @ShieldStrengthFinal@의 피해를 흡수하는 보호막을 얻습니다.\n\n소환사의 결의: 방어막의 피해 흡수량이 20만큼 증가합니다.",
+    "valueTokens": {
+      "ShieldDuration": {
+        "label": "보호막 지속시간",
+        "unit": "초",
+        "values": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "suffix": "",
+        "sourceToken": "ShieldDuration"
+      },
+      "ShieldStrengthFinal": {
+        "label": "보호막 피해 흡수량",
+        "unit": "",
+        "values": [
+          115.0,
+          135.0,
+          155.0,
+          175.0,
+          195.0,
+          215.0,
+          235.0,
+          255.0,
+          275.0,
+          295.0,
+          315.0,
+          335.0,
+          355.0,
+          375.0,
+          395.0,
+          415.0,
+          435.0,
+          455.0
+        ],
+        "suffix": "",
+        "sourceToken": "ShieldStrengthFinal",
+        "masteryValues": [
+          135.0,
+          155.0,
+          175.0,
+          195.0,
+          215.0,
+          235.0,
+          255.0,
+          275.0,
+          295.0,
+          315.0,
+          335.0,
+          355.0,
+          375.0,
+          395.0,
+          415.0,
+          435.0,
+          455.0,
+          475.0
+        ]
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerBarrier_Jade",
+      "sourceSha256": "3cb7b5a8eedd60075943b6cd6ae7308eac51d7af82cc33c576fa1519d11d458f",
+      "tooltipKey": "Spell_Summoner_Barrier_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerRevive_Jade",
+    "name": "부활",
+    "nameEn": "Revive",
+    "cooldown": 510,
+    "desc": "아군 소환사의 제단에서 챔피언을 즉시 부활시키고, 12초에 걸쳐 서서히 감소하는 125%의 이동 속도를 부여합니다.\n\n소환사의 통찰력: 부활이 챔피언에게 일시적으로 220~560(레벨에 따라)의 체력을 부여합니다.",
+    "img": "images/classic_summoner/SummonerRevive_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "처음 얻는 이동 속도 증가",
+        "value": "125%"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "아군 소환사의 제단에서 챔피언을 즉시 부활시키고, 12초에 걸쳐 서서히 감소하는 @spell.SummonerRevive_Jade:BonusMoveSpeed*100@%의 이동 속도를 부여합니다.\n\n소환사의 통찰력: 부활이 챔피언에게 일시적으로 220~560(레벨에 따라)의 체력을 부여합니다.",
+    "valueTokens": {
+      "spell.SummonerRevive_Jade:BonusMoveSpeed*100": {
+        "label": "처음 얻는 이동 속도 증가",
+        "unit": "%",
+        "values": [
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0,
+          125.0
+        ],
+        "suffix": "",
+        "sourceToken": "spell.SummonerRevive_Jade:BonusMoveSpeed*100"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerRevive_Jade",
+      "sourceSha256": "f85a21f2b8dc224998169d7ee1112b694fb6cd59fb97e90c1af7e0313638855b",
+      "tooltipKey": "Spell_SummonerRevive_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerTeleport_Jade",
+    "name": "순간이동",
+    "nameEn": "Teleport",
+    "cooldown": 300,
+    "desc": "4초 동안 정신을 집중한 뒤 대상으로 지정한 아군 미니언, 포탑 또는 와드로 순간이동합니다.\n\n소환사의 통찰력: 순간이동의 정신 집중 시간이 3.5초로 감소합니다.",
+    "img": "images/classic_summoner/SummonerTeleport_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "정신 집중 시간",
+        "value": "4초"
+      },
+      {
+        "label": "특성 적용 시 정신 집중 시간",
+        "value": "3.5초"
+      },
+      {
+        "label": "특성 적용 시 정신 집중 시간",
+        "value": "3.5초"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "@ChannelTimeFinal@초 동안 정신을 집중한 뒤 대상으로 지정한 아군 미니언, 포탑 또는 와드로 순간이동합니다.\n\n소환사의 통찰력: 순간이동의 정신 집중 시간이 @ChannelTimeMastery@초로 감소합니다.",
+    "valueTokens": {
+      "ChannelTimeFinal": {
+        "label": "정신 집중 시간",
+        "unit": "초",
+        "values": [
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "suffix": "",
+        "sourceToken": "ChannelTimeFinal",
+        "masteryValues": [
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5
+        ]
+      },
+      "ChannelTimeMastery": {
+        "label": "특성 적용 시 정신 집중 시간",
+        "unit": "초",
+        "values": [
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5
+        ],
+        "suffix": "",
+        "sourceToken": "ChannelTimeMastery"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerTeleport_Jade",
+      "sourceSha256": "db0259906ad7781145f7ac44f62a34fe4f0bf4cf9fb582e41125c50e373074b8",
+      "tooltipKey": "Spell_SummonerTeleport_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerHaste_Jade",
+    "name": "유체화",
+    "nameEn": "Ghost",
+    "cooldown": 240,
+    "desc": "10초 동안 27%의 이동 속도를 얻고 유체화 상태가 되어 유닛과 충돌하지 않습니다.\n\n소환사의 진노: 유체화가 부여하는 추가 이동 속도가 27%에서 35%로 증가합니다.",
+    "img": "images/classic_summoner/SummonerHaste_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "지속시간",
+        "value": "10초"
+      },
+      {
+        "label": "이동 속도 증가",
+        "value": "27%"
+      },
+      {
+        "label": "특성 적용 시 이동 속도 증가",
+        "value": "35%"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "@Duration@초 동안 @MoveSpeedModFinal@의 이동 속도를 얻고 유체화 상태가 되어 유닛과 충돌하지 않습니다.\n\n소환사의 진노: 유체화가 부여하는 추가 이동 속도가 27%에서 35%로 증가합니다.",
+    "valueTokens": {
+      "Duration": {
+        "label": "지속시간",
+        "unit": "초",
+        "values": [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        "suffix": "",
+        "sourceToken": "Duration"
+      },
+      "MoveSpeedModFinal": {
+        "label": "이동 속도 증가",
+        "unit": "%",
+        "values": [
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0,
+          27.0
+        ],
+        "suffix": "%",
+        "sourceToken": "MoveSpeedModFinal",
+        "masteryValues": [
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0
+        ]
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerHaste_Jade",
+      "sourceSha256": "6559ff20f72b70fa2812aa1e66edf07c7ec127fe87f25020778a09a8fcfe93d3",
+      "tooltipKey": "Spell_Summoner_Haste_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerFlash_Jade",
+    "name": "점멸",
+    "nameEn": "Flash",
+    "cooldown": 300,
+    "desc": "커서 방향으로 짧은 거리를 순간이동합니다.\n\n소환사의 통찰력: 점멸의 재사용 대기시간이 15초 감소합니다.",
+    "img": "images/classic_summoner/SummonerFlash_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "소환사의 통찰력 적용 시 재사용 대기시간",
+        "value": "285초"
+      },
+      {
+        "label": "표시 사거리",
+        "value": "425"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "커서 방향으로 짧은 거리를 순간이동합니다.\n\n소환사의 통찰력: 점멸의 재사용 대기시간이 15초 감소합니다.",
+    "valueTokens": {},
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerFlash_Jade",
+      "sourceSha256": "bf7a3e38dff155693d508c6238d7491c19820137b925b2d49b0ea62530e15b31",
+      "tooltipKey": "Spell_SummonerFlash_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerDot_Jade",
+    "name": "점화",
+    "nameEn": "Ignite",
+    "cooldown": 210,
+    "desc": "대상 적 챔피언에게 5초에 걸쳐 70~410의 고정 피해를 입히고, 그동안 50%의 고통스러운 상처를 적용합니다.\n\n소환사의 진노: 점화가 재사용 대기 중일 때 5의 주문력과 5의 공격력을 얻습니다.",
+    "img": "images/classic_summoner/SummonerDot_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [
+      {
+        "label": "총 고정 피해",
+        "unit": "",
+        "values": [
+          70.0,
+          90.0,
+          110.0,
+          130.0,
+          150.0,
+          170.0,
+          190.0,
+          210.0,
+          230.0,
+          250.0,
+          270.0,
+          290.0,
+          310.0,
+          330.0,
+          350.0,
+          370.0,
+          390.0,
+          410.0
+        ]
+      },
+      {
+        "label": "초당 고정 피해",
+        "unit": "",
+        "values": [
+          14.0,
+          18.0,
+          22.0,
+          26.0,
+          30.0,
+          34.0,
+          38.0,
+          42.0,
+          46.0,
+          50.0,
+          54.0,
+          58.0,
+          62.0,
+          66.0,
+          70.0,
+          74.0,
+          78.0,
+          82.0
+        ]
+      }
+    ],
+    "fixedEffects": [
+      {
+        "label": "체력 회복 감소",
+        "value": "50%"
+      },
+      {
+        "label": "시전 사거리",
+        "value": "600"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "대상 적 챔피언에게 5초에 걸쳐 @TooltipTrueDamageCalculation@의 고정 피해를 입히고, 그동안 @GrievousAmount*100@%의 고통스러운 상처를 적용합니다.\n\n소환사의 진노: 점화가 재사용 대기 중일 때 5의 주문력과 5의 공격력을 얻습니다.",
+    "valueTokens": {
+      "TooltipTrueDamageCalculation": {
+        "label": "총 고정 피해",
+        "unit": "",
+        "values": [
+          70.0,
+          90.0,
+          110.0,
+          130.0,
+          150.0,
+          170.0,
+          190.0,
+          210.0,
+          230.0,
+          250.0,
+          270.0,
+          290.0,
+          310.0,
+          330.0,
+          350.0,
+          370.0,
+          390.0,
+          410.0
+        ],
+        "suffix": "",
+        "sourceToken": "TooltipTrueDamageCalculation"
+      },
+      "GrievousAmount*100": {
+        "label": "체력 회복 감소",
+        "unit": "%",
+        "values": [
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ],
+        "suffix": "",
+        "sourceToken": "GrievousAmount*100"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerDot_Jade",
+      "sourceSha256": "2a082d557d46549b91eb1c157bab94a96841cbd2357cedc49a69e70b6bec1e53",
+      "tooltipKey": "Spell_SummonerDot_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerBoost_Jade",
+    "name": "정화",
+    "nameEn": "Cleanse",
+    "cooldown": 210,
+    "desc": "챔피언에 적용 중인 모든 방해 효과와 해로운 소환사 주문 효과를 제거하고, 다음 3초 동안 받는 방해 효과의 지속시간을 65% 감소시킵니다.\n\n소환사의 결의: 방해 효과 감소의 지속시간이 1초 증가합니다.",
+    "img": "images/classic_summoner/SummonerBoost_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "방해 효과 감소 지속시간",
+        "value": "3초"
+      },
+      {
+        "label": "특성 적용 시 방해 효과 감소 지속시간",
+        "value": "4초"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "챔피언에 적용 중인 모든 방해 효과와 해로운 소환사 주문 효과를 제거하고, 다음 @TenacityDurationFinalCalc@초 동안 받는 방해 효과의 지속시간을 65% 감소시킵니다.\n\n소환사의 결의: 방해 효과 감소의 지속시간이 1초 증가합니다.",
+    "valueTokens": {
+      "TenacityDurationFinalCalc": {
+        "label": "방해 효과 감소 지속시간",
+        "unit": "초",
+        "values": [
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "suffix": "",
+        "sourceToken": "TenacityDurationFinalCalc",
+        "masteryValues": [
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ]
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerBoost_Jade",
+      "sourceSha256": "0820bac7109294d00922865a07d51406dbc3ef57282075c465393099a356a89e",
+      "tooltipKey": "Spell_SummonerBoost_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerSpell_Promote_Jade",
+    "name": "진급",
+    "nameEn": "Promote",
+    "cooldown": 270,
+    "desc": "아군 미니언 하나를 공성 미니언으로 진급시킵니다. 진급한 미니언은 750~3300의 체력과 50~100의 공격력을 가지며, 유닛 처치 시 시전자가 골드를 얻습니다.\n\n공성 미니언은 주변 미니언에게 12~24의 공격력과 35의 방어력을 부여하는 오라를 갖습니다.\n\n소환사의 진노: 공성 미니언의 추가 공격력 오라가 챔피언에게도 적용됩니다.",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [
+      {
+        "label": "진급한 공성 미니언 체력",
+        "unit": "",
+        "values": [
+          750.0,
+          900.0,
+          1050.0,
+          1200.0,
+          1350.0,
+          1500.0,
+          1650.0,
+          1800.0,
+          1950.0,
+          2100.0,
+          2250.0,
+          2400.0,
+          2550.0,
+          2700.0,
+          2850.0,
+          3000.0,
+          3150.0,
+          3300.0
+        ]
+      },
+      {
+        "label": "진급한 공성 미니언 공격력",
+        "unit": "",
+        "values": [
+          50.0,
+          52.94118,
+          55.88235,
+          58.82353,
+          61.76471,
+          64.70588,
+          67.64706,
+          70.58824,
+          73.52941,
+          76.47059,
+          79.41176,
+          82.35294,
+          85.29412,
+          88.23529,
+          91.17647,
+          94.11765,
+          97.05882,
+          100.0
+        ]
+      },
+      {
+        "label": "주변 미니언 공격력 증가",
+        "unit": "",
+        "values": [
+          12.0,
+          12.70588,
+          13.41176,
+          14.11765,
+          14.82353,
+          15.52941,
+          16.23529,
+          16.94118,
+          17.64706,
+          18.35294,
+          19.05882,
+          19.76471,
+          20.47059,
+          21.17647,
+          21.88235,
+          22.58824,
+          23.29412,
+          24.0
+        ]
+      }
+    ],
+    "fixedEffects": [
+      {
+        "label": "주변 미니언 방어력 증가",
+        "value": "35"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "img": "images/classic_summoner/SummonerSpell_Promote_Jade.png",
+    "detailTemplate": "아군 미니언 하나를 공성 미니언으로 진급시킵니다. 진급한 미니언은 @UnitHealth@의 체력과 @UnitDamage@의 공격력을 가지며, 유닛 처치 시 시전자가 골드를 얻습니다.\n\n공성 미니언은 주변 미니언에게 @DamageAura@의 공격력과 @ArmorAura@의 방어력을 부여하는 오라를 갖습니다.\n\n소환사의 진노: 공성 미니언의 추가 공격력 오라가 챔피언에게도 적용됩니다.",
+    "valueTokens": {
+      "UnitHealth": {
+        "label": "진급한 공성 미니언 체력",
+        "unit": "",
+        "values": [
+          750.0,
+          900.0,
+          1050.0,
+          1200.0,
+          1350.0,
+          1500.0,
+          1650.0,
+          1800.0,
+          1950.0,
+          2100.0,
+          2250.0,
+          2400.0,
+          2550.0,
+          2700.0,
+          2850.0,
+          3000.0,
+          3150.0,
+          3300.0
+        ],
+        "suffix": "",
+        "sourceToken": "UnitHealth"
+      },
+      "UnitDamage": {
+        "label": "진급한 공성 미니언 공격력",
+        "unit": "",
+        "values": [
+          50.0,
+          52.94118,
+          55.88235,
+          58.82353,
+          61.76471,
+          64.70588,
+          67.64706,
+          70.58824,
+          73.52941,
+          76.47059,
+          79.41176,
+          82.35294,
+          85.29412,
+          88.23529,
+          91.17647,
+          94.11765,
+          97.05882,
+          100.0
+        ],
+        "suffix": "",
+        "sourceToken": "UnitDamage"
+      },
+      "DamageAura": {
+        "label": "주변 미니언 공격력 증가",
+        "unit": "",
+        "values": [
+          12.0,
+          12.70588,
+          13.41176,
+          14.11765,
+          14.82353,
+          15.52941,
+          16.23529,
+          16.94118,
+          17.64706,
+          18.35294,
+          19.05882,
+          19.76471,
+          20.47059,
+          21.17647,
+          21.88235,
+          22.58824,
+          23.29412,
+          24.0
+        ],
+        "suffix": "",
+        "sourceToken": "DamageAura"
+      },
+      "ArmorAura": {
+        "label": "주변 미니언 방어력 증가",
+        "unit": "",
+        "values": [
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0,
+          35.0
+        ],
+        "suffix": "",
+        "sourceToken": "ArmorAura"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerSpell_Promote_Jade",
+      "sourceSha256": "a4752f2d06594a3d6508c13cc8cebcf95d604606eaaf4f7e915f5b71d5cbaddf",
+      "tooltipKey": "Spell_Summoner_Promote_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerClairvoyance_Jade",
+    "name": "천리안",
+    "nameEn": "Clairvoyance",
+    "cooldown": 60,
+    "desc": "5초 동안 맵에서 지정한 지역의 시야를 아군에게 제공합니다.\n\n소환사의 통찰력: 천리안으로 드러난 유닛에 대한 시야가 5초 동안 유지됩니다.",
+    "img": "images/classic_summoner/SummonerClairvoyance_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "5초 동안 맵에서 지정한 지역의 시야를 아군에게 제공합니다.\n\n소환사의 통찰력: 천리안으로 드러난 유닛에 대한 시야가 5초 동안 유지됩니다.",
+    "valueTokens": {},
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerClairvoyance_Jade",
+      "sourceSha256": "43de42a3a2a5bcb1015dff76c8adbd62c52534334202ae572c49a8eaa0cd24e0",
+      "tooltipKey": "Spell_SummonerClairvoyance_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerMana_Jade",
+    "name": "총명",
+    "nameEn": "Clarity",
+    "cooldown": 135,
+    "desc": "자신과 아군 챔피언의 마나를 회복시킵니다. 소환사의 통찰력: 마나 회복량이 증가합니다.",
+    "img": "images/classic_summoner/SummonerMana_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.18.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.18.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [
+      "마나 회복 수치는 확인 중입니다."
+    ],
+    "unresolvedTooltipVariables": [
+      "selfmanaactual",
+      "allymanaactual"
+    ],
+    "detailTemplate": "자신과 아군 챔피언의 마나를 회복시킵니다. 소환사의 통찰력: 마나 회복량이 증가합니다.",
+    "valueTokens": {},
+    "detailSource": {
+      "type": "riot-classic-ddragon-summary",
+      "sourceVersion": "16.18.1",
+      "sourceSha256": "efbc8729b08cab0618546d54e6f81627183682a74b8d4329f99f5ff6eff75db6",
+      "field": "data.SummonerMana_Jade.description"
+    },
+    "sourceReview": {
+      "policy": "current-summary-with-unverified-values-held",
+      "supersededDetailSource": {
+        "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+        "sourceVersion": "16.17.1",
+        "detailSource": {
+          "type": "riot-classic-client",
+          "clientVersion": "16.17.810.4348",
+          "objectPath": "Shared/Spells/SummonerMana_Jade",
+          "sourceSha256": "67553aa5bf5a81b5cac9848a331e51b2b4a193ba94469ec5269c134bf256904c",
+          "tooltipKey": "Spell_Summoner_Mana_Jade_Tooltip"
+        }
+      },
+      "comparedLocales": [
+        "ko_KR",
+        "en_US"
+      ],
+      "unverifiedFields": [
+        "selfManaAmount",
+        "allyManaAmount",
+        "masteryManaAmount"
+      ]
+    }
+  },
+  {
+    "riotId": "SummonerExhaust_Jade",
+    "name": "탈진",
+    "nameEn": "Exhaust",
+    "cooldown": 210,
+    "desc": "대상 적 챔피언을 지치게 해, 2.5초 동안 이동 속도와 입히는 피해를 30%, 공격 속도를 50% 감소시킵니다.\n\n소환사의 진노: 탈진이 대상의 방어력과 마법 저항력을 10만큼 감소시킵니다.",
+    "img": "images/classic_summoner/SummonerExhaust_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [],
+    "fixedEffects": [
+      {
+        "label": "이동 속도·입히는 피해 감소",
+        "value": "30%"
+      },
+      {
+        "label": "공격 속도 감소",
+        "value": "50%"
+      },
+      {
+        "label": "시전 사거리",
+        "value": "550"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "대상 적 챔피언을 지치게 해, 2.5초 동안 이동 속도와 입히는 피해를 @DamageReduction@%, 공격 속도를 @AttackSpeedReduction@% 감소시킵니다.\n\n소환사의 진노: 탈진이 대상의 방어력과 마법 저항력을 10만큼 감소시킵니다.",
+    "valueTokens": {
+      "DamageReduction": {
+        "label": "이동 속도·입히는 피해 감소",
+        "unit": "%",
+        "values": [
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0
+        ],
+        "suffix": "",
+        "sourceToken": "DamageReduction"
+      },
+      "AttackSpeedReduction": {
+        "label": "공격 속도 감소",
+        "unit": "%",
+        "values": [
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ],
+        "suffix": "",
+        "sourceToken": "AttackSpeedReduction"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerExhaust_Jade",
+      "sourceSha256": "344a3b51334dc0b4a82683468e62ecdcea6a611049a4162bdbd73d47a162d9cb",
+      "tooltipKey": "Spell_SummonerExhaust_Jade_Tooltip"
+    }
+  },
+  {
+    "riotId": "SummonerHeal_Jade",
+    "name": "회복",
+    "nameEn": "Heal",
+    "cooldown": 300,
+    "desc": "챔피언과 주변 아군의 체력을 90~345만큼 회복시킵니다.\n\n소환사의 결의: 레벨당 5의 체력을 얻습니다.",
+    "img": "images/classic_summoner/SummonerHeal_Jade.png",
+    "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.17.1/data/ko_KR/mode/classic/summoner.json",
+    "sourceVersion": "16.17.1",
+    "levelEffects": [
+      {
+        "label": "자신·주변 아군 체력 회복량",
+        "unit": "",
+        "values": [
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0,
+          195.0,
+          210.0,
+          225.0,
+          240.0,
+          255.0,
+          270.0,
+          285.0,
+          300.0,
+          315.0,
+          330.0,
+          345.0
+        ]
+      },
+      {
+        "label": "소환사의 결의 추가 체력",
+        "unit": "",
+        "values": [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40,
+          45,
+          50,
+          55,
+          60,
+          65,
+          70,
+          75,
+          80,
+          85,
+          90
+        ]
+      }
+    ],
+    "fixedEffects": [
+      {
+        "label": "표시 사거리",
+        "value": "600"
+      },
+      {
+        "label": "소모량",
+        "value": "소모량 없음"
+      }
+    ],
+    "valueNotes": [],
+    "unresolvedTooltipVariables": [],
+    "detailTemplate": "챔피언과 주변 아군의 체력을 @TotalHeal@만큼 회복시킵니다.\n\n소환사의 결의: 레벨당 5의 체력을 얻습니다.",
+    "valueTokens": {
+      "TotalHeal": {
+        "label": "자신·주변 아군 체력 회복량",
+        "unit": "",
+        "values": [
+          90.0,
+          105.0,
+          120.0,
+          135.0,
+          150.0,
+          165.0,
+          180.0,
+          195.0,
+          210.0,
+          225.0,
+          240.0,
+          255.0,
+          270.0,
+          285.0,
+          300.0,
+          315.0,
+          330.0,
+          345.0
+        ],
+        "suffix": "",
+        "sourceToken": "TotalHeal"
+      }
+    },
+    "detailSource": {
+      "type": "riot-classic-client",
+      "clientVersion": "16.17.810.4348",
+      "objectPath": "Shared/Spells/SummonerHeal_Jade",
+      "sourceSha256": "412c44a14e62d46973d5ee3dcc8b3740ade72101ccf833c2a69d8d459d9eeb99",
+      "tooltipKey": "Spell_SummonerHeal_Jade_Tooltip"
+    }
+  }
+]

@@ -1,0 +1,3284 @@
+{
+  "schemaVersion": 3,
+  "classification": "CHAMPION_SELECTION_VOICE",
+  "sourceScope": "USER_VERIFIED_CLASSIC_PICK_WITH_SEPARATE_LOCALIZED_CLIENT_SELECTION_VOICE",
+  "version": "26.19",
+  "locales": [
+    "ko_KR",
+    "ja_JP",
+    "en_US"
+  ],
+  "champions": {
+    "102": {
+      "championId": 102,
+      "classicKey": 60102,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Shyvana",
+      "appId": "shyvana",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/102_Shyvana.ogg",
+          "bytes": 42515,
+          "sha256": "6fd92ce65a7ac9a0db025ad1df6c3b5e41af3624afbd50cf0379a62d042338d2"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/102_Shyvana.ogg",
+          "bytes": 28062,
+          "sha256": "2133c19558719702f5437f789a05a9e82420887f0b38251e642de7e3361db259"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/102_Shyvana.ogg",
+          "bytes": 33868,
+          "sha256": "aae89ae1bf472cb61cdf54085c8d125eb1094e1143a8c83c779c52c1b08c66f3"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/shyvana.mp3",
+        "bytes": 26331,
+        "sha256": "56e0ae05819d4c5bf4bdfa14a2a01819eb3fd98118639b88f85933c5888c1ce8"
+      }
+    },
+    "103": {
+      "championId": 103,
+      "classicKey": 60103,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Ahri",
+      "appId": "ahri",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/103_Ahri.ogg",
+          "bytes": 33497,
+          "sha256": "38bc6a3764e14728d1973923fbbb2218f6fd00b61593e222877533e5e975e066"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/103_Ahri.ogg",
+          "bytes": 23334,
+          "sha256": "c9055ef47e7e1b91e2142252cdfd5ba36fc1aab715f541c60f6372fc66bf2dc7"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/103_Ahri.ogg",
+          "bytes": 31855,
+          "sha256": "e6594b701c8daad661159889a4f015eba436503cf0367142e72cc4a0a098f6d4"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/ahri.mp3",
+        "bytes": 17084,
+        "sha256": "7ce90ef4033259c7eb0ac054439cf5fb4a784c0753cbdf6749785adb14ecab14"
+      }
+    },
+    "10": {
+      "championId": 10,
+      "classicKey": 60010,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Kayle",
+      "appId": "kayle",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/10_Kayle.ogg",
+          "bytes": 53055,
+          "sha256": "0be2cca4f8a86882fd222c598c38796e30cd2a9bfb948db1b7d081917d2928f6"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/10_Kayle.ogg",
+          "bytes": 43734,
+          "sha256": "cb6a663c12d3211a7c5b863567c2522253cf8a7c7ca9231e0a791262c1d753ef"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/10_Kayle.ogg",
+          "bytes": 52515,
+          "sha256": "199e42b58c7679fcd28c78ab1c829a664a3f283f191379db9dbc2e88a83956d6"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/kayle.mp3",
+        "bytes": 17084,
+        "sha256": "9d82e583ee348dba789af69f98810b7dca18168b4c73af9d010d9a1ee068f1a9"
+      }
+    },
+    "114": {
+      "championId": 114,
+      "classicKey": 60114,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Fiora",
+      "appId": "fiora",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/114_Fiora.ogg",
+          "bytes": 46271,
+          "sha256": "a1fba3a352b5b41766de97ce5abd14b24fa7596df06af9fd5a7f385a455fdc25"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/114_Fiora.ogg",
+          "bytes": 33612,
+          "sha256": "f9e5326736a754fc91d0bea3a2d9c62fc44b9c0c4eec33dd710b475a2e5cac45"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/114_Fiora.ogg",
+          "bytes": 35076,
+          "sha256": "3df523bd734dad98e93c12c78213e2956f74867f8b3a03fc800880022d6d4d33"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/fiora.mp3",
+        "bytes": 20062,
+        "sha256": "716dd0db7811542c47ca350b3853a2d3a5a7e8947b72ba8a97ff99a860ef780e"
+      }
+    },
+    "117": {
+      "championId": 117,
+      "classicKey": 60117,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Lulu",
+      "appId": "lulu",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/117_Lulu.ogg",
+          "bytes": 24599,
+          "sha256": "efb8ae9c199ec78992538ce08588367c450267c1572677e359164927b46e8e6c"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/117_Lulu.ogg",
+          "bytes": 22977,
+          "sha256": "a92b5a579e7f7673825281b75909ea782a0dd22b62ed7a1849725c6aba97db6b"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/117_Lulu.ogg",
+          "bytes": 24197,
+          "sha256": "c25dc062df5dd5c272ef984a00621b633393af5b3cd13e1beb993e2044bc2cd9"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/lulu.mp3",
+        "bytes": 9247,
+        "sha256": "331a77d9c243aef52e19670da2cbe7d219b1dccda1450dd1de3dd2481465bc55"
+      }
+    },
+    "11": {
+      "championId": 11,
+      "classicKey": 60011,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_MasterYi",
+      "appId": "masteryi",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/11_MasterYi.ogg",
+          "bytes": 36243,
+          "sha256": "50d91b0520be1cb6c819be7b2dfc0ed2c1dfccc8ee075db0e0d1c2601750c499"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/11_MasterYi.ogg",
+          "bytes": 31074,
+          "sha256": "4bd87a3d1d1bf1c39d3d850a1fc9f1c126ca984c8f2188fe25d2c009d742d465"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/11_MasterYi.ogg",
+          "bytes": 24290,
+          "sha256": "dd6214bee0a30a1294257c6b7b9e1cb9e053bf5724cdf60a29cfd4380a433d7d"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/masteryi.mp3",
+        "bytes": 16300,
+        "sha256": "61fe1829ce5eb3a3cc061913ba10809a5f2af87b59f7b2d2a20b2ebad6c712a7"
+      }
+    },
+    "12": {
+      "championId": 12,
+      "classicKey": 60012,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Alistar",
+      "appId": "alistar",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/12_Alistar.ogg",
+          "bytes": 31796,
+          "sha256": "f6d73ced66772d717d69e9227a77b23536cc06b25be84f06314f1aeaf68a7089"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/12_Alistar.ogg",
+          "bytes": 46234,
+          "sha256": "ddc5ed93d8c7d785e9e1cd562996790fab1afba92fde17344a2a1c4cdf2cdaae"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/12_Alistar.ogg",
+          "bytes": 31711,
+          "sha256": "7eb89d54345aa6a2e66228b4bc38ef6bdabb55e6b8fe85db7deac34fc7e415d3"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/alistar.mp3",
+        "bytes": 15203,
+        "sha256": "f9374c03a801dcde4b9157360da3a3e4130139562aa79575308c70d041c37e6a"
+      }
+    },
+    "13": {
+      "championId": 13,
+      "classicKey": 60013,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Ryze",
+      "appId": "ryze",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/13_Ryze.ogg",
+          "bytes": 37630,
+          "sha256": "d04e073c35ef5d8f6e8d107625dbd84f14835a1bc266700e91ce1197f88ccc91"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/13_Ryze.ogg",
+          "bytes": 40319,
+          "sha256": "9d4791611bec303ed58f37691883daf0bc7bdf254d2e4302e020513c2b77e0c6"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/13_Ryze.ogg",
+          "bytes": 25663,
+          "sha256": "46ed4403cd2b2bad2575827021b1e6cd3299ab988f3c62751f48a660dda4473a"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/ryze.mp3",
+        "bytes": 9561,
+        "sha256": "d78b715df3b78c76b4c2c978a3c4a6b7c7fbed8573cea49306c4601629d5407c"
+      }
+    },
+    "14": {
+      "championId": 14,
+      "classicKey": 60014,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Sion",
+      "appId": "sion",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/14_Sion.ogg",
+          "bytes": 76371,
+          "sha256": "4e16758d86bcb23cd6d0a768d54e4b73acf7caca800e6124b92c4de2c7d4fe2c"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/14_Sion.ogg",
+          "bytes": 49116,
+          "sha256": "0ef0017822652630cacd7f35a8d43fbdd8d6ee68af9a343c7dfd3f5072f4b55a"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/14_Sion.ogg",
+          "bytes": 36197,
+          "sha256": "232d1099829b0acb739dc63f25694f22edfd9c145fc7a81f4e7b0121f15c293d"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/sion.mp3",
+        "bytes": 16300,
+        "sha256": "1751c8173c9e1c8aa54135b4cbd4c8746b4e2b716b40db5f04c6381ac3c5782a"
+      }
+    },
+    "15": {
+      "championId": 15,
+      "classicKey": 60015,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Sivir",
+      "appId": "sivir",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/15_Sivir.ogg",
+          "bytes": 54457,
+          "sha256": "dc04dc8426977f910df8502bcd95ee901b677899db3cc78de5cce04e52a7ae11"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/15_Sivir.ogg",
+          "bytes": 39721,
+          "sha256": "7212541e70605409995e13c4d9a6bcea8cf5aee5ec9e6300ea63bc9ee57edc19"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/15_Sivir.ogg",
+          "bytes": 48949,
+          "sha256": "9c3c20780e9fd511d5a0baf21ae04e31eddf463e662bef58d5df388a8016585c"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/sivir.mp3",
+        "bytes": 7993,
+        "sha256": "294cf102aff984fdefb8e12454c599bfe48290f8102c8aed91f644836928a56b"
+      }
+    },
+    "16": {
+      "championId": 16,
+      "classicKey": 60016,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Soraka",
+      "appId": "soraka",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/16_Soraka.ogg",
+          "bytes": 54208,
+          "sha256": "e17cfe633aeae3e6570e4cd10bbb6eb35ac67801d45bf13ab5d5187e2478d0de"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/16_Soraka.ogg",
+          "bytes": 23538,
+          "sha256": "cd916a56a3675facdc941f3519c4723c75a902c6814d67061c4753ee2bf98f89"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/16_Soraka.ogg",
+          "bytes": 25188,
+          "sha256": "34e81ceb5c28886bf7fe2c02967f765d53766cb03d271153c79ae3b90dbc3581"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/soraka.mp3",
+        "bytes": 26801,
+        "sha256": "a9cb1c9ed3fea237174294a348728d3ba5b9d8379f8c4981ee5975781f6c98df"
+      }
+    },
+    "17": {
+      "championId": 17,
+      "classicKey": 60017,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Teemo",
+      "appId": "teemo",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/17_Teemo.ogg",
+          "bytes": 31494,
+          "sha256": "9b94dac3eb303b4ca854f9735a986fdca829cf459118fec5a052a3854ad7b28d"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/17_Teemo.ogg",
+          "bytes": 42716,
+          "sha256": "2231b9b943c29e46a4306f157d12fb0a5fb62f045135a41f36d6911e71dfc4de"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/17_Teemo.ogg",
+          "bytes": 39300,
+          "sha256": "f79470b5a559b74e732687a958df295c09275aa7fe520f606cc181c3fdd52c6c"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/teemo.mp3",
+        "bytes": 13479,
+        "sha256": "f9bebbc8c8f3f6aa988b49553f4a648058b2b6950ee96e04d76975fe108cf322"
+      }
+    },
+    "18": {
+      "championId": 18,
+      "classicKey": 60018,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Tristana",
+      "appId": "tristana",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/18_Tristana.ogg",
+          "bytes": 47592,
+          "sha256": "78282b02b7a674b2c5343de45c41ea11fcfbc6176ee898cc013a15fdae302d74"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/18_Tristana.ogg",
+          "bytes": 36505,
+          "sha256": "dfb7c885d9cc23cf7d6b02221ad0b329d6f1a1bacad384c6811811a471a27225"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/18_Tristana.ogg",
+          "bytes": 32834,
+          "sha256": "a4e7dbdd4b3f69a9ac965a6f44b7c8ef6dc6db6a8f559beb5d84e50b19e0841f"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/tristana.mp3",
+        "bytes": 15516,
+        "sha256": "957366b7a1cf52d75bfe3757ac1dccd3151ec3b9b46abdbeea45e8b1c1d55f42"
+      }
+    },
+    "19": {
+      "championId": 19,
+      "classicKey": 60019,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Warwick",
+      "appId": "warwick",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/19_Warwick.ogg",
+          "bytes": 45337,
+          "sha256": "801bdc8b57fff4c76b74995319fb95653ec96033ee426438bfd1b602203f06b8"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/19_Warwick.ogg",
+          "bytes": 79985,
+          "sha256": "ec7ccc51c3b7a6dc70501930960c6a3192b21816ff6ffad9f68c0604250c4392"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/19_Warwick.ogg",
+          "bytes": 45924,
+          "sha256": "8591415680f636aed2a34b2914a5886058edc31be9775dd4c4558d411ee730b3"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/warwick.mp3",
+        "bytes": 17711,
+        "sha256": "2ae448b77dd332957d095aa3c04fe26f395cdb5c0c9f59c9f47fd744e79b1138"
+      }
+    },
+    "1": {
+      "championId": 1,
+      "classicKey": 60001,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Annie",
+      "appId": "annie",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/1_Annie.ogg",
+          "bytes": 39454,
+          "sha256": "660b4d800d04268ab465fe0e7ffd51ba4ca82be90e03528289b22559c336f68e"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/1_Annie.ogg",
+          "bytes": 31674,
+          "sha256": "5e314a586cc9aaf20c23f04825f01e9fe5a64f7a5136c891b7ebb472d64bf003"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/1_Annie.ogg",
+          "bytes": 37666,
+          "sha256": "d3d92d20a66d90a8ce85bba54323f51935f17c899727997ccaae2844857f9c58"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/annie.mp3",
+        "bytes": 16300,
+        "sha256": "4056e7e6af2a71107a1986b67545a73492b10a589604a49cfbdf79a954008214"
+      }
+    },
+    "20": {
+      "championId": 20,
+      "classicKey": 60020,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Nunu",
+      "appId": "nunu",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/20_Nunu.ogg",
+          "bytes": 86785,
+          "sha256": "75ab2f1b88d92d65dfe66ba8ccd8093537be842c2983cc7f26e203b4984d68d5"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/20_Nunu.ogg",
+          "bytes": 66215,
+          "sha256": "4dad157827cd0ae6e920d6a765dafe6fae2a84e131313f4d9d77a949efdc4ed3"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/20_Nunu.ogg",
+          "bytes": 56574,
+          "sha256": "bcf27cee2591c340b1ed380f1209c30dd41e921c8f6f1703070fc96ea12edf2f"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/nunu.mp3",
+        "bytes": 5799,
+        "sha256": "34217bd8ea526846bc8bbccf8a735a8de68093f896b9d1696d7c2f2a62b9245a"
+      }
+    },
+    "21": {
+      "championId": 21,
+      "classicKey": 60021,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_MissFortune",
+      "appId": "missfortune",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/21_MissFortune.ogg",
+          "bytes": 39168,
+          "sha256": "97fc2d53f85cfed0ad6ced14ecc0c8e2da961dde977d7c73cec75cab5fb2f6ac"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/21_MissFortune.ogg",
+          "bytes": 43351,
+          "sha256": "aeb1b045de62008e5517e925e7c860aec8b76bbb1aca7c912f16e50572aeb43a"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/21_MissFortune.ogg",
+          "bytes": 32559,
+          "sha256": "4316589312be23af58e80ca90f19dc5d575765f9da0f924e555974fa7b26fff3"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/missfortune.mp3",
+        "bytes": 20845,
+        "sha256": "4b0c518803fbfe577cdd182c9f245c84e1dc1b8b0ce9e1b0fadd7453c5748f80"
+      }
+    },
+    "22": {
+      "championId": 22,
+      "classicKey": 60022,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Ashe",
+      "appId": "ashe",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/22_Ashe.ogg",
+          "bytes": 34255,
+          "sha256": "d67174159114b29e72b6b7bc2885fffa67ffdf7cba9a7b1e8219c4f336074574"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/22_Ashe.ogg",
+          "bytes": 36599,
+          "sha256": "ecd62bd216a016c262c012064eab65c01fcde24a1c51d77128f6106692078933"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/22_Ashe.ogg",
+          "bytes": 30301,
+          "sha256": "31700b777de79be71ad3267ffa604aee0b3411a0557beab6daa4b6720aa228f6"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/ashe.mp3",
+        "bytes": 18181,
+        "sha256": "8f17437af55c17215d1f132df44657887ed97465de05190f799e9a2336178d18"
+      }
+    },
+    "23": {
+      "championId": 23,
+      "classicKey": 60023,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Tryndamere",
+      "appId": "tryndamere",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/23_Tryndamere.ogg",
+          "bytes": 30902,
+          "sha256": "af94fa89a775f789e950ada7781d6d4ce1046b5a0a0c577b475e8d3699280611"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/23_Tryndamere.ogg",
+          "bytes": 29985,
+          "sha256": "68bffff424c42cbd7ff2ab99ead083af93e5f9910eea51d921754c69e3ca45ed"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/23_Tryndamere.ogg",
+          "bytes": 29156,
+          "sha256": "f87091a6cb7549cc2a4cd45a3b96c35db52aaa9fc19ee9b7d0b6f1e53e4c60d2"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/tryndamere.mp3",
+        "bytes": 15516,
+        "sha256": "a5e7983cd7094fd4229d6c408fcf473d98bf36f698b62b94ee75fdb39dfa3d65"
+      }
+    },
+    "24": {
+      "championId": 24,
+      "classicKey": 60024,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Jax",
+      "appId": "jax",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/24_Jax.ogg",
+          "bytes": 26624,
+          "sha256": "267bef56440e66afdd34c6ec10c942cebe10ecbe6f126f874e2a39e7ded3d260"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/24_Jax.ogg",
+          "bytes": 34203,
+          "sha256": "d26c28028be2439212204bd18a2ab79959b2269b7abf132a4b17017065c618d0"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/24_Jax.ogg",
+          "bytes": 20157,
+          "sha256": "f3c7821509c5dc56dbbdacd4b02ccb7898762f4d7b771cfa13023c10c51f364e"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/jax.mp3",
+        "bytes": 14890,
+        "sha256": "943a1397afcdfcd49b9ab99a17569fbe68ff659a3f1dd07471bf621acdaaed5a"
+      }
+    },
+    "25": {
+      "championId": 25,
+      "classicKey": 60025,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Morgana",
+      "appId": "morgana",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/25_Morgana.ogg",
+          "bytes": 48626,
+          "sha256": "ef0557f89856666701bb7120eb654157a8d038e125308c8a5b7f2f98f5b84bf3"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/25_Morgana.ogg",
+          "bytes": 54722,
+          "sha256": "a13592fc7e9668b57579859307d60bb1c9c7d74cabc1ee20069e5cb2a9b2659b"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/25_Morgana.ogg",
+          "bytes": 36999,
+          "sha256": "04ddc81103919ec87ffaef76af80347340d3fbe0e8cc7cb90df55511001247e9"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/morgana.mp3",
+        "bytes": 15360,
+        "sha256": "6ae15e741d3491184217de10e46c6cf28c1dfe9218ba14455160bf7fa31a5b2b"
+      }
+    },
+    "26": {
+      "championId": 26,
+      "classicKey": 60026,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Zilean",
+      "appId": "zilean",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/26_Zilean.ogg",
+          "bytes": 29380,
+          "sha256": "5c53b680656cd04d82b679172481cb1fcae533344e06eb2bd45c99af0966946e"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/26_Zilean.ogg",
+          "bytes": 45205,
+          "sha256": "d9ccc134bab393d7a7f18cd55ce273f8307a3815e77a9bcdeb90a0039d464660"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/26_Zilean.ogg",
+          "bytes": 25278,
+          "sha256": "b9157f57ad3b1870a4d70b93cf8b1071b5f8e055746baea3681d42d877d172bf"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/zilean.mp3",
+        "bytes": 11441,
+        "sha256": "a16c20c6a5212aea771dd5af7987d9773e2b7eff5bf8ab988868c5515abd9242"
+      }
+    },
+    "27": {
+      "championId": 27,
+      "classicKey": 60027,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Singed",
+      "appId": "singed",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/27_Singed.ogg",
+          "bytes": 23166,
+          "sha256": "a31ae5aaa1a9881825e64fbb3db49550364580f1c4e0121b21d3b314ecbb5a13"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/27_Singed.ogg",
+          "bytes": 19552,
+          "sha256": "e30e80d0991984c56dc94143619cc13477cef74e04ae53fdacacc584b27b2ba3"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/27_Singed.ogg",
+          "bytes": 29257,
+          "sha256": "9d20c203443648f04db102ed68c363444c80616c166a3c0e49a91f4b59e3b65b"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/singed.mp3",
+        "bytes": 7680,
+        "sha256": "7e2a19562b276401da816effa3bdb7c0f3873d42909de2a9d16295abd381ac9d"
+      }
+    },
+    "28": {
+      "championId": 28,
+      "classicKey": 60028,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Evelynn",
+      "appId": "evelynn",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/28_Evelynn.ogg",
+          "bytes": 46941,
+          "sha256": "5cf22f70116bd950c258cbd39777899794ebef7f7a756af33ba0e2670614bef8"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/28_Evelynn.ogg",
+          "bytes": 32202,
+          "sha256": "58070fe64e7004e9c439bcdad1c50c27cb9d193201ac97cfd8ad69f41e5a93d6"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/28_Evelynn.ogg",
+          "bytes": 21414,
+          "sha256": "bda82ad9d231ce587b1be8418e594faa047d3b6aa33ff21d456f1366c4b7746f"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/evelynn.mp3",
+        "bytes": 45453,
+        "sha256": "8e83ec35dff7267ff3c84dc11b49ac81d03b66eed66a9cf8faa494763b947e26"
+      }
+    },
+    "29": {
+      "championId": 29,
+      "classicKey": 60029,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Twitch",
+      "appId": "twitch",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/29_Twitch.ogg",
+          "bytes": 72466,
+          "sha256": "ce41edd5a0e3c1cede5ac726275adb77c81e9145ea33dcfa2a1a40b6fac9d37d"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/29_Twitch.ogg",
+          "bytes": 23174,
+          "sha256": "b7a2f490397ba2c84f5f108be4d172ab7b5f3ee9413deef344afeacc73e8d85a"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/29_Twitch.ogg",
+          "bytes": 43412,
+          "sha256": "d5e9db2b31b710fc7dd603ce3035d5c642b0f8734c8c9e84b7d2ee4b43f6d414"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/twitch.mp3",
+        "bytes": 12695,
+        "sha256": "ca00b39a83ff16f35eedb50ad281264b54357bdfeff5557350d0315976c72bbd"
+      }
+    },
+    "2": {
+      "championId": 2,
+      "classicKey": 60002,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Olaf",
+      "appId": "olaf",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/2_Olaf.ogg",
+          "bytes": 38412,
+          "sha256": "0a726517974658198588066867717a7cb5b2921e5252e225d9c4af03e21dfe45"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/2_Olaf.ogg",
+          "bytes": 38829,
+          "sha256": "12a5216a23c91ee4e33aec7448333676bae7119a979e8305d7aa8e5bfa02d48b"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/2_Olaf.ogg",
+          "bytes": 31062,
+          "sha256": "fd1dfc262ec72988f1d866f7b21a66dd9866dc39b5897a6485fcc5df3a7ccd7d"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/olaf.mp3",
+        "bytes": 16457,
+        "sha256": "a261980c6e360721656d0734494e2e7944288af8e5d06263e5a52fde23c64d63"
+      }
+    },
+    "30": {
+      "championId": 30,
+      "classicKey": 60030,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Karthus",
+      "appId": "karthus",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/30_Karthus.ogg",
+          "bytes": 148549,
+          "sha256": "ab4d3ee2f1fd933678528e6d34946e57827335d0f9c9ef52a6343e0d5a2d3526"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/30_Karthus.ogg",
+          "bytes": 127659,
+          "sha256": "b6635e61da4b6a2e3386855fdbbf2839c96f658bef93f12127f789859a24e0e5"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/30_Karthus.ogg",
+          "bytes": 127767,
+          "sha256": "20bc20a28e9daa4433905890c087550f9a75dca08a139e0995468b3e73a15751"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/karthus.mp3",
+        "bytes": 22256,
+        "sha256": "7c29d91b9c6ab0306f56c1eebeae094585a94babab4111706004e75c3ad67f8f"
+      }
+    },
+    "31": {
+      "championId": 31,
+      "classicKey": 60031,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Chogath",
+      "appId": "chogath",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/31_Chogath.ogg",
+          "bytes": 71621,
+          "sha256": "c65237da8b581653c0183eb25317b41ba0cffa9d8f8cddee33a0c7dae072e548"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/31_Chogath.ogg",
+          "bytes": 71742,
+          "sha256": "6da4e03ea732f81e9738bf5f5af6e46f15e01039e258e0d79abcd04435cefeca"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/31_Chogath.ogg",
+          "bytes": 76625,
+          "sha256": "02d1eb5314f3a2e6c5651f537d2597bd1d677b472e62d043cc70d36af52db31c"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/chogath.mp3",
+        "bytes": 41088,
+        "sha256": "24d18044a2611442c05ccb2f9a41e877ba1426b8b3862e126ad0733142fae02f"
+      }
+    },
+    "32": {
+      "championId": 32,
+      "classicKey": 60032,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Amumu",
+      "appId": "amumu",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/32_Amumu.ogg",
+          "bytes": 43208,
+          "sha256": "670e57e163ffefffb3162c7ea887d3a999edc0d7718b9b3ca3d45868ef9cbb70"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/32_Amumu.ogg",
+          "bytes": 38164,
+          "sha256": "ce01e0783776e4d223281371b88ba14498aa0c0b001f88c771c3fef135736a1b"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/32_Amumu.ogg",
+          "bytes": 30371,
+          "sha256": "2782e94201eccc6b197acda3a41dc4c7a9609518d66f946ec15037e86a9a1039"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/amumu.mp3",
+        "bytes": 19592,
+        "sha256": "48c42ea293e54b0d9fe0db431e73afed45dcc77931be152795fd3e1619b50bec"
+      }
+    },
+    "33": {
+      "championId": 33,
+      "classicKey": 60033,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Rammus",
+      "appId": "rammus",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/33_Rammus.ogg",
+          "bytes": 15994,
+          "sha256": "c22a7103c4edf313335e991d01020d030a7c4432ee00091c9a9785cb2789e0a7"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/33_Rammus.ogg",
+          "bytes": 13406,
+          "sha256": "48e699fce2ad2dd29aca764e1846e0b05f8ec599e0a4cefe9e0c45ee11714f2a"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/33_Rammus.ogg",
+          "bytes": 12569,
+          "sha256": "17e4108d62191df4a9b24de77aed0582ef17253c7c0142ea8055b95118a46124"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/rammus.mp3",
+        "bytes": 3291,
+        "sha256": "eb3a1c9882fec627d63a3466c37b291d7407668f4aad48c48fbb5f01103844e0"
+      }
+    },
+    "34": {
+      "championId": 34,
+      "classicKey": 60034,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Anivia",
+      "appId": "anivia",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/34_Anivia.ogg",
+          "bytes": 27068,
+          "sha256": "1bb135f0fd3b5662ecc4359971b849113fe3ffe208f307fa14dba254baee3083"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/34_Anivia.ogg",
+          "bytes": 22143,
+          "sha256": "03d430ff278e927298d39b91d8fff8c0baba2cd54dbc8c156f333be56198f4b0"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/34_Anivia.ogg",
+          "bytes": 24553,
+          "sha256": "d2a770e45f43cec36f023fd5fc48c94b5e4285cc497aeb6f3b0a424addb30299"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/anivia.mp3",
+        "bytes": 10501,
+        "sha256": "22dcf2690b6ec508c944cd4a06cebcbb0790dd17a5ba86965f89705cd2e82bde"
+      }
+    },
+    "35": {
+      "championId": 35,
+      "classicKey": 60035,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Shaco",
+      "appId": "shaco",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/35_Shaco.ogg",
+          "bytes": 32230,
+          "sha256": "a1b54b10da8df563240dae4ac00a3cbbc37ed51a1b792ddb58f98c3683307d92"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/35_Shaco.ogg",
+          "bytes": 36853,
+          "sha256": "47f89b7ce963140632202a4cae7e8512e9d4dd27697cbb5d04e3575f68b305c1"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/35_Shaco.ogg",
+          "bytes": 34149,
+          "sha256": "ad613ebbb78656828581cc3b5f31ed6d7aca2c5d0ad4cd109e1944bdba4383fe"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/shaco.mp3",
+        "bytes": 12695,
+        "sha256": "c52b78751bcf31b3258859fe8e49cc861b982c6a7cb82fec3a61e26915404550"
+      }
+    },
+    "36": {
+      "championId": 36,
+      "classicKey": 60036,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_DrMundo",
+      "appId": "drmundo",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/36_DrMundo.ogg",
+          "bytes": 70459,
+          "sha256": "7db9f48174ec1cd7edf805ded94dab9494a6f51c605adf4271f2ce3e84f732f0"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/36_DrMundo.ogg",
+          "bytes": 53022,
+          "sha256": "dc2843df41ed46dabba5d5dc21979ab0763016160333f455f34149e79e15fe6f"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/36_DrMundo.ogg",
+          "bytes": 46382,
+          "sha256": "8e7a07867fffa26539a479022a527511009009d72dfb16b61eed25d9b50bd085"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/drmundo.mp3",
+        "bytes": 11441,
+        "sha256": "cf12c95f316fb340ee5ec11c788eabe77a0078b66ddcba6efc24aa703a35496a"
+      }
+    },
+    "37": {
+      "championId": 37,
+      "classicKey": 60037,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Sona",
+      "appId": "sona",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/37_Sona.ogg",
+          "bytes": 68301,
+          "sha256": "628ed6ae03edd47022bbc5f93a27b92203e17f4d3469e6bcb2c4661c8fc2f310"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/37_Sona.ogg",
+          "bytes": 58474,
+          "sha256": "a903ff1087683807c4718321b6c745a15aade1edf008db84c237ed300ebcb851"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/37_Sona.ogg",
+          "bytes": 59639,
+          "sha256": "b6d679f4a0b4da7654131667db367f739ee7ad971c366a6c2fd5526dae248dda"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/sona.mp3",
+        "bytes": 55424,
+        "sha256": "9feda9be0cf151aed33378250e31b9dd31c37e5502185c5e23a94f565cfdd8c4"
+      }
+    },
+    "38": {
+      "championId": 38,
+      "classicKey": 60038,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Kassadin",
+      "appId": "kassadin",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/38_Kassadin.ogg",
+          "bytes": 43557,
+          "sha256": "131fd1807fab5826cf1b1d5863bc816983367b7be5ae1c838416b53fe25a440a"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/38_Kassadin.ogg",
+          "bytes": 56561,
+          "sha256": "7ec3e31edeae6cf16855414d50c6b638389f1a35fe6347e963f1b5390438159f"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/38_Kassadin.ogg",
+          "bytes": 64578,
+          "sha256": "d9866e0753fb33a5efb6ceacec40bd013823aa41d3bd24259b1e5165e4d3e7fd"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/kassadin.mp3",
+        "bytes": 26958,
+        "sha256": "b433f2ff026a45d46a1f869e9443c2b4ca502dbc8a6459e876c87eb45d2d4a9a"
+      }
+    },
+    "3": {
+      "championId": 3,
+      "classicKey": 60003,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Galio",
+      "appId": "galio",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/3_Galio.ogg",
+          "bytes": 42767,
+          "sha256": "86124664c34906a411723cdd21f52f439af1157381b5d1e7d76b9e7ed52f7218"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/3_Galio.ogg",
+          "bytes": 39760,
+          "sha256": "23bbcf3fb08affa0e30c2059aeb2bda150de60f5bebeb642dbd6e2fd922824a0"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/3_Galio.ogg",
+          "bytes": 32663,
+          "sha256": "5ef4e0587d4a827cdea5a01525ff9346f36be11c530ab47060c2f58dd0636e40"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/galio.mp3",
+        "bytes": 19748,
+        "sha256": "2b842a5d5791cc336e88c369503cd3581984db3f7301e3763839376e773d0345"
+      }
+    },
+    "40": {
+      "championId": 40,
+      "classicKey": 60040,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Janna",
+      "appId": "janna",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/40_Janna.ogg",
+          "bytes": 43467,
+          "sha256": "ffb4a34a4cdf83ce4cf2f12662a3ac60497d12d39c0114929b604de4f94a7ee9"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/40_Janna.ogg",
+          "bytes": 54177,
+          "sha256": "453ac41098ea8ee96da6446ef7a1d4fe39bbe3d4b00c100f03507d73049a2fbb"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/40_Janna.ogg",
+          "bytes": 46758,
+          "sha256": "6ce877f0a44fc0eee7c6255939c03838eab687d1da11aae0e6c1c3524a095abe"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/janna.mp3",
+        "bytes": 26645,
+        "sha256": "66ccd7294c320739a0d1ba73cce0d13dbec81cac44a5f770f6fe83e65e8268ff"
+      }
+    },
+    "41": {
+      "championId": 41,
+      "classicKey": 60041,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Gangplank",
+      "appId": "gangplank",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/41_Gangplank.ogg",
+          "bytes": 80618,
+          "sha256": "e06839052b64acdeceb419d3c1089fd66d722f226f01602fed5522d169d5b1dd"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/41_Gangplank.ogg",
+          "bytes": 35040,
+          "sha256": "0244bcc822937e03b57ab0eb10ec772e27000e97840be0d154e4619601548a5a"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/41_Gangplank.ogg",
+          "bytes": 47674,
+          "sha256": "634775fd9fbfe699c32cfe347a9b6561a0fa479a266ab8c5adbf915b16b3f877"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/gangplank.mp3",
+        "bytes": 15830,
+        "sha256": "4bf188f945d448a34611eded0bedd15336b4bcb27c187b0d3f9477f455e7994b"
+      }
+    },
+    "42": {
+      "championId": 42,
+      "classicKey": 60042,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Corki",
+      "appId": "corki",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/42_Corki.ogg",
+          "bytes": 49876,
+          "sha256": "c40cf840aacc5c42198139fec6a45f9a21093a4a9787874671831a4a6c6a8927"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/42_Corki.ogg",
+          "bytes": 43000,
+          "sha256": "e4f4c298f7ef0f3af7fa6c936a51ded833f8f65b357e3dd9b5497335ba5c2d7c"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/42_Corki.ogg",
+          "bytes": 45226,
+          "sha256": "1fe1f5f24e5587a3c35dd57fce755767d5c6de4a37c9c947af3ebd2d647a9976"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/corki.mp3",
+        "bytes": 24921,
+        "sha256": "caf82e81eb0f3131c567aabfcb869cae1a5a3b29de2b76721de1ce69f069a48b"
+      }
+    },
+    "44": {
+      "championId": 44,
+      "classicKey": 60044,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Taric",
+      "appId": "taric",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/44_Taric.ogg",
+          "bytes": 75196,
+          "sha256": "36c5a4a7227a66435b49bbb10e139163a9f3ae4d8bcbf9f281d6600e1503d2e5"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/44_Taric.ogg",
+          "bytes": 69420,
+          "sha256": "f6f725c686dcddf8f39453a2c0a3f667a5705628745314aec58dd4e7f2cc5ac5"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/44_Taric.ogg",
+          "bytes": 66131,
+          "sha256": "6938e114464f2382ca9811ecf22f701e4c919e75545ebc570a9fb0458fbbe29c"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/taric.mp3",
+        "bytes": 31190,
+        "sha256": "a81184a7e8fdfb4fb4e6389808a135147eeab1b6895e9a9709b73a4f1ca618d3"
+      }
+    },
+    "45": {
+      "championId": 45,
+      "classicKey": 60045,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Veigar",
+      "appId": "veigar",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/45_Veigar.ogg",
+          "bytes": 62628,
+          "sha256": "b370de01f622c053649e165124fbf12a759abf1e0990f4b4980aca688e674829"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/45_Veigar.ogg",
+          "bytes": 59738,
+          "sha256": "57a6d63dc6dacfb1a53ff6c7ddadd4bd9877fbb5d694e0970be3e822f7651006"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/45_Veigar.ogg",
+          "bytes": 66898,
+          "sha256": "38106e91761d7d378c33553f05d992014296e760620a448d38bebb8d9531ecbb"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/veigar.mp3",
+        "bytes": 31974,
+        "sha256": "37bfaaf61b8875bb1f1257b69a84783639a037695ffb2fcc1ea281a8e66a1b41"
+      }
+    },
+    "4": {
+      "championId": 4,
+      "classicKey": 60004,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_TwistedFate",
+      "appId": "twistedfate",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/4_TwistedFate.ogg",
+          "bytes": 46008,
+          "sha256": "667375f6313df1c09f6ad47a5ed90c297f0bee37ebc8bdfa076e47b0b60eb6e7"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/4_TwistedFate.ogg",
+          "bytes": 38411,
+          "sha256": "54ee47600a8991ab10bde3105a6166a3558a79ef5a0ea2e9faa5e96656aa9605"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/4_TwistedFate.ogg",
+          "bytes": 29747,
+          "sha256": "1a13d0e54bdf72a5bf032956a73cff27d57f03ea0396a239109f0b756e2e538a"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/twistedfate.mp3",
+        "bytes": 21159,
+        "sha256": "74adba52b6f5596dc7f813bc5c3a8f853bcb06054c48109f307637e813287851"
+      }
+    },
+    "53": {
+      "championId": 53,
+      "classicKey": 60053,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Blitzcrank",
+      "appId": "blitzcrank",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/53_Blitzcrank.ogg",
+          "bytes": 39084,
+          "sha256": "7f31d512f5c7e583841ebaeeb9db711671ebd117ba60165e4600c8ccf92b7239"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/53_Blitzcrank.ogg",
+          "bytes": 39622,
+          "sha256": "a818b5cdd20fe236fac7bc3b7de3bb861671074d0965456586611e098ca0b47f"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/53_Blitzcrank.ogg",
+          "bytes": 50848,
+          "sha256": "85a533405f4c7e91a4226df05666e986d0ad3ed75e53e71aa7c1b99890bbcfcc"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/blitzcrank.mp3",
+        "bytes": 19748,
+        "sha256": "9c36871b98c9bedd7684a757ce067bd8bbf3621f2b7da67288e49c95fb9a64dc"
+      }
+    },
+    "54": {
+      "championId": 54,
+      "classicKey": 60054,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Malphite",
+      "appId": "malphite",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/54_Malphite.ogg",
+          "bytes": 36443,
+          "sha256": "d6bfa0ceb60d144f18b14ddbfc6407ef032214de5a83a7e12ddf2ecbf39e7ad0"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/54_Malphite.ogg",
+          "bytes": 29030,
+          "sha256": "7c60c4a81759cb37094344a4f035e7c30bb3fde4d544efd65558a0120a8ca0fa"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/54_Malphite.ogg",
+          "bytes": 29727,
+          "sha256": "64229eae5040ac03008e551e8179fcd07d7ce02f843e3fb2cc0ba4a85963acf4"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/malphite.mp3",
+        "bytes": 20532,
+        "sha256": "fba2f484ec1742586c4b96ca2609bffb4ec5a19fa778bf0d9a05cb0d9c64c203"
+      }
+    },
+    "55": {
+      "championId": 55,
+      "classicKey": 60055,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Katarina",
+      "appId": "katarina",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/55_Katarina.ogg",
+          "bytes": 37395,
+          "sha256": "c3012cd975a70ec0f1c536bd982a13317c007611777740d6288717f7bb3ec402"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/55_Katarina.ogg",
+          "bytes": 34560,
+          "sha256": "489c9c59e4458ab95c8e58050beae8382d98b6776d8f2417941306902825c161"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/55_Katarina.ogg",
+          "bytes": 30465,
+          "sha256": "108eb949d2384e0b405866f28131c5ce174ae3af39ab1c9c74c0441788cd844d"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/katarina.mp3",
+        "bytes": 17554,
+        "sha256": "9f62ac0e88cf42ce9fd4ec44363303e8e1d1c3313eadc484087f1bae16a1a0da"
+      }
+    },
+    "59": {
+      "championId": 59,
+      "classicKey": 60059,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_JarvanIV",
+      "appId": "jarvaniv",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/59_JarvanIV.ogg",
+          "bytes": 44661,
+          "sha256": "a030189220442d157997684ef67f8e5de1806890d892d17466eaf4cd13bf1adb"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/59_JarvanIV.ogg",
+          "bytes": 40510,
+          "sha256": "b3d6b525e592a8734a42edea823fcb37469839c2e35427798f5f5077116e7159"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/59_JarvanIV.ogg",
+          "bytes": 44632,
+          "sha256": "b2c22cd1edb6d30b065933799c870939c3efccdc027c3279a9d6ed7391931343"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/jarvaniv.mp3",
+        "bytes": 22883,
+        "sha256": "3bdbcd8484ca93459d5aa43c0481e71590db2c9baf9693a5335baa5c5174abd8"
+      }
+    },
+    "5": {
+      "championId": 5,
+      "classicKey": 60005,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_XinZhao",
+      "appId": "xinzhao",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/5_XinZhao.ogg",
+          "bytes": 40073,
+          "sha256": "ec3b2ac312bcd22b3344c8be9c59dcae5257d55eab18e514eb01a63f3e51f23e"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/5_XinZhao.ogg",
+          "bytes": 36057,
+          "sha256": "6199c644d3b25c55cec5d3ea5b6ba3951f5ef953fc07a2ee9052f2845f72be4d"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/5_XinZhao.ogg",
+          "bytes": 43627,
+          "sha256": "f680e6c2548733fedd4b21de6fbc8f5eaa1db6adc20495c00d00b9a10c572b94"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/xinzhao.mp3",
+        "bytes": 5642,
+        "sha256": "7964e6ed3b7861178e734fe6db66f66c6fcd3bd71fbbba271b468d3a03294a95"
+      }
+    },
+    "62": {
+      "championId": 62,
+      "classicKey": 60062,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Wukong",
+      "appId": "wukong",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/62_MonkeyKing.ogg",
+          "bytes": 32830,
+          "sha256": "fc6a04d0442437eb0a7e1a412b7be7ab9ca46a60024e379082014c9105bd8cfb"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/62_MonkeyKing.ogg",
+          "bytes": 26781,
+          "sha256": "7ca3b59468fe88d54699c3d7cf7b0d00d3d69c718d51f3a8d5a6dc7c59a96342"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/62_MonkeyKing.ogg",
+          "bytes": 24729,
+          "sha256": "46cfac20fc7f6113c0ee74944ad18d46d3ce9666711165bd7c61346fc7057736"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/wukong.mp3",
+        "bytes": 12852,
+        "sha256": "8aff898825c27565385ceaa728c7db55d4cb8d0ee5469a5237503bc7c588871c"
+      }
+    },
+    "63": {
+      "championId": 63,
+      "classicKey": 60063,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Brand",
+      "appId": "brand",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/63_Brand.ogg",
+          "bytes": 59823,
+          "sha256": "b55472c545b32500c1ef98b342c262e78d4d5b08e7ffcef3024e0e2400270898"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/63_Brand.ogg",
+          "bytes": 59047,
+          "sha256": "8e5e3049843d5060dfa58955d57a58b7eac9d7c6095106b290164234b7413080"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/63_Brand.ogg",
+          "bytes": 55886,
+          "sha256": "56fa14af11dfcdf3fa73870583a4846502db7c4b1fe5ff4e32b6b211b1ea1bbc"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/brand.mp3",
+        "bytes": 32914,
+        "sha256": "38a17243cffe88899bf27984c49cc81558c2fe86675643e2f4314ae589b58183"
+      }
+    },
+    "64": {
+      "championId": 64,
+      "classicKey": 60064,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_LeeSin",
+      "appId": "leesin",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/64_LeeSin.ogg",
+          "bytes": 25520,
+          "sha256": "9f259dca971628c048a72c1b0eda76f54c94d4baf39a866412ea3281ec213846"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/64_LeeSin.ogg",
+          "bytes": 36128,
+          "sha256": "2c69808c485d978ccea3335f1c49cede3de125ff9be5d454572c3222576133f2"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/64_LeeSin.ogg",
+          "bytes": 28867,
+          "sha256": "ac7dbb9ded4b647a70eccf487d17a690a4e2ed46601c894f62f406c8fd963bfa"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/leesin.mp3",
+        "bytes": 18024,
+        "sha256": "674ad6ebfe0516d423154149358ead68b8802b1e2d4e8473a5f7fec8ad63280c"
+      }
+    },
+    "67": {
+      "championId": 67,
+      "classicKey": 60067,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Vayne",
+      "appId": "vayne",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/67_Vayne.ogg",
+          "bytes": 38462,
+          "sha256": "211bc228d432c29416a2c14f5d6803429355a9a1ad97606e6721290ca3558c21"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/67_Vayne.ogg",
+          "bytes": 41456,
+          "sha256": "8ec05434f2573e5ceb64055dd22ea6ff6629c85ccd4a9c366789a3065ea9b80c"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/67_Vayne.ogg",
+          "bytes": 42547,
+          "sha256": "c3382795d1dbfe4bcfd0698142ea5eb86defc54b4acee1d76dcc4bc2b3607485"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/vayne.mp3",
+        "bytes": 18808,
+        "sha256": "7701a839a80e253dca912df9d058fa2b8b00df2b5b74f273cfdb90c7deddf096"
+      }
+    },
+    "72": {
+      "championId": 72,
+      "classicKey": 60072,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Skarner",
+      "appId": "skarner",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/72_Skarner.ogg",
+          "bytes": 78352,
+          "sha256": "b439d011826a34d3eccd802c652e94b543c1d59500e16b1e93f80d1e625d2e96"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/72_Skarner.ogg",
+          "bytes": 89888,
+          "sha256": "f3ed882baaccd5bfa1681eae9695a3872c574f596dc09a62764b0e5284719a75"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/72_Skarner.ogg",
+          "bytes": 67769,
+          "sha256": "d94db55a78cf7bd304d1c4001a2065f101bb0731d28043c144dcc31099dc6d38"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/skarner.mp3",
+        "bytes": 35108,
+        "sha256": "5a11a5b5fb11d6c6789c4fb995de298cb8e569148943fdcbd320f689e81a1d70"
+      }
+    },
+    "74": {
+      "championId": 74,
+      "classicKey": 60074,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Heimerdinger",
+      "appId": "heimerdinger",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/74_Heimerdinger.ogg",
+          "bytes": 39718,
+          "sha256": "a35c9d5adb51788b41da6d32f3ddc6b094432a7d2c65d847a47bd15aa2ae3db9"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/74_Heimerdinger.ogg",
+          "bytes": 22226,
+          "sha256": "d287a6e6b62ee16b22baa3219982f623357ba25b884c2b42ce942f3978b8cf7b"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/74_Heimerdinger.ogg",
+          "bytes": 33727,
+          "sha256": "4ea8d74724e8d25648f2aab3c55fd56a2bbe523b73891eddec216e7325eeb2ce"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/heimerdinger.mp3",
+        "bytes": 17084,
+        "sha256": "32967b98f37b3ea59a1a08c26fce54439627abb43ba01849970f3279eca9110c"
+      }
+    },
+    "75": {
+      "championId": 75,
+      "classicKey": 60075,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Nasus",
+      "appId": "nasus",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/75_Nasus.ogg",
+          "bytes": 111192,
+          "sha256": "4d85a64f57180ecfbd9436ce4bc0142f1b774956ecfbc2807f3bf07440291a8e"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/75_Nasus.ogg",
+          "bytes": 93802,
+          "sha256": "beec61e7c4e449f66b07cafb71c5067d913860dcf3d08395e8cffc7170f9e015"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/75_Nasus.ogg",
+          "bytes": 87416,
+          "sha256": "e77f12a5c8f8f81ed401b7e7dbcda27b55030c481bab622df97adf7dc1b4f72c"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/nasus.mp3",
+        "bytes": 63007,
+        "sha256": "228a08a96b77e9b2b513e75289ef4d6eb148f3fe796b6d9a98c784cee6a5f697"
+      }
+    },
+    "76": {
+      "championId": 76,
+      "classicKey": 60076,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Nidalee",
+      "appId": "nidalee",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/76_Nidalee.ogg",
+          "bytes": 37500,
+          "sha256": "c391f7be582a2d32fa6faf03f3c8da5cc2ba9f391daf75a17b69550920a49a7b"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/76_Nidalee.ogg",
+          "bytes": 46319,
+          "sha256": "9b815065099445f8d13209eedf16edca0aa2ee38a189371a55f73c92c6fcb6c3"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/76_Nidalee.ogg",
+          "bytes": 41664,
+          "sha256": "43b57d4390e93b5ea2d474841c70c07fb219a3d37f5fac461018108964745a4b"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/nidalee.mp3",
+        "bytes": 16770,
+        "sha256": "2f8f88126c609ad4d3aacaf109e538c4b7b9d6ba577a7f0e37a4e95e23d85ee0"
+      }
+    },
+    "78": {
+      "championId": 78,
+      "classicKey": 60078,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Poppy",
+      "appId": "poppy",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/78_Poppy.ogg",
+          "bytes": 57985,
+          "sha256": "cccc68fd838142a4405cfb2f9067fb3734579412d2fc3f985d83973deb5bc2e4"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/78_Poppy.ogg",
+          "bytes": 77448,
+          "sha256": "1969a9a577bde3a1fd417d4601f5ebb900f861d0839316d17ff72b70ef37cf1b"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/78_Poppy.ogg",
+          "bytes": 41055,
+          "sha256": "879701b6859f7f10febca36e94f0e337eebd95cd05655e8649260dc13a632f98"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/poppy.mp3",
+        "bytes": 13009,
+        "sha256": "643990808ef81e2ba69d66338ce6192442268e2d4c4979ae9f2e85cb2fa8cf32"
+      }
+    },
+    "79": {
+      "championId": 79,
+      "classicKey": 60079,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Gragas",
+      "appId": "gragas",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/79_Gragas.ogg",
+          "bytes": 42281,
+          "sha256": "f429d1074ab3037caa047d690116a9306d745da08f6dac1ced7be7b8108cebfd"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/79_Gragas.ogg",
+          "bytes": 35802,
+          "sha256": "0c4e534a3ebfea15fb208b72e5a5fdeae5f709e34e456e4f271f82c53424da19"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/79_Gragas.ogg",
+          "bytes": 32834,
+          "sha256": "483e685058819356a1ba7e79d9d5783ba431c45116d59484dfd93c1b884f6b00"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/gragas.mp3",
+        "bytes": 18651,
+        "sha256": "ac754fb8f4628e38d6e09dabb25dc167a6b4895aff3bf31ef0d0dce3403d0192"
+      }
+    },
+    "80": {
+      "championId": 80,
+      "classicKey": 60080,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Pantheon",
+      "appId": "pantheon",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/80_Pantheon.ogg",
+          "bytes": 48473,
+          "sha256": "e5e8151703a7623277317dadbcef32dcfdb3c1f8cec4ef229d8b1a09febb5cf0"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/80_Pantheon.ogg",
+          "bytes": 61642,
+          "sha256": "6436652e2d433996e6970323eb15e245b7bb7af3705e6ca245ecada59c17393f"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/80_Pantheon.ogg",
+          "bytes": 45168,
+          "sha256": "c0c17bbd9b98af630582c1dcf8e86c17db2ae0670e246b9611d03fd13e1a9c56"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/pantheon.mp3",
+        "bytes": 20689,
+        "sha256": "5348671c1152914711c2264f68469bb634270df70a0fe2698172bd74c8308d57"
+      }
+    },
+    "81": {
+      "championId": 81,
+      "classicKey": 60081,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Ezreal",
+      "appId": "ezreal",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/81_Ezreal.ogg",
+          "bytes": 45768,
+          "sha256": "ab057e699a0c9213b335dc68d17c64a044502f12cebfe8e947a31e39e0f91086"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/81_Ezreal.ogg",
+          "bytes": 53334,
+          "sha256": "f13f65350e7ce1afe93f59238e5c95c083f5f31ee83b8dc1de16e4e068648abe"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/81_Ezreal.ogg",
+          "bytes": 40847,
+          "sha256": "e452398ad36accb4c9ec2e79fbb422485eb99f220db42e16fb1d0c9ee18a0205"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/ezreal.mp3",
+        "bytes": 12225,
+        "sha256": "4ce1802a805b0dfba0a92d459515ce8407f7878a27934ac1f8057227674b9301"
+      }
+    },
+    "84": {
+      "championId": 84,
+      "classicKey": 60084,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Akali",
+      "appId": "akali",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/84_Akali.ogg",
+          "bytes": 48214,
+          "sha256": "71737789db8d1327ada7affb928a67493727ef0fc5b2af105e2123cf52167428"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/84_Akali.ogg",
+          "bytes": 45968,
+          "sha256": "add740bff24cfade83d95736ec2b64150d776938de5fbefae5cc84bbce7e60b3"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/84_Akali.ogg",
+          "bytes": 29695,
+          "sha256": "a45b57ee198717f5e2d1ddff1984d2337ff74e415926e69e1760b13780d07647"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/akali.mp3",
+        "bytes": 10031,
+        "sha256": "9fd1e26dcde362aab474f678b943eb8f87311e43428c3ed7f58c16cc9a587eac"
+      }
+    },
+    "85": {
+      "championId": 85,
+      "classicKey": 60085,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Kennen",
+      "appId": "kennen",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/85_Kennen.ogg",
+          "bytes": 35493,
+          "sha256": "f64b2ddad9ef3b90d9230256915301d476bd42fb97f6bdb767356a1cffd8b7d7"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/85_Kennen.ogg",
+          "bytes": 35685,
+          "sha256": "72167326f1ede37de56c9fff214486f503619cab82dcda9cade1fff45d4b945f"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/85_Kennen.ogg",
+          "bytes": 26548,
+          "sha256": "c3ea77c8c2f4c95b93e8fd1113ddd5db9669ddc90d8a2de31ea4a005d4b79768"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/kennen.mp3",
+        "bytes": 18024,
+        "sha256": "2fc79bfc17957187a9eb78893591caba7ac31a6f54f9ff9a154750b18f41904e"
+      }
+    },
+    "86": {
+      "championId": 86,
+      "classicKey": 60086,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Garen",
+      "appId": "garen",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/86_Garen.ogg",
+          "bytes": 43695,
+          "sha256": "d088e556a0ffb6c556a6d3211aba9fd076b970b9f7968a6a68d2efd93ef194fd"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/86_Garen.ogg",
+          "bytes": 38012,
+          "sha256": "3f12ef98a4d9202a42b2526fb92b4abbed691ed6fb3e66dc2bb1f60b79db977d"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/86_Garen.ogg",
+          "bytes": 38675,
+          "sha256": "e0653ce26591cd74464235caf680e5e400e3098840de11a526cbd691861a14f0"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/garen.mp3",
+        "bytes": 10501,
+        "sha256": "328e3699264dead72ec73b6964c0bd16e5f129aaf945408f61195c2929c0ce2c"
+      }
+    },
+    "89": {
+      "championId": 89,
+      "classicKey": 60089,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Leona",
+      "appId": "leona",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/89_Leona.ogg",
+          "bytes": 26342,
+          "sha256": "b364e19a5b9e4c5b6d0f063ad68034d7dfed3324b3338ae6573b47ca05097084"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/89_Leona.ogg",
+          "bytes": 23953,
+          "sha256": "d11326e23d535bb238f179746453af303a17c21c68be94bf6ac2ba57ec3c42fc"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/89_Leona.ogg",
+          "bytes": 26945,
+          "sha256": "e442cb696153e52c1134d6de7da2289825ea4a6d9df369ca31345f7f977203d5"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/leona.mp3",
+        "bytes": 12068,
+        "sha256": "f1e85e92c7d27d5f7d284c75832db4d9d776c4a64f28e42d4ebc64469e189730"
+      }
+    },
+    "90": {
+      "championId": 90,
+      "classicKey": 60090,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Malzahar",
+      "appId": "malzahar",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/90_Malzahar.ogg",
+          "bytes": 33988,
+          "sha256": "57f550c44514998b0e326f9114c250b9c8354af36b17d176cc7565f761fd0da4"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/90_Malzahar.ogg",
+          "bytes": 46456,
+          "sha256": "e5d09b7554af0988d26437638f3a16597b3bbe3d512b9a9414076201d89e0c23"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/90_Malzahar.ogg",
+          "bytes": 46173,
+          "sha256": "b57eb34a584264b76de65f368ae123ac20cb205af51554c6678993224c271cf8"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/malzahar.mp3",
+        "bytes": 16143,
+        "sha256": "cc2b6258fde2f887358ef4db394c86c1d9bef4ef850fd44fa55fe3ddcc73ef8d"
+      }
+    },
+    "96": {
+      "championId": 96,
+      "classicKey": 60096,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_KogMaw",
+      "appId": "kogmaw",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/96_KogMaw.ogg",
+          "bytes": 33740,
+          "sha256": "b6a627422c9e5bd932eb9f10f78697aa5cf55ba017717fc5dbb9e5167d9218ca"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/96_KogMaw.ogg",
+          "bytes": 17814,
+          "sha256": "8561b82f3c32cf0bef23bb4047e7614e0f7c9d0ef3c76de585b0b83f7836ef9d"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/96_KogMaw.ogg",
+          "bytes": 24544,
+          "sha256": "6d53f270471613a27a8a42e2eba51dcf79cde31ccd99606c5b29650570e026cf"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/kogmaw.mp3",
+        "bytes": 16457,
+        "sha256": "4985acc382c7084f7f36dcae2b37030ea01f51d199e78585e81c5c10d1dd8c06"
+      }
+    },
+    "98": {
+      "championId": 98,
+      "classicKey": 60098,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Shen",
+      "appId": "shen",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/98_Shen.ogg",
+          "bytes": 27368,
+          "sha256": "c39ca78d61baace5634c9b084893dfdc635273cbf680e8703c6741834a8a94c4"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/98_Shen.ogg",
+          "bytes": 41147,
+          "sha256": "8375bd517a1a31a390455ba166d847537591102e7d390006012943787d175539"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/98_Shen.ogg",
+          "bytes": 37438,
+          "sha256": "c1b8c9817be45eeb15c6817c7b0e33c1a3e9662bf89a5ee8dc9f78df6f230590"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/shen.mp3",
+        "bytes": 10344,
+        "sha256": "0d076faf8e03962faf3217deda0f716b67ae3b5051509b2a294d9c37aab3f3a0"
+      }
+    },
+    "99": {
+      "championId": 99,
+      "classicKey": 60099,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Lux",
+      "appId": "lux",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/99_Lux.ogg",
+          "bytes": 27339,
+          "sha256": "c2f5ee8ab30c8c832cd1315ba9c07c2460e128c0c79b8977f582e21686dc80ef"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/99_Lux.ogg",
+          "bytes": 44419,
+          "sha256": "c9b2a0da5041406b04f0862015f7716e3f122e9c8abf92c5fd1f5cfedc325708"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/99_Lux.ogg",
+          "bytes": 19641,
+          "sha256": "87088b303e5badb61c708fe0cd31fcafc2453e3a6b4a27fee950a25bd9928846"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/lux.mp3",
+        "bytes": 13165,
+        "sha256": "969c5fd7e8ed8c2fdb8adc955cf1d3f2a1bf6fe705ec080bb588c6f93225cd6d"
+      }
+    },
+    "9": {
+      "championId": 9,
+      "classicKey": 60009,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Fiddlesticks",
+      "appId": "fiddlesticks",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/9_FiddleSticks.ogg",
+          "bytes": 37566,
+          "sha256": "f62a925b7f438ccfde2c7b8d09a59fadb015dd616423ab31346fc9c9bfda0565"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/9_FiddleSticks.ogg",
+          "bytes": 58129,
+          "sha256": "249a47f92dbbe866e5465d3253588f2c275503048fb8d43b293a74ec67d72ae9"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/9_FiddleSticks.ogg",
+          "bytes": 34151,
+          "sha256": "f4b690f1b3038c89aa6a34994e6d34735f4cbaa7276d168e3273576df84936f9"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/fiddlesticks.mp3",
+        "bytes": 16770,
+        "sha256": "f39102dbdedb9d4643d68a8551e5afdaf265aafa989da7dd172addc4d41289ec"
+      }
+    },
+    "105": {
+      "championId": 105,
+      "classicKey": 60105,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Fizz",
+      "appId": "fizz",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/105_Fizz.ogg",
+          "bytes": 25239,
+          "sha256": "19c392d26eca829d82af0552f0aace7b008c1b4d21d7b13c7ecd7dc9f5b73508",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champion-choose-vo/105.ogg"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/105_Fizz.ogg",
+          "bytes": 16183,
+          "sha256": "a4704852cd8a0de1fb088a67ce3b178e01b7535d21616c44aae06a195eb304a2",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champion-choose-vo/105.ogg"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/105_Fizz.ogg",
+          "bytes": 18864,
+          "sha256": "e79fd657a339240f343247bbb039746812b939e6db6821785740a7dc0d838223",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/105.ogg"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/fizz.mp3",
+        "bytes": 8620,
+        "sha256": "528e8d9faf740e36bf9566ed92ec46d4042d7154869b0b76ac0077db6481cdd8"
+      }
+    },
+    "104": {
+      "championId": 104,
+      "classicKey": 60104,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Graves",
+      "appId": "graves",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/104_Graves.ogg",
+          "bytes": 32028,
+          "sha256": "b65b6e24cc6258c8a53b3f4eb5fd110acd8994e893a3f8197f2f9bbcebafe459",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champion-choose-vo/104.ogg"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/104_Graves.ogg",
+          "bytes": 25084,
+          "sha256": "fb72ee01e4279e94805444217f259fbba13fd4b9be24b3bb89eb1d3fa55d4e82",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champion-choose-vo/104.ogg"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/104_Graves.ogg",
+          "bytes": 25543,
+          "sha256": "360be02d2a156c8b2a4285fbaadb5a0b67d681a7317b09e0a488ee697537eb3d",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/104.ogg"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/graves.mp3",
+        "bytes": 14263,
+        "sha256": "f54b2c493a98790a5b422b1d4ab252918f84dc6fefea55f28c78c73febded63b"
+      }
+    },
+    "267": {
+      "championId": 267,
+      "classicKey": 60267,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Nami",
+      "appId": "nami",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/267_Nami.ogg",
+          "bytes": 38731,
+          "sha256": "b4a8eb9f284c04357f39f46424da1bbf82cf2c0106f77ba3fa3c8e97f0f9a6bd",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champion-choose-vo/267.ogg"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/267_Nami.ogg",
+          "bytes": 29254,
+          "sha256": "c864ea522c7da0388c2decae3ffa3b44bd5786365cf685f2b8fc64bae2d242f7",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champion-choose-vo/267.ogg"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/267_Nami.ogg",
+          "bytes": 28945,
+          "sha256": "f931c7af77d6fd30f3dd7cf8eed9e82782be5a5bd87ab41455c39d673acc0ea3",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/267.ogg"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/nami.mp3",
+        "bytes": 16300,
+        "sha256": "e31aafee8d56f697d7a40e69bd3bc31833769345da7578a810e3876d8890a4f6"
+      }
+    },
+    "111": {
+      "championId": 111,
+      "classicKey": 60111,
+      "classicSelectionVerified": true,
+      "userApprovedPlayback": true,
+      "classicId": "Jade_Nautilus",
+      "appId": "nautilus",
+      "clips": {
+        "ko_KR": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ko_KR",
+          "file": "audio/champion-pick/ko_KR/111_Nautilus.ogg",
+          "bytes": 58656,
+          "sha256": "50a19c6b74ae3f2c4e5e62dd915be9393606daa88964944ef234c4e68334148e",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champion-choose-vo/111.ogg"
+        },
+        "ja_JP": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "ja_JP",
+          "file": "audio/champion-pick/ja_JP/111_Nautilus.ogg",
+          "bytes": 69948,
+          "sha256": "1a1d3aa959516e28de67b2758d002511dffeaf5335193f0c708c05d95295637b",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champion-choose-vo/111.ogg"
+        },
+        "en_US": {
+          "category": "PICK",
+          "index": 1,
+          "locale": "en_US",
+          "file": "audio/champion-pick/en_US/111_Nautilus.ogg",
+          "bytes": 79553,
+          "sha256": "3d978864740f1201503a1e63cf2aeef59077604eef31144a079519a23381559f",
+          "sourceClassification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+          "sourcePatch": "16.19",
+          "sourceUrl": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/111.ogg"
+        }
+      },
+      "verifiedClip": {
+        "category": "PICK",
+        "index": 1,
+        "sourceLanguage": "und",
+        "file": "audio/champion-pick/verified-26.19/nautilus.mp3",
+        "bytes": 31033,
+        "sha256": "b809ec00ea056be0b85729608e767cd2d35ba9c0ff490a1ca36009f1e441e391"
+      }
+    }
+  },
+  "verifiedSource": {
+    "classification": "CLASSIC_CHAMPION_SELECTION_VOICE",
+    "verificationMethod": "USER_MANUAL_AUDIO_COMPARISON",
+    "result": "72/72 MATCH",
+    "sourceLanguage": "und",
+    "officialClientInternalEventProvenanceVerified": false,
+    "manifestSha256": "ccca4f6a59711367dd6a7e6050db1c7439d817d5fbb729742d246fdecf87725a"
+  },
+  "localizedAdditionSource": {
+    "classification": "LEAGUE_CLIENT_CHAMPION_SELECTION_VOICE",
+    "patch": "16.19",
+    "classicSelectionVerified": false,
+    "championData": {
+      "104": {
+        "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/104.json",
+        "sha256": "007dd5ab18c1e0476a009d60f74b2783a268ce185fb5ba46a4167bb2a43ab5c7"
+      },
+      "105": {
+        "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/105.json",
+        "sha256": "da4ffce52eb7a54e2f8b8d31db624ac2ede386868b2e8cac0668abd40180eb14"
+      },
+      "111": {
+        "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/111.json",
+        "sha256": "d803ed75071a6af9c3d09dfd55dfa8c0e60bf9ccc771a8dcb5baf724754b921c"
+      },
+      "267": {
+        "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/267.json",
+        "sha256": "c566dc878f26d938edfb75ec58f3b4419b0f934139b215bf2939b32b781264ea"
+      }
+    },
+    "classicClientBinding": {
+      "classification": "JADE_CLASSIC_CLIENT_RELATED_PRIME_ITEM_ID",
+      "methodReference": {
+        "path": "classic-data/champions/pick-voice-manifest.json",
+        "clientVersion": "16.17.810.4348",
+        "sha256": "35b6b2a106fec8bba497dc97a1265697c93ef0de0e0af63ffc2b4cf012453bc7"
+      },
+      "champions": {
+        "104": {
+          "classicId": "Jade_Graves",
+          "classicKey": 60104,
+          "relatedPrimeItemId": 104,
+          "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60104.ogg",
+          "localeMetadata": {
+            "ko_KR": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champions/60104.json",
+              "sha256": "44d2a20324247cb595c9a868ea8b3d09e17486319f4aa4bc6ab943bca4078635"
+            },
+            "ja_JP": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champions/60104.json",
+              "sha256": "80d87c594c4496aeffa46eb158ef281e854ee311be9a3e66b388ee723b15962b"
+            },
+            "en_US": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/60104.json",
+              "sha256": "fa0317f8c2db8d829f31ea0b5e68ad48c5aecba8cea901c3cdefc2195415894b"
+            }
+          }
+        },
+        "105": {
+          "classicId": "Jade_Fizz",
+          "classicKey": 60105,
+          "relatedPrimeItemId": 105,
+          "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60105.ogg",
+          "localeMetadata": {
+            "ko_KR": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champions/60105.json",
+              "sha256": "28db22b55213908edbb1b53a65df916e6165a48a36a8be3b38f299da59e4d5f9"
+            },
+            "ja_JP": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champions/60105.json",
+              "sha256": "b736127915f8bfdbad325b8553ce40f59527c0666b4417ba58526ef6a256d45c"
+            },
+            "en_US": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/60105.json",
+              "sha256": "09db0009886a0af3f9b0232af1e8aa8c0698507ad38cfac231750f7542a50189"
+            }
+          }
+        },
+        "111": {
+          "classicId": "Jade_Nautilus",
+          "classicKey": 60111,
+          "relatedPrimeItemId": 111,
+          "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60111.ogg",
+          "localeMetadata": {
+            "ko_KR": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champions/60111.json",
+              "sha256": "712113ed6661345078e82474dacbf2c1f617f6282c4034851a3791a3492d21af"
+            },
+            "ja_JP": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champions/60111.json",
+              "sha256": "31c521d81c7034684cf050510bcbb74ef44b760c957e74fe94e0cc8a2fc63f38"
+            },
+            "en_US": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/60111.json",
+              "sha256": "bb4d330af3ac8256ce35ed88d7f4b8f2650e32c33e4ba12dda03bbda6636f51a"
+            }
+          }
+        },
+        "267": {
+          "classicId": "Jade_Nami",
+          "classicKey": 60267,
+          "relatedPrimeItemId": 267,
+          "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60267.ogg",
+          "localeMetadata": {
+            "ko_KR": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champions/60267.json",
+              "sha256": "906c210a18f80874645701078abd8bffaf46694eeab472d7a57bc51088a6178a"
+            },
+            "ja_JP": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/ja_jp/v1/champions/60267.json",
+              "sha256": "dd2c1fe0b2ed7233311c063ceb51af3f3937117b031988937d067f1b23be2237"
+            },
+            "en_US": {
+              "url": "https://raw.communitydragon.org/16.19/plugins/rcp-be-lol-game-data/global/default/v1/champions/60267.json",
+              "sha256": "b59b1877156407f730c76441b6695efd674b471d5386fe40d33402e34e87f7c5"
+            }
+          }
+        }
+      },
+      "bindingRule": "Classic relatedPrimeItemId -> shared ordinary champion selection OGG"
+    }
+  },
+  "legacyLocalizedSource": {
+    "classification": "ORDINARY_CHAMPION_PICK_NOT_VERIFIED_FOR_CLASSIC",
+    "patch": "26.18",
+    "sourceArchive": "pick_vo/26.18",
+    "importer": {
+      "path": "tools/import_pick_voice_archive.py",
+      "sha256": "93a7af4233d8ff33c42b838eb9d12a6e539448ae5d29c87112b4fe7d169e21c6"
+    },
+    "roster": {
+      "path": "app/src/main/assets/www/data/mode-classic-champions-16.18.1.json",
+      "sha256": "8da1b8e411c21fb8d2981ffb200073e306390bd069b89baf6d13ce3da5c9d022"
+    },
+    "championIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40,
+      41,
+      42,
+      44,
+      45,
+      53,
+      54,
+      55,
+      59,
+      62,
+      63,
+      64,
+      67,
+      72,
+      74,
+      75,
+      76,
+      78,
+      79,
+      80,
+      81,
+      84,
+      85,
+      86,
+      89,
+      90,
+      96,
+      98,
+      99,
+      102,
+      103,
+      114,
+      117
+    ],
+    "locales": [
+      "ko_KR",
+      "ja_JP",
+      "en_US"
+    ],
+    "clipCount": 204
+  }
+}

@@ -1,0 +1,28 @@
+#view .classicRecommendations{box-sizing:border-box;margin:12px 10px 18px;border:1px solid #b69a5a;border-radius:8px;background:#faf6e9;color:#302c22;box-shadow:0 2px 8px #1112;overflow:hidden}
+#view .classicRecommendations summary{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 12px;list-style:none;cursor:pointer;background:linear-gradient(105deg,#efe4c4,#faf6e9);font-size:15px;font-weight:700}
+#view .classicRecommendations summary::-webkit-details-marker{display:none}
+#view .classicRecommendations summary::before{content:'▸';color:#846321;font-size:15px}
+#view .classicRecommendations[open] summary::before{content:'▾'}
+#view .classicRecommendations summary small{margin-left:auto;padding:2px 7px;border:1px solid #c7b683;border-radius:10px;color:#66532e;font-size:11px;font-weight:600;white-space:nowrap}
+#view .classicRecommendations summary:focus-visible{outline:2px solid #377e91;outline-offset:-3px}
+#view .classicRecommendationsBody{padding:10px 12px 14px;border-top:1px solid #d5c699}
+#view .classicRecommendationNote{margin:0 0 12px;padding:8px 10px;border-left:3px solid #b9984e;background:#f4ebd2;color:#51452d;font-size:12px;line-height:1.55;word-break:keep-all}
+#view .classicRecommendationsBody>section{margin:0 0 15px}
+#view .classicRecommendationsBody>section h4{margin:0 0 7px;padding:0 0 5px;border-bottom:1px solid #d9c99f;color:#3d3421;font-size:14px}
+#view .classicRecommendationsBody>section h4 small{margin-left:5px;color:#6c6048;font-size:11px;font-weight:500}
+#view .classicRecommendationGroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr));gap:9px}
+#view .classicRecommendationGroup{min-width:0}
+#view .classicRecommendationGroup h5{display:flex;gap:5px;margin:0 0 4px;color:#69522c;font-size:12px}
+#view .classicRecommendationGroup h5 small{font-size:11px;font-weight:500}
+#view .classicRecommendationGroup ul{display:flex;flex-wrap:wrap;gap:5px;align-items:start;min-height:28px;margin:0;padding:0;list-style:none}
+#view .classicRecommendationChip{box-sizing:border-box;display:inline-flex;align-items:center;gap:5px;max-width:100%;min-height:28px;padding:3px 6px;border:1px solid #d9c99e;border-radius:5px;background:#fffdf6;color:#352e20;font-size:11px;line-height:1.25}
+#view .classicRecommendationChip span{min-width:0;overflow-wrap:anywhere}
+#view .classicRecommendationChip b{flex:none;color:#835c1b;font-size:10px}
+#view .classicRecommendationIcon{flex:none;width:22px;height:22px;object-fit:contain;border-radius:3px;background:#eee7d4}
+#view .classicRecommendationEmpty{color:#837961;font-size:11px}
+#view .classicRecommendationSkillOrder{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;margin:0;padding:0;list-style:none}
+#view .classicRecommendationSkill{display:flex;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:31px;border:1px solid #cfbd8e;border-radius:4px;background:#fffdf5;color:#39301f;font-size:13px}
+#view .classicRecommendationSkill small{color:#7c6b4b;font-size:10px}
+#view .classicRecommendationSkill.ultimate{border-color:#a37743;background:#ecddba;color:#6d3f15}
+#view .classicRecommendationSource{margin:2px 0 0;color:#71654d;font-size:11px;overflow-wrap:anywhere}
+@media(min-width:700px){#view .classicRecommendationSkillOrder{grid-template-columns:repeat(9,minmax(0,1fr))}}
