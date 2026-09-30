@@ -150,6 +150,9 @@ async function main() {
       const nunuPortraitAudio = voicePage.waitForResponse(response =>
         new RegExp(`/audio/classic-voices/localized-26195/${voiceLocale}/[a-f0-9]{64}\\.ogg$`).test(response.url()));
       await nunuCard.click();
+      await voicePage.waitForFunction(expectedName =>
+        location.hash === '#champion/nunu/basic' && document.querySelector('#view h2')?.innerText.includes(expectedName),
+      nunuName, { timeout: 5000 });
       assert.equal((await voicePage.locator('#view').innerText()).split('\n')[1], voiceLocale === 'en_US' ? 'Nunu' : 'ヌヌ · Nunu');
       assert.equal((await nunuPortraitAudio).status(), 200, `${voiceLocale} Nunu Classic portrait audio HTTP status`);
       await voicePage.waitForFunction(before => window.__pcBetaPlayAttempts.slice(before).some(row => row.playing && row.currentTime > 0), previousNunuPlays, { timeout: 5000 });
@@ -186,6 +189,9 @@ async function main() {
     const koreanNunuAudio = koreanPage.waitForResponse(response =>
       response.url().endsWith('/audio/champion-pick/verified-26.19/nunu.mp3'));
     await koreanNunu.click();
+    await koreanPage.waitForFunction(() =>
+      location.hash === '#champion/nunu/basic' && document.querySelector('#view h2')?.innerText.includes('누누'),
+    null, { timeout: 5000 });
     assert.equal((await koreanPage.locator('#view').innerText()).split('\n')[1], '누누 · Nunu');
     assert.equal((await koreanNunuAudio).status(), 200, 'Korean Nunu Classic portrait audio HTTP status');
     await koreanPage.waitForFunction(() => window.__koreanVoicePlayed, null, { timeout: 5000 });
