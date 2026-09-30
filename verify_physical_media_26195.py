@@ -16,8 +16,10 @@ MEDIA = ROOT / 'assets'
 SCREENS = ('champions', 'garen', 'items', 'spells')
 EXPECTED = {f'physical-26195-en-{name}.png' for name in SCREENS} | {'physical-26195-en-tour.mp4'}
 PROVENANCE_NAME = 'physical-26195-en-provenance.json'
-CURRENT_DIR = MEDIA / 'physical-26195-en-r32-raw'
-CURRENT_APK_SHA256 = '6ba4fad5ece9104b7a70f31b8779b6bf1d797601a0df511ce681d4326cd9e560'
+CURRENT_DIR = MEDIA / 'physical-26195-en-r33-raw'
+CURRENT_APK_SHA256 = '7e21ae581db6f06418ea64be70f8cbe956b87654b065c18069f1632eb87a2e45'
+R32_RAW_DIR = MEDIA / 'physical-26195-en-r32-raw'
+R32_APK_SHA256 = '6ba4fad5ece9104b7a70f31b8779b6bf1d797601a0df511ce681d4326cd9e560'
 R31_RAW_DIR = MEDIA / 'physical-26195-en-r31-raw'
 R31_APK_SHA256 = '23d67a7f50ba45dd7d10a4ea20b962aa60efeec5ca0ed3860ed42efbfb53afb9'
 R30_RAW_DIR = MEDIA / 'physical-26195-en-r30-raw'
@@ -73,7 +75,7 @@ def verify_media(media_dir: Path, expected_apk_sha256: str, featured: bool,
         'screenshotMethod': 'adb exec-out screencap -p',
         'videoMethod': 'adb shell screenrecord',
         'routeControl': ('WebView DevTools Runtime.evaluate for still routes; native Android input swipe for screenrecord'
-                         if media_dir in (CURRENT_DIR, R31_RAW_DIR, R30_RAW_DIR) else
+                         if media_dir in (CURRENT_DIR, R32_RAW_DIR, R31_RAW_DIR, R30_RAW_DIR) else
                          'WebView DevTools Runtime.evaluate; same locale application steps as app settings'),
         'audioTrack': False,
     }:
@@ -92,21 +94,24 @@ def verify_media(media_dir: Path, expected_apk_sha256: str, featured: bool,
             'humanReviewed': False, 'publicationReady': False,
         }:
             raise ValueError('Current raw media pending review record mismatch')
-    elif media_dir in (CURRENT_DIR, R31_RAW_DIR):
-        expected_frames = 309 if media_dir == CURRENT_DIR else 295
+    elif media_dir in (CURRENT_DIR, R32_RAW_DIR, R31_RAW_DIR):
+        expected_frames = {CURRENT_DIR: 302, R32_RAW_DIR: 309, R31_RAW_DIR: 295}[media_dir]
+        approved = media_dir in (CURRENT_DIR, R32_RAW_DIR)
         if review != {
             'status': ('CODEX_VISUALLY_REVIEWED_USER_PUBLICATION_APPROVED'
-                       if media_dir == CURRENT_DIR else
+                       if approved else
                        'CODEX_VISUALLY_REVIEWED_PUBLIC_APPROVAL_PENDING'),
             'screensReviewed': len(SCREENS), 'videoFramesReviewed': expected_frames,
             'privateContentObserved': False,
             'androidStatusAndNavigationBarsVisible': True,
             'deviceStatusIconsVisible': True,
-            'humanReviewed': False, 'publicationReady': media_dir == CURRENT_DIR,
-            **({'method': ('Full raw screenshots and all 309 decoded video frames inspected in 18 contact sheets; '
+            'humanReviewed': False, 'publicationReady': approved,
+            **({'method': (f'Full raw screenshots and all {expected_frames} decoded video frames inspected in 18 contact sheets; '
                            'video frames downsampled to 360x780 from 1080x2340'),
                 'userPublicationApproved': True,
                 'publicationScope': 'USER_APPROVED_SITE_MEDIA_PREVIEW_NOT_PLAY_RELEASE_OR_RIGHTS_CLEARANCE'}
+               if approved else {}),
+            **({'publicationApprovalBasis': '2026-09-30 user approval for current site and media publication; continued authorized update'}
                if media_dir == CURRENT_DIR else {}),
         }:
             raise ValueError('Current raw media visual review record mismatch')
@@ -123,7 +128,7 @@ def verify_media(media_dir: Path, expected_apk_sha256: str, featured: bool,
         if (review.get('humanReviewed') is not False or review['screensReviewed'] != len(SCREENS)
             or review.get('method') != expected_method):
             raise ValueError('Physical media visual review record mismatch')
-    if media_dir not in (MEDIA, CURRENT_DIR, R31_RAW_DIR, R30_RAW_DIR, R28_RAW_DIR, PREVIOUS_R22_DIR, R23_RAW_DIR, R24_RAW_DIR, R25_RAW_DIR, R26_RAW_DIR, R27_RAW_DIR):
+    if media_dir not in (MEDIA, CURRENT_DIR, R32_RAW_DIR, R31_RAW_DIR, R30_RAW_DIR, R28_RAW_DIR, PREVIOUS_R22_DIR, R23_RAW_DIR, R24_RAW_DIR, R25_RAW_DIR, R26_RAW_DIR, R27_RAW_DIR):
         if (review['status'] != 'PENDING_PUBLIC_PRIVACY_REVIEW'
             or review.get('statusBarNotificationIconsAndDeviceStateVisible') is not True
             or review.get('privateContentObserved', False) is not None
@@ -278,13 +283,18 @@ def main() -> int:
                            help='Verify preserved r30 raw capture without treating it as published site media')
     selection.add_argument('--candidate-r31', action='store_true',
                            help='Verify preserved r31 raw capture without treating it as the current site or APK')
+    selection.add_argument('--historical-r32', action='store_true',
+                           help='Verify published r32 media with its original APK and review record')
     args = parser.parse_args()
     if (args.historical or args.previous_r22 or args.previous_r21 or args.previous_r20
         or args.candidate_r23 or args.candidate_r24 or args.candidate_r25
         or args.candidate_r26 or args.candidate_r27 or args.candidate_r28 or args.candidate_r30
-        or args.candidate_r31) and args.android_repo is not None:
+        or args.candidate_r31 or args.historical_r32) and args.android_repo is not None:
         parser.error('--android-repo compares only the current capture')
-    if args.candidate_r31:
+    if args.historical_r32:
+        result = verify_media(R32_RAW_DIR, R32_APK_SHA256, False, None)
+        result['capture'] = 'historical-r32-raw'
+    elif args.candidate_r31:
         result = verify_media(R31_RAW_DIR, R31_APK_SHA256, False, None)
         result['capture'] = 'candidate-r31-raw'
     elif args.candidate_r30:
@@ -321,7 +331,7 @@ def main() -> int:
         result['capture'] = 'previous-r20'
     else:
         result = verify_media(CURRENT_DIR, CURRENT_APK_SHA256, True, args.android_repo)
-        result['capture'] = 'current-r32-raw'
+        result['capture'] = 'current-r33-raw'
     print(json.dumps(result))
     return 0
 

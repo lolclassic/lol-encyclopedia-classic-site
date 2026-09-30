@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "classification": "ENGLISH_PHYSICAL_ANDROID_DEVELOPMENT_NOT_PLAY_RELEASE",
+  "appVersion": "26.19.5",
+  "build": {
+    "packageName": "com.lolclassic.encyclopedia.overlaytest.dev",
+    "versionCode": 24,
+    "localAndInstalledApkSha256": "7e21ae581db6f06418ea64be70f8cbe956b87654b065c18069f1632eb87a2e45"
+  },
+  "device": {
+    "model": "SM-S911N",
+    "physical": true,
+    "androidUser": 0,
+    "exactSerialVerifiedLocally": true
+  },
+  "capture": {
+    "locale": "en_US",
+    "offlineRoutes": [
+      "champions",
+      "champion/garen/basic",
+      "items",
+      "spells"
+    ],
+    "screenshotMethod": "adb exec-out screencap -p",
+    "videoMethod": "adb shell screenrecord",
+    "routeControl": "WebView DevTools Runtime.evaluate for still routes; native Android input swipe for screenrecord",
+    "audioTrack": false
+  },
+  "stateRestoration": {
+    "originalLocaleAndRoute": true,
+    "originalForeground": true,
+    "developmentAndProductionApkHashesUnchanged": true,
+    "productionApkSha256": {
+      "base.apk": "beb2cc94a5a43a8a831b8deb12e3b6f6af56b78dab5a97d8ca0f36837b796bd8",
+      "split_config.xxhdpi.apk": "6b98765b55c96de8ece531546a38a897674778598e11cad198cf97f2ed708aaf"
+    }
+  },
+  "privacyReview": {
+    "status": "CODEX_VISUALLY_REVIEWED_USER_PUBLICATION_APPROVED",
+    "screensReviewed": 4,
+    "videoFramesReviewed": 302,
+    "privateContentObserved": false,
+    "androidStatusAndNavigationBarsVisible": true,
+    "deviceStatusIconsVisible": true,
+    "humanReviewed": false,
+    "publicationReady": true,
+    "method": "Full raw screenshots and all 302 decoded video frames inspected in 18 contact sheets; video frames downsampled to 360x780 from 1080x2340",
+    "userPublicationApproved": true,
+    "publicationScope": "USER_APPROVED_SITE_MEDIA_PREVIEW_NOT_PLAY_RELEASE_OR_RIGHTS_CLEARANCE",
+    "publicationApprovalBasis": "2026-09-30 user approval for current site and media publication; continued authorized update"
+  },
+  "files": {
+    "physical-26195-en-champions.png": {
+      "sha256": "0172df5718bb3306040b75069e1c201246f124d402b097b457aea5e83eca301a",
+      "bytes": 2154091,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-garen.png": {
+      "sha256": "8472c47acbda5221710c83568bf50017db0fb6c0f58d498259e7aaa52098366b",
+      "bytes": 587365,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-items.png": {
+      "sha256": "bda61806dbe98255db414385af2f0c3ec42312ecae0c1352c1b8fd7b41a92841",
+      "bytes": 709198,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-spells.png": {
+      "sha256": "99374c9dd505fdf3ff55a25308eccd1160970f35affe395fd97ab3d496778948",
+      "bytes": 628610,
+      "pixels": [
+        1080,
+        2340
+      ]
+    },
+    "physical-26195-en-tour.mp4": {
+      "sha256": "37739422f8bcc56a8a4535da0832ccc0681acab5f70d36264e9c5768b71d42db",
+      "bytes": 2460066,
+      "durationSeconds": 8.87,
+      "frameCount": 302,
+      "audioTrack": false,
+      "pixels": [
+        1080,
+        2340
+      ],
+      "codec": "h264"
+    }
+  }
+}
