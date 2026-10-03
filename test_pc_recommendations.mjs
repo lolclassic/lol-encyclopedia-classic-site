@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createRequire} from 'node:module';
+import vm from 'node:vm';
 
 const require = createRequire(import.meta.url);
 const ui = require('./pc-beta/classic-recommendations-ui.js');
@@ -95,7 +96,10 @@ for (const [champion, entry] of Object.entries(data.entries)) {
   assert.equal(count(html, /class="mnode(?: [^"]*)?"/g), 56, champion);
   assert.equal(count(html, /class="pic mi"/g), 56, champion);
   assert.equal(count(html, /class="masteryLabel"/g), 56, champion);
-  assert.ok(!/<button\b|\bdata-mst=|\bdata-act=|\bdisabled\b|\bon\w+=|\btabindex=/.test(html), champion);
+  assert.equal(count(html, /<button\b/g), 56, champion);
+  assert.equal(count(html, /aria-pressed="true"/g), 1, champion);
+  assert.match(html, /class="classicRecommendationMasterySelection" aria-live="polite" aria-atomic="true"/);
+  assert.ok(!/\bdata-mst=|\bdata-act=|\bdisabled\b|\bon\w+=|\btabindex=/.test(html), champion);
   let total = 0;
   for (const [index, branch] of masteries.branches.entries()) {
     const tree = html.match(new RegExp(`<section class="masteryColumn branch-${index}"[\\s\\S]*?<\\/section>`))?.[0];
@@ -105,7 +109,7 @@ for (const [champion, entry] of Object.entries(data.entries)) {
     const slots = [...tree.matchAll(/<span class="masteryCell(?: empty)?"[^>]*>/g)].map(match => attributes(match[0]));
     assert.deepEqual(slots.map(slot => `${slot['data-row']}:${slot['data-col']}`),
       Array.from({length: 24}, (_, slot) => `${Math.floor(slot / 4)}:${slot % 4}`));
-    const renderedNodes = [...tree.matchAll(/<div class="mnode[^>]*>[\s\S]*?<\/div>/g)];
+    const renderedNodes = [...tree.matchAll(/<button type="button" class="mnode[^>]*>[\s\S]*?<\/button>/g)];
     assert.equal(renderedNodes.length, branch.nodes.length);
     const nodeById = new Map(renderedNodes.map(match => [attributes(match[0])['data-node-id'], match[0]]));
     let branchTotal = 0;
@@ -117,7 +121,9 @@ for (const [champion, entry] of Object.entries(data.entries)) {
       assert.equal(attrs['data-row'], String(node.row));
       assert.equal(attrs['data-col'], String(node.col));
       assert.equal(attrs['data-rank'], String(rank));
-      assert.equal(attrs.role, 'img');
+      assert.equal(attrs.type, 'button');
+      assert.equal(attrs.role, undefined); // Native button semantics support touch and keyboard inspection.
+      assert.equal(attrs['data-recommended-mastery'], escape(node.id));
       assert.equal(attrs['aria-label'], `${escape(node.name)} ${rank}/${node.max}`);
       assert.match(markup, new RegExp(`<em>${rank}/${node.max}<\\/em>`));
       assert.ok(markup.includes(`src="${escape(rank > 0 ? node.iconOn : node.iconOff)}"`));
@@ -144,6 +150,9 @@ for (const [locale, labels] of Object.entries({
   assert.equal(named.length, 56);
   assert.ok(named.every(node => ['o', 'd', 'u'].includes(node.branch)));
   named.forEach(node => assert.ok(html.includes(`<small class="masteryLabel">${locale}:${node.id}</small>`)));
+  const firstSelected = masteries.branches.flatMap(branch => branch.nodes)
+    .find(node => (data.entries.garen.masteries[node.id] || 0) > 0);
+  assert.ok(html.includes(`<b>${locale}:${firstSelected.id}</b><span>${data.entries.garen.masteries[firstSelected.id]}/${firstSelected.max}</span>`));
 }
 assert.equal(ui.renderMasteryTrees(data.entries.garen, masteries, {locale: 'unknown'}), ui.renderMasteryTrees(data.entries.garen, masteries));
 assert.equal(ui.renderMasteryTrees(data.entries.garen, masteries, {names: {masteries: () => ''}}), ui.renderMasteryTrees(data.entries.garen, masteries));
@@ -157,6 +166,7 @@ hostileNode.iconOff = `images/z&<b>"'.png`;
 const escaped = ui.renderMasteryTrees({masteries: {[hostile]: 1}}, hostileMasteries, {names: {masteries: () => hostile}});
 assert.ok(!escaped.includes('<script>') && !escaped.includes('<b>"'));
 assert.ok(escaped.includes(`data-node-id="${escape(hostile)}"`));
+assert.ok(escaped.includes(`data-recommended-mastery="${escape(hostile)}"`));
 assert.ok(escaped.includes(`aria-label="${escape(hostile)} 1/1"`));
 assert.ok(escaped.includes(`src="${escape(hostileNode.iconOn)}"`));
 assert.ok(ui.renderMasteryTrees({masteries: {}}, hostileMasteries).includes(`src="${escape(hostileNode.iconOff)}"`));
@@ -169,6 +179,47 @@ rejectedMasteries.branches[0].nodes[0].iconOff = 'images/rejected.png';
 assert.throws(() => ui.setData(rejected, {...references, masteries: rejectedMasteries}), /Invalid recommended masteries/);
 assert.equal(ui.render('garen'), validHtml, 'Rejected catalogs must preserve captured mastery data');
 assert.equal(JSON.stringify({data, references}), inputBefore);
+
+// Exercise the actual browser-only delegated listener. It reads existing localized text,
+// changes only the overview selection, and has no route to saved mastery allocation.
+const listeners = [];
+const browserDocument = {addEventListener: (eventName, listener) => listeners.push({eventName, listener})};
+const browserContext = {
+  document: browserDocument,
+  localStorage: new Proxy({}, {get() { throw new Error('Recommendation inspection must not access storage'); }}),
+};
+vm.runInNewContext(fs.readFileSync('pc-beta/classic-recommendations-ui.js', 'utf8'), browserContext);
+assert.equal(listeners.length, 1);
+assert.equal(listeners[0].eventName, 'click');
+assert.ok(browserContext.ClassicRecommendationsUI);
+const selectedLabel = {textContent: hostile};
+const selectedPoints = {textContent: '3/4'};
+const detailName = {textContent: 'old name'};
+const detailPoints = {textContent: '0/1'};
+const detail = {querySelector: selector => selector === 'b' ? detailName : detailPoints};
+Object.defineProperty(detail, 'innerHTML', {set() { throw new Error('Unsafe HTML update'); }});
+const sibling = {setAttribute(name, value) { this[name] = value; }};
+const recommendationButton = {
+  setAttribute(name, value) { this[name] = value; },
+  closest: selector => selector === '.classicRecommendationMasteries' ? overview : null,
+  querySelector: selector => selector === '.masteryLabel' ? selectedLabel : selectedPoints,
+};
+const overview = {
+  contains: node => node === recommendationButton,
+  querySelector: selector => selector === '.classicRecommendationMasterySelection' ? detail : null,
+  querySelectorAll: () => [sibling, recommendationButton],
+};
+const recommendationTarget = {closest: selector => selector === 'button[data-recommended-mastery]' ? recommendationButton : null};
+listeners[0].listener({target: recommendationTarget});
+assert.equal(detailName.textContent, hostile);
+assert.equal(detailPoints.textContent, '3/4');
+assert.equal(sibling['aria-pressed'], 'false');
+assert.equal(recommendationButton['aria-pressed'], 'true');
+const detailAfterInspection = {name: detailName.textContent, points: detailPoints.textContent};
+listeners[0].listener({target: {closest: () => null}}); // Saved editor or unrelated clicks are ignored.
+assert.deepEqual({name: detailName.textContent, points: detailPoints.textContent}, detailAfterInspection);
+listeners[0].listener({target: {closest: () => ({closest: () => null})}}); // Matching attribute outside an overview is ignored.
+assert.deepEqual({name: detailName.textContent, points: detailPoints.textContent}, detailAfterInspection);
 
 const spellById = new Map(spells.map(spell => [spell.riotId, spell]));
 const spellChips = html => {
@@ -239,4 +290,4 @@ for (const pair of [
 }
 assert.equal(JSON.stringify({data, references}), inputBefore);
 
-console.log('PASS 72 Classic recommendation cards, summoner spell pairs, and full mastery trees: coordinates, 56 nodes/16 empty slots, ranks/icons/assets/totals, three locales, escaping, immutable input, source safety, and transactional ID/count validation');
+console.log('PASS 72 Classic recommendation cards, summoner spell pairs, and full mastery overviews: coordinates, 56 inspection buttons/16 empty slots, ranks/icons/assets/totals, three locales, escaped datasets, browser selection without storage writes, immutable input, source safety, and transactional ID/count validation');

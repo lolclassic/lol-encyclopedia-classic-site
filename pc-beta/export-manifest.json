@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "classification": "BROWSER_PREVIEW_NOT_ANDROID_APK",
-  "sourceIndexSha256": "c56a8b84b20541c6f9b2ee8faa215206288cc794f596b9521a861434625f70b8",
+  "sourceIndexSha256": "3c11811ec7fffce952da98afb9eb1d6c690f7fbaa53357b2f67b0414eb5bb473",
   "sourceAppJsSha256": "3e2782f808c092eea5fc99020b62fbcdbcc1cea85fa3c27e0bc428f81b1dbb85",
   "communityConnected": false,
   "operatorModulesIncluded": false,
@@ -35545,12 +35545,12 @@
       "bytes": 10438
     },
     "classic-recommendations-ui.css": {
-      "sha256": "1472930c6ee36256861a38e56a01bf4aa415d5dd833371ed98f4eac97a8eb956",
-      "bytes": 7647
+      "sha256": "fecfd2b416e7d89a7c2fbfc82291221743139dfaf9cd287e22d3c7f8ca756526",
+      "bytes": 8984
     },
     "classic-recommendations-ui.js": {
-      "sha256": "3569576bdc92c176003f7f19a28de57c63a3a5aa3938a81b03080a2532103eb9",
-      "bytes": 12583
+      "sha256": "03646ee97b9c84a6b1208852ffff1d609a9fc6b683f7c5f03481bf15e290bf5f",
+      "bytes": 14492
     },
     "classic-reference-ui.css": {
       "sha256": "a7e4e2d76b20e620a2436d2d0a86b095d91e00038e4bfd228315a7bbbdc7b2d4",
@@ -44721,7 +44721,7 @@
       "bytes": 5076
     },
     "index.html": {
-      "sha256": "0fb07a225c279772db0b8b98ae3c98a8db8fdfb62c1843678c9751c1247eaf49",
+      "sha256": "4725d189f05a3f798e009d9f8f96a2c0d8b8b2b83c3381ae2f3cdeb5cccdcf61",
       "bytes": 4148
     },
     "manifest.webmanifest": {
@@ -44762,5 +44762,5 @@
     }
   },
   "fileCount": 11188,
-  "totalBytes": 374819841
+  "totalBytes": 374823087
 }

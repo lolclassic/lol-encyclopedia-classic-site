@@ -2,7 +2,24 @@
 (function (root, factory) {
   const api = factory();
   if (typeof module === 'object' && module.exports) module.exports = api;
-  else root.ClassicRecommendationsUI = api;
+  else {
+    root.ClassicRecommendationsUI = api;
+    // Recommendation buttons only inspect the captured build; they never allocate points.
+    root.document?.addEventListener('click', event => {
+      const button = event.target?.closest?.('button[data-recommended-mastery]');
+      const overview = button?.closest('.classicRecommendationMasteries');
+      if (!overview || !overview.contains(button)) return;
+      const detail = overview.querySelector('.classicRecommendationMasterySelection');
+      const name = button.querySelector('.masteryLabel')?.textContent || '';
+      const points = button.querySelector('em')?.textContent || '';
+      if (!detail) return;
+      overview.querySelectorAll('button[data-recommended-mastery]').forEach(node => {
+        node.setAttribute('aria-pressed', String(node === button));
+      });
+      detail.querySelector('b').textContent = name;
+      detail.querySelector('span').textContent = points;
+    });
+  }
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
@@ -12,7 +29,7 @@
       items: '아이템', runes: '룬', masteries: '특성', skills: '스킬 순서', spells: '추천 소환사 주문', spellNote: '포지션을 기준으로 편집한 참고 추천입니다.',
       start: '시작', early: '초반', core: '핵심', late: '후반',
       mark: '표식', seal: '인장', glyph: '문양', quint: '정수',
-      o: '공격', d: '방어', u: '보조', empty: '추천 자료 없음', none: '배분 없음', level: '레벨',
+      o: '공격', d: '방어', u: '보조', empty: '추천 자료 없음', none: '배분 없음', level: '레벨', tapMastery: '아이콘을 누르면 특성 이름과 포인트를 확인할 수 있습니다.',
       roles: {top:'탑', jungle:'정글', mid:'미드', adc:'원거리 딜러', support:'서포터'},
     },
     ja_JP: {
@@ -20,7 +37,7 @@
       items: 'アイテム', runes: 'ルーン', masteries: 'マスタリー', skills: 'スキル取得順', spells: 'おすすめサモナースペル', spellNote: 'ロールを基に編集した参考のおすすめです。',
       start: '開始', early: '序盤', core: 'コア', late: '終盤',
       mark: '印', seal: '紋章', glyph: '章', quint: '神髄',
-      o: '攻撃', d: '防御', u: '補助', empty: '推奨データなし', none: '割り当てなし', level: 'レベル',
+      o: '攻撃', d: '防御', u: '補助', empty: '推奨データなし', none: '割り当てなし', level: 'レベル', tapMastery: 'アイコンをタップすると名前とポイントを確認できます。',
       roles: {top:'トップ', jungle:'ジャングル', mid:'ミッド', adc:'ボット', support:'サポート'},
     },
     en_US: {
@@ -28,7 +45,7 @@
       items: 'Items', runes: 'Runes', masteries: 'Masteries', skills: 'Skill order', spells: 'Suggested summoner spells', spellNote: 'An editorial reference recommendation based on role.',
       start: 'Start', early: 'Early', core: 'Core', late: 'Late',
       mark: 'Marks', seal: 'Seals', glyph: 'Glyphs', quint: 'Quintessences',
-      o: 'Offense', d: 'Defense', u: 'Utility', empty: 'No recommendation available', none: 'No points allocated', level: 'Level',
+      o: 'Offense', d: 'Defense', u: 'Utility', empty: 'No recommendation available', none: 'No points allocated', level: 'Level', tapMastery: 'Tap an icon to see its name and points.',
       roles: {top:'Top', jungle:'Jungle', mid:'Mid', adc:'Bot', support:'Support'},
     },
   };
@@ -127,6 +144,9 @@
   }
   function renderMasteryTrees(entry, masteries, {locale = 'ko_KR', names = {}} = {}) {
     const t = copy[locale] || copy.ko_KR;
+    const allNodes = branchKeys.flatMap(key => masteries.branches.find(branch => branch.key === key)?.nodes || []);
+    const selectedNode = allNodes.find(node => (entry.masteries[node.id] || 0) > 0) || allNodes[0];
+    let selectedName = '';
     let total = 0;
     const trees = branchKeys.map((key, index) => {
       const branch = masteries.branches.find(row => row.key === key);
@@ -143,17 +163,20 @@
           const namedNode = {...node, branch: key};
           const name = (typeof names.masteries === 'function' && names.masteries(namedNode))
             || node.ko || node.title || node.name || node.en || node.id || '';
+          const selected = node.id === selectedNode?.id;
+          if (selected) selectedName = name;
           const src = rank > 0 ? node.iconOn : node.iconOff;
           const state = rank > 0 ? ` has${rank >= node.max ? ' full' : ''}` : ' muted';
           const picture = src
             ? `<span class="pic mi"><img src="${esc(src)}" alt="" loading="lazy"><i>${esc(String(name).charAt(0))}</i></span>`
             : `<span class="pic noimg mi"><i>${esc(String(name).charAt(0))}</i></span>`;
-          return `<span class="masteryCell" ${position}><div class="mnode${state}" role="img" aria-label="${esc(name)} ${esc(rank)}/${esc(node.max)}" title="${esc(name)}" data-node-id="${esc(node.id)}" ${position} data-rank="${esc(rank)}">${picture}<small class="masteryLabel">${esc(name)}</small><em>${esc(rank)}/${esc(node.max)}</em></div></span>`;
+          return `<span class="masteryCell" ${position}><button type="button" class="mnode${state}" aria-label="${esc(name)} ${esc(rank)}/${esc(node.max)}" aria-pressed="${selected}" title="${esc(name)}" data-recommended-mastery="${esc(node.id)}" data-node-id="${esc(node.id)}" ${position} data-rank="${esc(rank)}">${picture}<small class="masteryLabel">${esc(name)}</small><em>${esc(rank)}/${esc(node.max)}</em></button></span>`;
         }).join('')
       }</div>`).join('');
       return `<section class="masteryColumn branch-${index}" data-branch="${esc(key)}" data-total-rank="${branchTotal}"><div class="masteryColumnHead">${esc(t[key])} <b>${branchTotal}</b></div><div class="masteryTreeGrid">${rows}</div></section>`;
     }).join('');
-    return `<div class="masteryShell classicMastery classicRecommendationMasteries" data-total-rank="${total}"><div class="masteryBoards">${trees}</div></div>`;
+    const selectedRank = selectedNode ? entry.masteries[selectedNode.id] || 0 : 0;
+    return `<div class="masteryShell classicMastery classicRecommendationMasteries" data-total-rank="${total}"><div class="masteryBoards">${trees}</div><div class="classicRecommendationMasterySelection" aria-live="polite" aria-atomic="true"><b>${esc(selectedName)}</b><span>${selectedRank}/${selectedNode?.max || 0}</span></div><p class="classicRecommendationMasteryHint">${esc(t.tapMastery)}</p></div>`;
   }
   function skillOrder(entry, t) {
     return `<ol class="classicRecommendationSkillOrder">${entry.skillOrder.map((skill, index) =>
