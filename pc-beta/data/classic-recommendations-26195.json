@@ -10,6 +10,14 @@
     "confidence": "partially-sourced",
     "caveat": "Editorial recommendation, not a measured most-picked or highest-win-rate build. Data values are adapted as identifiers only; source prose is not copied."
   },
+  "summonerSpellRecommendation": {
+    "classification": "EDITORIAL_ROLE_BASED_REFERENCE",
+    "catalog": "spells.json",
+    "selection": "Editorial reference pairs based on the role already assigned to each Classic recommendation entry.",
+    "verification": "Exact spell IDs come from the bundled Classic (Jade) spells.json catalog. These pairs have not been verified as Riftback recommended summoner spell pairs.",
+    "riftbackPairsVerified": false,
+    "caveat": "Role-based reference pairs, not measured pick-rate, win-rate, or optimal-build statistics."
+  },
   "itemCatalog": "classic-items-26.19.json / 147 shop-facing purchasable items",
   "normalization": {
     "seraphs-embrace": "Archangels Staff is the purchasable precursor; the transformed Seraphs Embrace cannot be bought. The replacement is identified per entry."
@@ -113,6 +121,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "gangplank": {
@@ -204,6 +216,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "gragas": {
@@ -296,6 +312,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "nasus": {
@@ -388,6 +408,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "nunu": {
@@ -486,6 +510,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "nidalee": {
@@ -577,6 +605,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "ryze": {
@@ -671,7 +703,11 @@
         "W",
         "W"
       ],
-      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff"
+      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff",
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
+      ]
     },
     "rammus": {
       "role": "jungle",
@@ -769,6 +805,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "lux": {
@@ -863,6 +903,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "leona": {
@@ -959,6 +1003,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "lulu": {
@@ -1053,6 +1101,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "leesin": {
@@ -1148,6 +1200,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "masteryi": {
@@ -1256,6 +1312,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "malzahar": {
@@ -1348,6 +1408,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "malphite": {
@@ -1443,6 +1507,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "morgana": {
@@ -1534,6 +1602,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "drmundo": {
@@ -1626,6 +1698,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "missfortune": {
@@ -1714,6 +1790,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "veigar": {
@@ -1806,6 +1886,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "vayne": {
@@ -1894,6 +1978,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "brand": {
@@ -1987,6 +2075,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "blitzcrank": {
@@ -2079,6 +2171,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "sion": {
@@ -2165,6 +2261,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "shaco": {
@@ -2261,6 +2361,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "sona": {
@@ -2356,6 +2460,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "soraka": {
@@ -2449,6 +2557,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "skarner": {
@@ -2547,6 +2659,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "sivir": {
@@ -2636,6 +2752,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "singed": {
@@ -2731,6 +2851,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "ahri": {
@@ -2823,6 +2947,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "amumu": {
@@ -2918,6 +3046,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "alistar": {
@@ -3012,6 +3144,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "annie": {
@@ -3104,6 +3240,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "anivia": {
@@ -3196,6 +3336,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "ashe": {
@@ -3289,6 +3433,10 @@
         "R",
         "Q",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "wukong": {
@@ -3382,6 +3530,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "olaf": {
@@ -3478,6 +3630,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "warwick": {
@@ -3573,6 +3729,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "evelynn": {
@@ -3671,6 +3831,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "ezreal": {
@@ -3760,6 +3924,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "jarvaniv": {
@@ -3855,6 +4023,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "janna": {
@@ -3948,6 +4120,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "jax": {
@@ -4040,6 +4216,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "zilean": {
@@ -4131,6 +4311,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "chogath": {
@@ -4225,6 +4409,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "kassadin": {
@@ -4318,7 +4506,11 @@
         "W",
         "W"
       ],
-      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff"
+      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff",
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
+      ]
     },
     "karthus": {
       "role": "mid",
@@ -4411,7 +4603,11 @@
         "E",
         "E"
       ],
-      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff"
+      "itemAdjustment": "transformed_seraphs_embrace_to_purchasable_archangels_staff",
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
+      ]
     },
     "katarina": {
       "role": "mid",
@@ -4502,6 +4698,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "kayle": {
@@ -4593,6 +4793,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "kogmaw": {
@@ -4681,6 +4885,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "corki": {
@@ -4770,6 +4978,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "taric": {
@@ -4864,6 +5076,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "tristana": {
@@ -4953,6 +5169,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "tryndamere": {
@@ -5043,6 +5263,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "twistedfate": {
@@ -5134,6 +5358,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "twitch": {
@@ -5223,6 +5451,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "teemo": {
@@ -5315,6 +5547,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "pantheon": {
@@ -5410,6 +5646,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "fiddlesticks": {
@@ -5504,6 +5744,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "heimerdinger": {
@@ -5598,6 +5842,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "akali": {
@@ -5692,6 +5940,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "kennen": {
@@ -5778,6 +6030,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "shen": {
@@ -5869,6 +6125,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "fiora": {
@@ -5957,6 +6217,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "galio": {
@@ -6047,6 +6311,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "poppy": {
@@ -6134,6 +6402,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerTeleport_Jade"
       ]
     },
     "shyvana": {
@@ -6226,6 +6498,10 @@
         "R",
         "E",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "xinzhao": {
@@ -6318,6 +6594,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerSmite_Jade"
       ]
     },
     "fizz": {
@@ -6408,6 +6688,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerDot_Jade"
       ]
     },
     "graves": {
@@ -6494,6 +6778,10 @@
         "R",
         "W",
         "W"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerHeal_Jade"
       ]
     },
     "nami": {
@@ -6605,6 +6893,10 @@
         "R",
         "Q",
         "E"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     },
     "nautilus": {
@@ -6698,6 +6990,10 @@
         "R",
         "Q",
         "Q"
+      ],
+      "summonerSpells": [
+        "SummonerFlash_Jade",
+        "SummonerExhaust_Jade"
       ]
     }
   }

@@ -232,7 +232,7 @@ async function boot() {
   try {
     const [meta, rawChampions, itemCatalog, crs, ms, sp, cl, classicMedia, appDocuments, runtimeManifest, rawCalculations, calculationManifest, detailMetadata, glossaryData, itemAliases, championReleaseDates, classicNews, patch2619News, baseRawChampions, baseRuntimeManifest, patchUpdates, previousRawChampions, previousRuntimeManifest, englishLabels, backgroundData, skillCompletion, localizedNews, localizedDocuments, effectData, recommendationData] = await Promise.all(
       ['meta', 'mode-classic-champions', 'classic-items-26.19', 'runes-classic', 'classic-masteries-26.19', 'spells', 'classic', 'classic-champion-media', 'app-documents', 'mode-classic-runtime', 'classic-damage-calculations', 'classic-damage-manifest', 'classic-detail-metadata', 'classic-glossary', 'classic-item-aliases', 'classic-champion-release-dates', 'classic-news', 'classic-news-2619', 'mode-classic-champions-16.17.1', 'mode-classic-runtime-16.17.1', 'classic-patch-updates', 'mode-classic-champions-16.18.1', 'mode-classic-runtime-16.18.1', 'classic-english-26.19', 'classic-backgrounds-26.19', 'classic-skill-completion-26.19', 'classic-news-localized-26195', 'app-documents-localized-26195', 'classic-skill-effects-26195', 'classic-recommendations-26195']
-        .map(n => fetch('data/' + n + '.json').then(r => { if (!r.ok) throw new Error(n + '.json HTTP ' + r.status); return ['mode-classic-champions', 'mode-classic-champions-16.17.1', 'mode-classic-champions-16.18.1', 'classic-damage-calculations', 'classic-skill-completion-26.19'].includes(n) ? r.arrayBuffer() : r.json(); })));
+        .map(n => fetch('data/' + n + '.json' + (n === 'classic-recommendations-26195' ? '?v=26.19.5.2' : '')).then(r => { if (!r.ok) throw new Error(n + '.json HTTP ' + r.status); return ['mode-classic-champions', 'mode-classic-champions-16.17.1', 'mode-classic-champions-16.18.1', 'classic-damage-calculations', 'classic-skill-completion-26.19'].includes(n) ? r.arrayBuffer() : r.json(); })));
     META = { ...meta, appVersion: window.__LOLCLASSIC_CONFIG__?.appVersion || meta.appVersion };
     window.ClassicNews.setData(classicNews);
     window.ClassicNews.setLocalizedData(localizedNews);
@@ -277,7 +277,7 @@ async function boot() {
     runes = classicRunes;
     assertClassicMasteries2619(ms);
     MST = ms; spells = sp;
-    window.ClassicRecommendationsUI.setData(recommendationData, { items, runes: classicRunes, masteries: MST });
+    window.ClassicRecommendationsUI.setData(recommendationData, { items, runes: classicRunes, masteries: MST, spells });
     CLASSIC = { ...cl, ids: runtimeManifest.navigationOrder, champCount: champions.length,
       source: 'Riot Data Dragon League Classic ' + runtimeManifest.version,
       sourceUrls: [{ label: 'League Classic', url: runtimeManifest.sourceIndexUrl }],
@@ -2270,7 +2270,7 @@ function legacy(id, tab = 'basic', sub) {
 <h3 class="cvBar">기본 능력치</h3>
 ${(c.rate || []).length === 4 ? `<div class="cvRates dossierRates">${rateDef.map((label, i) => `<div class="cvRate"><span>${localized(label)}</span><b>${c.rate[i] || 0}/10</b></div>`).join('')}</div>` : ''}
 <div class="cvStats">${statOrder.map(r => `<div class="cvS"><span>${localized(r[0])} : </span><b>${r[1] == null ? '-' : r[1]}${r[2] != null ? ` <em>(+${r[2]})</em>` : ''}</b></div>`).join('')}</div>
-${window.ClassicRecommendationsUI.render(c, { locale: appLocale.getLocale(), open: store.get('classicRecommendationsAlwaysOpen26195', false), names: { items: itemName, runes: runeName, masteries: masteryName } })}
+${window.ClassicRecommendationsUI.render(c, { locale: appLocale.getLocale(), open: store.get('classicRecommendationsAlwaysOpen26195', false), names: { items: itemName, runes: runeName, masteries: masteryName, spells: spellName } })}
 <h3 class="cvBar">스킬 정보</h3>
 <div class="cvSkills">${renderSkillCards(c)}</div>
 <div id="tipBox" class="cvTips ${S.showTip === id ? 'on' : ''}">${S.showTip === id ? tipSection(c) : ''}</div>

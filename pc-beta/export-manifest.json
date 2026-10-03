@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "classification": "BROWSER_PREVIEW_NOT_ANDROID_APK",
-  "sourceIndexSha256": "5d01446964277a2f8531c0ee07a09116c157cc028afaea6f8c96afa997cc1c75",
-  "sourceAppJsSha256": "a3bcdb74dfc7d49a944b012eb0b4031f4d2217dc61133d42ebef3b119da4a0ad",
+  "sourceIndexSha256": "bd157dee4e6000e74b4a68d62028b1f3726c32c9736e0236be5f7ccd319894ba",
+  "sourceAppJsSha256": "3e2782f808c092eea5fc99020b62fbcdbcc1cea85fa3c27e0bc428f81b1dbb85",
   "communityConnected": false,
   "operatorModulesIncluded": false,
   "imageCount": 2232,
   "voiceFileCount": 8867,
   "files": {
     "app.js": {
-      "sha256": "a3bcdb74dfc7d49a944b012eb0b4031f4d2217dc61133d42ebef3b119da4a0ad",
-      "bytes": 192663
+      "sha256": "3e2782f808c092eea5fc99020b62fbcdbcc1cea85fa3c27e0bc428f81b1dbb85",
+      "bytes": 192754
     },
     "audio/champion-pick/en_US/102_Shyvana.ogg": {
       "sha256": "aae89ae1bf472cb61cdf54085c8d125eb1094e1143a8c83c779c52c1b08c66f3",
@@ -35545,12 +35545,12 @@
       "bytes": 10438
     },
     "classic-recommendations-ui.css": {
-      "sha256": "7bedacde55d59f97a64929b328d73d92b0b6181c5a3756ffab5a85afaec2302d",
-      "bytes": 3344
+      "sha256": "3aa8f89d1dfabf52bd5ce16e28d74179e89aba34bf1b7937431cb8b394f06723",
+      "bytes": 4879
     },
     "classic-recommendations-ui.js": {
-      "sha256": "3e0659bf3f27b80b3411fb66cb2d07e7963f413df35689de63a020054a68ac3f",
-      "bytes": 9591
+      "sha256": "3569576bdc92c176003f7f19a28de57c63a3a5aa3938a81b03080a2532103eb9",
+      "bytes": 12583
     },
     "classic-reference-ui.css": {
       "sha256": "a7e4e2d76b20e620a2436d2d0a86b095d91e00038e4bfd228315a7bbbdc7b2d4",
@@ -35705,8 +35705,8 @@
       "bytes": 112761
     },
     "data/classic-recommendations-26195.json": {
-      "sha256": "31ff01b51468adb70dbf3ae833cbe9399ab86d39349f16e397b4ec810435e7ab",
-      "bytes": 117150
+      "sha256": "86fccd7b126fd18e0892f9d0b36bbe6ad8a0235e4013a4402b308e3003e134b8",
+      "bytes": 124501
     },
     "data/classic-skill-completion-26.19.json": {
       "sha256": "38b9e9666cd216186c696640a7b43316d786ea3e2d1c91d535063d65f48b6a0d",
@@ -44721,7 +44721,7 @@
       "bytes": 5076
     },
     "index.html": {
-      "sha256": "c28095655a89c111cfd93dca3b63041bbff6a8c2f2c8211e0e1f779514d98e55",
+      "sha256": "0fabe2581817e70d4fd20e048bba37fdb93a13cce241443baa1395ac98c76683",
       "bytes": 4148
     },
     "manifest.webmanifest": {
@@ -44762,5 +44762,5 @@
     }
   },
   "fileCount": 11188,
-  "totalBytes": 374805104
+  "totalBytes": 374817073
 }

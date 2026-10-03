@@ -294,7 +294,7 @@ def html_for_pc(source: str) -> str:
     if description_count != 1:
         raise ValueError('Missing PC Beta description')
     source = source.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: blob:; media-src \'self\' blob:; font-src \'self\' data:; connect-src \'self\'; frame-src \'none\'; object-src \'none\'; base-uri \'self\'">', 1)
-    source = source.replace('</head>', '<link rel="stylesheet" href="pc-beta.css?v=26.19.5-home-caption-20261003">\n</head>', 1)
+    source = source.replace('</head>', '<link rel="stylesheet" href="pc-beta.css?v=26.19.5-mastery-grid-20261003">\n</head>', 1)
     source = source.replace('</body>', '<script src="pc-beta-runtime.js"></script>\n</body>', 1)
     if any(f'src="{name}' in source for name in EXCLUDED_SCRIPTS):
         raise ValueError('Excluded script remains in PC HTML')
