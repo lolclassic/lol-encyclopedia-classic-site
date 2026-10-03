@@ -234,6 +234,14 @@ body.pcBetaWeb.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.cla
   grid-row:2!important}
 body.pcBetaWeb.nostalgia218Fidelity.finalHomeNoScroll.historicalApkReference.classicFantasyArchive>#floatingLegalFooter{
   grid-row:3!important}
+/* Stack poster captions so wrapped descriptions cannot overlap the date. */
+body.pcBetaWeb.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view.homeView>.hm .hmPoster{
+  display:flex!important;flex-direction:column!important;justify-content:flex-end!important;gap:4px!important}
+body.pcBetaWeb.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view.homeView>.hm .hmPoster>span,
+body.pcBetaWeb.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view.homeView>.hm .hmPoster>b,
+body.pcBetaWeb.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view.homeView>.hm .hmPoster>small{
+  position:static!important;flex:0 0 auto!important;min-width:0!important;width:100%!important;
+  margin:0!important;white-space:normal!important;overflow-wrap:anywhere!important}
 @media(max-width:420px){.pcBetaBanner{align-items:flex-start;flex-direction:column;gap:.25rem}}
 """
 
@@ -286,7 +294,7 @@ def html_for_pc(source: str) -> str:
     if description_count != 1:
         raise ValueError('Missing PC Beta description')
     source = source.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: blob:; media-src \'self\' blob:; font-src \'self\' data:; connect-src \'self\'; frame-src \'none\'; object-src \'none\'; base-uri \'self\'">', 1)
-    source = source.replace('</head>', '<link rel="stylesheet" href="pc-beta.css">\n</head>', 1)
+    source = source.replace('</head>', '<link rel="stylesheet" href="pc-beta.css?v=26.19.5-home-caption-20261003">\n</head>', 1)
     source = source.replace('</body>', '<script src="pc-beta-runtime.js"></script>\n</body>', 1)
     if any(f'src="{name}' in source for name in EXCLUDED_SCRIPTS):
         raise ValueError('Excluded script remains in PC HTML')
