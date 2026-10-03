@@ -31,10 +31,28 @@
 #view .classicRecommendationSkill.ultimate{border-color:#a37743;background:#ecddba;color:#6d3f15}
 #view .classicRecommendationSource{margin:2px 0 0;color:#71654d;font-size:11px;overflow-wrap:anywhere}
 @media(min-width:700px){#view .classicRecommendationSkillOrder{grid-template-columns:repeat(9,minmax(0,1fr))}}
-/* Recommendation ranks are read-only and share the existing Classic tree styling. */
+/* Keep the Classic tree positions while making the read-only recommendation compact. */
 body #view .classicRecommendations .classicRecommendationMasteries,
-body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view .classicRecommendations .classicRecommendationMasteries{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;min-height:0!important;margin:0!important;padding:5px!important}
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view .classicRecommendations .classicRecommendationMasteries{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:8px!important;min-height:0!important;margin:0!important;padding:2px!important}
 body #view .classicRecommendationMasteries .masteryBoards,
-body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view .classicRecommendations .classicRecommendationMasteries .masteryBoards{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;min-width:0!important}
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view .classicRecommendations .classicRecommendationMasteries .masteryBoards{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:8px!important;min-width:0!important}
+body #view#view .classicRecommendationMasteries .masteryColumn,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .masteryColumn{min-height:0!important}
+body #view#view .classicRecommendationMasteries .masteryColumnHead,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .masteryColumnHead{padding:4px 3px!important;font-size:11px!important;line-height:1.25!important}
+body #view#view .classicRecommendationMasteries .masteryTreeGrid,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .masteryTreeGrid{gap:3px!important;padding:4px!important}
+body #view#view .classicRecommendationMasteries .masteryRow,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .masteryRow{grid-template-columns:repeat(4,minmax(0,1fr))!important;min-height:68px!important;gap:3px!important}
+body #view#view .classicRecommendationMasteries .mnode,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .mnode{height:auto!important;min-height:68px!important;padding:3px 2px 2px!important;gap:2px!important;overflow:visible!important}
+body #view#view .classicRecommendationMasteries .mnode .pic,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .mnode .pic{box-sizing:border-box!important;width:30px!important;height:30px!important;min-width:0!important;min-height:0!important;flex:none!important}
+body #view#view .classicRecommendationMasteries .mnode img,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .mnode img{box-sizing:border-box!important;width:28px!important;height:28px!important}
+body #view#view .classicRecommendationMasteries .masteryLabel,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .masteryLabel{display:block!important;margin-top:1px!important;overflow:visible!important;white-space:normal!important;-webkit-line-clamp:unset!important;font-size:9px!important;line-height:1.2!important;overflow-wrap:anywhere!important;word-break:keep-all!important}
+body #view#view .classicRecommendationMasteries .mnode em,
+body.nostalgia218Fidelity.historicalApkReference.classicFantasyArchive #view#view .classicRecommendationMasteries .mnode em{position:static!important;align-self:flex-end!important;margin-top:auto!important;height:auto!important;min-height:0!important;width:auto!important;font-size:9px!important;line-height:1.15!important;padding:1px 3px!important}
 #view .classicRecommendationMasteries .mnode{box-sizing:border-box!important;cursor:default!important}
 #view .classicRecommendationMasteries .mnode.muted{opacity:.7!important}
