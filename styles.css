@@ -1544,7 +1544,7 @@ nav a {
 
 /* Keep archive panels and text comfortably inside the viewport. */
 :root {
-  --page-gutter: clamp(1.25rem, 3vw, 2.5rem);
+  --page-gutter: calc(clamp(1.25rem, 3vw, 2.5rem) + 0.5rem);
 }
 
 .site-header,
@@ -1559,6 +1559,40 @@ nav a {
 
 .policy-main {
   width: min(calc(100% - var(--page-gutter) - var(--page-gutter)), 960px);
+}
+
+/* Give text an extra space inside the archive frames. */
+.site-header,
+.archive-heading {
+  padding-inline: 1.5rem;
+}
+
+.feature-card,
+.boundary-grid article,
+.release-grid article,
+.contact-card,
+.contact-notice,
+.policy-main section {
+  padding-inline: 2rem;
+}
+
+.policy-meta {
+  padding-inline: 1.7rem;
+}
+
+.gallery figcaption,
+.media-showcase figcaption {
+  padding-inline: 0.85rem;
+}
+
+.site-footer {
+  padding-inline: 0.5rem;
+}
+
+/* The later .section shorthand resets these framed sections on desktop. */
+.quality-section,
+.roadmap-section {
+  padding-inline: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .data-status {
@@ -1580,7 +1614,7 @@ nav a {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: calc(clamp(1.5rem, 3vw, 2.5rem) + 0.5rem);
   border: 1px solid var(--line);
   background: linear-gradient(125deg, rgba(224, 174, 60, 0.1), rgba(63, 182, 166, 0.05));
 }
@@ -1607,7 +1641,7 @@ nav a {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: calc(clamp(1.5rem, 3vw, 2.5rem) + 0.5rem);
   border: 1px solid var(--line);
   background: linear-gradient(120deg, rgba(63, 182, 166, 0.13), rgba(224, 174, 60, 0.08));
 }
@@ -1635,15 +1669,15 @@ nav a {
   text-align: center;
 }
 
-@media (max-width: 900px) {
-  .quality-section,
-  .roadmap-section {
-    padding-right: clamp(1.25rem, 3vw, 2rem);
-    padding-left: clamp(1.25rem, 3vw, 2rem);
-  }
-}
-
 @media (max-width: 620px) {
+  .site-header {
+    padding-inline: 1.15rem;
+  }
+
+  .policy-main section {
+    padding-inline: 1.5rem;
+  }
+
   .pc-beta-section {
     display: block;
   }
@@ -1662,8 +1696,8 @@ nav a {
   }
 
   .cta-section {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 
   .release-grid {
