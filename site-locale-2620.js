@@ -94,9 +94,9 @@
     "ko": "Android HTTPS 커뮤니티",
     "ja": "Android HTTPS コミュニティ"
   },
-  "26.20 · Candidate under review": {
-    "ko": "26.20 · 후보 버전 검토 중",
-    "ja": "26.20 · 候補版を確認中"
+  "26.20.1 · Available on Google Play": {
+    "ko": "26.20.1 · Google Play 제공 중",
+    "ja": "26.20.1 · Google Play で提供中"
   },
   "Explore Classic 26.20.": {
     "ko": "클래식 26.20을 살펴보세요.",
@@ -462,9 +462,9 @@
     "ko": "Google Play 스토어 페이지",
     "ja": "Google Play ストアページ"
   },
-  "for the published app. The 26.20.1 release changes have been submitted to Google Play and are under review. Approval for public release is not yet confirmed. Store availability does not establish Riot Games approval or distribution authorization.": {
-    "ko": "에서 확인할 수 있습니다. 26.20.1 출시 변경사항을 Google Play 심사에 제출했으며 현재 검토 중입니다. 공개 승인은 아직 확인되지 않았습니다. 스토어 제공 여부가 Riot Games의 승인이나 배포 허가를 의미하지는 않습니다.",
-    "ja": "で確認できます。26.20.1のリリース変更をGoogle Playの審査に提出し、現在審査中です。公開の承認はまだ確認されていません。ストアでの提供は Riot Games の承認や配布許可を意味しません。"
+  "Version 26.20.1 is available on Google Play in eight targeted countries and regions: Korea, Japan, the United States, the United Kingdom, Canada, Australia, New Zealand, and Ireland. Store propagation can take time. Store availability does not establish Riot Games approval or distribution authorization.": {
+    "ko": "26.20.1은 대한민국, 일본, 미국, 영국, 캐나다, 오스트레일리아, 뉴질랜드, 아일랜드의 8개 대상 국가/지역에서 Google Play를 통해 제공됩니다. 스토어 전파에는 시간이 더 걸릴 수 있습니다. 스토어 제공 여부가 Riot Games의 승인이나 배포 허가를 뜻하지는 않습니다.",
+    "ja": "26.20.1は韓国、日本、米国、英国、カナダ、オーストラリア、ニュージーランド、アイルランドの8つの対象国・地域でGoogle Playから提供されています。ストアへの反映には時間がかかる場合があります。ストアでの提供はRiot Gamesの承認や配布許可を示すものではありません。"
   },
   "On Google Play": {
     "ko": "Google Play 공개",
@@ -486,25 +486,21 @@
     "ko": "과거 자료와 HTTPS 커뮤니티는 Riot API 접근과 별도로 운영합니다",
     "ja": "過去の資料と HTTPS コミュニティは Riot API へのアクセスとは別に運用します"
   },
-  "Under development": {
-    "ko": "개발 중",
-    "ja": "開発中"
-  },
-  "26.20 candidate": {
-    "ko": "26.20 후보 버전",
-    "ja": "26.20 候補版"
+  "26.20.1 release": {
+    "ko": "26.20.1 출시",
+    "ja": "26.20.1 リリース"
   },
   "77 champions, 147 shop-listed items, 56 masteries, 16 spells, and 53 runes in the current beta data": {
     "ko": "현재 베타 자료: 챔피언 77명, 상점 표시 아이템 147개, 특성 56개, 주문 16개, 룬 53개",
     "ja": "現在のベータ資料: チャンピオン77体、ショップ掲載アイテム147個、マスタリー56個、スペル16個、ルーン53個"
   },
-  "Korean, Japanese, and English language choices are included in the candidate": {
-    "ko": "후보 버전에 한국어·일본어·영어 선택을 포함했습니다",
-    "ja": "候補版には韓国語・日本語・英語の選択が含まれています"
+  "Korean, Japanese, and English language choices are included in the published 26.20.1 release": {
+    "ko": "한국어·일본어·영어 선택지는 공개된 26.20.1 출시 버전에 포함됩니다",
+    "ja": "韓国語・日本語・英語の選択肢は、公開済みの26.20.1リリースに含まれています"
   },
-  "Google Play review is in progress; production post translation remains pending": {
-    "ko": "Google Play 검토가 진행 중이며 운영 게시글 번역은 아직 준비 중입니다",
-    "ja": "Google Playの審査が進行中で、本番環境の投稿翻訳は引き続き準備中です"
+  "Google Play is active in eight targeted countries and regions; production post translation remains pending": {
+    "ko": "Google Play는 8개 대상 국가/지역에서 제공 중이며 운영 게시글 번역은 아직 준비 중입니다",
+    "ja": "Google Playは8つの対象国・地域で提供中で、本番環境の投稿翻訳は引き続き準備中です"
   },
   "Availability on Google Play does not imply endorsement by Riot Games or approval of a Riot Production API application.": {
     "ko": "Google Play 제공 여부는 Riot Games의 지지나 Riot Production API 신청 승인을 의미하지 않습니다.",

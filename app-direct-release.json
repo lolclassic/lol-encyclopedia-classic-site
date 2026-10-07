@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "packageName": "com.lolclassic.encyclopedia",
+  "releaseStatus": "published",
+  "versionCode": 26,
+  "versionName": "26.20.1",
+  "apkUrl": "https://github.com/lolclassic/lol-encyclopedia-classic-site/releases/download/direct-v26/app-direct.apk",
+  "apkBytes": 384026665,
+  "apkSha256": "4a890c17bd678fb073db2168b698db16552a39148305c9635fe8eb9f68a07ea9"
+}

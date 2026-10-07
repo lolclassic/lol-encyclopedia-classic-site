@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "packageName": "com.lolclassic.encyclopedia.overlaytest.dev",
-  "releaseStatus": "pending",
-  "versionCode": null,
-  "versionName": null,
-  "apkUrl": null,
-  "apkBytes": null,
-  "apkSha256": null
+  "releaseStatus": "published",
+  "versionCode": 26,
+  "versionName": "26.20.1",
+  "apkUrl": "https://github.com/lolclassic/lol-encyclopedia-classic-site/releases/download/dev-v26/app-overlayTest.apk",
+  "apkBytes": 385626704,
+  "apkSha256": "3271d9d5868939d74765c58cb1179cd971dc8f5fabce145c7a0903b10d56f7e0"
 }

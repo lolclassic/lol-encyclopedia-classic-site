@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "packageName": "com.lolclassic.encyclopedia.v26201",
+  "releaseStatus": "published",
+  "versionCode": 26,
+  "versionName": "26.20.1",
+  "apkUrl": "https://github.com/lolclassic/lol-encyclopedia-classic-site/releases/download/review-26201-v26/app-review.apk",
+  "apkBytes": 385610101,
+  "apkSha256": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668"
+}
