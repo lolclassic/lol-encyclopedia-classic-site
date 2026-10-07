@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "classification": "ENGLISH_PHYSICAL_NORMAL_ANDROID_26_20_BETA_NOT_PLAY_RELEASE",
+  "preparedAt": "2026-10-07T02:41:59.072600+00:00",
+  "captureStartedAt": "2026-10-07T02:36:54.827Z",
+  "captureFinishedAt": "2026-10-07T02:37:43.972Z",
+  "app": {
+    "packageName": "com.lolclassic.encyclopedia.v2620",
+    "version": "26.20",
+    "versionCode": 25,
+    "apkSha256": "cfed3a7b2ecad7bb16d3240d7555d17ba9955ee93cb0159cf6fd0a4062bf5b30"
+  },
+  "runtimeInventorySha256": "1abf5fa8fc8a4130410d9b08da58e16f25fb4032d2588c5e5cb23af015f6e312",
+  "device": {
+    "model": "SM-S911N",
+    "physical": true,
+    "exactSerialVerifiedLocally": true,
+    "serialPublished": false,
+    "displayChanged": false
+  },
+  "sourceEvidence": {
+    "privateWorkspaceRelativePath": "outputs/26.20/physical-capture-r6/screenshot-evidence-2620.json",
+    "sha256": "9fd567e318bb7576dcd1167e6a0cca47f1f11bf334e64dccf3986505b8bb346d",
+    "reviewHashRefreshRequired": false
+  },
+  "encoder": {
+    "name": "sharp",
+    "versions": {
+      "aom": "3.14.1",
+      "archive": "3.8.7",
+      "cairo": "1.18.4",
+      "cgif": "0.5.3",
+      "exif": "0.6.26",
+      "expat": "2.8.1",
+      "ffi": "3.5.2",
+      "fontconfig": "2.18.1",
+      "freetype": "2.14.3",
+      "fribidi": "1.0.16",
+      "glib": "2.89.0",
+      "harfbuzz": "14.2.1",
+      "heif": "1.23.0",
+      "highway": "1.4.0",
+      "imagequant": "2.4.1",
+      "lcms": "2.19.1",
+      "mozjpeg": "0826579",
+      "pango": "1.57.1",
+      "pixman": "0.46.4",
+      "png": "1.6.58",
+      "proxy-libintl": "0.5",
+      "rsvg": "2.62.3",
+      "tiff": "732665c",
+      "uhdr": "13a058f",
+      "vips": "8.18.3",
+      "webp": "1.6.0",
+      "xml2": "2.15.3",
+      "zlib-ng": "2.3.3",
+      "sharp": "0.35.2"
+    }
+  },
+  "stateRestoration": {
+    "localeAndRouteRestored": true,
+    "storedLocaleRestored": true,
+    "nativeStorageContentsPrinted": false
+  },
+  "privacyReviewed": true,
+  "visualReviewed": true,
+  "publicationApproved": false,
+  "wholeApkReleaseAuthorizationAsserted": false,
+  "reviewStatus": "LOCAL_CROPPED_MEDIA_REVIEW_PASS_PUBLICATION_PENDING",
+  "files": {
+    "en_US-home-webview.png": {
+      "locale": "en_US",
+      "scene": "home",
+      "route": "home",
+      "sha256": "de9f619ef2310e0871e1b9fe932a466e9e2481522c8a9df5470740651020b088",
+      "bytes": 1301156,
+      "width": 1080,
+      "height": 2116,
+      "rgbRasterSha256": "39cd09582a6f1d3e3460ed04d12a40f5052ddad4f6339695f3a45f8aaeae9627",
+      "captureAPK": "cfed3a7b2ecad7bb16d3240d7555d17ba9955ee93cb0159cf6fd0a4062bf5b30",
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "d6116de5d000a3cad8e1c08fc1183f7ae9d83756afd2032115ff8cbfeda6d5e6",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "sourceRaw": {
+        "sha256": "d6116de5d000a3cad8e1c08fc1183f7ae9d83756afd2032115ff8cbfeda6d5e6",
+        "rgbRasterSha256": "f76cf7705be84cff89c629df2a6b77554a3305e537a3aa8ceeb171a3a59af159",
+        "preservedLocally": true,
+        "width": 1080,
+        "height": 2340
+      },
+      "privacyReviewed": true,
+      "visualReviewed": true
+    },
+    "en_US-new-classic-webview.png": {
+      "locale": "en_US",
+      "scene": "new-classic",
+      "route": "champion/aatrox/basic",
+      "sha256": "19f91868b55e66bef97096d3f7451edbd0fc19a4cf3c2f6a64a5bd96afa0dc4d",
+      "bytes": 493749,
+      "width": 1080,
+      "height": 2116,
+      "rgbRasterSha256": "6f5f715406e869b6bf81b6acc6c7a1dce9f4b74d7b48e105eb645f01fbc9bd34",
+      "captureAPK": "cfed3a7b2ecad7bb16d3240d7555d17ba9955ee93cb0159cf6fd0a4062bf5b30",
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "48de199d755e1c596d018c64fd335d50fb3d6947e8919aae29aaf50aa9b8b1a9",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "sourceRaw": {
+        "sha256": "48de199d755e1c596d018c64fd335d50fb3d6947e8919aae29aaf50aa9b8b1a9",
+        "rgbRasterSha256": "c788bb523481190df8c3a06c01813446f63786cd30b63a865278608b079622d0",
+        "preservedLocally": true,
+        "width": 1080,
+        "height": 2340
+      },
+      "privacyReviewed": true,
+      "visualReviewed": true
+    },
+    "en_US-recommendation-webview.png": {
+      "locale": "en_US",
+      "scene": "recommendation",
+      "route": "champion/garen/basic",
+      "sha256": "101e388f70fa3abc69779b0e7608804a1c0975d3bc1a5414a962564047a025e0",
+      "bytes": 741114,
+      "width": 1080,
+      "height": 2116,
+      "rgbRasterSha256": "179c932cc8bb895bae57e3542ed316faadc15e8602772534865a7d759b1432e5",
+      "captureAPK": "cfed3a7b2ecad7bb16d3240d7555d17ba9955ee93cb0159cf6fd0a4062bf5b30",
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "1a1b0680de6a6e6379b3a26a8dd6a9be3eff8db70556f4ad9befda9c8df860b5",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "sourceRaw": {
+        "sha256": "1a1b0680de6a6e6379b3a26a8dd6a9be3eff8db70556f4ad9befda9c8df860b5",
+        "rgbRasterSha256": "fc0b5e15407aea9a6a05ebac7b24ecf0efe768696fe95517e5c40116e1304194",
+        "preservedLocally": true,
+        "width": 1080,
+        "height": 2340
+      },
+      "privacyReviewed": true,
+      "visualReviewed": true
+    },
+    "en_US-effect-popup-webview.png": {
+      "locale": "en_US",
+      "scene": "effect-popup",
+      "route": "champion/rammus/basic",
+      "sha256": "7318c372fa1c41ea405634335d23c238caabdd2850cb8c6499514511d896d38b",
+      "bytes": 547533,
+      "width": 1080,
+      "height": 2116,
+      "rgbRasterSha256": "021f685f85fa5385d7495573ad3ec66a115c08c3bd750a88781612bb1b93a706",
+      "captureAPK": "cfed3a7b2ecad7bb16d3240d7555d17ba9955ee93cb0159cf6fd0a4062bf5b30",
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "35210b5bbba371704b580cc220a6303bd2826b35881161eccee38b296b512699",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "sourceRaw": {
+        "sha256": "35210b5bbba371704b580cc220a6303bd2826b35881161eccee38b296b512699",
+        "rgbRasterSha256": "370b0134bd2f6436b150b9ac55c2a413945cc000941e2da3d802ffb26f072176",
+        "preservedLocally": true,
+        "width": 1080,
+        "height": 2340
+      },
+      "privacyReviewed": true,
+      "visualReviewed": true
+    },
+    "en_US-feature-tour-webview.mp4": {
+      "path": "en_US-feature-tour-webview.mp4",
+      "sha256": "a7a63d45fdc9a5e0287f32e4f9baaa0cac2231af9fe10b747d20b5502a06465d",
+      "bytes": 1792491,
+      "locale": "en_US",
+      "captureAPK": "cfed3a7b2ecad7bb16d3240d7555d17ba9955ee93cb0159cf6fd0a4062bf5b30",
+      "sourceRaw": {
+        "path": "outputs/26.20/physical-capture-r6/en_US-feature-tour-physical.mp4",
+        "sha256": "3b34da9f716312cdb1d62f5dbc43a41f3c2219e427770d3e6acdff439d294e6e",
+        "preserved": true,
+        "width": 1080,
+        "height": 2340,
+        "durationSeconds": 23.374622,
+        "decodedFrameCount": 738
+      },
+      "rectangle": {
+        "left": 0,
+        "top": 98,
+        "width": 1080,
+        "height": 2116
+      },
+      "requestedSeconds": 30,
+      "actualDurationSeconds": 23.366133,
+      "probe": {
+        "width": 1080,
+        "height": 2116,
+        "durationSeconds": 23.366133,
+        "decodedFrameCount": 738,
+        "audioTrack": false,
+        "videoCodec": "h264",
+        "pixelFormat": "yuv420p",
+        "timeBase": "1/90000",
+        "framePtsIdenticalToRaw": true
+      },
+      "encoder": {
+        "name": "ffmpeg/libx264",
+        "version": "ffmpeg version N-125573-g90436de5e1-20260713 Copyright (c) 2000-2026 the FFmpeg developers",
+        "executableSha256": "2bcc9e639a45e293ee35df3f81796681a22339891cad43d7dee71655c39e43b6"
+      },
+      "commandTemplate": [
+        "ffmpeg",
+        "-nostdin",
+        "-n",
+        "-i",
+        "<raw source>",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "crop=1080:2116:0:98",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-fps_mode",
+        "passthrough",
+        "-enc_time_base",
+        "demux",
+        "-video_track_timescale",
+        "90000",
+        "-movflags",
+        "+faststart",
+        "<separate cropped output>"
+      ],
+      "operation": "Exact CDP WebView rectangle crop; H.264 re-encode; all 738 decoded frame PTS preserved in 1/90000 timebase; no stretch, reordering or content mask",
+      "privacyReviewed": true,
+      "visualReviewed": true,
+      "publicationApproved": false,
+      "timingAudit": {
+        "sourceFrameCount": 738,
+        "outputFrameCount": 738,
+        "allDecodedFramePtsIdentical": true,
+        "timeBase": "1/90000",
+        "outputTimestampsStrictlyIncreasing": true,
+        "lastFrameDurationDifferenceSeconds": 0.008489,
+        "reason": "Encoder MP4 last-frame sample duration differs; every displayed frame PTS is identical"
+      },
+      "cropEvidence": {
+        "privateWorkspaceRelativePath": "outputs/26.20/site-video-crop-r6.json",
+        "sha256": "c11c23b0a49aba09a53610538bad913a491ecfad5e6225b2d0026cfe58144723"
+      }
+    }
+  },
+  "publicationAuthorized": false,
+  "manualStillReview": {
+    "path": "physical-2620-en-local-review.json",
+    "sha256": "0ee11114fcee23c9a90baea917836fc5c6b8df51fc316136930c70e6b2c7c871",
+    "scope": [
+      "en_US-home-webview.png",
+      "en_US-new-classic-webview.png",
+      "en_US-recommendation-webview.png",
+      "en_US-effect-popup-webview.png"
+    ]
+  },
+  "manualVideoReview": {
+    "privateWorkspaceRelativePath": "outputs/26.20/local-review-2620.final-r6.json",
+    "sha256": "07903b727f0dc5c6a4c2328b1be1fd62a06fe896005ef0f100bb3f4d9f59cd35",
+    "scope": "Only the final cropped video with SHA a7a63d45fdc9a5e0287f32e4f9baaa0cac2231af9fe10b747d20b5502a06465d",
+    "sampledDecodedFrameIndices": [
+      0,
+      691,
+      700,
+      737
+    ],
+    "humanAudioListening": "NOT_PERFORMED"
+  }
+}

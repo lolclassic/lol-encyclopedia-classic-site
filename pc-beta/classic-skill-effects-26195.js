@@ -57,14 +57,14 @@
     ko_KR: [
       ['healingReduction', /고통스러운 상처|치유 감소|회복량 감소|회복 효과를?\s*감소|상처/g],
       ['attackSpeedReduction', /공격\s*속도\s*둔화|공격\s*속도\s*감소/g],
-      ['slow', /둔화|느려집니다|느려지게|느려지는/g],
+      ['slow', /둔화|느려집니다|느려지게|느려지는|늦춥니다|늦추고/g],
       ['stun', /기절|스턴|춤추게/g], ['root', /속박/g], ['fear', /공포|도망/g],
       ['suppression', /제압/g], ['silence', /침묵/g], ['polymorph', /변이/g],
       ['airborne', /공중(?:에|으로)\s*(?:뜹니다|뜨고|띄우|띄워)|띄웁니다/g],
       ['taunt', /도발/g], ['blind', /실명/g], ['charm', /매혹/g],
       ['knockback', /넉백|뒤로\s*밀어내|밀어내고|밀어냅|날려\s*보내|뒤로/g],
       ['pull', /끌어당/g], ['nearsight', /시야\s*범위가\s*감소/g],
-      ['tenacity', /군중\s*제어\s*효과\s*감소/g],
+      ['tenacity', /강인함|군중\s*제어\s*효과\s*감소/g],
       ['shield', /보호막/g], ['immunity', /면역/g],
     ],
     ja_JP: [
@@ -103,7 +103,7 @@
       ['pull', /\b(?:Pull|Pulls|Pulling|Pulled)\b/gi],
       ['nearsight', /\b(?:Nearsight|reduced vision range|sight radius reduced)\b/gi],
       ['stun', /\bdance\b/gi], ['shield', /\b(?:Shield|Shields|Shielded)\b/gi],
-      ['tenacity', /\bCrowd Control Reduction\b/gi],
+      ['tenacity', /\b(?:Tenacity|Crowd Control Reduction)\b/gi],
       ['ghosted', /\bGhosted\b/gi], ['statReduction', /\bshreds?\b/gi],
     ],
   };
@@ -259,16 +259,227 @@
       output.push({start:match.index, end:match.index + match[0].length, id});
     }
   }
+  function addPhraseMatches(text, pattern, id, output, fullText, offset) {
+    // Match an exact visible phrase across inline/value nodes, then decorate
+    // only its intersection with this text node. Protected numeric nodes stay intact.
+    pattern.lastIndex = 0;
+    for (const match of fullText.matchAll(pattern)) {
+      const start = Math.max(0, match.index - offset);
+      const end = Math.min(text.length, match.index + match[0].length - offset);
+      if (end > start && text.slice(start, end).trim()) output.push({start, end, id});
+    }
+  }
+  function addReviewedContextMatches(text, locale, options, found, fullText, offset) {
+    // These aliases come from the current Classic rendered paragraphs. They
+    // override ambiguous nearby stat words without rewriting ability prose.
+    const ability = options.championId + ':' + options.slot;
+    const phrase = (pattern, id) => addPhraseMatches(text, pattern, id, found, fullText, offset);
+    if (ability === 'Jade_Leona:E' && locale === 'ko_KR') phrase(/이동 불가/g, 'root');
+    if (ability === 'Jade_DrMundo:W') {
+      if (locale === 'ko_KR') phrase(/방해 효과의 지속시간을 줄이고/g, 'tenacity');
+      if (locale === 'ja_JP') addMatches(text, /短縮(?:する)?/g, 'tenacity', found, match =>
+        /行動妨害効果の効果時間/.test(sentenceAt(fullText, offset + match.index)));
+    }
+    if (ability === 'Jade_Ahri:E') {
+      if (locale === 'ko_KR') phrase(/증가(?:합니다|시킵니다)?/g, 'damageAmplification');
+      if (locale === 'ja_JP') phrase(/増加する/g, 'damageAmplification');
+      if (locale === 'en_US') phrase(/\bmore damage\b/gi, 'damageAmplification');
+    }
+    if (ability === 'Jade_Tristana:E' && locale === 'ko_KR')
+      phrase(/감소시킵니다/g, 'healingReduction');
+    if (['Jade_Ezreal:W','Jade_MasterYi:W'].includes(ability) && locale === 'ko_KR')
+      phrase(/회복하고/g, 'healing');
+    if (ability === 'Jade_Lulu:R' && locale === 'ko_KR') phrase(/부여하고/g, 'healthIncrease');
+    if (ability === 'Jade_Akali:P') {
+      const vamp = {ko_KR:/주문 흡혈/g, ja_JP:/スペルヴァンプ/g, en_US:/\bSpell Vamp\b/gi}[locale];
+      phrase(vamp, 'spellVampGain');
+    }
+    if (['Jade_Garen:Q','Jade_Evelynn:W'].includes(ability)) {
+      const removal = {ko_KR:/둔화 효과(?:가|를)?\s*(?:제거|해제)(?:됩니다|하고)/g,
+        ja_JP:/スロウ効果を解除し/g, en_US:/\b(?:breaks free from|removes) all slows affecting (?:him|her)\b/gi}[locale];
+      phrase(removal, 'cleanse');
+    }
+    if (ability === 'Jade_Karthus:W' && locale === 'ko_KR') {
+      addMatches(text, /감소합니다/g, 'moveSpeedMagicResistReduction', found, match =>
+        /이동 속도와 마법 저항력/.test(sentenceAt(fullText, offset + match.index)));
+    }
+    if (['Jade_Nunu:E','Jade_LeeSin:E'].includes(ability)) {
+      const pattern = {ko_KR:/감소(?:시킵니다|합니다|한)|둔화/g,
+        ja_JP:/低下(?:させる|した)?/g, en_US:/\bSlowing\b/gi}[locale];
+      addMatches(text, pattern, 'moveAttackSpeedReduction', found, match => {
+        const sentence = sentenceAt(fullText, offset + match.index);
+        return locale === 'ko_KR' ? /이동 속도(?:와| 및) 공격 속도/.test(sentence)
+          : locale === 'ja_JP' ? /移動速度.*攻撃速度/.test(sentence)
+            : /Movement(?: Speed)? and Attack Speed/.test(sentence);
+      });
+      // Nunu's exact tooltip separates the Movement Speed slow from its attack-speed debuff.
+      if (ability === 'Jade_Nunu:E') {
+        const attack = {ko_KR:/감소시킵니다/g, ja_JP:/低下させる/g, en_US:/\bAttack Speed\b/gi}[locale];
+        phrase(attack, locale === 'ja_JP' ? 'moveAttackSpeedReduction' : 'attackSpeedReduction');
+      }
+    }
+    if (ability === 'Jade_Malphite:E' && locale === 'ko_KR') phrase(/감소시킵니다/g, 'attackSpeedReduction');
+    if (ability === 'Jade_Tryndamere:W' && locale === 'ko_KR') {
+      phrase(/감소시킵니다/g, 'attackDamageReduction');
+      phrase(/감소합니다/g, 'slow');
+    }
+    const poisons = ['Jade_Gangplank:P','Jade_Shaco:E','Jade_Teemo:E','Jade_Teemo:R',
+      'Jade_Twitch:P','Jade_Twitch:W','Jade_Twitch:E','Jade_Singed:Q'];
+    if (poisons.includes(ability)) {
+      phrase({ko_KR:/중독|맹독|독 구름/g, ja_JP:/毒状態|毒に侵し|毒(?=を付与)|スゴイ毒ダ！/g,
+        en_US:/\b(?:poison(?:s|ed|ing)?|infect|Deadly Venom|poison cloud)\b/gi}[locale], 'poison');
+    }
+    if (ability === 'Jade_Teemo:R' && locale === 'ko_KR') phrase(/독이 퍼져/g, 'poison');
+    if (ability === 'Jade_Caitlyn:W' && locale === 'ko_KR')
+      phrase(/위치를 드러냅니다/g, 'enemyReveal');
+    const reveal = {ko_KR:/위치(?:를|가)?\s*드러(?:내|낸|냅니다|납니다)|모든 적 챔피언의 위치/g,
+      ja_JP:/可視化(?:する|された)?|可視状態|可視化/g, en_US:/\breveals?\b/gi}[locale];
+    if (options.championId !== 'Jade_Akali') addMatches(text, reveal, 'enemyReveal', found, match =>
+      /적|대상|敵|対象|enem|target|mark/i.test(sentenceAt(fullText, offset + match.index)));
+    if (ability === 'Jade_Shaco:E' && locale === 'ko_KR') phrase(/빗나갈 확률/g, 'accuracyReduction');
+  }
+  function addAuditedAliases(text, locale, options, found, fullText, offset) {
+    // Finite current Classic phrases audited against actual rendered HTML in
+    // outputs/26.20/skill-effects-semantic-audit-r8/confirmed-findings.json.
+    // These aliases only decorate existing unprotected node intersections.
+    const ability = options.championId + ':' + options.slot;
+    const phrase = (pattern, id) => addPhraseMatches(text, pattern, id, found, fullText, offset);
+    const rules = {
+      'Jade_Taric:W': {ja_JP:[[/低下させる/g,'armorReduction']]},
+      'Jade_Sion:P': {ja_JP:[[/軽減する/g,'damageReduction']],en_US:[[/\breduce incoming Attack Damage\b/gi,'damageReduction']]},
+      'Jade_Graves:W': {ja_JP:[[/視界の範囲が縮小する/g,'nearsight']]},
+      'Jade_Malphite:Q': {ja_JP:[[/奪う/g,'slow']],en_US:[[/\bsteals\b/gi,'slow']]},
+      'Jade_Poppy:E': {ja_JP:[[/押し進める/g,'knockback']],en_US:[[/\bcarrying them a short distance\b/gi,'knockback']]},
+      'Jade_Singed:E': {ja_JP:[[/背後に放り投げ/g,'knockback']],en_US:[[/\bflings an enemy over his shoulder\b/gi,'knockback']]},
+      'Jade_Shyvana:R': {en_US:[[/\bknocked toward her target location\b/gi,'knockback']]},
+      'Jade_Skarner:R': {ja_JP:[[/引きずり回す/g,'pull']],en_US:[[/\bdrag his helpless victim around\b/gi,'pull']]},
+      'Jade_Anivia:R': {en_US:[[/\bAttack and Movement Speed\b/gi,'moveAttackSpeedReduction']]},
+      'Jade_Kayle:R': {ja_JP:[[/無敵状態にする/g,'invulnerability']],en_US:[[/\bmaking them Invulnerable\b/gi,'invulnerability']]},
+      'Jade_Poppy:R': {ja_JP:[[/対象以外の敵からのダメージとスキルを受けなくなる/g,'immunity']]},
+      'Jade_LeeSin:W': {en_US:[[/\bshielding\b/gi,'shield']]},
+      'Jade_Lux:W': {en_US:[[/\bshielding\b/gi,'shield']]},
+      'Jade_Zilean:W': {en_US:[[/\breduces all of his other Ability cooldowns\b/gi,'cooldown']]},
+      'Jade_Gangplank:W': {en_US:[[/\bclears any crowd control effects on him\b/gi,'cleanse']]},
+      'Jade_Alistar:E': {ja_JP:[[/回復する/g,'healing']],en_US:[[/\brestoring\b/gi,'healing']]},
+      'Jade_Soraka:W': {ja_JP:[[/回復し/g,'healing']],en_US:[[/\brestores\b/gi,'healing']]},
+      'Jade_Soraka:R': {ja_JP:[[/回復する/g,'healing']],en_US:[[/\brestore\b/gi,'healing']]},
+      'Jade_Ezreal:W': {en_US:[[/\brestore\b/gi,'healing']]},
+      'Jade_Lulu:R': {en_US:[[/\bgains\b/gi,'healthIncrease']]},
+      'Jade_Fiora:E': {en_US:[[/\bgrants Fiora\b/gi,'moveSpeedIncrease']]},
+      'Jade_Karma:W': {en_US:[[/\bgain 10\/12\/14\/16\/18\/20% move speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Kennen:E': {en_US:[[/\bgaining 100% Move Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_KogMaw:P': {en_US:[[/\bincreases his Move Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Nidalee:R': {en_US:[[/\bgaining 20 Movement Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Quinn:R': {en_US:[[/\bgains 80\/90\/100% Move Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Ryze:R': {en_US:[[/\b60\/70\/80 Move Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Sona:E': {en_US:[[/\bGrants nearby allies (?:8\/11\/14\/17\/20|6\/8\/10\/12\/14%) Move Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Twitch:Q': {en_US:[[/\bgaining 20% Move Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Wukong:R': {en_US:[[/\bgains Move Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_Teemo:W': {en_US:[[/\bgaining 20\/28\/36\/44\/52% Movement Speed\b/gi,'moveSpeedIncrease']]},
+      'Jade_XinZhao:W': {en_US:[[/\bgaining 40\/50\/60\/70\/80% Attack Speed\b/gi,'attackSpeedIncrease'],[/\brestore\b/gi,'healing']]},
+      'Jade_Aatrox:P': {en_US:[[/\bgaining 1% Attack Speed\b/gi,'attackSpeedIncrease']]},
+      'Jade_Aatrox:R': {en_US:[[/\bgaining 175 Attack Range\b/gi,'rangeIncrease']]},
+      'Jade_Tristana:P': {ja_JP:[[/増加する/g,'rangeIncrease']]},
+      'Jade_Fizz:P': {en_US:[[/\bless damage from basic attacks\b/gi,'damageReduction']]},
+      'Jade_Jax:E': {en_US:[[/\bless damage from area of effect Abilities\b/gi,'damageReduction']]},
+      'Jade_Poppy:P': {ja_JP:[[/軽減される/g,'damageReduction']],en_US:[[/\bis reduced by 50%/gi,'damageReduction']]},
+      'Jade_Chogath:P': {ja_JP:[[/回復する/g,'healing']]},
+      'Jade_Sion:E': {ja_JP:[[/最大体力が1\/1\.5\/2\/2\.5\/3増加する/g,'healthIncrease']]},
+    };
+    for (const [pattern, id] of rules[ability]?.[locale] || []) phrase(pattern, id);
+    // The second Fizz displacement is sideways, independent of the first Up.
+    if (ability === 'Jade_Fizz:R' && locale === 'en_US')
+      phrase(/\bKnocking other enemies aside\b/gi, 'knockback');
+  }
+
+  function reviewedCandidate(candidate, text, locale, options, fullText, offset) {
+    const ability = options.championId + ':' + options.slot;
+    const position = offset + candidate.start;
+    const end = offset + candidate.end;
+    const overlaps = pattern => {
+      pattern.lastIndex = 0;
+      for (const match of fullText.matchAll(pattern))
+        if (position < match.index + match[0].length && match.index < end) return true;
+      return false;
+    };
+    const changed = id => ({...candidate, id});
+    if (ability === 'Jade_JarvanIV:Q' && locale === 'en_US' && candidate.id === 'pull'
+        && overlaps(/\bpull Jarvan IV\b/gi)) return null;
+    if (ability === 'Jade_Ahri:Q' && locale === 'en_US' && candidate.id === 'pull'
+        && overlaps(/\bpulls back her orb\b/gi)) return null;
+    if (locale === 'ja_JP') {
+      if (['Jade_DrMundo:E','Jade_Olaf:P'].includes(ability)
+          && overlaps(/減少体力/g) && ['attackDamageReduction','attackSpeedReduction'].includes(candidate.id)) return null;
+      if (ability === 'Jade_Warwick:E' && candidate.id === 'slow'
+          && overlaps(/体力が低下している敵/g)) return null;
+      if (ability === 'Jade_Taric:W' && overlaps(/低下させる/g)) return changed('armorReduction');
+      if (ability === 'Jade_Twitch:R' && candidate.id === 'attackDamageReduction'
+          && overlaps(/ダメージが20%低下する/g)) return null;
+      if (ability === 'Jade_Sion:E' && overlaps(/最大体力が1\/1\.5\/2\/2\.5\/3増加する/g))
+        return changed('healthIncrease');
+    }
+    if (locale === 'en_US') {
+      if (ability === 'Jade_Sion:P' && overlaps(/\breduce incoming Attack Damage\b/gi))
+        return changed('damageReduction');
+      if (ability === 'Jade_Sona:W' && candidate.id === 'healingReduction'
+          && overlaps(/\bmost wounded nearby allied Champion\b/gi)) return null;
+      if (['Jade_Fizz:W','Jade_Katarina:R','Jade_MissFortune:W','Jade_Tristana:E'].includes(ability)
+          && candidate.id === 'healing'
+          && overlaps(/\bReduces the effectiveness of Healing and Regeneration effects\b/gi)) return null;
+      if (ability === 'Jade_Fizz:R' && overlaps(/\bKnocking other enemies aside\b/gi))
+        return changed('knockback');
+      if (ability === 'Jade_Heimerdinger:Q'
+          && overlaps(/\bMaximum turrets increased to 2/gi)) return null;
+    }
+    return candidate;
+  }
+
   function scanText(text, locale, options = {}) {
     locale = localeOf(locale);
     text = String(text || '');
     const fullText = String(options.fullText || text);
     const offset = Number(options.offset) || 0;
     const found = [];
+    addReviewedContextMatches(text, locale, options, found, fullText, offset);
+    addAuditedAliases(text, locale, options, found, fullText, offset);
+    if (locale === 'ja_JP') {
+      addPhraseMatches(text, /クールダウン短縮/g, 'cooldown', found, fullText, offset);
+      addMatches(text, /短縮(?:される|する|し)?/g, 'cooldown', found, match =>
+        /クールダウン(?:が|を)(?:さらに)?(?:\s|[\d./%％秒,]|@[^@\n]+@|\{\{[^{}]+\}\})*$/.test(
+          fullText.slice(Math.max(0, offset + match.index - 120), offset + match.index)));
+    } else if (locale === 'en_US') {
+      addPhraseMatches(text, /\bCooldown Reduction\b/gi, 'cooldown', found, fullText, offset);
+    }
+    // Exact 26.20 Classic source terms. Keep these aliases scoped to the
+    // confirmed ability so other prose retains its existing classification.
+    if (options.championId === 'Jade_Amumu' && options.slot === 'R') {
+      const restriction = {
+        ko_KR:/공격을\s*가하거나\s*이동하지\s*못하게/g,
+        ja_JP:/通常攻撃と移動ができないようにする/g,
+        en_US:/\bpreventing attacks and movement\b/gi,
+      }[locale];
+      addPhraseMatches(text, restriction, 'attackMovementLock', found, fullText, offset);
+    }
+    if (options.championId === 'Jade_Nunu' && options.slot === 'P') {
+      if (locale === 'ja_JP') addPhraseMatches(text, /マナを消費しなくなる/g,
+        'manaCostWaiver', found, fullText, offset);
+      if (locale === 'en_US') addPhraseMatches(text, /\bcost no Mana\b/gi,
+        'manaCostWaiver', found, fullText, offset);
+    }
+    if (options.championId === 'Jade_Quinn' && options.slot === 'R' && locale === 'ko_KR')
+      addMatches(text, /유체화/g, 'ghosted', found);
+    if (options.championId === 'Jade_Irelia' && options.slot === 'P' && locale === 'en_US')
+      addMatches(text, /\bTenacity\b/gi, 'tenacity', found);
+    if (options.championId === 'Jade_Poppy' && options.slot === 'R') {
+      if (locale === 'ja_JP') addMatches(text, /無敵/g, 'immunity', found);
+      if (locale === 'en_US') addMatches(text, /\bImmune\b/gi, 'immunity', found);
+    }
     for (const [id, regex] of direct[locale]) {
       if (id === 'polymorph' && locale === 'ja_JP' && options.championId !== 'Jade_Lulu') continue;
       addMatches(text, regex, id, found, match => {
         const sentence = sentenceAt(fullText, offset + match.index);
+        if (id === 'pull' && options.championId === 'Jade_Amumu' && options.slot === 'Q') return false;
+        if (id === 'knockback' && options.championId === 'Jade_Ashe' && options.slot === 'E') return false;
         if (id === 'shield') return !/破壊|削る|壊す|파괴|제거|break|destroy|shred/i.test(sentence);
         if (id === 'root' && /면역|무시|免疫|受けない|無効|immune/i.test(sentence)) return false;
         if (id === 'immunity' && /방해|이동 불가|군중 제어|行動妨害|移動不能|disabl|immobiliz|crowd control/i.test(sentence)) return false;
@@ -330,6 +541,9 @@
     for (const match of text.matchAll(positiveVerb[locale])) {
       const position = offset + match.index;
       const currentSentence = sentenceAt(fullText, position);
+      if (options.championId === 'Jade_Akali' && options.slot === 'P') continue;
+      if (options.championId === 'Jade_Malphite' && options.slot === 'E' && locale === 'en_US'
+          && /ability gains damage equal to/i.test(currentSentence)) continue;
       if (options.championId === 'Jade_Nasus' && options.slot === 'W'
           && locale === 'en_US' && /^increas/i.test(match[0])) {
         const beforeStat = fullText.slice(Math.max(0, position - 90), position);
@@ -387,9 +601,10 @@
       return beneficialContext[locale].test(local) && beneficialStat.test(local)
         && !/(?:둔화|기절|속박|도발|제압|침묵|스턴|スロウ|スタン|スネア|タウント|サイレンス|slow|stun|root|taunt|silenc)/i.test(local);
     });
-    found.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
+    const reviewed = found.map(row => reviewedCandidate(row, text, locale, options, fullText, offset)).filter(Boolean);
+    reviewed.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
     const selected = [];
-    for (const candidate of found) {
+    for (const candidate of reviewed) {
       if (!selected.some(row => candidate.start < row.end && row.start < candidate.end)) selected.push(candidate);
     }
     return selected.sort((a, b) => a.start - b.start);

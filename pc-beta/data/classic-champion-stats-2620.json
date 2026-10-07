@@ -1,0 +1,1172 @@
+{
+  "schemaVersion": 1,
+  "classification": "EXACT_16_20_JADE_CLIENT_STATS",
+  "version": "16.20.1",
+  "clientVersion": "16.20.824.8524",
+  "clientExecutableSha256": "f6fd49d6fb21c6cec23e329ca8a9a7c0809393cb950daf29ca62cf60a08455c6",
+  "runtimeCombinedSha256": "3afe5ef91f36aee6d245e8d3f1b48e437123d40ea01923d57b8efb7c739f14a5",
+  "sourcePolicy": "exact-jade-client-character-record-field",
+  "champions": {
+    "Jade_Aatrox": {
+      "id": "Jade_Aatrox",
+      "source": {
+        "internalPath": "data/characters/jade_aatrox/jade_aatrox.bin",
+        "binSha256": "06c060f8dc90675608b64223062f7dc7430f1c455284d9830051b2beb2b04f68",
+        "sourceObjectKey": "{9f77f999}",
+        "archive": "DATA/FINAL/Champions/Aatrox.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Ahri": {
+      "id": "Jade_Ahri",
+      "source": {
+        "internalPath": "data/characters/jade_ahri/jade_ahri.bin",
+        "binSha256": "3f3d3eec9bc026219a386846b19ce55d6961fdb9d2d725c5fc321469e9e03b56",
+        "sourceObjectKey": "Characters/Jade_Ahri/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Ahri.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Akali": {
+      "id": "Jade_Akali",
+      "source": {
+        "internalPath": "data/characters/jade_akali/jade_akali.bin",
+        "binSha256": "7fa8a3e8924ff840b1468eb9edcd6f430caea502465d6ec0d0fbcb597f654099",
+        "sourceObjectKey": "Characters/Jade_Akali/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Akali.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Alistar": {
+      "id": "Jade_Alistar",
+      "source": {
+        "internalPath": "data/characters/jade_alistar/jade_alistar.bin",
+        "binSha256": "fc31b9639707e13630514d80a459d359bd65cca1e5b760d64dd6e728e30bee1a",
+        "sourceObjectKey": "Characters/Jade_Alistar/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Alistar.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.619999885559082,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Amumu": {
+      "id": "Jade_Amumu",
+      "source": {
+        "internalPath": "data/characters/jade_amumu/jade_amumu.bin",
+        "binSha256": "8a6b084d940c9ca56015c42081d687d1bd565d8de906716bfe57ce787a7fd02e",
+        "sourceObjectKey": "Characters/Jade_Amumu/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Amumu.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.799999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Anivia": {
+      "id": "Jade_Anivia",
+      "source": {
+        "internalPath": "data/characters/jade_anivia/jade_anivia.bin",
+        "binSha256": "6c9ca63f54ee0824e3ee62867dd095e0ef173ab28ca2dc2c7ba5d6d038397fe2",
+        "sourceObjectKey": "Characters/Jade_Anivia/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Anivia.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Annie": {
+      "id": "Jade_Annie",
+      "source": {
+        "internalPath": "data/characters/jade_annie/jade_annie.bin",
+        "binSha256": "15a51b65897244fbc42b5102712c933540af2ec1b1a3fc41fa7699b50a3cf728",
+        "sourceObjectKey": "Characters/Jade_Annie/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Annie.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.625,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Ashe": {
+      "id": "Jade_Ashe",
+      "source": {
+        "internalPath": "data/characters/jade_ashe/jade_ashe.bin",
+        "binSha256": "9af2a045250e5aed664de6feee43ecaa2fbbad387bf27078e848588b2c3fd54f",
+        "sourceObjectKey": "Characters/Jade_Ashe/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Ashe.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.8499999046325684,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Blitzcrank": {
+      "id": "Jade_Blitzcrank",
+      "source": {
+        "internalPath": "data/characters/jade_blitzcrank/jade_blitzcrank.bin",
+        "binSha256": "e7b3ea35c0e0b1ce3be941595eb0ac162bdfa264373f6e657b7a175896744de9",
+        "sourceObjectKey": "Characters/Jade_Blitzcrank/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Blitzcrank.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Brand": {
+      "id": "Jade_Brand",
+      "source": {
+        "internalPath": "data/characters/jade_brand/jade_brand.bin",
+        "binSha256": "bb4eeddcd508df76f797fdebc41cff106468ed3ae85caba61181f934f920b065",
+        "sourceObjectKey": "Characters/Jade_Brand/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Brand.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Caitlyn": {
+      "id": "Jade_Caitlyn",
+      "source": {
+        "internalPath": "data/characters/jade_caitlyn/jade_caitlyn.bin",
+        "binSha256": "3ec7decf1c2c34649afd5675309843831f2160861dbe0f175a5eb443c4565af0",
+        "sourceObjectKey": "{9d4f2ef8}",
+        "archive": "DATA/FINAL/Champions/Caitlyn.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Chogath": {
+      "id": "Jade_Chogath",
+      "source": {
+        "internalPath": "data/characters/jade_chogath/jade_chogath.bin",
+        "binSha256": "245af04af179d7edc4410c5b0f32c7d1ac752fc64c907f859f4b3417f84d932e",
+        "sourceObjectKey": "Characters/Jade_Chogath/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Chogath.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 4.199999809265137,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Corki": {
+      "id": "Jade_Corki",
+      "source": {
+        "internalPath": "data/characters/jade_corki/jade_corki.bin",
+        "binSha256": "4bb298033d4fc96bcbc4ffae3b5b37fb5801fe93b23c523088775c74a63417c2",
+        "sourceObjectKey": "Characters/Jade_Corki/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Corki.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_DrMundo": {
+      "id": "Jade_DrMundo",
+      "source": {
+        "internalPath": "data/characters/jade_drmundo/jade_drmundo.bin",
+        "binSha256": "2ec76daa9c6398eb492c57da9cc5b3c541793f475e0ea1af9be75d2d2d2a4dde",
+        "sourceObjectKey": "Characters/Jade_DrMundo/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/DrMundo.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Evelynn": {
+      "id": "Jade_Evelynn",
+      "source": {
+        "internalPath": "data/characters/jade_evelynn/jade_evelynn.bin",
+        "binSha256": "853f198f2d22a16064b7c58c511ffb1fbe8f4ac39ad4d39c2698c2230afdafab",
+        "sourceObjectKey": "Characters/Jade_Evelynn/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Evelynn.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Ezreal": {
+      "id": "Jade_Ezreal",
+      "source": {
+        "internalPath": "data/characters/jade_ezreal/jade_ezreal.bin",
+        "binSha256": "e0fb36414c143cfe546f2b2fe98b8372ffed0a7164e03cdab10ab6598af342af",
+        "sourceObjectKey": "Characters/Jade_Ezreal/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Ezreal.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Fiddlesticks": {
+      "id": "Jade_Fiddlesticks",
+      "source": {
+        "internalPath": "data/characters/jade_fiddlesticks/jade_fiddlesticks.bin",
+        "binSha256": "f3cb2aeb972c24074b957557bfadce4d91ec3bdabbf4cdd6bfb476f5dc943994",
+        "sourceObjectKey": "Characters/Jade_Fiddlesticks/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Fiddlesticks.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.625,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Fiora": {
+      "id": "Jade_Fiora",
+      "source": {
+        "internalPath": "data/characters/jade_fiora/jade_fiora.bin",
+        "binSha256": "d1f13ac84fbca61ce91933120e1f3f4529878accc29ca8c1df7e428b17a8b7b7",
+        "sourceObjectKey": "Characters/Jade_Fiora/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Fiora.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Fizz": {
+      "id": "Jade_Fizz",
+      "source": {
+        "internalPath": "data/characters/jade_fizz/jade_fizz.bin",
+        "binSha256": "2d1a57cb6e14c501ad592d95aa921a7ee0bcfe423f263ebea018dd4ff136399b",
+        "sourceObjectKey": "{b12e2d6f}",
+        "archive": "DATA/FINAL/Champions/Fizz.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Galio": {
+      "id": "Jade_Galio",
+      "source": {
+        "internalPath": "data/characters/jade_galio/jade_galio.bin",
+        "binSha256": "c6cb7a96cc64f6ec5278e251130643a3a37241274780602b27e28321e99891b2",
+        "sourceObjectKey": "Characters/Jade_Galio/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Galio.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Gangplank": {
+      "id": "Jade_Gangplank",
+      "source": {
+        "internalPath": "data/characters/jade_gangplank/jade_gangplank.bin",
+        "binSha256": "f31ba5dbadde93497612c62a38b3c2a6d520490a921011f9d97e865bd67110f7",
+        "sourceObjectKey": "Characters/Jade_Gangplank/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Gangplank.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Garen": {
+      "id": "Jade_Garen",
+      "source": {
+        "internalPath": "data/characters/jade_garen/jade_garen.bin",
+        "binSha256": "e3dab9d06eeab078a93d452293327f8308853aab7028be7dac58079a68eb6320",
+        "sourceObjectKey": "Characters/Jade_Garen/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Garen.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Gragas": {
+      "id": "Jade_Gragas",
+      "source": {
+        "internalPath": "data/characters/jade_gragas/jade_gragas.bin",
+        "binSha256": "600d72a9bd92e0875778e8eff83ec3e36d1ca09f115a48958639de775c97f567",
+        "sourceObjectKey": "Characters/Jade_Gragas/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Gragas.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Graves": {
+      "id": "Jade_Graves",
+      "source": {
+        "internalPath": "data/characters/jade_graves/jade_graves.bin",
+        "binSha256": "8e2ab9fa45e20fcb05eb38ea39aaf309e8352552e0a48574d95dd9ec00146316",
+        "sourceObjectKey": "{7350cddc}",
+        "archive": "DATA/FINAL/Champions/Graves.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Heimerdinger": {
+      "id": "Jade_Heimerdinger",
+      "source": {
+        "internalPath": "data/characters/jade_heimerdinger/jade_heimerdinger.bin",
+        "binSha256": "d3d8bd5d9ccd193b4aa64bcbdb2cbac89789128cb763f9ac4b97666d655ec7cd",
+        "sourceObjectKey": "Characters/Jade_Heimerdinger/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Heimerdinger.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Irelia": {
+      "id": "Jade_Irelia",
+      "source": {
+        "internalPath": "data/characters/jade_irelia/jade_irelia.bin",
+        "binSha256": "96b9f3ade6605cef40728855bc199a3dad4f1d0f4954e11d1cf7b5d42d06ebaf",
+        "sourceObjectKey": "{712ae6ee}",
+        "archive": "DATA/FINAL/Champions/Irelia.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.299999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Janna": {
+      "id": "Jade_Janna",
+      "source": {
+        "internalPath": "data/characters/jade_janna/jade_janna.bin",
+        "binSha256": "0dba8b8882b8cae736ba55bc0577ce0ba4d7d2f9a7e0f13b2708f83a6635d119",
+        "sourceObjectKey": "Characters/Jade_Janna/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Janna.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_JarvanIV": {
+      "id": "Jade_JarvanIV",
+      "source": {
+        "internalPath": "data/characters/jade_jarvaniv/jade_jarvaniv.bin",
+        "binSha256": "65e4fb49b5cbe619327adb1bffcd4fd37f9f2bb0afdbfe795db0972d094074e4",
+        "sourceObjectKey": "Characters/Jade_JarvanIV/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/JarvanIV.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.4000000953674316,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Jax": {
+      "id": "Jade_Jax",
+      "source": {
+        "internalPath": "data/characters/jade_jax/jade_jax.bin",
+        "binSha256": "71bfbeb0f9e839dc1c8636d5731fa8ab82acaecf83d2b0f048f394feda168119",
+        "sourceObjectKey": "Characters/Jade_Jax/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Jax.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Karma": {
+      "id": "Jade_Karma",
+      "source": {
+        "internalPath": "data/characters/jade_karma/jade_karma.bin",
+        "binSha256": "0b37057dfaf076e9e279a12cfd75e6c7c17dcfe60d5dde93249d47eef26968f4",
+        "sourceObjectKey": "{14211e80}",
+        "archive": "DATA/FINAL/Champions/Karma.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.299999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Karthus": {
+      "id": "Jade_Karthus",
+      "source": {
+        "internalPath": "data/characters/jade_karthus/jade_karthus.bin",
+        "binSha256": "9f17a070904dd5a2e0e2dabc784dc37614da789bfbc85bfb7b9525bb023c907b",
+        "sourceObjectKey": "Characters/Jade_Karthus/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Karthus.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.25,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Kassadin": {
+      "id": "Jade_Kassadin",
+      "source": {
+        "internalPath": "data/characters/jade_kassadin/jade_kassadin.bin",
+        "binSha256": "fab1d38f7f968145b48cb560042b1cdcd65eeca35552218a97f2acaa32c1e5df",
+        "sourceObjectKey": "Characters/Jade_Kassadin/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Kassadin.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.9000000953674316,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Katarina": {
+      "id": "Jade_Katarina",
+      "source": {
+        "internalPath": "data/characters/jade_katarina/jade_katarina.bin",
+        "binSha256": "ce0770567b13f2203989f458e86a63faa6527682a2f2fef4db911e92bc6bce9c",
+        "sourceObjectKey": "Characters/Jade_Katarina/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Katarina.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Kayle": {
+      "id": "Jade_Kayle",
+      "source": {
+        "internalPath": "data/characters/jade_kayle/jade_kayle.bin",
+        "binSha256": "12020ff701397ceb6359b275c2ee1e4d4b1ae9f56563c472747e51f7a607a33f",
+        "sourceObjectKey": "Characters/Jade_Kayle/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Kayle.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Kennen": {
+      "id": "Jade_Kennen",
+      "source": {
+        "internalPath": "data/characters/jade_kennen/jade_kennen.bin",
+        "binSha256": "4331e93c3d2fb43248c7738a558d0413b778e704e3831baa2e4f4635ffd3615d",
+        "sourceObjectKey": "Characters/Jade_Kennen/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Kennen.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.299999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_KogMaw": {
+      "id": "Jade_KogMaw",
+      "source": {
+        "internalPath": "data/characters/jade_kogmaw/jade_kogmaw.bin",
+        "binSha256": "4f8e45eec519e2efced4bda7574815ebfb5b84f59b91dd8008b886b6001e56ee",
+        "sourceObjectKey": "Characters/Jade_KogMaw/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/KogMaw.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_LeeSin": {
+      "id": "Jade_LeeSin",
+      "source": {
+        "internalPath": "data/characters/jade_leesin/jade_leesin.bin",
+        "binSha256": "c503593c3ce218ccf51d53bc328b6a8cec5c098ee658b882bb85307b4a2a9bff",
+        "sourceObjectKey": "Characters/Jade_LeeSin/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/LeeSin.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Leona": {
+      "id": "Jade_Leona",
+      "source": {
+        "internalPath": "data/characters/jade_leona/jade_leona.bin",
+        "binSha256": "4539a182631420412c6a8fa961c65e23f30e2ec1c8f1bf19a3601bbabae2937a",
+        "sourceObjectKey": "Characters/Jade_Leona/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Leona.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Lulu": {
+      "id": "Jade_Lulu",
+      "source": {
+        "internalPath": "data/characters/jade_lulu/jade_lulu.bin",
+        "binSha256": "3e2748747c7323119d7af5ff76c3733e94f22e32f9583c41635d1189772a101e",
+        "sourceObjectKey": "Characters/Jade_Lulu/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Lulu.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.5999999046325684,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Lux": {
+      "id": "Jade_Lux",
+      "source": {
+        "internalPath": "data/characters/jade_lux/jade_lux.bin",
+        "binSha256": "d84d17a77e0bd94085490ffe86da245cb47cae96b2a3d43e4b23edf2f3693933",
+        "sourceObjectKey": "Characters/Jade_Lux/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Lux.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.299999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Malphite": {
+      "id": "Jade_Malphite",
+      "source": {
+        "internalPath": "data/characters/jade_malphite/jade_malphite.bin",
+        "binSha256": "3b5b3822db0d359dfc8023b2440d4cbda58cda1cd86c5335c1b75d8082c8eaf1",
+        "sourceObjectKey": "Characters/Jade_Malphite/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Malphite.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Malzahar": {
+      "id": "Jade_Malzahar",
+      "source": {
+        "internalPath": "data/characters/jade_malzahar/jade_malzahar.bin",
+        "binSha256": "f2fbb02eee5b89cc85916fc11358621c6fbae73adf338b05f67b9cdade113d8f",
+        "sourceObjectKey": "Characters/Jade_Malzahar/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Malzahar.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_MasterYi": {
+      "id": "Jade_MasterYi",
+      "source": {
+        "internalPath": "data/characters/jade_masteryi/jade_masteryi.bin",
+        "binSha256": "e5500dceca591c6af0023e3f6d4440541ba9285b1e25c626917d83c15d88d4ca",
+        "sourceObjectKey": "Characters/Jade_MasterYi/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/MasterYi.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0999999046325684,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_MissFortune": {
+      "id": "Jade_MissFortune",
+      "source": {
+        "internalPath": "data/characters/jade_missfortune/jade_missfortune.bin",
+        "binSha256": "d3c03c5c2d673169f7690fdcb0e172be901aca54f61cb362350ca0922d04956d",
+        "sourceObjectKey": "Characters/Jade_MissFortune/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/MissFortune.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Morgana": {
+      "id": "Jade_Morgana",
+      "source": {
+        "internalPath": "data/characters/jade_morgana/jade_morgana.bin",
+        "binSha256": "1ac2f195ea9ebec81a7e469f7c28bf3bba0a03774805316674f47aa277c333ec",
+        "sourceObjectKey": "Characters/Jade_Morgana/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Morgana.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Nami": {
+      "id": "Jade_Nami",
+      "source": {
+        "internalPath": "data/characters/jade_nami/jade_nami.bin",
+        "binSha256": "fc3c652cce369fcd6996ecc220b229048487db1eda45293f21311be62f53c96d",
+        "sourceObjectKey": "{2e97ef0d}",
+        "archive": "DATA/FINAL/Champions/Nami.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0999999046325684,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Nasus": {
+      "id": "Jade_Nasus",
+      "source": {
+        "internalPath": "data/characters/jade_nasus/jade_nasus.bin",
+        "binSha256": "b2369fb27d88d71d0a9ac8fe10fc3a14b57294694ab44999e376c78fc4034abb",
+        "sourceObjectKey": "Characters/Jade_Nasus/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Nasus.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Nautilus": {
+      "id": "Jade_Nautilus",
+      "source": {
+        "internalPath": "data/characters/jade_nautilus/jade_nautilus.bin",
+        "binSha256": "e34aac3da3e436416f34c3511d817ea6da58223b8ebf6ede9fbd596554c8d35b",
+        "sourceObjectKey": "{b3a2657b}",
+        "archive": "DATA/FINAL/Champions/Nautilus.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.299999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Nidalee": {
+      "id": "Jade_Nidalee",
+      "source": {
+        "internalPath": "data/characters/jade_nidalee/jade_nidalee.bin",
+        "binSha256": "41260b8dfd8f7dddf38e28bf80f13eb9b7bcc9b361ae8316d5419f6d7cdf9406",
+        "sourceObjectKey": "Characters/Jade_Nidalee/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Nidalee.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Nunu": {
+      "id": "Jade_Nunu",
+      "source": {
+        "internalPath": "data/characters/jade_nunu/jade_nunu.bin",
+        "binSha256": "bc6c7e9135e92c7b558ccd8009e11734730507643427034ecfc1df0254adc3d4",
+        "sourceObjectKey": "Characters/Jade_Nunu/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Nunu.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.450000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Olaf": {
+      "id": "Jade_Olaf",
+      "source": {
+        "internalPath": "data/characters/jade_olaf/jade_olaf.bin",
+        "binSha256": "5399f56533e1778104ade600ace46c595703fd91b0d673b65eced04dc3f2ce07",
+        "sourceObjectKey": "Characters/Jade_Olaf/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Olaf.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Pantheon": {
+      "id": "Jade_Pantheon",
+      "source": {
+        "internalPath": "data/characters/jade_pantheon/jade_pantheon.bin",
+        "binSha256": "d22b33343eb5240b6dac7885d429aa2b70574c6cf4d298e095c3a208e3a40096",
+        "sourceObjectKey": "Characters/Jade_Pantheon/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Pantheon.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.9000000953674316,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Poppy": {
+      "id": "Jade_Poppy",
+      "source": {
+        "internalPath": "data/characters/jade_poppy/jade_poppy.bin",
+        "binSha256": "7b016d517896b74a74cb5a7101977ddaff9ee3fd209128acc1ca68c27b8609df",
+        "sourceObjectKey": "Characters/Jade_Poppy/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Poppy.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Quinn": {
+      "id": "Jade_Quinn",
+      "source": {
+        "internalPath": "data/characters/jade_quinn/jade_quinn.bin",
+        "binSha256": "c394bbf0cb60248551fc4e765b21d8a238317b5d13d3ce8468168d49545805f5",
+        "sourceObjectKey": "{28c75345}",
+        "archive": "DATA/FINAL/Champions/Quinn.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Rammus": {
+      "id": "Jade_Rammus",
+      "source": {
+        "internalPath": "data/characters/jade_rammus/jade_rammus.bin",
+        "binSha256": "8c5b6870cc2d9d53121e1fcc518efe3e0565033a08d052aa6f86e2005f90d38d",
+        "sourceObjectKey": "Characters/Jade_Rammus/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Rammus.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Ryze": {
+      "id": "Jade_Ryze",
+      "source": {
+        "internalPath": "data/characters/jade_ryze/jade_ryze.bin",
+        "binSha256": "e7346556c7cef18bae7a88eecaaeea4697cb53abab30919331dd0ae5f1381f1c",
+        "sourceObjectKey": "Characters/Jade_Ryze/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Ryze.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Shaco": {
+      "id": "Jade_Shaco",
+      "source": {
+        "internalPath": "data/characters/jade_shaco/jade_shaco.bin",
+        "binSha256": "71e5fad77fbaf7369ea0ff88656bcdf29d6b53110062a906198db0005d360f91",
+        "sourceObjectKey": "Characters/Jade_Shaco/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Shaco.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Shen": {
+      "id": "Jade_Shen",
+      "source": {
+        "internalPath": "data/characters/jade_shen/jade_shen.bin",
+        "binSha256": "365e614b567573a40ec59eb9d2ce4a4a65267a355d01adca1b24ec046f984491",
+        "sourceObjectKey": "Characters/Jade_Shen/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Shen.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Shyvana": {
+      "id": "Jade_Shyvana",
+      "source": {
+        "internalPath": "data/characters/jade_shyvana/jade_shyvana.bin",
+        "binSha256": "611e762c3d3d3671c6d78b257077130b18e100cc4cbc18d24c83f3fbeba18b27",
+        "sourceObjectKey": "Characters/Jade_Shyvana/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Shyvana.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.4000000953674316,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Singed": {
+      "id": "Jade_Singed",
+      "source": {
+        "internalPath": "data/characters/jade_singed/jade_singed.bin",
+        "binSha256": "1add2d38277c6daf6ac3c0200fc3b453caaf7103c15b5e492a9862f12c3f0a27",
+        "sourceObjectKey": "Characters/Jade_Singed/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Singed.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Sion": {
+      "id": "Jade_Sion",
+      "source": {
+        "internalPath": "data/characters/jade_sion/jade_sion.bin",
+        "binSha256": "43cf826ea334c04331f198e55ff49a897a53bd15b4c14f35bbc2cd4e8bbee130",
+        "sourceObjectKey": "Characters/Jade_Sion/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Sion.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.1875,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Sivir": {
+      "id": "Jade_Sivir",
+      "source": {
+        "internalPath": "data/characters/jade_sivir/jade_sivir.bin",
+        "binSha256": "a7d9b3abd48d1c1eea2ecd9d2115a3cd21fee7e5e5c0d0ebc83091d2d585359f",
+        "sourceObjectKey": "Characters/Jade_Sivir/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Sivir.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.9000000953674316,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Skarner": {
+      "id": "Jade_Skarner",
+      "source": {
+        "internalPath": "data/characters/jade_skarner/jade_skarner.bin",
+        "binSha256": "87be284b51c7e98cda103c1a00f001952fab72c94af9e56b5b59f9d87395108c",
+        "sourceObjectKey": "Characters/Jade_Skarner/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Skarner.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 4.199999809265137,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Sona": {
+      "id": "Jade_Sona",
+      "source": {
+        "internalPath": "data/characters/jade_sona/jade_sona.bin",
+        "binSha256": "871495ab5fb3da5b7c03cef617ad93d1cef12537ea639a79b08f88defc52a0c9",
+        "sourceObjectKey": "Characters/Jade_Sona/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Sona.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Soraka": {
+      "id": "Jade_Soraka",
+      "source": {
+        "internalPath": "data/characters/jade_soraka/jade_soraka.bin",
+        "binSha256": "7a2b54ef05e24d4f3bb2fb1b31b2bda71effc3aec7c1e7a13fe529f78e611ca0",
+        "sourceObjectKey": "Characters/Jade_Soraka/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Soraka.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Taric": {
+      "id": "Jade_Taric",
+      "source": {
+        "internalPath": "data/characters/jade_taric/jade_taric.bin",
+        "binSha256": "f19524ad63552928d3eeabbc908fc9e69ea4f118572910f46de4d84944eb8fce",
+        "sourceObjectKey": "Characters/Jade_Taric/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Taric.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.5,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Teemo": {
+      "id": "Jade_Teemo",
+      "source": {
+        "internalPath": "data/characters/jade_teemo/jade_teemo.bin",
+        "binSha256": "724fd65abe2212557130b3f1aa13063f7f062b93299caf4a734b3292b46a0e2e",
+        "sourceObjectKey": "Characters/Jade_Teemo/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Teemo.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Tristana": {
+      "id": "Jade_Tristana",
+      "source": {
+        "internalPath": "data/characters/jade_tristana/jade_tristana.bin",
+        "binSha256": "9aa190e0c5eb0c58ff73389d7e306770e52adb3d494ab1dbf512877e9b08d23a",
+        "sourceObjectKey": "Characters/Jade_Tristana/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Tristana.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Tryndamere": {
+      "id": "Jade_Tryndamere",
+      "source": {
+        "internalPath": "data/characters/jade_tryndamere/jade_tryndamere.bin",
+        "binSha256": "6f831e70aa837dc6511a7117cb2bf75d1d2534cb72dbadaaabd84bcdd031e1ff",
+        "sourceObjectKey": "Characters/Jade_Tryndamere/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Tryndamere.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_TwistedFate": {
+      "id": "Jade_TwistedFate",
+      "source": {
+        "internalPath": "data/characters/jade_twistedfate/jade_twistedfate.bin",
+        "binSha256": "81f5768e788928859cb0b95f0414580b257715abd3b3dc5c9986139494a3bec2",
+        "sourceObjectKey": "Characters/Jade_TwistedFate/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/TwistedFate.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.299999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Twitch": {
+      "id": "Jade_Twitch",
+      "source": {
+        "internalPath": "data/characters/jade_twitch/jade_twitch.bin",
+        "binSha256": "5696c54384e8994f1304e42c400c46d27163a7d45481d100f8a23deb9d8bf71e",
+        "sourceObjectKey": "Characters/Jade_Twitch/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Twitch.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Vayne": {
+      "id": "Jade_Vayne",
+      "source": {
+        "internalPath": "data/characters/jade_vayne/jade_vayne.bin",
+        "binSha256": "f11cda78949f9b8fbabc197d4321d3d190bbdcb3edefa5d461f40c4e36046eaa",
+        "sourceObjectKey": "Characters/Jade_Vayne/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Vayne.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.25,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Veigar": {
+      "id": "Jade_Veigar",
+      "source": {
+        "internalPath": "data/characters/jade_veigar/jade_veigar.bin",
+        "binSha256": "3217b3af6dfae80cb37380ff0e595b47b33a6fa48f81e16d43ca05fcf8a770fc",
+        "sourceObjectKey": "Characters/Jade_Veigar/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Veigar.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 2.6500000953674316,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Warwick": {
+      "id": "Jade_Warwick",
+      "source": {
+        "internalPath": "data/characters/jade_warwick/jade_warwick.bin",
+        "binSha256": "468e7379156073e19bea3274e81667dd0fd7ac2907192e433f3222fa586dbb07",
+        "sourceObjectKey": "Characters/Jade_Warwick/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Warwick.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.375,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Wukong": {
+      "id": "Jade_Wukong",
+      "source": {
+        "internalPath": "data/characters/jade_wukong/jade_wukong.bin",
+        "binSha256": "56eb2cccaa411a5c398581b89fba4439091d1acc4f7033549c6682a8283f4dd1",
+        "sourceObjectKey": "Characters/Jade_Wukong/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/MonkeyKing.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.200000047683716,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_XinZhao": {
+      "id": "Jade_XinZhao",
+      "source": {
+        "internalPath": "data/characters/jade_xinzhao/jade_xinzhao.bin",
+        "binSha256": "da33e28a31aa63fe1b6622dda614df761437ed869e497c13c892bb94abaa9e4b",
+        "sourceObjectKey": "Characters/Jade_XinZhao/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/XinZhao.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.299999952316284,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    },
+    "Jade_Zilean": {
+      "id": "Jade_Zilean",
+      "source": {
+        "internalPath": "data/characters/jade_zilean/jade_zilean.bin",
+        "binSha256": "1c9a7270904476ec5325ecc09911832a20da3bec049ba2cf644e1d672f2d215b",
+        "sourceObjectKey": "Characters/Jade_Zilean/CharacterRecords/Root",
+        "archive": "DATA/FINAL/Champions/Zilean.wad.client"
+      },
+      "fields": {
+        "attackdamageperlevel": {
+          "value": 3.0,
+          "field": "damagePerLevelModifiable.baseValue"
+        }
+      }
+    }
+  },
+  "sourceDiscrepancy": {
+    "field": "attackdamageperlevel",
+    "dataDragonValue": 0,
+    "scope": "All 77 exact 16.20.1 mode/classic Data Dragon champion exports have zero AD growth.",
+    "resolution": "Keep source Data Dragon bytes; bind presentation to each exact Jade client CharacterRecord damagePerLevelModifiable.baseValue."
+  }
+}

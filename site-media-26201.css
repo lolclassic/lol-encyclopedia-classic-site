@@ -1,0 +1,7 @@
+/* Current 26.20.1 physical captures only; previous records stay unchanged. */
+[data-site-media-26201] img { height: auto; aspect-ratio: auto; object-fit: contain; }
+.hero-visual img[data-media26201-scene] { height: auto; }
+#screenshots[data-site-media-26201] .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#live-preview[data-site-media-26201] video { height: auto; aspect-ratio: var(--capture-aspect); object-fit: contain; }
+@media (max-width: 900px) { #screenshots[data-site-media-26201] .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { #screenshots[data-site-media-26201] .gallery { grid-template-columns: minmax(0, 1fr); } }

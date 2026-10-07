@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "patch": "26.20",
+  "classification": "HISTORICAL_CLASSIC_BACKGROUND_EDITORIAL_SUMMARY",
+  "sourcePolicy": "RIOT_ARCHIVED_PRE_REWORK_LORE_SUMMARIZED",
+  "locales": [
+    "ko_KR",
+    "ja_JP",
+    "en_US"
+  ],
+  "championCount": 5,
+  "champions": {
+    "Jade_Aatrox": {
+      "championId": 266,
+      "classicKey": 60266,
+      "appId": "aatrox",
+      "source": {
+        "url": "https://ddragon.leagueoflegends.com/cdn/4.20.1/data/en_US/champion/Aatrox.json",
+        "version": "4.20.1",
+        "locale": "en_US",
+        "bytes": 13512,
+        "sha256": "3453f51b053cfefdc66a2551ac4d530765d80717e3f159faa4ca3c0fbbd7e1dd",
+        "abilities": [
+          "Dark Flight",
+          "Blood Thirst / Blood Price",
+          "Blades of Torment",
+          "Massacre"
+        ],
+        "loreSha256": "3ac6cebe044af30265d9e9ae4916483d7988932740bfcbc676e28ff04ee4eee1",
+        "classification": "RIOT_ARCHIVED_CHAMPION_NARRATIVE",
+        "matchingClassic26_20": "ABILITY_NAMES_MATCH_PRE_REWORK_KIT_NOT_LORE_REISSUE_APPROVAL"
+      },
+      "classicSources": {
+        "ko_KR": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion/Jade_Aatrox.json",
+          "version": "16.20.1",
+          "bytes": 7538,
+          "sha256": "6b326d8bcdb61f71fc69cff147aaf8bc1377de63f2b2eb569151d3d146036392",
+          "loreSha256": "c42b2b9898c489f7167e59a79757468270d98df982ed8ca1e4c43a51d876e102",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "ja_JP": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ja_JP/mode/classic/champion/Jade_Aatrox.json",
+          "version": "16.20.1",
+          "bytes": 7590,
+          "sha256": "697f6335cdbb43681f0e926ff5e8e7ff4f41cbe97912e3b392b86a5a9ed1a0e7",
+          "loreSha256": "13be31a155c7afeb42d38065098ee073aec3c569fb7e2a34f1717cb9e99c8c55",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "en_US": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Aatrox.json",
+          "version": "16.20.1",
+          "bytes": 7054,
+          "sha256": "419ee89f040efb3de8169c9ef64b11f0912945521c47b645e73fe0decc610e90",
+          "loreSha256": "c5f321fb5c49fdb8df701856364de29e7daf2f90a37c0df7f7d41445071e54bd",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        }
+      },
+      "locales": {
+        "ko_KR": {
+          "lore": "아트록스는 고대 종족 다르킨의 드문 생존자이자, 적의 피로 힘을 얻는 거대한 검을 휘두르는 전사로 전해집니다.\n\n옛 기록에서 그는 마법군에게 패배하기 직전이던 수호군 앞에 나타났습니다. 그의 싸움을 본 병사들은 압도적인 전의를 얻어 전세를 뒤집었습니다.\n\n승리 뒤 아트록스는 사라졌지만 병사들의 광기는 남았습니다. 영웅으로 돌아온 이들은 자신들이 저지른 잔혹한 행위를 깨닫게 됩니다. 여러 문화권의 비슷한 전설은 그가 구원자인지, 끝없는 전쟁을 남기는 존재인지 묻습니다.",
+          "sha256": "23326feeaf5c0fd1dc0a5d7bdec2f085e1c7dcaf83f037cfb2c574c21bbb1bbe",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "ja_JP": {
+          "lore": "エイトロックスは、古代種族ダーキンの数少ない生存者で、敵の血から力を得る巨大な剣を振るう戦士として語られます。\n\n古い記録では、彼はメイジロードに敗れかけたプロテクトレート軍の前に現れました。その戦いを見た兵士たちは猛烈な闘志を得て、劣勢を覆しました。\n\n勝利後、彼は姿を消します。しかし兵士たちの狂気は消えず、英雄として帰還した彼らは、自らの残虐な行為に気づきます。各地の似た伝説は、彼が救済者なのか、終わらない戦争をもたらす存在なのかを問いかけます。",
+          "sha256": "e9f0e7e4b7a87596beb60f025d0f345c8cf916a4640cfa4f1dcd20ab01df3148",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "en_US": {
+          "lore": "Aatrox was described as one of the few surviving Darkin, an ancient warrior whose great blade drew strength from his enemies’ blood.\n\nAn early tale places him beside the Protectorate army when defeat by the Magelords seemed inevitable. His example filled the soldiers with extraordinary battle fury and turned the war.\n\nAatrox disappeared, but their fury remained. Celebrated as heroes, the survivors later recognized the atrocities they had committed. Similar legends leave an uneasy question: did he save civilizations, or leave them trapped in conflict?",
+          "sha256": "9673c1c3aa105c51415901c96a1cd557e35d9c1ad301464f46e6604def2607d5",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        }
+      }
+    },
+    "Jade_Caitlyn": {
+      "championId": 51,
+      "classicKey": 60051,
+      "appId": "caitlyn",
+      "source": {
+        "url": "https://ddragon.leagueoflegends.com/cdn/4.20.1/data/en_US/champion/Caitlyn.json",
+        "version": "4.20.1",
+        "locale": "en_US",
+        "bytes": 11487,
+        "sha256": "4c9083d3bc8e4c4ef8402826e4d632ffd3f48eb23e9dcb47e0f560ad194f0e61",
+        "abilities": [
+          "Piltover Peacemaker",
+          "Yordle Snap Trap",
+          "90 Caliber Net",
+          "Ace in the Hole"
+        ],
+        "loreSha256": "7e803a640b0e960991f86a2ad408538b57b8bdc9957fb091a0e4d4828d8d1c37",
+        "classification": "RIOT_ARCHIVED_CHAMPION_NARRATIVE",
+        "matchingClassic26_20": "ABILITY_NAMES_MATCH_PRE_REWORK_KIT_NOT_LORE_REISSUE_APPROVAL"
+      },
+      "classicSources": {
+        "ko_KR": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion/Jade_Caitlyn.json",
+          "version": "16.20.1",
+          "bytes": 7355,
+          "sha256": "e0b1b9835d80e684033884051e937aea018d5fd34d87e1458fc12fce58384f4f",
+          "loreSha256": "1708f1ef9229328f631bb3db795afa3107c2f82c2efd330ae888834a8b7ef0f8",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "ja_JP": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ja_JP/mode/classic/champion/Jade_Caitlyn.json",
+          "version": "16.20.1",
+          "bytes": 7616,
+          "sha256": "09048d96aa5cd8bc58f7ec0f61e56d5781fcf046fc2e26084a56fc4c6e844541",
+          "loreSha256": "212c6e82d4a50b438ebfa1df5c8bb52e056bfed28ae52e06c3a2e5a4adca6040",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "en_US": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Caitlyn.json",
+          "version": "16.20.1",
+          "bytes": 6761,
+          "sha256": "43c11f6b933fae72ad7dbaa89342eaf605c6a22580a586aef356f86dee8919a4",
+          "loreSha256": "dab4a79dd2634f33402887b59770356d35c97268ded7e5450dfc1daabcd55bc8",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        }
+      },
+      "locales": {
+        "ko_KR": {
+          "lore": "케이틀린은 필트오버의 정치가와 마법공학 연구자의 딸입니다. 열네 살 때 아버지가 강도를 당하자, 아버지의 소총을 들고 범인을 추적하며 뛰어난 수사 재능을 드러냈습니다. 어머니는 딸을 보호하기 위해 수사에 필요한 장비를 만들어 주었습니다.\n\n케이틀린은 정확한 사격과 끈질긴 추적으로 필트오버의 범죄를 줄이고 보안관으로 이름을 알렸습니다. 데마시아의 의뢰를 받은 뒤에는 현장에 ‘C’가 새겨진 카드를 남기는 도둑을 쫓았습니다.\n\n유일하게 자신을 따돌린 그 범인을 잡기 위해, 실력과 영향력을 키우려 리그에 참가했습니다.",
+          "sha256": "008562e80d649ccb18ce24a8b0706e9d933ee01ba2949230c3ffbd57b0a95c07",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "ja_JP": {
+          "lore": "ケイトリンは、ピルトーヴァーの政治家とヘクステック研究者の娘です。14歳の時、父を襲った強盗を父のライフルで追跡し、捜査の才能を示しました。母は娘を守ろうと、捜査用の装備を作りました。\n\n正確な射撃と粘り強い追跡で犯罪を減らし、保安官として知られるようになった彼女は、デマーシアの依頼で、現場に「C」のカードを残す盗賊を追い始めます。\n\n唯一捕らえられなかった相手を追うため、技量と影響力を得ようとリーグに参加しました。",
+          "sha256": "b7eb836243b23e2ca5ed201d71236bc174e1f2cd990c085851df3a66156fff29",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "en_US": {
+          "lore": "Caitlyn was the daughter of a Piltover statesman and a hextech researcher. At fourteen, she tracked the thieves who had attacked her father, using his rifle. Her mother equipped her with inventions suited to detective work.\n\nHer persistence and marksmanship helped curb Piltover’s crime. A request from Demacia led her after a thief who left an ornate “C” card at each crime scene.\n\nTo improve her skills and gain the influence needed to catch the one quarry who kept escaping her, Caitlyn joined the League.",
+          "sha256": "c4f198ed046ecf803c4073eef3799fc4a9637db7f5783cda2ab8fb486da851f0",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        }
+      }
+    },
+    "Jade_Irelia": {
+      "championId": 39,
+      "classicKey": 60039,
+      "appId": "irelia",
+      "source": {
+        "url": "https://ddragon.leagueoflegends.com/cdn/4.20.1/data/en_US/champion/Irelia.json",
+        "version": "4.20.1",
+        "locale": "en_US",
+        "bytes": 11714,
+        "sha256": "9de81a824d9d676ac418db17217296b737c1852c213158fd1ac4fb52d6854ec8",
+        "abilities": [
+          "Bladesurge",
+          "Hiten Style",
+          "Equilibrium Strike",
+          "Transcendent Blades"
+        ],
+        "loreSha256": "b96fcd6b4a84bed459501aa5a2e7e031df149c38fe062d1424b06d3108bbe64b",
+        "classification": "RIOT_ARCHIVED_CHAMPION_NARRATIVE",
+        "matchingClassic26_20": "ABILITY_NAMES_MATCH_PRE_REWORK_KIT_NOT_LORE_REISSUE_APPROVAL"
+      },
+      "classicSources": {
+        "ko_KR": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion/Jade_Irelia.json",
+          "version": "16.20.1",
+          "bytes": 7321,
+          "sha256": "4f881ed7c7284a1df89c24e0a9e708e64e66774d16fd4bd97b5363a93400130f",
+          "loreSha256": "31eb889b057f7cb620a6bddcaeb3aa698a1c9b02207cb4666232a22e4168e908",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "ja_JP": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ja_JP/mode/classic/champion/Jade_Irelia.json",
+          "version": "16.20.1",
+          "bytes": 7185,
+          "sha256": "cd0ef1a2e19e88d9d763d1798b7333a1d03685e603a2dbf224a359f917093e11",
+          "loreSha256": "2738b8fe4dc05e6e745971c2ecbb123b9eb4e4173b296d85de1ed18cefd8b034",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "en_US": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Irelia.json",
+          "version": "16.20.1",
+          "bytes": 6731,
+          "sha256": "65d05fc23a76d2082f796d1327fc66ab84a7e3194c5416dc97865db56d68c174",
+          "loreSha256": "c38dd1fdb3723413d0db99946cdc59eef8185a468939932e3c579232d69f64af",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        }
+      },
+      "locales": {
+        "ko_KR": {
+          "lore": "이렐리아는 검술의 대가 리토의 딸이며, 오빠 젤로스와 함께 아버지의 특별한 검을 물려받았습니다. 녹서스의 침공을 앞두고 젤로스가 데마시아에 도움을 구하러 떠나자, 이렐리아는 고향을 지키기로 했습니다.\n\n플라시디엄에서 항복을 고려하던 사람들은 그녀가 아버지의 검을 들고 맞서는 모습을 보고 다시 싸웠습니다. 전투 중 녹서스의 저주로 죽어 가던 그녀를 소라카가 붙잡았고, 이렐리아는 허공에서 스스로 움직이는 검과 함께 일어났습니다.\n\n침략군을 물리친 뒤 경비대장이 된 그녀는, 고향의 방어가 정의의 전장으로 이어지자 그곳에서도 싸웠습니다.",
+          "sha256": "8471daec895b6f706dc6bbcd6bf78dd27f9cf123340317c77db90a9046d243ed",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "ja_JP": {
+          "lore": "イレリアは剣の達人リトの娘です。父の死後、兄ゼロスと特別な剣を受け継ぎました。ノクサスの侵攻を前に兄がデマーシアへ援助を求めに向かうと、彼女は故郷を守る役目を担います。\n\nプラシディウムで降伏しかけた人々は、父の剣を掲げて抗う彼女に勇気づけられました。敵の呪いで命を失いかけますが、ソラカが魂をつなぎ止め、彼女は宙を舞う剣とともに立ち上がります。\n\n侵略軍を退け、イオニアの守備隊長となった彼女は、故郷を守る戦いが正義の戦場へ移ると、そこでも戦いました。",
+          "sha256": "e833aa14ff6be12a5a51ba1eda7108b9e58b0d006e8c4f10eb84c574c10dc4a9",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "en_US": {
+          "lore": "Irelia inherited a remarkable sword from her father, Master Lito. Her brother Zelos sought help from Demacia before Noxus invaded, leaving her to defend their home.\n\nAt the Placidium, her stand inspired Ionians who were ready to surrender. Noxian magic brought her close to death, but Soraka tried to anchor her soul. Irelia rose again as her father’s sword moved through the air beside her.\n\nAfter driving back the invaders, she became Ionia’s Captain of the Guard and continued its defense on the Fields of Justice.",
+          "sha256": "ff562162063c0ea38720d9e82ea0b6cf906be3109bbe7fe98c5043e8f47577bf",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        }
+      }
+    },
+    "Jade_Karma": {
+      "championId": 43,
+      "classicKey": 60043,
+      "appId": "karma",
+      "source": {
+        "url": "https://ddragon.leagueoflegends.com/cdn/0.152.55/data/en_US/champion/Karma.json",
+        "version": "0.152.55",
+        "locale": "en_US",
+        "bytes": 9965,
+        "sha256": "f224bd8a561a15ae5699af9c136714a2f0d9df2efa7d3e1e8e67f50e3da5c005",
+        "abilities": [
+          "Heavenly Wave",
+          "Spirit Bond",
+          "Soul Shield",
+          "Mantra"
+        ],
+        "loreSha256": "1c81bf849609e75ce318e05d745cc1812ccacff243aa5eb8bf7cafe6f81939a6",
+        "classification": "RIOT_ARCHIVED_CHAMPION_NARRATIVE",
+        "matchingClassic26_20": "ABILITY_NAMES_MATCH_PRE_REWORK_KIT_NOT_LORE_REISSUE_APPROVAL"
+      },
+      "classicSources": {
+        "ko_KR": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion/Jade_Karma.json",
+          "version": "16.20.1",
+          "bytes": 7845,
+          "sha256": "32a15bf96c3242d298675dca4a3fcd73d805a21a1f2819c4941ce94a21662ef6",
+          "loreSha256": "31eb889b057f7cb620a6bddcaeb3aa698a1c9b02207cb4666232a22e4168e908",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "ja_JP": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ja_JP/mode/classic/champion/Jade_Karma.json",
+          "version": "16.20.1",
+          "bytes": 7824,
+          "sha256": "c5609d8775c80b2e805ffed6c912b7adff36a1ab795bc6d744af5169fabf6ae0",
+          "loreSha256": "2738b8fe4dc05e6e745971c2ecbb123b9eb4e4173b296d85de1ed18cefd8b034",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        },
+        "en_US": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Karma.json",
+          "version": "16.20.1",
+          "bytes": 7188,
+          "sha256": "8a16a76c5c1abda9d5c2a0bb06aa17f3991f179f3dbb85394067c5f6832a8b92",
+          "loreSha256": "c38dd1fdb3723413d0db99946cdc59eef8185a468939932e3c579232d69f64af",
+          "loreKind": "ABILITY_CHANGE_BULLETIN"
+        }
+      },
+      "locales": {
+        "ko_KR": {
+          "lore": "옛 카르마는 나보리에서 골동품점을 운영하는 집안의 딸로, 고요한 명상과 뛰어난 중재 능력으로 마을의 신뢰를 받았습니다. 가장 아끼던 물건은 가족의 가게에서 가져온 두 개의 부채였습니다.\n\n녹서스가 마을을 점령하자, 지휘관의 약점을 이용해 주민들이 북쪽으로 안전하게 떠나도록 협상했습니다. 플라시디엄에서는 이렐리아의 저항이 만든 희망을 바탕으로 원로들이 싸움을 포기하지 않게 이끌었습니다.\n\n아이오니아 저항군의 대표가 된 카르마는 부채를 무기로 바꾸고 잔나에게 배웠습니다. 사람들과 고난을 함께하며, 아이오니아를 대표하려 리그에 참가했습니다.",
+          "sha256": "9230ae0b13e9397d1d2797ec3555eda73216f2c1dc4a5499d1515d8058d1532c",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "ja_JP": {
+          "lore": "旧設定のカルマは、ナヴォリで骨董店を営む家の娘でした。静かな瞑想と優れた仲裁で村の信頼を得ており、店から持ち出した二本の扇を大切にしていました。\n\nノクサスに村を占領されると、指揮官の弱みを利用して住民の安全な北方移住を交渉しました。プラシディウムでは、イレリアの抵抗が生んだ希望を支え、長老たちが戦いを諦めないよう導きました。\n\n抵抗運動の代表となった彼女は扇を武器に改造し、ジャンナから教えを受けました。人々と苦難を分かち合い、イオニアを代表してリーグに参加しました。",
+          "sha256": "2da83a8becfa304d6852996309ad7f99d3b518227bc16f92a44f372a3fef20a5",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "en_US": {
+          "lore": "In her original story, Karma grew up in Navori, where her parents ran an antique shop. Her composure made her a trusted mediator, and she treasured two fans from the shop.\n\nWhen Noxus occupied her village, she negotiated the villagers’ safe departure north. At the Placidium, she strengthened the elders’ resolve after Irelia restored their hope.\n\nAs a leader of the Ionian resistance, Karma turned her fans into weapons and learned from Janna. Sharing her people’s hardships, she joined the League to represent Ionia.",
+          "sha256": "ddf83bab8309e9673da2ff2ca2ab349e84ce75ff29271ec67a86eed39331931c",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        }
+      }
+    },
+    "Jade_Quinn": {
+      "championId": 133,
+      "classicKey": 60133,
+      "appId": "quinn",
+      "source": {
+        "url": "https://ddragon.leagueoflegends.com/cdn/4.20.1/data/en_US/champion/Quinn.json",
+        "version": "4.20.1",
+        "locale": "en_US",
+        "bytes": 13366,
+        "sha256": "1b55a8b2ef5c76528f41e17d1671e0d1375a5f7a8769a50d19f490a4bda57f60",
+        "abilities": [
+          "Blinding Assault",
+          "Heightened Senses",
+          "Vault",
+          "Tag Team"
+        ],
+        "loreSha256": "79ff91be5344697f6385f84c9bd0e4ee064a9761374a39839dc29bec27fb1008",
+        "classification": "RIOT_ARCHIVED_CHAMPION_NARRATIVE",
+        "matchingClassic26_20": "ABILITY_NAMES_MATCH_PRE_REWORK_KIT_NOT_LORE_REISSUE_APPROVAL"
+      },
+      "classicSources": {
+        "ko_KR": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion/Jade_Quinn.json",
+          "version": "16.20.1",
+          "bytes": 8166,
+          "sha256": "04fb0caff5ee015d19c6b6e5fe96f2e9a60437e7e27df31ccfb28430d9606d40",
+          "loreSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "loreKind": "EMPTY"
+        },
+        "ja_JP": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ja_JP/mode/classic/champion/Jade_Quinn.json",
+          "version": "16.20.1",
+          "bytes": 8774,
+          "sha256": "55214cefd16908fee710894250daed3aa52c9ca6493cbf7910a2f2081651bf23",
+          "loreSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "loreKind": "EMPTY"
+        },
+        "en_US": {
+          "url": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Quinn.json",
+          "version": "16.20.1",
+          "bytes": 7604,
+          "sha256": "42860a8bcc841b5426e29d02b865d39904a3c018c517e3188246f0aec176c9f7",
+          "loreSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "loreKind": "EMPTY"
+        }
+      },
+      "locales": {
+        "ko_KR": {
+          "lore": "퀸은 데마시아 변방에서 쌍둥이 형제와 기사가 되는 꿈을 키웠습니다. 그러나 모험 중 형제가 목숨을 잃자 그 꿈을 포기했습니다. 기일에 사고 장소를 찾은 그녀는 멸종한 줄 알았던 데마시아 독수리를 발견해 상처를 돌봤습니다.\n\n퀸은 그 새에게 발러라는 이름을 붙였고, 둘은 서로에게 힘이 되어 다시 꿈을 좇았습니다. 평민 소녀와 독수리로 이루어진 팀을 군대가 처음부터 인정한 것은 아니었습니다.\n\n데마시아 부대가 놓친 녹서스 암살자를 함께 추적해 붙잡으며 실력을 입증한 퀸과 발러는, 고향을 지키는 정예 정찰대가 되었습니다.",
+          "sha256": "4d4d9abea21883b143da01d468c1d667c3c9ee839b31eb9fff7c8dea008621f9",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "ja_JP": {
+          "lore": "クインはデマーシア辺境で双子の兄弟と騎士を夢見ていました。しかし冒険中に兄弟を失い、その夢を諦めます。命日に事故の場所を訪れた彼女は、絶滅したと思われていたデマーシアの鷲を見つけ、傷の手当てをしました。\n\n彼女は鷲をヴァロールと名づけます。互いに支え合う二人は、再び夢を追い始めましたが、庶民の少女と鷲の組を軍はすぐには認めませんでした。\n\n一個大隊が逃したノクサスの暗殺者を追跡して捕らえ、実力を示したクインとヴァロールは、故郷を守る精鋭偵察隊となりました。",
+          "sha256": "ef17ff8f3e6f30f267b24511a211524648895cac9877e340616573d3137188ce",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        },
+        "en_US": {
+          "lore": "Quinn and her twin brother dreamed of becoming Demacian knights. After an adventure ended in his death, she abandoned that dream. Returning to the site on its anniversary, she found and cared for a wounded Demacian eagle believed to be extinct.\n\nShe named him Valor. Their bond gave both the strength to pursue her dream again. The army initially doubted this unusual team.\n\nBy tracking down a Noxian assassin who had evaded a Demacian battalion, Quinn and Valor proved themselves as elite rangers devoted to defending their home.",
+          "sha256": "62b61f6cbeb616a676ee7a064ae1a4122748f0a5700f98935846243f39c7cad0",
+          "classification": "EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY"
+        }
+      }
+    }
+  }
+}

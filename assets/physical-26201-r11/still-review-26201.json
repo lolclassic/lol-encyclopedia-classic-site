@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "status": "AI_VISUAL_REVIEW_PASS_HUMAN_REVIEW_NOT_PERFORMED",
+  "reviewRevision": "r11",
+  "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+  "sourceEvidenceSha256": "404e72bf4dcf75fc8f6e69f00d82faa388d921ed0fd371e3abd91fdb66b471f6",
+  "originalReviewSha256": "b1a2aaefda772f1e045877a57fa134876885331c0937731c0b5be73dbd9bbb04",
+  "independentReviewSha256": "6be0c22431d5f7ddeab8d919aafb9257872c8b15c6b431642f8dec2599d6552d",
+  "files": {
+    "ko_KR-home-webview.png": {
+      "sha256": "c684f5d6a425474850e17ba94b6f48ba4c651d1fd95201dfee7a652880ef842a",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ko_KR-new-classic-webview.png": {
+      "sha256": "26b8b617a02ac053148458abcfafd3680583e3e2769b51c3801e5c9d953a7224",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ko_KR-recommendation-webview.png": {
+      "sha256": "ebf39ef2d395461bbc3ac2fc9f56f2540cb7139f90f9897d98c53e723adcf6bb",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ko_KR-effect-popup-webview.png": {
+      "sha256": "2a8f2578b5b1bc848beeee82818ab8dce6a48c8372195486c8f38278a9e378d8",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ko_KR-pick-lines-webview.png": {
+      "sha256": "4e5774f95e1f8d0be3cc69fef61c9d41fa2d3bce2b0d3822b821dbd829ef5b03",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ko_KR-historical-story-webview.png": {
+      "sha256": "d578a9680ed51f7a5df6d3266f498d106ff9e77b2febffac0bb01117eef7fb28",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ja_JP-home-webview.png": {
+      "sha256": "68c55e547077ac186d1ec42cf3b501686125fd1f0a528c2bd7728efed349cc9b",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": true,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ja_JP-new-classic-webview.png": {
+      "sha256": "4c5b0f0fd44f1ec783a5ba830df5d579934dd520bfbb096c1ac77d97346c0f96",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ja_JP-recommendation-webview.png": {
+      "sha256": "82a3d722c42576b72797c9a7f375a578125d38302327cdf322f34266e7c86856",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ja_JP-effect-popup-webview.png": {
+      "sha256": "8e62fde298915b9904693934b1d7db40d695cac0defa34abb1d7f7ab5449d5cb",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ja_JP-pick-lines-webview.png": {
+      "sha256": "72e9443b562053573fc8d645339282bc9ba8b9b8b6f3c95b9626b0d79cee926f",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "ja_JP-historical-story-webview.png": {
+      "sha256": "ea37445da4dce34dc4e919f92567cae1e748aaa0c127955dcfadb5e353e61813",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "en_US-home-webview.png": {
+      "sha256": "de9f619ef2310e0871e1b9fe932a466e9e2481522c8a9df5470740651020b088",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "en_US-new-classic-webview.png": {
+      "sha256": "19f91868b55e66bef97096d3f7451edbd0fc19a4cf3c2f6a64a5bd96afa0dc4d",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "en_US-recommendation-webview.png": {
+      "sha256": "101e388f70fa3abc69779b0e7608804a1c0975d3bc1a5414a962564047a025e0",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "en_US-effect-popup-webview.png": {
+      "sha256": "a02dc7b9d83d63be10b61daed226d35175fdff08cdcbc14678ccdbb5763ea207",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "en_US-pick-lines-webview.png": {
+      "sha256": "0b3fe0898a4c94e1915490bd0a1a66e199d4c4814b0003e1f171c2e3c4f84112",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    },
+    "en_US-historical-story-webview.png": {
+      "sha256": "bef84d8d675a3cada619a19e646441682101c7305400946e3bdb0050440229b3",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "aiVisualInspectionPerformed": true,
+      "humanUserReviewPerformed": false,
+      "rootDirectOriginalImageInspected": false,
+      "directOriginalStoreImageInspected": false,
+      "reviewMethod": "Root AI inspected all 18 WebView scenes through three locale contact sheets, the Japanese home WebView original, and three named store originals. Other store derivatives are bound by full-content proportional-fit lineage; root did not individually open all 18 WebView or all 18 store originals."
+    }
+  },
+  "aiVisualInspectionPerformed": true,
+  "humanUserReviewPerformed": false,
+  "sitePublicationAuthorized": true,
+  "publicationApprovalBasis": {
+    "scope": "WEBSITE_AND_PC_BETA_PUBLICATION_ONLY",
+    "source": "DIRECT_HUMAN_CONVERSATION_IN_THIS_TASK",
+    "instruction": "일단 배포진행해",
+    "sitePublicationAuthorized": true,
+    "humanMediaReviewClaim": false,
+    "rightsClearanceClaim": false,
+    "playReleaseClaim": false
+  },
+  "publicationPerformed": false,
+  "wholeGoalComplete": false
+}

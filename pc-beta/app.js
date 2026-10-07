@@ -148,7 +148,7 @@ const UNRESOLVED_CLASSIC_ITEM_IDS = new Set([
   '773146', '773174', '773190', '773209', '773340', '773348',
 ]);
 function itemDescriptionStatus(item) {
-  if (CLASSIC_ITEM_CATALOG?.version !== '16.19.1') return '';
+  if (!['16.19.1', '16.20.1'].includes(CLASSIC_ITEM_CATALOG?.version)) return '';
   if (/^GeneratedTip_[A-Za-z0-9_]+$/.test(String(item.text || ''))) return 'generated-tip';
   if (UNRESOLVED_CLASSIC_ITEM_IDS.has(String(item.riotId))) return 'unresolved-zero';
   return '';
@@ -179,7 +179,7 @@ const SHOP_TAG_LABELS = {
   ABILITYHASTE: '스킬 가속', BILGEWATER: '빌지워터',
 };
 function classicItemCategories(catalog) {
-  if (catalog?.version !== '16.19.1' || !Array.isArray(catalog.items) || catalog.items.length !== 150
+  if (!['16.19.1', '16.20.1'].includes(catalog?.version) || !Array.isArray(catalog.items) || catalog.items.length !== 150
       || !Array.isArray(catalog.shopTree) || catalog.shopTree.length !== 7
       || Object.keys(catalog.iconSha256 || {}).length !== catalog.items.length) {
     throw new Error('26.19 Classic item catalog is incomplete');
@@ -230,13 +230,14 @@ function catLabel(code) {
 
 async function boot() {
   try {
-    const [meta, rawChampions, itemCatalog, crs, ms, sp, cl, classicMedia, appDocuments, runtimeManifest, rawCalculations, calculationManifest, detailMetadata, glossaryData, itemAliases, championReleaseDates, classicNews, patch2619News, baseRawChampions, baseRuntimeManifest, patchUpdates, previousRawChampions, previousRuntimeManifest, englishLabels, backgroundData, skillCompletion, localizedNews, localizedDocuments, effectData, recommendationData] = await Promise.all(
-      ['meta', 'mode-classic-champions', 'classic-items-26.19', 'runes-classic', 'classic-masteries-26.19', 'spells', 'classic', 'classic-champion-media', 'app-documents', 'mode-classic-runtime', 'classic-damage-calculations', 'classic-damage-manifest', 'classic-detail-metadata', 'classic-glossary', 'classic-item-aliases', 'classic-champion-release-dates', 'classic-news', 'classic-news-2619', 'mode-classic-champions-16.17.1', 'mode-classic-runtime-16.17.1', 'classic-patch-updates', 'mode-classic-champions-16.18.1', 'mode-classic-runtime-16.18.1', 'classic-english-26.19', 'classic-backgrounds-26.19', 'classic-skill-completion-26.19', 'classic-news-localized-26195', 'app-documents-localized-26195', 'classic-skill-effects-26195', 'classic-recommendations-26195']
-        .map(n => fetch('data/' + n + '.json' + (n === 'classic-recommendations-26195' ? '?v=26.19.5.2' : '')).then(r => { if (!r.ok) throw new Error(n + '.json HTTP ' + r.status); return ['mode-classic-champions', 'mode-classic-champions-16.17.1', 'mode-classic-champions-16.18.1', 'classic-damage-calculations', 'classic-skill-completion-26.19'].includes(n) ? r.arrayBuffer() : r.json(); })));
+    const [meta, rawChampions, itemCatalog, crs, ms, sp, cl, classicMedia, appDocuments, runtimeManifest, rawCalculations, calculationManifest, detailMetadata, glossaryData, itemAliases, championReleaseDates, classicNews, patch2619News, baseRawChampions, baseRuntimeManifest, patchUpdates, previousRawChampions, previousRuntimeManifest, englishLabels, backgroundData, skillCompletion, localizedNews, localizedDocuments, effectData, recommendationData, frozenRawChampions, frozenRuntimeManifest, english2620, completion2620, news2620] = await Promise.all(
+      ['meta', 'mode-classic-champions', 'classic-items-26.20', 'runes-classic', 'classic-masteries-26.19', 'spells', 'classic', 'classic-champion-media-26.20', 'app-documents', 'mode-classic-runtime', 'classic-damage-calculations', 'classic-damage-manifest', 'classic-detail-metadata', 'classic-glossary', 'classic-item-aliases', 'classic-champion-release-dates', 'classic-news', 'classic-news-2619', 'mode-classic-champions-16.17.1', 'mode-classic-runtime-16.17.1', 'classic-patch-updates', 'mode-classic-champions-16.18.1', 'mode-classic-runtime-16.18.1', 'classic-english-26.19', 'classic-backgrounds-26.20', 'classic-skill-completion-26.19', 'classic-news-localized-26195', 'app-documents-localized-26195', 'classic-skill-effects-26195', 'classic-recommendations-2620', 'mode-classic-champions-16.19.1', 'mode-classic-runtime-16.19.1', 'classic-english-26.20', 'classic-skill-completion-26.20', 'classic-news-2620']
+        .map(n => fetch('data/' + n + '.json').then(r => { if (!r.ok) throw new Error(n + '.json HTTP ' + r.status); return ['mode-classic-champions', 'mode-classic-champions-16.17.1', 'mode-classic-champions-16.18.1', 'mode-classic-champions-16.19.1', 'classic-damage-calculations', 'classic-skill-completion-26.19', 'classic-skill-completion-26.20'].includes(n) ? r.arrayBuffer() : r.json(); })));
     META = { ...meta, appVersion: window.__LOLCLASSIC_CONFIG__?.appVersion || meta.appVersion };
     window.ClassicNews.setData(classicNews);
     window.ClassicNews.setLocalizedData(localizedNews);
     window.ClassicNews.setPatch2619(patch2619News);
+    window.ClassicNews.setPatch2620(news2620);
     window.ClassicReferenceUI.setData(glossaryData);
     window.ClassicSkillEffects26195.setData(effectData);
     terms.splice(0, terms.length, ...glossaryData.entries.map(e => [e.termKo, e.description, e.termEn]));
@@ -244,8 +245,8 @@ async function boot() {
     window.ClassicDocuments.setLocalizedDocuments(localizedDocuments);
     window.ClassicChampionBackgrounds.setData(backgroundData);
     try {
-      const response = await fetch('data/classic-backgrounds-localized-26195.json');
-      if (!response.ok) throw new Error('classic-backgrounds-localized-26195.json HTTP ' + response.status);
+      const response = await fetch('data/classic-backgrounds-localized-2620.json');
+      if (!response.ok) throw new Error('classic-backgrounds-localized-2620.json HTTP ' + response.status);
       window.ClassicChampionBackgrounds.setLocalizedData(await response.json());
     } catch (error) {
       console.warn('Localized Classic backgrounds unavailable:', error);
@@ -253,14 +254,20 @@ async function boot() {
     const currentClassic = await window.ModeClassicChampions.createVerified(rawChampions, runtimeManifest);
     const baseClassic = await window.ModeClassicChampions.createVerified(baseRawChampions, baseRuntimeManifest);
     const previousClassic = await window.ModeClassicChampions.createVerified(previousRawChampions, previousRuntimeManifest);
+    const frozenClassic = await window.ModeClassicChampions.createVerified(frozenRawChampions, frozenRuntimeManifest);
     await window.ClassicDamageView.createVerified(rawCalculations, calculationManifest, baseClassic);
     window.ClassicDetailExtras.attach(detailMetadata, baseClassic);
     window.ClassicPatchUpdates.apply(baseClassic, previousClassic, patchUpdates, {
       baseCombinedSha256: baseRuntimeManifest.combinedSha256,
       targetCombinedSha256: previousRuntimeManifest.combinedSha256,
     });
-    window.ClassicPatch2619.apply(previousClassic, currentClassic, previousRuntimeManifest, runtimeManifest, englishLabels);
-    await window.ClassicSkillCompletion26192.createVerified(skillCompletion, currentClassic, runtimeManifest, window.ClassicDamageView);
+    window.ClassicPatch2619.apply(previousClassic, frozenClassic, previousRuntimeManifest, frozenRuntimeManifest, englishLabels);
+    await window.ClassicSkillCompletion26192.createVerified(skillCompletion, frozenClassic, frozenRuntimeManifest, window.ClassicDamageView);
+    window.ClassicPatch2620.apply(frozenClassic, currentClassic, frozenRuntimeManifest, runtimeManifest, english2620);
+    await window.ClassicSkillCompletion2620.createVerified(completion2620, currentClassic, runtimeManifest, window.ClassicDamageView);
+    const statsResponse = await fetch('data/classic-champion-stats-2620.json');
+    if (!statsResponse.ok) throw new Error('classic-champion-stats-2620.json HTTP ' + statsResponse.status);
+    await window.ClassicPatch2620.createVerifiedStats(await statsResponse.arrayBuffer(), currentClassic, runtimeManifest);
     window.ClassicCorrections.configure(runtimeManifest, currentClassic.champions);
     champions = currentClassic.champions;
     CATS = classicItemCategories(itemCatalog);
@@ -292,19 +299,19 @@ async function boot() {
     CLASSIC_SKILLS = currentClassic.skills;
     classicSkillById = new Map(CLASSIC_SKILLS.champions.map(c => [c.appId, c]));
     if (window.ClassicLocale) {
-      const response = await fetch('data/classic-localized-26.19.json');
-      if (!response.ok) throw new Error('classic-localized-26.19.json HTTP ' + response.status);
+      const response = await fetch('data/classic-localized-26.20.json');
+      if (!response.ok) throw new Error('classic-localized-26.20.json HTTP ' + response.status);
       window.ClassicLocale.setData(await response.json());
     }
     if (window.ClassicSkillLocale26195) {
-      const response = await fetch('data/classic-skill-localized-26195.json');
-      if (!response.ok) throw new Error('classic-skill-localized-26195.json HTTP ' + response.status);
+      const response = await fetch('data/classic-skill-localized-2620.json');
+      if (!response.ok) throw new Error('classic-skill-localized-2620.json HTTP ' + response.status);
       const bytes = await response.arrayBuffer();
       const digest = await globalThis.crypto.subtle.digest('SHA-256', bytes);
       const sha256 = Array.from(new Uint8Array(digest), value => value.toString(16).padStart(2, '0')).join('');
       window.ClassicSkillLocale26195.setData(JSON.parse(new TextDecoder('utf-8', {fatal:true}).decode(bytes)), sha256);
-      const extraResponse = await fetch('data/classic-skill-localized-extra-26195.json');
-      if (!extraResponse.ok) throw new Error('classic-skill-localized-extra-26195.json HTTP ' + extraResponse.status);
+      const extraResponse = await fetch('data/classic-skill-localized-extra-2620.json');
+      if (!extraResponse.ok) throw new Error('classic-skill-localized-extra-2620.json HTTP ' + extraResponse.status);
       window.ClassicSkillLocale26195.setSupplementData(await extraResponse.json());
     }
     items.forEach(x => { itemByEn[x.en] = x; itemByI[x.i] = x; itemByI[x.riotId] = x; itemByI[x.cmsStableId] = x; });
@@ -2232,6 +2239,11 @@ function skinPortrait(c, skin) {
   return `<span class="skinTextMarker" role="img" aria-label="${esc(label)}"><i aria-hidden="true">${appMessage('정보', '情報', 'Info')}</i></span>`;
 }
 
+function displayedChampionStat(value) {
+  return typeof value === 'number' && Number.isFinite(value)
+    ? Number(value.toFixed(4)) : value;
+}
+
 function legacy(id, tab = 'basic', sub) {
   const c = champ(id);
   const modeClassicSkins = classicSet.has(c.id);
@@ -2269,7 +2281,7 @@ function legacy(id, tab = 'basic', sub) {
 </div>
 <h3 class="cvBar">기본 능력치</h3>
 ${(c.rate || []).length === 4 ? `<div class="cvRates dossierRates">${rateDef.map((label, i) => `<div class="cvRate"><span>${localized(label)}</span><b>${c.rate[i] || 0}/10</b></div>`).join('')}</div>` : ''}
-<div class="cvStats">${statOrder.map(r => `<div class="cvS"><span>${localized(r[0])} : </span><b>${r[1] == null ? '-' : r[1]}${r[2] != null ? ` <em>(+${r[2]})</em>` : ''}</b></div>`).join('')}</div>
+<div class="cvStats">${statOrder.map(r => `<div class="cvS"><span>${localized(r[0])} : </span><b>${r[1] == null ? '-' : displayedChampionStat(r[1])}${r[2] != null ? ` <em>(+${displayedChampionStat(r[2])})</em>` : ''}</b></div>`).join('')}</div>
 ${window.ClassicRecommendationsUI.render(c, { locale: appLocale.getLocale(), open: store.get('classicRecommendationsAlwaysOpen26195', false), names: { items: itemName, runes: runeName, masteries: masteryName, spells: spellName } })}
 <h3 class="cvBar">스킬 정보</h3>
 <div class="cvSkills">${renderSkillCards(c)}</div>
@@ -3177,7 +3189,14 @@ document.addEventListener('click', e => {
   if (cmd === 'classicVoices') return window.ClassicVoiceLibrary.open(champ(arg));
   if (cmd === 'lore') {
     const c2 = champ(arg);
-    $('#modalBody').innerHTML = window.ClassicChampionBackgrounds.render(c2);
+    const loreBody = $('#modalBody');
+    const initialLore = window.ClassicChampionBackgrounds.render(c2);
+    loreBody.innerHTML = initialLore;
+    window.ClassicChampionBackgrounds.ready?.then(() => {
+      if ($('#modal').open && loreBody.innerHTML === initialLore) {
+        loreBody.innerHTML = window.ClassicChampionBackgrounds.render(c2);
+      }
+    });
     return $('#modal').showModal();
   }
   if (cmd === 'termSearch') { S.tq = $('#termQ').value; return render(); }

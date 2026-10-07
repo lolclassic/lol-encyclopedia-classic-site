@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "classification": "LOCAL_SITE_WEBVIEW_STILL_REVIEW_26_20",
+  "recordedAt": "2026-10-07T03:05:49.459636+00:00",
+  "reviewer": "Codex visual inspection by parent agent",
+  "method": "Parent viewed the exact four site WebView PNGs in a contact sheet; hashes bind the reviewed source images. Original raw screenshots are outside this review.",
+  "scope": "Four cropped English site PNGs; public release authorization excluded",
+  "publicationAuthorized": false,
+  "publicationApproved": false,
+  "humanAudioListening": "NOT_PERFORMED",
+  "files": {
+    "en_US-home-webview.png": {
+      "sha256": "de9f619ef2310e0871e1b9fe932a466e9e2481522c8a9df5470740651020b088",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "notificationContentFound": false,
+      "notificationIconsFound": false
+    },
+    "en_US-new-classic-webview.png": {
+      "sha256": "19f91868b55e66bef97096d3f7451edbd0fc19a4cf3c2f6a64a5bd96afa0dc4d",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "notificationContentFound": false,
+      "notificationIconsFound": false
+    },
+    "en_US-recommendation-webview.png": {
+      "sha256": "101e388f70fa3abc69779b0e7608804a1c0975d3bc1a5414a962564047a025e0",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "notificationContentFound": false,
+      "notificationIconsFound": false
+    },
+    "en_US-effect-popup-webview.png": {
+      "sha256": "7318c372fa1c41ea405634335d23c238caabdd2850cb8c6499514511d896d38b",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "personalDataFound": false,
+      "notificationContentFound": false,
+      "notificationIconsFound": false
+    }
+  },
+  "contentPreservationNote": "Rammus official skill flavor text remains unchanged; the short flavor text visible under ability descriptions was traced to the original Riot 16.20 string table by the independent app agent."
+}

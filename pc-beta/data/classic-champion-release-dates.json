@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "classification": "EDITORIAL_HISTORICAL_RELEASE_DATES",
-  "classicVersion": "16.19.1",
+  "classicVersion": "16.20.1",
   "dateBasis": "ORIGINAL_GLOBAL_INTRODUCTION_INCLUDING_ALPHA",
   "note": "최초 글로벌 등장일(알파 포함)입니다. 한국 서버 서비스 개시일, 리워크일, Classic 모드 추가일이 아닙니다. 원본 챔피언 데이터나 현재 능력치를 보충하지 않는 정렬 전용 연혁입니다.",
-  "sourceIndexUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/data/ko_KR/mode/classic/champion.json",
-  "sourceIndexSha256": "e8569ec720eba25cb02ec3e4386fc04b5f30bb4da558933a231fe716f002a6be",
-  "englishSourceIndexUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/data/en_US/mode/classic/champion.json",
-  "englishSourceIndexSha256": "01525860a83d1827204478e212785baaa07973a8969fdcbcdb5f7f0d98394fd2",
+  "sourceIndexUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion.json",
+  "sourceIndexSha256": "a0f729ade9900b3760496a578e1afc337f46c774b46d072e414897cb7a3e5d95",
+  "englishSourceIndexUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion.json",
+  "englishSourceIndexSha256": "c73c7c72b26bed0f3728bdc61f036dec72abf57d33c6917c60c0da2cd4c257c7",
   "champions": {
     "Jade_Ahri": {
       "appId": "ahri",
@@ -824,6 +824,56 @@
         "loltheory-2619-additions",
         "dotesports-2619-additions"
       ]
+    },
+    "Jade_Aatrox": {
+      "appId": "aatrox",
+      "nameKo": "아트록스",
+      "nameEn": "Aatrox",
+      "releaseDate": "2013-06-13",
+      "sourceRefs": [
+        "loltheory-2620-additions",
+        "dotesports-2620-additions"
+      ]
+    },
+    "Jade_Caitlyn": {
+      "appId": "caitlyn",
+      "nameKo": "케이틀린",
+      "nameEn": "Caitlyn",
+      "releaseDate": "2011-01-04",
+      "sourceRefs": [
+        "loltheory-2620-additions",
+        "dotesports-2620-additions"
+      ]
+    },
+    "Jade_Irelia": {
+      "appId": "irelia",
+      "nameKo": "이렐리아",
+      "nameEn": "Irelia",
+      "releaseDate": "2010-11-16",
+      "sourceRefs": [
+        "loltheory-2620-additions",
+        "dotesports-2620-additions"
+      ]
+    },
+    "Jade_Karma": {
+      "appId": "karma",
+      "nameKo": "카르마",
+      "nameEn": "Karma",
+      "releaseDate": "2011-02-01",
+      "sourceRefs": [
+        "loltheory-2620-additions",
+        "dotesports-2620-additions"
+      ]
+    },
+    "Jade_Quinn": {
+      "appId": "quinn",
+      "nameKo": "퀸",
+      "nameEn": "Quinn",
+      "releaseDate": "2013-03-01",
+      "sourceRefs": [
+        "loltheory-2620-additions",
+        "dotesports-2620-additions"
+      ]
     }
   },
   "sources": [
@@ -932,6 +982,19 @@
       "url": "https://dotesports.com/league-of-legends/news/all-league-of-legends-champion-release-dates",
       "verification": "2026-09-27 공개 표에서 신규 4명의 날짜를 행별 대조했습니다. 응답 바이트는 보존하지 않았습니다.",
       "scope": "26.19 클래식 신규 4명의 최초 글로벌 출시일 정렬에만 사용합니다."
+    },
+    {
+      "id": "loltheory-2620-additions",
+      "url": "https://blog.loltheory.gg/league-of-legends-champions-by-release-date/",
+      "sha256": "6194610cc4dcc61ce09992c692ca939ea17d47bf77574520753c538035e61db1",
+      "verification": "Saved source rows checked for all five additions; compared with Dot Esports table read on 2026-10-07.",
+      "scope": "Historical sort dates only, not Classic champion gameplay data."
+    },
+    {
+      "id": "dotesports-2620-additions",
+      "url": "https://dotesports.com/league-of-legends/news/all-league-of-legends-champion-release-dates",
+      "verification": "Web source table directly read on 2026-10-07: Irelia November 16 2010, Caitlyn January 4 2011, Karma February 1 2011, Quinn March 1 2013, Aatrox June 13 2013.",
+      "scope": "Historical sort dates only."
     }
   ],
   "comparisons": [
@@ -2622,7 +2685,98 @@
       ],
       "conflictingSources": [],
       "resolution": "두 출시일 표의 해당 챔피언 최초 출시 날짜가 일치합니다."
+    },
+    {
+      "classicId": "Jade_Aatrox",
+      "nameEn": "Aatrox",
+      "acceptedDate": "2013-06-13",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2620-additions",
+          "date": "2013-06-13"
+        },
+        {
+          "sourceRef": "dotesports-2620-additions",
+          "date": "2013-06-13"
+        }
+      ],
+      "conflictingSources": [
+        {
+          "sourceRef": "lolvvv-dates",
+          "date": "2013-06-12"
+        }
+      ],
+      "resolution": "Use June 13, matching LolTheory, Dot Esports and the contemporary Surrender at 20 availability announcement. Lolvvv lists June 12; discrepancy remains recorded.",
+      "contemporaryConfirmationUrl": "https://www.surrenderat20.net/2013/06/aatrox-now-available.html"
+    },
+    {
+      "classicId": "Jade_Caitlyn",
+      "nameEn": "Caitlyn",
+      "acceptedDate": "2011-01-04",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2620-additions",
+          "date": "2011-01-04"
+        },
+        {
+          "sourceRef": "dotesports-2620-additions",
+          "date": "2011-01-04"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "The two checked historical date tables match."
+    },
+    {
+      "classicId": "Jade_Irelia",
+      "nameEn": "Irelia",
+      "acceptedDate": "2010-11-16",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2620-additions",
+          "date": "2010-11-16"
+        },
+        {
+          "sourceRef": "dotesports-2620-additions",
+          "date": "2010-11-16"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "The two checked historical date tables match."
+    },
+    {
+      "classicId": "Jade_Karma",
+      "nameEn": "Karma",
+      "acceptedDate": "2011-02-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2620-additions",
+          "date": "2011-02-01"
+        },
+        {
+          "sourceRef": "dotesports-2620-additions",
+          "date": "2011-02-01"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "The two checked historical date tables match."
+    },
+    {
+      "classicId": "Jade_Quinn",
+      "nameEn": "Quinn",
+      "acceptedDate": "2013-03-01",
+      "observations": [
+        {
+          "sourceRef": "loltheory-2620-additions",
+          "date": "2013-03-01"
+        },
+        {
+          "sourceRef": "dotesports-2620-additions",
+          "date": "2013-03-01"
+        }
+      ],
+      "conflictingSources": [],
+      "resolution": "The two checked historical date tables match."
     }
   ],
-  "sourceCombinedSha256": "db989805fe7c5a0dd4eaef4b89f092a4523c72abebcec41a0b09b6e6c946ded8"
+  "sourceCombinedSha256": "3afe5ef91f36aee6d245e8d3f1b48e437123d40ea01923d57b8efb7c739f14a5"
 }

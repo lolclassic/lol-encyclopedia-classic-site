@@ -9,6 +9,7 @@
   let data;
   let localizedData;
   let patch2619;
+  let patch2620;
   const localizedUrls = {
     ja_JP: 'https://www.leagueoflegends.com/ja-jp/news/game-updates/league-of-legends-patch-26-18-notes/',
     en_US: 'https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-18-notes/',
@@ -98,14 +99,38 @@
     }
     patch2619 = value;
   }
+  function setPatch2620(value) {
+    const article = value?.article;
+    const champions = article?.champions;
+    const sections = article?.sections;
+    if (value?.schemaVersion !== 1 || value.sourceScope !== 'classic-only'
+        || article?.id !== 'league-classic-26-20' || article.patch !== '26.20'
+        || article.sourceUrl !== 'https://www.leagueoflegends.com/ko-kr/news/game-updates/league-of-legends-patch-26-20-notes/'
+        || !article.title || !article.body || !Array.isArray(champions) || champions.length !== 10
+        || !Array.isArray(sections) || sections.length < 2
+        || new Set(champions.map(row => row.id)).size !== champions.length
+        || champions.some(row => !row.id || !row.name || !row.body || !['new', 'balance'].includes(row.kind)
+          || !/^images\/[a-zA-Z0-9/_-]+\.(?:png|jpg|jpeg|webp)$/.test(row.icon))
+        || sections.some(row => !row.title || !row.body)) throw new Error('Invalid Classic 26.20 article');
+    for (const language of ['ja_JP', 'en_US']) {
+      const entry = value.locales?.[language];
+      if (!entry?.title || !entry.body || !entry.author || !entry.source
+          || !entry.sourceUrl?.startsWith('https://www.leagueoflegends.com/')
+          || entry.champions?.length !== champions.length || entry.sections?.length !== sections.length
+          || entry.champions.some(row => !row.name || !row.body)
+          || entry.sections.some(row => !row.title || !row.body)) throw new Error('Incomplete Classic 26.20 localization: ' + language);
+    }
+    patch2620 = value;
+  }
   function locale() {
     const current = root.ClassicLocale?.getLocale?.();
     return current === 'ja_JP' || current === 'en_US' ? current : 'ko_KR';
   }
   function localized() { return localizedData?.locales?.[locale()] || null; }
-  function articles() { return patch2619 ? [patch2619.article, ...(data?.articles || [])] : (data?.articles || []); }
+  function articles() { return [patch2620?.article, patch2619?.article, ...(data?.articles || [])].filter(Boolean); }
   function article(id) { return articles().find(row => row.id === id); }
   function articleTitle(row) {
+    if (row?.id === 'league-classic-26-20') return patch2620?.locales?.[locale()]?.title || row.title;
     if (row?.id === 'league-classic-26-19') return patch2619?.locales?.[locale()]?.title || row.title;
     if (row?.id === 'league-classic-26-18') return localized()?.article?.title || row.title;
     return row?.title || '';
@@ -113,8 +138,9 @@
   function articleMarkup(row) {
     if (!row) return '';
     const language = locale();
-    if (row.id === 'league-classic-26-19') {
-      const overlay = patch2619?.locales?.[language];
+    if (['league-classic-26-19', 'league-classic-26-20'].includes(row.id)) {
+      const patch = row.id === 'league-classic-26-20' ? patch2620 : patch2619;
+      const overlay = patch?.locales?.[language];
       const shown = overlay || row;
       const champions = row.champions.map((champion, index) => {
         const translated = overlay?.champions[index] || champion;
@@ -136,10 +162,16 @@
     const language = locale();
     const overlay = localized()?.council;
     const officialUrl = localized()?.article.sourceUrl || sourceUrl;
-    const current = patch2619 ? currentVoteText[language] : null;
+    const lastVote = currentVoteText[language];
+    const current = patch2620 ? {
+      ...lastVote,
+      title: ({ko_KR:'의회 · 최신 공식 투표 안내',ja_JP:'評議会 · 最新の公式投票案内',en_US:'The Council · Latest official vote notice'})[language],
+      summary: ({ko_KR:'마지막 공식 안내는 26.19 제2회 투표(7일간)입니다. 26.20 패치노트에는 새 투표나 제2회 결과가 안내되지 않았습니다.',ja_JP:'最後の公式案内は26.19の第2回投票（7日間）です。26.20のパッチノートには新しい投票や第2回の結果が記載されていません。',en_US:'The latest official notice is the seven-day second vote in 26.19. The 26.20 patch notes do not announce a new vote or the second vote results.'})[language],
+      action: ({ko_KR:'현재 진행 중인 투표는 공식 리그 클라이언트의 의회 탭에서 확인해 주세요. 앱에서 투표를 제출하지는 않습니다.',ja_JP:'現在開催中の投票は公式リーグクライアントの評議会タブで確認してください。このアプリでは投票を送信しません。',en_US:'Check The Council tab in the official League client for any currently open vote. This app does not submit votes.'})[language],
+    } : patch2619 ? lastVote : null;
     const currentUrl = patch2619?.locales?.[language]?.sourceUrl || patch2619?.article?.sourceUrl;
     const currentMarkup = current ? `<section class="councilCurrentVote"><h2>${esc(current.title)}</h2><p class="newsArticleMeta">Riot Games · ${esc(current.period)}</p><p>${esc(current.summary)}</p><p>${esc(current.action)}</p><button class="parchSource" data-external="${esc(currentUrl)}">${sourceButtons[language]}</button></section>` : '';
     return `<section class="councilPage" lang="${language.slice(0, 2)}">${currentMarkup}<h2>${esc(overlay?.title || council.title)}</h2><p class="newsArticleMeta">Riot Games · ${esc(council.date)}</p><section class="councilDecisions"><h3>${esc(overlay?.effectiveStatus || council.effectiveStatus)}</h3><ul>${council.decisions.map((text, index) => `<li>${esc(overlay?.decisions[index] || text)}</li>`).join('')}</ul></section>${council.questions.map((question, index) => `<section class="councilQuestion"><h3>${index + 1}. ${esc(overlay?.questions[index].question || question.question)}</h3><ol>${question.options.map((row, optionIndex) => `<li><span>${esc(overlay?.questions[index].options[optionIndex] || row.label)}</span><b>${row.percent.toFixed(2)}%</b><span class="councilPercentTrack" aria-hidden="true"><i style="width:${row.percent}%"></i></span></li>`).join('')}</ol></section>`).join('')}<button class="parchSource" data-external="${esc(officialUrl)}">${sourceButtons[language]}</button></section>`;
   }
-  return Object.freeze({setData, setLocalizedData, setPatch2619, articles, article, articleTitle, articleMarkup, councilMarkup});
+  return Object.freeze({setData, setLocalizedData, setPatch2619, setPatch2620, articles, article, articleTitle, articleMarkup, councilMarkup});
 });

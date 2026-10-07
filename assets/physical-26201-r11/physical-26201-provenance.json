@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "classification": "USER_AUTHORIZED_SITE_MEDIA_NOT_RIGHTS_CLEARANCE_OR_PLAY_RELEASE",
+  "appVersion": "26.20.1",
+  "reviewRevision": "r11",
+  "webRevision": "26.20.1-r11",
+  "nativeWebAssetGeneration": "26.20.1-pick-lore-r11",
+  "captureDate": "2026-10-07",
+  "app": {
+    "packageName": "com.lolclassic.encyclopedia.v26201",
+    "version": "26.20.1",
+    "versionCode": 26,
+    "apkSha256": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+    "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc"
+  },
+  "effectScene": {
+    "champion": "garen",
+    "slot": "W",
+    "effect": "tenacity"
+  },
+  "files": {
+    "ko_KR-home-webview.png": {
+      "file": "ko_KR-home-webview.png",
+      "sha256": "c684f5d6a425474850e17ba94b6f48ba4c651d1fd95201dfee7a652880ef842a",
+      "rgbRasterSha256": "01923b0aa462cfe57459e8ef2e134643eb7e3a416884390b22d50b3d076285b1",
+      "bytes": 1276688,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "fe364bef45e858f795d7e4d468b43c78d41776bc5b3e2a19959ea957ac50204d",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ko_KR",
+      "scene": "home",
+      "route": "home",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "fe364bef45e858f795d7e4d468b43c78d41776bc5b3e2a19959ea957ac50204d",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ko_KR-new-classic-webview.png": {
+      "file": "ko_KR-new-classic-webview.png",
+      "sha256": "26b8b617a02ac053148458abcfafd3680583e3e2769b51c3801e5c9d953a7224",
+      "rgbRasterSha256": "b8b4320317147e9b38d4f4ccdeefce1b2b8d6acb9e2df09b57e699a6f19ef186",
+      "bytes": 467315,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "803d29766d905a9a909a7ff991cb258118c3d5be2149e27f305ae2d66d751bd2",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ko_KR",
+      "scene": "new-classic",
+      "route": "champion/aatrox/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "803d29766d905a9a909a7ff991cb258118c3d5be2149e27f305ae2d66d751bd2",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ko_KR-recommendation-webview.png": {
+      "file": "ko_KR-recommendation-webview.png",
+      "sha256": "ebf39ef2d395461bbc3ac2fc9f56f2540cb7139f90f9897d98c53e723adcf6bb",
+      "rgbRasterSha256": "9524f1585c740571d4b263a6a86b70e552b4f73a9767e43ef082ea41e87ab043",
+      "bytes": 724612,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "dec2fc503d64dc714a9d8ca863f56a8596ff79e77fbfb11d20b54ee23bc2dadf",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ko_KR",
+      "scene": "recommendation",
+      "route": "champion/garen/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "dec2fc503d64dc714a9d8ca863f56a8596ff79e77fbfb11d20b54ee23bc2dadf",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ko_KR-effect-popup-webview.png": {
+      "file": "ko_KR-effect-popup-webview.png",
+      "sha256": "2a8f2578b5b1bc848beeee82818ab8dce6a48c8372195486c8f38278a9e378d8",
+      "rgbRasterSha256": "b026ec163833e07cebf91e9bfdc273cafdabcf4bc619e147d8bb1875d2537bd4",
+      "bytes": 463036,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "7f4e4bb0fbe9bbacf30349b98b124ec4f00328f1617b00425248e24fc49ddecb",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ko_KR",
+      "scene": "effect-popup",
+      "route": "champion/garen/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "7f4e4bb0fbe9bbacf30349b98b124ec4f00328f1617b00425248e24fc49ddecb",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ko_KR-pick-lines-webview.png": {
+      "file": "ko_KR-pick-lines-webview.png",
+      "sha256": "4e5774f95e1f8d0be3cc69fef61c9d41fa2d3bce2b0d3822b821dbd829ef5b03",
+      "rgbRasterSha256": "373cb58ddd661775ab392a25ac54267a48ee9815fdfd39471185eb3007edd644",
+      "bytes": 1615531,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "3e9a965837f1e4112c5f2774a8f3d74473f9d964e90d6bda4e3faf13a998b5ff",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ko_KR",
+      "scene": "pick-lines",
+      "route": "champion/aatrox/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "3e9a965837f1e4112c5f2774a8f3d74473f9d964e90d6bda4e3faf13a998b5ff",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ko_KR-historical-story-webview.png": {
+      "file": "ko_KR-historical-story-webview.png",
+      "sha256": "d578a9680ed51f7a5df6d3266f498d106ff9e77b2febffac0bb01117eef7fb28",
+      "rgbRasterSha256": "ae977249e820d9dbd63fd3967e2be76d56d4b481bf106094da14448ba0649d1a",
+      "bytes": 2753307,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "80016fad320ad25d9141b9739ab6a5f88b0fefc7152d3c9fd2825c8c39a4fa35",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ko_KR",
+      "scene": "historical-story",
+      "route": "champion/karma/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "80016fad320ad25d9141b9739ab6a5f88b0fefc7152d3c9fd2825c8c39a4fa35",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ja_JP-home-webview.png": {
+      "file": "ja_JP-home-webview.png",
+      "sha256": "68c55e547077ac186d1ec42cf3b501686125fd1f0a528c2bd7728efed349cc9b",
+      "rgbRasterSha256": "f3c4409dd87604cf786913c04dae8b1de1b58b83c50721665ee306f72c2144af",
+      "bytes": 1301547,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "b52478308a902f133b83af0e5d5657ac3bea6300b1a74b910b85b686666703f0",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ja_JP",
+      "scene": "home",
+      "route": "home",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "b52478308a902f133b83af0e5d5657ac3bea6300b1a74b910b85b686666703f0",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ja_JP-new-classic-webview.png": {
+      "file": "ja_JP-new-classic-webview.png",
+      "sha256": "4c5b0f0fd44f1ec783a5ba830df5d579934dd520bfbb096c1ac77d97346c0f96",
+      "rgbRasterSha256": "48c2b5914e453fc1f5de30ae4d20cdb7024c07fd21382c8c46a17e862c504dd3",
+      "bytes": 490465,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "681d52a7c651e92b203bc280b6cf5c3f23cd86002dc5808d6c6322fd3a74671b",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ja_JP",
+      "scene": "new-classic",
+      "route": "champion/aatrox/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "681d52a7c651e92b203bc280b6cf5c3f23cd86002dc5808d6c6322fd3a74671b",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ja_JP-recommendation-webview.png": {
+      "file": "ja_JP-recommendation-webview.png",
+      "sha256": "82a3d722c42576b72797c9a7f375a578125d38302327cdf322f34266e7c86856",
+      "rgbRasterSha256": "4d8bee1879147b6c2f9c5c54924c54da5a872a4f0b81c514186a380bf8d61049",
+      "bytes": 740710,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "57e497884b033ba611f833cc707d230d4b3c0838a16b8bacd639f3abc233e681",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ja_JP",
+      "scene": "recommendation",
+      "route": "champion/garen/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "57e497884b033ba611f833cc707d230d4b3c0838a16b8bacd639f3abc233e681",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ja_JP-effect-popup-webview.png": {
+      "file": "ja_JP-effect-popup-webview.png",
+      "sha256": "8e62fde298915b9904693934b1d7db40d695cac0defa34abb1d7f7ab5449d5cb",
+      "rgbRasterSha256": "61bacfdd7b84bcf26dfc4978c94c6b13dedb339671eb37c669951e32b9a66944",
+      "bytes": 527890,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "53bdbaa1e25b47d435ecadf7d980fece32a08811c25cba026632a38249fb5072",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ja_JP",
+      "scene": "effect-popup",
+      "route": "champion/garen/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "53bdbaa1e25b47d435ecadf7d980fece32a08811c25cba026632a38249fb5072",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ja_JP-pick-lines-webview.png": {
+      "file": "ja_JP-pick-lines-webview.png",
+      "sha256": "72e9443b562053573fc8d645339282bc9ba8b9b8b6f3c95b9626b0d79cee926f",
+      "rgbRasterSha256": "19dbc04c6e92fe85a1d2c500e45480b8a7cf8cdb43ab1dd4842fa9f3eb736c30",
+      "bytes": 1635301,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "92be5f0a17ae74721b0a20b4599ad6af61e72a70ab47976f3bdcff8820892d0d",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ja_JP",
+      "scene": "pick-lines",
+      "route": "champion/aatrox/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "92be5f0a17ae74721b0a20b4599ad6af61e72a70ab47976f3bdcff8820892d0d",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "ja_JP-historical-story-webview.png": {
+      "file": "ja_JP-historical-story-webview.png",
+      "sha256": "ea37445da4dce34dc4e919f92567cae1e748aaa0c127955dcfadb5e353e61813",
+      "rgbRasterSha256": "0322be2afd2ed57a9b184753fbddce651b0969911ed8da7dd180081cd4dc255e",
+      "bytes": 2779171,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "49a3db493fdfaa80ca2af9acfe6da4211b0e6d1979a07e574fa0533fed4235bd",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "ja_JP",
+      "scene": "historical-story",
+      "route": "champion/karma/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "49a3db493fdfaa80ca2af9acfe6da4211b0e6d1979a07e574fa0533fed4235bd",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "en_US-home-webview.png": {
+      "file": "en_US-home-webview.png",
+      "sha256": "de9f619ef2310e0871e1b9fe932a466e9e2481522c8a9df5470740651020b088",
+      "rgbRasterSha256": "39cd09582a6f1d3e3460ed04d12a40f5052ddad4f6339695f3a45f8aaeae9627",
+      "bytes": 1301156,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "0c83170cfcbec40b752454a52d372736462699151789f6564991ae22aa7aecbb",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "en_US",
+      "scene": "home",
+      "route": "home",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "0c83170cfcbec40b752454a52d372736462699151789f6564991ae22aa7aecbb",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "en_US-new-classic-webview.png": {
+      "file": "en_US-new-classic-webview.png",
+      "sha256": "19f91868b55e66bef97096d3f7451edbd0fc19a4cf3c2f6a64a5bd96afa0dc4d",
+      "rgbRasterSha256": "6f5f715406e869b6bf81b6acc6c7a1dce9f4b74d7b48e105eb645f01fbc9bd34",
+      "bytes": 493749,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "0959243d104abbf0d09f6119d31e765708c5946d84f6087be0805afcd4de30d5",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "en_US",
+      "scene": "new-classic",
+      "route": "champion/aatrox/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "0959243d104abbf0d09f6119d31e765708c5946d84f6087be0805afcd4de30d5",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "en_US-recommendation-webview.png": {
+      "file": "en_US-recommendation-webview.png",
+      "sha256": "101e388f70fa3abc69779b0e7608804a1c0975d3bc1a5414a962564047a025e0",
+      "rgbRasterSha256": "179c932cc8bb895bae57e3542ed316faadc15e8602772534865a7d759b1432e5",
+      "bytes": 741114,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "aa1e84affd7c14a9f83278dc24510fc10e65deacfa71f2c238c2d1306d685fd6",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "en_US",
+      "scene": "recommendation",
+      "route": "champion/garen/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "aa1e84affd7c14a9f83278dc24510fc10e65deacfa71f2c238c2d1306d685fd6",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "en_US-effect-popup-webview.png": {
+      "file": "en_US-effect-popup-webview.png",
+      "sha256": "a02dc7b9d83d63be10b61daed226d35175fdff08cdcbc14678ccdbb5763ea207",
+      "rgbRasterSha256": "b2a7c105b8fdb016031cdd52348fe92febf06305789727436407a9f9291e495b",
+      "bytes": 491719,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "83b33613b58ef65a4c118dc652083632e091e7f2df0b45c1d119697f6e1e4d6c",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "en_US",
+      "scene": "effect-popup",
+      "route": "champion/garen/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "83b33613b58ef65a4c118dc652083632e091e7f2df0b45c1d119697f6e1e4d6c",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "en_US-pick-lines-webview.png": {
+      "file": "en_US-pick-lines-webview.png",
+      "sha256": "0b3fe0898a4c94e1915490bd0a1a66e199d4c4814b0003e1f171c2e3c4f84112",
+      "rgbRasterSha256": "1f36072d6fc673d7abd463148e62a04261a4ef904a65cc9d1aa790d536a039dc",
+      "bytes": 1640970,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "0d7254b42854f111fcd84ff524aef2ad4ee7fba8801538ace343803826299516",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "en_US",
+      "scene": "pick-lines",
+      "route": "champion/aatrox/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "0d7254b42854f111fcd84ff524aef2ad4ee7fba8801538ace343803826299516",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    },
+    "en_US-historical-story-webview.png": {
+      "file": "en_US-historical-story-webview.png",
+      "sha256": "bef84d8d675a3cada619a19e646441682101c7305400946e3bdb0050440229b3",
+      "rgbRasterSha256": "070889511ae209bc346087f2f4954ac9f7851654d6ed936aa0285022575993e0",
+      "bytes": 2770459,
+      "width": 1080,
+      "height": 2116,
+      "lineage": {
+        "method": "exact physical WebView rectangle crop; no scaling",
+        "parentSha256": "22a42a7f43edc244306b0faaecdf22206bbd4e74ed7b9aaad43b6f79bcdb9dfb",
+        "rectangle": {
+          "left": 0,
+          "top": 98,
+          "width": 1080,
+          "height": 2116
+        }
+      },
+      "locale": "en_US",
+      "scene": "historical-story",
+      "route": "champion/karma/basic",
+      "captureAPK": "25276ea1f4988d6b602a7064d93028eb0453f1e5f5bf4298ecd63e22809ef668",
+      "runtimeInventorySha256": "95953d47a3d4b04846c05576b2cfe69051e7329518502653a3bf980ab6685cdc",
+      "sourceRawSha256": "22a42a7f43edc244306b0faaecdf22206bbd4e74ed7b9aaad43b6f79bcdb9dfb",
+      "visualReviewed": true,
+      "privacyReviewed": true,
+      "humanUserReviewPerformed": false
+    }
+  },
+  "video": {
+    "width": 1080,
+    "height": 2116,
+    "actualDurationSeconds": 29.674722,
+    "outputBytes": 2572342,
+    "outputSha256": "e798b2ef8cc129c502301a23ccd154f58b70f1b8578e9ce59a238afc3a309f01",
+    "sourceSha256": "6641f6e3acb2378b498e54f3b07b5c5e23faeccb27158cdfa8e634af18273bc5",
+    "sourceFrameCount": 458,
+    "outputFrameCount": 458,
+    "audioStreamCount": 0,
+    "allDecodedFramePtsIdentical": true,
+    "visualSampleCount": 30,
+    "visualReviewed": true,
+    "privacyReviewed": true,
+    "personalDataFound": false,
+    "humanFullVideoReview": false,
+    "humanUserReviewPerformed": false,
+    "humanAudioListening": "NOT_PERFORMED",
+    "file": "en_US-feature-tour-webview.mp4"
+  },
+  "producerEvidenceSha256": {
+    "screenshot-evidence-26201.json": "404e72bf4dcf75fc8f6e69f00d82faa388d921ed0fd371e3abd91fdb66b471f6",
+    "still-review-26201.json": "b1a2aaefda772f1e045877a57fa134876885331c0937731c0b5be73dbd9bbb04",
+    "video-audit-26201.json": "b789b32ca462498928d9f2316032960df7064b88dba3143658aec916565b1e96",
+    "independent-visual-review-r11.json": "6be0c22431d5f7ddeab8d919aafb9257872c8b15c6b431642f8dec2599d6552d"
+  },
+  "reviewScope": "AI review of 18 original WebView stills and 30 one-second video samples; no human full-video review or audio listening",
+  "producerReviewPublicationFlagsRemainFalse": true,
+  "publicationApprovalBasis": {
+    "scope": "WEBSITE_AND_PC_BETA_PUBLICATION_ONLY",
+    "source": "DIRECT_HUMAN_CONVERSATION_IN_THIS_TASK",
+    "instruction": "일단 배포진행해",
+    "sitePublicationAuthorized": true,
+    "humanMediaReviewClaim": false,
+    "rightsClearanceClaim": false,
+    "playReleaseClaim": false
+  },
+  "publicationApproved": true,
+  "publicationPerformed": false,
+  "humanUserReviewPerformed": false,
+  "wholeGoalComplete": false,
+  "rightsClearanceClaim": false,
+  "playReleaseClaim": false,
+  "knownLimitations": [
+    "Karma Japanese historical pick recording remains unavailable",
+    "New champion background text is an editorial summary and translation",
+    "PC preview excludes online community, CMS, native updater and online video modules",
+    "Current Classic client selection identity and human audio listening are not verified"
+  ]
+}

@@ -53,6 +53,7 @@
     mana:{label:['마나','マナ','Mana'],css:'skillManaValue',percent:true},
     energy:{label:['기력','気','Energy'],css:'skillEnergyValue',percent:true},
     fury:{label:['분노','フューリー','Fury'],css:'skillFuryValue',percent:true},
+    bloodWell:{label:['피의 샘','ブラッドウェル','Blood Well'],css:'skillFuryValue',percent:true},
     moveSpeed:{label:['이동 속도','移動速度','Movement Speed'],css:'skillMetaPlainValue',percent:true},
     critChance:{label:['치명타 확률','クリティカル率','critical chance'],css:'skillMetaPlainValue',percent:true},
     critDamage:{label:['치명타 피해 배율','クリティカルダメージ倍率','critical damage multiplier'],css:'skillMetaPlainValue',percent:true},

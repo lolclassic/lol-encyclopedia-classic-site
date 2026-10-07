@@ -8,7 +8,21 @@
   let backgrounds = new Map();
   let sourceRows = new Map();
   let localizedOverrides = new Map();
-  const sourceCatalogSha256 = 'ba8578247f0665c08926ac593ba17d845ce17f87d102745d2eaaf5ac884ca87e';
+  let historicalSummaries = new Map();
+  let activePatch = '26.19';
+  const historicalCatalogSha256 = '15ef40783d82e38422adc393f141a527428855c176d508181ffbfa9a055bc761';
+  const historicalIds = Object.freeze({Jade_Aatrox:266,Jade_Caitlyn:51,Jade_Irelia:39,Jade_Karma:43,Jade_Quinn:133});
+  const sourceCatalogHashes = Object.freeze({
+    '26.19':'ba8578247f0665c08926ac593ba17d845ce17f87d102745d2eaaf5ac884ca87e',
+    '26.20':'12964f42fff28eb96e22b2744862b3b16a2f7e59ffcf7f37419aa219bb224032',
+  });
+  const direct2620 = Object.freeze({
+    aatrox:{id:'Jade_Aatrox',source:'6b326d8bcdb61f71fc69cff147aaf8bc1377de63f2b2eb569151d3d146036392',background:'a3d30174130a1c3b6d120154e6959befb5fa7707fc6a4505a5752e7a880b9441'},
+    caitlyn:{id:'Jade_Caitlyn',source:'e0b1b9835d80e684033884051e937aea018d5fd34d87e1458fc12fce58384f4f',background:'1708f1ef9229328f631bb3db795afa3107c2f82c2efd330ae888834a8b7ef0f8'},
+    irelia:{id:'Jade_Irelia',source:'4f881ed7c7284a1df89c24e0a9e708e64e66774d16fd4bd97b5363a93400130f',background:'31eb889b057f7cb620a6bddcaeb3aa698a1c9b02207cb4666232a22e4168e908'},
+    karma:{id:'Jade_Karma',source:'32a15bf96c3242d298675dca4a3fcd73d805a21a1f2819c4941ce94a21662ef6',background:'31eb889b057f7cb620a6bddcaeb3aa698a1c9b02207cb4666232a22e4168e908'},
+    quinn:{id:'Jade_Quinn',source:'04fb0caff5ee015d19c6b6e5fe96f2e9a60437e7e27df31ccfb28430d9606d40',background:'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'},
+  });
   // Editorial translations of user-verified Korean Classic backgrounds that
   // are missing from the bundled 16.19.1 Japanese and English catalog.
   // Riot champion pages below verify current terminology, not the story text.
@@ -105,21 +119,66 @@ At the surface, however, nobody came to the sacred cove to make the exchange. Th
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[char]));
 
+  async function setLoreData(raw) {
+    if (typeof raw !== 'string' || !globalThis.crypto?.subtle) throw new Error('Historical background integrity unavailable');
+    const digest = Array.from(new Uint8Array(await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw))), byte => byte.toString(16).padStart(2, '0')).join('');
+    if (digest !== historicalCatalogSha256) throw new Error('Historical background catalog integrity mismatch');
+    const data = JSON.parse(raw);
+    if (data.schemaVersion !== 1 || data.patch !== '26.20'
+        || data.classification !== 'HISTORICAL_CLASSIC_BACKGROUND_EDITORIAL_SUMMARY'
+        || data.sourcePolicy !== 'RIOT_ARCHIVED_PRE_REWORK_LORE_SUMMARIZED'
+        || data.championCount !== 5 || JSON.stringify(data.locales) !== JSON.stringify(['ko_KR','ja_JP','en_US'])
+        || !data.champions || Object.keys(data.champions).length !== 5) throw new Error('Invalid historical background catalog');
+    const next = new Map();
+    for (const [id, championId] of Object.entries(historicalIds)) {
+      const row = data.champions[id];
+      const version = id === 'Jade_Karma' ? '0.152.55' : '4.20.1';
+      if (row?.championId !== championId || row.classicKey !== championId + 60000
+          || row.appId !== id.slice(5).toLowerCase()
+          || row.source?.version !== version || row.source.locale !== 'en_US'
+          || row.source.url !== 'https://ddragon.leagueoflegends.com/cdn/' + version + '/data/en_US/champion/' + id.slice(5) + '.json'
+          || !['ko_KR','ja_JP','en_US'].every(locale => row.locales?.[locale]?.lore?.trim()
+            && row.locales[locale].classification === 'EDITORIAL_TRANSLATION_OF_HISTORICAL_SUMMARY')) {
+        throw new Error('Invalid historical background identity');
+      }
+      next.set(id, Object.freeze(row));
+    }
+    historicalSummaries = next;
+    return true;
+  }
+  const ready = typeof globalThis.fetch === 'function'
+    ? globalThis.fetch('data/classic-lore-2620.json').then(response => {
+      if (!response.ok) throw new Error('Historical background catalog unavailable');
+      return response.text();
+    }).then(setLoreData).catch(() => false) : Promise.resolve(false);
+
   function setData(data) {
-    if (data?.schemaVersion !== 1 || data.patch !== '26.19'
+    if (data?.schemaVersion !== 1 || !['26.19', '26.20'].includes(data.patch)
         || data.classification !== 'CLASSIC_CHAMPION_BACKGROUND_STORY'
-        || data.verification?.status !== 'VERIFIED_BY_USER'
-        || data.championCount !== 72 || !Array.isArray(data.champions)
-        || data.champions.length !== 72) throw new Error('Invalid Classic background catalog');
+        || data.verification?.status !== (data.patch === '26.20' ? 'USER_VERIFIED_72_AND_DIRECT_RIOT_CLASSIC_5' : 'VERIFIED_BY_USER')
+        || data.championCount !== (data.patch === '26.20' ? 77 : 72) || !Array.isArray(data.champions)
+        || data.champions.length !== (data.patch === '26.20' ? 77 : 72)) throw new Error('Invalid Classic background catalog');
     const next = new Map();
     const nextSources = new Map();
+    let verifiedCount = 0, directCount = 0;
     for (const row of data.champions) {
+      const spec = data.patch === '26.20' ? direct2620[row?.slug] : null;
       if (!/^[a-z]+$/.test(row?.slug || '') || !row.nameKo
-          || typeof row.background !== 'string' || !row.background.trim()
-          || row.verificationStatus !== 'VERIFIED_BY_USER_100_PERCENT'
+          || typeof row.background !== 'string'
+          || (!spec && (!row.background.trim() || row.verificationStatus !== 'VERIFIED_BY_USER_100_PERCENT'))
           || next.has(row.slug)) throw new Error('Invalid Classic champion background');
+      if (spec) {
+        if (row.verificationStatus !== 'DIRECT_MODE_CLASSIC_SOURCE' || row.classicId !== spec.id
+            || row.sourceUrl !== 'https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion/' + spec.id + '.json'
+            || row.sourceSha256 !== spec.source || row.sha256 !== spec.background
+            || typeof row.title !== 'string') throw new Error('Invalid direct Classic champion background');
+        directCount++;
+      } else verifiedCount++;
       next.set(row.slug, row.background);
       nextSources.set(row.slug, row);
+    }
+    if (verifiedCount !== 72 || directCount !== (data.patch === '26.20' ? 5 : 0)) {
+      throw new Error('Invalid Classic background verification coverage');
     }
     for (const supplemental of Object.values(supplementalLocales)) {
       const source = data.champions.find(row => row.slug === supplemental.sourceSlug);
@@ -129,13 +188,14 @@ At the surface, however, nobody came to the sacred cove to make the exchange. Th
     }
     backgrounds = next;
     sourceRows = nextSources;
+    activePatch = data.patch;
     localizedOverrides = new Map();
   }
 
   function setLocalizedData(data) {
-    if (data?.schemaVersion !== 1 || data.patch !== '26.19'
+    if (data?.schemaVersion !== 1 || data.patch !== activePatch
         || data.classification !== 'CLASSIC_CHAMPION_BACKGROUND_TRANSLATION'
-        || data.sourceCatalogSha256 !== sourceCatalogSha256
+        || data.sourceCatalogSha256 !== sourceCatalogHashes[activePatch]
         || !data.champions || Array.isArray(data.champions)
         || typeof data.champions !== 'object') {
       throw new Error('Invalid localized Classic background catalog');
@@ -143,11 +203,15 @@ At the surface, however, nobody came to the sacred cove to make the exchange. Th
     const next = new Map();
     for (const [riotId, row] of Object.entries(data.champions)) {
       const source = sourceRows.get(row?.sourceSlug);
+      const direct = activePatch === '26.20' ? direct2620[row?.sourceSlug] : null;
       if (!/^Jade_[A-Za-z]+$/.test(riotId) || !source
           || source.sha256 !== row.sourceSha256
           || !['ja_JP', 'en_US'].every(locale =>
-            typeof row[locale]?.lore === 'string' && row[locale].lore.trim()
-            && (row[locale].title === undefined || typeof row[locale].title === 'string'))) {
+            typeof row[locale]?.lore === 'string' && (direct || row[locale].lore.trim())
+            && (row[locale].title === undefined || typeof row[locale].title === 'string'))
+          || (direct && (riotId !== direct.id || row.sourcePolicy !== 'exact-riot-mode-classic-lore'
+            || !['ja_JP','en_US'].every(locale => row[locale].sourceUrl ===
+              'https://ddragon.leagueoflegends.com/cdn/16.20.1/data/' + locale + '/mode/classic/champion/' + riotId + '.json')))) {
         throw new Error(`Invalid localized Classic background: ${riotId}`);
       }
       next.set(riotId, row);
@@ -164,6 +228,23 @@ At the surface, however, nobody came to the sacred cove to make the exchange. Th
     const language = localeCode === 'ja_JP' ? 'ja' : localeCode === 'en_US' ? 'en' : '';
     const translated = language ? localizedLore(champion?.riotId, localeCode) : '';
     const heading = `<h2>${escapeHtml(locale?.name('champions', champion) || champion?.ko || '챔피언')} · ${escapeHtml(locale?.text('배경') || '배경')}</h2>`;
+    if (activePatch === '26.20' && direct2620[champion?.id]) {
+      const historical = historicalSummaries.get(champion?.riotId);
+      const selected = ['ko_KR','ja_JP','en_US'].includes(localeCode) ? localeCode : 'ko_KR';
+      if (!historical || historical.appId !== champion.id) {
+        const unavailable = selected === 'ja_JP' ? '旧設定の背景資料を読み込めませんでした。もう一度開いてください。'
+          : selected === 'en_US' ? 'The archived background could not be loaded. Please open it again.'
+            : '옛 설정의 배경 자료를 불러오지 못했습니다. 다시 열어 주세요.';
+        return `<section class="classicDocument classicChampionLore">${heading}<p${language ? ` lang="${language}"` : ''}>${unavailable}</p></section>`;
+      }
+      const note = selected === 'ja_JP' ? '旧設定の要約 · Riotが保存したリワーク前の背景物語を要約・翻訳しています。'
+        : selected === 'en_US' ? 'Historical summary · Summarized and translated from Riot’s archived pre-rework story.'
+          : '옛 설정 요약 · Riot이 보존한 리워크 이전 배경 이야기를 요약·번역한 자료입니다.';
+      const sourceLabel = selected === 'ja_JP' ? 'Riotの原文' : selected === 'en_US' ? 'Riot source' : 'Riot 원본';
+      const story = historical.locales[selected].lore.split(/\n{2,}/).map(paragraph =>
+        `<p${language ? ` lang="${language}"` : ''}>${escapeHtml(paragraph).replace(/\n/g, '<br>')}</p>`).join('');
+      return `<section class="classicDocument classicChampionLore" data-classic-lore-source="historical-summary">${heading}<p class="hint">${escapeHtml(note)}</p>${story}<p class="hint"><a href="${escapeHtml(historical.source.url)}" target="_blank" rel="noopener noreferrer">${sourceLabel} · ${historical.source.version}</a></p></section>`;
+    }
     const paragraphs = text
       ? text.replace(/\r\n?/g, '\n').split(/\n{2,}/).map(paragraph =>
         `<p>${escapeHtml(paragraph).replace(/\n/g, '<br>')}</p>`).join('')
@@ -178,5 +259,5 @@ At the surface, however, nobody came to the sacred cove to make the exchange. Th
     return `<section class="classicDocument classicChampionLore">${heading}<p lang="${language}">${official}</p></section>`;
   }
 
-  return Object.freeze({ setData, setLocalizedData, getText, localizedTitle, localizedLore, render });
+  return Object.freeze({ setData, setLocalizedData, setLoreData, ready, getText, localizedTitle, localizedLore, render });
 });

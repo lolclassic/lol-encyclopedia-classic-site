@@ -5,23 +5,24 @@
   const suspended = false;
   const library = window.ClassicVoiceLibrary;
   let audio = null, audioUrl = null, ticket = 0, target = '', catalog = {}, activeDetail = null, manualPlayback = false;
-  let languageAssessment = null;
+  let languageAssessment = null, supplementalPreview = {}, supplementalPicks = {};
+  const supplemental2620 = {266:'Jade_Aatrox',51:'Jade_Caitlyn',39:'Jade_Irelia',43:'Jade_Karma',133:'Jade_Quinn'};
   const locales = ['ko_KR', 'ja_JP', 'en_US'];
   const sourceLocales = ['ko_KR', 'ja_JP', 'en_US'];
   const labels = {
     ko_KR: { voice:'챔피언 음성', paused:'일시 비활성화', pausedHint:'음성 기능을 잠시 꺼두었습니다.',
       archived:'음성 언어', pick:'챔피언 선택 대사', volume:'음성 음량',
-      hint:'한국어는 직접 확인한 26.19 클래식 픽 대사를 재생합니다. 일본어·영어는 확인된 클래식 게임 음성이나 출처와 검증 범위를 표시한 추정 음성을 재생합니다.',
+      hint:'기존 한국어 픽 대사는 직접 확인한 원본을 유지합니다. 신규 챔피언의 픽 대사는 클래식 당시 원본만 사용하며, 해당 언어의 원본을 확보하지 못하면 재생하지 않습니다.',
       saveError:'설정을 저장하지 못했습니다. 다시 시도해 주세요.',
       playError:'음성을 재생하지 못했습니다. 다시 눌러 주세요.' },
     ja_JP: { voice:'チャンピオンボイス', paused:'一時停止', pausedHint:'音声機能は一時的に無効です。',
       archived:'ボイスの言語', pick:'チャンピオン選択ボイス', volume:'音量',
-      hint:'韓国語では直接確認した26.19クラシックのピックボイスを再生します。日本語・英語では確認済みのクラシックゲーム音声、または出典と確認範囲を記した推定音声を再生します。',
+      hint:'既存の韓国語ピックボイスは直接確認した原音を維持します。新規チャンピオンはクラシック当時の選択音声のみ使用し、選んだ言語の原音を確保できない場合は再生しません。',
       saveError:'設定を保存できませんでした。もう一度お試しください。',
       playError:'音声を再生できませんでした。もう一度タップしてください。' },
     en_US: { voice:'Champion voices', paused:'Temporarily unavailable', pausedHint:'The voice feature is temporarily disabled.',
       archived:'Voice language', pick:'Champion selection voice', volume:'Voice volume',
-      hint:'Korean plays the directly checked 26.19 Classic pick. Japanese and English play verified Classic game audio or an estimated voice source with its provenance and limits shown.',
+      hint:'Existing Korean picks retain their directly checked recordings. New champions use only archived Classic-era selection audio. A pick will not play until its original audio is available in the selected language.',
       saveError:'Could not save the setting. Please try again.',
       playError:'Could not play the voice line. Tap again.' },
   };
@@ -38,7 +39,7 @@
   function stopManual() { if (manualPlayback) stop(); }
   const languageAssessmentReady = fetch('data/classic-pick-language-assessment-26195.json')
     .then(response => response.ok ? response.json() : null).catch(() => null);
-  const ready = Promise.all(['classic-pick-voice', 'mode-classic-runtime'].map(name => fetch('data/' + name + '.json').then(response => {
+  const legacyReady = Promise.all(['classic-pick-voice', 'mode-classic-runtime'].map(name => fetch('data/' + name + '.json').then(response => {
     if (!response.ok) throw new Error('Pick catalog or Classic roster unavailable');
     return response.json();
   })).concat(languageAssessmentReady)).then(([data, runtime, assessment]) => {
@@ -50,7 +51,7 @@
       || data.verifiedSource?.sourceLanguage !== 'und'
       || Object.keys(data.champions || {}).length !== 72
       || runtime.schemaVersion !== 1 || runtime.classification !== 'DIRECT_MODE_CLASSIC_RUNTIME'
-      || Object.keys(runtime.champions || {}).length !== 72) return false;
+      || ![72,77].includes(Object.keys(runtime.champions || {}).length)) return false;
     const legacy = data.legacyLocalizedSource;
     const addition = data.localizedAdditionSource;
     const added = addition?.classicClientBinding?.champions || {};
@@ -97,7 +98,14 @@
     if (rows.length !== 72 || new Set(rows.map(row => row.classicId)).size !== 72
       || new Set(rows.map(row => row.appId)).size !== 72
       || !localizedSourcesValid
-      || Object.entries(runtime.champions).some(([id, row]) => byClassicId.get(id)?.appId !== row.routeId)) {
+      || rows.some(row => runtime.champions[row.classicId]?.routeId !== row.appId)
+      || Object.entries(runtime.champions).some(([id, row]) => {
+        if (byClassicId.has(id)) return byClassicId.get(id).appId !== row.routeId;
+        return runtime.version !== '16.20.1' || !Object.values(supplemental2620).includes(id)
+          || row.routeId !== id.slice(5).toLowerCase()
+          || row.sourceUrl !== 'https://ddragon.leagueoflegends.com/cdn/16.20.1/data/ko_KR/mode/classic/champion/' + id + '.json'
+          || !/^[a-f0-9]{64}$/.test(row.sourceSha256);
+      })) {
       catalog = {};
       return false;
     }
@@ -112,12 +120,55 @@
     }
     return true;
   }).catch(() => false);
+  // A separate, hash-bound supplement cannot relabel or invalidate the frozen 72 picks.
+  const supplementalReady = Promise.all([
+    fetch('data/classic-pick-voice-2620.json').then(async response => {
+      if (!response.ok) throw new Error('Supplemental pick catalog unavailable');
+      const raw = await response.text();
+      const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw)))].map(x=>x.toString(16).padStart(2,'0')).join('');
+      if (digest !== '164ec6c2b0704987a7fa44f98c95943f9ee9d46d6dc411d51faa9ad5b384e5bd') throw new Error('Supplemental pick catalog integrity mismatch');
+      return JSON.parse(raw);
+    }),
+    fetch('data/mode-classic-runtime.json').then(response => response.ok ? response.json() : null)
+  ]).then(([data, runtime]) => {
+    const rows = data.champions || {};
+    const valid = data.schemaVersion === 1 && data.classification === 'CLASSIC_ARCHIVED_CHAMPION_SELECTION_VOICE'
+      && data.version === '26.20' && data.currentClassicClientSelectionVerified === false && data.userListeningVerified === false
+      && data.championCount === 5 && Number.isInteger(data.audioCount) && data.audioCount > 0 && data.audioCount <= 15
+      && JSON.stringify(data.locales) === JSON.stringify(locales) && Object.keys(rows).length === 5
+      && Object.entries(supplemental2620).every(([id, classicId]) => {
+        const row = rows[id];
+        return row?.championId === Number(id) && row.classicKey === Number(id) + 60000
+          && row.classicId === classicId && row.appId === classicId.slice(5).toLowerCase()
+          && row.currentClassicClientSelectionVerified === false
+          && row.userListeningVerified === false && row.userApprovedPlayback === true
+          && (!runtime?.champions?.[classicId] || runtime.champions[classicId].routeId === row.appId)
+          && row.clips && Object.keys(row.clips).every(locale => locales.includes(locale)) && locales.every(locale => {
+            const clip = row.clips[locale];
+            const status = row.availability?.[locale];
+            if (!clip) return status === 'HISTORICAL_SOURCE_NOT_ACQUIRED';
+            return clip?.category === 'PICK' && clip.index === 1 && clip.locale === locale && clip.sourceLocale === locale
+              && status === 'AVAILABLE' && ['mp3','ogg'].some(extension => clip.file === `audio/champion-pick/classic-archive-2620/${locale}/${id}_${classicId.slice(5)}.${extension}`)
+              && Number.isInteger(clip.bytes) && clip.bytes > 4 && /^[a-f0-9]{64}$/.test(clip.sha256)
+              && clip.sourceClassification === 'ARCHIVED_CLASSIC_CHAMPION_SELECTION_VOICE'
+              && clip.historicalSelectionIdentityVerified === true && clip.currentClassicClientSelectionVerified === false
+              && clip.userListeningVerified === false;
+          });
+      }) && Object.values(rows).reduce((count, row) => count + Object.keys(row.clips || {}).length, 0) === data.audioCount;
+    if (!valid) return false;
+    supplementalPicks = rows;
+    supplementalPreview = rows;
+    return true;
+  }).catch(() => false);
+  const ready = Promise.all([legacyReady, supplementalReady]).then(([legacy, supplemental]) => legacy || supplemental);
   function championId(champion) {
     const id = Number(champion?.riotKey) - 60000;
-    const row = catalog[id];
+    const row = catalog[id] || supplementalPreview[id];
     return row && row.classicId === champion.riotId && row.appId === champion.id ? id : null;
   }
   function getClip(id, locale = getLocale()) { return catalog[id]?.clips?.[locale] || null; }
+  function getSupplementalPickClip(id, locale = getLocale()) { return supplementalPicks[id]?.clips?.[locale] || null; }
+  function getSupplementalPickAvailability(id, locale = getLocale()) { return supplementalPicks[id]?.availability?.[locale] || null; }
   function getVerifiedClip(id) {
     const clip = catalog[id]?.verifiedClip;
     return clip && languageAssessment?.clips?.[id] === clip.sha256
@@ -130,10 +181,10 @@
     target = '#champion/' + String(appId || '').toLowerCase() + '/';
     const current = ticket;
     await ready;
-    const row = catalog[id];
+    const row = catalog[id] || supplementalPreview[id];
     if (!row || current !== ticket || row.appId !== appId) return false;
     const locale = getLocale();
-    if (kind === 'selection' && locale !== 'ko_KR') {
+    if (kind === 'selection' && locale !== 'ko_KR' && !supplementalPicks[id]) {
       await library.ready;
       if (current !== ticket) return false;
       const preview = library.getPreviewClip?.(row.classicId, locale);
@@ -144,8 +195,10 @@
       // The ordinary client pick remains an explicitly requested candidate, never an automatic substitute.
       return library.play(row.classicId, preview.id, { silentError: !manual });
     }
-    const clip = kind === 'verified' || (kind === 'selection' && locale === 'ko_KR')
-      ? getVerifiedClip(id) : getClip(id, locale);
+    const clip = kind === 'supplemental' || (kind === 'selection' && supplementalPicks[id])
+      ? getSupplementalPickClip(id, locale)
+      : kind === 'verified' || (kind === 'selection' && locale === 'ko_KR')
+        ? getVerifiedClip(id) : getClip(id, locale);
     if (!clip || (kind === 'candidate' && locale === 'ko_KR')) return false;
     try {
       const response = await fetch(clip.file);
@@ -177,6 +230,7 @@
   function play(id, appId, manual = false) { return playClip(id, appId, manual); }
   function playVerified(id, appId, manual = false) { return playClip(id, appId, manual, 'verified'); }
   function playCandidate(id, appId, manual = false) { return playClip(id, appId, manual, 'candidate'); }
+  function playSupplemental(id, appId, manual = false) { return playClip(id, appId, manual, 'supplemental'); }
   function enter(champion) {
     // Rendering the same detail (tabs, CMS updates, closing a dialog) is not a new entry.
     const identity = champion?.riotKey || null;
@@ -212,7 +266,7 @@
   }
   function replayPortrait(event) {
     if (!event.target.closest?.('#view .cvHead > .cvimg')) return;
-    const row = catalog[Number(activeDetail) - 60000];
+    const row = catalog[Number(activeDetail) - 60000] || supplementalPreview[Number(activeDetail) - 60000];
     if (!row) return;
     event.preventDefault();
     play(row.championId, row.appId, true);
@@ -226,5 +280,5 @@
   window.addEventListener('hashchange', () => { if (target && !location.hash.startsWith(target)) stop(); });
   document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
   window.addEventListener('pagehide', stop);
-  window.ClassicPickVoice = Object.freeze({ play, playVerified, playCandidate, stop, stopManual, getLocale, setLocale, settingsMarkup, ready, enabled, volume, suspended, enter, championId, getClip, getVerifiedClip, locales });
+  window.ClassicPickVoice = Object.freeze({ play, playVerified, playCandidate, playSupplemental, stop, stopManual, getLocale, setLocale, settingsMarkup, ready, enabled, volume, suspended, enter, championId, getClip, getVerifiedClip, getSupplementalPickClip, getSupplementalPickAvailability, locales });
 })();

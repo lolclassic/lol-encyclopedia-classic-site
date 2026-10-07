@@ -545,7 +545,7 @@
     return source;
   }
   function setData(value) {
-    if (!value || value.schemaVersion !== 1 || value.version !== '16.19.1'
+    if (!value || value.schemaVersion !== 1 || !['16.19.1', '16.20.1'].includes(value.version)
         || !value.locales?.ja_JP || !value.locales?.en_US) throw new Error('Invalid 26.19 locale data');
     data = value;
   }

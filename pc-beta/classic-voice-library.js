@@ -491,7 +491,58 @@
     check(baseCount === 43 && dedicatedCount === 5 && clipCount === 2139 && classifiedCount === 2139);
     return accepted;
   }).catch(() => null);
-  const ready = Promise.all([restoredReady, localizedReady, cdnReady, garenReady, baseReady, skin301EstimateReady, koreanEstimateReady]).then(([restoredAvailable, localized, cdn, garen, base, skin301Estimate, koreanEstimate]) => {
+  // New editions add separate rows; none of the 72 frozen classifications are rewritten.
+  const new2620Ids = ['Jade_Aatrox','Jade_Caitlyn','Jade_Irelia','Jade_Karma','Jade_Quinn'];
+  const supplemental2620Hash = 'd04def69d40f187b5f47acdc743550811733ba62508cf7a5a35eef35ee9098b3';
+  const supplemental2620Ready = fetch('data/classic-voice-2620.json').then(async response => {
+    if (!response.ok) return null;
+    const raw = await response.text();
+    const bytes = await global.crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw));
+    check(Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('') === supplemental2620Hash);
+    const data = JSON.parse(raw), languages = ['ko_KR','ja_JP','en_US'];
+    check(data.schemaVersion === 1 && data.classification === 'CLASSIC_MODE_26_20_SUPPLEMENTAL_VOICE'
+      && data.patch === '26.20' && data.sourceClientVersion === '16.20.8248524+branch.releases-16-20.content.release'
+      && equal(data.locales, languages) && equal(Object.keys(data.champions || {}), new2620Ids)
+      && hash(data.sourceRmanManifestSha256) && data.listeningVerification === 'NOT_PERFORMED');
+    const accepted = {};
+    for (const [id, row] of Object.entries(data.champions)) {
+      check(row.appId === id.slice(5).toLowerCase() && row.classicKey === row.championId + 60000
+        && Array.isArray(row.groups) && row.groups.length === 3 && Array.isArray(row.clips) && row.clips.length > 0
+        && equal(row.groups.map(group => group.locale), languages));
+      const clips = new Map(row.clips.map(clip => [clip.id, clip]));
+      check(clips.size === row.clips.length);
+      for (const group of row.groups) {
+        const bank = group.sourceBank, proof = group.bindingProof;
+        check(group.sourceKind === 'CLASSIC_MODE_VO_26_20' && group.sourcePatch === '26.20'
+          && group.role === 'champion' && group.verification === 'mode_binding_and_locale_source_verified_listening_unverified'
+          && proof?.proofKind === 'INSTALLED_JADE_VO_BINDING_26_20' && proof.modePatch === '26.20'
+          && hash(proof.modeSkinBinSha256) && bank?.name === proof.bank && hash(bank.sha256)
+          && hash(bank.eventBankSha256) && hash(bank.audioBankSha256)
+          && bank.sourceWadName === id.slice(5) + '.' + group.locale + '.wad.client'
+          && bank.sourceRmanManifestSha256 === data.sourceRmanManifestSha256
+          && Array.isArray(group.clipIds) && group.clipIds.length > 0
+          && new Set(group.clipIds).size === group.clipIds.length
+          && group.clipIds.every(clipId => clips.get(clipId)?.locale === group.locale));
+      }
+      check(equal(row.groups.flatMap(group => group.clipIds), [...clips.keys()]));
+      for (const clip of row.clips) {
+        check(languages.includes(clip.locale) && clip.sourceLocale === clip.locale
+          && hash(clip.sourceSha256) && hash(clip.sha256)
+          && clip.id === 'classic2620-' + clip.locale + '-' + clip.sourceSha256
+          && clip.file === 'audio/classic-voices/classic-mode-2620/' + clip.locale + '/' + clip.sourceSha256 + '.ogg'
+          && Number.isInteger(clip.bytes) && clip.bytes > 4
+          && clip.sourceBankSha256 === row.groups.find(group => group.locale === clip.locale).sourceBank.sha256
+          && Array.isArray(clip.sourceMediaIds) && clip.sourceMediaIds.length > 0
+          && clip.sourceMediaIds.every(value => Number.isInteger(value) && value > 0)
+          && Array.isArray(clip.events) && clip.events.every(value => typeof value === 'string')
+          && Array.isArray(clip.categories) && clip.categories.length > 0 && clip.category === clip.categories[0]
+          && clip.categories.every(label => ['이동','공격','스킬','농담','도발','웃음','사망','특수','상황 미분류 음성'].includes(label)));
+      }
+      accepted[id] = row;
+    }
+    return accepted;
+  }).catch(() => null);
+  const ready = Promise.all([restoredReady, localizedReady, cdnReady, garenReady, baseReady, skin301EstimateReady, koreanEstimateReady, supplemental2620Ready]).then(([restoredAvailable, localized, cdn, garen, base, skin301Estimate, koreanEstimate, supplemental2620]) => {
     if (!restoredAvailable) return false;
     const supplements = [localized, cdn];
     for (const supplement of supplements) {
@@ -556,6 +607,13 @@
           clips:[...(existing?.clips || []), ...extension.clips]};
       }
     }
+    if (supplemental2620 && new2620Ids.every(id => !Object.hasOwn(catalog.champions, id))) {
+      for (const [id, extension] of Object.entries(supplemental2620)) {
+        catalog.champions[id] = {status:'available', unavailable:null,
+          availableLocales:['ko_KR','ja_JP','en_US'], defaultGroupId:extension.groups[0].id,
+          defaultClipId:extension.groups[0].clipIds[0], voiceGroups:extension.groups, clips:extension.clips};
+      }
+    }
     return true;
   });
 
@@ -589,7 +647,8 @@
           || clip.file.startsWith('audio/classic-voices/localized-26195-cdn-1619-estimate/')
           || clip.file.startsWith('audio/classic-voices/classic-mode-skin301-ko-26195/')
           || clip.file.startsWith('audio/classic-voices/classic-mode-base-26195/')
-          || clip.file.startsWith('audio/classic-voices/garen-old-en-26195/')) {
+          || clip.file.startsWith('audio/classic-voices/garen-old-en-26195/')
+          || clip.file.startsWith('audio/classic-voices/classic-mode-2620/')) {
         const response = await fetch(clip.file);
         if (!response.ok) throw new Error('Classic voice audio unavailable');
         const bytes = await response.arrayBuffer();
@@ -640,7 +699,7 @@
   ];
   const clipCategories = (clip, group) => {
     const labels = Array.isArray(clip.categories) ? clip.categories : [category(clip)];
-    if (!['CLASSIC_MODE_BASE_VO_26_18_ESTIMATE', 'CLASSIC_MODE_SKIN301_VO_26_19_ESTIMATE'].includes(group?.sourceKind)
+    if (!['CLASSIC_MODE_BASE_VO_26_18_ESTIMATE', 'CLASSIC_MODE_SKIN301_VO_26_19_ESTIMATE', 'CLASSIC_MODE_VO_26_20'].includes(group?.sourceKind)
         || !labels.includes('특수')) return labels;
     const events = Array.isArray(clip.events) ? clip.events.map(event => event.slice(event.lastIndexOf('_') + 1)) : [];
     const finer = specialEvents.filter(([pattern]) => events.some(event => pattern.test(event))).map(([, label]) => label);
@@ -649,11 +708,13 @@
   const categoryOrder = ['이동','공격','이동·공격','첫 만남','처치','스킬','농담','도발','웃음','춤','아이템 사용','부활','사망','특수','상황 미분류 음성'];
   function getPreviewClip(id, locale) {
     const row = catalog?.champions[id];
-    if (row?.status !== 'available' || !['ja_JP', 'en_US'].includes(locale)) return null;
+    if (row?.status !== 'available' || !['ko_KR','ja_JP', 'en_US'].includes(locale)) return null;
+    if (locale === 'ko_KR' && !row.voiceGroups.some(value => value.locale === locale && value.sourceKind === 'CLASSIC_MODE_VO_26_20')) return null;
     const group = row.voiceGroups.find(value => value.locale === locale && value.sourceKind === 'OLD_EN_FAN_ARCHIVE_ESTIMATE')
       || row.voiceGroups.find(value => value.locale === locale && value.label === '클래식 음성')
       || row.voiceGroups.find(value => value.locale === locale && value.sourceKind === 'CLASSIC_MODE_SKIN301_VO_26_19_ESTIMATE')
-      || row.voiceGroups.find(value => value.locale === locale && value.sourceKind === 'CLASSIC_MODE_BASE_VO_26_18_ESTIMATE');
+      || row.voiceGroups.find(value => value.locale === locale && value.sourceKind === 'CLASSIC_MODE_BASE_VO_26_18_ESTIMATE')
+      || row.voiceGroups.find(value => value.locale === locale && value.sourceKind === 'CLASSIC_MODE_VO_26_20');
     if (!group) return null;
     const ids = new Set(group.clipIds);
     const clips = row.clips.filter(clip => ids.has(clip.id) && clip.sourceLocale === locale);
@@ -693,12 +754,14 @@
     const pickId = pick?.championId(champion);
     const verifiedPickClip = pick?.getVerifiedClip(pickId);
     const candidatePickClip = locale === 'ko_KR' ? null : pick?.getClip?.(pickId, locale);
+    const supplementalPickClip = pick?.getSupplementalPickClip?.(pickId, locale);
+    const supplementalPickStatus = pick?.getSupplementalPickAvailability?.(pickId, locale);
     const group = row?.voiceGroups.find(value => value.id === groupId && value.locale === locale)
       || row?.voiceGroups.find(value => value.locale === locale && value.label === '기본 음성')
       || row?.voiceGroups.find(value => value.locale === locale);
     const modal = document.getElementById('modal');
     const previousScroll = preserveScroll && modal.open ? modal.scrollTop : 0;
-    if (!group && !verifiedPickClip && !row?.availableLocales?.length) {
+    if (!group && !verifiedPickClip && !supplementalPickClip && !row?.availableLocales?.length) {
       const message = row?.status === 'unavailable'
         ? ui(row.unavailable.reason, 'クラシック当時の音声原本を確認中です。', 'The original Classic voice audio is being verified.')
         : ui('음성 데이터를 불러오지 못했습니다. 잠시 후 다시 열어 주세요.', '音声データを読み込めませんでした。しばらくしてからもう一度開いてください。', 'Could not load voice data. Please open it again shortly.');
@@ -717,16 +780,19 @@
       const controls = groups.length > 1 ? '<label class="classicVoiceGroupControl"><span>' + (champion.riotId === 'Jade_Garen' ? ui('자료별 음성', '資料別ボイス', 'Voice by source') : ui('스킨별 음성', 'スキン別ボイス', 'Voice by skin')) + '</span><select data-classic-voice-group data-classic-voice-champion="' + esc(champion.riotId) + '">' + groups.map(value => '<option value="' + esc(value.id) + '"' + (value.id === group?.id ? ' selected' : '') + '>' + esc(groupName(value, champion)) + '</option>').join('') + '</select></label>' : '<p class="classicVoiceGroupName">' + esc(group ? groupName(group, champion) : championName(champion)) + '</p>';
       const locales = pick?.locales || row?.availableLocales || [];
       const voiceCount = clips.length;
-      const voiceCountLabel = ['CLASSIC_MODE_BASE_VO_26_18_ESTIMATE','CLASSIC_MODE_SKIN301_VO_26_19_ESTIMATE','OLD_EN_FAN_ARCHIVE_ESTIMATE'].includes(group?.sourceKind)
+      const voiceCountLabel = ['CLASSIC_MODE_BASE_VO_26_18_ESTIMATE','CLASSIC_MODE_SKIN301_VO_26_19_ESTIMATE','OLD_EN_FAN_ARCHIVE_ESTIMATE','CLASSIC_MODE_VO_26_20'].includes(group?.sourceKind)
         ? ui(` · 현지어 음성 ${voiceCount}개`, ` · 現地語ボイス${voiceCount}件`, ` · ${voiceCount} localized voice clips`)
         : ui(` · 검증된 현지 클래식 음성 ${voiceCount}개`, ` · 確認済みの現地クラシックボイス${voiceCount}件`, ` · ${voiceCount} verified localized Classic clips`);
-      const languageTabs = groups.length || verifiedPickClip || candidatePickClip || clips.length ? '<div class="classicVoiceLocales" role="tablist" aria-label="' + ui('음성 언어', '音声言語', 'Voice language') + '">' + locales.map(lang => '<button type="button" role="tab" data-classic-voice-locale="' + lang + '" aria-selected="' + (lang === locale) + '">' + ({ko_KR:'한국어',ja_JP:'日本語',en_US:'English'}[lang] || esc(lang)) + '</button>').join('') + '<span>' + voiceCountLabel + '</span></div>' : '';
+      const languageTabs = groups.length || verifiedPickClip || candidatePickClip || supplementalPickStatus || clips.length ? '<div class="classicVoiceLocales" role="tablist" aria-label="' + ui('음성 언어', '音声言語', 'Voice language') + '">' + locales.map(lang => '<button type="button" role="tab" data-classic-voice-locale="' + lang + '" aria-selected="' + (lang === locale) + '">' + ({ko_KR:'한국어',ja_JP:'日本語',en_US:'English'}[lang] || esc(lang)) + '</button>').join('') + '<span>' + voiceCountLabel + '</span></div>' : '';
       const listen = ui('듣기', '再生', 'Play');
       const candidatePickItem = candidatePickClip ? '<li><button type="button" data-classic-candidate-pick-clip="' + pickId + '" aria-pressed="false"><span class="classicVoicePlay" aria-hidden="true">▶</span><span>' + ui('현지어 픽 대사 · 클래식 연결 추정 자료', '現地語のピックボイス・クラシック関連の推定資料', 'Localized pick line · estimated Classic link') + '</span><span class="classicVoiceLanguage">' + voiceLanguageName(candidatePickClip.locale) + '</span><span class="classicVoiceListen">' + listen + '</span></button></li>' : '';
       const verifiedPickItem = verifiedPickClip ? '<li><button type="button" data-classic-verified-pick-clip="' + pickId + '" aria-pressed="false"><span class="classicVoicePlay" aria-hidden="true">▶</span><span>' + (verifiedPickClip.assessedLanguage
         ? ui('26.19 클래식 픽 · 음원 언어 분석', '26.19クラシック選択ボイス・音声言語分析', '26.19 Classic pick · audio language assessment')
         : ui('26.19 클래식 픽 · 원본 언어 미기재', '26.19クラシック選択ボイス・原語未記載', '26.19 Classic pick · language unspecified')) + '</span><span class="classicVoiceLanguage">' + voiceLanguageName(verifiedPickClip.assessedLanguage || verifiedPickClip.sourceLanguage) + '</span><span class="classicVoiceListen">' + listen + '</span></button></li>' : '';
-      const pickSection = candidatePickItem || verifiedPickItem ? '<section class="classicVoiceCategory classicVoicePickCategory"><h3>' + ui('픽 대사', 'ピック時のセリフ', 'Pick line') + '</h3><ul class="classicVoiceList">' + candidatePickItem + verifiedPickItem + '</ul></section>' : '';
+      const supplementalPickItem = supplementalPickClip ? '<li><button type="button" data-classic-supplemental-pick-clip="' + pickId + '" aria-pressed="false"><span class="classicVoicePlay" aria-hidden="true">▶</span><span>' + ui('옛 픽 원본', '旧ピック原音', 'Archived pick') + '</span><span class="classicVoiceLanguage">' + voiceLanguageName(supplementalPickClip.locale) + '</span><span class="classicVoiceListen">' + listen + '</span></button></li>' : '';
+      const pickNote = supplementalPickStatus === 'HISTORICAL_SOURCE_NOT_ACQUIRED'
+        ? '<p class="classicVoiceCategoryHint" role="status">' + ui('이 언어의 클래식 픽 원본을 찾고 있습니다. 확보 전까지 다른 음성으로 대신 재생하지 않습니다.', 'この言語のクラシック選択原音を調査中です。確保するまでは別のボイスで代用しません。', 'The original Classic pick in this language is being located. No other voice line is substituted.') + '</p>' : '';
+      const pickSection = candidatePickItem || verifiedPickItem || supplementalPickItem || supplementalPickStatus ? '<section class="classicVoiceCategory classicVoicePickCategory"><h3>' + ui('픽 대사', 'ピック時のセリフ', 'Pick line') + '</h3>' + pickNote + '<ul class="classicVoiceList">' + supplementalPickItem + candidatePickItem + verifiedPickItem + '</ul></section>' : '';
       const categorySections = categoryOrder.filter(label => categories.has(label)).map(label => {
         const items = categories.get(label);
         const unclassified = label === '상황 미분류 음성';
@@ -741,7 +807,9 @@
           ? ui('26.19 클래식 모드 전용 음성 지정과 현지어 음원은 확인했습니다. 옛날 녹음인지 여부는 확인되지 않아 추정 자료로 표시합니다.', '26.19クラシックモード専用の音声指定と現地語の音源は確認済みです。旧録音かどうかは未確認のため推定資料として表示します。', 'The 26.19 Classic mode dedicated voice binding and localized audio are confirmed. Recording age remains unverified, so this is labeled an estimate.')
         : group?.sourceKind === 'CLASSIC_MODE_BASE_VO_26_18_ESTIMATE'
           ? ui('26.19 클래식 챔피언의 기본 음성 바인딩에 맞춘 26.18 현지어 음성 추정 자료입니다. 26.19 음원과 같은 파일인지, 옛날 녹음인지는 확인되지 않았습니다.', '26.19クラシックチャンピオンの基本ボイス指定に合わせた26.18の現地語推定資料です。26.19の音源と同一か、旧録音かどうかは未確認です。', 'Estimated 26.18 localized base voice matched to a 26.19 Classic champion base-voice binding. Byte identity with 26.19 audio and recording age are unverified.') : '';
-      const availability = garenSourceNote || (clips.length ? ui('항목을 누르면 해당 음성을 한 번 재생합니다.', '項目をタップすると音声を1回再生します。', 'Tap an entry to play its voice line once.')
+      const source2620Note = group?.sourceKind === 'CLASSIC_MODE_VO_26_20'
+        ? ui('26.20 클래식 모드가 지정한 현지어 음성입니다. 항목을 누르면 한 번 재생합니다.', '26.20クラシックモードで指定された現地語ボイスです。項目をタップすると1回再生します。', 'Localized audio bound by the 26.20 Classic mode. Tap an entry to play once.') : '';
+      const availability = source2620Note || garenSourceNote || (clips.length ? ui('항목을 누르면 해당 음성을 한 번 재생합니다.', '項目をタップすると音声を1回再生します。', 'Tap an entry to play its voice line once.')
         : candidatePickClip ? ui('이 언어로 검증된 클래식 게임 음성은 없습니다. 아래 현지어 픽 대사는 클래식 연결 추정 자료입니다.', 'この言語で確認済みのクラシックゲーム音声はありません。下の現地語ピックボイスはクラシック関連の推定資料です。', 'No Classic game voice is verified in this language. The localized pick below is an estimated Classic-linked source.')
           : ui('이 언어로 검증된 클래식 음성은 없습니다. 원본 언어가 기록되지 않은 픽 대사만 재생할 수 있습니다.', 'この言語で確認済みのクラシックボイスはありません。原音声の言語が未記載のピックボイスのみ再生できます。', 'No Classic voice lines are verified in this language. Only the pick line with an unspecified source language is available.'));
       document.getElementById('modalBody').innerHTML = '<section class="classicDocument classicVoiceDocument"><h2>' + esc(championName(champion)) + ' · ' + ui('음성대사', 'ボイス', 'Voice lines') + '</h2>' + controls + languageTabs + '<p class="classicVoiceHint">' + availability + '</p>' + pickSection + categorySections + '</section>';
@@ -772,6 +840,11 @@
       return;
     }
     const verifiedPickButton = event.target.closest?.('[data-classic-verified-pick-clip]');
+    const supplementalPickButton = event.target.closest?.('[data-classic-supplemental-pick-clip]');
+    if (supplementalPickButton && activeChampion) {
+      global.ClassicPickVoice?.playSupplemental(Number(supplementalPickButton.dataset.classicSupplementalPickClip), activeChampion.id, true);
+      return;
+    }
     if (verifiedPickButton && activeChampion) {
       global.ClassicPickVoice?.playVerified(Number(verifiedPickButton.dataset.classicVerifiedPickClip), activeChampion.id, true);
       return;

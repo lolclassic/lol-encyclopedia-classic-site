@@ -1,0 +1,45 @@
+/* Homepage-only locale controls; policy pages and the PC app retain their styles. */
+.site-header { flex-wrap: wrap; }
+.site-header > * { min-width: 0; }
+.site-language-selector {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+.site-language-selector button {
+  min-width: 3.6rem;
+  min-height: 44px;
+  padding: 0.45rem 0.7rem;
+  color: #ead29a;
+  background: #182225;
+  border: 1px solid #715e35;
+  border-radius: 0;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.site-language-selector button[aria-pressed="true"] {
+  color: #111a1c;
+  background: #e5c778;
+  border-color: #f4dd9f;
+}
+.site-language-selector button:focus-visible {
+  outline: 3px solid #bce8ee;
+  outline-offset: 3px;
+}
+body[data-site-language="ko"] .hero h1,
+body[data-site-language="ja"] .hero h1 { line-height: 1.25; }
+body[data-site-language="ko"] h1,
+body[data-site-language="ko"] h2 { word-break: keep-all; }
+body[data-site-language="ko"] .section-heading h2,
+body[data-site-language="ja"] .section-heading h2 { line-height: 1.35; }
+[hidden] { display: none !important; }
+@media (max-width: 900px) {
+  .site-language-selector { width: 100%; justify-content: center; margin: 0; }
+}
+@media (max-width: 620px) {
+  /* The Japanese closing phrase fits as a whole rather than orphaning its final kana. */
+  body[data-site-language="ja"] .hero h1 { font-size: 1.5rem; white-space: pre-line; }
+}

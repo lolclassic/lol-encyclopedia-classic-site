@@ -55,21 +55,27 @@
     return prefix + result;
   });
   function setData(data, sha256) {
-    if (data?.schemaVersion !== 1 || data.version !== '16.19.1'
-        || data.clientVersion !== '16.19'
+    const profile = {'16.19.1': {clientVersion:'16.19', count:349},
+      '16.20.1': {clientVersion:'16.20.824.8524', count:385,
+        sha256:'be609b79a148502b45f24d9f723b93b4ea920c41bce2d68974f89877eb0e5ef6'}}[data?.version];
+    if (data?.schemaVersion !== 1 || !profile
+        || data.clientVersion !== profile.clientVersion
         || data.sourcePolicy !== 'exact-classic-client-localization-key'
         || !/^[a-f0-9]{64}$/.test(sha256 || '')
+        || (profile.sha256 && sha256 !== profile.sha256)
         || !['ja_JP', 'en_US'].every(locale => Object.values(data.locales?.[locale] || {})
-          .flatMap(Object.values).length === 349)) throw new Error('Classic skill locale roster mismatch');
+          .flatMap(Object.values).length === profile.count)) throw new Error('Classic skill locale roster mismatch');
     catalog = data;
     catalogSha256 = sha256;
   }
   function setSupplementData(data) {
+    const profile = {'16.19.1':{classification:'EXACT_16_19_JADE_LOCALIZED_TOOLTIP_EXTRA_TOKENS', count:19},
+      '16.20.1':{classification:'EXACT_16_20_JADE_LOCALIZED_TOOLTIP_EXTRA_TOKENS', count:17}}[catalog?.version];
     if (!catalog || data?.schemaVersion !== 1 || data.version !== catalog.version
-        || data.classification !== 'EXACT_16_19_JADE_LOCALIZED_TOOLTIP_EXTRA_TOKENS'
+        || !profile || data.classification !== profile.classification
         || data.clientLocaleCatalogSha256 !== catalogSha256
         || JSON.stringify(data.clientLocaleSources) !== JSON.stringify(catalog.sources)
-        || Object.keys(data.champions || {}).length !== 19
+        || Object.keys(data.champions || {}).length !== profile.count
         || !data.forms || !data.clientExecutableSha256)
       throw new Error('Classic skill locale supplement/source mismatch');
     supplement = data;

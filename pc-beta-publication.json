@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "classification": "USER_APPROVED_BROWSER_PREVIEW_NOT_PLAY_RELEASE_OR_RIGHTS_CLEARANCE",
-  "appVersion": "26.19.5",
+  "appVersion": "26.20.1",
   "userPublicationApproved": true,
-  "exportManifestSha256": "f3783e3393f2edffbdcbacdb5ede30364054f7edec8d424a669bd26ebb0dcd2d",
+  "exportManifestSha256": "78a71109c8436417843c9f25c9112443a44b253cdc1f735515dd7cf88302a1e2",
   "rightsClearanceClaim": false,
   "playReleaseClaim": false
 }

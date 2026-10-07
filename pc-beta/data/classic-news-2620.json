@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "sourceScope": "classic-only",
+  "article": {
+    "id": "league-classic-26-20",
+    "patch": "26.20",
+    "date": "2026.10.07",
+    "title": "롤 클래식 패치노트 · 26.20",
+    "author": "운영자",
+    "source": "Riot Games · 클래식",
+    "body": "클래식에 아트록스, 케이틀린, 이렐리아, 개편 이전 카르마, 퀸과 발러가 추가됐습니다. 기존 챔피언 5명과 탱커 아이템의 체력 재생을 조정하고 여러 오류를 수정했습니다. 아래 내용은 공식 패치노트의 클래식 부분만 요약했습니다.",
+    "sections": [
+      {
+        "title": "아이템",
+        "body": "5초당 체력 재생: 정령의 형상 4→20, 대자연의 힘 20→40, 워모그의 갑옷 10→30. 밴시의 장막은 아이템 검색에서 주문력 대신 체력 필터로 분류됩니다."
+      },
+      {
+        "title": "클래식 오류 수정",
+        "body": "피즈 E 번역, 쉬바나 스킬 동작, 미스 포츈 기본 아트, 케일 Q 적중 효과, 그레이브즈 아트와 연막 시야, 티모 W, 노틸러스 칭호, 사이온 억제기 생명력 흡수, 판테온 표시 문자열, 룬 페이지와 소환사 주문 음향 등의 오류가 수정됩니다."
+      }
+    ],
+    "sourceUrl": "https://www.leagueoflegends.com/ko-kr/news/game-updates/league-of-legends-patch-26-20-notes/",
+    "champions": [
+      {
+        "id": "Jade_Aatrox",
+        "name": "아트록스",
+        "icon": "images/mode_classic/champion/Jade_Aatrox.png",
+        "kind": "new",
+        "body": "피의 샘에 체력을 저장하고 치명적인 피해를 받으면 부활하는, 기본 공격 중심의 클래식 아트록스입니다. W로 체력 회복과 추가 피해 사이를 전환하며, R은 주변에 피해를 주고 공격 속도와 사거리를 높입니다."
+      },
+      {
+        "id": "Jade_Caitlyn",
+        "name": "케이틀린",
+        "icon": "images/mode_classic/champion/Jade_Caitlyn.png",
+        "kind": "new",
+        "body": "헤드샷, 필트오버 피스메이커, 요들잡이 덫, 90구경 투망, 비장의 한 발을 사용합니다. 클래식 덫은 피해와 속박을 적용하며 동시에 두 개를 설치할 수 있습니다."
+      },
+      {
+        "id": "Jade_Irelia",
+        "name": "이렐리아",
+        "icon": "images/mode_classic/champion/Jade_Irelia.png",
+        "kind": "new",
+        "body": "아이오니아의 열정으로 주변 적의 수에 따라 강인함을 얻습니다. 칼날 쇄도는 적 처치 시 초기화되고, 비천어검류는 회복과 고정 피해를 제공합니다. 균형의 일격은 체력 비율에 따라 둔화 또는 기절을 적용합니다."
+      },
+      {
+        "id": "Jade_Karma",
+        "name": "카르마",
+        "icon": "images/mode_classic/champion/Jade_Karma.png",
+        "kind": "new",
+        "body": "2013년 개편 이전 카르마입니다. 천상의 파도, 영혼의 결속, 영혼의 보호막을 만트라로 강화합니다. 만트라는 1레벨부터 사용할 수 있고 최대 2회 충전되며, Q/W/E는 각각 6단계입니다."
+      },
+      {
+        "id": "Jade_Quinn",
+        "name": "퀸",
+        "icon": "images/mode_classic/champion/Jade_Quinn.png",
+        "kind": "new",
+        "body": "퀸과 발러가 서로 전환하던 클래식 버전입니다. Q는 실명을 적용하고, E는 대상을 표시하며 거리를 벌립니다. 궁극기는 근접 공격하는 발러로 전환한 뒤 공중 강습으로 마무리합니다."
+      },
+      {
+        "id": "Jade_Fiora",
+        "name": "피오라",
+        "icon": "images/mode_classic/champion/Jade_Fiora.png",
+        "kind": "balance",
+        "body": "W - 응수의 추가 공격력이 15/20/25/30/35에서 10/15/20/25/30으로 감소합니다."
+      },
+      {
+        "id": "Jade_Graves",
+        "name": "그레이브즈",
+        "icon": "images/mode_classic/champion/Jade_Graves.png",
+        "kind": "balance",
+        "body": "공격과 스킬 애니메이션이 빨라집니다. 기본 공격력 54.1→50, 성장 공격력 3.1→2.5, 성장 공격 속도 2.9%→2.5%. R의 원뿔 피해는 140/250/360(+추가 공격력 120%)→140/230/320(+100%)이며 첫 투사체 피해는 유지됩니다."
+      },
+      {
+        "id": "Jade_Fizz",
+        "name": "피즈",
+        "icon": "images/mode_classic/champion/Jade_Fizz.png",
+        "kind": "balance",
+        "body": "Q의 주문력 계수는 60%→40%, W 사용 효과의 주문력 계수는 35%→20%로 감소합니다."
+      },
+      {
+        "id": "Jade_Kennen",
+        "name": "케넨",
+        "icon": "images/mode_classic/champion/Jade_Kennen.png",
+        "kind": "balance",
+        "body": "W 기본 지속 효과의 추가 피해가 총 공격력의 40/50/60/70/80%에서 25/40/55/70/85(+추가 공격력 100%)로 변경됩니다."
+      },
+      {
+        "id": "Jade_Nautilus",
+        "name": "노틸러스",
+        "icon": "images/mode_classic/champion/Jade_Nautilus.png",
+        "kind": "balance",
+        "body": "W의 피해는 40/55/70/85/100(+주문력 40%)→40/65/90/115/140(+40%), 보호막 추가 체력 계수는 10%→15%, 지속 시간은 9.75초→10초입니다. 패시브 치명타 및 W 보호막 방어 능력 적용 오류도 수정됩니다."
+      }
+    ]
+  },
+  "locales": {
+    "ja_JP": {
+      "title": "クラシック パッチノート · 26.20",
+      "author": "運営",
+      "source": "Riot Games · クラシック",
+      "body": "エイトロックス、ケイトリン、イレリア、リワーク前のカルマ、クインとヴァロールがクラシックに登場します。既存の5体とタンクアイテムの体力自動回復を調整し、各種不具合を修正しました。公式パッチノートのクラシック部分のみをまとめています。",
+      "sections": [
+        {
+          "title": "アイテム",
+          "body": "5秒毎の体力自動回復：スピリット ビサージュ4→20、自然の力20→40、ワーモグ アーマー10→30。バンシー ヴェールの検索フィルターは魔力から体力に変わります。"
+        },
+        {
+          "title": "クラシックの不具合修正",
+          "body": "フィズEの翻訳、シヴァーナのスキル動作、ミス・フォーチュンのアート、ケイルQの通常攻撃時効果、グレイブスのアートと煙幕の視界、ティーモW、ノーチラスの称号、サイオンのライフスティール、パンテオンの文字列、ルーンページとサモナースペルの効果音などを修正します。"
+        }
+      ],
+      "sourceUrl": "https://www.leagueoflegends.com/ja-jp/news/game-updates/league-of-legends-patch-26-20-notes/",
+      "champions": [
+        {
+          "id": "Jade_Aatrox",
+          "name": "エイトロックス",
+          "icon": "images/mode_classic/champion/Jade_Aatrox.png",
+          "kind": "new",
+          "body": "ブラッドウェルに体力を蓄え、致命傷を受けると復活する通常攻撃主体のクラシック版です。Wで回復と追加ダメージを切り替え、Rで周囲を攻撃して攻撃速度と射程を伸ばします。"
+        },
+        {
+          "id": "Jade_Caitlyn",
+          "name": "ケイトリン",
+          "icon": "images/mode_classic/champion/Jade_Caitlyn.png",
+          "kind": "new",
+          "body": "ヘッドショット、ピースメーカー、ヨードルトラップ、L-90 カリバーネット、ブルズアイを使用します。クラシックのトラップはダメージとスネアを与え、同時に2個まで設置できます。"
+        },
+        {
+          "id": "Jade_Irelia",
+          "name": "イレリア",
+          "icon": "images/mode_classic/champion/Jade_Irelia.png",
+          "kind": "new",
+          "body": "近くの敵の数に応じて行動妨害耐性を得ます。Qは敵を倒すとリセットされ、Wは回復と確定ダメージを与えます。Eは双方の体力割合に応じてスロウかスタンを付与します。"
+        },
+        {
+          "id": "Jade_Karma",
+          "name": "カルマ",
+          "icon": "images/mode_classic/champion/Jade_Karma.png",
+          "kind": "new",
+          "body": "2013年のリワーク前のカルマです。Q/W/Eをマントラで強化し、Rはレベル1から使用可能で最大2チャージを蓄えます。Q/W/Eはそれぞれ6ランクです。"
+        },
+        {
+          "id": "Jade_Quinn",
+          "name": "クイン",
+          "icon": "images/mode_classic/champion/Jade_Quinn.png",
+          "kind": "new",
+          "body": "クインとヴァロールが交代するクラシック版です。Qはブラインドを付与し、Eはマークを付けて距離を取ります。Rで近接攻撃のヴァロールに交代し、再発動のスカイストライクで攻撃します。"
+        },
+        {
+          "id": "Jade_Fiora",
+          "name": "フィオラ",
+          "icon": "images/mode_classic/champion/Jade_Fiora.png",
+          "kind": "balance",
+          "body": "Wの増加攻撃力が15/20/25/30/35から10/15/20/25/30に減少します。"
+        },
+        {
+          "id": "Jade_Graves",
+          "name": "グレイブス",
+          "icon": "images/mode_classic/champion/Jade_Graves.png",
+          "kind": "balance",
+          "body": "攻撃・スキルのアニメーションが高速化。基本攻撃力54.1→50、攻撃力成長3.1→2.5、攻撃速度成長2.9%→2.5%。Rの扇状ダメージは140/250/360(+増加攻撃力120%)→140/230/320(+100%)。最初の弾のダメージは変わりません。"
+        },
+        {
+          "id": "Jade_Fizz",
+          "name": "フィズ",
+          "icon": "images/mode_classic/champion/Jade_Fizz.png",
+          "kind": "balance",
+          "body": "Qの魔力反映率は60%→40%、W発動効果の魔力反映率は35%→20%に低下します。"
+        },
+        {
+          "id": "Jade_Kennen",
+          "name": "ケネン",
+          "icon": "images/mode_classic/champion/Jade_Kennen.png",
+          "kind": "balance",
+          "body": "W自動効果の追加ダメージが合計攻撃力の40/50/60/70/80%から25/40/55/70/85(+増加攻撃力100%)になります。"
+        },
+        {
+          "id": "Jade_Nautilus",
+          "name": "ノーチラス",
+          "icon": "images/mode_classic/champion/Jade_Nautilus.png",
+          "kind": "balance",
+          "body": "Wダメージ40/55/70/85/100(+魔力40%)→40/65/90/115/140(+40%)、シールドの増加体力反映率10%→15%、持続9.75秒→10秒。固有スキルのクリティカルとWシールドへの防御能力適用も修正されます。"
+        }
+      ]
+    },
+    "en_US": {
+      "title": "Classic patch notes · 26.20",
+      "author": "Admin",
+      "source": "Riot Games · Classic",
+      "body": "Classic adds Aatrox, Caitlyn, Irelia, pre-rework Karma, and Quinn & Valor. Five existing champions and tank-item health regeneration are adjusted, with several bug fixes. This summary covers only the official Classic section.",
+      "sections": [
+        {
+          "title": "Items",
+          "body": "Health regeneration per 5 seconds: Spirit Visage 4→20, Force of Nature 20→40, Warmog's Armor 10→30. Banshee's Veil moves from the AP search filter to Health."
+        },
+        {
+          "title": "Classic bug fixes",
+          "body": "Fixes cover Fizz E translations, Shyvana spell behavior, Miss Fortune art, Kayle Q on-hit behavior, Graves art and smoke vision, Teemo W, Nautilus title, Sion lifesteal, Pantheon strings, rune pages, and summoner-spell audio."
+        }
+      ],
+      "sourceUrl": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-20-notes/",
+      "champions": [
+        {
+          "id": "Jade_Aatrox",
+          "name": "Aatrox",
+          "icon": "images/mode_classic/champion/Jade_Aatrox.png",
+          "kind": "new",
+          "body": "The auto-attack focused Classic Aatrox stores health in Blood Well and revives after lethal damage. W toggles healing and bonus damage; R damages nearby enemies and grants attack speed and range."
+        },
+        {
+          "id": "Jade_Caitlyn",
+          "name": "Caitlyn",
+          "icon": "images/mode_classic/champion/Jade_Caitlyn.png",
+          "kind": "new",
+          "body": "Headshot, Piltover Peacemaker, Yordle Snap Trap, 90 Caliber Net, and Ace in the Hole return. Classic traps damage and root enemies, with two traps available at once."
+        },
+        {
+          "id": "Jade_Irelia",
+          "name": "Irelia",
+          "icon": "images/mode_classic/champion/Jade_Irelia.png",
+          "kind": "new",
+          "body": "Ionian Fervor grants tenacity based on nearby enemies. Bladesurge resets on kills, Hiten Style heals and deals true damage, and Equilibrium Strike slows or stuns according to relative health percentages."
+        },
+        {
+          "id": "Jade_Karma",
+          "name": "Karma",
+          "icon": "images/mode_classic/champion/Jade_Karma.png",
+          "kind": "new",
+          "body": "Karma uses her pre-2013 kit: Heavenly Wave, Spirit Bond, and Soul Shield enhanced by Mantra. R is available from level 1, stores two charges, and receives no skill points; Q/W/E each have six ranks."
+        },
+        {
+          "id": "Jade_Quinn",
+          "name": "Quinn",
+          "icon": "images/mode_classic/champion/Jade_Quinn.png",
+          "kind": "new",
+          "body": "Classic Quinn & Valor alternate between ranged Quinn and melee Valor. Q blinds, E marks and creates distance, and R changes to Valor before its Skystrike recast."
+        },
+        {
+          "id": "Jade_Fiora",
+          "name": "Fiora",
+          "icon": "images/mode_classic/champion/Jade_Fiora.png",
+          "kind": "balance",
+          "body": "W bonus attack damage decreases from 15/20/25/30/35 to 10/15/20/25/30."
+        },
+        {
+          "id": "Jade_Graves",
+          "name": "Graves",
+          "icon": "images/mode_classic/champion/Jade_Graves.png",
+          "kind": "balance",
+          "body": "Attack and spell animations are faster. Base AD 54.1→50, AD growth 3.1→2.5, attack-speed growth 2.9%→2.5%. R cone damage changes from 140/250/360(+120% bonus AD) to 140/230/320(+100% bonus AD); initial projectile damage is unchanged."
+        },
+        {
+          "id": "Jade_Fizz",
+          "name": "Fizz",
+          "icon": "images/mode_classic/champion/Jade_Fizz.png",
+          "kind": "balance",
+          "body": "Q AP ratio decreases from 60% to 40%; W active AP ratio decreases from 35% to 20%."
+        },
+        {
+          "id": "Jade_Kennen",
+          "name": "Kennen",
+          "icon": "images/mode_classic/champion/Jade_Kennen.png",
+          "kind": "balance",
+          "body": "W passive bonus damage changes from 40/50/60/70/80% total AD to 25/40/55/70/85(+100% bonus AD)."
+        },
+        {
+          "id": "Jade_Nautilus",
+          "name": "Nautilus",
+          "icon": "images/mode_classic/champion/Jade_Nautilus.png",
+          "kind": "balance",
+          "body": "W damage 40/55/70/85/100(+40% AP)→40/65/90/115/140(+40% AP), shield bonus-health ratio 10%→15%, duration 9.75→10 seconds. Passive critical-strike and W shield resistance bugs are also fixed."
+        }
+      ]
+    }
+  }
+}

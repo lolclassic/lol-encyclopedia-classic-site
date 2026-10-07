@@ -1,0 +1,2551 @@
+{
+  "schemaVersion": 1,
+  "classification": "RIOT_CLASSIC_ENGLISH_LABELS",
+  "version": "16.20.1",
+  "locale": "en_US",
+  "sourceIndexUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion.json",
+  "sourceIndexSha256": "c73c7c72b26bed0f3728bdc61f036dec72abf57d33c6917c60c0da2cd4c257c7",
+  "champions": {
+    "Jade_Aatrox": {
+      "key": "60266",
+      "nameEn": "Aatrox",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Aatrox.json",
+      "sourceSha256": "419ee89f040efb3de8169c9ef64b11f0912945521c47b645e73fe0decc610e90",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Blood Well"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AatroxQ",
+          "nameEn": "Dark Flight"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AatroxW",
+          "nameEn": "Blood Thirst / Blood Price"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AatroxE",
+          "nameEn": "Blades of Torment"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AatroxR",
+          "nameEn": "Massacre"
+        }
+      ]
+    },
+    "Jade_Ahri": {
+      "key": "60103",
+      "nameEn": "Ahri",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Ahri.json",
+      "sourceSha256": "7e111d839c408dacf1b1d2749c5e24c0fa55e9b12c5b1d099a7e9ab3e6a7e2e7",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Essence Theft"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AhriQ",
+          "nameEn": "Orb of Deception"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AhriW",
+          "nameEn": "Fox-Fire"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AhriE",
+          "nameEn": "Charm"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AhriR",
+          "nameEn": "Spirit Rush"
+        }
+      ]
+    },
+    "Jade_Akali": {
+      "key": "60084",
+      "nameEn": "Akali",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Akali.json",
+      "sourceSha256": "bb729ec4fb3e9be18260257d13755188ae02a7b4fa145191a24cead9ec955e98",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Twin Disciplines"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AkaliQ",
+          "nameEn": "Mark of the Assassin"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AkaliW",
+          "nameEn": "Twilight Shroud"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AkaliE",
+          "nameEn": "Crescent Slash"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AkaliR",
+          "nameEn": "Shadow Dance"
+        }
+      ]
+    },
+    "Jade_Alistar": {
+      "key": "60012",
+      "nameEn": "Alistar",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Alistar.json",
+      "sourceSha256": "dea6ee38b3fdb4d94a73aa74b3750deb5779e13bc90de74a2c339312b1132e9e",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Trample"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AlistarQ",
+          "nameEn": "Pulverize"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AlistarW",
+          "nameEn": "Headbutt"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AlistarE",
+          "nameEn": "Triumphant Roar"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AlistarR",
+          "nameEn": "Unbreakable Will"
+        }
+      ]
+    },
+    "Jade_Amumu": {
+      "key": "60032",
+      "nameEn": "Amumu",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Amumu.json",
+      "sourceSha256": "135973b4d4683f0cb7949dfb45cb1c55883e55bfe5cd5de7299a58598776e881",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Cursed Touch"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AmumuBandageToss",
+          "nameEn": "Bandage Toss"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AmumuAuraofDespair",
+          "nameEn": "Despair"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AmumuTantrum",
+          "nameEn": "Tantrum"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AmumuCurseoftheSadMummy",
+          "nameEn": "Curse of the Sad Mummy"
+        }
+      ]
+    },
+    "Jade_Anivia": {
+      "key": "60034",
+      "nameEn": "Anivia",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Anivia.json",
+      "sourceSha256": "9eedf3396e0ff5f8331faf34c4ee2fe9a69578907c86d4529dfa1d8fdd9d6887",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Rebirth"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AniviaFlashFrost",
+          "nameEn": "Flash Frost"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AniviaCrystallize",
+          "nameEn": "Crystallize"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AniviaFrostbite",
+          "nameEn": "Frostbite"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AniviaGlacialStorm",
+          "nameEn": "Glacial Storm"
+        }
+      ]
+    },
+    "Jade_Annie": {
+      "key": "60001",
+      "nameEn": "Annie",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Annie.json",
+      "sourceSha256": "27c746207e8045892d92ec7c8614fac32b776a745152b95e20d7fd64a4f9b56e",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Pyromania"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AnnieQ",
+          "nameEn": "Disintegrate"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AnnieW",
+          "nameEn": "Incinerate"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AnnieE",
+          "nameEn": "Molten Shield"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AnnieR",
+          "nameEn": "Summon: Tibbers"
+        }
+      ]
+    },
+    "Jade_Ashe": {
+      "key": "60022",
+      "nameEn": "Ashe",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Ashe.json",
+      "sourceSha256": "6e512a8eba25431df0407e400b6190c97063bfdd8135ad727c01fc9994275d00",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Focus"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_AsheQ",
+          "nameEn": "Frost Shot"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_AsheVolley",
+          "nameEn": "Volley"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_AsheSpiritOfTheHawk",
+          "nameEn": "Hawkshot"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_AsheEnchantedCrystalArrow",
+          "nameEn": "Enchanted Crystal Arrow"
+        }
+      ]
+    },
+    "Jade_Blitzcrank": {
+      "key": "60053",
+      "nameEn": "Blitzcrank",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Blitzcrank.json",
+      "sourceSha256": "ea742b1837201c1d7681d4a3be16076fe088044eef14735f282317e0ed0a7883",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Mana Barrier"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_BlitzcrankRocketGrab",
+          "nameEn": "Rocket Grab"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_BlitzcrankOverdrive",
+          "nameEn": "Overdrive"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_BlitzcrankPowerFist",
+          "nameEn": "Power Fist"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_BlitzcrankStaticField",
+          "nameEn": "Static Field"
+        }
+      ]
+    },
+    "Jade_Brand": {
+      "key": "60063",
+      "nameEn": "Brand",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Brand.json",
+      "sourceSha256": "bd11fbf417efcfbe0c0d88adf0faa086441eb069ffe7909c061b30725b82f997",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Blaze"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_BrandQ",
+          "nameEn": "Sear"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_BrandW",
+          "nameEn": "Pillar of Flame"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_BrandE",
+          "nameEn": "Conflagration"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_BrandR",
+          "nameEn": "Pyroclasm"
+        }
+      ]
+    },
+    "Jade_Caitlyn": {
+      "key": "60051",
+      "nameEn": "Caitlyn",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Caitlyn.json",
+      "sourceSha256": "43c11f6b933fae72ad7dbaa89342eaf605c6a22580a586aef356f86dee8919a4",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Headshot"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_CaitlynQ",
+          "nameEn": "Piltover Peacemaker"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_CaitlynW",
+          "nameEn": "Yordle Snap Trap"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_CaitlynE",
+          "nameEn": "90 Caliber Net"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_CaitlynR",
+          "nameEn": "Ace in the Hole"
+        }
+      ]
+    },
+    "Jade_Chogath": {
+      "key": "60031",
+      "nameEn": "Cho'Gath",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Chogath.json",
+      "sourceSha256": "5f15d4b8ee29b3ec0ce5c4be70346215a7985b8863c1329106a2479b1deb7f44",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Carnivore"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_ChogathQ",
+          "nameEn": "Rupture"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_ChogathW",
+          "nameEn": "Feral Scream"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_ChogathE",
+          "nameEn": "Vorpal Spikes"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_ChogathR",
+          "nameEn": "Feast"
+        }
+      ]
+    },
+    "Jade_Corki": {
+      "key": "60042",
+      "nameEn": "Corki",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Corki.json",
+      "sourceSha256": "bf0faae079da016b25d30b414396a4e024cb62a405fb73d3f4733200b0abb6fe",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Hextech Shrapnel Shells"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_CorkiQ",
+          "nameEn": "Phosphorus Bomb"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_CorkiW",
+          "nameEn": "Valkyrie"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_CorkiE",
+          "nameEn": "Gatling Gun"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_CorkiR",
+          "nameEn": "Missile Barrage"
+        }
+      ]
+    },
+    "Jade_DrMundo": {
+      "key": "60036",
+      "nameEn": "Dr. Mundo",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_DrMundo.json",
+      "sourceSha256": "a1e08d438c94ed911f688d0a5b376101155df7a2cb10afa62d64bbb6bacb563b",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Adrenaline Rush"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_DrMundoQ",
+          "nameEn": "Infected Cleaver"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_DrMundoW",
+          "nameEn": "Burning Agony"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_DrMundoE",
+          "nameEn": "Masochism"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_DrMundoR",
+          "nameEn": "Sadism"
+        }
+      ]
+    },
+    "Jade_Evelynn": {
+      "key": "60028",
+      "nameEn": "Evelynn",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Evelynn.json",
+      "sourceSha256": "c4157aecef057afcc27a18041fe47618619277b5237cde010bea3250f17f5472",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Shadow Walk"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_EvelynnQ",
+          "nameEn": "Hate Spike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_EvelynnW",
+          "nameEn": "Dark Frenzy"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_EvelynnE",
+          "nameEn": "Ravage"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_EvelynnR",
+          "nameEn": "Agony's Embrace"
+        }
+      ]
+    },
+    "Jade_Ezreal": {
+      "key": "60081",
+      "nameEn": "Ezreal",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Ezreal.json",
+      "sourceSha256": "898cab70345989ea3bf5dce6f70fed0b6128a440dc26ff229dd7dbe226e3ea72",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Rising Spell Force"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_EzrealQ",
+          "nameEn": "Mystic Shot"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_EzrealW",
+          "nameEn": "Essence Flux"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_EzrealE",
+          "nameEn": "Arcane Shift"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_EzrealR",
+          "nameEn": "Trueshot Barrage"
+        }
+      ]
+    },
+    "Jade_Fiddlesticks": {
+      "key": "60009",
+      "nameEn": "Fiddlesticks",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Fiddlesticks.json",
+      "sourceSha256": "03bbf41e545903ac19531bd8eb0ede0ae215391df0079cd5b37cc9a4c83f7613",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Dread"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_FiddlesticksQ",
+          "nameEn": "Terrify"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_FiddlesticksW",
+          "nameEn": "Drain"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_FiddlesticksE",
+          "nameEn": "Dark Wind"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_FiddlesticksR",
+          "nameEn": "Crowstorm"
+        }
+      ]
+    },
+    "Jade_Fiora": {
+      "key": "60114",
+      "nameEn": "Fiora",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Fiora.json",
+      "sourceSha256": "9c356bddda0bd7275f1513abd7873c45ac17ae2a6ba9158f5ded573c844e27da",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Duelist"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_FioraQ",
+          "nameEn": "Lunge"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_FioraW",
+          "nameEn": "Riposte"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_FioraE",
+          "nameEn": "Burst of Speed"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_FioraR",
+          "nameEn": "Blade Waltz"
+        }
+      ]
+    },
+    "Jade_Fizz": {
+      "key": "60105",
+      "nameEn": "Fizz",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Fizz.json",
+      "sourceSha256": "93a2304fa14c189fbd15293856ced7786a861d19e756ed121df17a0b6d7b9768",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Nimble Fighter"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_FizzQ",
+          "nameEn": "Urchin Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_FizzW",
+          "nameEn": "Seastone Trident"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_FizzE",
+          "nameEn": "Playful / Trickster"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_FizzR",
+          "nameEn": "Chum the Waters"
+        }
+      ]
+    },
+    "Jade_Galio": {
+      "key": "60003",
+      "nameEn": "Galio",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Galio.json",
+      "sourceSha256": "902de683459dc0c49a4c3a42c0b7c538e6665ec28c8ed27506600516a7c70b3e",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Runic Skin"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_GalioQ",
+          "nameEn": "Resolute Smite"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_GalioW",
+          "nameEn": "Bulwark"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_GalioE",
+          "nameEn": "Righteous Gust"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_GalioR",
+          "nameEn": "Idol of Durand"
+        }
+      ]
+    },
+    "Jade_Gangplank": {
+      "key": "60041",
+      "nameEn": "Gangplank",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Gangplank.json",
+      "sourceSha256": "3ae50b72f4aa0969916a797060a67948f3e1bd41c969ccd27960ad7bbabe4846",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Grog-Soaked Blade"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_GangplankQ",
+          "nameEn": "Parrrley"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_GangplankW",
+          "nameEn": "Remove Scurvy"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_GangplankE",
+          "nameEn": "Raise Morale"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_GangplankR",
+          "nameEn": "Cannon Barrage"
+        }
+      ]
+    },
+    "Jade_Garen": {
+      "key": "60086",
+      "nameEn": "Garen",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Garen.json",
+      "sourceSha256": "354eeb27b8c4670f1cf5ae3225597fb2d30e0b3253a9cebd74d2417fbbddc918",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Perseverance"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_GarenQ",
+          "nameEn": "Decisive Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_GarenW",
+          "nameEn": "Courage"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_GarenE",
+          "nameEn": "Judgment"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_GarenR",
+          "nameEn": "Demacian Justice"
+        }
+      ]
+    },
+    "Jade_Gragas": {
+      "key": "60079",
+      "nameEn": "Gragas",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Gragas.json",
+      "sourceSha256": "b43e50af4a512625cb3057c8bed1562976804bf9b953709bfab853263eb4e340",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Happy Hour"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_GragasQ",
+          "nameEn": "Barrel Roll"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_GragasW",
+          "nameEn": "Drunken Rage"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_GragasE",
+          "nameEn": "Body Slam"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_GragasR",
+          "nameEn": "Explosive Cask"
+        }
+      ]
+    },
+    "Jade_Graves": {
+      "key": "60104",
+      "nameEn": "Graves",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Graves.json",
+      "sourceSha256": "f61343b5186d24335d96b98638bdad91cd1a1efa3f9292600b0739bda923e878",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "True Grit"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_GravesQ",
+          "nameEn": "Buckshot"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_GravesW",
+          "nameEn": "Smoke Screen"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_GravesE",
+          "nameEn": "Quickdraw"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_GravesR",
+          "nameEn": "Collateral Damage"
+        }
+      ]
+    },
+    "Jade_Heimerdinger": {
+      "key": "60074",
+      "nameEn": "Heimerdinger",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Heimerdinger.json",
+      "sourceSha256": "7c5fd920b1cc7e3edcf6799d4865f02cb43ff93253ea9e33f33d38feae58e31b",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Techmaturgical Repair Bots"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_HeimerdingerQ",
+          "nameEn": "H-28G Evolution Turret"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_HeimerdingerW",
+          "nameEn": "Hextech Micro-Rockets"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_HeimerdingerE",
+          "nameEn": "CH-1 Concussion Grenade"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_HeimerdingerR",
+          "nameEn": "UPGRADE!!!"
+        }
+      ]
+    },
+    "Jade_Irelia": {
+      "key": "60039",
+      "nameEn": "Irelia",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Irelia.json",
+      "sourceSha256": "65d05fc23a76d2082f796d1327fc66ab84a7e3194c5416dc97865db56d68c174",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Ionian Fervor"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_IreliaQ",
+          "nameEn": "Bladesurge"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_IreliaW",
+          "nameEn": "Hiten Style"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_IreliaE",
+          "nameEn": "Equilibrium Strike"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_IreliaR",
+          "nameEn": "Transcendent Blades"
+        }
+      ]
+    },
+    "Jade_Janna": {
+      "key": "60040",
+      "nameEn": "Janna",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Janna.json",
+      "sourceSha256": "98217ded339b1163d14cd280d21fdc0287c316b6de1c319077e1df35868b90ef",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Tailwind"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_JannaHowlingGale",
+          "nameEn": "Howling Gale"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_JannaSowTheWind",
+          "nameEn": "Zephyr"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_JannaEyeOfTheStorm",
+          "nameEn": "Eye Of The Storm"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_JannaReapTheWhirlwind",
+          "nameEn": "Monsoon"
+        }
+      ]
+    },
+    "Jade_JarvanIV": {
+      "key": "60059",
+      "nameEn": "Jarvan IV",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_JarvanIV.json",
+      "sourceSha256": "fb391361baf9317dae17d93f659d79572ad2bce30f5781ef9ac520e5e31ef856",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Martial Cadence"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_JarvanIVDragonStrike",
+          "nameEn": "Dragon Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_JarvanIVGoldenAegis",
+          "nameEn": "Golden Aegis"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_JarvanIVDemacianStandard",
+          "nameEn": "Demacian Standard"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_JarvanIVCataclysm",
+          "nameEn": "Cataclysm"
+        }
+      ]
+    },
+    "Jade_Jax": {
+      "key": "60024",
+      "nameEn": "Jax",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Jax.json",
+      "sourceSha256": "a0c8e4fae87087ce454cad698103f42753df3e579b2d5d902ad3d675399d6216",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Equipment Mastery"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_JaxQ",
+          "nameEn": "Leap Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_JaxW",
+          "nameEn": "Empower"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_JaxE",
+          "nameEn": "Counter Strike"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_JaxR",
+          "nameEn": "Relentless Assault"
+        }
+      ]
+    },
+    "Jade_Karma": {
+      "key": "60043",
+      "nameEn": "Karma",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Karma.json",
+      "sourceSha256": "8a16a76c5c1abda9d5c2a0bb06aa17f3991f179f3dbb85394067c5f6832a8b92",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Inner Flame"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_KarmaQ",
+          "nameEn": "Heavenly Wave"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_KarmaW",
+          "nameEn": "Spirit Bond"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_KarmaE",
+          "nameEn": "Soul Shield"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_KarmaR",
+          "nameEn": "Mantra"
+        }
+      ]
+    },
+    "Jade_Karthus": {
+      "key": "60030",
+      "nameEn": "Karthus",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Karthus.json",
+      "sourceSha256": "26cc09991d062a1ffaf5c28c8f013034f532cae09b65463a415159aff0014f7c",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Death Defied"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_KarthusLayWaste",
+          "nameEn": "Lay Waste"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_KarthusWallOfPain",
+          "nameEn": "Wall of Pain"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_KarthusDefile",
+          "nameEn": "Defile"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_KarthusFallenOne",
+          "nameEn": "Requiem"
+        }
+      ]
+    },
+    "Jade_Kassadin": {
+      "key": "60038",
+      "nameEn": "Kassadin",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Kassadin.json",
+      "sourceSha256": "91d77ab1c487dec783c4813c398da3b0ea12bb95394614cebec6922f68a7bfe7",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Void Stone"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_KassadinQ",
+          "nameEn": "Null Sphere"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_KassadinW",
+          "nameEn": "Nether Blade"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_KassadinE",
+          "nameEn": "Force Pulse"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_KassadinR",
+          "nameEn": "Riftwalk"
+        }
+      ]
+    },
+    "Jade_Katarina": {
+      "key": "60055",
+      "nameEn": "Katarina",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Katarina.json",
+      "sourceSha256": "5026455e11b6813cc884edce44a96a6e96f89e8f6e8da48f5a83be02d440baf3",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Voracity"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_KatarinaQ",
+          "nameEn": "Bouncing Blade"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_KatarinaW",
+          "nameEn": "Sinister Steel"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_KatarinaE",
+          "nameEn": "Shunpo"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_KatarinaR",
+          "nameEn": "Death Lotus"
+        }
+      ]
+    },
+    "Jade_Kayle": {
+      "key": "60010",
+      "nameEn": "Kayle",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Kayle.json",
+      "sourceSha256": "df26c4d73b3f1b3eedcfd6fad22a10e3f0da064cc5e1e38eea932a34ed8a0cec",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Holy Fervor"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_KayleQ",
+          "nameEn": "Reckoning"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_KayleW",
+          "nameEn": "Divine Blessing"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_KayleE",
+          "nameEn": "Righteous Fury"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_KayleR",
+          "nameEn": "Intervention"
+        }
+      ]
+    },
+    "Jade_Kennen": {
+      "key": "60085",
+      "nameEn": "Kennen",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Kennen.json",
+      "sourceSha256": "b1a800d72972efad0860c5190a6c0d246ffc9cd20031d45f74d20df86f91e62a",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Mark of the Storm"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_KennenQ",
+          "nameEn": "Thundering Shuriken"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_KennenW",
+          "nameEn": "Electrical Surge"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_KennenE",
+          "nameEn": "Lightning Rush"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_KennenR",
+          "nameEn": "Slicing Maelstrom"
+        }
+      ]
+    },
+    "Jade_KogMaw": {
+      "key": "60096",
+      "nameEn": "Kog'Maw",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_KogMaw.json",
+      "sourceSha256": "964d6993fb36abbb07ab7965a72546967c5b30e8aaaf0738a264c9c505e23858",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Icathian Surprise"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_KogMawQ",
+          "nameEn": "Caustic Spittle"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_KogMawW",
+          "nameEn": "Bio-Arcane Barrage"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_KogMawE",
+          "nameEn": "Void Ooze"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_KogMawR",
+          "nameEn": "Living Artillery"
+        }
+      ]
+    },
+    "Jade_LeeSin": {
+      "key": "60064",
+      "nameEn": "Lee Sin",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_LeeSin.json",
+      "sourceSha256": "143c94bcadd7316b333aad3a65eede1bcb98b709cf4b6f2b7a56ccc56e55c95d",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Flurry"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_LeeSinQOne",
+          "nameEn": "Sonic Wave / Resonating Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_LeeSinWOne",
+          "nameEn": "Safeguard / Iron Will"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_LeeSinEOne",
+          "nameEn": "Tempest / Cripple"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_LeeSinR",
+          "nameEn": "Dragon's Rage"
+        }
+      ]
+    },
+    "Jade_Leona": {
+      "key": "60089",
+      "nameEn": "Leona",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Leona.json",
+      "sourceSha256": "7776d0d6800a187d8969118e3260ec14965f2364f6c2657bae4853138e2093ad",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Sunlight"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_LeonaShieldOfDaybreak",
+          "nameEn": "Shield of Daybreak"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_LeonaSolarBarrier",
+          "nameEn": "Eclipse"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_LeonaZenithBlade",
+          "nameEn": "Zenith Blade"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_LeonaSolarFlare",
+          "nameEn": "Solar Flare"
+        }
+      ]
+    },
+    "Jade_Lulu": {
+      "key": "60117",
+      "nameEn": "Lulu",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Lulu.json",
+      "sourceSha256": "70eff415b087548a33e3924c58ac68c21db9979ca10dca2c59dcb5a9a36d244d",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Pix, Faerie Companion"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_LuluQ",
+          "nameEn": "Glitterlance"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_LuluW",
+          "nameEn": "Whimsy"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_LuluE",
+          "nameEn": "Help, Pix!"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_LuluR",
+          "nameEn": "Wild Growth"
+        }
+      ]
+    },
+    "Jade_Lux": {
+      "key": "60099",
+      "nameEn": "Lux",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Lux.json",
+      "sourceSha256": "980ca028269dc954166c3b604e102696ee294f3dd613ee9e09cc94e7535eb06d",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Illumination"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_LuxLightBinding",
+          "nameEn": "Light Binding"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_LuxPrismaticWave",
+          "nameEn": "Prismatic Barrier"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_LuxLightStrikeKugel",
+          "nameEn": "Lucent Singularity"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_LuxR",
+          "nameEn": "Finales Funkeln"
+        }
+      ]
+    },
+    "Jade_Malphite": {
+      "key": "60054",
+      "nameEn": "Malphite",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Malphite.json",
+      "sourceSha256": "8b42be2542f23db810edc748d8d2341900ff44afc9b8a55d65e33aee79f9e71c",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Granite Shield"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_MalphiteSeismicShard",
+          "nameEn": "Seismic Shard"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_MalphiteObduracy",
+          "nameEn": "Brutal Strikes"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_MalphiteLandslide",
+          "nameEn": "Ground Slam"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_MalphiteUFSlash",
+          "nameEn": "Unstoppable Force"
+        }
+      ]
+    },
+    "Jade_Malzahar": {
+      "key": "60090",
+      "nameEn": "Malzahar",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Malzahar.json",
+      "sourceSha256": "a04f657828a012fcce0105c7861cb5f30cd2ef0cc0ec8d77f72365c6638d05dd",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Summon Voidling"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_MalzaharQ",
+          "nameEn": "Call of the Void"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_MalzaharW",
+          "nameEn": "Null Zone"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_MalzaharE",
+          "nameEn": "Malefic Visions"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_MalzaharR",
+          "nameEn": "Nether Grasp"
+        }
+      ]
+    },
+    "Jade_MasterYi": {
+      "key": "60011",
+      "nameEn": "Master Yi",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_MasterYi.json",
+      "sourceSha256": "140522da16f0917f8d77a76974add5407afceb2d47b5a6f9ab42c0ee7d2568d0",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Double Strike"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_MasterYiAlphaStrike",
+          "nameEn": "Alpha Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_MasterYiMeditate",
+          "nameEn": "Meditate"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_MasterYiWujuStyle",
+          "nameEn": "Wuju Style"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_MasterYiHighlander",
+          "nameEn": "Highlander"
+        }
+      ]
+    },
+    "Jade_MissFortune": {
+      "key": "60021",
+      "nameEn": "Miss Fortune",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_MissFortune.json",
+      "sourceSha256": "a6053f43ac8f39e11295b42788eaddbb4e10937eeca22c206661891dbbc483fb",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Strut"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_MissFortuneRicochetShot",
+          "nameEn": "Double Up"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_MissFortuneViciousStrikes",
+          "nameEn": "Impure Shots"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_MissFortuneScattershot",
+          "nameEn": "Make It Rain"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_MissFortuneBulletTime",
+          "nameEn": "Bullet Time"
+        }
+      ]
+    },
+    "Jade_Morgana": {
+      "key": "60025",
+      "nameEn": "Morgana",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Morgana.json",
+      "sourceSha256": "2a97bfe4e89091eecc0199828979feefea63e22fb2710c9d602fe4c89b8d56d5",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Soul Siphon"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_MorganaQ",
+          "nameEn": "Dark Binding"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_MorganaW",
+          "nameEn": "Tormented Soil"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_MorganaE",
+          "nameEn": "Black Shield"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_MorganaR",
+          "nameEn": "Soul Shackles"
+        }
+      ]
+    },
+    "Jade_Nami": {
+      "key": "60267",
+      "nameEn": "Nami",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Nami.json",
+      "sourceSha256": "a821adae679c9bcc3038ac667efd5fb515ad09383bacc19e94f1711bba42fbbd",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Surging Tides"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_NamiQ",
+          "nameEn": "Aqua Prison"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_NamiW",
+          "nameEn": "Ebb and Flow"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_NamiE",
+          "nameEn": "Tidecaller's Blessing"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_NamiR",
+          "nameEn": "Tidal Wave"
+        }
+      ]
+    },
+    "Jade_Nasus": {
+      "key": "60075",
+      "nameEn": "Nasus",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Nasus.json",
+      "sourceSha256": "0deffb16531e66a30742f420085bf3ce8069424858b71d5cb3f425aba91397ef",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Soul Eater"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_NasusQ",
+          "nameEn": "Siphoning Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_NasusW",
+          "nameEn": "Wither"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_NasusE",
+          "nameEn": "Spirit Fire"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_NasusR",
+          "nameEn": "Fury of the Sands"
+        }
+      ]
+    },
+    "Jade_Nautilus": {
+      "key": "60111",
+      "nameEn": "Nautilus",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Nautilus.json",
+      "sourceSha256": "50e8d018829269e8442eae546dfd2b12d3bad9ac78283dd2680e5e570c585b4e",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Staggering Blow"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_NautilusQ",
+          "nameEn": "Dredge Line"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_NautilusW",
+          "nameEn": "Titan's Wrath"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_NautilusE",
+          "nameEn": "Riptide"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_NautilusR",
+          "nameEn": "Depth Charge"
+        }
+      ]
+    },
+    "Jade_Nidalee": {
+      "key": "60076",
+      "nameEn": "Nidalee",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Nidalee.json",
+      "sourceSha256": "503e02cfaf98b83382996a2f4dcbf7e8330bd1d35f9ec5a65a28cb2cd8331b08",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Prowl"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_NidaleeJavelinToss",
+          "nameEn": "Javelin Toss / Takedown"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_NidaleeBushwhack",
+          "nameEn": "Bushwhack / Pounce"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_NidaleePrimalSurge",
+          "nameEn": "Primal Surge / Swipe"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_NidaleeAspectOfTheCougar",
+          "nameEn": "Aspect Of The Cougar"
+        }
+      ]
+    },
+    "Jade_Nunu": {
+      "key": "60020",
+      "nameEn": "Nunu & Willump",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Nunu.json",
+      "sourceSha256": "724f2b5dc3ed1bf8b3de19b63e177e59047d7a00292b1d9e1a88cc1bdf5fb698",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Visionary"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_NunuQ",
+          "nameEn": "Consume"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_NunuW",
+          "nameEn": "Blood Boil"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_NunuE",
+          "nameEn": "Ice Blast"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_NunuR",
+          "nameEn": "Absolute Zero"
+        }
+      ]
+    },
+    "Jade_Olaf": {
+      "key": "60002",
+      "nameEn": "Olaf",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Olaf.json",
+      "sourceSha256": "6119e30e0fee4d8fb5695496cbe31f0341fb80cd42ffbaf45a9201fcc0aad273",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Berserker Rage"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_OlafQ",
+          "nameEn": "Undertow"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_OlafW",
+          "nameEn": "Vicious Strikes"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_OlafE",
+          "nameEn": "Reckless Swing"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_OlafR",
+          "nameEn": "Ragnarok"
+        }
+      ]
+    },
+    "Jade_Pantheon": {
+      "key": "60080",
+      "nameEn": "Pantheon",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Pantheon.json",
+      "sourceSha256": "1e8970d89f2131d1df02eefcac63eb056d38015b5f4819a5c68b6c0c76411250",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Aegis Protection"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_PantheonQ",
+          "nameEn": "Spear Shot"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_PantheonW",
+          "nameEn": "Aegis of Zeonia"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_PantheonE",
+          "nameEn": "Heartseeker Strike"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_PantheonR",
+          "nameEn": "Grand Skyfall"
+        }
+      ]
+    },
+    "Jade_Poppy": {
+      "key": "60078",
+      "nameEn": "Poppy",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Poppy.json",
+      "sourceSha256": "1b432ad678f0ec3478fbfaa1d7cf909987ea08e187ed5db2e2ba2aa35b9c7b8f",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Valiant Fighter"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_PoppyQ",
+          "nameEn": "Devastating Blow"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_PoppyW",
+          "nameEn": "Paragon of Demacia"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_PoppyE",
+          "nameEn": "Heroic Charge"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_PoppyR",
+          "nameEn": "Diplomatic Immunity"
+        }
+      ]
+    },
+    "Jade_Quinn": {
+      "key": "60133",
+      "nameEn": "Quinn",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Quinn.json",
+      "sourceSha256": "42860a8bcc841b5426e29d02b865d39904a3c018c517e3188246f0aec176c9f7",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Harrier"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_QuinnQ",
+          "nameEn": "Blinding Assault"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_QuinnW",
+          "nameEn": "Heightened Senses"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_QuinnE",
+          "nameEn": "Vault"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_QuinnR",
+          "nameEn": "Tag Team"
+        }
+      ]
+    },
+    "Jade_Rammus": {
+      "key": "60033",
+      "nameEn": "Rammus",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Rammus.json",
+      "sourceSha256": "0cf18abd47eaee50c63e1310d7d195f45b61793fd3be4dd0e6dc20dd9879118c",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Spiked Shell"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_RammusQ",
+          "nameEn": "Powerball"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_RammusW",
+          "nameEn": "Defensive Ball Curl"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_RammusE",
+          "nameEn": "Puncturing Taunt"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_RammusR",
+          "nameEn": "Tremors"
+        }
+      ]
+    },
+    "Jade_Ryze": {
+      "key": "60013",
+      "nameEn": "Ryze",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Ryze.json",
+      "sourceSha256": "2a81e72ff74841116115189907653bdbbabfab3158ec5336da2f175931232947",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Arcane Mastery"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_RyzeQ",
+          "nameEn": "Overload"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_RyzeW",
+          "nameEn": "Rune Prison"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_RyzeE",
+          "nameEn": "Spell Flux"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_RyzeR",
+          "nameEn": "Desperate Power"
+        }
+      ]
+    },
+    "Jade_Shaco": {
+      "key": "60035",
+      "nameEn": "Shaco",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Shaco.json",
+      "sourceSha256": "321478d91dfe79369389b98da5adceacc59dad8df6eac787a754d52aac002605",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Backstab"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_ShacoDeceive",
+          "nameEn": "Deceive"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_ShacoJackInTheBox",
+          "nameEn": "Jack In The Box"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_ShacoTwoShivPoison",
+          "nameEn": "Two-Shiv Poison"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_ShacoHallucinateFull",
+          "nameEn": "Hallucinate"
+        }
+      ]
+    },
+    "Jade_Shen": {
+      "key": "60098",
+      "nameEn": "Shen",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Shen.json",
+      "sourceSha256": "dc4c588c7e34b148df904616188d9c5a50594cf9745a160767b1a71ec536f4c8",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Ki Strike"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_ShenQ",
+          "nameEn": "Vorpal Blade"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_ShenW",
+          "nameEn": "Feint"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_ShenE",
+          "nameEn": "Shadow Dash"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_ShenR",
+          "nameEn": "Stand United"
+        }
+      ]
+    },
+    "Jade_Shyvana": {
+      "key": "60102",
+      "nameEn": "Shyvana",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Shyvana.json",
+      "sourceSha256": "9e513d50fa8be2a3ebb23424049aa88a9e14e45768d0c2a47a37b79b59d2995e",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Fury of the Dragonborn"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_ShyvanaQ",
+          "nameEn": "Twin Bite"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_ShyvanaW",
+          "nameEn": "Burnout"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_ShyvanaE",
+          "nameEn": "Flame Breath"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_ShyvanaR",
+          "nameEn": "Dragon's Descent"
+        }
+      ]
+    },
+    "Jade_Singed": {
+      "key": "60027",
+      "nameEn": "Singed",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Singed.json",
+      "sourceSha256": "abc1034fbb09c4598a4aff9afbfdad06752c3bfdd31f1e1fe6585a3eb82166ba",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Empowered Bulwark"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_SingedPoisonTrail",
+          "nameEn": "Poison Trail"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_SingedMegaAdhesive",
+          "nameEn": "Mega Adhesive"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_SingedFling",
+          "nameEn": "Fling"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_SingedInsanityPotion",
+          "nameEn": "Insanity Potion"
+        }
+      ]
+    },
+    "Jade_Sion": {
+      "key": "60014",
+      "nameEn": "Sion",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Sion.json",
+      "sourceSha256": "1d181a6aee281f7dc6e3869aa774547fd5a677d8d1da1aafeff0dc0c45671064",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Feel No Pain"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_SionQ",
+          "nameEn": "Cryptic Gaze"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_SionW",
+          "nameEn": "Death's Caress"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_SionE",
+          "nameEn": "Enrage"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_SionR",
+          "nameEn": "Cannibalism"
+        }
+      ]
+    },
+    "Jade_Sivir": {
+      "key": "60015",
+      "nameEn": "Sivir",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Sivir.json",
+      "sourceSha256": "39ea2e4048d4cb04f52b073b06db4882bfa858d7cd4332224f37b75810ef8a96",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Fleet of Foot"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_SivirQ",
+          "nameEn": "Boomerang Blade"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_SivirW",
+          "nameEn": "Ricochet"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_SivirE",
+          "nameEn": "Spell Shield"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_SivirR",
+          "nameEn": "On The Hunt"
+        }
+      ]
+    },
+    "Jade_Skarner": {
+      "key": "60072",
+      "nameEn": "Skarner",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Skarner.json",
+      "sourceSha256": "a156f9fd5f1f94de88d3bc5c7a03810919d09c806815ff99c25aaa8bc779f7e9",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Energize"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_SkarnerQ",
+          "nameEn": "Crystal Slash"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_SkarnerW",
+          "nameEn": "Crystalline Exoskeleton"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_SkarnerE",
+          "nameEn": "Fracture"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_SkarnerR",
+          "nameEn": "Impale"
+        }
+      ]
+    },
+    "Jade_Sona": {
+      "key": "60037",
+      "nameEn": "Sona",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Sona.json",
+      "sourceSha256": "a35fae53f216510bcb4441fbb93a6f0cf9de737341a913f801c79e5f07c3f158",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Power Chord"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_SonaQ",
+          "nameEn": "Hymn of Valor"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_SonaW",
+          "nameEn": "Aria of Perseverance"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_SonaE",
+          "nameEn": "Song of Celerity"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_SonaR",
+          "nameEn": "Crescendo"
+        }
+      ]
+    },
+    "Jade_Soraka": {
+      "key": "60016",
+      "nameEn": "Soraka",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Soraka.json",
+      "sourceSha256": "932db099c58c57ce51d7a6f3f0ab512afbb14a1e085946290d979113dcded660",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Consecration"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_SorakaQ",
+          "nameEn": "Starcall"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_SorakaW",
+          "nameEn": "Astral Blessing"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_SorakaE",
+          "nameEn": "Infuse"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_SorakaR",
+          "nameEn": "Wish"
+        }
+      ]
+    },
+    "Jade_Taric": {
+      "key": "60044",
+      "nameEn": "Taric",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Taric.json",
+      "sourceSha256": "b35941c57e4077cfcaa3b13c646312c8664431db53af7f9eec45f784ddf0af30",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Gemcraft"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_TaricQ",
+          "nameEn": "Imbue"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_TaricW",
+          "nameEn": "Shatter"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_TaricE",
+          "nameEn": "Dazzle"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_TaricR",
+          "nameEn": "Radiance"
+        }
+      ]
+    },
+    "Jade_Teemo": {
+      "key": "60017",
+      "nameEn": "Teemo",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Teemo.json",
+      "sourceSha256": "1f55f043d8cc4ccdf580a7192adb8ccff6311f4bb99fc153ddb7155cc4aecb55",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Camouflage"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_TeemoQ",
+          "nameEn": "Blinding Dart"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_TeemoW",
+          "nameEn": "Move Quick"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_TeemoE",
+          "nameEn": "Toxic Shot"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_TeemoR",
+          "nameEn": "Noxious Trap"
+        }
+      ]
+    },
+    "Jade_Tristana": {
+      "key": "60018",
+      "nameEn": "Tristana",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Tristana.json",
+      "sourceSha256": "59bda7887cd423dfdc72cf34c842782f28e885b0a27c0089b84e73fca7befb9c",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Draw a Bead"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_TristanaQ",
+          "nameEn": "Rapid Fire"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_TristanaW",
+          "nameEn": "Rocket Jump"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_TristanaE",
+          "nameEn": "Explosive Shot"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_TristanaR",
+          "nameEn": "Buster Shot"
+        }
+      ]
+    },
+    "Jade_Tryndamere": {
+      "key": "60023",
+      "nameEn": "Tryndamere",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Tryndamere.json",
+      "sourceSha256": "0a0a7ae15958aa5cea1dd5c7a528377014c174cc054fe8c57207975fd3cb8dfb",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Battle Fury"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_TryndamereQ",
+          "nameEn": "Bloodlust"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_TryndamereW",
+          "nameEn": "Mocking Shout"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_TryndamereE",
+          "nameEn": "Spinning Slash"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_TryndamereUndyingRage",
+          "nameEn": "Undying Rage"
+        }
+      ]
+    },
+    "Jade_TwistedFate": {
+      "key": "60004",
+      "nameEn": "Twisted Fate",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_TwistedFate.json",
+      "sourceSha256": "6a93b603c3b9e5747f3f4026b2ef9c33db6825e28f17dc4da8056bd3e562a7c6",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Loaded Dice"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_TwistedFateWildCards",
+          "nameEn": "Wild Cards"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_TwistedFatePickACard",
+          "nameEn": "Pick A Card"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_TwistedFateE",
+          "nameEn": "Gate"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_TwistedFateDestiny",
+          "nameEn": "Destiny"
+        }
+      ]
+    },
+    "Jade_Twitch": {
+      "key": "60029",
+      "nameEn": "Twitch",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Twitch.json",
+      "sourceSha256": "6a9d3a41b9249a1b659a4a7602c5b48c7050dbe9596da3ff2599fb13217ef056",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Deadly Venom"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_TwitchQ",
+          "nameEn": "Ambush"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_TwitchW",
+          "nameEn": "Venom Cask"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_TwitchE",
+          "nameEn": "Expunge"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_TwitchR",
+          "nameEn": "Spray and Pray"
+        }
+      ]
+    },
+    "Jade_Vayne": {
+      "key": "60067",
+      "nameEn": "Vayne",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Vayne.json",
+      "sourceSha256": "08d387a061d61226a894e0ff39bdf12ca758fdb115f9e4fb8b5f364abd8f253c",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Night Hunter"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_VayneQ",
+          "nameEn": "Tumble"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_VayneW",
+          "nameEn": "Silver Bolts"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_VayneE",
+          "nameEn": "Condemn"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_VayneR",
+          "nameEn": "Final Hour"
+        }
+      ]
+    },
+    "Jade_Veigar": {
+      "key": "60045",
+      "nameEn": "Veigar",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Veigar.json",
+      "sourceSha256": "7d41b51a1452abf145b09e70a9a536ac53aac56365a2a6b82067c8d09eb14517",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Equilibrium"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_VeigarBalefulStrike",
+          "nameEn": "Baleful Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_VeigarDarkMatter",
+          "nameEn": "Dark Matter"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_VeigarEventHorizon",
+          "nameEn": "Event Horizon"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_VeigarR",
+          "nameEn": "Primordial Burst"
+        }
+      ]
+    },
+    "Jade_Warwick": {
+      "key": "60019",
+      "nameEn": "Warwick",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Warwick.json",
+      "sourceSha256": "35e696f4162be68a3e43023b9f278eca8f3348e43b28ae55f15fc94ecf23ab0e",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Eternal Thirst"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_WarwickQ",
+          "nameEn": "Hungering Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_WarwickW",
+          "nameEn": "Hunter's Call"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_WarwickE",
+          "nameEn": "Blood Scent"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_WarwickR",
+          "nameEn": "Infinite Duress"
+        }
+      ]
+    },
+    "Jade_Wukong": {
+      "key": "60062",
+      "nameEn": "Wukong",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Wukong.json",
+      "sourceSha256": "4b06118c5b2f64e0afe1f39610bc7edad0fb2c7c109142c2322afb5b94cc7e35",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Stone Skin"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_WukongQ",
+          "nameEn": "Crushing Blow"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_WukongW",
+          "nameEn": "Decoy"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_WukongE",
+          "nameEn": "Nimbus Strike"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_WukongR",
+          "nameEn": "Cyclone"
+        }
+      ]
+    },
+    "Jade_XinZhao": {
+      "key": "60005",
+      "nameEn": "Xin Zhao",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_XinZhao.json",
+      "sourceSha256": "8083553c6856f3aed33bc6fe86ab780bcbddf2178787f7e55babc1e4e0b71ed4",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Challenge"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_XinZhaoQ",
+          "nameEn": "Three Talon Strike"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_XinZhaoW",
+          "nameEn": "Battle Cry"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_XinZhaoE",
+          "nameEn": "Audacious Charge"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_XinZhaoR",
+          "nameEn": "Crescent Sweep"
+        }
+      ]
+    },
+    "Jade_Zilean": {
+      "key": "60026",
+      "nameEn": "Zilean",
+      "sourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.20.1/data/en_US/mode/classic/champion/Jade_Zilean.json",
+      "sourceSha256": "aa190ac5f33fd3a1ab8f86cdad4c72a163ba3a0acaa2e5133c026412d3f6fed3",
+      "skills": [
+        {
+          "slot": "P",
+          "spellId": null,
+          "nameEn": "Heightened Learning"
+        },
+        {
+          "slot": "Q",
+          "spellId": "Jade_ZileanQ",
+          "nameEn": "Time Bomb"
+        },
+        {
+          "slot": "W",
+          "spellId": "Jade_ZileanW",
+          "nameEn": "Rewind"
+        },
+        {
+          "slot": "E",
+          "spellId": "Jade_ZileanE",
+          "nameEn": "Time Warp"
+        },
+        {
+          "slot": "R",
+          "spellId": "Jade_ZileanR",
+          "nameEn": "Chronoshift"
+        }
+      ]
+    }
+  }
+}

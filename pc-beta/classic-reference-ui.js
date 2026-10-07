@@ -16,7 +16,7 @@
     const nextAliases = new Map(aliasData.items.map(row => [String(row.riotId), row]));
     const nextReleases = new Map(Object.entries(releaseData.champions));
     const currentItemIds = new Set(items.map(item => String(item.riotId)));
-    const newCatalog = itemCatalog?.version === '16.19.1';
+    const newCatalog = ['16.19.1', '16.20.1'].includes(itemCatalog?.version);
     const invalidItems = itemCatalog
       ? !newCatalog || itemCatalog.items?.length !== 150 || items.length !== 150
         || currentItemIds.size !== items.length

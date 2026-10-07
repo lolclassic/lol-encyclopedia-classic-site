@@ -2,3 +2,7 @@
 pc-beta/** -text
 assets/physical-26195-en-r32-raw/** -text
 assets/physical-26195-en-r33-raw/** -text
+assets/physical-2620-en/** -text
+assets/physical-26201-r11/** -text
+pc-beta-source-2620.json -text
+pc-beta-publication.json -text
